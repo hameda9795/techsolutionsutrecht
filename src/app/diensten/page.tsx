@@ -4,32 +4,33 @@ import Footer from "@/components/Footer";
 import ServiceDetail from "@/components/ServiceDetail";
 
 export const metadata: Metadata = {
-  title: "Diensten | Website Laten Maken & Webshop Bouwen Utrecht",
-  description: "Alle webdiensten onder één dak: WordPress, WooCommerce, maatwerk en SEO. Bekijk wat wij voor jou kunnen betekenen.",
+  title: "Goedkope Website Laten Maken Utrecht | Voordelig & Snel | TechSolutionsUtrecht",
+  description: "Goedkope website laten maken vanaf €250. Snelle oplevering binnen 3-10 dagen. WordPress, webshop, maatwerk tegen scherpe prijzen in Utrecht. Gratis offerte!",
+  keywords: ["goedkope website laten maken utrecht", "voordelige website", "betaalbare website", "snelle website", "lage prijs webdesign"],
 };
 
 const services = [
   {
     icon: "wordpress",
     title: "WordPress Websites",
-    description: "WordPress is 's werelds meest gebruikte CMS — en dat is niet voor niks. Het is gebruiksvriendelijk, SEO-vriendelijk en endless expandable.",
+    description: "Goedkope WordPress website laten maken? Vanaf €250 al binnen 3 dagen online. Professioneel, snel en betaalbaar. Perfect voor starters en MKB.",
     features: [
       "Professioneel design op maat",
       "SEO-optimalisatie standaard",
       "Mobiel-vriendelijk (responsive)",
       "CMS zodat je zelf kunt beheren",
       "Snelle laadtijden",
-      "Veiligheid updates",
+      "Voordelige prijs",
     ],
-    price: "Vanaf €1.499",
-    time: "2-4 weken",
+    price: "€250 - €800",
+    time: "3-10 dagen",
     href: "/diensten/wordpress",
     color: "blue",
   },
   {
     icon: "webshop",
     title: "WooCommerce Webshops",
-    description: "Met WooCommerce bouwen we een webshop die meegroeit met je business. Van startup tot enterprise.",
+    description: "Betaalbare webshop laten maken vanaf €350. Verkoop online met een professionele webshop tegen scherpe prijzen. Snel online en klaar voor groei.",
     features: [
       "Professioneel design",
       "Betalingen (iDEAL, creditcard, PayPal)",
@@ -38,15 +39,15 @@ const services = [
       "BTW-rapportages",
       "SEO voor producten",
     ],
-    price: "Vanaf €2.499",
-    time: "3-6 weken",
+    price: "€350 - €1.200",
+    time: "5-12 dagen",
     href: "/diensten/webshop",
     color: "orange",
   },
   {
     icon: "maatwerk",
     title: "Maatwerk Webapplicaties",
-    description: "Soms heb je meer dan een standaard website nodig. Wij bouwen custom webapplicaties met moderne technologie.",
+    description: "Snelle maatwerk webapplicatie laten bouwen vanaf €400. Express oplevering mogelijk. Moderne technologie tegen voordelige prijzen.",
     features: [
       "Next.js & React",
       "Node.js backend",
@@ -55,15 +56,15 @@ const services = [
       "Real-time features",
       "Schaalbare hosting",
     ],
-    price: "Vanaf €5.000",
-    time: "Projectafhankelijk",
+    price: "€400 - €2.000",
+    time: "5-12 dagen",
     href: "/diensten/maatwerk",
     color: "purple",
   },
   {
     icon: "seo",
     title: "SEO Optimalisatie",
-    description: "Een mooie website is niets waard als niemand 'm vindt. Wij zorgen dat je gevonden wordt.",
+    description: "Goedkope SEO optimalisatie vanaf €200 per maand. Hoger in Google tegen een betaalbare prijs. Direct resultaat.",
     features: [
       "Technische SEO analyse",
       "Keyword onderzoek",
@@ -72,7 +73,7 @@ const services = [
       "Local SEO (Google Business)",
       "Maandelijkse rapportage",
     ],
-    price: "Vanaf €499/maand",
+    price: "Vanaf €200/maand",
     time: "Doorlopend",
     href: "/diensten/seo",
     color: "green",

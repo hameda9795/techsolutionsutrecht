@@ -2,11 +2,12 @@ import { Metadata } from "next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Link from "next/link";
-import { Code, Check, ArrowRight } from "lucide-react";
+import { Code, Check, ArrowRight, Zap, Clock } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Maatwerk Webapplicatie Laten Bouwen Utrecht | TechSolutionsUtrecht",
-  description: "Custom webapplicaties met Next.js, React en moderne technologie. Vanaf €5.000. Gratis adviesgesprek!",
+  title: "Goedkope Maatwerk Webapplicatie Laten Bouwen | Vanaf €400 | Snel | TechSolutionsUtrecht",
+  description: "Betaalbare maatwerk webapplicatie laten bouwen vanaf €400. Snelle oplevering 5-12 dagen. Next.js, React, professioneel en voordelig in Utrecht.",
+  keywords: ["goedkope maatwerk website", "betaalbare webapplicatie", "snelle webontwikkeling", "maatwerk website goedkoop", "express webapplicatie"],
 };
 
 const features = [
@@ -38,14 +39,26 @@ export default function MaatwerkPage() {
                 <Code className="w-8 h-8 text-white" />
               </div>
               
-              <h1 className="text-4xl sm:text-5xl font-bold text-[var(--text-primary)] mb-6">
-                Maatwerk voor{" "}
-                <span className="gradient-text">Complexe Vraagstukken</span>
+              <h1 className="text-4xl sm:text-5xl font-bold text-[var(--text-primary)] mb-4">
+                Betaalbare Maatwerk{" "}
+                <span className="gradient-text">Webapplicatie</span>
               </h1>
+
+              <div className="flex flex-wrap gap-3 mb-6">
+                <div className="flex items-center gap-2 px-3 py-1 bg-primary/10 rounded-full">
+                  <Zap className="w-4 h-4 text-primary" />
+                  <span className="text-sm text-primary font-medium">5-12 dagen oplevering</span>
+                </div>
+                <div className="flex items-center gap-2 px-3 py-1 bg-green-500/10 rounded-full">
+                  <Clock className="w-4 h-4 text-green-500" />
+                  <span className="text-sm text-green-500 font-medium">Scherpe prijs</span>
+                </div>
+              </div>
               
               <p className="text-lg text-[var(--text-secondary)] mb-8">
-                Soms heb je meer dan een standaard website nodig. 
-                Wij bouwen custom webapplicaties met moderne technologie.
+                <strong className="text-[var(--text-primary)]">Goedkope maatwerk webapplicatie</strong> laten bouwen? 
+                Vanaf <strong className="text-primary">€400</strong> bouwen wij custom webapplicaties met moderne technologie. 
+                Snel, betaalbaar en professioneel.
               </p>
 
               <div className="grid sm:grid-cols-2 gap-3 mb-8">
@@ -60,12 +73,12 @@ export default function MaatwerkPage() {
               </div>
 
               <div className="flex flex-wrap items-center gap-6 mb-8">
-                <div className="text-2xl font-bold text-primary">Vanaf €5.000</div>
-                <div className="text-[var(--text-muted)]">Projectafhankelijk</div>
+                <div className="text-3xl font-bold text-primary">€400 - €2.000</div>
+                <div className="text-[var(--text-muted)]">Oplevering: 5-12 dagen</div>
               </div>
 
               <Link href="/contact" className="btn-primary group inline-flex">
-                Besprek je project
+                Bespreek je project
                 <ArrowRight className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1" />
               </Link>
             </div>
@@ -73,9 +86,10 @@ export default function MaatwerkPage() {
             <div className="relative">
               <div className="aspect-square rounded-2xl bg-gradient-to-br from-secondary/20 to-purple-500/20 flex items-center justify-center">
                 <div className="text-center">
-                  <Code className="w-32 h-32 text-secondary mx-auto mb-4" />
+                  <Code className="w-24 h-24 text-secondary mx-auto mb-4" />
                   <div className="text-2xl font-bold text-[var(--text-primary)]">Maatwerk</div>
-                  <div className="text-primary">Vanaf €5.000</div>
+                  <div className="text-3xl font-extrabold text-primary mt-2">Vanaf €400</div>
+                  <div className="text-[var(--text-muted)] mt-1">5-12 dagen</div>
                 </div>
               </div>
             </div>

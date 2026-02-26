@@ -15,42 +15,48 @@ const services = [
   {
     icon: Globe,
     title: "WordPress Websites",
-    description: "Professionele, SEO-vriendelijke websites die je zelf kunt beheren.",
+    description: "Goedkope WordPress website vanaf €250. Al binnen 3 dagen online. Betaalbaar en professioneel.",
+    price: "€250 - €800",
     href: "/diensten/wordpress",
     color: "from-blue-500 to-cyan-500",
   },
   {
     icon: ShoppingCart,
     title: "WooCommerce Webshops",
-    description: "Verkoop online met een webshop die meegroeit met je business.",
+    description: "Voordelige webshop laten maken vanaf €350. Snel online en klaar voor verkoop.",
+    price: "€350 - €1.200",
     href: "/diensten/webshop",
     color: "from-primary to-orange-500",
   },
   {
     icon: Code,
     title: "Maatwerk Webapplicaties",
-    description: "Complexe projecten met Next.js, React en moderne technologie.",
+    description: "Snelle maatwerk ontwikkeling vanaf €400. Express oplevering mogelijk.",
+    price: "€400 - €2.000",
     href: "/diensten/maatwerk",
     color: "from-secondary to-purple-500",
   },
   {
     icon: Laptop,
     title: "Laptop Reparatie",
-    description: "Snel en vakkundig. Scherm, batterij, waterschade — wij fixen het.",
+    description: "Goedkope laptop reparatie vanaf €40. Scherm, batterij, waterschade.",
+    price: "Vanaf €40",
     href: "/reparaties/laptop",
     color: "from-green-500 to-emerald-500",
   },
   {
     icon: Monitor,
     title: "Computer Reparatie",
-    description: "Van virusremoval tot hardware upgrades. Weer als nieuw.",
+    description: "Voordelige computer reparatie vanaf €40. Virus, upgrades, onderhoud.",
+    price: "Vanaf €40",
     href: "/reparaties/computer",
     color: "from-yellow-500 to-amber-500",
   },
   {
     icon: Smartphone,
     title: "Telefoon & Tablet",
-    description: "iPhone, iPad, Samsung — originele onderdelen, garantie inbegrepen.",
+    description: "Scherpe prijzen vanaf €35. iPhone, iPad, Samsung reparatie.",
+    price: "Vanaf €35",
     href: "/reparaties/telefoon",
     color: "from-pink-500 to-rose-500",
   },
@@ -92,9 +98,10 @@ export default function Services() {
               </div>
 
               {/* Content */}
-              <h3 className="text-xl font-bold text-[var(--text-primary)] mb-3 group-hover:text-primary transition-colors">
+              <h3 className="text-xl font-bold text-[var(--text-primary)] mb-2 group-hover:text-primary transition-colors">
                 {service.title}
               </h3>
+              <div className="text-primary font-bold text-lg mb-2">{service.price}</div>
               <p className="text-[var(--text-secondary)] mb-6">
                 {service.description}
               </p>

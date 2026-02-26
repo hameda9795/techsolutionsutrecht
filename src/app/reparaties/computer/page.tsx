@@ -5,8 +5,9 @@ import Link from "next/link";
 import { Monitor, Check, ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Computer Reparatie Utrecht | TechSolutionsUtrecht",
-  description: "Snelle computer reparatie in Utrecht. Virus, hardware upgrades, niet opstarten. Vaak binnen 24 uur. Vanaf €59. WhatsApp +31 6 25518708",
+  title: "Goedkope Computer Reparatie Utrecht | Vanaf €40 | TechSolutionsUtrecht",
+  description: "Voordelige computer reparatie in Utrecht vanaf €40. Virus, hardware, niet opstarten. Snelle service, scherpe prijzen. WhatsApp +31 6 25518708",
+  keywords: ["goedkope computer reparatie utrecht", "voordelige pc reparatie", "lage prijs computer", "betaalbare computer reparatie"],
 };
 
 const repairs = [
@@ -38,14 +39,15 @@ export default function ComputerRepairPage() {
                 <Monitor className="w-8 h-8 text-white" />
               </div>
               
-              <h1 className="text-4xl sm:text-5xl font-bold text-[var(--text-primary)] mb-6">
-                Computer Reparatie{" "}
-                <span className="gradient-text">Utrecht</span>
+              <h1 className="text-4xl sm:text-5xl font-bold text-[var(--text-primary)] mb-4">
+                Goedkope Computer{" "}
+                <span className="gradient-text">Reparatie</span>
               </h1>
               
               <p className="text-lg text-[var(--text-secondary)] mb-8">
-                Van virusremoval tot hardware upgrades. Weer als nieuw. 
-                Vaak binnen 24 uur gerepareerd.
+                <strong className="text-[var(--text-primary)]">Betaalbare computer reparatie</strong> in Utrecht vanaf 
+                <strong className="text-primary">€40</strong>. 
+                Virus verwijderen, hardware upgrades, snelheidsoptimalisatie. Voordelig en snel.
               </p>
 
               <h3 className="font-semibold text-[var(--text-primary)] mb-4">Vaakste reparaties:</h3>
@@ -61,7 +63,7 @@ export default function ComputerRepairPage() {
               </div>
 
               <div className="flex flex-wrap items-center gap-6 mb-8">
-                <div className="text-2xl font-bold text-primary">Vanaf €59</div>
+                <div className="text-3xl font-bold text-primary">Vanaf €40</div>
                 <div className="text-[var(--text-muted)]">6 maanden garantie</div>
               </div>
 
@@ -75,8 +77,9 @@ export default function ComputerRepairPage() {
               <div className="aspect-square rounded-2xl bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center">
                 <div className="text-center">
                   <Monitor className="w-32 h-32 text-primary mx-auto mb-4" />
-                  <div className="text-2xl font-bold text-[var(--text-primary)]">Computer Reparatie</div>
-                  <div className="text-primary">Vanaf €59</div>
+                  <div className="text-2xl font-bold text-[var(--text-primary)]">Computer</div>
+                  <div className="text-3xl font-extrabold text-primary mt-2">Vanaf €40</div>
+                  <div className="text-[var(--text-muted)] mt-1">Scherpe prijs</div>
                 </div>
               </div>
             </div>

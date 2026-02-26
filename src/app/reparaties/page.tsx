@@ -5,8 +5,9 @@ import RepairDetail from "@/components/RepairDetail";
 import { Shield, Clock, Award, CheckCircle } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Reparaties | Computer & Laptop Reparatie Utrecht",
-  description: "Snelle en betrouwbare tech reparaties in Utrecht. Laptop, computer, Mac, telefoon & tablet. Vaak binnen 24 uur gerepareerd.",
+  title: "Goedkope Computer & Laptop Reparatie Utrecht | Vanaf €40 | TechSolutionsUtrecht",
+  description: "Voordelige laptop en computer reparatie in Utrecht vanaf €40. Scherpe prijzen, snelle service. iPhone, MacBook, iPad. WhatsApp +31 6 25518708",
+  keywords: ["goedkope laptop reparatie utrecht", "voordelige computer reparatie", "scherpe prijs reparatie", "betaalbare laptop reparatie", "lage prijs computer"],
 };
 
 const trustSignals = [
@@ -20,7 +21,7 @@ const repairs = [
   {
     icon: "laptop",
     title: "Laptop Reparatie",
-    description: "Snel en vakkundig. Scherm, batterij, waterschade — wij fixen het.",
+    description: "Goedkope laptop reparatie. Scherm, batterij, waterschade — wij fixen het voordelig.",
     repairs: [
       "Scherm reparatie",
       "Batterij vervangen",
@@ -30,12 +31,12 @@ const repairs = [
       "Snelheidsoptimalisatie",
     ],
     brands: ["Apple", "Dell", "HP", "Lenovo", "Asus", "Acer", "MSI"],
-    price: "Vanaf €79",
+    price: "Vanaf €40",
   },
   {
     icon: "computer",
     title: "Computer Reparatie",
-    description: "Van virusremoval tot hardware upgrades. Weer als nieuw.",
+    description: "Voordelige computer reparatie. Van virusremoval tot hardware upgrades.",
     repairs: [
       "Niet opstarten",
       "Traagheid / freezes",
@@ -45,12 +46,12 @@ const repairs = [
       "Netwerk problemen",
     ],
     brands: ["Alle merken"],
-    price: "Vanaf €59",
+    price: "Vanaf €40",
   },
   {
     icon: "mac",
     title: "Mac & MacBook Reparatie",
-    description: "Specialist in Apple reparaties met originele onderdelen.",
+    description: "Betaalbare Apple reparaties. MacBook, iMac met originele of hoogwaardige onderdelen.",
     repairs: [
       "MacBook scherm reparatie",
       "MacBook batterij vervangen",
@@ -60,12 +61,12 @@ const repairs = [
       "Data herstel",
     ],
     brands: ["MacBook", "MacBook Air", "MacBook Pro", "iMac", "Mac mini"],
-    price: "Vanaf €99",
+    price: "Vanaf €55",
   },
   {
     icon: "phone",
     title: "Telefoon & Tablet",
-    description: "iPhone, iPad, Samsung — originele onderdelen, garantie inbegrepen.",
+    description: "Goedkope iPhone, iPad, Samsung reparaties. Scherpe prijzen, snel gerepareerd.",
     repairs: [
       "Scherm reparatie",
       "Batterij vervangen",
@@ -75,7 +76,7 @@ const repairs = [
       "Back cover vervangen",
     ],
     brands: ["iPhone", "iPad", "Samsung", "Huawei", "OnePlus", "Xiaomi"],
-    price: "Vanaf €49",
+    price: "Vanaf €35",
   },
 ];
 
@@ -91,13 +92,13 @@ export default function ReparatiesPage() {
               Reparaties
             </span>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[var(--text-primary)] mt-4 mb-6">
-              Je Tech Weer{" "}
-              <span className="gradient-text">als Nieuw</span>
+              Goedkope Reparatie{" "}
+              <span className="gradient-text">Utrecht</span>
             </h1>
             <p className="text-[var(--text-secondary)] text-lg">
-              Laptop die niet start? iPhone met een gebarsten scherm? 
-              Geen paniek. Wij repareren snel, vakkundig en tegen 
-              concurrerende prijzen. Met garantie, uiteraard.
+              Laptop, computer, telefoon of tablet kapot? 
+              <strong className="text-primary">Vanaf €35</strong> repareren wij je device snel en voordelig. 
+              De scherpste prijzen in Utrecht met garantie.
             </p>
           </div>
 

@@ -5,8 +5,9 @@ import Link from "next/link";
 import { Tablet, Check, ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "iPad Reparatie Utrecht | TechSolutionsUtrecht",
-  description: "Snelle iPad reparatie in Utrecht. Scherm, batterij, laadpoort. Originele onderdelen. Vanaf €69. WhatsApp +31 6 25518708",
+  title: "Goedkope iPad & Tablet Reparatie Utrecht | Vanaf €55 | TechSolutionsUtrecht",
+  description: "Voordelige iPad reparatie in Utrecht vanaf €55. Scherm, batterij, laadpoort. Originele onderdelen, scherpe prijzen. WhatsApp +31 6 25518708",
+  keywords: ["goedkope ipad reparatie utrecht", "voordelige tablet reparatie", "lage prijs ipad", "betaalbare tablet reparatie"],
 };
 
 const repairs = [
@@ -18,13 +19,7 @@ const repairs = [
   "Back cover vervangen",
 ];
 
-const models = [
-  "iPad (alle generaties)",
-  "iPad Air",
-  "iPad mini",
-  "iPad Pro 11\"",
-  "iPad Pro 12.9\"",
-];
+const models = ["iPad", "iPad Air", "iPad mini", "iPad Pro 11\"", "iPad Pro 12.9\""];
 
 export default function iPadRepairPage() {
   return (
@@ -46,16 +41,15 @@ export default function iPadRepairPage() {
                 <Tablet className="w-8 h-8 text-white" />
               </div>
               
-              <h1 className="text-4xl sm:text-5xl font-bold text-[var(--text-primary)] mb-6">
-                iPad{" "}
-                <span className="gradient-text">Reparatie</span>{" "}
-                Utrecht
+              <h1 className="text-4xl sm:text-5xl font-bold text-[var(--text-primary)] mb-4">
+                Goedkope iPad{" "}
+                <span className="gradient-text">Reparatie</span>
               </h1>
               
               <p className="text-lg text-[var(--text-secondary)] mb-8">
-                Specialist in Apple iPad reparaties. Scherm, batterij, laadpoort — 
-                wij fixen het. Originele en hoogwaardige onderdelen. 
-                Vaak binnen 24 uur gerepareerd.
+                <strong className="text-[var(--text-primary)]">Voordelige iPad reparatie</strong> in Utrecht vanaf 
+                <strong className="text-primary">€55</strong>. 
+                Specialist in Apple iPad reparaties. Scherm, batterij, laadpoort — wij fixen het.
               </p>
 
               <h3 className="font-semibold text-[var(--text-primary)] mb-4">Vaakste reparaties:</h3>
@@ -80,7 +74,7 @@ export default function iPadRepairPage() {
               </div>
 
               <div className="flex flex-wrap items-center gap-6 mb-8">
-                <div className="text-2xl font-bold text-primary">Vanaf €69</div>
+                <div className="text-3xl font-bold text-primary">Vanaf €55</div>
                 <div className="text-[var(--text-muted)]">6 maanden garantie</div>
               </div>
 
@@ -94,8 +88,9 @@ export default function iPadRepairPage() {
               <div className="aspect-square rounded-2xl bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center">
                 <div className="text-center">
                   <Tablet className="w-32 h-32 text-primary mx-auto mb-4" />
-                  <div className="text-2xl font-bold text-[var(--text-primary)]">iPad Reparatie</div>
-                  <div className="text-primary">Vanaf €69</div>
+                  <div className="text-2xl font-bold text-[var(--text-primary)]">iPad</div>
+                  <div className="text-3xl font-extrabold text-primary mt-2">Vanaf €55</div>
+                  <div className="text-[var(--text-muted)] mt-1">Scherpe prijs</div>
                 </div>
               </div>
             </div>

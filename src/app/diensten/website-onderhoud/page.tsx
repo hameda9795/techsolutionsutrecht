@@ -2,12 +2,12 @@ import { Metadata } from "next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Link from "next/link";
-import { Wrench, Check, ArrowRight, Shield, Clock, AlertTriangle } from "lucide-react";
+import { Wrench, Check, ArrowRight, Shield, Clock } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Website Onderhoud Utrecht | TechSolutionsUtrecht",
-  description: "Professioneel website onderhoud in Utrecht. Updates, beveiliging, backups en monitoring. Vanaf €99/maand. Zorgeloos online!",
-  keywords: ["website onderhoud utrecht", "wordpress onderhoud", "website beheer", "website updates", "website beveiliging"],
+  title: "Goedkoop Website Onderhoud Utrecht | Vanaf €50/maand | TechSolutionsUtrecht",
+  description: "Voordelig website onderhoud vanaf €50/maand. Updates, beveiliging, backups. Betaalbaar en professioneel in Utrecht. Gratis consultatie!",
+  keywords: ["goedkoop website onderhoud", "voordelig website beheer", "betaalbare website onderhoud", "lage prijs onderhoud"],
 };
 
 const features = [
@@ -26,17 +26,12 @@ const features = [
     title: "Backups",
     description: "Dagelijkse backups naar veilige cloud opslag. Snel herstel mogelijk."
   },
-  {
-    icon: AlertTriangle,
-    title: "Monitoring",
-    description: "24/7 uptime monitoring. Direct alert bij problemen."
-  }
 ];
 
 const packages = [
   {
     name: "Basic",
-    price: "€99",
+    price: "€50",
     period: "/maand",
     features: [
       "Wekelijkse backups",
@@ -49,7 +44,7 @@ const packages = [
   },
   {
     name: "Pro",
-    price: "€149",
+    price: "€100",
     period: "/maand",
     features: [
       "Dagelijkse backups",
@@ -63,7 +58,7 @@ const packages = [
   },
   {
     name: "Enterprise",
-    price: "€299",
+    price: "€150",
     period: "/maand",
     features: [
       "Real-time backups",
@@ -75,7 +70,7 @@ const packages = [
       "Dedicated account manager"
     ],
     recommended: false
-  }
+  },
 ];
 
 export default function WebsiteOnderhoudPage() {
@@ -98,17 +93,19 @@ export default function WebsiteOnderhoudPage() {
                 <Wrench className="w-8 h-8 text-white" />
               </div>
               
-              <h1 className="text-4xl sm:text-5xl font-bold text-[var(--text-primary)] mb-6">
-                Website{" "}
+              <h1 className="text-4xl sm:text-5xl font-bold text-[var(--text-primary)] mb-4">
+                Goedkoop Website{" "}
                 <span className="gradient-text">Onderhoud</span>
               </h1>
               
               <p className="text-lg text-[var(--text-secondary)] mb-8">
-                Een website is nooit 'klaar'. Net als je auto heeft je website regelmatig 
-                onderhoud nodig. Wij zorgen ervoor dat je site veilig, snel en up-to-date blijft.
+                <strong className="text-[var(--text-primary)]">Voordelig website onderhoud</strong> vanaf slechts 
+                <strong className="text-primary">€50 per maand</strong>. 
+                Updates, beveiliging, backups — wij zorgen dat je site veilig en snel blijft, 
+                zonder hoge kosten.
               </p>
 
-              <div className="grid sm:grid-cols-2 gap-4 mb-8">
+              <div className="grid sm:grid-cols-3 gap-4 mb-8">
                 {features.map((feature) => (
                   <div key={feature.title} className="flex items-start gap-3">
                     <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
@@ -132,8 +129,9 @@ export default function WebsiteOnderhoudPage() {
               <div className="aspect-square rounded-2xl bg-gradient-to-br from-green-500/20 to-emerald-500/20 flex items-center justify-center">
                 <div className="text-center">
                   <Wrench className="w-32 h-32 text-green-500 mx-auto mb-4" />
-                  <div className="text-2xl font-bold text-[var(--text-primary)]">Zorgeloos Online</div>
-                  <div className="text-primary">Vanaf €99/maand</div>
+                  <div className="text-2xl font-bold text-[var(--text-primary)]">Onderhoud</div>
+                  <div className="text-3xl font-extrabold text-primary mt-2">Vanaf €50/maand</div>
+                  <div className="text-[var(--text-muted)] mt-1">Scherpe prijs</div>
                 </div>
               </div>
             </div>
@@ -143,7 +141,7 @@ export default function WebsiteOnderhoudPage() {
           <div className="mb-20">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-[var(--text-primary)] mb-4">
-                Onderhouds{" "}<span className="gradient-text">Pakketten</span>
+                Voordelige{" "}<span className="gradient-text">Onderhouds Pakketten</span>
               </h2>
               <p className="text-[var(--text-secondary)]">
                 Kies het pakket dat bij jou past. Alle pakketten zijn maandelijks opzegbaar.
@@ -195,59 +193,6 @@ export default function WebsiteOnderhoudPage() {
                   </Link>
                 </div>
               ))}
-            </div>
-          </div>
-
-          {/* Why */}
-          <div className="bg-[var(--bg-card)] border border-[var(--border)] rounded-2xl p-8">
-            <h2 className="text-2xl font-bold text-[var(--text-primary)] mb-6">
-              Waarom Website Onderhoud?
-            </h2>
-            
-            <div className="grid md:grid-cols-2 gap-8">
-              <div>
-                <h3 className="font-semibold text-[var(--text-primary)] mb-3">Zonder onderhoud:</h3>
-                <ul className="space-y-2 text-[var(--text-secondary)]">
-                  <li className="flex items-center gap-2">
-                    <span className="text-red-500">×</span>
-                    Beveiligingsrisico's door verouderde software
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <span className="text-red-500">×</span>
-                    Traagheid door niet-geoptimaliseerde database
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <span className="text-red-500">×</span>
-                    Downtime door gebrekkige monitoring
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <span className="text-red-500">×</span>
-                    Dataverlies zonder backups
-                  </li>
-                </ul>
-              </div>
-
-              <div>
-                <h3 className="font-semibold text-[var(--text-primary)] mb-3">Met ons onderhoud:</h3>
-                <ul className="space-y-2 text-[var(--text-secondary)]">
-                  <li className="flex items-center gap-2">
-                    <Check className="w-4 h-4 text-green-500" />
-                    Altijd up-to-date beveiliging
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <Check className="w-4 h-4 text-green-500" />
-                    Optimale laadsnelheid
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <Check className="w-4 h-4 text-green-500" />
-                    Proactieve probleemoplossing
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <Check className="w-4 h-4 text-green-500" />
-                    Gegarandeerde backups
-                  </li>
-                </ul>
-              </div>
             </div>
           </div>
         </div>

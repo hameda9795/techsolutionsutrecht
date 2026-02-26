@@ -5,8 +5,9 @@ import Link from "next/link";
 import { TrendingUp, Check, ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "SEO Optimalisatie Utrecht | TechSolutionsUtrecht",
-  description: "Hoger in Google met professionele SEO. Technische analyse, keyword research, content optimalisatie. Vanaf €499/maand.",
+  title: "Goedkope SEO Optimalisatie Utrecht | Vanaf €200/maand | TechSolutionsUtrecht",
+  description: "Betaalbare SEO optimalisatie vanaf €200/maand. Hoger in Google tegen scherpe prijzen. Technische SEO, local SEO Utrecht. Gratis adviesgesprek!",
+  keywords: ["goedkope seo optimalisatie", "betaalbare seo utrecht", "voordelige seo", "lage prijs seo", "seo vanaf 200 euro"],
 };
 
 const features = [
@@ -38,14 +39,16 @@ export default function SEOPage() {
                 <TrendingUp className="w-8 h-8 text-white" />
               </div>
               
-              <h1 className="text-4xl sm:text-5xl font-bold text-[var(--text-primary)] mb-6">
-                Hoger in{" "}
-                <span className="gradient-text">Google</span>
+              <h1 className="text-4xl sm:text-5xl font-bold text-[var(--text-primary)] mb-4">
+                Goedkope SEO{" "}
+                <span className="gradient-text">Optimalisatie</span>
               </h1>
-              
+
               <p className="text-lg text-[var(--text-secondary)] mb-8">
-                Een mooie website is niets waard als niemand &#39;m vindt. 
-                Wij zorgen dat je gevonden wordt.
+                <strong className="text-[var(--text-primary)]">Betaalbare SEO optimalisatie</strong> vanaf 
+                slechts <strong className="text-primary">€200 per maand</strong>. 
+                Hoger in Google zonder de hoge kosten van grote bureaus. 
+                Transparante prijzen, meetbaar resultaat.
               </p>
 
               <div className="grid sm:grid-cols-2 gap-3 mb-8">
@@ -60,12 +63,12 @@ export default function SEOPage() {
               </div>
 
               <div className="flex flex-wrap items-center gap-6 mb-8">
-                <div className="text-2xl font-bold text-primary">Vanaf €499/maand</div>
-                <div className="text-[var(--text-muted)]">Doorlopend</div>
+                <div className="text-3xl font-bold text-primary">€200/maand</div>
+                <div className="text-[var(--text-muted)]">Maandelijks opzegbaar</div>
               </div>
 
               <Link href="/contact" className="btn-primary group inline-flex">
-                Verbeter je SEO
+                Start met SEO
                 <ArrowRight className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1" />
               </Link>
             </div>
@@ -73,9 +76,10 @@ export default function SEOPage() {
             <div className="relative">
               <div className="aspect-square rounded-2xl bg-gradient-to-br from-green-500/20 to-emerald-500/20 flex items-center justify-center">
                 <div className="text-center">
-                  <TrendingUp className="w-32 h-32 text-green-500 mx-auto mb-4" />
+                  <TrendingUp className="w-24 h-24 text-green-500 mx-auto mb-4" />
                   <div className="text-2xl font-bold text-[var(--text-primary)]">SEO</div>
-                  <div className="text-primary">Vanaf €499/maand</div>
+                  <div className="text-3xl font-extrabold text-primary mt-2">€200/maand</div>
+                  <div className="text-[var(--text-muted)] mt-1">Maandelijks opzegbaar</div>
                 </div>
               </div>
             </div>

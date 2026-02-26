@@ -2,11 +2,12 @@ import { Metadata } from "next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Link from "next/link";
-import { ShoppingCart, Check, ArrowRight } from "lucide-react";
+import { ShoppingCart, Check, ArrowRight, Zap, Clock } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Webshop Laten Maken WooCommerce Utrecht | TechSolutionsUtrecht",
-  description: "WooCommerce webshop die meegroeit met je business. iDEAL, voorraadbeheer, verzending. Vanaf €2.499. Gratis offerte!",
+  title: "Goedkoop Webshop Laten Maken Utrecht | Vanaf €350 | Snel Online | TechSolutionsUtrecht",
+  description: "Voordelige webshop laten maken vanaf €350. Snelle oplevering 5-12 dagen. WooCommerce webshop met iDEAL, betaalbaar en professioneel in Utrecht. Gratis offerte!",
+  keywords: ["goedkoop webshop laten maken", "voordelige webshop", "betaalbare webshop utrecht", "snelle webshop", "webshop binnen 1 week"],
 };
 
 const features = [
@@ -38,14 +39,26 @@ export default function WebshopPage() {
                 <ShoppingCart className="w-8 h-8 text-white" />
               </div>
               
-              <h1 className="text-4xl sm:text-5xl font-bold text-[var(--text-primary)] mb-6">
-                Webshops die{" "}
-                <span className="gradient-text">Verkopen</span>
+              <h1 className="text-4xl sm:text-5xl font-bold text-[var(--text-primary)] mb-4">
+                Goedkoop Webshop{" "}
+                <span className="gradient-text">Laten Maken</span>
               </h1>
+
+              <div className="flex flex-wrap gap-3 mb-6">
+                <div className="flex items-center gap-2 px-3 py-1 bg-primary/10 rounded-full">
+                  <Zap className="w-4 h-4 text-primary" />
+                  <span className="text-sm text-primary font-medium">Binnen 5-12 dagen online</span>
+                </div>
+                <div className="flex items-center gap-2 px-3 py-1 bg-green-500/10 rounded-full">
+                  <Clock className="w-4 h-4 text-green-500" />
+                  <span className="text-sm text-green-500 font-medium">Snelle oplevering</span>
+                </div>
+              </div>
               
               <p className="text-lg text-[var(--text-secondary)] mb-8">
-                Met WooCommerce bouwen we een webshop die meegroeit 
-                met je business. Van startup tot enterprise.
+                <strong className="text-[var(--text-primary)]">Goedkoop webshop laten maken</strong> in Utrecht? 
+                Vanaf <strong className="text-primary">€350</strong> bouwen wij een complete WooCommerce webshop. 
+                Met iDEAL-koppeling, voorraadbeheer en alles wat je nodig hebt om online te verkopen.
               </p>
 
               <div className="grid sm:grid-cols-2 gap-3 mb-8">
@@ -60,8 +73,8 @@ export default function WebshopPage() {
               </div>
 
               <div className="flex flex-wrap items-center gap-6 mb-8">
-                <div className="text-2xl font-bold text-primary">Vanaf €2.499</div>
-                <div className="text-[var(--text-muted)]">Levertijd: 3-6 weken</div>
+                <div className="text-3xl font-bold text-primary">€350 - €1.200</div>
+                <div className="text-[var(--text-muted)]">Oplevering: 5-12 dagen</div>
               </div>
 
               <Link href="/contact" className="btn-primary group inline-flex">
@@ -73,10 +86,27 @@ export default function WebshopPage() {
             <div className="relative">
               <div className="aspect-square rounded-2xl bg-gradient-to-br from-primary/20 to-orange-500/20 flex items-center justify-center">
                 <div className="text-center">
-                  <ShoppingCart className="w-32 h-32 text-primary mx-auto mb-4" />
+                  <ShoppingCart className="w-24 h-24 text-primary mx-auto mb-4" />
                   <div className="text-2xl font-bold text-[var(--text-primary)]">WooCommerce</div>
-                  <div className="text-primary">Vanaf €2.499</div>
+                  <div className="text-3xl font-extrabold text-primary mt-2">Vanaf €350</div>
+                  <div className="text-[var(--text-muted)] mt-1">5-12 dagen</div>
                 </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-20 p-8 bg-[var(--bg-card)] border border-[var(--border)] rounded-2xl">
+            <h2 className="text-2xl font-bold text-[var(--text-primary)] mb-4">
+              Voordelig Webshop Laten Maken — Hoe Werkt Het?
+            </h2>
+            <div className="grid md:grid-cols-2 gap-6 text-[var(--text-secondary)]">
+              <div>
+                <h3 className="font-semibold text-[var(--text-primary)] mb-2">Scherpe prijs, alles inbegrepen</h3>
+                <p>Onze webshops zijn all-in geprijsd. Geen verborgen kosten voor iDEAL-koppeling, design of installatie. Wat we afspreken, betaal je.</p>
+              </div>
+              <div>
+                <h3 className="font-semibold text-[var(--text-primary)] mb-2">Snel online — binnen 5-12 dagen</h3>
+                <p>Je webshop is <strong className="text-primary">5 tot 12 werkdagen</strong> na akkoord live. Bij spoed is express oplevering mogelijk.</p>
               </div>
             </div>
           </div>

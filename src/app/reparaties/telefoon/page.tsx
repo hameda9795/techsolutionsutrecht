@@ -5,8 +5,9 @@ import Link from "next/link";
 import { Smartphone, Check, ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "iPhone & Telefoon Reparatie Utrecht | TechSolutionsUtrecht",
-  description: "Snelle telefoon reparatie in Utrecht. iPhone, Samsung, scherm, batterij. Originele onderdelen. Vanaf €49. WhatsApp +31 6 25518708",
+  title: "Goedkope iPhone & Telefoon Reparatie Utrecht | Vanaf €35 | TechSolutionsUtrecht",
+  description: "Voordelige telefoon reparatie in Utrecht vanaf €35. iPhone, Samsung, scherm, batterij. Originele onderdelen, scherpe prijzen. WhatsApp +31 6 25518708",
+  keywords: ["goedkope iphone reparatie utrecht", "voordelige telefoon reparatie", "lage prijs iphone", "scherpe prijs telefoon"],
 };
 
 const repairs = [
@@ -18,7 +19,7 @@ const repairs = [
   "Back cover vervangen",
 ];
 
-const brands = ["iPhone", "iPad", "Samsung", "Huawei", "OnePlus", "Xiaomi"];
+const brands = ["iPhone", "Samsung", "Huawei", "OnePlus", "Xiaomi"];
 
 export default function TelefoonRepairPage() {
   return (
@@ -40,14 +41,15 @@ export default function TelefoonRepairPage() {
                 <Smartphone className="w-8 h-8 text-white" />
               </div>
               
-              <h1 className="text-4xl sm:text-5xl font-bold text-[var(--text-primary)] mb-6">
-                iPhone & Telefoon{" "}
+              <h1 className="text-4xl sm:text-5xl font-bold text-[var(--text-primary)] mb-4">
+                Goedkope Telefoon{" "}
                 <span className="gradient-text">Reparatie</span>
               </h1>
               
               <p className="text-lg text-[var(--text-secondary)] mb-8">
-                iPhone, iPad, Samsung — originele onderdelen, garantie inbegrepen. 
-                Vaak binnen 24 uur gerepareerd.
+                <strong className="text-[var(--text-primary)]">Voordelige telefoon reparatie</strong> in Utrecht vanaf 
+                <strong className="text-primary">€35</strong>. 
+                iPhone, Samsung, Huawei — originele onderdelen, garantie inbegrepen.
               </p>
 
               <h3 className="font-semibold text-[var(--text-primary)] mb-4">Reparaties:</h3>
@@ -72,7 +74,7 @@ export default function TelefoonRepairPage() {
               </div>
 
               <div className="flex flex-wrap items-center gap-6 mb-8">
-                <div className="text-2xl font-bold text-primary">Vanaf €49</div>
+                <div className="text-3xl font-bold text-primary">Vanaf €35</div>
                 <div className="text-[var(--text-muted)]">6 maanden garantie</div>
               </div>
 
@@ -86,8 +88,9 @@ export default function TelefoonRepairPage() {
               <div className="aspect-square rounded-2xl bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center">
                 <div className="text-center">
                   <Smartphone className="w-32 h-32 text-primary mx-auto mb-4" />
-                  <div className="text-2xl font-bold text-[var(--text-primary)]">Telefoon Reparatie</div>
-                  <div className="text-primary">Vanaf €49</div>
+                  <div className="text-2xl font-bold text-[var(--text-primary)]">Telefoon</div>
+                  <div className="text-3xl font-extrabold text-primary mt-2">Vanaf €35</div>
+                  <div className="text-[var(--text-muted)] mt-1">Scherpe prijs</div>
                 </div>
               </div>
             </div>

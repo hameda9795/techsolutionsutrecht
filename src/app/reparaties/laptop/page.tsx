@@ -5,8 +5,9 @@ import Link from "next/link";
 import { Laptop, Check, ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Laptop Reparatie Utrecht | TechSolutionsUtrecht",
-  description: "Snelle laptop reparatie in Utrecht. Scherm, batterij, waterschade, toetsenbord. Vaak binnen 24 uur. Vanaf €79. WhatsApp +31 6 25518708",
+  title: "Goedkope Laptop Reparatie Utrecht | Vanaf €40 | TechSolutionsUtrecht",
+  description: "Voordelige laptop reparatie in Utrecht vanaf €40. Scherm, batterij, waterschade. Snelle service, lage prijzen. WhatsApp +31 6 25518708",
+  keywords: ["goedkope laptop reparatie utrecht", "voordelige laptop reparatie", "lage prijs laptop", "scherpe prijs laptop reparatie"],
 };
 
 const repairs = [
@@ -40,14 +41,15 @@ export default function LaptopRepairPage() {
                 <Laptop className="w-8 h-8 text-white" />
               </div>
               
-              <h1 className="text-4xl sm:text-5xl font-bold text-[var(--text-primary)] mb-6">
-                Laptop Reparatie{" "}
-                <span className="gradient-text">Utrecht</span>
+              <h1 className="text-4xl sm:text-5xl font-bold text-[var(--text-primary)] mb-4">
+                Goedkope Laptop{" "}
+                <span className="gradient-text">Reparatie</span>
               </h1>
               
               <p className="text-lg text-[var(--text-secondary)] mb-8">
-                Snel en vakkundig. Scherm, batterij, waterschade — wij fixen het. 
-                Vaak binnen 24 uur gerepareerd.
+                <strong className="text-[var(--text-primary)]">Voordelige laptop reparatie</strong> in Utrecht vanaf 
+                slechts <strong className="text-primary">€40</strong>. 
+                Scherm, batterij, waterschade — wij fixen het snel en betaalbaar.
               </p>
 
               <h3 className="font-semibold text-[var(--text-primary)] mb-4">Vaakste reparaties:</h3>
@@ -72,7 +74,7 @@ export default function LaptopRepairPage() {
               </div>
 
               <div className="flex flex-wrap items-center gap-6 mb-8">
-                <div className="text-2xl font-bold text-primary">Vanaf €79</div>
+                <div className="text-3xl font-bold text-primary">Vanaf €40</div>
                 <div className="text-[var(--text-muted)]">6 maanden garantie</div>
               </div>
 
@@ -86,8 +88,9 @@ export default function LaptopRepairPage() {
               <div className="aspect-square rounded-2xl bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center">
                 <div className="text-center">
                   <Laptop className="w-32 h-32 text-primary mx-auto mb-4" />
-                  <div className="text-2xl font-bold text-[var(--text-primary)]">Laptop Reparatie</div>
-                  <div className="text-primary">Vanaf €79</div>
+                  <div className="text-2xl font-bold text-[var(--text-primary)]">Laptop</div>
+                  <div className="text-3xl font-extrabold text-primary mt-2">Vanaf €40</div>
+                  <div className="text-[var(--text-muted)] mt-1">Scherpe prijs</div>
                 </div>
               </div>
             </div>

@@ -5,8 +5,9 @@ import Link from "next/link";
 import { Tablet, Check, ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Tablet Reparatie Utrecht | Samsung, Huawei & meer | TechSolutionsUtrecht",
-  description: "Snelle tablet reparatie in Utrecht. Samsung, Huawei, Lenovo. Scherm, batterij, laadpoort. Vanaf €59. WhatsApp +31 6 25518708",
+  title: "Goedkope Tablet Reparatie Utrecht | Samsung, Huawei | Vanaf €55 | TechSolutionsUtrecht",
+  description: "Voordelige tablet reparatie in Utrecht vanaf €55. Samsung, Huawei, Lenovo. Scherm, batterij, laadpoort. Scherpe prijzen. WhatsApp +31 6 25518708",
+  keywords: ["goedkope tablet reparatie utrecht", "voordelige tablet reparatie", "lage prijs tablet", "samsung tablet reparatie"],
 };
 
 const repairs = [
@@ -18,14 +19,7 @@ const repairs = [
   "Software problemen",
 ];
 
-const brands = [
-  "Samsung Galaxy Tab",
-  "Huawei MediaPad",
-  "Lenovo Tab",
-  "Microsoft Surface",
-  "Amazon Fire",
-  "Asus ZenPad",
-];
+const brands = ["Samsung Galaxy Tab", "Huawei MediaPad", "Lenovo Tab", "Microsoft Surface", "Amazon Fire", "Asus ZenPad"];
 
 export default function TabletRepairPage() {
   return (
@@ -47,15 +41,15 @@ export default function TabletRepairPage() {
                 <Tablet className="w-8 h-8 text-white" />
               </div>
               
-              <h1 className="text-4xl sm:text-5xl font-bold text-[var(--text-primary)] mb-6">
-                Tablet{" "}
-                <span className="gradient-text">Reparatie</span>{" "}
-                Utrecht
+              <h1 className="text-4xl sm:text-5xl font-bold text-[var(--text-primary)] mb-4">
+                Goedkope Tablet{" "}
+                <span className="gradient-text">Reparatie</span>
               </h1>
               
               <p className="text-lg text-[var(--text-secondary)] mb-8">
-                Samsung, Huawei, Lenovo en meer. Snelle reparatie met garantie. 
-                Vaak binnen 24 uur gerepareerd.
+                <strong className="text-[var(--text-primary)]">Voordelige tablet reparatie</strong> in Utrecht vanaf 
+                <strong className="text-primary">€55</strong>. 
+                Samsung, Huawei, Lenovo — snelle reparatie met garantie.
               </p>
 
               <h3 className="font-semibold text-[var(--text-primary)] mb-4">Vaakste reparaties:</h3>
@@ -80,7 +74,7 @@ export default function TabletRepairPage() {
               </div>
 
               <div className="flex flex-wrap items-center gap-6 mb-8">
-                <div className="text-2xl font-bold text-primary">Vanaf €59</div>
+                <div className="text-3xl font-bold text-primary">Vanaf €55</div>
                 <div className="text-[var(--text-muted)]">6 maanden garantie</div>
               </div>
 
@@ -94,8 +88,9 @@ export default function TabletRepairPage() {
               <div className="aspect-square rounded-2xl bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center">
                 <div className="text-center">
                   <Tablet className="w-32 h-32 text-primary mx-auto mb-4" />
-                  <div className="text-2xl font-bold text-[var(--text-primary)]">Tablet Reparatie</div>
-                  <div className="text-primary">Vanaf €59</div>
+                  <div className="text-2xl font-bold text-[var(--text-primary)]">Tablet</div>
+                  <div className="text-3xl font-extrabold text-primary mt-2">Vanaf €55</div>
+                  <div className="text-[var(--text-muted)] mt-1">Scherpe prijs</div>
                 </div>
               </div>
             </div>

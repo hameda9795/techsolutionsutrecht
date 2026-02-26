@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowRight, Sparkles } from "lucide-react";
+import { ArrowRight, Zap, Clock, Euro } from "lucide-react";
 
 export default function Hero() {
   return (
@@ -16,29 +16,42 @@ export default function Hero() {
 
       <div className="container-custom relative z-10 pt-32 pb-20">
         <div className="max-w-4xl mx-auto text-center">
-          {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[var(--bg-card)] border border-[var(--border)] mb-8 animate-fade-in-up">
-            <Sparkles className="w-4 h-4 text-primary" />
-            <span className="text-sm text-[var(--text-secondary)]">
-              TechSolutionsUtrecht sinds 2025 | 12+ jaar ervaring
+          {/* Badge - Price Focus */}
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/20 border border-primary/30 mb-8 animate-fade-in-up">
+            <Euro className="w-4 h-4 text-primary" />
+            <span className="text-sm text-[var(--text-primary)] font-semibold">
+              Vanaf €250 - De scherpste prijzen in Utrecht
             </span>
           </div>
 
-          {/* Main Headline */}
+          {/* Main Headline - Cheap + Fast */}
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-6 animate-fade-in-up animate-delay-100">
-            <span className="text-[var(--text-primary)]">Al je tech onder</span>
+            <span className="text-[var(--text-primary)]">Goedkope Website</span>
             <br />
-            <span className="gradient-text">één dak in Utrecht</span>
+            <span className="gradient-text">Vanaf €250</span>
           </h1>
 
-          {/* Subheadline */}
-          <p className="text-lg sm:text-xl text-[var(--text-secondary)] max-w-2xl mx-auto mb-10 animate-fade-in-up animate-delay-200">
-            Professionele websites die converteren. Betrouwbare reparaties die werken. 
-            Sinds 2025 voor ondernemers en particulieren in Utrecht.
+          {/* Subheadline - Fast delivery */}
+          <p className="text-lg sm:text-xl text-[var(--text-secondary)] max-w-2xl mx-auto mb-6 animate-fade-in-up animate-delay-200">
+            Snelle oplevering binnen <strong className="text-primary">3-10 dagen</strong>. 
+            Voordelige webdesign, webshops en reparaties tegen scherpe prijzen in Utrecht. 
+            Betaalbaar en professioneel!
           </p>
 
+          {/* Price + Speed Pills */}
+          <div className="flex flex-wrap items-center justify-center gap-4 mb-10 animate-fade-in-up animate-delay-300">
+            <div className="flex items-center gap-2 px-4 py-2 bg-[var(--bg-card)] border border-[var(--border)] rounded-full">
+              <Zap className="w-4 h-4 text-yellow-500" />
+              <span className="text-sm text-[var(--text-secondary)]">Express: Binnen 3 dagen online</span>
+            </div>
+            <div className="flex items-center gap-2 px-4 py-2 bg-[var(--bg-card)] border border-[var(--border)] rounded-full">
+              <Clock className="w-4 h-4 text-primary" />
+              <span className="text-sm text-[var(--text-secondary)]">Standaard: 3-10 dagen</span>
+            </div>
+          </div>
+
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-in-up animate-delay-300">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-in-up animate-delay-400">
             <Link href="/contact" className="btn-primary group">
               Gratis offerte aanvragen
               <ArrowRight className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1" />
@@ -56,8 +69,8 @@ export default function Hero() {
             </a>
           </div>
 
-          {/* Trust Badges */}
-          <div className="mt-16 flex flex-wrap items-center justify-center gap-8 animate-fade-in-up animate-delay-400">
+          {/* Trust Badges - Updated with price focus */}
+          <div className="mt-16 flex flex-wrap items-center justify-center gap-8 animate-fade-in-up animate-delay-500">
             <div className="flex items-center gap-2 text-[var(--text-muted)]">
               <div className="flex">
                 {[...Array(5)].map((_, i) => (
@@ -78,7 +91,7 @@ export default function Hero() {
             </div>
             <div className="h-8 w-px bg-[var(--border)] hidden sm:block" />
             <div className="text-[var(--text-muted)] text-sm">
-              24u gemiddelde reparatietijd
+              Snelle oplevering
             </div>
           </div>
         </div>
