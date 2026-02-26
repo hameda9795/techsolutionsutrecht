@@ -112,8 +112,7 @@ export default function PortfolioPage() {
                 {/* Preview Image */}
                 <div className="aspect-video bg-gradient-to-br from-[var(--bg-secondary)] to-[var(--bg-tertiary)] flex items-center justify-center relative"
                 >
-                  <div className="text-center"
-003e
+                  <div className="text-center">
                     <div className="text-6xl mb-4">{project.category === "WordPress" ? "🌐" : project.category === "Webshop" ? "🛒" : "⚙️"}</div>
                     <span className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">{project.category}</span>
                   </div>

@@ -60,7 +60,7 @@ export default function AdminDashboard() {
             Instellingen
           </Link>
           
-          <hr className="my-4 border-[var(--border)]" /
+          <hr className="my-4 border-[var(--border)]" />
           
           <Link 
             href="/"
