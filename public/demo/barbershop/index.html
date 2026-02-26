@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Gentleman's Cut - Herenkapper Utrecht</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --gold: #D4AF37;
+            --dark: #1a1a1a;
+            --gray: #2d2d2d;
+            --light: #f5f5f5;
+        }
+        
+        body {
+            font-family: 'Georgia', serif;
+            background: var(--dark);
+            color: var(--light);
+            line-height: 1.6;
+        }
+        
+        /* Header */
+        header {
+            background: linear-gradient(135deg, var(--dark) 0%, var(--gray) 100%);
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 2px solid var(--gold);
+        }
+        
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--gold);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            color: var(--light);
+            text-decoration: none;
+            transition: color 0.3s;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+        }
+        
+        .nav-links a:hover {
+            color: var(--gold);
+        }
+        
+        /* Hero */
+        .hero {
+            margin-top: 70px;
+            height: 90vh;
+            background: linear-gradient(135deg, rgba(26,26,26,0.9) 0%, rgba(45,45,45,0.8) 100%),
+                        linear-gradient(45deg, #1a1a1a 25%, #2d2d2d 25%, #2d2d2d 50%, #1a1a1a 50%, #1a1a1a 75%, #2d2d2d 75%, #2d2d2d);
+            background-size: 100% 100%, 20px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect fill="%23D4AF37" opacity="0.03" x="0" y="0" width="50" height="50"/><rect fill="%23D4AF37" opacity="0.03" x="50" y="50" width="50" height="50"/></svg>');
+            pointer-events: none;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            padding: 2rem;
+        }
+        
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            color: var(--gold);
+            text-transform: uppercase;
+            letter-spacing: 4px;
+        }
+        
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            color: #ccc;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background: var(--gold);
+            color: var(--dark);
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: bold;
+            letter-spacing: 2px;
+            transition: all 0.3s;
+            border: 2px solid var(--gold);
+        }
+        
+        .btn:hover {
+            background: transparent;
+            color: var(--gold);
+        }
+        
+        /* Services */
+        .services {
+            padding: 5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            color: var(--gold);
+            margin-bottom: 3rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .service-card {
+            background: var(--gray);
+            padding: 2rem;
+            border: 1px solid #444;
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: var(--gold);
+            transform: scaleX(0);
+            transition: transform 0.3s;
+        }
+        
+        .service-card:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--gold);
+        }
+        
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .service-card h3 {
+            color: var(--gold);
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+        }
+        
+        .service-card p {
+            color: #aaa;
+            margin-bottom: 1rem;
+        }
+        
+        .price {
+            font-size: 1.5rem;
+            color: var(--gold);
+            font-weight: bold;
+        }
+        
+        /* Opening Hours */
+        .hours {
+            background: var(--gray);
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+        
+        .hours-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .hours-list {
+            list-style: none;
+            margin-top: 2rem;
+        }
+        
+        .hours-list li {
+            display: flex;
+            justify-content: space-between;
+            padding: 1rem;
+            border-bottom: 1px solid #444;
+        }
+        
+        .hours-list .day {
+            color: var(--gold);
+            font-weight: bold;
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--dark);
+            padding: 3rem 2rem;
+            text-align: center;
+            border-top: 2px solid var(--gold);
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .contact-item {
+            color: #aaa;
+        }
+        
+        .contact-item strong {
+            color: var(--gold);
+            display: block;
+            margin-bottom: 0.3rem;
+        }
+        
+        footer p {
+            color: #666;
+            margin-top: 2rem;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .contact-info {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">The Gentleman's Cut</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Diensten</a></li>
+                <li><a href="#hours">Openingstijden</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>The Gentleman's Cut</h1>
+            <p>Traditioneel vakmanschap ontmoet moderne stijl. Dé herenkapper in Utrecht voor de perfecte knipbeurt.</p>
+            <a href="#contact" class="btn">Maak Afspraak</a>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="services">
+        <h2 class="section-title">Onze Diensten</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">✂️</div>
+                <h3>Heren Knippen</h3>
+                <p>Inclusief wassen en styledry. Professionele knipbeurt afgestemd op jouw gezichtsvorm.</p>
+                <div class="price">€25</div>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🪒</div>
+                <h3>Baard Scheren</h3>
+                <p>Traditioneel nat scheren met heet handdoek. Inclusief verzorgende olie.</p>
+                <div class="price">€20</div>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">💈</div>
+                <h3>Knip & Baard</h3>
+                <p>Complete verzorging. Knipbeurt + baard trimmen en shapen.</p>
+                <div class="price">€40</div>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🧴</div>
+                <h3>Kleuring</h3>
+                <p>Grijs dekking of trendy kleur. Professionele producten voor langresultaat.</p>
+                <div class="price">€35</div>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">👶</div>
+                <h3>Kinder Knippen</h3>
+                <p>Tot 12 jaar. Geduldig en kindvriendelijk. Speelhoek aanwezig.</p>
+                <div class="price">€18</div>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">✨</div>
+                <h3>Deluxe Pakket</h3>
+                <p>De ultieme experience. Knip, baard, wassen, masker en massage.</p>
+                <div class="price">€65</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Opening Hours -->
+    <section id="hours" class="hours">
+        <div class="hours-content">
+            <h2 class="section-title">Openingstijden</h2>
+            <ul class="hours-list">
+                <li><span class="day">Maandag</span><span>Gesloten</span></li>
+                <li><span class="day">Dinsdag</span><span>09:00 - 18:00</span></li>
+                <li><span class="day">Woensdag</span><span>09:00 - 18:00</span></li>
+                <li><span class="day">Donderdag</span><span>09:00 - 20:00</span></li>
+                <li><span class="day">Vrijdag</span><span>09:00 - 20:00</span></li>
+                <li><span class="day">Zaterdag</span><span>08:00 - 17:00</span></li>
+                <li><span class="day">Zondag</span><span>10:00 - 16:00</span></li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="footer-content">
+            <h2 class="section-title">Contact</h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <strong>Adres</strong>
+                    Voorstraat 123<br>3512 AB Utrecht
+                </div>
+                <div class="contact-item">
+                    <strong>Telefoon</strong>
+                    030 - 123 45 67
+                </div>
+                <div class="contact-item">
+                    <strong>Email</strong>
+                    info@gentlemanscut.nl
+                </div>
+            </div>
+            <p>&copy; 2025 The Gentleman's Cut. Alle rechten voorbehouden.</p>
+        </div>
+    </footer>
+</body>
+</html>
