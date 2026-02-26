@@ -1,8 +1,5 @@
 import type { NextRequest } from "next/server";
 
-const TELEGRAM_BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN;
-const TELEGRAM_CHAT_ID = process.env.TELEGRAM_CHAT_ID;
-
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
@@ -16,11 +13,18 @@ export async function POST(request: NextRequest) {
       );
     }
 
+    // Get environment variables (at runtime)
+    const TELEGRAM_BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN;
+    const TELEGRAM_CHAT_ID = process.env.TELEGRAM_CHAT_ID;
+
     // Check if Telegram is configured
     if (!TELEGRAM_BOT_TOKEN || !TELEGRAM_CHAT_ID) {
-      console.error("Telegram not configured");
+      console.error("Telegram not configured:", { 
+        hasToken: !!TELEGRAM_BOT_TOKEN, 
+        hasChatId: !!TELEGRAM_CHAT_ID 
+      });
       return new Response(
-        JSON.stringify({ error: "Service not configured" }),
+        JSON.stringify({ error: "Service niet geconfigureerd. Contacteer de beheerder." }),
         { status: 500, headers: { "Content-Type": "application/json" } }
       );
     }
