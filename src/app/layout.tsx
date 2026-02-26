@@ -8,6 +8,18 @@ export const metadata: Metadata = {
   description: "Professionele websites en betrouwbare tech reparaties in Utrecht. 12+ jaar ervaring. Gratis offerte. ☎️ Neem contact op!",
   keywords: ["website laten maken utrecht", "computer reparatie utrecht", "webdesign utrecht", "laptop reparatie", "wordpress utrecht"],
   authors: [{ name: "TechSolutionsUtrecht" }],
+  icons: {
+    icon: [
+      { url: '/images/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
+      { url: '/images/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+    ],
+    apple: [
+      { url: '/images/favicon-180x180.png', sizes: '180x180', type: 'image/png' },
+    ],
+    other: [
+      { rel: 'icon', url: '/images/favicon-512x512.png', sizes: '512x512', type: 'image/png' },
+    ],
+  },
   openGraph: {
     title: "TechSolutionsUtrecht - Web & Repair",
     description: "Jouw tech-partner in Utrecht. Van website tot reparatie.",
