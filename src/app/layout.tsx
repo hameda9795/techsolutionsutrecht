@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     canonical: "https://techsolutionsutrecht.nl",
   },
   verification: {
-    google: "GOOGLE_VERIFICATION_CODE", // Replace with actual code
+    google: "GIWDm0RfeTrOlSmP_ZnDC_atk7BE8xUVSL6AZDP8fuU",
   },
   robots: {
     index: true,
