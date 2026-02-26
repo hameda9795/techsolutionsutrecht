@@ -13,7 +13,7 @@ const features = [
     icon: Award,
     title: "12+ jaar ervaring",
     description:
-      "We hebben al meer dan 500 projecten succesvol afgerond. Van eenvoudige websites tot complexe webapplicaties.",
+      "TechSolutionsUtrecht opgericht in 2025, met 12+ jaar persoonlijke ervaring in webdevelopment en tech reparaties.",
   },
   {
     icon: Users,
@@ -79,7 +79,7 @@ export default function WhyChooseUs() {
             <div className="relative z-10 bg-[var(--bg-card)] border border-[var(--border)] rounded-2xl p-8">
               <div className="aspect-square rounded-xl bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center">
                 <div className="text-center">
-                  <div className="text-6xl font-extrabold gradient-text mb-2">500+</div>
+                  <div className="text-6xl font-extrabold gradient-text mb-2">20+</div>
                   <div className="text-[var(--text-secondary)]">Tevreden Klanten</div>
                 </div>
               </div>

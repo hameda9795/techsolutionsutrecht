@@ -37,7 +37,7 @@ export default function Testimonials() {
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[var(--text-primary)] mt-4 mb-6">
             Vertrouwd door{" "}
-            <span className="gradient-text">500+ klanten</span> in Utrecht
+            <span className="gradient-text">20+ klanten</span> in Utrecht
           </h2>
         </div>
 

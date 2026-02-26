@@ -18,9 +18,10 @@ const contactInfo = [
   },
   {
     icon: Phone,
-    label: "Telefoon",
-    value: "06-12345678",
-    href: "tel:+31612345678",
+    label: "WhatsApp",
+    value: "+31 6 25518708",
+    href: "https://wa.me/31625518708",
+    isWhatsApp: true,
   },
   {
     icon: Mail,
@@ -39,7 +40,7 @@ const contactInfo = [
 const faqs = [
   {
     q: "Hoe snel krijg ik reactie?",
-    a: "We reageren binnen 4 uur op werkdagen. Voor urgente reparaties kun je ook bellen.",
+    a: "We reageren binnen 4 uur op werkdagen. Voor urgente reparaties kun je ook WhatsAppen.",
   },
   {
     q: "Waar zitten jullie?",
@@ -90,6 +91,8 @@ export default function ContactPage() {
                     {item.href ? (
                       <a 
                         href={item.href}
+                        target={item.isWhatsApp ? "_blank" : undefined}
+                        rel={item.isWhatsApp ? "noopener noreferrer" : undefined}
                         className="text-[var(--text-primary)] font-medium hover:text-primary transition-colors"
                       >
                         {item.value}

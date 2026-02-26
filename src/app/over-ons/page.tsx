@@ -59,14 +59,14 @@ export default function OverOnsPage() {
           <div className="grid lg:grid-cols-2 gap-12 items-center mb-24">
             <div>
               <blockquote className="text-2xl sm:text-3xl font-medium text-[var(--text-primary)] leading-relaxed mb-6">
-                "Begonnen in 2012 als eenmanszaak, uitgegroeid tot vertrouwd tech-adres voor 500+ klanten in Utrecht en omgeving."
+                "Begonnen in 2025 als eenmanszaak, met 12+ jaar ervaring. Nu vertrouwd tech-adres voor 20+ klanten in Utrecht en omgeving."
               </blockquote>
               
               <div className="space-y-4 text-[var(--text-secondary)]">
                 <p>
                   Wat begon als een hobby — het helpen van vrienden en familie met hun computerproblemen — 
-                  groeide al snel uit tot een serieuze onderneming. In 2012 besloot ik om TechSolutionsUtrecht 
-                  officieel te starten.
+                  groeide al snel uit tot een serieuze onderneming. In 2025 besloot ik om TechSolutionsUtrecht 
+                  officieel te starten, met de 12+ jaar ervaring die ik had opgebouwd.
                 </p>
                 <p>
                   In de loop der jaren zag ik een duidelijke behoefte: klanten wilden niet alleen een website, 
@@ -83,8 +83,8 @@ export default function OverOnsPage() {
             <div className="relative">
               <div className="aspect-[4/3] rounded-2xl bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center">
                 <div className="text-center">
-                  <div className="text-8xl font-extrabold gradient-text">2012</div>
-                  <div className="text-[var(--text-secondary)] mt-2">Het begin van ons verhaal</div>
+                  <div className="text-8xl font-extrabold gradient-text">2025</div>
+                  <div className="text-[var(--text-secondary)] mt-2">TechSolutionsUtrecht opgericht</div>
                 </div>
               </div>
 

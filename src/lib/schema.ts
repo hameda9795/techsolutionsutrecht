@@ -6,7 +6,7 @@ export const localBusinessSchema = {
   "alternateName": "Tech Solutions Utrecht",
   "description": "Professionele websites en betrouwbare tech reparaties in Utrecht. 12+ jaar ervaring. Webdevelopment en hardware reparaties onder één dak.",
   "url": "https://techsolutionsutrecht.nl",
-  "telephone": "+31612345678",
+  "telephone": "+31625518708",
   "email": "info@techsolutionsutrecht.nl",
   "address": {
     "@type": "PostalAddress",
@@ -30,7 +30,7 @@ export const localBusinessSchema = {
   "openingHours": [
     "Mo-Fr 09:00-18:00"
   ],
-  "foundingDate": "2012",
+  "foundingDate": "2025",
   "founder": {
     "@type": "Person",
     "name": "Max"
@@ -42,7 +42,7 @@ export const localBusinessSchema = {
   "aggregateRating": {
     "@type": "AggregateRating",
     "ratingValue": "4.9",
-    "reviewCount": "500",
+    "reviewCount": "20",
     "bestRating": "5",
     "worstRating": "1"
   },

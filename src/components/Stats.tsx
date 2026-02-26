@@ -9,7 +9,7 @@ const stats = [
     label: "jaar ervaring",
   },
   {
-    value: 500,
+    value: 20,
     suffix: "+",
     label: "tevreden klanten",
   },
