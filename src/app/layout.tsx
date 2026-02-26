@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { localBusinessSchema, websiteSchema } from "@/lib/schema";
+import GoogleAnalytics from "@/components/GoogleAnalytics";
 
 export const metadata: Metadata = {
   title: "Website Laten Maken & Computer Reparatie Utrecht | TechSolutionsUtrecht",
@@ -47,6 +48,7 @@ export default function RootLayout({
   return (
     <html lang="nl" className="dark">
       <head>
+        <GoogleAnalytics />
         {/* LocalBusiness Schema */}
         <script
           type="application/ld+json"
