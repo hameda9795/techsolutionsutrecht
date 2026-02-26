@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowRight, Zap, Clock, Euro } from "lucide-react";
+import { ArrowRight, Zap, Clock, Euro, Check } from "lucide-react";
 
 export default function Hero() {
   return (
@@ -20,33 +20,40 @@ export default function Hero() {
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/20 border border-primary/30 mb-8 animate-fade-in-up">
             <Euro className="w-4 h-4 text-primary" />
             <span className="text-sm text-[var(--text-primary)] font-semibold">
-              Vanaf €250 - De scherpste prijzen in Utrecht
+              Vanaf €250 - Binnen 1 Week Online
             </span>
           </div>
 
-          {/* Main Headline - Cheap + Fast */}
+          {/* Main Headline - H1 Optimized for SEO */}
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-6 animate-fade-in-up animate-delay-100">
-            <span className="text-[var(--text-primary)]">Goedkope Website</span>
+            <span className="text-[var(--text-primary)]">Goedkope WordPress</span>
             <br />
-            <span className="gradient-text">Vanaf €250</span>
+            <span className="gradient-text">Website Laten Maken</span>
+            <br />
+            <span className="text-3xl sm:text-4xl md:text-5xl text-[var(--text-secondary)]">Utrecht | Binnen 1 Week</span>
           </h1>
 
-          {/* Subheadline - Fast delivery */}
+          {/* Subheadline - Long-tail keywords */}
           <p className="text-lg sm:text-xl text-[var(--text-secondary)] max-w-2xl mx-auto mb-6 animate-fade-in-up animate-delay-200">
-            Snelle oplevering binnen <strong className="text-primary">3-10 dagen</strong>. 
-            Voordelige webdesign, webshops en reparaties tegen scherpe prijzen in Utrecht. 
+            <strong className="text-[var(--text-primary)]">Laat uw website maken in Utrecht</strong> tegen scherpe prijzen. 
+            <strong className="text-primary">Snelle oplevering binnen 3-10 dagen</strong> — soms zelfs binnen 1 week. 
+            Perfect voor <strong className="text-[var(--text-primary)]">ZZP</strong> en <strong className="text-[var(--text-primary)]">startende ondernemers</strong>. 
             Betaalbaar en professioneel!
           </p>
 
-          {/* Price + Speed Pills */}
+          {/* USP List */}
           <div className="flex flex-wrap items-center justify-center gap-4 mb-10 animate-fade-in-up animate-delay-300">
             <div className="flex items-center gap-2 px-4 py-2 bg-[var(--bg-card)] border border-[var(--border)] rounded-full">
               <Zap className="w-4 h-4 text-yellow-500" />
-              <span className="text-sm text-[var(--text-secondary)]">Express: Binnen 3 dagen online</span>
+              <span className="text-sm text-[var(--text-secondary)]">Express: Binnen 1 week</span>
             </div>
             <div className="flex items-center gap-2 px-4 py-2 bg-[var(--bg-card)] border border-[var(--border)] rounded-full">
               <Clock className="w-4 h-4 text-primary" />
               <span className="text-sm text-[var(--text-secondary)]">Standaard: 3-10 dagen</span>
+            </div>
+            <div className="flex items-center gap-2 px-4 py-2 bg-[var(--bg-card)] border border-[var(--border)] rounded-full">
+              <Check className="w-4 h-4 text-green-500" />
+              <span className="text-sm text-[var(--text-secondary)]">Gratis offerte</span>
             </div>
           </div>
 
@@ -87,11 +94,11 @@ export default function Hero() {
             </div>
             <div className="h-8 w-px bg-[var(--border)] hidden sm:block" />
             <div className="text-[var(--text-muted)] text-sm">
-              20+ tevreden klanten
+              Vanaf €250
             </div>
             <div className="h-8 w-px bg-[var(--border)] hidden sm:block" />
             <div className="text-[var(--text-muted)] text-sm">
-              Snelle oplevering
+              Binnen 1 week online
             </div>
           </div>
         </div>

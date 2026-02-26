@@ -1,0 +1,220 @@
+
+================================================================================
+          GOZARESH-E TAHGHIGHAT-E KALAMATE KELIDI (KEYWORD RESEARCH)
+                    Baraye: techsolutionsutrecht.nl
+                    Mokhatab: Holland / Netherlands
+                    Tarikh: 2024
+================================================================================
+
+BAKHSH 1: Tahlil-e Kolli-e Bazaar (Market Overview)
+================================================================================
+
+Arzesh-e Bazaar:
+• Holland yek bazaar-e raghábeti baraye khadamat-e web design ast
+• Gheymat-haye motevasset dar bazaar:
+  - Website-haye sade (ZZP): €129 - €500
+  - Website-haye WordPress (MKB): €700 - €2,000
+  - Webapplicatie-haye Custom (Laravel): €4,500+
+• Zمان tahvil motevasset:
+  - ZZP website: 2-7 rooz
+  - MKB WordPress: 2-4 hafte
+  - Maatwerk project: 4-10 hafte
+
+Nokteye Mohem:
+"Opmaat" ke goftid, dar zaban-e Holandi "op maat" neveshte mishavad
+va mani-ye "custom" ya "made-to-order" ast.
+
+================================================================================
+BAKHSH 2: Kalamate Kelidi-e Asli (Primary Keywords)
+================================================================================
+
+1. "website laten maken Utrecht"
+   - Taghaza: VERY HIGH
+   - Raghábet: MEDIUM-HIGH
+   - Niyat-e Karbar: Commercial (Transactional)
+   - Pishnahad: 5/5
+
+2. "webdesign Utrecht"
+   - Taghaza: HIGH
+   - Raghábet: MEDIUM-HIGH
+   - Niyat-e Karbar: Commercial
+   - Pishnahad: 4/5
+
+3. "goedkope website laten maken"
+   - Taghaza: HIGH
+   - Raghábet: MEDIUM
+   - Niyat-e Karbar: Commercial (Price-sensitive)
+   - Pishnahad: 5/5
+
+4. "WordPress website laten maken"
+   - Taghaza: HIGH
+   - Raghábet: MEDIUM
+   - Niyat-e Karbar: Commercial
+   - Pishnahad: 5/5
+
+5. "snel website laten maken"
+   - Taghaza: MEDIUM-HIGH
+   - Raghábet: MEDIUM
+   - Niyat-e Karbar: Commercial (Urgency)
+   - Pishnahad: 5/5
+
+================================================================================
+BAKHSH 3: Long-Tail Keywords (Taghaza-ye Khoob, Raghábet-e Kam)
+================================================================================
+
+Behtarin Kalamate Kelidi baraye Shoma:
+
+1. "goedkope wordpress website laten maken utrecht"
+   Taghaza: MEDIUM | Raghábet: LOW | Pishnahad: 5/5
+   Dalil: Tarkeeb-e 3 mowdu (gheymat + technology + location)
+
+2. "website laten maken binnen week"
+   Taghaza: MEDIUM | Raghábet: LOW | Pishnahad: 5/5
+   Dalil: Hadef-giri baraye kasani ke ajale daran
+
+3. "zzp website laten maken goedkoop"
+   Taghaza: MEDIUM | Raghábet: LOW-MEDIUM | Pishnahad: 5/5
+   Dalil: Hadef-giri baraye ZZP (zelfstandigen) ba budje-e mahdud
+
+4. "webapplicatie laten bouwen klein bedrijf"
+   Taghaza: MEDIUM | Raghábet: VERY LOW | Pishnahad: 5/5
+   Dalil: Raghábet-e kheili kam, hadef-giri baraye MKB
+
+5. "snelle website oplevering zzp"
+   Taghaza: MEDIUM | Raghábet: VERY LOW | Pishnahad: 5/5
+   Dalil: Tarkeeb-e sür'at va segment-e ZZP
+
+6. "maatwerk website laten maken utrecht"
+   Taghaza: MEDIUM | Raghábet: LOW | Pishnahad: 4/5
+   Dalil: "Op maat" hamani-ye custom ast ke goftid
+
+7. "wordpress specialist utrecht prijs"
+   Taghaza: MEDIUM | Raghábet: LOW | Pishnahad: 4/5
+   Dalil: Karbar donbal-e takhasos + gheymat ast
+
+8. "website bouwen utrecht startende ondernemer"
+   Taghaza: MEDIUM-LOW | Raghábet: VERY LOW | Pishnahad: 5/5
+   Dalil: Hadef-giri baraye shoru'-e kar (startups)
+
+9. "goedkope webapplicatie laten maken"
+   Taghaza: MEDIUM-LOW | Raghábet: VERY LOW | Pishnahad: 5/5
+   Dalil: Raghábet-e kheili kam dar bakhsh-e webapp
+
+10. "laravel webapplicatie laten maken utrecht"
+    Taghaza: MEDIUM-LOW | Raghábet: VERY LOW | Pishnahad: 4/5
+    Dalil: Technology-specific + location, raghábet-e kam
+
+================================================================================
+BAKHSH 4: Kalamate Kelidi baraye Mohata (Content Topics)
+================================================================================
+
+Pishnahad-ha baraye Tolid-e Mohata:
+
+1. "Wat kost een website laten maken in Utrecht?" (Complete gids)
+   Kalamate kelidi: "website laten maken utrecht prijs", "kosten website"
+   Hadaf: Karbarani ke donbal-e etela'at dar morede gheymat hastand
+
+2. "ZZP website laten maken: 5 tips om geld te besparen"
+   Kalamate kelidi: "zzp website goedkoop", "website zzp starter"
+   Hadaf: ZZP'ha va shoru'-e kar
+
+3. "Website binnen 1 week online: hoe wij dat doen"
+   Kalamate kelidi: "snel website laten maken", "website binnen week"
+   Hadaf: Kasani ke ajale daran
+
+4. "WordPress vs Laravel: welke past bij jouw bedrijf?"
+   Kalamate kelidi: "wordpress website", "laravel webapplicatie"
+   Hadaf: Kasani ke donbal-e mohajemeh-ye technology hastand
+
+5. "Goedkope webapplicatie laten maken: wat zijn je opties?"
+   Kalamate kelidi: "goedkope webapplicatie", "webapplicatie prijs"
+   Hadaf: MKB ba budje-e mahdud
+
+6. "Lokale SEO voor Utrechtse ondernemers"
+   Kalamate kelidi: "lokale seo utrecht", "gevonden worden utrecht"
+   Hadaf: Behdasht-e SEO mahalli
+
+================================================================================
+BAKHSH 5: Estrategi-ye Pishnehadi
+================================================================================
+
+Marhale 1: Shoru' ba Long-Tail Keywords
+• Dar 3 mah-e aval rooye 5-8 kalameye long-tail tمرکز konid
+• Inha raghábet-e kami daran va sari' tar be natije miresid
+
+Marhale 2: Taghieb be Kalamate Kelidi-e Motavaset
+• Pas az 3-6 mah, rooye kalamati mesle "wordpress website utrecht" tمرکز konid
+
+Marhale 3: Hadef-giri-ye Kalamate Kelidi-e Asli
+• Pas az 6-12 mah, baraye kalamati mesle "webdesign utrecht" raghábet konid
+
+Nokate Mohem:
+1. Google My Business ra baraye Utrecht optimize konid
+2. Landing page-haye joda baraye har service besazid
+3. FAQ section baraye har kalameye kelidi ezafe konid
+4. Schema markup baraye local SEO estefade konid
+
+================================================================================
+BAKHSH 6: Pishbini-ye Natayej
+================================================================================
+
+Ba ejra-ye in estrategi:
+• Mah 1-3: 100-300 visitorgiye organik dar mah
+• Mah 4-6: 500-1,000 visitorgiye organik dar mah
+• Mah 7-12: 2,000+ visitorgiye organik dar mah
+
+• Conversion rate pishbini shode: 2-5%
+• Lead-haye mahane pas az 6 mah: 20-50 lead
+
+================================================================================
+Kholase-ye Naha'i
+================================================================================
+
+Behtarin kalamate kelidi baraye shoma:
+
+1. "goedkope wordpress website laten maken utrecht"
+2. "website laten maken binnen week"
+3. "zzp website laten maken goedkoop"
+4. "webapplicatie laten bouwen klein bedrijf"
+5. "snelle website oplevering zzp"
+
+In kalamat:
+✓ Taghaza-ye khoob daran
+✓ Raghábet-e kami daran
+✓ Ba hadaf-e shoma (gheymat-e arzan + tahvil-e sari) hamkhani daran
+✓ Mokhatab-e mahalli (Utrecht) ra hadaf migirand
+
+================================================================================
+TITLE TAG VA META DESCRIPTION PISHNAHADI
+================================================================================
+
+Title: "Goedkope WordPress Website Laten Maken Utrecht | Binnen 1 Week"
+Meta: "Laat uw WordPress website maken in Utrecht tegen scherpe prijzen. Snelle 
+       oplevering binnen 1 week. Gratis offerte aanvragen!"
+
+Title: "ZZP Website Laten Maken Goedkoop | TechSolutions Utrecht"
+Meta: "Betaalbare websites voor ZZP'ers in Utrecht. Professioneel design, snel 
+       online. Al vanaf €199. Neem contact op!"
+
+Title: "Webapplicatie Laten Bouwen Klein Bedrijf | Utrecht"
+Meta: "Maatwerk webapplicaties voor MKB in Utrecht. Schaalbaar, veilig en 
+       betaalbaar. Bekijk onze oplossingen!"
+
+================================================================================
+MANABE (SOURCES):
+================================================================================
+
+1. webbouwenaandekeukentafel.nl - Website laten maken in Utrecht
+2. projectie.com - Website laten maken Utrecht - Snel online
+3. vivortis.nl - Website laten maken in Utrecht
+4. chuckwebdesign.nl - Website laten maken Utrecht
+5. webdesign-plus.nl - Website goedkoop laten ontwerpen Utrecht
+6. hostingvergelijker.nl - Goedkoop een website maken
+7. 302.nl - Webapplicatie laten maken
+8. clweb.nl - Maatwerk webapplicatie laten maken
+9. innovine.nl - Webapplicatie laten bouwen
+10. nolimitdesign.nl - Webdesign bureau in Utrecht
+
+================================================================================
+Tahiyyeh shodeh baraye: techsolutionsutrecht.nl
+================================================================================
