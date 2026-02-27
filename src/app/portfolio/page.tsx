@@ -1,204 +1,494 @@
+"use client";
+
+import { useState } from "react";
 import { Metadata } from "next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Link from "next/link";
-import { ExternalLink, Code, Palette, ShoppingCart, Smartphone } from "lucide-react";
+import { 
+  ExternalLink, 
+  ChevronRight, 
+  ChevronDown,
+  Building2,
+  UtensilsCrossed,
+  Calculator,
+  Home,
+  HeartPulse,
+  Car,
+  GraduationCap,
+  Sparkles,
+  ShoppingBag,
+  Scale,
+  PartyPopper,
+  ArrowRight,
+  Eye
+} from "lucide-react";
 
-export const metadata: Metadata = {
-  title: "Portfolio | Website & Webapplicatie Projecten | TechSolutionsUtrecht",
-  description: "Bekijk onze portfolio van websites en webapplicaties. Projecten voor kappers, restaurants, webshops en meer. Bekijk demo's en laat je inspireren!",
-  keywords: ["portfolio website", "voorbeeld website", "website projecten", "webapplicatie demo"],
-};
-
-const projects = [
+// Categories with subcategories
+const categories = [
   {
-    id: "barbershop",
-    title: "The Gentleman's Cut",
-    category: "WordPress",
-    description: "Een stijlvolle website voor een herenkapper in Utrecht. Donker thema met gouden accenten, online afsprakensysteem en prijslijst.",
-    image: "/demo/barbershop/preview.jpg",
-    demoUrl: "/demo/barbershop/index.html",
-    technologies: ["HTML5", "CSS3", "Responsive", "SEO"],
-    features: ["Online afspraken", "Prijscalculator", "Google Maps", "Contactformulier"],
-    client: "Herenkapper Utrecht",
-    completionDate: "2025",
+    id: "bouw",
+    name: "Bouw & Vakmensen",
+    icon: Building2,
+    subcategories: ["Aannemer", "Loodgieter", "Elektricien", "Schilder", "Hovenier", "Dakdekker", "Timmerman", "Stukadoor"]
   },
   {
-    id: "restaurant",
-    title: "La Bella Italia",
-    category: "WordPress",
-    description: "Elegante website voor een Italiaans restaurant. Met online reservering, menukaart en foto-galerij.",
-    image: "/demo/restaurant/preview.jpg",
-    demoUrl: "#",
-    technologies: ["WordPress", "WooCommerce", "Reservation System"],
-    features: ["Online reserveren", "Menukaart", "Foto galerij", "Reviews"],
-    client: "Restaurant Amsterdam",
-    completionDate: "2024",
+    id: "horeca",
+    name: "Horeca & Catering",
+    icon: UtensilsCrossed,
+    subcategories: ["Restaurant", "Café", "Lunchroom", "Cateringbedrijf", "Hotel", "B&B", "Eetcafé"]
   },
   {
-    id: "webshop",
-    title: "Fashion Forward",
-    category: "Webshop",
-    description: "Moderne webshop voor kleding met geavanceerde filters, wishlist en betalingssysteem.",
-    image: "/demo/webshop/preview.jpg",
-    demoUrl: "#",
-    technologies: ["WooCommerce", "Stripe", "React"],
-    features: ["Product filters", "Wishlist", "Betaalmethoden", "Voorraadbeheer"],
-    client: "Fashion Store",
-    completionDate: "2024",
+    id: "financieel",
+    name: "Financieel & Administratie",
+    icon: Calculator,
+    subcategories: ["Boekhouder", "Accountant", "Belastingadviseur", "Payroll specialist", "Administratiekantoor"]
   },
   {
-    id: "dashboard",
-    title: "Kliniek Management",
-    category: "Maatwerk",
-    description: "Custom dashboard voor een medische kliniek met patiëntbeheer, agenda en rapportages.",
-    image: "/demo/dashboard/preview.jpg",
-    demoUrl: "#",
-    technologies: ["Next.js", "Node.js", "PostgreSQL"],
-    features: ["Patiëntbeheer", "Agenda systeem", "Rapportages", "Notificaties"],
-    client: "Medische Kliniek",
-    completionDate: "2024",
+    id: "vastgoed",
+    name: "Vastgoed & Makelaardij",
+    icon: Home,
+    subcategories: ["Makelaar", "Vakantiewoning verhuur", "B&B Verhuur", "Taxateur", "Vastgoedbeheer"]
   },
+  {
+    id: "gezondheid",
+    name: "Gezondheidszorg",
+    icon: HeartPulse,
+    subcategories: ["Fysiotherapie", "Tandarts", "Psycholoog", "Praktijk voor Psychotherapie", "Huisarts", "Diëtist"]
+  },
+  {
+    id: "auto",
+    name: "Auto & Mobiliteit",
+    icon: Car,
+    subcategories: ["Garage", "Autobedrijf", "APK Keuring", "Autoverhuur", "Occasion dealer", "Leasebedrijf"]
+  },
+  {
+    id: "onderwijs",
+    name: "Onderwijs & Training",
+    icon: GraduationCap,
+    subcategories: ["Rijschool", "Taalschool", "Bijles", "Opleidingscentrum", "Training & Coaching"]
+  },
+  {
+    id: "schoonheid",
+    name: "Schoonheidsverzorging",
+    icon: Sparkles,
+    subcategories: ["Kapsalon", "Nagelstudio", "Beautysalon", "Pedicure", "Massagepraktijk", "Wimperextensions"]
+  },
+  {
+    id: "retail",
+    name: "Detailhandel & Retail",
+    icon: ShoppingBag,
+    subcategories: ["Kledingwinkel", "Bloemist", "Juwelier", "Fietsenwinkel", "Opticien", "Drogisterij"]
+  },
+  {
+    id: "juridisch",
+    name: "Juridische Dienstverlening",
+    icon: Scale,
+    subcategories: ["Advocaat", "Notaris", "Mediator", "Juridisch Adviesbureau", "Incassobureau"]
+  },
+  {
+    id: "evenementen",
+    name: "Evenementen & Entertainment",
+    icon: PartyPopper,
+    subcategories: ["Fotograaf", "Trouwfotograaf", "DJ", "Trouwlocatie", "Eventlocatie", "Cateraar", "Weddingplanner"]
+  }
 ];
 
-const categories = [
-  { name: "Alle", icon: Palette },
-  { name: "WordPress", icon: Code },
-  { name: "Webshop", icon: ShoppingCart },
-  { name: "Maatwerk", icon: Smartphone },
+// Demo projects data
+const projects = [
+  {
+    id: "aannemer-demo",
+    title: "Bouwbedrijf Van Dijk",
+    category: "bouw",
+    subcategory: "Aannemer",
+    description: "Professionele website voor een aannemer met projectgalerij, offerte aanvraag en contactformulier.",
+    image: "/images/portfolio/aannemer.jpg",
+    demoUrl: "/demo/aannemer",
+    technologies: ["Next.js", "Tailwind CSS", "Responsive"],
+    features: ["Projectgalerij", "Offerte formulier", "Google Maps", "Reviews"],
+    color: "from-orange-500 to-red-500"
+  },
+  {
+    id: "restaurant-demo",
+    title: "Restaurant De Gouden Lepel",
+    category: "horeca",
+    subcategory: "Restaurant",
+    description: "Elegante website voor restaurant met online reservering, menukaart en fotogalerij.",
+    image: "/images/portfolio/restaurant.jpg",
+    demoUrl: "/demo/restaurant",
+    technologies: ["Next.js", "Tailwind CSS", "Animations"],
+    features: ["Online reserveren", "Menukaart", "Foto galerij", "Openingstijden"],
+    color: "from-red-500 to-pink-500"
+  },
+  {
+    id: "kapsalon-demo",
+    title: "Kapsalon Hair & Style",
+    category: "schoonheid",
+    subcategory: "Kapsalon",
+    description: "Stijlvolle website voor kapsalon met online afspraken, prijslijst en team presentatie.",
+    image: "/images/portfolio/kapsalon.jpg",
+    demoUrl: "/demo/kapsalon",
+    technologies: ["Next.js", "Tailwind CSS", "Responsive"],
+    features: ["Online afspraken", "Prijzen", "Team", "Gallery"],
+    color: "from-purple-500 to-pink-500"
+  },
+  {
+    id: "fysio-demo",
+    title: "Fysiotherapie Centrum Utrecht",
+    category: "gezondheid",
+    subcategory: "Fysiotherapie",
+    description: "Moderne website voor fysiotherapie praktijk met online boeking en behandelingen overzicht.",
+    image: "/images/portfolio/fysio.jpg",
+    demoUrl: "/demo/fysiotherapie",
+    technologies: ["Next.js", "Tailwind CSS", "SEO"],
+    features: ["Online boeking", "Behandelingen", "Verzekeringen", "Team"],
+    color: "from-green-500 to-teal-500"
+  },
+  {
+    id: "makelaar-demo",
+    title: "Makelaardij Jansen",
+    category: "vastgoed",
+    subcategory: "Makelaar",
+    description: "Complete website voor makelaar met woningaanbod, taxatie aanvraag en nieuws.",
+    image: "/images/portfolio/makelaar.jpg",
+    demoUrl: "/demo/makelaar",
+    technologies: ["Next.js", "Tailwind CSS", "Maps"],
+    features: ["Woningaanbod", "Taxatie", "Nieuws", "Contact"],
+    color: "from-blue-500 to-cyan-500"
+  },
+  {
+    id: "garage-demo",
+    title: "Autoservice Peters",
+    category: "auto",
+    subcategory: "Garage",
+    description: "Professionele website voor garage met APK informatie, prijzen en online afspraak.",
+    image: "/images/portfolio/garage.jpg",
+    demoUrl: "/demo/garage",
+    technologies: ["Next.js", "Tailwind CSS", "Responsive"],
+    features: ["APK info", "Prijzen", "Afspraak", "Route"],
+    color: "from-yellow-500 to-orange-500"
+  }
 ];
 
 export default function PortfolioPage() {
+  const [expandedCategories, setExpandedCategories] = useState<string[]>(["bouw"]);
+  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+  const [selectedSubcategory, setSelectedSubcategory] = useState<string | null>(null);
+
+  const toggleCategory = (categoryId: string) => {
+    setExpandedCategories(prev => 
+      prev.includes(categoryId) 
+        ? prev.filter(id => id !== categoryId)
+        : [...prev, categoryId]
+    );
+  };
+
+  const handleCategoryClick = (categoryId: string) => {
+    setSelectedCategory(categoryId);
+    setSelectedSubcategory(null);
+    if (!expandedCategories.includes(categoryId)) {
+      toggleCategory(categoryId);
+    }
+  };
+
+  const handleSubcategoryClick = (categoryId: string, subcategory: string) => {
+    setSelectedCategory(categoryId);
+    setSelectedSubcategory(subcategory);
+  };
+
+  const filteredProjects = projects.filter(project => {
+    if (selectedSubcategory) {
+      return project.subcategory === selectedSubcategory;
+    }
+    if (selectedCategory) {
+      return project.category === selectedCategory;
+    }
+    return true;
+  });
+
   return (
     <>
       <Header />
-      <main className="pt-32 pb-24">
+      <main className="pt-24 pb-24 min-h-screen">
         <div className="container-custom">
           {/* Header */}
-          <div className="text-center max-w-3xl mx-auto mb-16">
+          <div className="text-center max-w-3xl mx-auto mb-12">
             <span className="text-primary font-semibold text-sm uppercase tracking-wider">
               Portfolio
             </span>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[var(--text-primary)] mt-4 mb-6">
               Onze{" "}
-              <span className="gradient-text">Projecten</span>
+              <span className="gradient-text">Demo Projecten</span>
             </h1>
             <p className="text-[var(--text-secondary)] text-lg">
-              Bekijk een selectie van onze recente websites en webapplicaties. 
-              Van stijlvolle WordPress websites tot complexe maatwerk applicaties.
+              Bekijk voorbeeld websites voor verschillende branches. 
+              Klik op een project om de live demo te zien.
             </p>
           </div>
 
-          {/* Category Filter */}
-          <div className="flex flex-wrap justify-center gap-4 mb-12">
-            {categories.map((cat) => (
-              <button
-                key={cat.name}
-                className="flex items-center gap-2 px-6 py-3 bg-[var(--bg-card)] border border-[var(--border)] rounded-full hover:border-primary transition-colors"
-              >
-                <cat.icon className="w-5 h-5 text-primary" />
-                <span className="text-[var(--text-primary)]">{cat.name}</span>
-              </button>
-            ))}
-          </div>
+          {/* Main Layout: Sidebar + Content */}
+          <div className="flex flex-col lg:flex-row gap-8">
+            
+            {/* Sidebar */}
+            <aside className="lg:w-80 flex-shrink-0">
+              <div className="bg-[var(--bg-card)] border border-[var(--border)] rounded-2xl p-6 sticky top-28">
+                <h2 className="text-lg font-bold text-[var(--text-primary)] mb-6 flex items-center gap-2">
+                  <ShoppingBag className="w-5 h-5 text-primary" />
+                  Categorieën
+                </h2>
 
-          {/* Projects Grid */}
-          <div className="grid md:grid-cols-2 gap-8">
-            {projects.map((project) => (
-              <div 
-                key={project.id}
-                className="bg-[var(--bg-card)] border border-[var(--border)] rounded-2xl overflow-hidden hover:border-primary transition-all duration-300"
-              >
-                {/* Preview Image */}
-                <div className="aspect-video bg-gradient-to-br from-[var(--bg-secondary)] to-[var(--bg-tertiary)] flex items-center justify-center relative"
+                {/* All Categories Button */}
+                <button
+                  onClick={() => {
+                    setSelectedCategory(null);
+                    setSelectedSubcategory(null);
+                  }}
+                  className={`w-full text-left px-4 py-3 rounded-xl mb-2 transition-all duration-200 flex items-center gap-3 ${
+                    selectedCategory === null 
+                      ? "bg-primary text-white" 
+                      : "text-[var(--text-secondary)] hover:bg-[var(--bg-tertiary)]"
+                  }`}
                 >
-                  <div className="text-center">
-                    <div className="text-6xl mb-4">{project.category === "WordPress" ? "🌐" : project.category === "Webshop" ? "🛒" : "⚙️"}</div>
-                    <span className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">{project.category}</span>
-                  </div>
-                  
-                  <div className="absolute top-4 right-4">
-                    <Link 
-                      href={project.demoUrl}
-                      target="_blank"
-                      className="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white hover:bg-primary-dark transition-colors"
-                    >
-                      <ExternalLink className="w-5 h-5" />
-                    </Link>
-                  </div>
-                </div>
+                  <span className="font-medium">Alle projecten</span>
+                  <span className="ml-auto text-sm opacity-70">{projects.length}</span>
+                </button>
 
-                <div className="p-6">
-                  <h2 className="text-2xl font-bold text-[var(--text-primary)] mb-3">{project.title}</h2>
-                  
-                  <p className="text-[var(--text-secondary)] mb-4">{project.description}</p>
-                  
-                  <div className="mb-4">
-                    <h3 className="text-sm font-semibold text-[var(--text-primary)] mb-2">Technologieën:</h3>
-                    <div className="flex flex-wrap gap-2">
-                      {project.technologies.map((tech) => (
-                        <span 
-                          key={tech}
-                          className="px-3 py-1 bg-[var(--bg-tertiary)] text-[var(--text-secondary)] rounded-full text-sm"
+                <div className="h-px bg-[var(--border)] my-4" />
+
+                {/* Categories List */}
+                <div className="space-y-1">
+                  {categories.map((category) => {
+                    const isExpanded = expandedCategories.includes(category.id);
+                    const isSelected = selectedCategory === category.id;
+                    const Icon = category.icon;
+                    const projectCount = projects.filter(p => p.category === category.id).length;
+
+                    return (
+                      <div key={category.id}>
+                        {/* Category Header */}
+                        <button
+                          onClick={() => handleCategoryClick(category.id)}
+                          className={`w-full text-left px-4 py-3 rounded-xl transition-all duration-200 flex items-center gap-3 ${
+                            isSelected && !selectedSubcategory
+                              ? "bg-primary/10 text-primary border border-primary/20" 
+                              : "text-[var(--text-secondary)] hover:bg-[var(--bg-tertiary)]"
+                          }`}
                         >
-                          {tech}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                  
-                  <div className="mb-4">
-                    <h3 className="text-sm font-semibold text-[var(--text-primary)] mb-2">Features:</h3>
-                    <ul className="grid grid-cols-2 gap-2">
-                      {project.features.map((feature) => (
-                        <li key={feature} className="text-[var(--text-secondary)] text-sm flex items-center gap-2">
-                          <span className="w-1.5 h-1.5 bg-primary rounded-full"></span>
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                  
-                  <div className="flex items-center justify-between pt-4 border-t border-[var(--border)]">
-                    <div className="text-sm text-[var(--text-muted)]">
-                      Client: <span className="text-[var(--text-secondary)]">{project.client}</span>
-                    </div>
-                    <Link 
-                      href={project.demoUrl}
-                      target="_blank"
-                      className="btn-primary text-sm"
-                    >
-                      Bekijk Demo
-                    </Link>
-                  </div>
+                          <Icon className="w-5 h-5 flex-shrink-0" />
+                          <span className="font-medium text-sm">{category.name}</span>
+                          {projectCount > 0 && (
+                            <span className="ml-auto text-xs opacity-50">{projectCount}</span>
+                          )}
+                          <button
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              toggleCategory(category.id);
+                            }}
+                            className="ml-2 p-1 hover:bg-[var(--bg-primary)] rounded transition-colors"
+                          >
+                            {isExpanded ? (
+                              <ChevronDown className="w-4 h-4" />
+                            ) : (
+                              <ChevronRight className="w-4 h-4" />
+                            )}
+                          </button>
+                        </button>
+
+                        {/* Subcategories */}
+                        {isExpanded && (
+                          <div className="ml-4 mt-1 space-y-1">
+                            {category.subcategories.map((sub) => {
+                              const subProjectCount = projects.filter(p => p.subcategory === sub).length;
+                              const isSubSelected = selectedSubcategory === sub;
+                              
+                              return (
+                                <button
+                                  key={sub}
+                                  onClick={() => handleSubcategoryClick(category.id, sub)}
+                                  className={`w-full text-left px-4 py-2 rounded-lg transition-all duration-200 flex items-center justify-between text-sm ${
+                                    isSubSelected
+                                      ? "bg-primary text-white" 
+                                      : "text-[var(--text-muted)] hover:text-[var(--text-primary)] hover:bg-[var(--bg-tertiary)]"
+                                  }`}
+                                >
+                                  <span>{sub}</span>
+                                  {subProjectCount > 0 && (
+                                    <span className={`text-xs ${isSubSelected ? 'text-white/70' : 'opacity-50'}`}>
+                                      {subProjectCount}
+                                    </span>
+                                  )}
+                                </button>
+                              );
+                            })}
+                          </div>
+                        )}
+                      </div>
+                    );
+                  })}
                 </div>
               </div>
-            ))}
-          </div>
+            </aside>
 
-          {/* CTA */}
-          <div className="mt-16 p-8 bg-gradient-to-br from-primary/10 to-secondary/10 border border-primary/20 rounded-2xl text-center">
-            <h2 className="text-2xl sm:text-3xl font-bold text-[var(--text-primary)] mb-4">
-              Ook een Project in Gedachten?
-            </h2>
-            
-            <p className="text-[var(--text-secondary)] mb-6 max-w-2xl mx-auto">
-              Laat ons je helpen met een professionele website of webapplicatie. 
-              We bespreken graag je ideeën en maken een vrijblijvende offerte.
-            </p>
-            
-            <div className="flex flex-wrap justify-center gap-4">
-              <Link href="/contact" className="btn-primary">
-                Start je project
-              </Link>
-              <a 
-                href="https://wa.me/31625518708"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-ghost"
-              >
-                WhatsApp ons
-              </a>
+            {/* Main Content - Projects Grid */}
+            <div className="flex-1">
+              {/* Filter Info */}
+              <div className="mb-6 flex items-center justify-between">
+                <div className="text-[var(--text-secondary)]">
+                  {selectedSubcategory ? (
+                    <span>
+                      Gefilterd op: <span className="text-primary font-semibold">{selectedSubcategory}</span>
+                    </span>
+                  ) : selectedCategory ? (
+                    <span>
+                      Gefilterd op: <span className="text-primary font-semibold">
+                        {categories.find(c => c.id === selectedCategory)?.name}
+                      </span>
+                    </span>
+                  ) : (
+                    <span>Alle projecten</span>
+                  )}
+                </div>
+                <span className="text-[var(--text-muted)] text-sm">
+                  {filteredProjects.length} {filteredProjects.length === 1 ? "project" : "projecten"}
+                </span>
+              </div>
+
+              {/* Projects Grid */}
+              {filteredProjects.length > 0 ? (
+                <div className="grid md:grid-cols-2 gap-6">
+                  {filteredProjects.map((project) => (
+                    <div 
+                      key={project.id}
+                      className="group bg-[var(--bg-card)] border border-[var(--border)] rounded-2xl overflow-hidden hover:border-primary transition-all duration-300 hover:-translate-y-1"
+                    >
+                      {/* Preview Image */}
+                      <div className={`aspect-video bg-gradient-to-br ${project.color} flex items-center justify-center relative overflow-hidden`}>
+                        {/* Pattern Overlay */}
+                        <div className="absolute inset-0 opacity-20">
+                          <div className="absolute inset-0" style={{
+                            backgroundImage: `radial-gradient(circle at 2px 2px, rgba(255,255,255,0.15) 1px, transparent 0)`,
+                            backgroundSize: '24px 24px'
+                          }} />
+                        </div>
+
+                        {/* Content */}
+                        <div className="relative z-10 text-center">
+                          <div className="text-5xl mb-3">🚀</div>
+                          <span className="px-4 py-1.5 bg-white/20 backdrop-blur-sm text-white rounded-full text-sm font-medium border border-white/30">
+                            {project.subcategory}
+                          </span>
+                        </div>
+
+                        {/* Hover Overlay */}
+                        <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                          <Link 
+                            href={project.demoUrl}
+                            className="flex items-center gap-2 px-6 py-3 bg-primary text-white rounded-full font-semibold transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300"
+                          >
+                            <Eye className="w-5 h-5" />
+                            Bekijk Demo
+                          </Link>
+                        </div>
+                      </div>
+
+                      <div className="p-6">
+                        {/* Title */}
+                        <h3 className="text-xl font-bold text-[var(--text-primary)] mb-2 group-hover:text-primary transition-colors">
+                          {project.title}
+                        </h3>
+                        
+                        {/* Description */}
+                        <p className="text-[var(--text-secondary)] text-sm mb-4 line-clamp-2">
+                          {project.description}
+                        </p>
+                        
+                        {/* Technologies */}
+                        <div className="flex flex-wrap gap-2 mb-4">
+                          {project.technologies.map((tech) => (
+                            <span 
+                              key={tech}
+                              className="px-2.5 py-1 bg-[var(--bg-tertiary)] text-[var(--text-secondary)] rounded-full text-xs"
+                            >
+                              {tech}
+                            </span>
+                          ))}
+                        </div>
+                        
+                        {/* Features */}
+                        <div className="mb-4">
+                          <div className="flex flex-wrap gap-2">
+                            {project.features.map((feature) => (
+                              <span 
+                                key={feature}
+                                className="flex items-center gap-1 text-xs text-[var(--text-muted)]"
+                              >
+                                <span className="w-1 h-1 bg-primary rounded-full"></span>
+                                {feature}
+                              </span>
+                            ))}
+                          </div>
+                        </div>
+                        
+                        {/* CTA */}
+                        <Link 
+                          href={project.demoUrl}
+                          className="flex items-center justify-center gap-2 w-full py-3 border border-[var(--border)] rounded-xl text-[var(--text-primary)] font-medium hover:bg-primary hover:text-white hover:border-primary transition-all duration-300"
+                        >
+                          <ExternalLink className="w-4 h-4" />
+                          Live Demo Bekijken
+                        </Link>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              ) : (
+                /* Empty State */
+                <div className="text-center py-20 bg-[var(--bg-card)] border border-[var(--border)] rounded-2xl">
+                  <div className="text-6xl mb-4">🔍</div>
+                  <h3 className="text-xl font-bold text-[var(--text-primary)] mb-2">
+                    Geen projecten gevonden
+                  </h3>
+                  <p className="text-[var(--text-secondary)] mb-6">
+                    Er zijn nog geen demo&apos;s beschikbaar voor deze categorie.
+                  </p>
+                  <button
+                    onClick={() => {
+                      setSelectedCategory(null);
+                      setSelectedSubcategory(null);
+                    }}
+                    className="btn-primary"
+                  >
+                    Bekijk alle projecten
+                  </button>
+                </div>
+              )}
+
+              {/* CTA Section */}
+              <div className="mt-12 p-8 bg-gradient-to-br from-primary/10 to-secondary/10 border border-primary/20 rounded-2xl text-center">
+                <h2 className="text-2xl sm:text-3xl font-bold text-[var(--text-primary)] mb-4">
+                  Ook een Website Nodig?
+                </h2>
+                
+                <p className="text-[var(--text-secondary)] mb-6 max-w-2xl mx-auto">
+                  Laat ons je helpen met een professionele website voor jouw branche. 
+                  We maken een op maat gemaakte website die perfect bij jou past.
+                </p>
+                
+                <div className="flex flex-wrap justify-center gap-4">
+                  <Link href="/contact" className="btn-primary">
+                    Gratis offerte aanvragen
+                    <ArrowRight className="w-5 h-5 ml-2" />
+                  </Link>
+                  <a 
+                    href="https://wa.me/31625518708"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn-ghost"
+                  >
+                    WhatsApp ons
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
