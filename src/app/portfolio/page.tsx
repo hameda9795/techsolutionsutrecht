@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Metadata } from "next";
+import Image from "next/image";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Link from "next/link";
@@ -21,10 +21,14 @@ import {
   Scale,
   PartyPopper,
   ArrowRight,
-  Eye
+  Eye,
+  CheckCircle2,
+  Layout,
+  Palette,
+  Zap,
+  MousePointer2
 } from "lucide-react";
 
-// Categories with subcategories
 const categories = [
   {
     id: "bouw",
@@ -94,7 +98,6 @@ const categories = [
   }
 ];
 
-// Demo projects data
 const projects = [
   {
     id: "aannemer-demo",
@@ -171,11 +174,11 @@ const projects = [
 ];
 
 export default function PortfolioPage() {
-  const [expandedCategories, setExpandedCategories] = useState<string[]>(["bouw"]);
-  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
-  const [selectedSubcategory, setSelectedSubcategory] = useState<string | null>(null);
+  const [expandedCategories, setExpandedCategories] = useState(["bouw"]);
+  const [selectedCategory, setSelectedCategory] = useState(null);
+  const [selectedSubcategory, setSelectedSubcategory] = useState(null);
 
-  const toggleCategory = (categoryId: string) => {
+  const toggleCategory = (categoryId) => {
     setExpandedCategories(prev => 
       prev.includes(categoryId) 
         ? prev.filter(id => id !== categoryId)
@@ -183,7 +186,7 @@ export default function PortfolioPage() {
     );
   };
 
-  const handleCategoryClick = (categoryId: string) => {
+  const handleCategoryClick = (categoryId) => {
     setSelectedCategory(categoryId);
     setSelectedSubcategory(null);
     if (!expandedCategories.includes(categoryId)) {
@@ -191,7 +194,7 @@ export default function PortfolioPage() {
     }
   };
 
-  const handleSubcategoryClick = (categoryId: string, subcategory: string) => {
+  const handleSubcategoryClick = (categoryId, subcategory) => {
     setSelectedCategory(categoryId);
     setSelectedSubcategory(subcategory);
   };
@@ -211,7 +214,6 @@ export default function PortfolioPage() {
       <Header />
       <main className="pt-24 pb-24 min-h-screen">
         <div className="container-custom">
-          {/* Header */}
           <div className="text-center max-w-3xl mx-auto mb-12">
             <span className="text-primary font-semibold text-sm uppercase tracking-wider">
               Portfolio
@@ -226,18 +228,144 @@ export default function PortfolioPage() {
             </p>
           </div>
 
-          {/* Main Layout: Sidebar + Content */}
+          <section className="mb-16">
+            <div className="bg-[var(--bg-card)] border border-[var(--border)] rounded-3xl overflow-hidden">
+              <div className="grid lg:grid-cols-2 gap-0">
+                <div className="relative bg-gradient-to-br from-slate-900 via-slate-800 to-orange-900 p-8 lg:p-12 flex items-center justify-center min-h-[500px]">
+                  <div className="absolute inset-0 opacity-10">
+                    <div className="absolute inset-0" style={{
+                      backgroundImage: `linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)`,
+                      backgroundSize: "40px 40px"
+                    }} />
+                  </div>
+                  <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-bl from-orange-500/20 to-transparent" style={{
+                    clipPath: "polygon(100% 0, 0 0, 100% 100%)"
+                  }} />
+                  <div className="relative z-10 w-full max-w-[415px]">
+                    <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-white/10">
+                      <Image
+                        src="/images/portfolio/aannemer-concept.webp"
+                        alt="Bouwbedrijf Van den Berg - Website Concept"
+                        width={415}
+                        height={500}
+                        className="w-full h-auto object-cover"
+                        priority
+                      />
+                      <div className="absolute bottom-4 left-4 right-4">
+                        <div className="bg-black/70 backdrop-blur-md rounded-xl p-4 border border-white/10">
+                          <div className="flex items-center gap-3">
+                            <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-orange-500 to-red-500 flex items-center justify-center">
+                              <Building2 className="w-5 h-5 text-white" />
+                            </div>
+                            <div>
+                              <p className="text-white font-semibold text-sm">Bouwbedrijf Van den Berg</p>
+                              <p className="text-white/60 text-xs">Aannemer Website</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="absolute -top-4 -right-4 bg-primary text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-lg">
+                      POPULAIR
+                    </div>
+                  </div>
+                </div>
+
+                <div className="p-8 lg:p-12 flex flex-col justify-center">
+                  <div className="flex items-center gap-2 mb-4">
+                    <span className="px-3 py-1 bg-orange-500/10 text-orange-500 rounded-full text-xs font-semibold uppercase tracking-wider">
+                      Bouw & Vakmensen
+                    </span>
+                    <span className="px-3 py-1 bg-[var(--bg-tertiary)] text-[var(--text-muted)] rounded-full text-xs">
+                      Aannemer
+                    </span>
+                  </div>
+
+                  <h2 className="text-3xl sm:text-4xl font-bold text-[var(--text-primary)] mb-4">
+                    Bouwbedrijf Van den Berg
+                  </h2>
+
+                  <p className="text-[var(--text-secondary)] text-lg mb-6 leading-relaxed">
+                    Professionele aannemer website met industriële uitstraling voor renovatie en nieuwbouw in Utrecht regio. Focus op offerte-aanvraag en projectshowcase.
+                  </p>
+
+                  <div className="grid sm:grid-cols-2 gap-4 mb-8">
+                    <div className="flex items-start gap-3 p-4 bg-[var(--bg-tertiary)] rounded-xl">
+                      <div className="w-10 h-10 rounded-lg bg-orange-500/10 flex items-center justify-center flex-shrink-0">
+                        <Layout className="w-5 h-5 text-orange-500" />
+                      </div>
+                      <div>
+                        <h4 className="font-semibold text-[var(--text-primary)] text-sm">Uniek Design</h4>
+                        <p className="text-[var(--text-muted)] text-xs mt-1">Navigatie aan zijkant & diagonale vormen</p>
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-3 p-4 bg-[var(--bg-tertiary)] rounded-xl">
+                      <div className="w-10 h-10 rounded-lg bg-blue-500/10 flex items-center justify-center flex-shrink-0">
+                        <Zap className="w-5 h-5 text-blue-500" />
+                      </div>
+                      <div>
+                        <h4 className="font-semibold text-[var(--text-primary)] text-sm">Before/After</h4>
+                        <p className="text-[var(--text-muted)] text-xs mt-1">Vergelijking slider voor projecten</p>
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-3 p-4 bg-[var(--bg-tertiary)] rounded-xl">
+                      <div className="w-10 h-10 rounded-lg bg-green-500/10 flex items-center justify-center flex-shrink-0">
+                        <CheckCircle2 className="w-5 h-5 text-green-500" />
+                      </div>
+                      <div>
+                        <h4 className="font-semibold text-[var(--text-primary)] text-sm">Offerte Wizard</h4>
+                        <p className="text-[var(--text-muted)] text-xs mt-1">4-stappen formulier</p>
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-3 p-4 bg-[var(--bg-tertiary)] rounded-xl">
+                      <div className="w-10 h-10 rounded-lg bg-purple-500/10 flex items-center justify-center flex-shrink-0">
+                        <MousePointer2 className="w-5 h-5 text-purple-500" />
+                      </div>
+                      <div>
+                        <h4 className="font-semibold text-[var(--text-primary)] text-sm">Interactief</h4>
+                        <p className="text-[var(--text-muted)] text-xs mt-1">3D tilt effects & magnetische knoppen</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="flex flex-wrap gap-2 mb-8">
+                    <span className="px-3 py-1.5 bg-[var(--bg-tertiary)] text-[var(--text-secondary)] rounded-lg text-sm font-medium">Next.js</span>
+                    <span className="px-3 py-1.5 bg-[var(--bg-tertiary)] text-[var(--text-secondary)] rounded-lg text-sm font-medium">Tailwind CSS</span>
+                    <span className="px-3 py-1.5 bg-[var(--bg-tertiary)] text-[var(--text-secondary)] rounded-lg text-sm font-medium">TypeScript</span>
+                    <span className="px-3 py-1.5 bg-[var(--bg-tertiary)] text-[var(--text-secondary)] rounded-lg text-sm font-medium">Parallax</span>
+                  </div>
+
+                  <div className="flex flex-wrap gap-4">
+                    <a
+                      href="https://aannemer.techsolutionsutrecht.nl/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 px-8 py-4 bg-primary text-white rounded-xl font-semibold hover:bg-primary/90 transition-all duration-300 shadow-lg shadow-primary/25 hover:shadow-primary/40 hover:-translate-y-0.5"
+                    >
+                      <Eye className="w-5 h-5" />
+                      Bekijk Live Demo
+                      <ExternalLink className="w-4 h-4" />
+                    </a>
+                    <Link
+                      href="/contact"
+                      className="inline-flex items-center gap-2 px-8 py-4 border-2 border-[var(--border)] text-[var(--text-primary)] rounded-xl font-semibold hover:bg-[var(--bg-tertiary)] transition-all duration-300"
+                    >
+                      <Palette className="w-5 h-5" />
+                      Vergelijkbaar Project
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
           <div className="flex flex-col lg:flex-row gap-8">
-            
-            {/* Sidebar */}
             <aside className="lg:w-80 flex-shrink-0">
               <div className="bg-[var(--bg-card)] border border-[var(--border)] rounded-2xl p-6 sticky top-28">
                 <h2 className="text-lg font-bold text-[var(--text-primary)] mb-6 flex items-center gap-2">
                   <ShoppingBag className="w-5 h-5 text-primary" />
                   Categorieën
                 </h2>
-
-                {/* All Categories Button */}
                 <button
                   onClick={() => {
                     setSelectedCategory(null);
@@ -252,20 +380,15 @@ export default function PortfolioPage() {
                   <span className="font-medium">Alle projecten</span>
                   <span className="ml-auto text-sm opacity-70">{projects.length}</span>
                 </button>
-
                 <div className="h-px bg-[var(--border)] my-4" />
-
-                {/* Categories List */}
                 <div className="space-y-1">
                   {categories.map((category) => {
                     const isExpanded = expandedCategories.includes(category.id);
                     const isSelected = selectedCategory === category.id;
                     const Icon = category.icon;
                     const projectCount = projects.filter(p => p.category === category.id).length;
-
                     return (
                       <div key={category.id}>
-                        {/* Category Header */}
                         <button
                           onClick={() => handleCategoryClick(category.id)}
                           className={`w-full text-left px-4 py-3 rounded-xl transition-all duration-200 flex items-center gap-3 ${
@@ -293,14 +416,11 @@ export default function PortfolioPage() {
                             )}
                           </button>
                         </button>
-
-                        {/* Subcategories */}
                         {isExpanded && (
                           <div className="ml-4 mt-1 space-y-1">
                             {category.subcategories.map((sub) => {
                               const subProjectCount = projects.filter(p => p.subcategory === sub).length;
                               const isSubSelected = selectedSubcategory === sub;
-                              
                               return (
                                 <button
                                   key={sub}
@@ -313,7 +433,7 @@ export default function PortfolioPage() {
                                 >
                                   <span>{sub}</span>
                                   {subProjectCount > 0 && (
-                                    <span className={`text-xs ${isSubSelected ? 'text-white/70' : 'opacity-50'}`}>
+                                    <span className={`text-xs ${isSubSelected ? "text-white/70" : "opacity-50"}`}>
                                       {subProjectCount}
                                     </span>
                                   )}
@@ -329,9 +449,7 @@ export default function PortfolioPage() {
               </div>
             </aside>
 
-            {/* Main Content - Projects Grid */}
             <div className="flex-1">
-              {/* Filter Info */}
               <div className="mb-6 flex items-center justify-between">
                 <div className="text-[var(--text-secondary)]">
                   {selectedSubcategory ? (
@@ -353,7 +471,6 @@ export default function PortfolioPage() {
                 </span>
               </div>
 
-              {/* Projects Grid */}
               {filteredProjects.length > 0 ? (
                 <div className="grid md:grid-cols-2 gap-6">
                   {filteredProjects.map((project) => (
@@ -361,25 +478,19 @@ export default function PortfolioPage() {
                       key={project.id}
                       className="group bg-[var(--bg-card)] border border-[var(--border)] rounded-2xl overflow-hidden hover:border-primary transition-all duration-300 hover:-translate-y-1"
                     >
-                      {/* Preview Image */}
                       <div className={`aspect-video bg-gradient-to-br ${project.color} flex items-center justify-center relative overflow-hidden`}>
-                        {/* Pattern Overlay */}
                         <div className="absolute inset-0 opacity-20">
                           <div className="absolute inset-0" style={{
                             backgroundImage: `radial-gradient(circle at 2px 2px, rgba(255,255,255,0.15) 1px, transparent 0)`,
-                            backgroundSize: '24px 24px'
+                            backgroundSize: "24px 24px"
                           }} />
                         </div>
-
-                        {/* Content */}
                         <div className="relative z-10 text-center">
                           <div className="text-5xl mb-3">🚀</div>
                           <span className="px-4 py-1.5 bg-white/20 backdrop-blur-sm text-white rounded-full text-sm font-medium border border-white/30">
                             {project.subcategory}
                           </span>
                         </div>
-
-                        {/* Hover Overlay */}
                         <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                           <Link 
                             href={project.demoUrl}
@@ -390,19 +501,13 @@ export default function PortfolioPage() {
                           </Link>
                         </div>
                       </div>
-
                       <div className="p-6">
-                        {/* Title */}
                         <h3 className="text-xl font-bold text-[var(--text-primary)] mb-2 group-hover:text-primary transition-colors">
                           {project.title}
                         </h3>
-                        
-                        {/* Description */}
                         <p className="text-[var(--text-secondary)] text-sm mb-4 line-clamp-2">
                           {project.description}
                         </p>
-                        
-                        {/* Technologies */}
                         <div className="flex flex-wrap gap-2 mb-4">
                           {project.technologies.map((tech) => (
                             <span 
@@ -413,8 +518,6 @@ export default function PortfolioPage() {
                             </span>
                           ))}
                         </div>
-                        
-                        {/* Features */}
                         <div className="mb-4">
                           <div className="flex flex-wrap gap-2">
                             {project.features.map((feature) => (
@@ -428,8 +531,6 @@ export default function PortfolioPage() {
                             ))}
                           </div>
                         </div>
-                        
-                        {/* CTA */}
                         <Link 
                           href={project.demoUrl}
                           className="flex items-center justify-center gap-2 w-full py-3 border border-[var(--border)] rounded-xl text-[var(--text-primary)] font-medium hover:bg-primary hover:text-white hover:border-primary transition-all duration-300"
@@ -442,7 +543,6 @@ export default function PortfolioPage() {
                   ))}
                 </div>
               ) : (
-                /* Empty State */
                 <div className="text-center py-20 bg-[var(--bg-card)] border border-[var(--border)] rounded-2xl">
                   <div className="text-6xl mb-4">🔍</div>
                   <h3 className="text-xl font-bold text-[var(--text-primary)] mb-2">
@@ -463,17 +563,14 @@ export default function PortfolioPage() {
                 </div>
               )}
 
-              {/* CTA Section */}
               <div className="mt-12 p-8 bg-gradient-to-br from-primary/10 to-secondary/10 border border-primary/20 rounded-2xl text-center">
                 <h2 className="text-2xl sm:text-3xl font-bold text-[var(--text-primary)] mb-4">
                   Ook een Website Nodig?
                 </h2>
-                
                 <p className="text-[var(--text-secondary)] mb-6 max-w-2xl mx-auto">
                   Laat ons je helpen met een professionele website voor jouw branche. 
                   We maken een op maat gemaakte website die perfect bij jou past.
                 </p>
-                
                 <div className="flex flex-wrap justify-center gap-4">
                   <Link href="/contact" className="btn-primary">
                     Gratis offerte aanvragen
@@ -497,3 +594,4 @@ export default function PortfolioPage() {
     </>
   );
 }
+
