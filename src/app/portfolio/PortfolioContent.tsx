@@ -115,13 +115,18 @@ export default function PortfolioContent() {
   const loadProjectsForSubcategory = async (categoryId: string, subcategoryName: string) => {
     setIsLoading(true);
     try {
-      // Filter from all projects (already loaded)
-      const filtered = allProjects.filter(p => 
+      // Fetch all projects first
+      const res = await fetch('/api/projects');
+      const allData = await res.json();
+      setAllProjects(allData);
+      
+      // Then filter
+      const filtered = allData.filter((p: Project) => 
         p.category_id === categoryId && p.subcategory_name === subcategoryName
       );
       setProjects(filtered);
     } catch (error) {
-      console.error('Failed to filter projects:', error);
+      console.error('Failed to load projects:', error);
       setProjects([]);
     }
     setIsLoading(false);
