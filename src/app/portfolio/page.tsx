@@ -244,7 +244,7 @@ export default function PortfolioPage() {
                   <div className="relative z-10 w-full max-w-[415px]">
                     <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-white/10">
                       <Image
-                        src="/images/portfolio/aannemer-concept.webp"
+                        src="/images/portfolio/aannemer-concept.jpg"
                         alt="Bouwbedrijf Van den Berg - Website Concept"
                         width={415}
                         height={500}
