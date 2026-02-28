@@ -7,10 +7,11 @@ import Image from "next/image";
 interface ImageUploadProps {
   value: string;
   onChange: (url: string) => void;
+  onUploading?: (uploading: boolean) => void;
   folder?: string;
 }
 
-export default function ImageUpload({ value, onChange, folder = "portfolio" }: ImageUploadProps) {
+export default function ImageUpload({ value, onChange, onUploading, folder = "portfolio" }: ImageUploadProps) {
   const [isUploading, setIsUploading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [preview, setPreview] = useState<string | null>(value || null);
@@ -22,6 +23,7 @@ export default function ImageUpload({ value, onChange, folder = "portfolio" }: I
 
     setError(null);
     setIsUploading(true);
+    onUploading?.(true);
 
     // Show local preview immediately
     const reader = new FileReader();
@@ -46,6 +48,8 @@ export default function ImageUpload({ value, onChange, folder = "portfolio" }: I
         throw new Error(data.error || 'Upload failed');
       }
 
+      console.log('Upload successful, URL:', data.url); // Debug
+      
       onChange(data.url);
       setPreview(data.url);
     } catch (err) {
@@ -54,6 +58,7 @@ export default function ImageUpload({ value, onChange, folder = "portfolio" }: I
       // Keep the local preview even if upload failed
     } finally {
       setIsUploading(false);
+      onUploading?.(false);
     }
   };
 

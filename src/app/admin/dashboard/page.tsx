@@ -70,6 +70,7 @@ export default function AdminDashboardPage() {
   });
   const [formErrors, setFormErrors] = useState<Record<string, string>>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isImageUploading, setIsImageUploading] = useState(false);
 
   // Check authentication
   useEffect(() => {
@@ -165,6 +166,8 @@ export default function AdminDashboardPage() {
       ...formData,
       features: validFeatures
     };
+    
+    console.log('Submitting project data:', projectData); // Debug
     
     try {
       if (editingProject) {
@@ -634,6 +637,7 @@ export default function AdminDashboardPage() {
                   <ImageUpload
                     value={formData.image}
                     onChange={(url) => setFormData(prev => ({ ...prev, image: url }))}
+                    onUploading={setIsImageUploading}
                     folder="portfolio"
                   />
                 </div>
@@ -693,11 +697,11 @@ export default function AdminDashboardPage() {
               <button
                 type="submit"
                 form="projectForm"
-                disabled={isSubmitting}
+                disabled={isSubmitting || isImageUploading}
                 className="px-6 py-2.5 bg-primary text-white rounded-xl hover:bg-primary/90 transition-colors disabled:opacity-50 flex items-center gap-2"
               >
-                {isSubmitting && <Loader2 className="w-4 h-4 animate-spin" />}
-                {editingProject ? "Opslaan" : "Aanmaken"}
+                {(isSubmitting || isImageUploading) && <Loader2 className="w-4 h-4 animate-spin" />}
+                {isImageUploading ? "Uploaden..." : (editingProject ? "Opslaan" : "Aanmaken")}
               </button>
             </div>
           </div>

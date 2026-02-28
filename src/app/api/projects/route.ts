@@ -12,7 +12,15 @@ export async function GET() {
   await initDatabase();
   
   const projects = await getAllProjects();
-  return NextResponse.json(projects);
+  
+  // Add cache control to prevent caching
+  return NextResponse.json(projects, {
+    headers: {
+      'Cache-Control': 'no-store, no-cache, must-revalidate, proxy-revalidate',
+      'Pragma': 'no-cache',
+      'Expires': '0',
+    },
+  });
 }
 
 // POST /api/projects - Create new project
