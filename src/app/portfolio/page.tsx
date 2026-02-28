@@ -174,11 +174,11 @@ const projects = [
 ];
 
 export default function PortfolioPage() {
-  const [expandedCategories, setExpandedCategories] = useState(["bouw"]);
-  const [selectedCategory, setSelectedCategory] = useState(null);
-  const [selectedSubcategory, setSelectedSubcategory] = useState(null);
+  const [expandedCategories, setExpandedCategories] = useState<string[]>(["bouw"]);
+  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+  const [selectedSubcategory, setSelectedSubcategory] = useState<string | null>(null);
 
-  const toggleCategory = (categoryId) => {
+  const toggleCategory = (categoryId: string) => {
     setExpandedCategories(prev => 
       prev.includes(categoryId) 
         ? prev.filter(id => id !== categoryId)
@@ -186,7 +186,7 @@ export default function PortfolioPage() {
     );
   };
 
-  const handleCategoryClick = (categoryId) => {
+  const handleCategoryClick = (categoryId: string) => {
     setSelectedCategory(categoryId);
     setSelectedSubcategory(null);
     if (!expandedCategories.includes(categoryId)) {
@@ -194,12 +194,12 @@ export default function PortfolioPage() {
     }
   };
 
-  const handleSubcategoryClick = (categoryId, subcategory) => {
+  const handleSubcategoryClick = (categoryId: string, subcategory: string) => {
     setSelectedCategory(categoryId);
     setSelectedSubcategory(subcategory);
   };
 
-  const filteredProjects = projects.filter(project => {
+  const filteredProjects = projects.filter((project: any) => {
     if (selectedSubcategory) {
       return project.subcategory === selectedSubcategory;
     }
@@ -382,11 +382,11 @@ export default function PortfolioPage() {
                 </button>
                 <div className="h-px bg-[var(--border)] my-4" />
                 <div className="space-y-1">
-                  {categories.map((category) => {
+                  {categories.map((category: any) => {
                     const isExpanded = expandedCategories.includes(category.id);
                     const isSelected = selectedCategory === category.id;
                     const Icon = category.icon;
-                    const projectCount = projects.filter(p => p.category === category.id).length;
+                    const projectCount = projects.filter((p: any) => p.category === category.id).length;
                     return (
                       <div key={category.id}>
                         <button
@@ -418,8 +418,8 @@ export default function PortfolioPage() {
                         </button>
                         {isExpanded && (
                           <div className="ml-4 mt-1 space-y-1">
-                            {category.subcategories.map((sub) => {
-                              const subProjectCount = projects.filter(p => p.subcategory === sub).length;
+                            {category.subcategories.map((sub: string) => {
+                              const subProjectCount = projects.filter((p: any) => p.subcategory === sub).length;
                               const isSubSelected = selectedSubcategory === sub;
                               return (
                                 <button
@@ -473,7 +473,7 @@ export default function PortfolioPage() {
 
               {filteredProjects.length > 0 ? (
                 <div className="grid md:grid-cols-2 gap-6">
-                  {filteredProjects.map((project) => (
+                  {filteredProjects.map((project: any) => (
                     <div 
                       key={project.id}
                       className="group bg-[var(--bg-card)] border border-[var(--border)] rounded-2xl overflow-hidden hover:border-primary transition-all duration-300 hover:-translate-y-1"
@@ -509,7 +509,7 @@ export default function PortfolioPage() {
                           {project.description}
                         </p>
                         <div className="flex flex-wrap gap-2 mb-4">
-                          {project.technologies.map((tech) => (
+                          {project.technologies.map((tech: string) => (
                             <span 
                               key={tech}
                               className="px-2.5 py-1 bg-[var(--bg-tertiary)] text-[var(--text-secondary)] rounded-full text-xs"
@@ -520,7 +520,7 @@ export default function PortfolioPage() {
                         </div>
                         <div className="mb-4">
                           <div className="flex flex-wrap gap-2">
-                            {project.features.map((feature) => (
+                            {project.features.map((feature: string) => (
                               <span 
                                 key={feature}
                                 className="flex items-center gap-1 text-xs text-[var(--text-muted)]"
