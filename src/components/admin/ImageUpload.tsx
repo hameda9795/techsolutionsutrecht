@@ -33,13 +33,19 @@ export default function ImageUpload({ value, onChange, onUploading, folder = "po
     reader.readAsDataURL(file);
 
     try {
-      const formData = new FormData();
-      formData.append('file', file);
-      formData.append('folder', folder);
+      // Generate unique filename
+      const timestamp = Date.now();
+      const randomString = Math.random().toString(36).substring(2, 8);
+      const extension = file.name.split('.').pop();
+      const filename = `${folder}/${timestamp}-${randomString}.${extension}`;
 
-      const res = await fetch('/api/upload', {
+      // Upload to Vercel Blob - send file directly as body
+      const res = await fetch(`/api/upload?filename=${encodeURIComponent(filename)}`, {
         method: 'POST',
-        body: formData,
+        body: file, // Send file directly, not FormData
+        headers: {
+          'Content-Type': file.type,
+        },
       });
 
       const data = await res.json();

@@ -4,65 +4,52 @@ import { NextRequest, NextResponse } from 'next/server';
 // POST /api/upload - Upload image to Vercel Blob
 export async function POST(request: NextRequest) {
   try {
-    // Check if BLOB_READ_WRITE_TOKEN is set
-    if (!process.env.BLOB_READ_WRITE_TOKEN) {
-      return NextResponse.json(
-        { error: 'BLOB_READ_WRITE_TOKEN not configured' },
-        { status: 500 }
-      );
-    }
+    // Get filename from query params
+    const { searchParams } = new URL(request.url);
+    const filename = searchParams.get('filename');
 
-    const formData = await request.formData();
-    const file = formData.get('file') as File;
-    const folder = formData.get('folder') as string || 'uploads';
-
-    if (!file) {
+    if (!filename) {
       return NextResponse.json(
-        { error: 'No file provided' },
+        { error: 'Filename is required' },
         { status: 400 }
       );
     }
 
     // Validate file type
-    if (!file.type.startsWith('image/')) {
+    if (!filename.match(/\.(jpg|jpeg|png|webp|gif)$/i)) {
       return NextResponse.json(
-        { error: 'Only image files are allowed' },
+        { error: 'Only image files are allowed (jpg, jpeg, png, webp, gif)' },
         { status: 400 }
       );
     }
-
-    // Validate file size (5MB max)
-    if (file.size > 5 * 1024 * 1024) {
-      return NextResponse.json(
-        { error: 'File size too large (max 5MB)' },
-        { status: 400 }
-      );
-    }
-
-    // Generate unique filename
-    const timestamp = Date.now();
-    const randomString = Math.random().toString(36).substring(2, 8);
-    const extension = file.name.split('.').pop();
-    const filename = `${folder}/${timestamp}-${randomString}.${extension}`;
 
     // Upload to Vercel Blob
-    const blob = await put(filename, file, {
+    // The request.body is the file stream
+    if (!request.body) {
+      return NextResponse.json(
+        { error: 'No file body provided' },
+        { status: 400 }
+      );
+    }
+
+    const blob = await put(filename, request.body, {
       access: 'public',
-      contentType: file.type,
     });
 
     return NextResponse.json({
       url: blob.url,
       pathname: blob.pathname,
-      size: file.size,
-      type: file.type,
+      downloadUrl: blob.downloadUrl,
     });
 
   } catch (error) {
     console.error('Upload error:', error);
     return NextResponse.json(
-      { error: 'Upload failed' },
+      { error: 'Upload failed: ' + (error instanceof Error ? error.message : 'Unknown error') },
       { status: 500 }
     );
   }
 }
+
+// Note: In Next.js App Router, we don't need to disable bodyParser
+// The request.body is automatically available as a ReadableStream
