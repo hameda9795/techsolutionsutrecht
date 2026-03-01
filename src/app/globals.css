@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+/* Font preloaded in layout.tsx for better LCP */
 
 :root {
   /* Default to dark theme */
@@ -270,3 +270,4 @@
     animation-delay: 500ms;
   }
 }
+
