@@ -4,7 +4,7 @@ import { localBusinessSchema, websiteSchema } from "@/lib/schema";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
 
 export const metadata: Metadata = {
-  title: "Goedkope WordPress Website Laten Maken Utrecht | Binnen 1 Week | TechSolutionsUtrecht",
+  title: "Website Laten Maken Utrecht | Vanaf €250 | Binnen 1 Week",
   description: "Laat uw WordPress website maken in Utrecht tegen scherpe prijzen (vanaf €250). Snelle oplevering binnen 3-10 dagen. Betaalbaar, professioneel en snel. Gratis offerte!",
   keywords: ["goedkope wordpress website laten maken utrecht", "website laten maken binnen week", "snelle website laten maken", "zzp website laten maken goedkoop", "betaalbare website utrecht", "wordpress website goedkoop", "scherpe prijzen webdesign"],
   authors: [{ name: "TechSolutionsUtrecht" }],
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     ],
   },
   openGraph: {
-    title: "Goedkope WordPress Website Laten Maken Utrecht | Binnen 1 Week",
+    title: "Website Laten Maken Utrecht | Vanaf €250 | Binnen 1 Week",
     description: "Laat uw WordPress website maken in Utrecht tegen scherpe prijzen (vanaf €250). Snelle oplevering binnen 3-10 dagen. Gratis offerte!",
     type: "website",
     locale: "nl_NL",
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Goedkope WordPress Website Laten Maken Utrecht | Binnen 1 Week",
+    title: "Website Laten Maken Utrecht | Vanaf €250 | Binnen 1 Week",
     description: "Laat uw WordPress website maken in Utrecht tegen scherpe prijzen (vanaf €250). Snelle oplevering binnen 3-10 dagen.",
   },
   alternates: {
