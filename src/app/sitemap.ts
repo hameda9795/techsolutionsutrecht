@@ -11,6 +11,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1,
     },
     {
+      url: ${baseUrl}/utrecht,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.95,
+    },
+    {
       url: `${baseUrl}/diensten`,
       lastModified: new Date(),
       changeFrequency: "weekly",
@@ -168,3 +174,4 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ];
 }
+
