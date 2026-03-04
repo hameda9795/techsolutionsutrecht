@@ -1,0 +1,1144 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>TechSolutionsUtrecht.nl: Customer Perspective Analysis</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/tengbao/vanta/dist/vanta.net.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0f766e',
+                        secondary: '#1e293b',
+                        accent: '#dc2626',
+                        neutral: '#374151',
+                        'base-100': '#f9fafb',
+                        'base-200': '#f3f4f6',
+                        'base-300': '#e5e7eb'
+                    },
+                    fontFamily: {
+                        'serif': ['Playfair Display', 'serif'],
+                        'sans': ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .hero-gradient {
+            background: linear-gradient(135deg, rgba(15, 118, 110, 0.1) 0%, rgba(30, 41, 59, 0.05) 100%);
+        }
+        .text-shadow {
+            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .citation-link {
+            background: rgba(220, 38, 38, 0.1);
+            border-left: 3px solid #dc2626;
+            padding: 0 4px;
+            margin: 0 2px;
+        }
+        #toc {
+            backdrop-filter: blur(10px);
+            background: rgba(249, 250, 251, 0.95);
+        }
+        .section-divider {
+            background: linear-gradient(90deg, transparent 0%, #e5e7eb 50%, transparent 100%);
+            height: 1px;
+        }
+        .bento-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            grid-template-rows: auto auto;
+            gap: 1.5rem;
+            height: auto;
+        }
+        .bento-hero {
+            grid-column: 1 / 2;
+            grid-row: 1 / 3;
+        }
+        .bento-summary {
+            grid-column: 2 / 3;
+            grid-row: 1 / 2;
+        }
+        .bento-metrics {
+            grid-column: 2 / 3;
+            grid-row: 2 / 3;
+        }
+        .vanta-canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+        @media (max-width: 768px) {
+            .bento-grid {
+                grid-template-columns: 1fr;
+                grid-template-rows: auto auto auto;
+            }
+            .bento-hero {
+                grid-column: 1;
+                grid-row: 1;
+            }
+            .bento-summary {
+                grid-column: 1;
+                grid-row: 2;
+            }
+            .bento-metrics {
+                grid-column: 1;
+                grid-row: 3;
+            }
+        }
+    </style>
+  <base target="_blank">
+</head>
+
+  <body class="bg-base-100 font-sans text-neutral">
+    <!-- Fixed Table of Contents -->
+    <nav id="toc" class="fixed left-6 top-1/2 transform -translate-y-1/2 z-50 w-64 p-6 rounded-lg shadow-lg border border-base-300 hidden md:block">
+      <h3 class="font-serif font-bold text-lg text-primary mb-4">Contents</h3>
+      <ul class="space-y-2 text-sm">
+        <li>
+          <a href="#executive-summary" class="hover:text-primary transition-colors">Executive Summary</a>
+        </li>
+        <li>
+          <a href="#first-impression" class="hover:text-primary transition-colors">First Impression</a>
+        </li>
+        <li>
+          <a href="#visual-design" class="hover:text-primary transition-colors">Visual Design</a>
+        </li>
+        <li>
+          <a href="#brand-impression" class="hover:text-primary transition-colors">Brand Impression</a>
+        </li>
+        <li>
+          <a href="#usability" class="hover:text-primary transition-colors">Usability</a>
+        </li>
+        <li>
+          <a href="#decision-factors" class="hover:text-primary transition-colors">Decision Factors</a>
+        </li>
+        <li>
+          <a href="#conclusion" class="hover:text-primary transition-colors">Final Analysis</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Hero Section with Bento Layout -->
+    <section class="relative min-h-screen bg-gradient-to-br from-base-100 to-base-200 overflow-hidden">
+      <div id="vanta-bg" class="vanta-canvas"></div>
+
+      <div class="container mx-auto px-6 py-12">
+        <div class="bento-grid max-w-7xl mx-auto">
+          <!-- Main Hero Content -->
+          <div class="bento-hero bg-white/90 backdrop-blur-sm rounded-2xl p-8 md:p-12 shadow-xl relative z-10">
+            <div class="space-y-8">
+              <div class="space-y-4">
+                <h1 class="font-serif text-4xl md:text-6xl font-bold text-secondary leading-tight text-shadow">
+                  <em class="text-primary">TechSolutionsUtrecht.nl</em>
+                  <br/>
+                  Customer Perspective Analysis
+                </h1>
+                <p class="text-xl text-neutral font-light max-w-2xl">
+                  A comprehensive evaluation from the customer&#39;s viewpoint—examining visual design, brand trust, and usability factors that influence hiring decisions.
+                </p>
+              </div>
+
+              <div class="flex flex-wrap gap-4">
+                <span class="px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium">
+                  Visual Design Focus
+                </span>
+                <span class="px-4 py-2 bg-secondary/10 text-secondary rounded-full text-sm font-medium">
+                  Customer Journey
+                </span>
+                <span class="px-4 py-2 bg-accent/10 text-accent rounded-full text-sm font-medium">
+                  Trust Analysis
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Executive Summary Card -->
+          <div id="executive-summary" class="bento-summary bg-white/90 backdrop-blur-sm rounded-2xl p-6 shadow-xl">
+            <h2 class="font-serif text-xl font-bold text-secondary mb-4">
+              <i class="fas fa-chart-line text-primary mr-2"></i>
+              Executive Summary
+            </h2>
+            <div class="space-y-3 text-sm">
+              <div class="flex items-start space-x-2">
+                <i class="fas fa-thumbs-up text-green-600 mt-1"></i>
+                <div>
+                  <strong>Clear Value Propositions:</strong> €250 starting price, 1-week delivery, local Utrecht focus
+                </div>
+              </div>
+              <div class="flex items-start space-x-2">
+                <i class="fas fa-phone text-green-600 mt-1"></i>
+                <div>
+                  <strong>Excellent Accessibility:</strong> WhatsApp integration and multiple contact channels
+                </div>
+              </div>
+              <div class="flex items-start space-x-2">
+                <i class="fas fa-exclamation-triangle text-orange-600 mt-1"></i>
+                <div>
+                  <strong>Significant Reservations:</strong> 2025 founding date reveals brand-new business
+                </div>
+              </div>
+              <div class="flex items-start space-x-2">
+                <i class="fas fa-search text-orange-600 mt-1"></i>
+                <div>
+                  <strong>Limited Portfolio:</strong> Insufficient depth for comprehensive quality verification
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Key Metrics -->
+          <div class="bento-metrics bg-white/90 backdrop-blur-sm rounded-2xl p-6 shadow-xl">
+            <h3 class="font-serif text-lg font-bold text-secondary mb-4">Key Metrics</h3>
+            <div class="grid grid-cols-2 gap-4">
+              <div class="text-center p-3 bg-primary/5 rounded-lg">
+                <div class="text-2xl font-bold text-primary">2025</div>
+                <div class="text-xs text-neutral">Founded</div>
+              </div>
+              <div class="text-center p-3 bg-secondary/5 rounded-lg">
+                <div class="text-2xl font-bold text-secondary">20+</div>
+                <div class="text-xs text-neutral">Clients</div>
+              </div>
+              <div class="text-center p-3 bg-green-100 rounded-lg">
+                <div class="text-2xl font-bold text-green-700">4.9/5</div>
+                <div class="text-xs text-neutral">Rating</div>
+              </div>
+              <div class="text-center p-3 bg-accent/5 rounded-lg">
+                <div class="text-2xl font-bold text-accent">€250</div>
+                <div class="text-xs text-neutral">Starting Price</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- First Impression Analysis -->
+    <section id="first-impression" class="py-16 bg-white">
+      <div class="container mx-auto px-6">
+        <div class="max-w-4xl mx-auto">
+          <header class="text-center mb-12">
+            <h2 class="font-serif text-4xl font-bold text-secondary mb-4">
+              First Impression Analysis
+            </h2>
+            <p class="text-xl text-neutral font-light max-w-3xl mx-auto">
+              Understanding the critical 3-second window that determines customer engagement
+            </p>
+          </header>
+
+          <div class="grid md:grid-cols-3 gap-8 mb-12">
+            <div class="bg-base-100 p-6 rounded-xl border border-base-300">
+              <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+                <i class="fas fa-bolt text-primary text-xl"></i>
+              </div>
+              <h3 class="font-serif text-xl font-bold text-secondary mb-3">Value Proposition Clarity</h3>
+              <p class="text-neutral leading-relaxed">
+                Immediate communication of price (€250), speed (1 week), and location (Utrecht) creates instant qualification framework.
+                <a href="https://techsolutionsutrecht.nl/" class="citation-link">[75]</a>
+              </p>
+            </div>
+
+            <div class="bg-base-100 p-6 rounded-xl border border-base-300">
+              <div class="w-12 h-12 bg-secondary/10 rounded-lg flex items-center justify-center mb-4">
+                <i class="fas fa-palette text-secondary text-xl"></i>
+              </div>
+              <h3 class="font-serif text-xl font-bold text-secondary mb-3">Visual Hook Assessment</h3>
+              <p class="text-neutral leading-relaxed">
+                Proven conversion-optimized progression with six-section structure, though conservative color palette risks memorability deficit.
+                <a href="https://techsolutionsutrecht.nl/" class="citation-link">[75]</a>
+              </p>
+            </div>
+
+            <div class="bg-base-100 p-6 rounded-xl border border-base-300">
+              <div class="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mb-4">
+                <i class="fas fa-heart text-accent text-xl"></i>
+              </div>
+              <h3 class="font-serif text-xl font-bold text-secondary mb-3">Emotional Response</h3>
+              <p class="text-neutral leading-relaxed">
+                Deliberately engineered emotional progression: relief (price), urgency (speed), preference (differentiation), and social proof.
+                <a href="https://techsolutionsutrecht.nl/" class="citation-link">[75]</a>
+              </p>
+            </div>
+          </div>
+
+          <div class="bg-base-100 p-8 rounded-xl border border-base-300">
+            <h3 class="font-serif text-2xl font-bold text-secondary mb-6">Trust Signal Analysis</h3>
+
+            <div class="grid md:grid-cols-2 gap-8">
+              <div>
+                <h4 class="font-sans font-semibold text-lg text-secondary mb-3">Positive Indicators</h4>
+                <ul class="space-y-2 text-neutral">
+                  <li class="flex items-start space-x-2">
+                    <i class="fas fa-check text-green-600 mt-1"></i>
+                    <span>Price transparency with €250 starting point</span>
+                  </li>
+                  <li class="flex items-start space-x-2">
+                    <i class="fas fa-check text-green-600 mt-1"></i>
+                    <span>Speed promises: 3-10 days standard, sometimes within 1 week</span>
+                  </li>
+                  <li class="flex items-start space-x-2">
+                    <i class="fas fa-check text-green-600 mt-1"></i>
+                    <span>Local Utrecht identity with 20+ regional clients</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div>
+                <h4 class="font-sans font-semibold text-lg text-secondary mb-3">Trust Concerns</h4>
+                <ul class="space-y-2 text-neutral">
+                  <li class="flex items-start space-x-2">
+                    <i class="fas fa-exclamation-triangle text-orange-600 mt-1"></i>
+                    <span>2025 founding date reveals brand-new business</span>
+                  </li>
+                  <li class="flex items-start space-x-2">
+                    <i class="fas fa-exclamation-triangle text-orange-600 mt-1"></i>
+                    <span>Single-person operation with continuity risks</span>
+                  </li>
+                  <li class="flex items-start space-x-2">
+                    <i class="fas fa-exclamation-triangle text-orange-600 mt-1"></i>
+                    <span>Limited portfolio depth for experience verification</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Visual Design Deep Dive (60% Weight) -->
+    <section id="visual-design" class="py-16 bg-base-200">
+      <div class="container mx-auto px-6">
+        <div class="max-w-6xl mx-auto">
+          <header class="text-center mb-12">
+            <h2 class="font-serif text-4xl font-bold text-secondary mb-4">
+              Visual Design Evaluation
+            </h2>
+            <p class="text-xl text-neutral font-light">
+              <strong class="text-primary">60% Weight</strong> - Color, Layout, Typography &amp; Trust Factors
+            </p>
+          </header>
+
+          <!-- Color Scheme Analysis -->
+          <div class="bg-white rounded-2xl p-8 mb-8 shadow-lg">
+            <h3 class="font-serif text-2xl font-bold text-secondary mb-6">
+              <i class="fas fa-palette text-primary mr-3"></i>
+              Color Scheme &amp; Aesthetics
+            </h3>
+
+            <div class="grid md:grid-cols-3 gap-6">
+              <div class="bg-base-100 p-6 rounded-xl">
+                <h4 class="font-sans font-semibold text-lg text-secondary mb-3">Primary Palette</h4>
+                <p class="text-neutral mb-4">
+                  Conservative professional palette likely featuring WhatsApp green (#25D366) as accent, balanced with trust-inducing blues and clean neutrals.
+                  <a href="https://techsolutionsutrecht.nl/" class="citation-link">[75]</a>
+                </p>
+                <div class="flex space-x-2">
+                  <div class="w-8 h-8 bg-green-500 rounded"></div>
+                  <div class="w-8 h-8 bg-blue-600 rounded"></div>
+                  <div class="w-8 h-8 bg-gray-600 rounded"></div>
+                  <div class="w-8 h-8 bg-white border border-gray-300 rounded"></div>
+                </div>
+              </div>
+
+              <div class="bg-base-100 p-6 rounded-xl">
+                <h4 class="font-sans font-semibold text-lg text-secondary mb-3">Contrast &amp; Readability</h4>
+                <p class="text-neutral">
+                  Strong information hierarchy with graduated contrast levels guiding attention from hero text to supporting details.
+                  <a href="https://techsolutionsutrecht.nl/" class="citation-link">[75]</a>
+                </p>
+              </div>
+
+              <div class="bg-base-100 p-6 rounded-xl">
+                <h4 class="font-sans font-semibold text-lg text-secondary mb-3">Brand Consistency</h4>
+                <p class="text-neutral">
+                  Systematic application with minor deviations including naming inconsistencies and template gaps.
+                  <a href="https://techsolutionsutrecht.nl/portfolio" class="citation-link">[32]</a>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Layout &amp; Typography -->
+          <div class="grid md:grid-cols-2 gap-8 mb-8">
+            <div class="bg-white rounded-2xl p-8 shadow-lg">
+              <h3 class="font-serif text-2xl font-bold text-secondary mb-6">
+                <i class="fas fa-th text-primary mr-3"></i>
+                Layout &amp; Composition
+              </h3>
+
+              <div class="space-y-4">
+                <div class="bg-base-100 p-4 rounded-lg">
+                  <h4 class="font-medium text-secondary mb-2">Homepage Structure</h4>
+                  <p class="text-sm text-neutral">
+                    Six-section conversion-optimized progression with balanced content blocks.
+                    <a href="https://techsolutionsutrecht.nl/" class="citation-link">[75]</a>
+                  </p>
+                </div>
+
+                <div class="bg-base-100 p-4 rounded-lg">
+                  <h4 class="font-medium text-secondary mb-2">White Space Usage</h4>
+                  <p class="text-sm text-neutral">
+                    Moderate to generous spacing with section-based organization preventing cognitive overload.
+                    <a href="https://techsolutionsutrecht.nl/" class="citation-link">[75]</a>
+                  </p>
+                </div>
+
+                <div class="bg-base-100 p-4 rounded-lg">
+                  <h4 class="font-medium text-secondary mb-2">Visual Hierarchy</h4>
+                  <p class="text-sm text-neutral">
+                    Clear attention guidance from primary value propositions to supporting elements.
+                    <a href="https://techsolutionsutrecht.nl/" class="citation-link">[75]</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-white rounded-2xl p-8 shadow-lg">
+              <h3 class="font-serif text-2xl font-bold text-secondary mb-6">
+                <i class="fas fa-font text-primary mr-3"></i>
+                Typography &amp; Imagery
+              </h3>
+
+              <div class="space-y-4">
+                <div class="bg-base-100 p-4 rounded-lg">
+                  <h4 class="font-medium text-secondary mb-2">Font Choices</h4>
+                  <p class="text-sm text-neutral">
+                    Sans-serif family likely employed for contemporary appearance with proper Dutch glyph support.
+                  </p>
+                </div>
+
+                <div class="bg-base-100 p-4 rounded-lg">
+                  <h4 class="font-medium text-secondary mb-2">Image Quality</h4>
+                  <p class="text-sm text-neutral">
+                    Mixed execution with sophisticated client work features but limited owned-site custom photography.
+                    <a href="https://techsolutionsutrecht.nl/portfolio" class="citation-link">[32]</a>
+                  </p>
+                </div>
+
+                <div class="bg-base-100 p-4 rounded-lg">
+                  <h4 class="font-medium text-secondary mb-2">Icon Usage</h4>
+                  <p class="text-sm text-neutral">
+                    Significant role in service communication with functional iconography supporting value propositions.
+                    <a href="https://techsolutionsutrecht.nl/over-ons" class="citation-link">[77]</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Trust Factors -->
+          <div class="bg-white rounded-2xl p-8 shadow-lg">
+            <h3 class="font-serif text-2xl font-bold text-secondary mb-6">
+              <i class="fas fa-shield-alt text-primary mr-3"></i>
+              Trust Factor Indicators
+            </h3>
+
+            <div class="grid md:grid-cols-2 gap-8">
+              <div>
+                <h4 class="font-sans font-semibold text-lg text-secondary mb-4">Professional Polish Assessment</h4>
+                <div class="space-y-3">
+                  <div class="flex items-start space-x-3">
+                    <i class="fas fa-plus-circle text-green-600 mt-1"></i>
+                    <div class="text-sm">
+                      <strong>Positive:</strong> Systematic cross-page consistency and clear information hierarchy
+                      <a href="https://techsolutionsutrecht.nl/" class="citation-link">[75]</a>
+                    </div>
+                  </div>
+                  <div class="flex items-start space-x-3">
+                    <i class="fas fa-minus-circle text-orange-600 mt-1"></i>
+                    <div class="text-sm">
+                      <strong>Concerning:</strong> 2026 copyright date, URL inconsistencies, template gaps
+                      <a href="https://techsolutionsutrecht.nl/portfolio" class="citation-link">[32]</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <h4 class="font-sans font-semibold text-lg text-secondary mb-4">Modern vs. Dated Elements</h4>
+                <div class="space-y-3">
+                  <div class="flex items-start space-x-3">
+                    <i class="fas fa-check text-green-600 mt-1"></i>
+                    <div class="text-sm">
+                      <strong>Modern:</strong> WhatsApp-centric engagement, responsive structure, speed-focused positioning
+                      <a href="https://techsolutionsutrecht.nl/" class="citation-link">[75]</a>
+                    </div>
+                  </div>
+                  <div class="flex items-start space-x-3">
+                    <i class="fas fa-times text-red-600 mt-1"></i>
+                    <div class="text-sm">
+                      <strong>Dated:</strong> Information-dense design, generic naming, conventional navigation patterns
+                      <a href="https://techsolutionsutrecht.nl/" class="citation-link">[75]</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Brand Impression -->
+    <section id="brand-impression" class="py-16 bg-white">
+      <div class="container mx-auto px-6">
+        <div class="max-w-6xl mx-auto">
+          <header class="text-center mb-12">
+            <h2 class="font-serif text-4xl font-bold text-secondary mb-4">
+              Brand Impression Assessment
+            </h2>
+            <p class="text-xl text-neutral font-light">
+              <strong class="text-primary">25% Weight</strong> - Professionalism, Credibility, and Willingness to Pay
+            </p>
+          </header>
+
+          <!-- Professionalism Cues -->
+          <div class="bg-base-200 rounded-2xl p-8 mb-8">
+            <h3 class="font-serif text-2xl font-bold text-secondary mb-6">
+              <i class="fas fa-briefcase text-primary mr-3"></i>
+              Professionalism Cues
+            </h3>
+
+            <div class="grid md:grid-cols-3 gap-6">
+              <div class="bg-white p-6 rounded-xl">
+                <h4 class="font-sans font-semibold text-lg text-secondary mb-3">Company Narrative</h4>
+                <p class="text-neutral text-sm mb-3">
+                  Temporal paradox: 2025 founding with 12+ years personal experience. Hobby-to-profession trajectory creates authenticity but raises continuity questions.
+                  <a href="https://techsolutionsutrecht.nl/over-ons" class="citation-link">[77]</a>
+                </p>
+                <div class="text-xs text-neutral">
+                  <strong>Key Risk:</strong> Single-person operation with limited formal track record
+                </div>
+              </div>
+
+              <div class="bg-white p-6 rounded-xl">
+                <h4 class="font-sans font-semibold text-lg text-secondary mb-3">Service Portfolio</h4>
+                <p class="text-neutral text-sm mb-3">
+                  Unique web + repair combination with genuine convenience value proposition. Breadth creates differentiation but risks &#34;jack of all trades&#34; perception.
+                  <a href="https://techsolutionsutrecht.nl/over-ons" class="citation-link">[77]</a>
+                </p>
+                <div class="text-xs text-neutral">
+                  <strong>Challenge:</strong> Maintaining expertise across two rapidly evolving domains
+                </div>
+              </div>
+
+              <div class="bg-white p-6 rounded-xl">
+                <h4 class="font-sans font-semibold text-lg text-secondary mb-3">Testimonials</h4>
+                <p class="text-neutral text-sm mb-3">
+                  20+ clients with concrete outcome claims (#1 Google, doubled revenue). Lack of attribution reduces credibility impact.
+                  <a href="https://techsolutionsutrecht.nl/" class="citation-link">[75]</a>
+                </p>
+                <div class="text-xs text-neutral">
+                  <strong>Limitation:</strong> Unverifiable claims without client identification
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Credibility Markers -->
+          <div class="grid md:grid-cols-2 gap-8 mb-8">
+            <div class="bg-white rounded-2xl p-8 shadow-lg">
+              <h3 class="font-serif text-2xl font-bold text-secondary mb-6">
+                <i class="fas fa-medal text-primary mr-3"></i>
+                Credibility Markers
+              </h3>
+
+              <div class="space-y-4">
+                <div class="border-l-4 border-primary pl-4">
+                  <h4 class="font-medium text-secondary mb-2">Experience Claims</h4>
+                  <p class="text-sm text-neutral">
+                    &#34;12 jaar WordPress ervaring&#34; provides verifiable credential through platform contributions and dated portfolio samples.
+                    <a href="https://techsolutionsutrecht.nl/over-ons" class="citation-link">[77]</a>
+                  </p>
+                </div>
+
+                <div class="border-l-4 border-secondary pl-4">
+                  <h4 class="font-medium text-secondary mb-2">Unique Positioning</h4>
+                  <p class="text-sm text-neutral">
+                    Combined web + repair services represent genuine market innovation with clear convenience rationale.
+                    <a href="https://techsolutionsutrecht.nl/over-ons" class="citation-link">[77]</a>
+                  </p>
+                </div>
+
+                <div class="border-l-4 border-accent pl-4">
+                  <h4 class="font-medium text-secondary mb-2">Personal Touch</h4>
+                  <p class="text-sm text-neutral">
+                    Direct contact with expert worker aligns with Dutch cultural preferences and addresses service industry frustrations.
+                    <a href="https://techsolutionsutrecht.nl/over-ons" class="citation-link">[77]</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-white rounded-2xl p-8 shadow-lg">
+              <h3 class="font-serif text-2xl font-bold text-secondary mb-6">
+                <i class="fas fa-dollar-sign text-primary mr-3"></i>
+                Willingness to Pay Analysis
+              </h3>
+
+              <div class="space-y-4">
+                <div class="bg-base-100 p-4 rounded-lg">
+                  <h4 class="font-medium text-secondary mb-2">Value Perception</h4>
+                  <p class="text-sm text-neutral">
+                    €250 entry point creates strong value perception for target segments, though scope clarity is critical for satisfaction.
+                    <a href="https://techsolutionsutrecht.nl/" class="citation-link">[75]</a>
+                  </p>
+                </div>
+
+                <div class="bg-base-100 p-4 rounded-lg">
+                  <h4 class="font-medium text-secondary mb-2">Price-Quality Alignment</h4>
+                  <p class="text-sm text-neutral">
+                    &#34;Betaalbaar en professioneel&#34; assertion addresses tension through experience-based efficiency claims.
+                    <a href="https://techsolutionsutrecht.nl/" class="citation-link">[75]</a>
+                  </p>
+                </div>
+
+                <div class="bg-base-100 p-4 rounded-lg">
+                  <h4 class="font-medium text-secondary mb-2">Risk Reduction</h4>
+                  <p class="text-sm text-neutral">
+                    Free consultation, rapid response, and no-obligation framing reduce initial commitment anxiety.
+                    <a href="https://techsolutionsutrecht.nl/" class="citation-link">[75]</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Usability Analysis -->
+    <section id="usability" class="py-16 bg-base-200">
+      <div class="container mx-auto px-6">
+        <div class="max-w-6xl mx-auto">
+          <header class="text-center mb-12">
+            <h2 class="font-serif text-4xl font-bold text-secondary mb-4">
+              Usability Analysis
+            </h2>
+            <p class="text-xl text-neutral font-light">
+              <strong class="text-primary">15% Weight</strong> - Navigation, Information Architecture, and User Experience
+            </p>
+          </header>
+
+          <!-- Navigation Structure -->
+          <div class="bg-white rounded-2xl p-8 mb-8 shadow-lg">
+            <h3 class="font-serif text-2xl font-bold text-secondary mb-6">
+              <i class="fas fa-compass text-primary mr-3"></i>
+              Navigation Structure
+            </h3>
+
+            <div class="grid md:grid-cols-3 gap-6 mb-6">
+              <div class="bg-base-100 p-6 rounded-xl">
+                <h4 class="font-sans font-semibold text-lg text-secondary mb-3">Main Menu Clarity</h4>
+                <p class="text-neutral text-sm mb-3">
+                  Seven-item navigation with clear service categorization. &#34;Diensten&#34; could be more descriptive as &#34;Webdevelopment.&#34;
+                  <a href="https://techsolutionsutrecht.nl/portfolio" class="citation-link">[32]</a>
+                </p>
+                <div class="text-xs text-neutral font-mono">
+                  Home • Diensten • Reparaties • Portfolio • Over Ons • Blog • Contact
+                </div>
+              </div>
+
+              <div class="bg-base-100 p-6 rounded-xl">
+                <h4 class="font-sans font-semibold text-lg text-secondary mb-3">Mobile Responsiveness</h4>
+                <p class="text-neutral text-sm mb-3">
+                  WhatsApp-centric approach implies mobile-first thinking. Confirmed mobile menu toggle with execution quality requiring verification.
+                  <a href="https://techsolutionsutrecht.nl/" class="citation-link">[75]</a>
+                </p>
+                <div class="flex items-center space-x-2">
+                  <i class="fas fa-mobile-alt text-primary"></i>
+                  <span class="text-xs">Mobile-First Design</span>
+                </div>
+              </div>
+
+              <div class="bg-base-100 p-6 rounded-xl">
+                <h4 class="font-sans font-semibold text-lg text-secondary mb-3">CTA Placement</h4>
+                <p class="text-neutral text-sm mb-3">
+                  Multi-channel strategy with dual primary CTAs (WhatsApp and Quote Request) accommodating different customer preferences.
+                  <a href="https://techsolutionsutrecht.nl/" class="citation-link">[75]</a>
+                </p>
+                <div class="flex space-x-2">
+                  <span class="px-2 py-1 bg-primary/10 text-primary rounded text-xs">WhatsApp</span>
+                  <span class="px-2 py-1 bg-secondary/10 text-secondary rounded text-xs">Quote Form</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Navigation Flow Visualization -->
+            <div class="bg-base-100 p-6 rounded-xl">
+              <h4 class="font-sans font-semibold text-lg text-secondary mb-4">User Journey Flow</h4>
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                <div class="bg-white p-4 rounded-lg border-l-4 border-primary">
+                  <h5 class="font-medium text-secondary mb-2">Discovery</h5>
+                  <p class="text-xs text-neutral">Hero section → Value qualification → CTA selection</p>
+                </div>
+                <div class="bg-white p-4 rounded-lg border-l-4 border-secondary">
+                  <h5 class="font-medium text-secondary mb-2">Evaluation</h5>
+                  <p class="text-xs text-neutral">Portfolio review → Differentiation assessment → Social proof validation</p>
+                </div>
+                <div class="bg-white p-4 rounded-lg border-l-4 border-accent">
+                  <h5 class="font-medium text-secondary mb-2">Conversion</h5>
+                  <p class="text-xs text-neutral">FAQ review → Final objection handling → Contact initiation</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Information Findability -->
+          <div class="grid md:grid-cols-2 gap-8">
+            <div class="bg-white rounded-2xl p-8 shadow-lg">
+              <h3 class="font-serif text-2xl font-bold text-secondary mb-6">
+                <i class="fas fa-search text-primary mr-3"></i>
+                Information Findability
+              </h3>
+
+              <div class="space-y-4">
+                <div class="border-l-4 border-primary pl-4">
+                  <h4 class="font-medium text-secondary mb-2">Service Details</h4>
+                  <p class="text-sm text-neutral">
+                    Homepage overview with progressive disclosure to dedicated pages. Requires navigation for detailed specifications.
+                    <a href="https://techsolutionsutrecht.nl/" class="citation-link">[75]</a>
+                  </p>
+                </div>
+
+                <div class="border-l-4 border-secondary pl-4">
+                  <h4 class="font-medium text-secondary mb-2">Pricing Information</h4>
+                  <p class="text-sm text-neutral">
+                    Prominent €250 hero placement with tier details requiring navigation. Creates qualification friction for self-service evaluation.
+                    <a href="https://techsolutionsutrecht.nl/" class="citation-link">[75]</a>
+                  </p>
+                </div>
+
+                <div class="border-l-4 border-accent pl-4">
+                  <h4 class="font-medium text-secondary mb-2">Contact Options</h4>
+                  <p class="text-sm text-neutral">
+                    Exemplary multi-channel availability with clear channel-purpose differentiation and persistent accessibility.
+                    <a href="https://techsolutionsutrecht.nl/" class="citation-link">[75]</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-white rounded-2xl p-8 shadow-lg">
+              <h3 class="font-serif text-2xl font-bold text-secondary mb-6">
+                <i class="fas fa-question-circle text-primary mr-3"></i>
+                Potential Confusion Points
+              </h3>
+
+              <div class="space-y-4">
+                <div class="bg-base-100 p-4 rounded-lg">
+                  <h4 class="font-medium text-secondary mb-2">Service Categorization</h4>
+                  <p class="text-sm text-neutral mb-2">
+                    Web vs. Repair distinction clear in navigation but may blur in homepage messaging. Requires explicit cross-selling prompts.
+                    <a href="https://techsolutionsutrecht.nl/over-ons" class="citation-link">[77]</a>
+                  </p>
+                  <div class="text-xs text-neutral">
+                    <strong>Mitigation:</strong> Clear visual separation and category-specific examples
+                  </div>
+                </div>
+
+                <div class="bg-base-100 p-4 rounded-lg">
+                  <h4 class="font-medium text-secondary mb-2">Portfolio Presentation</h4>
+                  <p class="text-sm text-neutral mb-2">
+                    Category filter system ambitious but &#34;Binnenkort beschikbaar&#34; placeholders undermine credibility.
+                    <a href="https://techsolutionsutrecht.nl/portfolio" class="citation-link">[32]</a>
+                  </p>
+                  <div class="text-xs text-neutral">
+                    <strong>Impact:</strong> Content development lag signals unfinished service readiness
+                  </div>
+                </div>
+
+                <div class="bg-base-100 p-4 rounded-lg">
+                  <h4 class="font-medium text-secondary mb-2">Quote Request Flow</h4>
+                  <p class="text-sm text-neutral mb-2">
+                    Multiple entry points with inconsistent pathway clarity. WhatsApp vs. formal quote relationship unspecified.
+                    <a href="https://techsolutionsutrecht.nl/" class="citation-link">[75]</a>
+                  </p>
+                  <div class="text-xs text-neutral">
+                    <strong>Optimization:</strong> Unified system with channel-appropriate intake
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Key Decision Factors -->
+    <section id="decision-factors" class="py-16 bg-white">
+      <div class="container mx-auto px-6">
+        <div class="max-w-6xl mx-auto">
+          <header class="text-center mb-12">
+            <h2 class="font-serif text-4xl font-bold text-secondary mb-4">
+              Key Decision Factors
+            </h2>
+            <p class="text-xl text-neutral font-light">
+              Critical elements influencing the hire/no-hire determination
+            </p>
+          </header>
+
+          <!-- Strengths -->
+          <div class="bg-green-50 rounded-2xl p-8 mb-8 border border-green-200">
+            <h3 class="font-serif text-2xl font-bold text-secondary mb-6">
+              <i class="fas fa-thumbs-up text-green-600 mr-3"></i>
+              Strengths That Build Confidence
+            </h3>
+
+            <div class="grid md:grid-cols-3 gap-6">
+              <div class="bg-white p-6 rounded-xl">
+                <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
+                  <i class="fas fa-bullseye text-green-600 text-xl"></i>
+                </div>
+                <h4 class="font-sans font-semibold text-lg text-secondary mb-3">Exceptional Value Clarity</h4>
+                <p class="text-neutral text-sm">
+                  Simultaneous communication of price, speed, location, and target audience eliminates qualification friction.
+                  <a href="https://techsolutionsutrecht.nl/" class="citation-link">[75]</a>
+                </p>
+              </div>
+
+              <div class="bg-white p-6 rounded-xl">
+                <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                  <i class="fas fa-comments text-blue-600 text-xl"></i>
+                </div>
+                <h4 class="font-sans font-semibold text-lg text-secondary mb-3">Multiple Contact Channels</h4>
+                <p class="text-neutral text-sm">
+                  WhatsApp, email, form, and phone options accommodate diverse customer preferences and urgency levels.
+                  <a href="https://techsolutionsutrecht.nl/" class="citation-link">[75]</a>
+                </p>
+              </div>
+
+              <div class="bg-white p-6 rounded-xl">
+                <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
+                  <i class="fas fa-eye text-purple-600 text-xl"></i>
+                </div>
+                <h4 class="font-sans font-semibold text-lg text-secondary mb-3">Transparent Process</h4>
+                <p class="text-neutral text-sm">
+                  Timeline commitments, pricing principles, and operational transparency exceed typical new-business practice.
+                  <a href="https://techsolutionsutrecht.nl/" class="citation-link">[75]</a>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Concerns -->
+          <div class="bg-red-50 rounded-2xl p-8 mb-8 border border-red-200">
+            <h3 class="font-serif text-2xl font-bold text-secondary mb-6">
+              <i class="fas fa-exclamation-triangle text-red-600 mr-3"></i>
+              Concerns or Hesitations
+            </h3>
+
+            <div class="grid md:grid-cols-3 gap-6">
+              <div class="bg-white p-6 rounded-xl">
+                <div class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-4">
+                  <i class="fas fa-calendar-times text-red-600 text-xl"></i>
+                </div>
+                <h4 class="font-sans font-semibold text-lg text-secondary mb-3">New Business Indicators</h4>
+                <p class="text-neutral text-sm">
+                  2025 founding date creates fundamental credibility challenge requiring extensive customer verification.
+                  <a href="https://techsolutionsutrecht.nl/over-ons" class="citation-link">[77]</a>
+                </p>
+              </div>
+
+              <div class="bg-white p-6 rounded-xl">
+                <div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-4">
+                  <i class="fas fa-folder-minus text-orange-600 text-xl"></i>
+                </div>
+                <h4 class="font-sans font-semibold text-lg text-secondary mb-3">Limited Portfolio Depth</h4>
+                <p class="text-neutral text-sm">
+                  &#34;Binnenkort beschikbaar&#34; placeholders and single project demonstrations create evaluation friction.
+                  <a href="https://techsolutionsutrecht.nl/portfolio" class="citation-link">[32]</a>
+                </p>
+              </div>
+
+              <div class="bg-white p-6 rounded-xl">
+                <div class="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mb-4">
+                  <i class="fas fa-paint-brush text-yellow-600 text-xl"></i>
+                </div>
+                <h4 class="font-sans font-semibold text-lg text-secondary mb-3">Visual Design Gaps</h4>
+                <p class="text-neutral text-sm">
+                  Functional but forgettable design with consistency gaps and missed personal connection opportunities.
+                  <a href="https://techsolutionsutrecht.nl/portfolio" class="citation-link">[32]</a>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Deal-Breaker Analysis -->
+          <div class="bg-base-200 rounded-2xl p-8">
+            <h3 class="font-serif text-2xl font-bold text-secondary mb-6">
+              <i class="fas fa-balance-scale text-primary mr-3"></i>
+              Deal-Breaker Analysis &amp; Compensating Factors
+            </h3>
+
+            <div class="grid md:grid-cols-2 gap-8">
+              <div class="bg-white p-6 rounded-xl">
+                <h4 class="font-sans font-semibold text-lg text-secondary mb-4">Potential Deal-Breakers</h4>
+                <div class="space-y-3">
+                  <div class="flex items-start space-x-3">
+                    <div class="w-2 h-2 bg-red-500 rounded-full mt-2"></div>
+                    <div>
+                      <div class="font-medium text-secondary">2025 Founding Date</div>
+                      <div class="text-sm text-neutral">Minimal formal track record requires extensive verification</div>
+                    </div>
+                  </div>
+                  <div class="flex items-start space-x-3">
+                    <div class="w-2 h-2 bg-orange-500 rounded-full mt-2"></div>
+                    <div>
+                      <div class="font-medium text-secondary">Single-Person Operation</div>
+                      <div class="text-sm text-neutral">No continuity plan or scale capacity</div>
+                    </div>
+                  </div>
+                  <div class="flex items-start space-x-3">
+                    <div class="w-2 h-2 bg-yellow-500 rounded-full mt-2"></div>
+                    <div>
+                      <div class="font-medium text-secondary">Limited Portfolio</div>
+                      <div class="text-sm text-neutral">Insufficient depth for quality verification</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="bg-white p-6 rounded-xl">
+                <h4 class="font-sans font-semibold text-lg text-secondary mb-4">Compensating Factors</h4>
+                <div class="space-y-3">
+                  <div class="flex items-start space-x-3">
+                    <div class="w-2 h-2 bg-green-500 rounded-full mt-2"></div>
+                    <div>
+                      <div class="font-medium text-secondary">Exceptional Value Clarity</div>
+                      <div class="text-sm text-neutral">Immediate budget and timeline fit assessment</div>
+                    </div>
+                  </div>
+                  <div class="flex items-start space-x-3">
+                    <div class="w-2 h-2 bg-blue-500 rounded-full mt-2"></div>
+                    <div>
+                      <div class="font-medium text-secondary">WhatsApp Accessibility</div>
+                      <div class="text-sm text-neutral">Low-barrier, culturally appropriate communication</div>
+                    </div>
+                  </div>
+                  <div class="flex items-start space-x-3">
+                    <div class="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                    <div>
+                      <div class="font-medium text-secondary">Local Utrecht Presence</div>
+                      <div class="text-sm text-neutral">Physical accountability and verification potential</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final Analysis &amp; Recommendation -->
+    <section id="conclusion" class="py-16 bg-base-200">
+      <div class="container mx-auto px-6">
+        <div class="max-w-4xl mx-auto">
+          <header class="text-center mb-12">
+            <h2 class="font-serif text-4xl font-bold text-secondary mb-4">
+              Final Analysis &amp; Recommendation
+            </h2>
+            <p class="text-xl text-neutral font-light">
+              Comprehensive customer perspective assessment and hiring recommendation
+            </p>
+          </header>
+
+          <div class="bg-white rounded-2xl p-8 shadow-lg mb-8">
+            <div class="bg-gradient-to-r from-primary/10 to-secondary/10 rounded-xl p-6 mb-8">
+              <h3 class="font-serif text-2xl font-bold text-secondary mb-4">
+                <i class="fas fa-star text-primary mr-3"></i>
+                Final Determination: Conditional Consideration with Extensive Verification Required
+              </h3>
+              <p class="text-lg text-neutral leading-relaxed">
+                TechSolutionsUtrecht.nl presents a <strong>competent, customer-aware new business</strong> with genuine market positioning insight and operational discipline indicators. However, <strong>founding recency and scale limitations create trust gap</strong> requiring proactive customer verification.
+              </p>
+            </div>
+
+            <!-- Scenario-Based Recommendations -->
+            <div class="space-y-6 mb-8">
+              <h3 class="font-serif text-2xl font-bold text-secondary mb-4">Scenario-Based Recommendations</h3>
+
+              <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-green-50 p-6 rounded-xl border border-green-200">
+                  <h4 class="font-sans font-semibold text-lg text-secondary mb-3">
+                    <i class="fas fa-check-circle text-green-600 mr-2"></i>
+                    Proceed to Consultation
+                  </h4>
+                  <ul class="space-y-2 text-sm text-neutral">
+                    <li>• Simple website need with urgent timeline</li>
+                    <li>• Tight budget constraints (€250-500 range)</li>
+                    <li>• Tech repair with speed priority</li>
+                    <li>• Combined web + repair requirements</li>
+                  </ul>
+                </div>
+
+                <div class="bg-orange-50 p-6 rounded-xl border border-orange-200">
+                  <h4 class="font-sans font-semibold text-lg text-secondary mb-3">
+                    <i class="fas fa-exclamation-triangle text-orange-600 mr-2"></i>
+                    Seek Alternatives / Negotiate Extensively
+                  </h4>
+                  <ul class="space-y-2 text-sm text-neutral">
+                    <li>• Complex web applications</li>
+                    <li>• Ongoing maintenance requirements</li>
+                    <li>• Mission-critical business systems</li>
+                    <li>• Risk-averse organizational procurement</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- Required Pre-Hire Actions -->
+            <div class="bg-base-100 rounded-xl p-6">
+              <h3 class="font-serif text-xl font-bold text-secondary mb-4">
+                <i class="fas fa-list-check text-primary mr-3"></i>
+                Required Pre-Hire Actions
+              </h3>
+
+              <div class="grid md:grid-cols-2 gap-4">
+                <div class="space-y-3">
+                  <div class="flex items-start space-x-3">
+                    <span class="bg-primary text-white rounded-full w-6 h-6 flex items-center justify-center text-xs font-bold">1</span>
+                    <div class="text-sm">
+                      <strong>Request 3-5 specific client references</strong> with project scope and timeline verification
+                    </div>
+                  </div>
+                  <div class="flex items-start space-x-3">
+                    <span class="bg-primary text-white rounded-full w-6 h-6 flex items-center justify-center text-xs font-bold">2</span>
+                    <div class="text-sm">
+                      <strong>Confirm WordPress experience claims</strong> through platform contribution evidence
+                    </div>
+                  </div>
+                  <div class="flex items-start space-x-3">
+                    <span class="bg-primary text-white rounded-full w-6 h-6 flex items-center justify-center text-xs font-bold">3</span>
+                    <div class="text-sm">
+                      <strong>Negotiate milestone-based payment</strong> with substantial holdback until completion
+                    </div>
+                  </div>
+                </div>
+                <div class="space-y-3">
+                  <div class="flex items-start space-x-3">
+                    <span class="bg-primary text-white rounded-full w-6 h-6 flex items-center justify-center text-xs font-bold">4</span>
+                    <div class="text-sm">
+                      <strong>Document revision policy and support terms</strong> in written agreement
+                    </div>
+                  </div>
+                  <div class="flex items-start space-x-3">
+                    <span class="bg-primary text-white rounded-full w-6 h-6 flex items-center justify-center text-xs font-bold">5</span>
+                    <div class="text-sm">
+                      <strong>Verify physical presence</strong> through address confirmation and potential meeting
+                    </div>
+                  </div>
+                  <div class="flex items-start space-x-3">
+                    <span class="bg-primary text-white rounded-full w-6 h-6 flex items-center justify-center text-xs font-bold">6</span>
+                    <div class="text-sm">
+                      <strong>Test response time commitment</strong> with initial inquiry before project commitment
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Final Bottom Line -->
+          <div class="bg-gradient-to-r from-secondary to-primary text-white rounded-2xl p-8 text-center">
+            <h3 class="font-serif text-2xl font-bold mb-4">Bottom Line Assessment</h3>
+            <p class="text-lg leading-relaxed max-w-3xl mx-auto">
+              For <strong>appropriate risk tolerance and scope fit</strong>, TechSolutionsUtrecht represents a <strong>viable option with genuine value proposition</strong>. For <strong>conservative evaluation or complex requirements</strong>, <strong>established alternatives or extensive due diligence is advised</strong>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Scripts -->
+    <script>
+        // Initialize Vanta.js background
+        VANTA.NET({
+            el: "#vanta-bg",
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            minHeight: 200.00,
+            minWidth: 200.00,
+            scale: 1.00,
+            scaleMobile: 1.00,
+            color: 0x0f766e,
+            backgroundColor: 0xf9fafb,
+            points: 8.00,
+            maxDistance: 25.00,
+            spacing: 18.00
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Highlight active TOC item on scroll
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('section[id]');
+            const tocLinks = document.querySelectorAll('#toc a');
+            
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= sectionTop - 200) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            tocLinks.forEach(link => {
+                link.classList.remove('text-primary', 'font-semibold');
+                link.classList.add('text-neutral');
+                if (link.getAttribute('href') === '#' + current) {
+                    link.classList.remove('text-neutral');
+                    link.classList.add('text-primary', 'font-semibold');
+                }
+            });
+        });
+
+        // Add fade-in animation for sections
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            section.style.opacity = '0';
+            section.style.transform = 'translateY(20px)';
+            section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(section);
+        });
+    </script>
+  
+
+</body></html>

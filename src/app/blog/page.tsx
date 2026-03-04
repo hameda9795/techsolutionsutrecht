@@ -11,6 +11,14 @@ export const metadata: Metadata = {
 
 const posts = [
   {
+    slug: "website-niet-in-google",
+    title: "5 Redenen Waarom je Website Niet op Google Verschijnt",
+    excerpt: "Is je website niet zichtbaar in Google? Ontdek de 5 meest voorkomende redenen en los het binnen 30 minuten op.",
+    date: "4 maart 2025",
+    readTime: "8 min",
+    category: "SEO",
+  },
+  {
     slug: "wat-kost-een-website-laten-maken",
     title: "Wat Kost een Website Laten Maken in 2025? [Complete Gids]",
     excerpt: "Benieuwd wat een website kost? Bekijk prijzen voor WordPress, webshops en maatwerk. Inclusief bespaartips.",

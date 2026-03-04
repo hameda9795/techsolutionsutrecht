@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { localBusinessSchema, websiteSchema } from "@/lib/schema";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
+import Header from "@/components/Header";
 
 export const metadata: Metadata = {
   title: "Website Laten Maken Utrecht | Vanaf €250 | Binnen 1 Week",
@@ -10,14 +11,14 @@ export const metadata: Metadata = {
   authors: [{ name: "TechSolutionsUtrecht" }],
   icons: {
     icon: [
-      { url: '/images/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
-      { url: '/images/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+      { url: '/logo-icon.png', sizes: '32x32', type: 'image/png' },
+      { url: '/favicon.ico', sizes: '48x48' },
     ],
     apple: [
-      { url: '/images/favicon-180x180.png', sizes: '180x180', type: 'image/png' },
+      { url: '/logo-icon.png', sizes: '180x180', type: 'image/png' },
     ],
     other: [
-      { rel: 'icon', url: '/images/favicon-512x512.png', sizes: '512x512', type: 'image/png' },
+      { rel: 'icon', url: '/logo-icon.png', sizes: '192x192', type: 'image/png' },
     ],
   },
   openGraph: {
@@ -58,7 +59,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="nl" className="dark">
+    <html lang="nl">
       <head>
         <GoogleAnalytics />
         {/* Preload Google Fonts for better LCP */}
@@ -89,9 +90,11 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-screen">
-        {children}
+        <Header />
+        <main className="pt-24">
+          {children}
+        </main>
       </body>
     </html>
   );
 }
-
