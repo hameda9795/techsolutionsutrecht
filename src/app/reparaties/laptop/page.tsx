@@ -24,8 +24,21 @@ const brands = ["Apple", "Dell", "HP", "Lenovo", "Asus", "Acer", "MSI"];
 export default function LaptopRepairPage() {
   return (
     <>
-      <Header />
-      <main className="pt-32 pb-24">
+      
+        {/* Breadcrumb */}
+        <nav className="py-4 bg-[var(--bg-secondary)] border-b border-[var(--border)]">
+          <div className="container-custom">
+            <ol className="flex items-center gap-2 text-sm flex-wrap">
+              <li><Link href="/" className="text-[var(--text-muted)] hover:text-primary transition-colors">Home</Link></li>
+              <li className="text-[var(--text-muted)]">/</li>
+              <li><Link href="/reparaties" className="text-[var(--text-muted)] hover:text-primary transition-colors">Reparaties</Link></li>
+              <li className="text-[var(--text-muted)]">/</li>
+              <li><span className="text-[var(--text-primary)] font-medium capitalize">laptop</span></li>
+            </ol>
+          </div>
+        </nav>
+
+         className="pt-32 pb-24">
         <div className="container-custom">
           <nav className="text-sm text-[var(--text-muted)] mb-8">
             <Link href="/" className="hover:text-primary">Home</Link>

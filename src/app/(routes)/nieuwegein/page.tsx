@@ -100,8 +100,17 @@ export default function NieuwegeinPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
-      <Header />
       <main>
+        {/* Breadcrumb */}
+        <nav className="py-4 bg-[var(--bg-secondary)] border-b border-[var(--border)]">
+          <div className="container-custom">
+            <ol className="flex items-center gap-2 text-sm flex-wrap">
+              <li><Link href="/" className="text-[var(--text-muted)] hover:text-primary transition-colors">Home</Link></li>
+              <li className="text-[var(--text-muted)]">/</li>
+              <li><span className="text-[var(--text-primary)] font-medium capitalize">nieuwegein</span></li>
+            </ol>
+          </div>
+        </nav>
         {/* Hero Section */}
         <section className="pt-32 pb-20 bg-[var(--bg-primary)] relative overflow-hidden">
           <div className="absolute inset-0 hero-bg opacity-30" />

@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Breadcrumb from "@/components/Breadcrumb";
 import RepairDetail from "@/components/RepairDetail";
 import { Shield, Clock, Award, CheckCircle } from "lucide-react";
 
@@ -84,7 +85,8 @@ export default function ReparatiesPage() {
   return (
     <>
       <Header />
-      <main className="pt-32 pb-24">
+      <Breadcrumb items={[{ label: "Reparaties", href: "/reparaties" }]} />
+      <main className="pt-24 pb-24">
         <div className="container-custom">
           {/* Header */}
           <div className="text-center max-w-3xl mx-auto mb-12">

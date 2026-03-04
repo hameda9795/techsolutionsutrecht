@@ -46,9 +46,21 @@ const solutions = [
 export default function LaptopStartNietOpPage() {
   return (
     <>
-      <Header />
-      <main className="pt-32 pb-24">
-        <div className="container-custom">
+      <main className="pb-24">
+        {/* Breadcrumb */}
+        <nav className="py-4 bg-[var(--bg-secondary)] border-b border-[var(--border)]">
+          <div className="container-custom">
+            <ol className="flex items-center gap-2 text-sm flex-wrap">
+              <li><Link href="/" className="text-[var(--text-muted)] hover:text-primary transition-colors">Home</Link></li>
+              <li className="text-[var(--text-muted)]">/</li>
+              <li><Link href="/blog" className="text-[var(--text-muted)] hover:text-primary transition-colors">Blog</Link></li>
+              <li className="text-[var(--text-muted)]">/</li>
+              <li><span className="text-[var(--text-primary)] font-medium">Artikel</span></li>
+            </ol>
+          </div>
+        </nav>
+
+        <div className="container-custom pt-8">
           <div className="max-w-3xl mx-auto">
             {/* Back Link */}
             <Link 
