@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowRight, MapPin, Phone, Clock, CheckCircle, Star } from "lucide-react";
+import { ArrowRight, MapPin, Phone, CheckCircle } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "Website Laten Maken Houten | Vanaf €250 | TechSolutionsUtrecht",
-  description: "Website laten maken in Houten? Professionele WordPress websites vanaf €250. Snelle oplevering binnen 1 week. Ook laptop & telefoon reparatie. Gratis offerte!",
-  keywords: ["website laten maken houten", "webdesign houten", "wordpress houten", "goedkope website houten"],
+  description: "Laat je professionele website maken in Houten. 12+ jaar ervaring, moderne technologie, scherpe prijzen. WordPress, Next.js, SEO-geoptimaliseerd. Gratis offerte!",
+  keywords: ["website laten maken houten", "webdesign houten", "wordpress houten"],
   alternates: { canonical: "https://techsolutionsutrecht.nl/houten" },
 };
 
@@ -16,143 +16,87 @@ export default function HoutenPage() {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": "TechSolutionsUtrecht - Houten",
-    "description": "Website laten maken en tech reparaties in Houten",
+    "description": "Website laten maken in Houten door ervaren webdeveloper",
     "url": "https://techsolutionsutrecht.nl/houten",
     "telephone": "+31625518708",
     "address": { "@type": "PostalAddress", "addressLocality": "Houten", "addressRegion": "Utrecht", "addressCountry": "NL" },
-    "geo": { "@type": "GeoCoordinates", "latitude": "52.0286", "longitude": "5.1686" },
     "serviceArea": { "@type": "City", "name": "Houten" },
     "priceRange": "€€",
     "openingHours": "Mo-Fr 09:00-18:00"
   };
 
-  const services = [
-    { title: "WordPress Websites", price: "€250 - €800", description: "Professionele websites voor ZZP'ers en kleine bedrijven in Houten.", features: ["Responsive design", "SEO basis inclusief", "Zelf te beheren"], link: "/diensten/wordpress" },
-    { title: "WooCommerce Webshops", price: "€350 - €1.200", description: "Verkoop online met een professionele webshop.", features: ["iDEAL & creditcard", "Voorraadbeheer", "Verzendintegratie"], link: "/diensten/webshop" },
-    { title: "Tech Reparaties", price: "Vanaf €35", description: "Laptop, telefoon of tablet kapot? Snel en voordelig gerepareerd.", features: ["Scherm reparatie", "Batterij vervangen", "Waterschade"], link: "/reparaties" }
-  ];
-
-  const faqs = [
-    { q: "Wat kost een website laten maken in Houten?", a: "Onze WordPress websites beginnen vanaf €250. Dit is inclusief design, ontwikkeling, SEO-basis en oplevering." },
-    { q: "Hoe snel kan mijn website online zijn?", a: "Een standaard website is binnen 3-10 dagen online. Voor spoedgevallen hebben we een express-service." },
-    { q: "Kom je ook langs in Houten?", a: "Ja, we bedienen de hele regio Utrecht inclusief Houten. Afhankelijk van het project kunnen we langs komen of werken we op afstand." },
-    { q: "Is SEO inclusief bij de website?", a: "Ja, basis SEO-optimalisatie is standaard inclusief." },
-    { q: "Kan ik zelf mijn website beheren?", a: "Absoluut! We werken met WordPress, het meest gebruiksvriendelijke CMS." }
-  ];
-
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
-      <main>
-        {/* Breadcrumb */}
-        <nav className="py-4 bg-[var(--bg-secondary)] border-b border-[var(--border)]">
-          <div className="container-custom">
-            <ol className="flex items-center gap-2 text-sm flex-wrap">
-              <li><Link href="/" className="text-[var(--text-muted)] hover:text-primary transition-colors">Home</Link></li>
-              <li className="text-[var(--text-muted)]">/</li>
-              <li><span className="text-[var(--text-primary)] font-medium capitalize">houten</span></li>
+      <main className="pt-24 bg-white">
+        <nav className="py-4 bg-slate-50 border-b border-slate-200">
+          <div className="max-w-6xl mx-auto px-6">
+            <ol className="flex items-center gap-2 text-sm">
+              <li><Link href="/" className="text-slate-500 hover:text-[#0f766e]">Home</Link></li>
+              <li className="text-slate-400">/</li>
+              <li><span className="text-slate-900">Houten</span></li>
             </ol>
           </div>
         </nav>
-        <section className="pt-32 pb-20 bg-[var(--bg-primary)] relative overflow-hidden">
-          <div className="absolute inset-0 hero-bg opacity-30" />
-          <div className="container-custom relative z-10">
-            <div className="max-w-4xl mx-auto text-center">
-              <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium mb-6">
+
+        <section className="py-16 md:py-24">
+          <div className="max-w-6xl mx-auto px-6">
+            <div className="max-w-3xl">
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#0f766e]/10 text-[#0f766e] text-sm font-medium mb-6">
                 <MapPin className="w-4 h-4" />
-                <span>Houten & Omgeving</span>
+                Houten
               </div>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[var(--text-primary)] mb-6">
-                Website Laten Maken <span className="gradient-text">Houten</span>
+              
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
+                Website Laten Maken{" "}
+                <span className="bg-gradient-to-r from-[#0f766e] to-[#14b8a6] bg-clip-text text-transparent">Houten</span>
               </h1>
-              <p className="text-xl text-[var(--text-secondary)] mb-8 max-w-2xl mx-auto">
-                Professionele WordPress websites voor ondernemers in Houten. Vanaf <strong className="text-primary">€250</strong>, binnen <strong className="text-primary">1 week</strong> online.
+              
+              <p className="text-xl text-slate-600 mb-8">
+                Professionele webdevelopment services in Houten. Moderne websites, SEO-optimalisatie 
+                en persoonlijke service door een ervaren developer.
               </p>
-              <div className="flex flex-wrap justify-center gap-4 mb-8">
-                <div className="flex items-center gap-2 bg-[var(--bg-card)] px-4 py-2 rounded-full border border-[var(--border)]"><Star className="w-4 h-4 text-primary fill-primary" /><span className="text-sm">4.9/5 beoordeling</span></div>
-                <div className="flex items-center gap-2 bg-[var(--bg-card)] px-4 py-2 rounded-full border border-[var(--border)]"><CheckCircle className="w-4 h-4 text-green-500" /><span className="text-sm">20+ tevreden klanten</span></div>
-                <div className="flex items-center gap-2 bg-[var(--bg-card)] px-4 py-2 rounded-full border border-[var(--border)]"><Clock className="w-4 h-4 text-secondary" /><span className="text-sm">12+ jaar ervaring</span></div>
-              </div>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link href="/contact" className="btn-primary group">Gratis offerte aanvragen<ArrowRight className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1" /></Link>
-                <a href="https://wa.me/31625518708" target="_blank" rel="noopener noreferrer" className="btn-ghost"><Phone className="w-5 h-5 mr-2" />WhatsApp direct</a>
+              
+              <div className="flex flex-col sm:flex-row gap-4">
+                <a 
+                  href="https://wa.me/31625518708"
+                  className="inline-flex items-center justify-center gap-2 bg-[#25D366] text-white px-8 py-4 rounded-xl font-semibold hover:bg-[#128C7E]"
+                >
+                  <Phone className="w-5 h-5" />
+                  Gratis offerte
+                </a>
               </div>
             </div>
           </div>
         </section>
 
-        <section className="py-20 bg-[var(--bg-secondary)]">
-          <div className="container-custom">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-[var(--text-primary)] mb-4">Onze Diensten in Houten</h2>
-              <p className="text-[var(--text-secondary)] max-w-2xl mx-auto">Van eenvoudige websites tot complete webshops.</p>
-            </div>
+        <section className="py-16 bg-slate-50">
+          <div className="max-w-6xl mx-auto px-6">
+            <h2 className="text-3xl font-bold text-slate-900 mb-12 text-center">Waarom kiezen voor mij?</h2>
+            
             <div className="grid md:grid-cols-3 gap-8">
-              {services.map((service, index) => (
-                <div key={index} className="card-hover bg-[var(--bg-card)] rounded-xl p-6 border border-[var(--border)]">
-                  <h3 className="text-xl font-semibold text-[var(--text-primary)] mb-2">{service.title}</h3>
-                  <p className="text-primary font-bold text-lg mb-4">{service.price}</p>
-                  <p className="text-[var(--text-secondary)] mb-4">{service.description}</p>
-                  <ul className="space-y-2 mb-6">{service.features.map((feature, i) => (
-                    <li key={i} className="flex items-center gap-2 text-sm text-[var(--text-secondary)]"><CheckCircle className="w-4 h-4 text-green-500" />{feature}</li>
-                  ))}</ul>
-                  <Link href={service.link} className="btn-secondary w-full text-center">Meer info</Link>
+              <div className="bg-white p-6 rounded-2xl border border-slate-200">
+                <div className="w-12 h-12 bg-[#0f766e]/10 rounded-xl flex items-center justify-center mb-4">
+                  <CheckCircle className="w-6 h-6 text-[#0f766e]" />
                 </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section className="py-20 bg-[var(--bg-primary)]">
-          <div className="container-custom">
-            <div className="grid md:grid-cols-2 gap-12 items-center">
-              <div>
-                <h2 className="text-3xl md:text-4xl font-bold text-[var(--text-primary)] mb-6">Website Laten Maken in Houten</h2>
-                <p className="text-[var(--text-secondary)] mb-4">Houten is een van de snelst groeiende gemeenten van Nederland. Met wijken als Het Oude Dorp, De Kruidenbuurt, en De Akkers.</p>
-                <p className="text-[var(--text-secondary)] mb-6">Als tech-partner helpen wij ondernemers in Houten met een professionele online presence.</p>
-                <div className="flex flex-wrap gap-2">{["Het Oude Dorp", "De Kruidenbuurt", "De Akkers", "De Meerstede", "De Polder"].map((area) => (
-                  <span key={area} className="bg-[var(--bg-tertiary)] px-3 py-1 rounded-full text-sm text-[var(--text-secondary)]">{area}</span>
-                ))}</div>
+                <h3 className="text-xl font-bold text-slate-900 mb-2">Scherpe prijzen</h3>
+                <p className="text-slate-600">Vanaf €250 voor een professionele website. Geen dure overhead, wel premium kwaliteit.</p>
               </div>
-              <div className="bg-[var(--bg-card)] rounded-2xl p-8 border border-[var(--border)]">
-                <h3 className="text-xl font-semibold text-[var(--text-primary)] mb-4">Wij Bedienen Ook:</h3>
-                <ul className="space-y-3">{[
-                  { name: "Utrecht", link: "/utrecht" },
-                  { name: "Nieuwegein", link: "/nieuwegein" },
-                  { name: "De Meern", link: "/de-meern" },
-                  { name: "Vleuten", link: "/vleuten" },
-                  { name: "IJsselstein", link: "/ijsselstein" },
-                ].map((location) => (
-                  <li key={location.name}><Link href={location.link} className="flex items-center gap-2 text-[var(--text-secondary)] hover:text-primary transition-colors"><MapPin className="w-4 h-4" />Website laten maken {location.name}</Link></li>
-                ))}</ul>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section className="py-20 bg-[var(--bg-secondary)]">
-          <div className="container-custom">
-            <div className="max-w-3xl mx-auto">
-              <h2 className="text-3xl md:text-4xl font-bold text-[var(--text-primary)] text-center mb-12">Veelgestelde Vragen</h2>
-              <div className="space-y-6">{faqs.map((faq, index) => (
-                <div key={index} className="bg-[var(--bg-card)] rounded-xl p-6 border border-[var(--border)]">
-                  <h3 className="font-semibold text-[var(--text-primary)] mb-2">{faq.q}</h3>
-                  <p className="text-[var(--text-secondary)]">{faq.a}</p>
+              
+              <div className="bg-white p-6 rounded-2xl border border-slate-200">
+                <div className="w-12 h-12 bg-[#0f766e]/10 rounded-xl flex items-center justify-center mb-4">
+                  <CheckCircle className="w-6 h-6 text-[#0f766e]" />
                 </div>
-              ))}</div>
-            </div>
-          </div>
-        </section>
-
-        <section className="py-24 bg-[var(--bg-primary)] relative overflow-hidden">
-          <div className="absolute inset-0 hero-bg opacity-30" />
-          <div className="container-custom relative z-10">
-            <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-3xl md:text-4xl font-bold text-[var(--text-primary)] mb-4">Klaar voor Jouw Nieuwe Website in Houten?</h2>
-              <p className="text-xl text-[var(--text-secondary)] mb-8">Vraag een gratis offerte aan. Binnen 4 uur reactie.</p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link href="/contact" className="btn-primary group">Start je project<ArrowRight className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1" /></Link>
-                <a href="https://wa.me/31625518708" target="_blank" rel="noopener noreferrer" className="btn-ghost"><Phone className="w-5 h-5 mr-2" />WhatsApp: +31 6 25518708</a>
+                <h3 className="text-xl font-bold text-slate-900 mb-2">Snelle oplevering</h3>
+                <p className="text-slate-600">Binnen 1 week online. Moderne tools maken het verschil.</p>
+              </div>
+              
+              <div className="bg-white p-6 rounded-2xl border border-slate-200">
+                <div className="w-12 h-12 bg-[#0f766e]/10 rounded-xl flex items-center justify-center mb-4">
+                  <CheckCircle className="w-6 h-6 text-[#0f766e]" />
+                </div>
+                <h3 className="text-xl font-bold text-slate-900 mb-2">SEO geoptimaliseerd</h3>
+                <p className="text-slate-600">Technische SEO inclusief. Jouw website gevonden worden in Google.</p>
               </div>
             </div>
           </div>

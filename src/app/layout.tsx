@@ -6,7 +6,7 @@ import Header from "@/components/Header";
 
 export const metadata: Metadata = {
   title: "Website Laten Maken Utrecht | Vanaf €250 | Binnen 1 Week",
-  description: "Laat uw WordPress website maken in Utrecht tegen scherpe prijzen (vanaf €250). Snelle oplevering binnen 3-10 dagen. Betaalbaar, professioneel en snel. Gratis offerte!",
+  description: "Laat je professionele website maken in Utrecht. 12+ jaar ervaring, moderne technologie, scherpe prijzen. WordPress, Next.js, SEO-geoptimaliseerd. Gratis offerte!",
   keywords: ["goedkope wordpress website laten maken utrecht", "website laten maken binnen week", "snelle website laten maken", "zzp website laten maken goedkoop", "betaalbare website utrecht", "wordpress website goedkoop", "scherpe prijzen webdesign"],
   authors: [{ name: "TechSolutionsUtrecht" }],
   icons: {
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "Website Laten Maken Utrecht | Vanaf €250 | Binnen 1 Week",
-    description: "Laat uw WordPress website maken in Utrecht tegen scherpe prijzen (vanaf €250). Snelle oplevering binnen 3-10 dagen. Gratis offerte!",
+    description: "Laat je professionele website maken in Utrecht. 12+ jaar ervaring, moderne technologie, scherpe prijzen. Gratis offerte!",
     type: "website",
     locale: "nl_NL",
     url: "https://techsolutionsutrecht.nl",
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Website Laten Maken Utrecht | Vanaf €250 | Binnen 1 Week",
-    description: "Laat uw WordPress website maken in Utrecht tegen scherpe prijzen (vanaf €250). Snelle oplevering binnen 3-10 dagen.",
+    description: "Laat je professionele website maken in Utrecht. 12+ jaar ervaring, moderne technologie. Gratis offerte!",
   },
   alternates: {
     canonical: "https://techsolutionsutrecht.nl",
