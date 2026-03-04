@@ -10,7 +10,7 @@ const navLinks = [
   { href: "/diensten", label: "Diensten" },
   { href: "/portfolio", label: "Portfolio" },
   { href: "/blog", label: "Blog" },
-  { href: "/over-ons", label: "Over Ons" },
+  { href: "/over-ons", label: "Over mij" },
 ];
 
 export default function Header() {

@@ -12,7 +12,7 @@ const footerLinks = {
     { href: "/diensten/ai", label: "AI Integraties" },
   ],
   company: [
-    { href: "/over-ons", label: "Over Ons" },
+    { href: "/over-ons", label: "Over mij" },
     { href: "/portfolio", label: "Portfolio" },
     { href: "/blog", label: "Blog" },
     { href: "/veelgestelde-vragen", label: "FAQ" },
