@@ -91,7 +91,7 @@ export default function Hero() {
                 </div>
                 <div className="flex-1">
                   <p className="font-semibold text-slate-900 text-sm">Max</p>
-                  <p className="text-xs text-slate-500">Software Engineer</p>
+                  <p className="text-xs text-slate-500">Webdeveloper | IT-consultant</p>
                 </div>
                 <button 
                   onClick={() => setIsProfileOpen(true)}
@@ -121,7 +121,7 @@ export default function Hero() {
                   </div>
                   <div className="text-center">
                     <h3 className="font-bold text-slate-900 text-xl">Max</h3>
-                    <p className="text-sm text-slate-500">Software Engineer • Utrecht</p>
+                    <p className="text-sm text-slate-500">Webdeveloper | IT-consultant | SEO-specialist</p>
                   </div>
                 </div>
 
@@ -185,7 +185,7 @@ export default function Hero() {
                   </div>
                   <div>
                     <h3 className="text-2xl font-bold text-slate-900">Wie ben ik</h3>
-                    <p className="text-slate-500">Max • Software Engineer & Eigenaar</p>
+                    <p className="text-slate-500">Webdeveloper | IT-consultant | SEO-specialist</p>
                   </div>
                 </div>
                 <button 
@@ -200,7 +200,7 @@ export default function Hero() {
 
               <div className="prose prose-slate text-slate-600 max-w-none">
                 <p className="text-lg mb-4">
-                  Ik ben Max, software engineer en de persoon achter TechSolutionsUtrecht. 
+                  Ik ben Max, webdeveloper, IT-consultant en SEO-specialist - de persoon achter TechSolutionsUtrecht. 
                   Naast mijn studie wiskunde hier in Utrecht heb ik de afgelopen 12 jaar gewerkt aan websites en webapplicaties.
                 </p>
                 

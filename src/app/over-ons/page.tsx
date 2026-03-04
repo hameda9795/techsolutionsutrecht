@@ -28,7 +28,7 @@ const values = [
   {
     icon: Zap,
     title: "Snelle service",
-    description: "We respecteren je tijd. Website nodig? Binnen 2 weken online. Laptop kapot? Meestal binnen 24 uur gerepareerd.",
+    description: "We respecteren je tijd. Website nodig? Binnen 1 week online. Laptop kapot? Meestal binnen 24 uur gerepareerd.",
   },
 ];
 
