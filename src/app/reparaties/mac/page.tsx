@@ -38,7 +38,7 @@ export default function MacRepairPage() {
           </div>
         </nav>
 
-         className="pt-32 pb-24">
+         <main className="pt-32 pb-24">
         <div className="container-custom">
           <nav className="text-sm text-[var(--text-muted)] mb-8">
             <Link href="/" className="hover:text-primary">Home</Link>

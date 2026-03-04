@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Award, Heart, Users, Zap, CheckCircle } from "lucide-react";
@@ -53,7 +54,7 @@ export default function OverOnsPage() {
         </div>
       </nav>
 
-       className="pt-32 pb-24">
+       <main className="pt-32 pb-24">
         <div className="container-custom">
           {/* Header */}
           <div className="text-center max-w-3xl mx-auto mb-16">

@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ContactForm from "@/components/ContactForm";
+import Link from "next/link";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -55,6 +56,7 @@ const faqs = [
 export default function ContactPage() {
   return (
     <>
+      <Header />
       
       {/* Breadcrumb */}
       <nav className="py-4 bg-[var(--bg-secondary)] border-b border-[var(--border)]">
@@ -67,7 +69,7 @@ export default function ContactPage() {
         </div>
       </nav>
 
-       className="pt-32 pb-24">
+      <main className="pt-8 pb-24">
         <div className="container-custom">
           {/* Header */}
           <div className="text-center max-w-3xl mx-auto mb-16">
@@ -80,51 +82,52 @@ export default function ContactPage() {
               Op
             </h1>
             <p className="text-[var(--text-secondary)] text-lg">
-              Heb je een vraag? Wil je een offerte aanvragen? 
-              Of moet je tech gerepareerd worden? 
-              We reageren binnen 4 uur.
+              Heb je een vraag of wil je een offerte aanvragen? 
+              We helpen je graag. Vul het formulier in of neem direct contact op.
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-5 gap-12">
+          <div className="grid lg:grid-cols-3 gap-12">
             {/* Contact Info */}
-            <div className="lg:col-span-2 space-y-6">
+            <div className="lg:col-span-1 space-y-6">
               {contactInfo.map((item) => (
-                <div 
+                <div
                   key={item.label}
-                  className="flex items-start gap-4 p-4 bg-[var(--bg-card)] border border-[var(--border)] rounded-xl"
+                  className="card-hover bg-[var(--bg-card)] rounded-xl p-6 border border-[var(--border)]"
                 >
-                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
-                    <item.icon className="w-6 h-6 text-primary" />
-                  </div>
-                  <div>
-                    <div className="text-sm text-[var(--text-muted)] mb-1">{item.label}</div>
-                    {item.href ? (
-                      <a 
-                        href={item.href}
-                        target={item.isWhatsApp ? "_blank" : undefined}
-                        rel={item.isWhatsApp ? "noopener noreferrer" : undefined}
-                        className="text-[var(--text-primary)] font-medium hover:text-primary transition-colors"
-                      >
-                        {item.value}
-                      </a>
-                    ) : (
-                      <div className="text-[var(--text-primary)] font-medium">{item.value}</div>
-                    )}
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                      <item.icon className="w-6 h-6 text-primary" />
+                    </div>
+                    <div>
+                      <p className="text-[var(--text-muted)] text-sm mb-1">{item.label}</p>
+                      {item.href ? (
+                        <a
+                          href={item.href}
+                          target={item.isWhatsApp ? "_blank" : undefined}
+                          rel={item.isWhatsApp ? "noopener noreferrer" : undefined}
+                          className="text-[var(--text-primary)] font-semibold hover:text-primary transition-colors"
+                        >
+                          {item.value}
+                        </a>
+                      ) : (
+                        <p className="text-[var(--text-primary)] font-semibold">{item.value}</p>
+                      )}
+                    </div>
                   </div>
                 </div>
               ))}
 
-              {/* FAQs */}
-              <div className="mt-8 pt-8 border-t border-[var(--border)]">
-                <h3 className="font-semibold text-[var(--text-primary)] mb-4">
+              {/* FAQ */}
+              <div className="bg-[var(--bg-card)] rounded-xl p-6 border border-[var(--border)] mt-8">
+                <h3 className="text-xl font-bold text-[var(--text-primary)] mb-6">
                   Veelgestelde vragen
                 </h3>
                 <div className="space-y-4">
                   {faqs.map((faq) => (
                     <div key={faq.q}>
-                      <div className="font-medium text-[var(--text-primary)] mb-1">{faq.q}</div>
-                      <div className="text-sm text-[var(--text-secondary)]">{faq.a}</div>
+                      <p className="font-semibold text-[var(--text-primary)] mb-1">{faq.q}</p>
+                      <p className="text-[var(--text-secondary)] text-sm">{faq.a}</p>
                     </div>
                   ))}
                 </div>
@@ -132,8 +135,10 @@ export default function ContactPage() {
             </div>
 
             {/* Contact Form */}
-            <div className="lg:col-span-3">
-              <ContactForm />
+            <div className="lg:col-span-2">
+              <div className="card-hover bg-[var(--bg-card)] rounded-xl p-8 border border-[var(--border)]">
+                <ContactForm />
+              </div>
             </div>
           </div>
         </div>

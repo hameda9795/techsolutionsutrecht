@@ -39,6 +39,7 @@ const posts = [
 export default function BlogPage() {
   return (
     <>
+      <Header />
       
       {/* Breadcrumb */}
       <nav className="py-4 bg-[var(--bg-secondary)] border-b border-[var(--border)]">
@@ -51,67 +52,53 @@ export default function BlogPage() {
         </div>
       </nav>
 
-       className="pt-32 pb-24">
+      <main className="pt-8 pb-24">
         <div className="container-custom">
-          {/* Header */}
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <span className="text-primary font-semibold text-sm uppercase tracking-wider">
-              Blog
-            </span>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[var(--text-primary)] mt-4 mb-6">
-              Tips &{" "}
-              <span className="gradient-text">Nieuws</span>
-            </h1>
-            <p className="text-[var(--text-secondary)] text-lg">
-              Praktische tips over websites, SEO, tech reparaties en meer.
-            </p>
+          <div className="max-w-3xl mx-auto mb-16">
+            <div className="text-center">
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[var(--text-primary)] mb-6">
+                Tips & Nieuws
+              </h1>
+              <p className="text-[var(--text-secondary)] text-lg">
+                Praktische tips over websites, SEO, tech reparaties en meer.
+              </p>
+            </div>
           </div>
 
-          {/* Posts Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid gap-8 max-w-3xl mx-auto">
             {posts.map((post) => (
-              <Link
+              <article
                 key={post.slug}
-                href={`/blog/${post.slug}`}
-                className="group bg-[var(--bg-card)] border border-[var(--border)] rounded-2xl overflow-hidden transition-all duration-300 hover:border-primary hover:-translate-y-1"
+                className="card-hover bg-[var(--bg-card)] rounded-xl overflow-hidden border border-[var(--border)]"
               >
-                <div className="aspect-video bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center"
-                >
-                  <span className="text-4xl font-bold text-[var(--text-primary)]/20">
-                    {post.category[0]}
-                  </span>
-                </div>
-                
-                <div className="p-6">
-                  <div className="flex items-center gap-4 text-sm text-[var(--text-muted)] mb-3">
-                    <span className="px-3 py-1 bg-primary/10 text-primary rounded-full text-xs font-medium">
+                <Link href={`/blog/${post.slug}`} className="block p-6 md:p-8">
+                  <div className="flex items-center gap-4 mb-4">
+                    <span className="inline-block px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium">
                       {post.category}
                     </span>
-                    <div className="flex items-center gap-1">
-                      <Calendar className="w-4 h-4" />
-                      {post.date}
-                    </div>
-                    <div className="flex items-center gap-1">
-                      <Clock className="w-4 h-4" />
-                      {post.readTime}
+                    <div className="flex items-center gap-4 text-[var(--text-muted)] text-sm">
+                      <span className="flex items-center gap-1">
+                        <Calendar className="w-4 h-4" />
+                        {post.date}
+                      </span>
+                      <span className="flex items-center gap-1">
+                        <Clock className="w-4 h-4" />
+                        {post.readTime}
+                      </span>
                     </div>
                   </div>
-                  
-                  <h2 className="text-xl font-bold text-[var(--text-primary)] mb-3 group-hover:text-primary transition-colors">
+
+                  <h2 className="text-xl md:text-2xl font-bold text-[var(--text-primary)] mb-3 group-hover:text-primary transition-colors">
                     {post.title}
                   </h2>
-                  
-                  <p className="text-[var(--text-secondary)] text-sm mb-4">
-                    {post.excerpt}
-                  </p>
-                  
-                  <div className="flex items-center text-primary font-medium text-sm"
-                  >
-                    Lees meer
+                  <p className="text-[var(--text-secondary)] mb-4">{post.excerpt}</p>
+
+                  <div className="flex items-center text-primary font-medium">
+                    <span>Lees meer</span>
                     <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
                   </div>
-                </div>
-              </Link>
+                </Link>
+              </article>
             ))}
           </div>
         </div>
