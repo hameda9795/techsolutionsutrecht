@@ -26,7 +26,9 @@ import {
   Globe,
   Monitor,
   Settings,
-  Loader2
+  Loader2,
+  X,
+  Filter
 } from "lucide-react";
 import {
   getCategories,
@@ -88,6 +90,7 @@ export default function PortfolioContent() {
   const [allProjects, setAllProjects] = useState<Project[]>([]);
   const [categories, setCategories] = useState<CategoryData[]>([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   // Initialize data
   useEffect(() => {
@@ -217,11 +220,111 @@ export default function PortfolioContent() {
             </Link>
           </div>
 
-          {/* Main Layout */}
-          <div className="flex flex-col lg:flex-row gap-8">
+          {/* Main Layout - Mobile: Projects first, Desktop: Sidebar first */}
+          <div className="flex flex-col-reverse lg:flex-row gap-8">
             
-            {/* Left Sidebar */}
-            <aside className="lg:w-80 flex-shrink-0">
+            {/* Mobile Filter Button */}
+            <div className="lg:hidden fixed bottom-6 right-6 z-50">
+              <button
+                onClick={() => setIsMobileMenuOpen(true)}
+                className="flex items-center gap-2 px-4 py-3 bg-primary text-white rounded-full shadow-lg hover:bg-primary/90 transition-all"
+              >
+                <Filter className="w-5 h-5" />
+                <span className="font-medium">Categorieën</span>
+              </button>
+            </div>
+
+            {/* Mobile Menu Overlay */}
+            {isMobileMenuOpen && (
+              <div className="lg:hidden fixed inset-0 z-50">
+                <div 
+                  className="absolute inset-0 bg-black/50 backdrop-blur-sm"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                />
+                <div className="absolute right-0 top-0 bottom-0 w-80 max-w-[85vw] bg-[var(--bg-card)] shadow-2xl">
+                  <div className="flex items-center justify-between p-4 border-b border-[var(--border)]">
+                    <h2 className="text-lg font-bold text-[var(--text-primary)] flex items-center gap-2">
+                      <Building2 className="w-5 h-5 text-primary" />
+                      Categorieën
+                    </h2>
+                    <button
+                      onClick={() => setIsMobileMenuOpen(false)}
+                      className="p-2 hover:bg-[var(--bg-tertiary)] rounded-lg transition-colors"
+                    >
+                      <X className="w-5 h-5 text-[var(--text-secondary)]" />
+                    </button>
+                  </div>
+                  <div className="overflow-y-auto h-[calc(100vh-70px)]">
+                    {categories.map((category) => {
+                      const isExpanded = expandedCategories.includes(category.id);
+                      const isSelected = selectedCategory === category.id;
+                      const Icon = iconMap[category.icon] || Building2;
+
+                      return (
+                        <div key={category.id} className="border-b border-[var(--border)] last:border-b-0">
+                          <button
+                            onClick={() => handleCategoryClick(category.id)}
+                            className={`w-full text-left px-4 py-3 transition-all duration-200 flex items-center gap-3 ${
+                              isSelected
+                                ? "bg-primary/5 text-primary" 
+                                : "text-[var(--text-secondary)] hover:bg-[var(--bg-tertiary)]"
+                            }`}
+                          >
+                            <Icon className={`w-5 h-5 flex-shrink-0 ${isSelected ? "text-primary" : ""}`} />
+                            <span className="font-medium text-sm flex-1">{category.name}</span>
+                            <button
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                toggleCategory(category.id);
+                              }}
+                              className="p-1 hover:bg-[var(--bg-primary)] rounded transition-colors"
+                            >
+                              {isExpanded ? (
+                                <ChevronDown className="w-4 h-4" />
+                              ) : (
+                                <ChevronRight className="w-4 h-4" />
+                              )}
+                            </button>
+                          </button>
+
+                          {isExpanded && (
+                            <div className="bg-[var(--bg-tertiary)]">
+                              {category.subcategories.map((sub) => {
+                                const isSubSelected = selectedSubcategory === sub.name;
+                                const hasProjects = subcategoryHasProjects(category.id, sub.name);
+                                
+                                return (
+                                  <button
+                                    key={sub.slug}
+                                    onClick={() => {
+                                      handleSubcategoryClick(category.id, sub.name);
+                                      setIsMobileMenuOpen(false);
+                                    }}
+                                    className={`w-full text-left px-4 py-3 pl-12 transition-all duration-200 flex items-center justify-between text-sm border-l-2 ${
+                                      isSubSelected
+                                        ? "bg-primary/10 text-primary border-primary" 
+                                        : "text-[var(--text-muted)] hover:text-[var(--text-primary)] hover:bg-[var(--bg-secondary)] border-transparent"
+                                    }`}
+                                  >
+                                    <span>{sub.name}</span>
+                                    {hasProjects && (
+                                      <span className="w-2 h-2 rounded-full bg-green-500" title="Projecten beschikbaar" />
+                                    )}
+                                  </button>
+                                );
+                              })}
+                            </div>
+                          )}
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+              </div>
+            )}
+
+            {/* Left Sidebar - Desktop Only */}
+            <aside className="hidden lg:block lg:w-80 flex-shrink-0">
               <div className="bg-[var(--bg-card)] border border-[var(--border)] rounded-2xl overflow-hidden sticky top-28">
                 <div className="p-5 border-b border-[var(--border)]">
                   <h2 className="text-lg font-bold text-[var(--text-primary)] flex items-center gap-2">
@@ -295,12 +398,21 @@ export default function PortfolioContent() {
               </div>
             </aside>
 
-            {/* Right Content */}
+            {/* Right Content - Projects Section (First on mobile) */}
             <div className="flex-1">
+              {/* Mobile Selected Category Info */}
+              <div className="lg:hidden mb-6">
+                <div className="flex items-center gap-2 text-sm text-[var(--text-muted)] mb-3">
+                  <span>{getCategoryName(selectedCategory || "")}</span>
+                  <ChevronRight className="w-4 h-4" />
+                  <span className="text-primary font-medium">{selectedSubcategory}</span>
+                </div>
+              </div>
+
               {selectedSubcategory ? (
                 <div className="space-y-8">
-                  {/* Breadcrumb */}
-                  <div className="flex items-center gap-2 text-sm text-[var(--text-muted)]">
+                  {/* Breadcrumb - Desktop Only */}
+                  <div className="hidden lg:flex items-center gap-2 text-sm text-[var(--text-muted)]">
                     <Link href="/portfolio" className="hover:text-primary transition-colors">Portfolio</Link>
                     <ChevronRight className="w-4 h-4" />
                     <span>{getCategoryName(selectedCategory || "")}</span>
