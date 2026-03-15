@@ -106,9 +106,64 @@ const config: Config = {
           radial-gradient(ellipse at 50% 50%, rgba(0, 229, 255, 0.05) 0%, transparent 70%)
         `,
       },
+      typography: {
+        DEFAULT: {
+          css: {
+            maxWidth: 'none',
+            color: 'var(--text-secondary)',
+            h1: {
+              color: 'var(--text-primary)',
+            },
+            h2: {
+              color: 'var(--text-primary)',
+            },
+            h3: {
+              color: 'var(--text-primary)',
+            },
+            h4: {
+              color: 'var(--text-primary)',
+            },
+            strong: {
+              color: 'var(--text-primary)',
+            },
+            a: {
+              color: '#FF5722',
+              '&:hover': {
+                color: '#E64A19',
+              },
+            },
+            code: {
+              color: '#FF5722',
+              backgroundColor: 'var(--bg-secondary)',
+              padding: '0.25rem 0.5rem',
+              borderRadius: '0.25rem',
+              fontWeight: '400',
+            },
+            'code::before': {
+              content: '""',
+            },
+            'code::after': {
+              content: '""',
+            },
+            pre: {
+              backgroundColor: 'var(--bg-secondary)',
+              code: {
+                backgroundColor: 'transparent',
+                padding: '0',
+              },
+            },
+            blockquote: {
+              borderLeftColor: '#FF5722',
+              color: 'var(--text-secondary)',
+            },
+          },
+        },
+      },
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/typography'),
+  ],
 };
 
 export default config;

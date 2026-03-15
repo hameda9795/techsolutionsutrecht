@@ -1,8 +1,19 @@
 import type { MetadataRoute } from "next";
+import { getAllPosts } from "@/lib/blog";
 
 const baseUrl = "https://techsolutionsutrecht.nl";
 
 export default function sitemap(): MetadataRoute.Sitemap {
+  // Get all blog posts for dynamic sitemap
+  const blogPosts = getAllPosts();
+  
+  const blogPostEntries = blogPosts.map((post) => ({
+    url: `${baseUrl}/blog/${post.slug}`,
+    lastModified: new Date(post.date),
+    changeFrequency: "monthly" as const,
+    priority: 0.7,
+  }));
+
   return [
     {
       url: baseUrl,
@@ -172,6 +183,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly",
       priority: 0.8,
     },
+    // Dynamically generated blog posts
+    ...blogPostEntries,
+    // Legacy blog posts (keep for SEO)
     {
       url: `${baseUrl}/blog/wat-kost-een-website-laten-maken`,
       lastModified: new Date(),

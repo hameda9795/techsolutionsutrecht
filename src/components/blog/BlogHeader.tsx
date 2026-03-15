@@ -1,0 +1,50 @@
+'use client';
+
+import { Calendar, Clock, User } from 'lucide-react';
+import { formatDate } from '@/lib/blog-client';
+
+interface BlogHeaderProps {
+  title: string;
+  date: string;
+  readTime: string;
+  category: string;
+  author: string;
+}
+
+export default function BlogHeader({
+  title,
+  date,
+  readTime,
+  category,
+  author,
+}: BlogHeaderProps) {
+  return (
+    <header className="mb-12">
+      {/* Category */}
+      <span className="inline-block px-4 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium mb-6">
+        {category}
+      </span>
+
+      {/* Title */}
+      <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[var(--text-primary)] mb-6 leading-tight">
+        {title}
+      </h1>
+
+      {/* Meta */}
+      <div className="flex flex-wrap items-center gap-6 text-[var(--text-muted)] pb-8 border-b border-[var(--border)]">
+        <div className="flex items-center gap-2">
+          <User className="w-4 h-4" />
+          <span>{author}</span>
+        </div>
+        <div className="flex items-center gap-2">
+          <Calendar className="w-4 h-4" />
+          <time dateTime={date}>{formatDate(date)}</time>
+        </div>
+        <div className="flex items-center gap-2">
+          <Clock className="w-4 h-4" />
+          <span>{readTime} leestijd</span>
+        </div>
+      </div>
+    </header>
+  );
+}
