@@ -251,6 +251,24 @@
   ::-webkit-scrollbar-thumb:hover {
     background: var(--text-muted);
   }
+  
+  /* Custom scrollbar for table of contents */
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 4px;
+  }
+  
+  .scrollbar-thin::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background: var(--border);
+    border-radius: 2px;
+  }
+  
+  .scrollbar-thin::-webkit-scrollbar-thumb:hover {
+    background: var(--text-muted);
+  }
 }
 
 @layer utilities {

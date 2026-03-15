@@ -86,7 +86,7 @@ export const localBusinessSchema = {
   },
   "sameAs": [
     "https://facebook.com/techsolutionsutrecht",
-    "https://instagram.com/techsolutionsutrecht",
+    "https://www.instagram.com/techsolutionsutrecht/",
     "https://linkedin.com/company/techsolutionsutrecht"
   ]
 };

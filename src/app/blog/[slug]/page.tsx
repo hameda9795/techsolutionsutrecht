@@ -141,9 +141,9 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         </nav>
 
         <div className="container-custom pt-8">
-          <div className="grid lg:grid-cols-[1fr_300px] gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
             {/* Main Content */}
-            <div>
+            <div className="lg:col-span-8 xl:col-span-9">
               {/* Back Link */}
               <Link 
                 href="/blog"
@@ -162,6 +162,11 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                 author={post.author}
               />
 
+              {/* Mobile Table of Contents */}
+              <div className="lg:hidden mb-8">
+                <TableOfContents headings={tableOfContents} />
+              </div>
+
               {/* Share Buttons */}
               <div className="mb-8">
                 <ShareButtons title={post.title} url={canonicalUrl} />
@@ -179,9 +184,11 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               <RelatedPosts posts={relatedPosts} />
             </div>
 
-            {/* Sidebar */}
-            <aside className="hidden lg:block">
-              <TableOfContents headings={tableOfContents} />
+            {/* Sidebar - Desktop only */}
+            <aside className="hidden lg:block lg:col-span-4 xl:col-span-3">
+              <div className="sticky top-28">
+                <TableOfContents headings={tableOfContents} />
+              </div>
             </aside>
           </div>
         </div>

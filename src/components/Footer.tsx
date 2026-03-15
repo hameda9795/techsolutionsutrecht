@@ -25,9 +25,9 @@ const footerLinks = {
 };
 
 const socialLinks = [
-  { href: "https://facebook.com", icon: Facebook, label: "Facebook" },
-  { href: "https://instagram.com", icon: Instagram, label: "Instagram" },
-  { href: "https://linkedin.com", icon: Linkedin, label: "LinkedIn" },
+  { href: "https://facebook.com/techsolutionsutrecht", icon: Facebook, label: "Facebook" },
+  { href: "https://www.instagram.com/techsolutionsutrecht/", icon: Instagram, label: "Instagram" },
+  { href: "https://linkedin.com/company/techsolutionsutrecht", icon: Linkedin, label: "LinkedIn" },
 ];
 
 export default function Footer() {

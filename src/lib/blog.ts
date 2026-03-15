@@ -143,19 +143,22 @@ export function getAllCategories(): string[] {
 // Generate table of contents from markdown content
 export function generateTableOfContents(content: string): { id: string; text: string; level: number }[] {
   const headings: { id: string; text: string; level: number }[] = [];
-  const lines = content.split('\n');
   
-  for (const line of lines) {
-    const match = line.match(/^(#{2,3})\s+(.+)$/);
-    if (match) {
-      const level = match[1].length;
-      const text = match[2].trim();
-      const id = text
-        .toLowerCase()
-        .replace(/[^a-z0-9\s-]/g, '')
-        .replace(/\s+/g, '-');
-      headings.push({ id, text, level });
-    }
+  // Use multiline regex to match H2 and H3 headings (## and ###)
+  // The 'm' flag makes ^ and $ match start/end of each line
+  const headingRegex = /^(#{2,3})\s+(.+)$/gm;
+  let match;
+  
+  while ((match = headingRegex.exec(content)) !== null) {
+    const level = match[1].length;
+    const text = match[2].trim();
+    // Generate ID same way as in BlogContent component
+    const id = text
+      .toLowerCase()
+      .replace(/[^a-z0-9\s-]/g, '')
+      .replace(/\s+/g, '-')
+      .substring(0, 50);
+    headings.push({ id, text, level });
   }
   
   return headings;
