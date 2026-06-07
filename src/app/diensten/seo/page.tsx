@@ -3,11 +3,18 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Link from "next/link";
 import { TrendingUp, Check, ArrowRight } from "lucide-react";
+import { breadcrumbSchema } from "@/lib/schema";
+
+const breadcrumb = breadcrumbSchema([
+  { name: "Home", url: "https://techsolutionsutrecht.nl" },
+  { name: "Diensten", url: "https://techsolutionsutrecht.nl/diensten" },
+  { name: "SEO Specialist", url: "https://techsolutionsutrecht.nl/diensten/seo" },
+]);
 
 export const metadata: Metadata = {
-  title: "Goedkope SEO Optimalisatie Utrecht | Vanaf €200/maand | TechSolutionsUtrecht",
-  description: "Betaalbare SEO optimalisatie vanaf €200/maand. Hoger in Google tegen scherpe prijzen. Technische SEO, local SEO Utrecht. Gratis adviesgesprek!",
-  keywords: ["goedkope seo optimalisatie", "betaalbare seo utrecht", "voordelige seo", "lage prijs seo", "seo vanaf 200 euro"],
+  title: "SEO Specialist Utrecht | Hoger in Google | TechSolutions",
+  description: "Hoger in Google met technische SEO, content en lokale optimalisatie. Meetbare resultaten voor ondernemers in Utrecht en omgeving.",
+  alternates: { canonical: "https://techsolutionsutrecht.nl/diensten/seo" },
 };
 
 const features = [
@@ -22,7 +29,7 @@ const features = [
 export default function SEOPage() {
   return (
     <>
-      
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
         {/* Breadcrumb */}
         <nav className="py-4 bg-[var(--bg-secondary)] border-b border-[var(--border)]">
           <div className="container-custom">
@@ -53,7 +60,7 @@ export default function SEOPage() {
               </div>
               
               <h1 className="text-4xl sm:text-5xl font-bold text-[var(--text-primary)] mb-4">
-                Goedkope SEO{" "}
+                SEO{" "}
                 <span className="gradient-text">Optimalisatie</span>
               </h1>
 

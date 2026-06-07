@@ -6,7 +6,7 @@ readTime: "12 min"
 category: "Websites"
 image: "/images/blog/website-kosten.jpg"
 slug: "wat-kost-website-laten-maken"
-author: "TechSolutionsUtrecht"
+author: "Max"
 ---
 
 ## Introductie: Waarom Prijzen Zo Verschillen

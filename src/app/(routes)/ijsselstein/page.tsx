@@ -5,9 +5,8 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Website Laten Maken IJsselstein | Vanaf €250 | TechSolutionsUtrecht",
-  description: "Laat je professionele website maken in IJsselstein. 12+ jaar ervaring, moderne technologie, scherpe prijzen. WordPress, Next.js, SEO-geoptimaliseerd.",
-  keywords: ["website laten maken ijsselstein", "webdesign ijsselstein"],
+  title: "Website Laten Maken IJsselstein | Freelance Webdeveloper | TechSolutions",
+  description: "Professionele website laten maken in IJsselstein. Responsive, snel en SEO-klaar, met direct contact met de developer. WordPress en maatwerk. Vraag een offerte aan.",
   alternates: { canonical: "https://techsolutionsutrecht.nl/ijsselstein" },
 };
 

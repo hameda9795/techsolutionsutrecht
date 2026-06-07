@@ -6,7 +6,7 @@ readTime: "14 min"
 category: "AI & Automatisering"
 image: "/images/blog/ai-chatbot.jpg"
 slug: "ai-chatbot-implementeren"
-author: "TechSolutionsUtrecht"
+author: "Max"
 ---
 
 ## De Revolutie Die Nu plaatsvindt

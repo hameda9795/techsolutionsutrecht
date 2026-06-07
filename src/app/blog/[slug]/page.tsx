@@ -8,7 +8,7 @@ import {
   getRelatedPosts,
   generateTableOfContents 
 } from '@/lib/blog';
-import { articleSchema } from '@/lib/schema';
+import { articleSchema, breadcrumbSchema } from '@/lib/schema';
 import BlogHeader from '@/components/blog/BlogHeader';
 import BlogContent from '@/components/blog/BlogContent';
 import RelatedPosts from '@/components/blog/RelatedPosts';
@@ -95,8 +95,16 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     description: post.description,
     url: canonicalUrl,
     datePublished: post.date,
+    dateModified: post.date,
+    image: post.image,
     author: post.author,
   });
+
+  const breadcrumbJsonLd = breadcrumbSchema([
+    { name: "Home", url: "https://techsolutionsutrecht.nl" },
+    { name: "Blog", url: "https://techsolutionsutrecht.nl/blog" },
+    { name: post.title, url: canonicalUrl },
+  ]);
 
   return (
     <>
@@ -105,6 +113,12 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(jsonLd),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbJsonLd),
         }}
       />
       

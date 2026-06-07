@@ -1,5 +1,4 @@
 import { Metadata } from "next";
-import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ContactForm from "@/components/ContactForm";
 import Link from "next/link";
@@ -56,7 +55,6 @@ const faqs = [
 export default function ContactPage() {
   return (
     <>
-      <Header />
       
       {/* Breadcrumb */}
       <nav className="py-4 bg-[var(--bg-secondary)] border-b border-[var(--border)]">

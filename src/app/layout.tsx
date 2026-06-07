@@ -5,10 +5,10 @@ import GoogleAnalytics from "@/components/GoogleAnalytics";
 import Header from "@/components/Header";
 
 export const metadata: Metadata = {
-  title: "Website Laten Maken Utrecht | Vanaf €250 | Binnen 1 Week",
-  description: "Laat je professionele website maken in Utrecht. 12+ jaar ervaring, moderne technologie, scherpe prijzen. WordPress, Next.js, SEO-geoptimaliseerd. Gratis offerte!",
-  keywords: ["goedkope wordpress website laten maken utrecht", "website laten maken binnen week", "snelle website laten maken", "zzp website laten maken goedkoop", "betaalbare website utrecht", "wordpress website goedkoop", "scherpe prijzen webdesign"],
-  authors: [{ name: "TechSolutionsUtrecht" }],
+  metadataBase: new URL("https://techsolutionsutrecht.nl"),
+  title: "Website Laten Maken Utrecht | Professioneel & Snel | TechSolutionsUtrecht",
+  description: "Professionele website laten maken in Utrecht. Responsive, snel en SEO-klaar. Direct contact met de developer, binnen 1 week online. Vraag een offerte aan.",
+  authors: [{ name: "Max", url: "https://techsolutionsutrecht.nl/over-ons" }],
   icons: {
     icon: [
       { url: '/logo-icon.png', sizes: '32x32', type: 'image/png' },
@@ -22,8 +22,8 @@ export const metadata: Metadata = {
     ],
   },
   openGraph: {
-    title: "Website Laten Maken Utrecht | Vanaf €250 | Binnen 1 Week",
-    description: "Laat je professionele website maken in Utrecht. 12+ jaar ervaring, moderne technologie, scherpe prijzen. Gratis offerte!",
+    title: "Website Laten Maken Utrecht | Professioneel & Snel | TechSolutionsUtrecht",
+    description: "Professionele website laten maken in Utrecht. Responsive, snel en SEO-klaar. Direct contact met de developer. Vraag een offerte aan.",
     type: "website",
     locale: "nl_NL",
     url: "https://techsolutionsutrecht.nl",
@@ -31,8 +31,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Website Laten Maken Utrecht | Vanaf €250 | Binnen 1 Week",
-    description: "Laat je professionele website maken in Utrecht. 12+ jaar ervaring, moderne technologie. Gratis offerte!",
+    title: "Website Laten Maken Utrecht | Professioneel & Snel | TechSolutionsUtrecht",
+    description: "Professionele website laten maken in Utrecht. Responsive, snel en SEO-klaar. Direct contact met de developer.",
   },
   alternates: {
     canonical: "https://techsolutionsutrecht.nl",

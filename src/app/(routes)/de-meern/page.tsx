@@ -5,8 +5,8 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Website Laten Maken De Meern | Vanaf €250 | TechSolutionsUtrecht",
-  description: "Laat je professionele website maken in De Meern. 12+ jaar ervaring, moderne technologie, scherpe prijzen. WordPress, Next.js, SEO-geoptimaliseerd. Gratis offerte!",
+  title: "Website Laten Maken De Meern | Freelance Webdeveloper | TechSolutions",
+  description: "Professionele website laten maken in De Meern. Responsive, snel en SEO-klaar, met direct contact met de developer. WordPress en maatwerk. Vraag een offerte aan.",
   keywords: ["website laten maken de meern", "webdesign de meern", "wordpress de meern"],
   alternates: { canonical: "https://techsolutionsutrecht.nl/de-meern" },
 };

@@ -1,10 +1,11 @@
 export const localBusinessSchema = {
   "@context": "https://schema.org",
-  "@type": "LocalBusiness",
+  "@type": "ProfessionalService",
   "@id": "https://techsolutionsutrecht.nl",
   "name": "TechSolutionsUtrecht",
   "alternateName": "Tech Solutions Utrecht",
   "description": "Professionele websites en betrouwbare tech reparaties in Utrecht. 12+ jaar ervaring. Webdevelopment en hardware reparaties onder één dak.",
+  "image": "https://techsolutionsutrecht.nl/profile.webp",
   "url": "https://techsolutionsutrecht.nl",
   "telephone": "+31625518708",
   "email": "info@techsolutionsutrecht.nl",
@@ -19,32 +20,35 @@ export const localBusinessSchema = {
     "latitude": 52.0907,
     "longitude": 5.1214
   },
-  "areaServed": {
-    "@type": "City",
-    "name": "Utrecht",
-    "containedIn": "Netherlands"
-  },
+  "areaServed": [
+    { "@type": "City", "name": "Utrecht" },
+    { "@type": "City", "name": "Nieuwegein" },
+    { "@type": "City", "name": "Zeist" },
+    { "@type": "City", "name": "Houten" },
+    { "@type": "City", "name": "Amersfoort" },
+    { "@type": "City", "name": "IJsselstein" },
+    { "@type": "City", "name": "De Meern" },
+    { "@type": "City", "name": "Vleuten" }
+  ],
   "priceRange": "€€",
   "currenciesAccepted": "EUR",
   "paymentAccepted": "Cash, Credit Card, iDEAL",
-  "openingHours": [
-    "Mo-Fr 09:00-18:00"
-  ],
-  "foundingDate": "2025",
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+    "opens": "09:00",
+    "closes": "18:00"
+  },
   "founder": {
     "@type": "Person",
-    "name": "Max"
+    "name": "Max",
+    "jobTitle": "Webdeveloper",
+    "url": "https://techsolutionsutrecht.nl/over-ons"
   },
-  "numberOfEmployees": {
-    "@type": "QuantitativeValue",
-    "value": "1-10"
-  },
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4.9",
-    "reviewCount": "20",
-    "bestRating": "5",
-    "worstRating": "1"
+  "identifier": {
+    "@type": "PropertyValue",
+    "propertyID": "KvK",
+    "value": "99202301"
   },
   "hasOfferCatalog": {
     "@type": "OfferCatalog",
@@ -156,32 +160,53 @@ export const articleSchema = ({
   url,
   datePublished,
   dateModified,
-  author = "TechSolutionsUtrecht"
+  image,
+  author = "Max"
 }: {
   title: string;
   description: string;
   url: string;
   datePublished: string;
   dateModified?: string;
+  image?: string;
   author?: string;
 }) => ({
   "@context": "https://schema.org",
-  "@type": "Article",
+  "@type": "BlogPosting",
   "headline": title,
   "description": description,
   "url": url,
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": url
+  },
   "datePublished": datePublished,
   "dateModified": dateModified || datePublished,
+  ...(image ? { "image": image.startsWith("http") ? image : `https://techsolutionsutrecht.nl${image}` } : {}),
   "author": {
-    "@type": "Organization",
-    "name": author
+    "@type": "Person",
+    "name": author,
+    "url": "https://techsolutionsutrecht.nl/over-ons"
   },
   "publisher": {
     "@type": "Organization",
     "name": "TechSolutionsUtrecht",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://techsolutionsutrecht.nl/logo.png"
+      "url": "https://techsolutionsutrecht.nl/logo-icon.png"
     }
   }
+});
+
+export const faqPageSchema = (faqs: { question: string; answer: string }[]) => ({
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map((faq) => ({
+    "@type": "Question",
+    "name": faq.question,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": faq.answer
+    }
+  }))
 });

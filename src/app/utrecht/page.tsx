@@ -4,7 +4,7 @@ import { ArrowRight, MapPin, Phone, Clock, CheckCircle, Laptop, Globe, Wrench } 
 
 export const metadata: Metadata = {
   title: "Webdesign & Reparatie Utrecht | TechSolutionsUtrecht",
-  description: "Website laten maken in Utrecht vanaf €250. Laptop & computer reparatie in Utrecht. Dé tech partner in Utrecht en omgeving. Binnen 1 week online!",
+  description: "Website laten maken in Utrecht én laptop- en computerreparatie. Dé tech partner in Utrecht en omgeving. Professioneel, snel en binnen 1 week online!",
   keywords: [
     "website laten maken utrecht",
     "webdesign utrecht",

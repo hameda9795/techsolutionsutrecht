@@ -5,7 +5,7 @@ import { Quote, Star } from "lucide-react";
 const testimonials = [
   {
     quote:
-      "Mijn website staat nu op #1 in Google. Super service en het resultaat is echt top!",
+      "Binnen een week stond mijn nieuwe website online. Snelle communicatie en een resultaat waar ik trots op ben.",
     author: "Marie",
     location: "Utrecht",
     rating: 5,

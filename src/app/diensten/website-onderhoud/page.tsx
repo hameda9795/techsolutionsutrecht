@@ -3,11 +3,18 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Link from "next/link";
 import { Wrench, Check, ArrowRight, Shield, Clock } from "lucide-react";
+import { breadcrumbSchema } from "@/lib/schema";
+
+const breadcrumb = breadcrumbSchema([
+  { name: "Home", url: "https://techsolutionsutrecht.nl" },
+  { name: "Diensten", url: "https://techsolutionsutrecht.nl/diensten" },
+  { name: "Website Onderhoud", url: "https://techsolutionsutrecht.nl/diensten/website-onderhoud" },
+]);
 
 export const metadata: Metadata = {
-  title: "Goedkoop Website Onderhoud Utrecht | Vanaf €50/maand | TechSolutionsUtrecht",
-  description: "Voordelig website onderhoud vanaf €50/maand. Updates, beveiliging, backups. Betaalbaar en professioneel in Utrecht. Gratis consultatie!",
-  keywords: ["goedkoop website onderhoud", "voordelig website beheer", "betaalbare website onderhoud", "lage prijs onderhoud"],
+  title: "Website Onderhoud Utrecht | Updates, Beveiliging & Backups | TechSolutions",
+  description: "Zorgeloos website onderhoud in Utrecht: updates, beveiliging, dagelijkse backups en snelle support. Houd je WordPress-website veilig en up-to-date.",
+  alternates: { canonical: "https://techsolutionsutrecht.nl/diensten/website-onderhoud" },
 };
 
 const features = [
@@ -76,7 +83,7 @@ const packages = [
 export default function WebsiteOnderhoudPage() {
   return (
     <>
-      
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
         {/* Breadcrumb */}
         <nav className="py-4 bg-[var(--bg-secondary)] border-b border-[var(--border)]">
           <div className="container-custom">
@@ -107,7 +114,7 @@ export default function WebsiteOnderhoudPage() {
               </div>
               
               <h1 className="text-4xl sm:text-5xl font-bold text-[var(--text-primary)] mb-4">
-                Goedkoop Website{" "}
+                Website{" "}
                 <span className="gradient-text">Onderhoud</span>
               </h1>
               

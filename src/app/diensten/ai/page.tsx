@@ -2,11 +2,18 @@ import { Metadata } from "next";
 import Footer from "@/components/Footer";
 import Link from "next/link";
 import { Sparkles, Check, ArrowRight, Zap, Clock } from "lucide-react";
+import { breadcrumbSchema } from "@/lib/schema";
+
+const breadcrumb = breadcrumbSchema([
+  { name: "Home", url: "https://techsolutionsutrecht.nl" },
+  { name: "Diensten", url: "https://techsolutionsutrecht.nl/diensten" },
+  { name: "AI Integraties", url: "https://techsolutionsutrecht.nl/diensten/ai" },
+]);
 
 export const metadata: Metadata = {
-  title: "AI Integraties Laten Bouwen | Chatbots & Automatisering | Vanaf €500 | TechSolutionsUtrecht",
-  description: "Slimme AI-chatbots, automatisering en custom AI-oplossingen voor jouw bedrijf. Vanaf €500, professioneel geïntegreerd in je website of werkproces. Utrecht.",
-  keywords: ["AI integraties laten bouwen", "AI chatbot utrecht", "automatisering bedrijf", "custom AI oplossingen", "AI tools laten maken"],
+  title: "AI Integraties & Chatbots Laten Maken | TechSolutions",
+  description: "Slimme chatbots en AI-automatisering die tijd besparen. Laat een AI-oplossing op maat bouwen voor jouw bedrijf in Utrecht.",
+  alternates: { canonical: "https://techsolutionsutrecht.nl/diensten/ai" },
 };
 
 const features = [
@@ -21,7 +28,7 @@ const features = [
 export default function AiPage() {
   return (
     <>
-
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
         {/* Breadcrumb */}
         <nav className="py-4 bg-[var(--bg-secondary)] border-b border-[var(--border)]">
           <div className="container-custom">

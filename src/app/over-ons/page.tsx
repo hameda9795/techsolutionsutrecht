@@ -1,6 +1,5 @@
 import { Metadata } from "next";
 import Link from "next/link";
-import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Award, Users, Zap, TrendingUp, CheckCircle } from "lucide-react";
 
@@ -42,7 +41,6 @@ const certifications = [
 export default function OverMijPage() {
   return (
     <>
-      <Header />
       
       <main className="pt-24 pb-24 bg-white">
         <div className="max-w-6xl mx-auto px-6">

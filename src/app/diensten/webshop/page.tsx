@@ -3,11 +3,18 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Link from "next/link";
 import { ShoppingCart, Check, ArrowRight, Zap, Clock } from "lucide-react";
+import { breadcrumbSchema } from "@/lib/schema";
+
+const breadcrumb = breadcrumbSchema([
+  { name: "Home", url: "https://techsolutionsutrecht.nl" },
+  { name: "Diensten", url: "https://techsolutionsutrecht.nl/diensten" },
+  { name: "Webshop", url: "https://techsolutionsutrecht.nl/diensten/webshop" },
+]);
 
 export const metadata: Metadata = {
-  title: "Goedkoop Webshop Laten Maken Utrecht | Vanaf €350 | Snel Online | TechSolutionsUtrecht",
-  description: "Voordelige webshop laten maken vanaf €350. Snelle oplevering 5-12 dagen. WooCommerce webshop met iDEAL, betaalbaar en professioneel in Utrecht. Gratis offerte!",
-  keywords: ["goedkoop webshop laten maken", "voordelige webshop", "betaalbare webshop utrecht", "snelle webshop", "webshop binnen 1 week"],
+  title: "WooCommerce Webshop Laten Maken Utrecht | TechSolutions",
+  description: "Complete WooCommerce-webshop met iDEAL, voorraadbeheer en verzending. Klaar om te verkopen. Laat je webshop bouwen in Utrecht.",
+  alternates: { canonical: "https://techsolutionsutrecht.nl/diensten/webshop" },
 };
 
 const features = [
@@ -22,7 +29,7 @@ const features = [
 export default function WebshopPage() {
   return (
     <>
-      
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
         {/* Breadcrumb */}
         <nav className="py-4 bg-[var(--bg-secondary)] border-b border-[var(--border)]">
           <div className="container-custom">
@@ -53,7 +60,7 @@ export default function WebshopPage() {
               </div>
               
               <h1 className="text-4xl sm:text-5xl font-bold text-[var(--text-primary)] mb-4">
-                Goedkoop Webshop{" "}
+                Professionele Webshop{" "}
                 <span className="gradient-text">Laten Maken</span>
               </h1>
 
@@ -69,8 +76,8 @@ export default function WebshopPage() {
               </div>
               
               <p className="text-lg text-[var(--text-secondary)] mb-8">
-                <strong className="text-[var(--text-primary)]">Goedkoop webshop laten maken</strong> in Utrecht? 
-                Vanaf <strong className="text-primary">€350</strong> bouwen wij een complete WooCommerce webshop. 
+                <strong className="text-[var(--text-primary)]">Een webshop laten maken</strong> in Utrecht?
+                Ik bouw een complete WooCommerce webshop met iDEAL, voorraadbeheer en verzending — scherp geprijsd en klaar om te verkopen.
                 Met iDEAL-koppeling, voorraadbeheer en alles wat je nodig hebt om online te verkopen.
               </p>
 

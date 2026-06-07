@@ -1,5 +1,4 @@
 import { Metadata } from "next";
-import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Link from "next/link";
 
@@ -11,7 +10,6 @@ export const metadata: Metadata = {
 export default function PrivacyPage() {
   return (
     <>
-      <Header />
       <main className="pt-32 pb-24">
         <div className="container-custom max-w-3xl">
           <nav className="text-sm text-[var(--text-muted)] mb-8">

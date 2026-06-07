@@ -1,29 +1,9 @@
 "use client";
 
 import { ChevronDown } from "lucide-react";
+import { homeFaqs } from "@/lib/home-faqs";
 
-const faqs = [
-  {
-    question: "Wat kost een website laten maken in Utrecht?",
-    answer: "De kosten beginnen vanaf €250 voor een professionele WordPress website. Maatwerk webapplicaties beginnen vanaf €400. De prijs hangt af van de complexiteit en functionaliteiten. Ik werk efficiënt met moderne tools, waardoor je een premium website krijgt voor een scherpe prijs - zonder in te leveren op kwaliteit."
-  },
-  {
-    question: "Hoe snel kan mijn website online zijn?",
-    answer: "Dankzij moderne technologieën zoals Next.js en WordPress kan ik sneller werken dan traditionele bureaus. Een standaard website is binnen 1 week online. Voor complexere projecten denk aan 2-3 weken. Je hoeft niet maanden te wachten zoals bij andere bureaus."
-  },
-  {
-    question: "Waarom zijn jouw prijzen lager dan andere bureaus?",
-    answer: "Ik werk als freelancer zonder dure overhead (geen kantoor, geen personeel). Daarnaast gebruik ik moderne frameworks die development versnellen. De kwaliteit is hetzelfde - of beter - dan duurdere bureaus, maar je betaalt niet voor onnodige kosten."
-  },
-  {
-    question: "Is een website van €250 ook professioneel?",
-    answer: "Absoluut! Je krijgt een responsive website met SEO-optimalisatie, snelle laadtijden en professioneel design. De lage prijs komt door efficiëntie, niet door kwaliteitsverlies. Ik gebruik dezelfde technologieën die ook door grote agencies worden gebruikt."
-  },
-  {
-    question: "Wat is het verschil met andere webdesigners?",
-    answer: "Met 12+ jaar ervaring weet ik wat werkt. Je werkt direct met mij - geen accountmanagers, geen miscommunicatie. Daarnaast krijg je niet alleen een website, maar ook SEO-advies en technische optimalisatie. Resultaat: een website die écht klanten oplevert."
-  }
-];
+const faqs = homeFaqs;
 
 export default function HomeFAQ() {
   return (

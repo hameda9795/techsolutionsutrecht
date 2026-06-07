@@ -94,8 +94,8 @@ export default function WhyChooseUs() {
                   <div className="text-sm text-slate-500">Tevreden klanten</div>
                 </div>
                 <div className="text-center p-4 bg-white rounded-xl border border-slate-200">
-                  <div className="text-2xl font-bold text-[#0f766e]">#1</div>
-                  <div className="text-sm text-slate-500">Google ranking</div>
+                  <div className="text-2xl font-bold text-[#0f766e]">&lt; 1 week</div>
+                  <div className="text-sm text-slate-500">Gemiddelde oplevering</div>
                 </div>
               </div>
               

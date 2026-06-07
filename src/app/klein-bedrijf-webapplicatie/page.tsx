@@ -1,13 +1,12 @@
 import { Metadata } from "next";
-import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Link from "next/link";
 import { Code, Check, ArrowRight, Building, Lightbulb, Shield } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Webapplicatie Laten Bouwen Klein Bedrijf | Vanaf €400 | TechSolutionsUtrecht",
-  description: "Webapplicatie laten bouwen voor klein bedrijf? Betaalbare maatwerk oplossingen vanaf €400. Snel, schaalbaar en professioneel in Utrecht.",
-  keywords: ["webapplicatie laten bouwen klein bedrijf", "maatwerk webapplicatie mkb", "goedkope webapplicatie", "webapplicatie kleine onderneming", "betaalbare webapplicatie utrecht"],
+  title: "Webapplicatie Laten Bouwen voor Klein Bedrijf | React & Next.js | TechSolutions",
+  description: "Webapplicatie laten bouwen voor je kleine bedrijf of MKB? Schaalbaar maatwerk met React en Next.js, gebouwd door een ervaren developer in Utrecht. Vraag een offerte aan.",
+  alternates: { canonical: "https://techsolutionsutrecht.nl/klein-bedrijf-webapplicatie" },
 };
 
 const features = [
@@ -42,7 +41,6 @@ const benefits = [
 export default function KleinBedrijfWebapplicatiePage() {
   return (
     <>
-      <Header />
       <main className="pt-32 pb-24">
         <div className="container-custom">
           <nav className="text-sm text-[var(--text-muted)] mb-8">

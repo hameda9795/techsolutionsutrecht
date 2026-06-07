@@ -6,7 +6,7 @@ readTime: "10 min"
 category: "Websites"
 image: "/images/blog/diy-vs-professional.jpg"
 slug: "website-maken-of-laten-maken"
-author: "TechSolutionsUtrecht"
+author: "Max"
 ---
 
 ## De Dilemma Die Elke Ondernemer Kent

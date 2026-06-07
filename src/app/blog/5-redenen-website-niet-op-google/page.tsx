@@ -1,5 +1,4 @@
 import { Metadata } from "next";
-import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Link from "next/link";
 import { Calendar, Clock, ArrowRight, Search, AlertTriangle, FileText, Shield, Clock as ClockIcon, Link as LinkIcon } from "lucide-react";
@@ -44,7 +43,6 @@ export default function BlogPost() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
       
-      <Header />
 
       {/* Breadcrumb */}
       <nav className="py-4 bg-[var(--bg-secondary)] border-b border-[var(--border)]">

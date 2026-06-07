@@ -1,13 +1,12 @@
 import { Metadata } from "next";
-import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Link from "next/link";
 import { User, Check, ArrowRight, Euro, Clock, Star } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "ZZP Website Laten Maken Goedkoop | Vanaf €250 | Utrecht | TechSolutionsUtrecht",
-  description: "ZZP website laten maken goedkoop? Vanaf €250 een professionele website. Binnen 1 week online. Perfect voor startende ondernemers en ZZP'ers in Utrecht.",
-  keywords: ["zzp website laten maken goedkoop", "website zzp starter", "zzp website utrecht", "goedkope website zzp", "startende ondernemer website"],
+  title: "ZZP Website Laten Maken Utrecht | Snel & Persoonlijk | TechSolutions",
+  description: "ZZP website laten maken in Utrecht? Een professionele, betaalbare website binnen 1 week online. Direct contact met de developer. Ideaal voor starters en ZZP'ers.",
+  alternates: { canonical: "https://techsolutionsutrecht.nl/zzp-website-laten-maken" },
 };
 
 const features = [
@@ -40,7 +39,6 @@ const benefits = [
 export default function ZZPWebsitePage() {
   return (
     <>
-      <Header />
       <main className="pt-32 pb-24">
         <div className="container-custom">
           {/* Breadcrumb */}
@@ -58,13 +56,13 @@ export default function ZZPWebsitePage() {
               
               <h1 className="text-4xl sm:text-5xl font-bold text-[var(--text-primary)] mb-4">
                 ZZP Website{" "}
-                <span className="gradient-text">Laten Maken Goedkoop</span>
+                <span className="gradient-text">Laten Maken in Utrecht</span>
               </h1>
-              
+
               <p className="text-lg text-[var(--text-secondary)] mb-6">
-                <strong className="text-[var(--text-primary)]">ZZP website laten maken goedkoop?</strong> 
-                Vanaf <strong className="text-primary">€250</strong> een professionele website die uw 
-                bedrijf serieus neemt. Binnen <strong className="text-primary">1 week</strong> online. 
+                <strong className="text-[var(--text-primary)]">Een betaalbare, professionele website voor ZZP'ers.</strong>{" "}
+                Scherp geprijsd, binnen <strong className="text-primary">1 week</strong> online en met{" "}
+                <strong className="text-primary">direct contact met de developer</strong>.
                 Perfect voor <strong className="text-[var(--text-primary)]">startende ondernemers</strong> en ZZP'ers in Utrecht.
               </p>
 
@@ -128,7 +126,7 @@ export default function ZZPWebsitePage() {
           {/* Why ZZP */}
           <div className="bg-[var(--bg-card)] border border-[var(--border)] rounded-2xl p-8">
             <h2 className="text-2xl font-bold text-[var(--text-primary)] mb-6">
-              Waarom Kiezen voor een Goedkope ZZP Website?
+              Waarom Kiezen voor een Betaalbare ZZP Website?
             </h2>
             
             <div className="grid md:grid-cols-2 gap-6 text-[var(--text-secondary)]">
@@ -139,9 +137,9 @@ export default function ZZPWebsitePage() {
                   Toch heeft u een professionele online presentatie nodig om klanten te winnen.
                 </p>
                 <p>
-                  Daarom bieden wij <strong className="text-primary">goedkope websites voor ZZP'ers</strong>. 
-                  Vanaf €250 heeft u een complete website die er professioneel uitziet en goed werkt. 
-                  Geen watermerken, geen beperkingen — gewoon een goede website.
+                  Daarom bied ik <strong className="text-primary">scherp geprijsde websites voor ZZP'ers</strong>.
+                  Voor een eerlijke prijs krijgt u een complete website die er professioneel uitziet en goed werkt.
+                  Geen watermerken, geen beperkingen — gewoon een goede website, met direct contact met de developer.
                 </p>
               </div>
               

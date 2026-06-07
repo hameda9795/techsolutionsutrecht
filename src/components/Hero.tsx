@@ -35,9 +35,9 @@ export default function Hero() {
 
               {/* Subheadline */}
               <p className="text-lg md:text-xl text-slate-600 mb-6 leading-relaxed">
-                Professionele WordPress websites, webapplicaties en AI-oplossingen in Utrecht. Vanaf{" "}
-                <strong className="text-slate-900">€250</strong>, binnen{" "}
-                <strong className="text-slate-900">1 week</strong> online. SEO-geoptimaliseerd voor ZZP&apos;ers en startende ondernemers.
+                Professionele WordPress websites, webapplicaties en AI-oplossingen in Utrecht.{" "}
+                <strong className="text-slate-900">Op maat en transparant geprijsd</strong>, binnen{" "}
+                <strong className="text-slate-900">1 week</strong> online. Direct contact met de developer — SEO-klaar voor ZZP&apos;ers en ondernemers.
               </p>
 
               {/* Trust Badges - Replacing testimonials */}

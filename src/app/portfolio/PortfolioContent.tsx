@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
-import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Link from "next/link";
 import { 
@@ -193,7 +192,6 @@ export default function PortfolioContent() {
 
   return (
     <>
-      <Header />
       <main className="pt-24 pb-24 min-h-screen bg-[var(--bg-secondary)]">
         <div className="container-custom">
           {/* Header */}

@@ -1,5 +1,4 @@
 import { Metadata } from "next";
-import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Breadcrumb from "@/components/Breadcrumb";
 import RepairDetail from "@/components/RepairDetail";
@@ -84,7 +83,6 @@ const repairs = [
 export default function ReparatiesPage() {
   return (
     <>
-      <Header />
       <Breadcrumb items={[{ label: "Reparaties", href: "/reparaties" }]} />
       <main className="pt-24 pb-24">
         <div className="container-custom">

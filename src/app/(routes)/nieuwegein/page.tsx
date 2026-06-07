@@ -1,60 +1,47 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-import { MapPin, Phone, CheckCircle } from "lucide-react";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
+import CityPageLayout from "@/components/CityPageLayout";
 
 export const metadata: Metadata = {
-  title: "Website Laten Maken Nieuwegein | Vanaf €250 | TechSolutionsUtrecht",
-  description: "Laat je professionele website maken in Nieuwegein. 12+ jaar ervaring, moderne technologie, scherpe prijzen. WordPress, Next.js, SEO-geoptimaliseerd.",
-  keywords: ["website laten maken nieuwegein", "webdesign nieuwegein"],
+  title: "Website Laten Maken Nieuwegein | Freelance Webdeveloper | TechSolutions",
+  description: "Website laten maken in Nieuwegein? Een ervaren freelance webdeveloper bouwt je snelle, responsive en SEO-klare website. Direct contact met de developer. Vraag een offerte aan.",
   alternates: { canonical: "https://techsolutionsutrecht.nl/nieuwegein" },
 };
 
 export default function NieuwegeinPage() {
   return (
-    <>
-      <main className="pt-24 bg-white">
-        <nav className="py-4 bg-slate-50 border-b border-slate-200">
-          <div className="max-w-6xl mx-auto px-6">
-            <ol className="flex items-center gap-2 text-sm">
-              <li><Link href="/" className="text-slate-500 hover:text-[#0f766e]">Home</Link></li>
-              <li className="text-slate-400">/</li>
-              <li><span className="text-slate-900">Nieuwegein</span></li>
-            </ol>
-          </div>
-        </nav>
-
-        <section className="py-16 md:py-24">
-          <div className="max-w-6xl mx-auto px-6">
-            <div className="max-w-3xl">
-              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#0f766e]/10 text-[#0f766e] text-sm font-medium mb-6">
-                <MapPin className="w-4 h-4" />
-                Nieuwegein
-              </div>
-              
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
-                Website Laten Maken{" "}
-                <span className="bg-gradient-to-r from-[#0f766e] to-[#14b8a6] bg-clip-text text-transparent">Nieuwegein</span>
-              </h1>
-              
-              <p className="text-xl text-slate-600 mb-8">
-                Professionele webdevelopment in Nieuwegein. Websites die werken, 
-                SEO die resultaat oplevert, en persoonlijke service door Max.
-              </p>
-              
-              <a 
-                href="https://wa.me/31625518708"
-                className="inline-flex items-center justify-center gap-2 bg-[#25D366] text-white px-8 py-4 rounded-xl font-semibold hover:bg-[#128C7E]"
-              >
-                <Phone className="w-5 h-5" />
-                Gratis advies
-              </a>
-            </div>
-          </div>
-        </section>
-      </main>
-      <Footer />
-    </>
+    <CityPageLayout
+      city="Nieuwegein"
+      slug="nieuwegein"
+      intro={[
+        "Nieuwegein is een echte ondernemersstad: van de winkels en horeca rond City Plaza tot de talloze ZZP'ers en kleine bedrijven in Jutphaas, Galecop en Doorslag. Met Utrecht om de hoek is de concurrentie online stevig. Een professionele website die snel laadt en goed vindbaar is, helpt je om juist die klanten uit Nieuwegein zelf binnen te halen.",
+        "Ik bouw websites die bij Nieuwegeinse ondernemers passen: nuchter, duidelijk en gericht op resultaat. Geen overbodige toeters en bellen, maar een site die bezoekers omzet in aanvragen en klanten.",
+      ]}
+      neighbourhoods={["City Plaza en het stadscentrum", "Jutphaas", "Galecop", "Doorslag", "Fokkesteeg", "Batau"]}
+      whyLocal={[
+        "Een lokale developer begrijpt hoe klanten in Nieuwegein zoeken. Iemand die een kapper, hovenier of adviseur in de buurt zoekt, gebruikt andere zoekwoorden dan iemand in een grote stad. Daar stem ik je website en teksten op af.",
+        "Door de techniek netjes in te richten en lokale signalen correct te zetten, vergroot ik de kans dat je opvalt in de zoekresultaten voor Nieuwegein — gekoppeld aan je Google Bedrijfsprofiel voor extra zichtbaarheid op de kaart.",
+      ]}
+      approach={[
+        "Of je nu een presentatiewebsite, een webshop of een maatwerkoplossing zoekt: we kiezen samen wat het beste werkt voor jouw bedrijf in Nieuwegein.",
+        "We beginnen met een kort gesprek over je doelen, doelgroep en wensen.",
+        "Je krijgt een transparante offerte op maat — geen verborgen kosten.",
+        "Tijdens de bouw kijk je mee via previews zodat het resultaat precies klopt.",
+        "Na livegang blijf ik bereikbaar voor onderhoud, updates en SEO-advies.",
+      ]}
+      faqs={[
+        {
+          question: "Kom je ook langs in Nieuwegein?",
+          answer: "Voor een kennismaking kom ik graag naar Nieuwegein. Omdat ik in de regio Utrecht werk, zijn de lijnen kort. De rest van het traject regelen we efficiënt via WhatsApp, e-mail en videobellen.",
+        },
+        {
+          question: "Hoe snel staat mijn website in Nieuwegein online?",
+          answer: "Een standaard website is doorgaans binnen 1 week online. Voor een webshop of maatwerkproject reken je op 2 tot 3 weken, afhankelijk van de functionaliteiten.",
+        },
+        {
+          question: "Is SEO inbegrepen?",
+          answer: "Ja, technische SEO-optimalisatie is standaard inbegrepen. Daarnaast adviseer ik je over lokale SEO voor Nieuwegein, zodat je beter gevonden wordt door klanten uit je eigen omgeving.",
+        },
+      ]}
+    />
   );
 }

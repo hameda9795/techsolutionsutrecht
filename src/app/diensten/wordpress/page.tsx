@@ -1,13 +1,19 @@
 import { Metadata } from "next";
-import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Link from "next/link";
 import { Globe, Check, ArrowRight, Zap, Clock } from "lucide-react";
+import { breadcrumbSchema } from "@/lib/schema";
+
+const breadcrumb = breadcrumbSchema([
+  { name: "Home", url: "https://techsolutionsutrecht.nl" },
+  { name: "Diensten", url: "https://techsolutionsutrecht.nl/diensten" },
+  { name: "WordPress Website", url: "https://techsolutionsutrecht.nl/diensten/wordpress" },
+]);
 
 export const metadata: Metadata = {
-  title: "Goedkope WordPress Website Laten Maken Utrecht | €250 | Snel Online | TechSolutionsUtrecht",
-  description: "Goedkope WordPress website laten maken vanaf €250. Snelle oplevering binnen 3-10 dagen. Betaalbaar, professioneel en snel in Utrecht. Gratis offerte!",
-  keywords: ["goedkope wordpress website", "wordpress website laten maken", "betaalbare website utrecht", "snelle website laten maken", "website binnen 1 week"],
+  title: "WordPress Website Laten Maken Utrecht | TechSolutions",
+  description: "Professionele WordPress-website laten maken in Utrecht. Responsive, snel en SEO-klaar. Direct contact met de developer. Vraag een offerte aan.",
+  alternates: { canonical: "https://techsolutionsutrecht.nl/diensten/wordpress" },
 };
 
 const features = [
@@ -22,7 +28,7 @@ const features = [
 export default function WordPressPage() {
   return (
     <>
-      <Header />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
       <main className="pt-32 pb-24">
         <div className="container-custom">
           {/* Breadcrumb */}
@@ -42,7 +48,7 @@ export default function WordPressPage() {
               </div>
               
               <h1 className="text-4xl sm:text-5xl font-bold text-[var(--text-primary)] mb-4">
-                Goedkope WordPress Website{" "}
+                Professionele WordPress Website{" "}
                 <span className="gradient-text">Laten Maken</span>
               </h1>
 
@@ -59,9 +65,9 @@ export default function WordPressPage() {
               </div>
               
               <p className="text-lg text-[var(--text-secondary)] mb-8">
-                Op zoek naar een <strong className="text-[var(--text-primary)]">goedkope website laten maken</strong> in Utrecht? 
-                Vanaf slechts <strong className="text-primary">€250</strong> bouwen wij een professionele 
-                WordPress website. Betaalbaar, snel en zonder concessies aan kwaliteit.
+                Op zoek naar een <strong className="text-[var(--text-primary)]">professionele WordPress website</strong> in Utrecht?
+                Ik bouw een snelle, responsive en SEO-klare website met{" "}
+                <strong className="text-primary">direct contact met de developer</strong>. Scherp geprijsd en zonder concessies aan kwaliteit.
               </p>
 
               <div className="grid sm:grid-cols-2 gap-3 mb-8">
@@ -102,7 +108,7 @@ export default function WordPressPage() {
           {/* SEO Content Block */}
           <div className="mt-20 p-8 bg-[var(--bg-card)] border border-[var(--border)] rounded-2xl">
             <h2 className="text-2xl font-bold text-[var(--text-primary)] mb-4">
-              Waarom Kiezen voor een Goedkope WordPress Website?
+              Waarom Kiezen voor een Professionele WordPress Website?
             </h2>
             <div className="grid md:grid-cols-2 gap-6 text-[var(--text-secondary)]">
               <div>

@@ -1,13 +1,12 @@
 import { Metadata } from "next";
-import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Link from "next/link";
 import { Zap, Check, ArrowRight, Clock, Rocket, Target } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Website Laten Maken Binnen 1 Week | Express Service | TechSolutionsUtrecht",
-  description: "Website laten maken binnen 1 week? Express service mogelijk. Snelle oplevering 3-10 dagen. WordPress website goedkoop en snel in Utrecht.",
-  keywords: ["website laten maken binnen week", "snelle website laten maken", "express website", "website binnen 1 week online", "snelle oplevering website"],
+  title: "Website Laten Maken Binnen 1 Week | Express Service | TechSolutions",
+  description: "Website laten maken binnen 1 week? Express service met snelle oplevering in 3-10 dagen. Professioneel, SEO-klaar en met direct contact met de developer in Utrecht.",
+  alternates: { canonical: "https://techsolutionsutrecht.nl/website-binnen-week" },
 };
 
 const timeline = [
@@ -50,7 +49,6 @@ const features = [
 export default function WebsiteBinnenWeekPage() {
   return (
     <>
-      <Header />
       <main className="pt-32 pb-24">
         <div className="container-custom">
           <nav className="text-sm text-[var(--text-muted)] mb-8">

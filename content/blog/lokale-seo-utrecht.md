@@ -6,7 +6,7 @@ readTime: "12 min"
 category: "SEO"
 image: "/images/blog/lokale-seo.jpg"
 slug: "lokale-seo-utrecht"
-author: "TechSolutionsUtrecht"
+author: "Max"
 ---
 
 ## Waarom Lokale SEO Belangrijker is Dan Ooit

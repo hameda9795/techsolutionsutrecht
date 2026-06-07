@@ -3,11 +3,18 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Link from "next/link";
 import { Code, Check, ArrowRight, Zap, Clock } from "lucide-react";
+import { breadcrumbSchema } from "@/lib/schema";
+
+const breadcrumb = breadcrumbSchema([
+  { name: "Home", url: "https://techsolutionsutrecht.nl" },
+  { name: "Diensten", url: "https://techsolutionsutrecht.nl/diensten" },
+  { name: "Maatwerk Webapplicaties", url: "https://techsolutionsutrecht.nl/diensten/maatwerk" },
+]);
 
 export const metadata: Metadata = {
-  title: "Goedkope Maatwerk Webapplicatie Laten Bouwen | Vanaf €400 | Snel | TechSolutionsUtrecht",
-  description: "Betaalbare maatwerk webapplicatie laten bouwen vanaf €400. Snelle oplevering 5-12 dagen. Next.js, React, professioneel en voordelig in Utrecht.",
-  keywords: ["goedkope maatwerk website", "betaalbare webapplicatie", "snelle webontwikkeling", "maatwerk website goedkoop", "express webapplicatie"],
+  title: "Maatwerk Webapplicaties Laten Maken | React & Next.js",
+  description: "Complexe webapplicaties, dashboards en portals op maat. Gebouwd met React, Next.js en Angular door een ervaren developer in Utrecht.",
+  alternates: { canonical: "https://techsolutionsutrecht.nl/diensten/maatwerk" },
 };
 
 const features = [
@@ -22,7 +29,7 @@ const features = [
 export default function MaatwerkPage() {
   return (
     <>
-      
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
         {/* Breadcrumb */}
         <nav className="py-4 bg-[var(--bg-secondary)] border-b border-[var(--border)]">
           <div className="container-custom">
@@ -69,8 +76,8 @@ export default function MaatwerkPage() {
               </div>
               
               <p className="text-lg text-[var(--text-secondary)] mb-8">
-                <strong className="text-[var(--text-primary)]">Goedkope maatwerk webapplicatie</strong> laten bouwen? 
-                Vanaf <strong className="text-primary">€400</strong> bouwen wij custom webapplicaties met moderne technologie. 
+                <strong className="text-[var(--text-primary)]">Een maatwerk webapplicatie</strong> laten bouwen?
+                Ik bouw custom webapplicaties, dashboards en portals met moderne technologie zoals React en Next.js — scherp geprijsd en schaalbaar.
                 Snel, betaalbaar en professioneel.
               </p>
 

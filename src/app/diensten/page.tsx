@@ -1,5 +1,4 @@
 import { Metadata } from "next";
-import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Breadcrumb from "@/components/Breadcrumb";
 
@@ -95,7 +94,6 @@ const services = [
 export default function DienstenPage() {
   return (
     <>
-      <Header />
       <Breadcrumb items={[{ label: "Diensten", href: "/diensten" }]} />
       
       <main className="pt-24 pb-24 bg-white">

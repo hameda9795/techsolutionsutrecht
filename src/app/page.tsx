@@ -4,10 +4,17 @@ import Services from "@/components/Services";
 import WhyChooseUs from "@/components/WhyChooseUs";
 import CTA from "@/components/CTA";
 import HomeFAQ from "@/components/HomeFAQ";
+import { homeFaqs } from "@/lib/home-faqs";
+import { faqPageSchema } from "@/lib/schema";
 
 export default function Home() {
+  const faqJsonLd = faqPageSchema(homeFaqs);
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
       <main>
         <Hero />
         <Services />
