@@ -10,6 +10,12 @@ const footerLinks = {
     { href: "/diensten/maatwerk", label: "Maatwerk Development" },
     { href: "/diensten/seo", label: "SEO Optimalisatie" },
     { href: "/diensten/ai", label: "AI Integraties" },
+    { href: "/zzp-website-laten-maken", label: "Website voor ZZP'ers" },
+  ],
+  branches: [
+    { href: "/website-laten-maken-kapper", label: "Kappers" },
+    { href: "/website-laten-maken-restaurant", label: "Restaurants" },
+    { href: "/website-laten-maken-coach", label: "Coaches" },
   ],
   company: [
     { href: "/over-ons", label: "Over mij" },
@@ -21,6 +27,16 @@ const footerLinks = {
   legal: [
     { href: "/privacy", label: "Privacy Policy" },
     { href: "#", label: "KvK: 99202301" },
+  ],
+  regio: [
+    { href: "/utrecht", label: "Utrecht" },
+    { href: "/nieuwegein", label: "Nieuwegein" },
+    { href: "/zeist", label: "Zeist" },
+    { href: "/houten", label: "Houten" },
+    { href: "/amersfoort", label: "Amersfoort" },
+    { href: "/ijsselstein", label: "IJsselstein" },
+    { href: "/de-meern", label: "De Meern" },
+    { href: "/vleuten", label: "Vleuten" },
   ],
 };
 
@@ -137,6 +153,34 @@ export default function Footer() {
               ))}
             </ul>
           </div>
+        </div>
+
+        {/* Branches */}
+        <div className="pt-8 border-t border-slate-800 mb-6">
+          <h4 className="text-white font-medium mb-4">Website laten maken per branche</h4>
+          <ul className="flex flex-wrap gap-x-5 gap-y-2 text-sm">
+            {footerLinks.branches.map((link) => (
+              <li key={link.href}>
+                <Link href={link.href} className="hover:text-white transition-colors">
+                  Website voor {link.label.toLowerCase()}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {/* Regio / Steden */}
+        <div className="mb-8">
+          <h4 className="text-white font-medium mb-4">Website laten maken in de regio Utrecht</h4>
+          <ul className="flex flex-wrap gap-x-5 gap-y-2 text-sm">
+            {footerLinks.regio.map((link) => (
+              <li key={link.href}>
+                <Link href={link.href} className="hover:text-white transition-colors">
+                  Website laten maken {link.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
         </div>
 
         {/* Bottom Bar */}
