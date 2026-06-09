@@ -36,6 +36,13 @@ export default function DeMeernPage() {
         "Tijdens de bouw kijk je mee via previews, zodat ontwerp en teksten precies kloppen voordat we live gaan.",
         "Na livegang blijf ik bereikbaar voor onderhoud, updates en lokaal SEO-advies voor De Meern.",
       ]}
+      localHighlight={{
+        title: "De Meern: van dorp aan de Rijn tot ondernemershotspot",
+        content: [
+          "De Meern is in twintig jaar tijd getransformeerd van een rustig dorp aan de Leidsche Rijn tot een van de belangrijkste woon- en werkplekken aan de westkant van Utrecht. Met wijken als Veldhuizen, Rijnvliet en de Hoge Woerd, en bedrijventerreinen rond Oudenrijn en Strijkviertel, is De Meern een echte ondernemersgemeente geworden. Winkeliers aan de Meerndijk, zzp'ers in de nieuwbouwwijken en dienstverleners in het hele gebied hebben allemaal behoefte aan een sterke online aanwezigheid.",
+          "Als webdeveloper in de regio Utrecht ken ik De Meern goed. Ik weet dat ondernemers hier waarde hechten aan snelheid, helderheid en persoonlijk contact — precies wat ik lever. Of je nu een lokaal bedrijf hebt aan de Castellumlaan of vanuit huis werkt in Rijnvliet: ik bouw een website die jouw doelgroep in De Meern en Leidsche Rijn bereikt. Met lokale SEO zorg ik dat je gevonden wordt door klanten die echt in de buurt zijn.",
+        ],
+      }}
       faqs={[
         {
           question: "Werk je voor ondernemers in heel De Meern en Leidsche Rijn?",

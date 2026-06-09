@@ -20,6 +20,11 @@ export interface CityPageProps {
   /** Unique paragraphs about the way of working for this city */
   approach: string[];
   faqs: CityFaq[];
+  /** Optional city-specific highlight section for extra uniqueness */
+  localHighlight?: {
+    title: string;
+    content: string[];
+  };
 }
 
 const baseUrl = "https://techsolutionsutrecht.nl";
@@ -32,6 +37,7 @@ export default function CityPageLayout({
   whyLocal,
   approach,
   faqs,
+  localHighlight,
 }: CityPageProps) {
   const url = `${baseUrl}/${slug}`;
 
@@ -135,6 +141,20 @@ export default function CityPageLayout({
             </div>
           </div>
         </section>
+
+        {/* Local highlight — unique per city */}
+        {localHighlight && (
+          <section className="py-16 bg-slate-50 border-y border-slate-200">
+            <div className="max-w-6xl mx-auto px-6">
+              <h2 className="text-3xl font-bold text-slate-900 mb-6">{localHighlight.title}</h2>
+              <div className="max-w-3xl">
+                {localHighlight.content.map((p, i) => (
+                  <p key={i} className="text-slate-600 mb-4 leading-relaxed">{p}</p>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
 
         {/* Why local */}
         <section className="py-16">

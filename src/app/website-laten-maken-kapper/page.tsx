@@ -5,6 +5,19 @@ export const metadata: Metadata = {
   title: "Website Laten Maken voor Kappers | Online Afspraken | TechSolutions",
   description: "Website laten maken voor je kapsalon? Een professionele site met online afsprakenmodule, prijzen en reviews. Meer boekingen, minder telefoontjes. Vraag een offerte aan.",
   alternates: { canonical: "https://techsolutionsutrecht.nl/website-laten-maken-kapper" },
+  openGraph: {
+    title: "Website Laten Maken voor Kappers | Online Afspraken | TechSolutions",
+    description: "Website laten maken voor je kapsalon? Een professionele site met online afsprakenmodule, prijzen en reviews. Meer boekingen, minder telefoontjes.",
+    type: "website",
+    locale: "nl_NL",
+    url: "https://techsolutionsutrecht.nl/website-laten-maken-kapper",
+    siteName: "TechSolutionsUtrecht",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Website Laten Maken voor Kappers | Online Afspraken | TechSolutions",
+    description: "Website laten maken voor je kapsalon? Een professionele site met online afsprakenmodule, prijzen en reviews. Meer boekingen, minder telefoontjes.",
+  },
 };
 
 export default function KapperPage() {

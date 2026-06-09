@@ -5,6 +5,19 @@ export const metadata: Metadata = {
   title: "Website Laten Maken voor Restaurants | Menu & Reserveren | TechSolutions",
   description: "Website laten maken voor je restaurant of café? Een smaakvolle site met online menukaart, reserveringen en route. Trek meer gasten aan. Vraag een offerte aan.",
   alternates: { canonical: "https://techsolutionsutrecht.nl/website-laten-maken-restaurant" },
+  openGraph: {
+    title: "Website Laten Maken voor Restaurants | Menu & Reserveren | TechSolutions",
+    description: "Website laten maken voor je restaurant of café? Een smaakvolle site met online menukaart, reserveringen en route. Trek meer gasten aan.",
+    type: "website",
+    locale: "nl_NL",
+    url: "https://techsolutionsutrecht.nl/website-laten-maken-restaurant",
+    siteName: "TechSolutionsUtrecht",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Website Laten Maken voor Restaurants | Menu & Reserveren | TechSolutions",
+    description: "Website laten maken voor je restaurant of café? Een smaakvolle site met online menukaart, reserveringen en route. Trek meer gasten aan.",
+  },
 };
 
 export default function RestaurantPage() {

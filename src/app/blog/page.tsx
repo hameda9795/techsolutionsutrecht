@@ -5,13 +5,13 @@ import BlogCard from "@/components/blog/BlogCard";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Blog | TechSolutionsUtrecht - Tips & Nieuws",
+  title: "Webdesign & SEO Blog voor Ondernemers in Utrecht | TechSolutionsUtrecht",
   description: "Praktische tips over websites, SEO, tech reparaties en meer. Lees onze laatste artikelen over webdesign, online marketing en technologie.",
   alternates: {
     canonical: "https://techsolutionsutrecht.nl/blog",
   },
   openGraph: {
-    title: "Blog | TechSolutionsUtrecht - Tips & Nieuws",
+    title: "Webdesign & SEO Blog voor Ondernemers in Utrecht | TechSolutionsUtrecht",
     description: "Praktische tips over websites, SEO, tech reparaties en meer. Lees onze laatste artikelen.",
     type: "website",
     locale: "nl_NL",
@@ -50,7 +50,7 @@ export default function BlogPage() {
           <div className="max-w-3xl mx-auto mb-16">
             <div className="text-center">
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[var(--text-primary)] mb-6">
-                Tips & Nieuws
+                Webdesign & SEO Blog voor Ondernemers in Utrecht
               </h1>
               <p className="text-[var(--text-secondary)] text-lg">
                 Praktische tips over websites, SEO, tech reparaties en meer. 

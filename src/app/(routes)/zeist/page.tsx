@@ -28,6 +28,13 @@ export default function ZeistPage() {
         "Ik bouw de website, jij krijgt tussentijds previews en kunt meekijken — geen verrassingen bij de oplevering.",
         "Na livegang blijf ik bereikbaar voor onderhoud, aanpassingen en SEO-advies.",
       ]}
+      localHighlight={{
+        title: "Zeist: groen, groeiend en vol ondernemerschap",
+        content: [
+          "Zeist staat bekend om zijn groene omgeving en rustige sfeer, maar de economie draait hier op volle toeren. Van de zelfstandige professionals rond de Slotlaan tot de coaches en therapeuten in Bosch en Duin, en van de hoveniers in Huis ter Heide tot de adviseurs in Den Dolder: Zeist heeft een rijk en gevarieerd ondernemerslandschap. Veel ondernemers hier werken op aanbeveling, maar een sterke online aanwezigheid wordt steeds crucialer.",
+          "Ik bouw websites die passen bij het karakter van Zeist: persoonlijk, betrouwbaar en met oog voor detail. Of je nu een praktijk runt in een van de groene wijken of een winkel hebt in het centrum: ik zorg dat je website vertrouwen wekt en lokaal goed vindbaar is. Met een correct ingericht Google Bedrijfsprofiel en lokale SEO richt ik je site zo in dat klanten uit Zeist en omgeving jou het eerst vinden.",
+        ],
+      }}
       faqs={[
         {
           question: "Werk je ook op locatie in Zeist?",

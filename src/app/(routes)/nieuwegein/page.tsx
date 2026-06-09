@@ -28,6 +28,13 @@ export default function NieuwegeinPage() {
         "Tijdens de bouw kijk je mee via previews zodat het resultaat precies klopt.",
         "Na livegang blijf ik bereikbaar voor onderhoud, updates en SEO-advies.",
       ]}
+      localHighlight={{
+        title: "Nieuwegein: een stad in beweging voor ondernemers",
+        content: [
+          "Nieuwegein is meer dan alleen een forenzenstad. Met City Plaza als commercieel hart en wijken als Jutphaas, Galecop en Doorslag heeft de stad een eigen, groeiende ondernemerscommunity. Van de zelfstandigen in het stadscentrum tot de techbedrijven en adviseurs in de nieuwere wijken: Nieuwegein heeft behoefte aan websites die net zo dynamisch zijn als de stad zelf.",
+          "Als webdeveloper werk ik regelmatig voor klanten in Nieuwegein en ken ik de lokale markt. Ik weet dat klanten hier waarde hechten aan persoonlijk contact, snelle service en heldere afspraken — precies wat ik lever. Of je nu een winkel hebt bij City Plaza, een praktijk in Jutphaas of een adviesbureau in Batau: ik zorg voor een website die aansluit bij jouw doelgroep in Nieuwegein.",
+        ],
+      }}
       faqs={[
         {
           question: "Kom je ook langs in Nieuwegein?",

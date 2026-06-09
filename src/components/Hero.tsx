@@ -27,9 +27,9 @@ export default function Hero() {
 
               {/* Main Headline */}
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 leading-tight mb-6 tracking-tight">
-                Websites die{" "}
+                Website Laten Maken Utrecht —{" "}
                 <span className="bg-gradient-to-r from-[#0f766e] to-[#14b8a6] bg-clip-text text-transparent">
-                  converteren
+                  Websites die Converteren
                 </span>
               </h1>
 

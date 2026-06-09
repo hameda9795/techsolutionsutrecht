@@ -5,6 +5,19 @@ export const metadata: Metadata = {
   title: "Website Laten Maken voor Coaches | Vertrouwen & Aanmeldingen | TechSolutions",
   description: "Website laten maken als coach of therapeut? Een persoonlijke site die vertrouwen wekt, je aanpak uitlegt en aanmeldingen oplevert. Vraag een offerte aan.",
   alternates: { canonical: "https://techsolutionsutrecht.nl/website-laten-maken-coach" },
+  openGraph: {
+    title: "Website Laten Maken voor Coaches | Vertrouwen & Aanmeldingen | TechSolutions",
+    description: "Website laten maken als coach of therapeut? Een persoonlijke site die vertrouwen wekt, je aanpak uitlegt en aanmeldingen oplevert.",
+    type: "website",
+    locale: "nl_NL",
+    url: "https://techsolutionsutrecht.nl/website-laten-maken-coach",
+    siteName: "TechSolutionsUtrecht",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Website Laten Maken voor Coaches | Vertrouwen & Aanmeldingen | TechSolutions",
+    description: "Website laten maken als coach of therapeut? Een persoonlijke site die vertrouwen wekt, je aanpak uitlegt en aanmeldingen oplevert.",
+  },
 };
 
 export default function CoachPage() {

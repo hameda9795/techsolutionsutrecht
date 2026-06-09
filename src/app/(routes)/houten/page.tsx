@@ -28,6 +28,13 @@ export default function HoutenPage() {
         "Je kijkt tijdens de bouw mee via previews, zodat het eindresultaat precies klopt.",
         "Na de lancering verzorg ik desgewenst onderhoud, updates en SEO-ondersteuning.",
       ]}
+      localHighlight={{
+        title: "Houten: groeiende gemeente met ondernemersambitie",
+        content: [
+          "Houten is de afgelopen jaren enorm gegroeid — van een dorpse gemeente tot een volwaardige stad met een bloeiende economie. Het Rond vormt het sociale en commerciële middelpunt, terwijl wijken als Houten-Zuid, De Slagen en Schonauwen vol zitten met ZZP'ers, start-ups en gezinnen die hun eigen bedrijf runnen. Die groei vraagt om websites die meeschalen.",
+          "Ik help ondernemers in Houten met webdesign dat past bij de no-nonsense cultuur van de stad: geen poespas, wel resultaat. Of je nu een lokale dienstverlener bent die klanten in Houten en omgeving wil bereiken, of een webshop hebt die verder wil groeien: ik bouw een site die technisch solide is en lokaal goed scoort. En omdat ik zelf in de regio werk, kan ik desgewenst snel ter plaatse zijn.",
+        ],
+      }}
       faqs={[
         {
           question: "Werk je ook voor kleine bedrijven en ZZP'ers in Houten?",

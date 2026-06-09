@@ -21,6 +21,12 @@ export const metadata: Metadata = {
     type: "website",
     locale: "nl_NL",
     url: "https://techsolutionsutrecht.nl/utrecht",
+    siteName: "TechSolutionsUtrecht",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Webdesign & Reparatie Utrecht | TechSolutionsUtrecht",
+    description: "Website laten maken in Utrecht vanaf €250. Laptop & computer reparatie in Utrecht. Dé tech partner in Utrecht en omgeving.",
   },
   alternates: {
     canonical: "https://techsolutionsutrecht.nl/utrecht",
@@ -225,6 +231,41 @@ export default function UtrechtPage() {
                 <span className="text-sm text-[var(--text-secondary)]">Utrecht {area}</span>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Local Business Context — Utrecht specific */}
+      <section className="section bg-[var(--bg-secondary)]">
+        <div className="container-custom">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-center">
+              Utrecht: een stad vol <span className="gradient-text">kansen voor ondernemers</span>
+            </h2>
+            <div className="space-y-4 text-[var(--text-secondary)] text-lg leading-relaxed">
+              <p>
+                Utrecht is niet voor niets één van de snelst groeiende steden van Nederland. 
+                Met zijn centrale ligging, het grootste studentenpopulatie van het land en een 
+                bloeiende startup-scene is de stad een magneet voor ondernemers. Van de creatieve 
+                ondernemers in Lombok en Dichterswijk tot de zakelijke dienstverleners in Kanaleneiland 
+                en de horeca in het centrum: elke wijk heeft zijn eigen karakter en zijn eigen publiek.
+              </p>
+              <p>
+                Als tech partner in Utrecht begrijp ik die diversiteit. Ik weet dat een website voor 
+                een café aan de Oudegracht een andere aanpak vraagt dan een zakelijke site voor een 
+                adviseur in De Uithof. Daarom bouw ik geen standaardtemplates, maar websites die 
+                aansluiten bij jouw doelgroep — of die nu zoekt vanuit Overvecht, Oudwijk of 
+                Voordorp. Met lokale SEO zorg ik dat je gevonden wordt door de mensen die écht 
+                in Utrecht wonen, werken en shoppen.
+              </p>
+              <p>
+                En omdat ik zelf in Utrecht gevestigd ben, zijn de lijnen kort. Geen anonieme 
+                helpdesks of externe freelancers, maar direct contact met de developer die aan 
+                je project werkt. Of je nu een nieuwe website nodig hebt, je bestaande site 
+                wilt laten optimaliseren, of je laptop snel gerepareerd wilt hebben: ik ben 
+                er voor de Utrechtse ondernemer.
+              </p>
+            </div>
           </div>
         </div>
       </section>

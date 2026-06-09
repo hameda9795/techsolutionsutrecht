@@ -1,11 +1,28 @@
 import { Metadata } from "next";
 import Footer from "@/components/Footer";
 import Breadcrumb from "@/components/Breadcrumb";
+import { breadcrumbSchema, serviceSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
-  title: "Website Laten Maken Utrecht | Professioneel & Snel | TechSolutionsUtrecht",
+  title: "Webdesign Diensten Utrecht | WordPress, SEO & Maatwerk | TechSolutionsUtrecht",
   description: "Laat je professionele website maken in Utrecht. 12+ jaar ervaring, moderne technologie (Next.js, WordPress), SEO-geoptimaliseerd. Vanaf €250. Gratis offerte!",
   keywords: ["website laten maken utrecht", "professionele website", "webdesign utrecht", "wordpress utrecht", "nextjs developer"],
+  openGraph: {
+    title: "Webdesign Diensten Utrecht | WordPress, SEO & Maatwerk | TechSolutionsUtrecht",
+    description: "Laat je professionele website maken in Utrecht. 12+ jaar ervaring, moderne technologie, SEO-geoptimaliseerd. Vanaf €250. Gratis offerte!",
+    type: "website",
+    locale: "nl_NL",
+    url: "https://techsolutionsutrecht.nl/diensten",
+    siteName: "TechSolutionsUtrecht",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Webdesign Diensten Utrecht | WordPress, SEO & Maatwerk | TechSolutionsUtrecht",
+    description: "Laat je professionele website maken in Utrecht. 12+ jaar ervaring, moderne technologie, SEO-geoptimaliseerd. Vanaf €250. Gratis offerte!",
+  },
+  alternates: {
+    canonical: "https://techsolutionsutrecht.nl/diensten",
+  },
 };
 
 const services = [
@@ -92,8 +109,21 @@ const services = [
 ];
 
 export default function DienstenPage() {
+  const breadcrumbJsonLd = breadcrumbSchema([
+    { name: "Home", url: "https://techsolutionsutrecht.nl" },
+    { name: "Diensten", url: "https://techsolutionsutrecht.nl/diensten" },
+  ]);
+
+  const webdesignService = serviceSchema({
+    name: "Webdesign Diensten Utrecht",
+    description: "Professionele websites, webshops en maatwerk applicaties in Utrecht. WordPress, Next.js en SEO-geoptimaliseerd.",
+    url: "https://techsolutionsutrecht.nl/diensten",
+  });
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webdesignService) }} />
       <Breadcrumb items={[{ label: "Diensten", href: "/diensten" }]} />
       
       <main className="pt-24 pb-24 bg-white">
@@ -104,8 +134,8 @@ export default function DienstenPage() {
               Diensten
             </span>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-900 mt-4 mb-6">
-              Jouw Online Succes{" "}
-              <span className="bg-gradient-to-r from-[#0f766e] to-[#14b8a6] bg-clip-text text-transparent">Begint Hier</span>
+              Professionele Webdesign{" "}
+              <span className="bg-gradient-to-r from-[#0f766e] to-[#14b8a6] bg-clip-text text-transparent">Diensten in Utrecht</span>
             </h1>
             <p className="text-slate-600 text-lg">
               Met 12+ jaar ervaring en moderne technologie bouw ik websites die werken. 

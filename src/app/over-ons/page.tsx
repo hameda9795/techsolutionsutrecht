@@ -1,11 +1,27 @@
 import { Metadata } from "next";
 import Link from "next/link";
 import Footer from "@/components/Footer";
-import { Award, Users, Zap, TrendingUp, CheckCircle } from "lucide-react";
+import { Award, Users, Zap, TrendingUp, CheckCircle, Linkedin } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Over Mij | TechSolutionsUtrecht - Webdeveloper & SEO Specialist",
-  description: "Leer Max kennen - een ervaren webdeveloper met 12+ jaar ervaring in Utrecht. Specialist in websites, webshops en SEO.",
+  title: "Over Max | TechSolutionsUtrecht - Webdeveloper & SEO Specialist Utrecht",
+  description: "Leer Max kennen - een ervaren webdeveloper met 12+ jaar ervaring in Utrecht. Specialist in websites, webshops en SEO. Bekijk zijn expertise en certificeringen.",
+  openGraph: {
+    title: "Over Max | TechSolutionsUtrecht - Webdeveloper & SEO Specialist Utrecht",
+    description: "Leer Max kennen - een ervaren webdeveloper met 12+ jaar ervaring in Utrecht. Specialist in websites, webshops en SEO.",
+    type: "profile",
+    locale: "nl_NL",
+    url: "https://techsolutionsutrecht.nl/over-ons",
+    siteName: "TechSolutionsUtrecht",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Over Max | TechSolutionsUtrecht - Webdeveloper & SEO Specialist Utrecht",
+    description: "Leer Max kennen - een ervaren webdeveloper met 12+ jaar ervaring in Utrecht. Specialist in websites, webshops en SEO.",
+  },
+  alternates: {
+    canonical: "https://techsolutionsutrecht.nl/over-ons",
+  },
 };
 
 const values = [
@@ -39,9 +55,48 @@ const certifications = [
 ];
 
 export default function OverMijPage() {
+  const personSchema = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Max",
+    "jobTitle": "Webdeveloper & SEO Specialist",
+    "url": "https://techsolutionsutrecht.nl/over-ons",
+    "image": "https://techsolutionsutrecht.nl/profile.webp",
+    "description": "Ervaren webdeveloper met 12+ jaar ervaring in Utrecht. Specialist in WordPress, Next.js, React, SEO en AI-integraties.",
+    "alumniOf": {
+      "@type": "EducationalOrganization",
+      "name": "Universiteit Utrecht",
+      "description": "Studie wiskunde"
+    },
+    "worksFor": {
+      "@type": "Organization",
+      "name": "TechSolutionsUtrecht",
+      "url": "https://techsolutionsutrecht.nl"
+    },
+    "sameAs": [
+      "https://linkedin.com/company/techsolutionsutrecht",
+      "https://www.instagram.com/techsolutionsutrecht/",
+      "https://facebook.com/techsolutionsutrecht"
+    ],
+    "knowsAbout": [
+      "Webdevelopment",
+      "SEO",
+      "WordPress",
+      "Next.js",
+      "React",
+      "AI-integraties",
+      "Webdesign"
+    ],
+    "identifier": {
+      "@type": "PropertyValue",
+      "propertyID": "KvK",
+      "value": "99202301"
+    }
+  };
+
   return (
     <>
-      
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }} />
       <main className="pt-24 pb-24 bg-white">
         <div className="max-w-6xl mx-auto px-6">
           {/* Breadcrumb */}
@@ -67,6 +122,17 @@ export default function OverMijPage() {
             <p className="text-xl text-slate-600">
               Webdeveloper, IT-consultant en SEO-specialist in Utrecht
             </p>
+            <div className="mt-4">
+              <a
+                href="https://linkedin.com/company/techsolutionsutrecht"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-[#0A66C2] font-semibold hover:underline"
+              >
+                <Linkedin className="w-5 h-5" />
+                Bekijk mijn LinkedIn profiel
+              </a>
+            </div>
           </div>
 
           {/* Story Section */}
