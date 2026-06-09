@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Font preloaded in layout.tsx for better LCP */
+/* Inter is self-hosted via next/font in layout.tsx (display: swap) for better LCP */
 
 :root {
   /* Default to light theme (white/minimal) */

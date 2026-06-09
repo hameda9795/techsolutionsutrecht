@@ -1,0 +1,32 @@
+# TechSolutionsUtrecht
+
+> Professionele website laten maken in Utrecht. WordPress-websites, WooCommerce-webshops, maatwerk webapplicaties (React/Next.js/Angular) en AI-integraties. Direct contact met de developer, binnen 1 week online. 12+ jaar ervaring. KvK 99202301.
+
+TechSolutionsUtrecht is een eenmanszaak van Max, webdeveloper en IT-consultant in Utrecht (Nederland). Werkgebied: Utrecht, Nieuwegein, Zeist, Houten, Amersfoort, IJsselstein, De Meern en Vleuten. Contact: info@techsolutionsutrecht.nl, +31 6 25518708.
+
+## Diensten
+- [Website laten maken (WordPress)](https://techsolutionsutrecht.nl/diensten/wordpress): Professionele responsive websites vanaf €250, binnen 3-10 dagen online.
+- [Webshop laten maken (WooCommerce)](https://techsolutionsutrecht.nl/diensten/webshop): Webshops met iDEAL, voorraadbeheer en verzending.
+- [Maatwerk webapplicaties](https://techsolutionsutrecht.nl/diensten/maatwerk): Dashboards en portals in React, Next.js of Angular.
+- [SEO-optimalisatie](https://techsolutionsutrecht.nl/diensten/seo): Hoger in Google met technische SEO en content.
+- [AI-integraties](https://techsolutionsutrecht.nl/diensten/ai): Chatbots en automatiseringen.
+- [Website-onderhoud](https://techsolutionsutrecht.nl/diensten/website-onderhoud): Updates, beveiliging en back-ups.
+- [Alle diensten](https://techsolutionsutrecht.nl/diensten)
+
+## Doelgroep-pagina's
+- [Website laten maken voor ZZP'ers](https://techsolutionsutrecht.nl/zzp-website-laten-maken)
+- [Website binnen een week](https://techsolutionsutrecht.nl/website-binnen-week)
+- [Website voor coaches](https://techsolutionsutrecht.nl/website-laten-maken-coach)
+- [Website voor kappers](https://techsolutionsutrecht.nl/website-laten-maken-kapper)
+- [Website voor restaurants](https://techsolutionsutrecht.nl/website-laten-maken-restaurant)
+
+## Belangrijke pagina's
+- [Over ons](https://techsolutionsutrecht.nl/over-ons)
+- [Portfolio](https://techsolutionsutrecht.nl/portfolio)
+- [Blog](https://techsolutionsutrecht.nl/blog)
+- [Veelgestelde vragen](https://techsolutionsutrecht.nl/veelgestelde-vragen)
+- [Contact](https://techsolutionsutrecht.nl/contact)
+
+## Optional
+- [Sitemap](https://techsolutionsutrecht.nl/sitemap.xml)
+- [Privacy](https://techsolutionsutrecht.nl/privacy)

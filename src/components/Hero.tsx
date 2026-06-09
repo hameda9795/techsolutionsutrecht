@@ -78,9 +78,13 @@ export default function Hero() {
               {/* Mobile: Wie ben ik button with profile picture */}
               <div className="lg:hidden flex items-center gap-4 bg-white/80 backdrop-blur border border-slate-200 px-4 py-3 rounded-xl">
                 <div className="w-14 h-14 rounded-xl overflow-hidden flex-shrink-0 border-2 border-[#0f766e]/20 shadow-md">
-                  <img 
-                    src="/profile.webp" 
-                    alt="Max" 
+                  <img
+                    src="/profile.webp"
+                    alt="Max"
+                    width={56}
+                    height={56}
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-full object-contain bg-slate-50"
                     onError={(e) => {
                       e.currentTarget.style.display = 'none';
@@ -108,9 +112,13 @@ export default function Hero() {
                 
                 <div className="flex flex-col items-center mb-6">
                   <div className="w-40 h-40 rounded-2xl overflow-hidden flex-shrink-0 border-4 border-white shadow-2xl ring-4 ring-[#0f766e]/10 mb-4">
-                    <img 
-                      src="/profile.webp" 
-                      alt="Max - Software Engineer" 
+                    <img
+                      src="/profile.webp"
+                      alt="Max - Software Engineer"
+                      width={160}
+                      height={160}
+                      loading="lazy"
+                      decoding="async"
                       className="w-full h-full object-contain bg-slate-50"
                       onError={(e) => {
                         e.currentTarget.style.display = 'none';
@@ -172,9 +180,13 @@ export default function Hero() {
               <div className="flex items-center justify-between mb-6">
                 <div className="flex items-center gap-4">
                   <div className="w-24 h-24 rounded-2xl overflow-hidden flex-shrink-0 border-4 border-white shadow-xl ring-4 ring-[#0f766e]/10">
-                    <img 
-                      src="/profile.webp" 
-                      alt="Max - Software Engineer" 
+                    <img
+                      src="/profile.webp"
+                      alt="Max - Software Engineer"
+                      width={96}
+                      height={96}
+                      loading="lazy"
+                      decoding="async"
                       className="w-full h-full object-contain bg-slate-50"
                       onError={(e) => {
                         e.currentTarget.style.display = 'none';

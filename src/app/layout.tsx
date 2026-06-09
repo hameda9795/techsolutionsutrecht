@@ -1,12 +1,19 @@
 import type { Metadata } from "next";
+import { Inter } from "next/font/google";
 import "./globals.css";
 import { localBusinessSchema, websiteSchema } from "@/lib/schema";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
 import Header from "@/components/Header";
 
+const inter = Inter({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-inter",
+});
+
 export const metadata: Metadata = {
   metadataBase: new URL("https://techsolutionsutrecht.nl"),
-  title: "Website Laten Maken Utrecht | Professioneel & Snel | TechSolutionsUtrecht",
+  title: "Website Laten Maken Utrecht | TechSolutionsUtrecht",
   description: "Professionele website laten maken in Utrecht. Responsive, snel en SEO-klaar. Direct contact met de developer, binnen 1 week online. Vraag een offerte aan.",
   authors: [{ name: "Max", url: "https://techsolutionsutrecht.nl/over-ons" }],
   icons: {
@@ -22,7 +29,7 @@ export const metadata: Metadata = {
     ],
   },
   openGraph: {
-    title: "Website Laten Maken Utrecht | Professioneel & Snel | TechSolutionsUtrecht",
+    title: "Website Laten Maken Utrecht | TechSolutionsUtrecht",
     description: "Professionele website laten maken in Utrecht. Responsive, snel en SEO-klaar. Direct contact met de developer. Vraag een offerte aan.",
     type: "website",
     locale: "nl_NL",
@@ -31,7 +38,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Website Laten Maken Utrecht | Professioneel & Snel | TechSolutionsUtrecht",
+    title: "Website Laten Maken Utrecht | TechSolutionsUtrecht",
     description: "Professionele website laten maken in Utrecht. Responsive, snel en SEO-klaar. Direct contact met de developer.",
   },
   alternates: {
@@ -59,21 +66,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="nl">
+    <html lang="nl" className={inter.variable}>
       <head>
         <GoogleAnalytics />
-        {/* Preload Google Fonts for better LCP */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link 
-          rel="preload" 
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" 
-          as="style"
-        />
-        <link 
-          rel="stylesheet" 
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-        />
         {/* LocalBusiness Schema */}
         <script
           type="application/ld+json"
