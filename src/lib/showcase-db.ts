@@ -9,7 +9,12 @@ import {
 
 const getSql = () => {
   if (!process.env.DATABASE_URL) return null;
-  return neon(process.env.DATABASE_URL);
+  // De Neon-driver gebruikt intern fetch(); Next.js cachet fetch standaard.
+  // Met cache: "no-store" leest de site altijd de actuele database, zodat
+  // wijzigingen uit het admin panel direct zichtbaar zijn.
+  return neon(process.env.DATABASE_URL, {
+    fetchOptions: { cache: "no-store" },
+  });
 };
 
 // DB-rij (snake_case) -> frontend-vorm (camelCase).
