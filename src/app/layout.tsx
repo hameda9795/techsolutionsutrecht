@@ -86,7 +86,7 @@ export default function RootLayout({
       </head>
       <body className="min-h-screen">
         <Header />
-        <main className="pt-24">
+        <main className="pt-[104px] md:pt-[124px]">
           {children}
         </main>
       </body>

@@ -305,6 +305,13 @@ export default function AdminDashboardPage() {
             
             <div className="flex items-center gap-3">
               <Link
+                href="/admin/projecten"
+                className="flex items-center gap-2 px-4 py-2 text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors"
+              >
+                <Grid3X3 className="w-4 h-4" />
+                <span className="hidden sm:inline">Projecten CMS</span>
+              </Link>
+              <Link
                 href="/portfolio"
                 target="_blank"
                 className="flex items-center gap-2 px-4 py-2 text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors"

@@ -289,3 +289,9 @@
   }
 }
 
+
+/* Modal/overlay fade-in (gebruikt op /projecten) */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}

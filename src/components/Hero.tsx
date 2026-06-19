@@ -9,7 +9,7 @@ export default function Hero() {
 
   return (
     <>
-      <section className="relative min-h-screen pt-24 lg:pt-32 pb-16 lg:pb-24 overflow-hidden">
+      <section className="relative min-h-screen pt-8 lg:pt-12 pb-16 lg:pb-24 overflow-hidden">
         {/* Background Gradient */}
         <div className="absolute inset-0 bg-gradient-to-br from-slate-50 via-white to-teal-50/30 pointer-events-none" />
         

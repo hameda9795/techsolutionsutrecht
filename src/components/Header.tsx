@@ -4,10 +4,12 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import AnnouncementBar from "./AnnouncementBar";
 
 const navLinks = [
   { href: "/", label: "Home" },
   { href: "/diensten", label: "Diensten" },
+  { href: "/projecten", label: "Projecten" },
   { href: "/portfolio", label: "Portfolio" },
   { href: "/blog", label: "Blog" },
   { href: "/over-ons", label: "Over mij" },
@@ -17,7 +19,11 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-200/50">
+    <header className="fixed top-0 left-0 right-0 z-50">
+      {/* Altijd zichtbare aankondigingsbalk */}
+      <AnnouncementBar />
+
+      <div className="bg-white/80 backdrop-blur-md border-b border-slate-200/50">
       <div className="max-w-6xl mx-auto px-6 py-3 flex items-center justify-between">
         
         {/* Logo */}
@@ -111,6 +117,7 @@ export default function Header() {
           </nav>
         </div>
       )}
+      </div>
     </header>
   );
 }
