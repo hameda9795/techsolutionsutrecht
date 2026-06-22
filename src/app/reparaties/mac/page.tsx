@@ -1,116 +1,41 @@
 import { Metadata } from "next";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import Link from "next/link";
-import { Laptop, Check, ArrowRight } from "lucide-react";
+import RepairPageLayout from "@/components/RepairPageLayout";
 
 export const metadata: Metadata = {
-  title: "Goedkope Mac & MacBook Reparatie Utrecht | Vanaf €55 | TechSolutionsUtrecht",
-  description: "Voordelige MacBook reparatie in Utrecht vanaf €55. Scherm, batterij, iMac. Originele onderdelen, scherpe prijzen. WhatsApp +31 6 25518708",
-  keywords: ["goedkope macbook reparatie utrecht", "voordelige mac reparatie", "lage prijs macbook", "betaalbare apple reparatie"],
+  title: "Mac & MacBook Reparatie Utrecht | Vanaf €55 | Snel & Betrouwbaar",
+  description:
+    "MacBook, iMac en Mac mini reparatie in Utrecht vanaf €55: scherm, batterij, vloeistofschade, opslag en macOS-problemen. 6 maanden garantie. WhatsApp +31 6 25518708.",
+  alternates: { canonical: "https://techsolutionsutrecht.nl/reparaties/mac" },
 };
-
-const repairs = [
-  "MacBook scherm reparatie",
-  "MacBook batterij vervangen",
-  "iMac reparaties",
-  "Mac mini upgrades",
-  "macOS problemen",
-  "Data herstel",
-];
-
-const brands = ["MacBook", "MacBook Air", "MacBook Pro", "iMac", "Mac mini"];
 
 export default function MacRepairPage() {
   return (
-    <>
-      
-        {/* Breadcrumb */}
-        <nav className="py-4 bg-[var(--bg-secondary)] border-b border-[var(--border)]">
-          <div className="container-custom">
-            <ol className="flex items-center gap-2 text-sm flex-wrap">
-              <li><Link href="/" className="text-[var(--text-muted)] hover:text-primary transition-colors">Home</Link></li>
-              <li className="text-[var(--text-muted)]">/</li>
-              <li><Link href="/reparaties" className="text-[var(--text-muted)] hover:text-primary transition-colors">Reparaties</Link></li>
-              <li className="text-[var(--text-muted)]">/</li>
-              <li><span className="text-[var(--text-primary)] font-medium capitalize">mac</span></li>
-            </ol>
-          </div>
-        </nav>
-
-         <main className="pt-32 pb-24">
-        <div className="container-custom">
-          <nav className="text-sm text-[var(--text-muted)] mb-8">
-            <Link href="/" className="hover:text-primary">Home</Link>
-            <span className="mx-2">/</span>
-            <Link href="/reparaties" className="hover:text-primary">Reparaties</Link>
-            <span className="mx-2">/</span>
-            <span>Mac</span>
-          </nav>
-
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-primary to-secondary mb-6">
-                <Laptop className="w-8 h-8 text-white" />
-              </div>
-              
-              <h1 className="text-4xl sm:text-5xl font-bold text-[var(--text-primary)] mb-4">
-                Goedkope MacBook{" "}
-                <span className="gradient-text">Reparatie</span>
-              </h1>
-              
-              <p className="text-lg text-[var(--text-secondary)] mb-8">
-                <strong className="text-[var(--text-primary)]">Voordelige Mac reparatie</strong> in Utrecht vanaf 
-                <strong className="text-primary">€55</strong>. 
-                Specialist in Apple reparaties met originele of hoogwaardige onderdelen. Betaalbaar en professioneel.
-              </p>
-
-              <h3 className="font-semibold text-[var(--text-primary)] mb-4">Specialisaties:</h3>
-              <div className="grid sm:grid-cols-2 gap-3 mb-8">
-                {repairs.map((repair) => (
-                  <div key={repair} className="flex items-center gap-3">
-                    <div className="w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
-                      <Check className="w-3 h-3 text-primary" />
-                    </div>
-                    <span className="text-[var(--text-secondary)]">{repair}</span>
-                  </div>
-                ))}
-              </div>
-
-              <h3 className="font-semibold text-[var(--text-primary)] mb-4">Modellen:</h3>
-              <div className="flex flex-wrap gap-2 mb-8">
-                {brands.map((brand) => (
-                  <span key={brand} className="px-3 py-1 bg-[var(--bg-tertiary)] text-[var(--text-secondary)] rounded-full text-sm">
-                    {brand}
-                  </span>
-                ))}
-              </div>
-
-              <div className="flex flex-wrap items-center gap-6 mb-8">
-                <div className="text-3xl font-bold text-primary">Vanaf €55</div>
-                <div className="text-[var(--text-muted)]">6 maanden garantie</div>
-              </div>
-
-              <Link href="/contact" className="btn-primary group inline-flex">
-                Afspraak maken
-                <ArrowRight className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1" />
-              </Link>
-            </div>
-
-            <div className="relative">
-              <div className="aspect-square rounded-2xl bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center">
-                <div className="text-center">
-                  <Laptop className="w-32 h-32 text-primary mx-auto mb-4" />
-                  <div className="text-2xl font-bold text-[var(--text-primary)]">Mac</div>
-                  <div className="text-3xl font-extrabold text-primary mt-2">Vanaf €55</div>
-                  <div className="text-[var(--text-muted)] mt-1">Scherpe prijs</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </main>
-      <Footer />
-    </>
+    <RepairPageLayout
+      device="Mac & MacBook"
+      slug="mac"
+      icon="mac"
+      heading="Mac & MacBook Reparatie Utrecht"
+      priceFrom="€55"
+      intro={[
+        "Hapert je MacBook, iMac of Mac mini? In Utrecht repareer ik Apple-computers zonder de lange wachttijden en hoge tarieven van een Apple Store. Je krijgt vooraf een eerlijke prijs en persoonlijk advies van een ervaren developer.",
+        "Van een MacBook die niet meer opstart na een macOS-update tot vloeistofschade of een opgezwollen batterij: ik werk zorgvuldig met Apple-hardware en gebruik kwalitatief hoogwaardige onderdelen.",
+      ]}
+      commonIssues={[
+        { title: "MacBook batterij vervangen", text: "Een opgezwollen of snel lege accu (vaak met een 'Service aanbevolen'-melding) vervang ik, zodat je MacBook weer veilig en lang meegaat." },
+        { title: "Scherm en display", text: "Een gebarsten Retina-scherm, vlekken of flikkering los ik op met een passende schermvervanging voor MacBook en iMac." },
+        { title: "Vloeistofschade", text: "Drank over je MacBook? Snel handelen voorkomt corrosie op het logic board. Ik reinig de componenten en herstel waar mogelijk." },
+        { title: "macOS-problemen", text: "Vastlopers, een Mac die niet opstart of problemen na een update verhelp ik met een nette herinstallatie of herstel, met behoud van je bestanden waar mogelijk." },
+        { title: "Trage Mac of volle opslag", text: "Een oudere Mac of een volle schijf knapt op van opschoning, optimalisatie of een grotere SSD waar dat mogelijk is." },
+        { title: "Toetsenbord en poorten", text: "Niet-werkende toetsen, een kapotte trackpad of een defecte oplaadpoort herstel ik zodat alles weer soepel werkt." },
+      ]}
+      brands={["MacBook Air", "MacBook Pro", "iMac", "Mac mini", "Mac Studio"]}
+      faqs={[
+        { question: "Wat kost een MacBook reparatie?", answer: "Mac-reparaties starten vanaf €55, afhankelijk van het probleem en de onderdelen. Je krijgt vooraf een offerte, vaak voordeliger dan bij de Apple Store." },
+        { question: "Gebruiken jullie originele onderdelen?", answer: "Ik werk met originele of kwalitatief gelijkwaardige onderdelen en bespreek vooraf welke optie het beste past bij jouw budget en wensen." },
+        { question: "Mijn MacBook heeft vloeistofschade. Wat nu?", answer: "Zet hem direct uit, laad niet op en neem snel contact op. Hoe sneller ik de componenten kan reinigen, hoe groter de kans op volledig herstel." },
+        { question: "Blijft mijn data behouden bij een macOS-reparatie?", answer: "Meestal wel. Bij ingrijpende problemen adviseer ik vooraf over een back-up of data recovery, zodat je niets belangrijks verliest." },
+        { question: "Hoe lang duurt een Mac-reparatie?", answer: "Veel reparaties zijn binnen enkele werkdagen klaar. Voor specifieke Apple-onderdelen hoor je vooraf de verwachte levertijd." },
+      ]}
+    />
   );
 }

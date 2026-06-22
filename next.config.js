@@ -66,6 +66,10 @@ const nextConfig = {
       { source: "/algemene-voorwaarden", destination: "/privacy", permanent: true },
       { source: "/privacyverklaring", destination: "/privacy", permanent: true },
       { source: "/cookiebeleid", destination: "/privacy", permanent: true },
+
+      // Duplicate blog posts -> canonical version (fix keyword cannibalization)
+      { source: "/blog/wat-kost-een-website-laten-maken", destination: "/blog/wat-kost-website-laten-maken", permanent: true },
+      { source: "/blog/5-redenen-website-niet-op-google", destination: "/blog/website-niet-in-google", permanent: true },
     ];
   },
 };

@@ -7,6 +7,7 @@ import { Phone, Mail, MapPin, Clock } from "lucide-react";
 export const metadata: Metadata = {
   title: "Contact | TechSolutionsUtrecht - Utrecht",
   description: "Neem contact op met TechSolutionsUtrecht. Website nodig? Tech kapot? Bel of mail, wij helpen je graag.",
+  alternates: { canonical: "https://techsolutionsutrecht.nl/contact" },
 };
 
 const contactInfo = [

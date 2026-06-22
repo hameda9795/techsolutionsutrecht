@@ -229,12 +229,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...blogPostEntries,
     // Legacy blog posts (keep for SEO)
     {
-      url: `${baseUrl}/blog/wat-kost-een-website-laten-maken`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
-    {
       url: `${baseUrl}/blog/laptop-start-niet-op-5-oplossingen`,
       lastModified: new Date(),
       changeFrequency: "monthly",

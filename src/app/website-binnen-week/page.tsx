@@ -2,12 +2,52 @@ import { Metadata } from "next";
 import Footer from "@/components/Footer";
 import Link from "next/link";
 import { Zap, Check, ArrowRight, Clock, Rocket, Target } from "lucide-react";
+import { breadcrumbSchema, serviceSchema, faqPageSchema } from "@/lib/schema";
+
+const pageUrl = "https://techsolutionsutrecht.nl/website-binnen-week";
 
 export const metadata: Metadata = {
   title: "Website Laten Maken Binnen 1 Week | Express Service | TechSolutions",
   description: "Website laten maken binnen 1 week? Express service met snelle oplevering in 3-10 dagen. Professioneel, SEO-klaar en met direct contact met de developer in Utrecht.",
-  alternates: { canonical: "https://techsolutionsutrecht.nl/website-binnen-week" },
+  alternates: { canonical: pageUrl },
 };
+
+const service = serviceSchema({
+  name: "Website binnen 1 week laten maken Utrecht",
+  description:
+    "Express website laten maken in Utrecht met oplevering binnen 3 tot 10 dagen. Professioneel, SEO-klaar en met direct contact met de developer.",
+  url: pageUrl,
+});
+
+const breadcrumb = breadcrumbSchema([
+  { name: "Home", url: "https://techsolutionsutrecht.nl" },
+  { name: "Website Binnen 1 Week", url: pageUrl },
+]);
+
+const faqs = [
+  {
+    question: "Kan een website echt binnen 1 week online staan?",
+    answer:
+      "Ja. De meeste websites lever ik binnen 3 tot 10 werkdagen op. Doordat je direct met de developer werkt en er geen tussenlagen zijn, gaat het snel. Lever je teksten en beeldmateriaal vlot aan, dan kan het soms zelfs binnen een paar dagen.",
+  },
+  {
+    question: "Gaat snelheid niet ten koste van kwaliteit?",
+    answer:
+      "Nee. De snelheid komt door een efficiënt proces en 12+ jaar ervaring, niet door op kwaliteit in te leveren. Je krijgt een professionele, SEO-klare en mobielvriendelijke website, alleen sneller dan bij de meeste bureaus.",
+  },
+  {
+    question: "Wat heb je van mij nodig om snel te kunnen starten?",
+    answer:
+      "Vooral je teksten, logo en beeldmateriaal, plus een idee van je gewenste uitstraling. Hoe sneller je dit aanlevert, hoe sneller je website live kan. Ik denk hierin graag met je mee.",
+  },
+  {
+    question: "Is express-oplevering duurder?",
+    answer:
+      "Standaard lever ik al snel op. Heb je het écht met spoed nodig, dan bespreken we vooraf of een express-traject nodig is en wat dat kost. Geen verrassingen achteraf.",
+  },
+];
+
+const faqSchema = faqPageSchema(faqs);
 
 const timeline = [
   {
@@ -49,6 +89,9 @@ const features = [
 export default function WebsiteBinnenWeekPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(service) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <main className="pt-32 pb-24">
         <div className="container-custom">
           <nav className="text-sm text-[var(--text-muted)] mb-8">
@@ -155,6 +198,19 @@ export default function WebsiteBinnenWeekPage() {
               </div>
             </div>
           </div>
+
+          {/* FAQ */}
+          <section className="mb-20 max-w-3xl">
+            <h2 className="text-3xl font-bold text-[var(--text-primary)] mb-10">Veelgestelde vragen — snel een website</h2>
+            <div className="space-y-4">
+              {faqs.map((faq) => (
+                <div key={faq.question} className="bg-[var(--bg-card)] border border-[var(--border)] rounded-xl p-6">
+                  <h3 className="text-lg font-semibold text-[var(--text-primary)] mb-2">{faq.question}</h3>
+                  <p className="text-[var(--text-secondary)] leading-relaxed">{faq.answer}</p>
+                </div>
+              ))}
+            </div>
+          </section>
 
           {/* CTA Section */}
           <div className="bg-gradient-to-br from-primary/10 to-secondary/10 border border-primary/20 rounded-2xl p-8 text-center">

@@ -1,116 +1,40 @@
 import { Metadata } from "next";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import Link from "next/link";
-import { Laptop, Check, ArrowRight } from "lucide-react";
+import RepairPageLayout from "@/components/RepairPageLayout";
 
 export const metadata: Metadata = {
-  title: "Goedkope Laptop Reparatie Utrecht | Vanaf €40 | TechSolutionsUtrecht",
-  description: "Voordelige laptop reparatie in Utrecht vanaf €40. Scherm, batterij, waterschade. Snelle service, lage prijzen. WhatsApp +31 6 25518708",
-  keywords: ["goedkope laptop reparatie utrecht", "voordelige laptop reparatie", "lage prijs laptop", "scherpe prijs laptop reparatie"],
+  title: "Laptop Reparatie Utrecht | Vanaf €40 | Snel & Betrouwbaar",
+  description:
+    "Laptop reparatie in Utrecht vanaf €40: scherm, batterij, waterschade en trage laptops. 6 maanden garantie, no cure no pay. WhatsApp +31 6 25518708.",
+  alternates: { canonical: "https://techsolutionsutrecht.nl/reparaties/laptop" },
 };
-
-const repairs = [
-  "Scherm reparatie",
-  "Batterij vervangen",
-  "Toetsenbord vervangen",
-  "Waterschade behandeling",
-  "Virus & malware removal",
-  "Snelheidsoptimalisatie",
-];
-
-const brands = ["Apple", "Dell", "HP", "Lenovo", "Asus", "Acer", "MSI"];
 
 export default function LaptopRepairPage() {
   return (
-    <>
-      
-        {/* Breadcrumb */}
-        <nav className="py-4 bg-[var(--bg-secondary)] border-b border-[var(--border)]">
-          <div className="container-custom">
-            <ol className="flex items-center gap-2 text-sm flex-wrap">
-              <li><Link href="/" className="text-[var(--text-muted)] hover:text-primary transition-colors">Home</Link></li>
-              <li className="text-[var(--text-muted)]">/</li>
-              <li><Link href="/reparaties" className="text-[var(--text-muted)] hover:text-primary transition-colors">Reparaties</Link></li>
-              <li className="text-[var(--text-muted)]">/</li>
-              <li><span className="text-[var(--text-primary)] font-medium capitalize">laptop</span></li>
-            </ol>
-          </div>
-        </nav>
-
-         <main className="pt-32 pb-24">
-        <div className="container-custom">
-          <nav className="text-sm text-[var(--text-muted)] mb-8">
-            <Link href="/" className="hover:text-primary">Home</Link>
-            <span className="mx-2">/</span>
-            <Link href="/reparaties" className="hover:text-primary">Reparaties</Link>
-            <span className="mx-2">/</span>
-            <span>Laptop</span>
-          </nav>
-
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-primary to-secondary mb-6">
-                <Laptop className="w-8 h-8 text-white" />
-              </div>
-              
-              <h1 className="text-4xl sm:text-5xl font-bold text-[var(--text-primary)] mb-4">
-                Goedkope Laptop{" "}
-                <span className="gradient-text">Reparatie</span>
-              </h1>
-              
-              <p className="text-lg text-[var(--text-secondary)] mb-8">
-                <strong className="text-[var(--text-primary)]">Voordelige laptop reparatie</strong> in Utrecht vanaf 
-                slechts <strong className="text-primary">€40</strong>. 
-                Scherm, batterij, waterschade — wij fixen het snel en betaalbaar.
-              </p>
-
-              <h3 className="font-semibold text-[var(--text-primary)] mb-4">Vaakste reparaties:</h3>
-              <div className="grid sm:grid-cols-2 gap-3 mb-8">
-                {repairs.map((repair) => (
-                  <div key={repair} className="flex items-center gap-3">
-                    <div className="w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
-                      <Check className="w-3 h-3 text-primary" />
-                    </div>
-                    <span className="text-[var(--text-secondary)]">{repair}</span>
-                  </div>
-                ))}
-              </div>
-
-              <h3 className="font-semibold text-[var(--text-primary)] mb-4">Merken:</h3>
-              <div className="flex flex-wrap gap-2 mb-8">
-                {brands.map((brand) => (
-                  <span key={brand} className="px-3 py-1 bg-[var(--bg-tertiary)] text-[var(--text-secondary)] rounded-full text-sm">
-                    {brand}
-                  </span>
-                ))}
-              </div>
-
-              <div className="flex flex-wrap items-center gap-6 mb-8">
-                <div className="text-3xl font-bold text-primary">Vanaf €40</div>
-                <div className="text-[var(--text-muted)]">6 maanden garantie</div>
-              </div>
-
-              <Link href="/contact" className="btn-primary group inline-flex">
-                Afspraak maken
-                <ArrowRight className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1" />
-              </Link>
-            </div>
-
-            <div className="relative">
-              <div className="aspect-square rounded-2xl bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center">
-                <div className="text-center">
-                  <Laptop className="w-32 h-32 text-primary mx-auto mb-4" />
-                  <div className="text-2xl font-bold text-[var(--text-primary)]">Laptop</div>
-                  <div className="text-3xl font-extrabold text-primary mt-2">Vanaf €40</div>
-                  <div className="text-[var(--text-muted)] mt-1">Scherpe prijs</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </main>
-      <Footer />
-    </>
+    <RepairPageLayout
+      device="Laptop"
+      slug="laptop"
+      icon="laptop"
+      priceFrom="€40"
+      intro={[
+        "Is je laptop kapot, traag of start hij niet meer op? In Utrecht repareer ik laptops van vrijwel elk merk, vaak nog dezelfde week. Je krijgt vooraf een eerlijke prijs en hoeft niet weken op je apparaat te wachten.",
+        "Of het nu om een gebarsten scherm, een lege batterij of waterschade gaat: ik kijk eerst wat er écht aan de hand is en bespreek pas daarna de kosten. Bij no cure no pay betaal je niets als de reparatie niet lukt.",
+      ]}
+      commonIssues={[
+        { title: "Gebarsten of zwart scherm", text: "Een gevallen laptop of een doffe, gebarsten of flikkerende display vervang ik door een passend nieuw scherm, zodat je laptop er weer als nieuw uitziet." },
+        { title: "Batterij die snel leegloopt", text: "Gaat je laptop alleen aan de oplader nog aan of is de accu binnen een uur leeg? Een nieuwe batterij geeft je laptop zijn mobiliteit terug." },
+        { title: "Waterschade", text: "Koffie of water over je laptop? Snel handelen is cruciaal. Ik reinig en droog de componenten en herstel waar mogelijk de schade voordat corrosie toeslaat." },
+        { title: "Trage laptop of virussen", text: "Een laptop die traag opstart of vastloopt knapt vaak enorm op van een SSD-upgrade, een schone installatie of het verwijderen van malware." },
+        { title: "Kapot toetsenbord", text: "Plakkende, niet-werkende of beschadigde toetsen vervang ik, of ik plaats een compleet nieuw toetsenbord." },
+        { title: "Oververhitting en lawaai", text: "Een luidruchtige of hete laptop heeft vaak stof in de ventilator of droge koelpasta. Een reinigingsbeurt lost dat meestal op." },
+      ]}
+      brands={["Apple", "Dell", "HP", "Lenovo", "Asus", "Acer", "MSI", "Microsoft Surface"]}
+      faqs={[
+        { question: "Wat kost een laptop reparatie?", answer: "Laptop reparaties starten vanaf €40. De exacte prijs hangt af van het probleem en de benodigde onderdelen. Je krijgt altijd een offerte vooraf, zodat je nooit voor verrassingen komt te staan." },
+        { question: "Hoe lang duurt de reparatie?", answer: "Veel reparaties zijn dezelfde dag of binnen enkele werkdagen klaar. Moet er een specifiek onderdeel besteld worden, dan laat ik je vooraf weten hoe lang dat duurt." },
+        { question: "Repareren jullie ook waterschade?", answer: "Ja. Bij waterschade is snel handelen belangrijk. Zet je laptop uit, gebruik hem niet en neem zo snel mogelijk contact op. Ik reinig de componenten en herstel waar mogelijk." },
+        { question: "Krijg ik garantie op de reparatie?", answer: "Op uitgevoerde reparaties geef ik 6 maanden garantie. En dankzij no cure no pay betaal je niets als de reparatie onverhoopt niet lukt." },
+        { question: "Blijven mijn bestanden behouden?", answer: "In de meeste gevallen blijven je bestanden gewoon staan. Bij ernstige schade adviseer ik vooraf over data recovery, zodat je belangrijke bestanden veilig blijven." },
+      ]}
+    />
   );
 }

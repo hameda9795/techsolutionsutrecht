@@ -1,15 +1,48 @@
 import { Metadata } from "next";
-import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Link from "next/link";
 import { Wrench, Check, ArrowRight, Shield, Clock } from "lucide-react";
-import { breadcrumbSchema } from "@/lib/schema";
+import { breadcrumbSchema, serviceSchema, faqPageSchema } from "@/lib/schema";
+
+const pageUrl = "https://techsolutionsutrecht.nl/diensten/website-onderhoud";
 
 const breadcrumb = breadcrumbSchema([
   { name: "Home", url: "https://techsolutionsutrecht.nl" },
   { name: "Diensten", url: "https://techsolutionsutrecht.nl/diensten" },
-  { name: "Website Onderhoud", url: "https://techsolutionsutrecht.nl/diensten/website-onderhoud" },
+  { name: "Website Onderhoud", url: pageUrl },
 ]);
+
+const service = serviceSchema({
+  name: "Website onderhoud Utrecht",
+  description:
+    "Zorgeloos WordPress website onderhoud in Utrecht: updates, beveiliging, dagelijkse backups en snelle support. Vanaf €50 per maand, maandelijks opzegbaar.",
+  url: pageUrl,
+});
+
+const faqs = [
+  {
+    question: "Waarom is website onderhoud belangrijk?",
+    answer:
+      "Een website is nooit 'af'. WordPress, plugins en themes krijgen voortdurend updates die beveiligingslekken dichten en de site snel houden. Zonder onderhoud loop je risico op hacks, witte schermen na een mislukte update en dataverlies. Met een onderhoudsabonnement blijft je site veilig, snel en up-to-date zonder dat jij ernaar om hoeft te kijken.",
+  },
+  {
+    question: "Wat kost website onderhoud?",
+    answer:
+      "Onderhoud start vanaf €50 per maand voor het Basic-pakket en is maandelijks opzegbaar. Het Pro-pakket (€100) voegt dagelijkse backups, performance-optimalisatie en priority support toe. Voor zwaardere sites is er een Enterprise-pakket. Je kiest het niveau dat bij jouw website past.",
+  },
+  {
+    question: "Maken jullie backups van mijn website?",
+    answer:
+      "Ja. Afhankelijk van je pakket maak ik wekelijkse, dagelijkse of real-time backups naar veilige cloudopslag. Gaat er iets mis, dan zet ik je website snel terug naar een werkende versie.",
+  },
+  {
+    question: "Werkt onderhoud ook als jullie mijn site niet hebben gebouwd?",
+    answer:
+      "Meestal wel. Ik neem bestaande WordPress-websites graag in onderhoud. Ik doe eerst een korte controle van de staat van je site en bespreek daarna welk pakket het beste past.",
+  },
+];
+
+const faqSchema = faqPageSchema(faqs);
 
 export const metadata: Metadata = {
   title: "Website Onderhoud Utrecht | Updates, Beveiliging & Backups | TechSolutions",
@@ -84,6 +117,8 @@ export default function WebsiteOnderhoudPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(service) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
         {/* Breadcrumb */}
         <nav className="py-4 bg-[var(--bg-secondary)] border-b border-[var(--border)]">
           <div className="container-custom">
@@ -157,11 +192,32 @@ export default function WebsiteOnderhoudPage() {
             </div>
           </div>
 
+          {/* Intro */}
+          <section className="mb-20 max-w-3xl">
+            <h2 className="text-3xl font-bold text-[var(--text-primary)] mb-6">
+              Waarom doorlopend onderhoud loont
+            </h2>
+            <p className="text-[var(--text-secondary)] mb-4 leading-relaxed">
+              Een website is geen eenmalig product maar levende software. WordPress, plugins en themes krijgen
+              regelmatig updates die beveiligingslekken dichten en je site snel en stabiel houden. Sla je die over,
+              dan groeit het risico op hacks, een trage website of een wit scherm na een mislukte update.
+            </p>
+            <p className="text-[var(--text-secondary)] mb-4 leading-relaxed">
+              Met een onderhoudsabonnement neem ik dat werk uit handen. Ik houd je website up-to-date, maak
+              regelmatig backups, bewaak de beveiliging en grijp in als er iets misgaat, zodat jij je kunt richten
+              op je bedrijf in plaats van op je website.
+            </p>
+            <p className="text-[var(--text-secondary)] leading-relaxed">
+              Je hebt direct contact met de developer die je site beheert, en alle pakketten zijn maandelijks
+              opzegbaar. Geen lange contracten, gewoon een veilige en snelle website.
+            </p>
+          </section>
+
           {/* Packages */}
           <div className="mb-20">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-[var(--text-primary)] mb-4">
-                Voordelige{" "}<span className="gradient-text">Onderhouds Pakketten</span>
+                Onderhouds<span className="gradient-text">pakketten</span>
               </h2>
               <p className="text-[var(--text-secondary)]">
                 Kies het pakket dat bij jou past. Alle pakketten zijn maandelijks opzegbaar.
@@ -215,6 +271,19 @@ export default function WebsiteOnderhoudPage() {
               ))}
             </div>
           </div>
+
+          {/* FAQ */}
+          <section className="max-w-3xl">
+            <h2 className="text-3xl font-bold text-[var(--text-primary)] mb-10">Veelgestelde vragen over website onderhoud</h2>
+            <div className="space-y-4">
+              {faqs.map((faq) => (
+                <div key={faq.question} className="bg-[var(--bg-card)] border border-[var(--border)] rounded-xl p-6">
+                  <h3 className="text-lg font-semibold text-[var(--text-primary)] mb-2">{faq.question}</h3>
+                  <p className="text-[var(--text-secondary)] leading-relaxed">{faq.answer}</p>
+                </div>
+              ))}
+            </div>
+          </section>
         </div>
       </main>
       <Footer />

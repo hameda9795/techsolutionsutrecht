@@ -6,6 +6,7 @@ import { HelpCircle, ChevronDown } from "lucide-react";
 export const metadata: Metadata = {
   title: "Veelgestelde Vragen | TechSolutionsUtrecht - Utrecht",
   description: "Antwoorden op de meest gestelde vragen over websites, webshops, reparaties en meer. Niet gevonden wat je zocht? Neem contact op!",
+  alternates: { canonical: "https://techsolutionsutrecht.nl/veelgestelde-vragen" },
 };
 
 const faqs = [
@@ -14,7 +15,7 @@ const faqs = [
     questions: [
       {
         q: "Wat kost een website laten maken?",
-        a: "De kosten hangen af van je wensen. Een eenvoudige WordPress website start vanaf €1.499. Een professionele webshop vanaf €2.499. Voor maatwerk projecten beginnen we vanaf €5.000. Vraag een gratis offerte aan voor een exacte prijs."
+        a: "De kosten hangen af van je wensen. Een professionele WordPress website start vanaf €250, een webshop vanaf €350 en maatwerk-webapplicaties vanaf €400. De uiteindelijke prijs hangt af van het aantal pagina's en functionaliteiten. Vraag een gratis offerte aan voor een exacte prijs."
       },
       {
         q: "Hoe lang duurt het om een website te maken?",
@@ -60,7 +61,7 @@ const faqs = [
       },
       {
         q: "Wat kost een scherm reparatie?",
-        a: "Laptop scherm reparaties starten vanaf €79 (exclusief onderdeel). MacBook schermen vanaf €299. De exacte prijs hangt af van het model."
+        a: "Reparaties starten vanaf €35 voor telefoons, €40 voor laptops en computers en €55 voor Macs. De prijs van een schermreparatie hangt af van het model en het benodigde onderdeel; je krijgt altijd vooraf een duidelijke offerte."
       },
       {
         q: "Geven jullie garantie op reparaties?",

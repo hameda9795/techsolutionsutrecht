@@ -1,116 +1,40 @@
 import { Metadata } from "next";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import Link from "next/link";
-import { Smartphone, Check, ArrowRight } from "lucide-react";
+import RepairPageLayout from "@/components/RepairPageLayout";
 
 export const metadata: Metadata = {
-  title: "Goedkope iPhone & Telefoon Reparatie Utrecht | Vanaf €35 | TechSolutionsUtrecht",
-  description: "Voordelige telefoon reparatie in Utrecht vanaf €35. iPhone, Samsung, scherm, batterij. Originele onderdelen, scherpe prijzen. WhatsApp +31 6 25518708",
-  keywords: ["goedkope iphone reparatie utrecht", "voordelige telefoon reparatie", "lage prijs iphone", "scherpe prijs telefoon"],
+  title: "Telefoon Reparatie Utrecht | Vanaf €35 | Snel & Betrouwbaar",
+  description:
+    "Telefoon reparatie in Utrecht vanaf €35: scherm, accu, oplaadpoort en waterschade. iPhone en Android, 6 maanden garantie, vaak klaar terwijl je wacht. WhatsApp +31 6 25518708.",
+  alternates: { canonical: "https://techsolutionsutrecht.nl/reparaties/telefoon" },
 };
-
-const repairs = [
-  "Scherm reparatie",
-  "Batterij vervangen",
-  "Laadpoort reparatie",
-  "Waterschade",
-  "Camera reparatie",
-  "Back cover vervangen",
-];
-
-const brands = ["iPhone", "Samsung", "Huawei", "OnePlus", "Xiaomi"];
 
 export default function TelefoonRepairPage() {
   return (
-    <>
-      
-        {/* Breadcrumb */}
-        <nav className="py-4 bg-[var(--bg-secondary)] border-b border-[var(--border)]">
-          <div className="container-custom">
-            <ol className="flex items-center gap-2 text-sm flex-wrap">
-              <li><Link href="/" className="text-[var(--text-muted)] hover:text-primary transition-colors">Home</Link></li>
-              <li className="text-[var(--text-muted)]">/</li>
-              <li><Link href="/reparaties" className="text-[var(--text-muted)] hover:text-primary transition-colors">Reparaties</Link></li>
-              <li className="text-[var(--text-muted)]">/</li>
-              <li><span className="text-[var(--text-primary)] font-medium capitalize">telefoon</span></li>
-            </ol>
-          </div>
-        </nav>
-
-         <main className="pt-32 pb-24">
-        <div className="container-custom">
-          <nav className="text-sm text-[var(--text-muted)] mb-8">
-            <Link href="/" className="hover:text-primary">Home</Link>
-            <span className="mx-2">/</span>
-            <Link href="/reparaties" className="hover:text-primary">Reparaties</Link>
-            <span className="mx-2">/</span>
-            <span>Telefoon</span>
-          </nav>
-
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-primary to-secondary mb-6">
-                <Smartphone className="w-8 h-8 text-white" />
-              </div>
-              
-              <h1 className="text-4xl sm:text-5xl font-bold text-[var(--text-primary)] mb-4">
-                Goedkope Telefoon{" "}
-                <span className="gradient-text">Reparatie</span>
-              </h1>
-              
-              <p className="text-lg text-[var(--text-secondary)] mb-8">
-                <strong className="text-[var(--text-primary)]">Voordelige telefoon reparatie</strong> in Utrecht vanaf 
-                <strong className="text-primary">€35</strong>. 
-                iPhone, Samsung, Huawei — originele onderdelen, garantie inbegrepen.
-              </p>
-
-              <h3 className="font-semibold text-[var(--text-primary)] mb-4">Reparaties:</h3>
-              <div className="grid sm:grid-cols-2 gap-3 mb-8">
-                {repairs.map((repair) => (
-                  <div key={repair} className="flex items-center gap-3">
-                    <div className="w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
-                      <Check className="w-3 h-3 text-primary" />
-                    </div>
-                    <span className="text-[var(--text-secondary)]">{repair}</span>
-                  </div>
-                ))}
-              </div>
-
-              <h3 className="font-semibold text-[var(--text-primary)] mb-4">Merken:</h3>
-              <div className="flex flex-wrap gap-2 mb-8">
-                {brands.map((brand) => (
-                  <span key={brand} className="px-3 py-1 bg-[var(--bg-tertiary)] text-[var(--text-secondary)] rounded-full text-sm">
-                    {brand}
-                  </span>
-                ))}
-              </div>
-
-              <div className="flex flex-wrap items-center gap-6 mb-8">
-                <div className="text-3xl font-bold text-primary">Vanaf €35</div>
-                <div className="text-[var(--text-muted)]">6 maanden garantie</div>
-              </div>
-
-              <Link href="/contact" className="btn-primary group inline-flex">
-                Afspraak maken
-                <ArrowRight className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1" />
-              </Link>
-            </div>
-
-            <div className="relative">
-              <div className="aspect-square rounded-2xl bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center">
-                <div className="text-center">
-                  <Smartphone className="w-32 h-32 text-primary mx-auto mb-4" />
-                  <div className="text-2xl font-bold text-[var(--text-primary)]">Telefoon</div>
-                  <div className="text-3xl font-extrabold text-primary mt-2">Vanaf €35</div>
-                  <div className="text-[var(--text-muted)] mt-1">Scherpe prijs</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </main>
-      <Footer />
-    </>
+    <RepairPageLayout
+      device="Telefoon"
+      slug="telefoon"
+      icon="phone"
+      priceFrom="€35"
+      intro={[
+        "Scherm gebarsten of accu binnen een halve dag leeg? In Utrecht repareer ik smartphones van alle grote merken, vaak nog dezelfde dag. Veel reparaties zijn zelfs klaar terwijl je wacht.",
+        "Je krijgt vooraf een eerlijke prijs en ik gebruik kwalitatief hoogwaardige onderdelen. Geen dure verzekeringstrajecten of wekenlang wachten, gewoon snel je telefoon weer werkend.",
+      ]}
+      commonIssues={[
+        { title: "Gebarsten scherm of glas", text: "Een gevallen telefoon met scheuren, dode plekken of een niet-reagerende touchscreen krijgt een passend nieuw scherm, zodat hij er weer als nieuw uitziet en werkt." },
+        { title: "Accu die snel leegloopt", text: "Gaat je telefoon halverwege de dag uit of schakelt hij plots uit bij kou? Een nieuwe accu geeft je toestel zijn volledige dag terug." },
+        { title: "Oplaadpoort defect", text: "Laadt je telefoon alleen nog in een bepaalde hoek of helemaal niet meer? Vaak zit de poort vol vuil of is hij versleten; ik reinig of vervang hem." },
+        { title: "Waterschade", text: "In het water gevallen? Zet hem uit en laad niet op. Ik reinig de binnenkant en herstel waar mogelijk de schade." },
+        { title: "Camera of speaker", text: "Een wazige camera, gebarsten lens of slechte geluidskwaliteit bij bellen herstel ik met een passende onderdeelvervanging." },
+        { title: "Softwareproblemen", text: "Een telefoon die vastloopt, niet opstart of vol zit met problemen na een update krijgt een nette software-reset met behoud van je data waar mogelijk." },
+      ]}
+      brands={["Apple iPhone", "Samsung", "Google Pixel", "OnePlus", "Xiaomi", "Huawei", "Oppo"]}
+      faqs={[
+        { question: "Wat kost een telefoon reparatie?", answer: "Telefoonreparaties starten vanaf €35. De prijs hangt af van het model en het onderdeel. Je krijgt altijd vooraf een duidelijke offerte." },
+        { question: "Kan ik wachten tijdens de reparatie?", answer: "Voor veel voorkomende reparaties zoals scherm of accu kan dat vaak. Stuur even een berichtje met je model, dan plan ik het zo in dat je snel weer weg kunt." },
+        { question: "Repareren jullie zowel iPhone als Android?", answer: "Ja, ik repareer iPhones en Android-toestellen van alle grote merken zoals Samsung, Google Pixel, OnePlus en Xiaomi." },
+        { question: "Blijven mijn foto's en contacten behouden?", answer: "Bij de meeste reparaties blijft je data gewoon staan. Bij softwareproblemen adviseer ik vooraf over een back-up zodat je niets kwijtraakt." },
+        { question: "Zit er garantie op?", answer: "Op de reparatie en het geplaatste onderdeel geldt 6 maanden garantie, en met no cure no pay betaal je niets als reparatie niet lukt." },
+      ]}
+    />
   );
 }

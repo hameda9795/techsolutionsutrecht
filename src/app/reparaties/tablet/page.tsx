@@ -1,116 +1,40 @@
 import { Metadata } from "next";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import Link from "next/link";
-import { Tablet, Check, ArrowRight } from "lucide-react";
+import RepairPageLayout from "@/components/RepairPageLayout";
 
 export const metadata: Metadata = {
-  title: "Goedkope Tablet Reparatie Utrecht | Samsung, Huawei | Vanaf €55 | TechSolutionsUtrecht",
-  description: "Voordelige tablet reparatie in Utrecht vanaf €55. Samsung, Huawei, Lenovo. Scherm, batterij, laadpoort. Scherpe prijzen. WhatsApp +31 6 25518708",
-  keywords: ["goedkope tablet reparatie utrecht", "voordelige tablet reparatie", "lage prijs tablet", "samsung tablet reparatie"],
+  title: "Tablet Reparatie Utrecht | Vanaf €40 | Snel & Betrouwbaar",
+  description:
+    "Tablet reparatie in Utrecht vanaf €40: scherm, accu, oplaadpoort en software. Samsung, Lenovo, Huawei en meer. 6 maanden garantie. WhatsApp +31 6 25518708.",
+  alternates: { canonical: "https://techsolutionsutrecht.nl/reparaties/tablet" },
 };
-
-const repairs = [
-  "Scherm reparatie",
-  "Batterij vervangen",
-  "Laadpoort reparatie",
-  "Back cover vervangen",
-  "Camera reparatie",
-  "Software problemen",
-];
-
-const brands = ["Samsung Galaxy Tab", "Huawei MediaPad", "Lenovo Tab", "Microsoft Surface", "Amazon Fire", "Asus ZenPad"];
 
 export default function TabletRepairPage() {
   return (
-    <>
-      
-        {/* Breadcrumb */}
-        <nav className="py-4 bg-[var(--bg-secondary)] border-b border-[var(--border)]">
-          <div className="container-custom">
-            <ol className="flex items-center gap-2 text-sm flex-wrap">
-              <li><Link href="/" className="text-[var(--text-muted)] hover:text-primary transition-colors">Home</Link></li>
-              <li className="text-[var(--text-muted)]">/</li>
-              <li><Link href="/reparaties" className="text-[var(--text-muted)] hover:text-primary transition-colors">Reparaties</Link></li>
-              <li className="text-[var(--text-muted)]">/</li>
-              <li><span className="text-[var(--text-primary)] font-medium capitalize">tablet</span></li>
-            </ol>
-          </div>
-        </nav>
-
-         <main className="pt-32 pb-24">
-        <div className="container-custom">
-          <nav className="text-sm text-[var(--text-muted)] mb-8">
-            <Link href="/" className="hover:text-primary">Home</Link>
-            <span className="mx-2">/</span>
-            <Link href="/reparaties" className="hover:text-primary">Reparaties</Link>
-            <span className="mx-2">/</span>
-            <span>Tablet</span>
-          </nav>
-
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-primary to-secondary mb-6">
-                <Tablet className="w-8 h-8 text-white" />
-              </div>
-              
-              <h1 className="text-4xl sm:text-5xl font-bold text-[var(--text-primary)] mb-4">
-                Goedkope Tablet{" "}
-                <span className="gradient-text">Reparatie</span>
-              </h1>
-              
-              <p className="text-lg text-[var(--text-secondary)] mb-8">
-                <strong className="text-[var(--text-primary)]">Voordelige tablet reparatie</strong> in Utrecht vanaf 
-                <strong className="text-primary">€55</strong>. 
-                Samsung, Huawei, Lenovo — snelle reparatie met garantie.
-              </p>
-
-              <h3 className="font-semibold text-[var(--text-primary)] mb-4">Vaakste reparaties:</h3>
-              <div className="grid sm:grid-cols-2 gap-3 mb-8">
-                {repairs.map((repair) => (
-                  <div key={repair} className="flex items-center gap-3">
-                    <div className="w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
-                      <Check className="w-3 h-3 text-primary" />
-                    </div>
-                    <span className="text-[var(--text-secondary)]">{repair}</span>
-                  </div>
-                ))}
-              </div>
-
-              <h3 className="font-semibold text-[var(--text-primary)] mb-4">Merken:</h3>
-              <div className="flex flex-wrap gap-2 mb-8">
-                {brands.map((brand) => (
-                  <span key={brand} className="px-3 py-1 bg-[var(--bg-tertiary)] text-[var(--text-secondary)] rounded-full text-sm">
-                    {brand}
-                  </span>
-                ))}
-              </div>
-
-              <div className="flex flex-wrap items-center gap-6 mb-8">
-                <div className="text-3xl font-bold text-primary">Vanaf €55</div>
-                <div className="text-[var(--text-muted)]">6 maanden garantie</div>
-              </div>
-
-              <Link href="/contact" className="btn-primary group inline-flex">
-                Afspraak maken
-                <ArrowRight className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1" />
-              </Link>
-            </div>
-
-            <div className="relative">
-              <div className="aspect-square rounded-2xl bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center">
-                <div className="text-center">
-                  <Tablet className="w-32 h-32 text-primary mx-auto mb-4" />
-                  <div className="text-2xl font-bold text-[var(--text-primary)]">Tablet</div>
-                  <div className="text-3xl font-extrabold text-primary mt-2">Vanaf €55</div>
-                  <div className="text-[var(--text-muted)] mt-1">Scherpe prijs</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </main>
-      <Footer />
-    </>
+    <RepairPageLayout
+      device="Tablet"
+      slug="tablet"
+      icon="tablet"
+      priceFrom="€40"
+      intro={[
+        "Is je Android-tablet kapot, traag of laadt hij niet meer op? In Utrecht repareer ik tablets van merken als Samsung, Lenovo en Huawei. Vooraf een eerlijke prijs en snel weer een werkend toestel.",
+        "Of het nu om een gebarsten scherm, een uitgeputte accu of een hardnekkig softwareprobleem gaat: ik kijk eerst wat er aan de hand is en bespreek pas daarna de kosten. (Heb je een iPad? Bekijk dan de aparte iPad-pagina.)",
+      ]}
+      commonIssues={[
+        { title: "Gebarsten scherm", text: "Een gevallen tablet met scheuren of een touchscreen dat niet meer reageert, voorzie ik van een passend nieuw scherm zodat hij weer prettig werkt." },
+        { title: "Accu die snel leegloopt", text: "Houdt je tablet nauwelijks lading vast of laadt hij traag op? Een nieuwe accu maakt je tablet weer een hele dag bruikbaar." },
+        { title: "Oplaadpoort defect", text: "Een tablet die niet meer of alleen in een bepaalde hoek laadt, heeft vaak een vervuilde of versleten poort. Ik reinig of vervang hem." },
+        { title: "Trage prestaties", text: "Een tablet die hapert of vastloopt knapt vaak op van het opschonen van software, het verwijderen van overbodige apps of een reset." },
+        { title: "Softwareproblemen", text: "Een tablet die niet opstart, blijft hangen of vol zit met fouten na een update krijgt een nette software-reset, met behoud van je data waar mogelijk." },
+        { title: "Knoppen en speakers", text: "Niet-werkende volume- of aan-uitknoppen en slechte geluidskwaliteit herstel ik met een gerichte onderdeelvervanging." },
+      ]}
+      brands={["Samsung Galaxy Tab", "Lenovo", "Huawei", "Microsoft Surface", "Xiaomi", "Acer"]}
+      faqs={[
+        { question: "Wat kost een tablet reparatie?", answer: "Tabletreparaties starten vanaf €40, afhankelijk van het merk, model en probleem. Je krijgt altijd vooraf een heldere offerte." },
+        { question: "Welke tablets repareren jullie?", answer: "Ik repareer Android- en Windows-tablets van merken als Samsung, Lenovo, Huawei, Xiaomi en Microsoft Surface. Voor Apple-tablets is er een aparte iPad-pagina." },
+        { question: "Loont een reparatie nog bij een oudere tablet?", answer: "Dat hangt af van de reparatiekosten versus de waarde. Ik geef je hierin een eerlijk advies, ook als vervangen verstandiger is dan repareren." },
+        { question: "Blijft mijn data behouden?", answer: "Bij de meeste reparaties blijft je data staan. Bij softwareproblemen adviseer ik vooraf over een back-up zodat je niets kwijtraakt." },
+        { question: "Zit er garantie op?", answer: "Op de reparatie geldt 6 maanden garantie en ik werk met no cure no pay: lukt de reparatie niet, dan betaal je niets." },
+      ]}
+    />
   );
 }

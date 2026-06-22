@@ -6,8 +6,13 @@ import WhyChooseUs from "@/components/WhyChooseUs";
 import CTA from "@/components/CTA";
 import HomeFAQ from "@/components/HomeFAQ";
 import Testimonials from "@/components/Testimonials";
+import type { Metadata } from "next";
 import { homeFaqs } from "@/lib/home-faqs";
 import { faqPageSchema } from "@/lib/schema";
+
+export const metadata: Metadata = {
+  alternates: { canonical: "https://techsolutionsutrecht.nl" },
+};
 
 // Homepage leest de nieuwste projecten live uit de database.
 export const dynamic = "force-dynamic";

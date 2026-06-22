@@ -31,7 +31,7 @@ const services = [
     icon: TrendingUp,
     title: "SEO Optimalisatie",
     description: "Hoger in Google met technische SEO, content-optimalisatie en linkbuilding. Meetbare resultaten.",
-    price: "Vanaf €250/maand",
+    price: "Vanaf €200/maand",
     href: "/diensten/seo",
     color: "from-[#0f766e] to-[#059669]",
   },

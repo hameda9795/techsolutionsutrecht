@@ -1,116 +1,40 @@
 import { Metadata } from "next";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import Link from "next/link";
-import { Tablet, Check, ArrowRight } from "lucide-react";
+import RepairPageLayout from "@/components/RepairPageLayout";
 
 export const metadata: Metadata = {
-  title: "Goedkope iPad & Tablet Reparatie Utrecht | Vanaf €55 | TechSolutionsUtrecht",
-  description: "Voordelige iPad reparatie in Utrecht vanaf €55. Scherm, batterij, laadpoort. Originele onderdelen, scherpe prijzen. WhatsApp +31 6 25518708",
-  keywords: ["goedkope ipad reparatie utrecht", "voordelige tablet reparatie", "lage prijs ipad", "betaalbare tablet reparatie"],
+  title: "iPad Reparatie Utrecht | Vanaf €40 | Snel & Betrouwbaar",
+  description:
+    "iPad reparatie in Utrecht vanaf €40: scherm, glas, accu, oplaadpoort en iPadOS-problemen. Alle iPad-modellen, 6 maanden garantie. WhatsApp +31 6 25518708.",
+  alternates: { canonical: "https://techsolutionsutrecht.nl/reparaties/ipad" },
 };
 
-const repairs = [
-  "Scherm reparatie",
-  "Batterij vervangen",
-  "Laadpoort reparatie",
-  "Home button vervangen",
-  "Camera reparatie",
-  "Back cover vervangen",
-];
-
-const models = ["iPad", "iPad Air", "iPad mini", "iPad Pro 11\"", "iPad Pro 12.9\""];
-
-export default function iPadRepairPage() {
+export default function IpadRepairPage() {
   return (
-    <>
-      
-        {/* Breadcrumb */}
-        <nav className="py-4 bg-[var(--bg-secondary)] border-b border-[var(--border)]">
-          <div className="container-custom">
-            <ol className="flex items-center gap-2 text-sm flex-wrap">
-              <li><Link href="/" className="text-[var(--text-muted)] hover:text-primary transition-colors">Home</Link></li>
-              <li className="text-[var(--text-muted)]">/</li>
-              <li><Link href="/reparaties" className="text-[var(--text-muted)] hover:text-primary transition-colors">Reparaties</Link></li>
-              <li className="text-[var(--text-muted)]">/</li>
-              <li><span className="text-[var(--text-primary)] font-medium capitalize">ipad</span></li>
-            </ol>
-          </div>
-        </nav>
-
-         <main className="pt-32 pb-24">
-        <div className="container-custom">
-          <nav className="text-sm text-[var(--text-muted)] mb-8">
-            <Link href="/" className="hover:text-primary">Home</Link>
-            <span className="mx-2">/</span>
-            <Link href="/reparaties" className="hover:text-primary">Reparaties</Link>
-            <span className="mx-2">/</span>
-            <span>iPad</span>
-          </nav>
-
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-primary to-secondary mb-6">
-                <Tablet className="w-8 h-8 text-white" />
-              </div>
-              
-              <h1 className="text-4xl sm:text-5xl font-bold text-[var(--text-primary)] mb-4">
-                Goedkope iPad{" "}
-                <span className="gradient-text">Reparatie</span>
-              </h1>
-              
-              <p className="text-lg text-[var(--text-secondary)] mb-8">
-                <strong className="text-[var(--text-primary)]">Voordelige iPad reparatie</strong> in Utrecht vanaf 
-                <strong className="text-primary">€55</strong>. 
-                Specialist in Apple iPad reparaties. Scherm, batterij, laadpoort — wij fixen het.
-              </p>
-
-              <h3 className="font-semibold text-[var(--text-primary)] mb-4">Vaakste reparaties:</h3>
-              <div className="grid sm:grid-cols-2 gap-3 mb-8">
-                {repairs.map((repair) => (
-                  <div key={repair} className="flex items-center gap-3">
-                    <div className="w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
-                      <Check className="w-3 h-3 text-primary" />
-                    </div>
-                    <span className="text-[var(--text-secondary)]">{repair}</span>
-                  </div>
-                ))}
-              </div>
-
-              <h3 className="font-semibold text-[var(--text-primary)] mb-4">Modellen:</h3>
-              <div className="flex flex-wrap gap-2 mb-8">
-                {models.map((model) => (
-                  <span key={model} className="px-3 py-1 bg-[var(--bg-tertiary)] text-[var(--text-secondary)] rounded-full text-sm">
-                    {model}
-                  </span>
-                ))}
-              </div>
-
-              <div className="flex flex-wrap items-center gap-6 mb-8">
-                <div className="text-3xl font-bold text-primary">Vanaf €55</div>
-                <div className="text-[var(--text-muted)]">6 maanden garantie</div>
-              </div>
-
-              <Link href="/contact" className="btn-primary group inline-flex">
-                Afspraak maken
-                <ArrowRight className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1" />
-              </Link>
-            </div>
-
-            <div className="relative">
-              <div className="aspect-square rounded-2xl bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center">
-                <div className="text-center">
-                  <Tablet className="w-32 h-32 text-primary mx-auto mb-4" />
-                  <div className="text-2xl font-bold text-[var(--text-primary)]">iPad</div>
-                  <div className="text-3xl font-extrabold text-primary mt-2">Vanaf €55</div>
-                  <div className="text-[var(--text-muted)] mt-1">Scherpe prijs</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </main>
-      <Footer />
-    </>
+    <RepairPageLayout
+      device="iPad"
+      slug="ipad"
+      icon="tablet"
+      priceFrom="€40"
+      intro={[
+        "Is het scherm van je iPad gebarsten of doet de accu het niet meer? In Utrecht repareer ik alle iPad-modellen, van de instap-iPad tot iPad Air, Mini en Pro. Vooraf een eerlijke prijs, geen onnodige kosten.",
+        "iPad-reparaties zijn precisiewerk: het glas en de display zitten dicht op elkaar en de behuizing is kwetsbaar. Ik werk zorgvuldig en met passende onderdelen, zodat je iPad er weer als nieuw uitziet en werkt.",
+      ]}
+      commonIssues={[
+        { title: "Gebarsten glas of scherm", text: "Een gevallen iPad met scheuren of een niet-reagerend touchscreen krijgt een passende glas- of schermvervanging, uitgevoerd met zorg voor de kwetsbare behuizing." },
+        { title: "Accu die snel leegloopt", text: "Houdt je iPad nauwelijks meer lading vast of laadt hij traag op? Een nieuwe accu geeft je tablet zijn werkdag terug." },
+        { title: "Oplaadpoort werkt niet", text: "Laadt je iPad niet meer of alleen in een bepaalde stand? Vaak zit de poort vol stof of is hij beschadigd; ik reinig of vervang hem." },
+        { title: "Knoppen en camera", text: "Een kapotte home- of volumeknop of een wazige camera herstel ik, zodat je iPad weer volledig functioneert." },
+        { title: "iPadOS-problemen", text: "Een iPad die vastloopt, niet opstart of hapert na een update krijgt een nette software-reset, met behoud van je data waar mogelijk." },
+        { title: "Waterschade", text: "In aanraking geweest met vocht? Zet de iPad uit en laad niet op. Ik reinig de binnenkant en herstel waar mogelijk." },
+      ]}
+      brands={["iPad", "iPad Air", "iPad Mini", "iPad Pro"]}
+      faqs={[
+        { question: "Wat kost een iPad reparatie?", answer: "iPad-reparaties starten vanaf €40, afhankelijk van het model en het probleem. Een gebarsten Pro-scherm kost meer dan een instap-iPad. Je krijgt altijd vooraf een offerte." },
+        { question: "Repareren jullie alle iPad-modellen?", answer: "Ja, van de gewone iPad tot iPad Air, iPad Mini en iPad Pro. Geef bij je aanvraag het model door, dan geef ik je een gerichte prijsindicatie." },
+        { question: "Is een iPad-scherm lastiger te vervangen dan een telefoonscherm?", answer: "iPads zijn gevoeliger door de grote glasplaat en lijmverbindingen. Daarom werk ik extra zorgvuldig; dat is ook waarom de levertijd soms iets langer is." },
+        { question: "Blijft mijn data behouden?", answer: "Bij de meeste reparaties blijft je data staan. Bij softwareproblemen adviseer ik vooraf over een back-up via iCloud of computer." },
+        { question: "Krijg ik garantie?", answer: "Op de reparatie geldt 6 maanden garantie en ik werk met no cure no pay: lukt het niet, dan betaal je niets." },
+      ]}
+    />
   );
 }

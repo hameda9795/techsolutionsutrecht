@@ -8,6 +8,7 @@ export const metadata: Metadata = {
   title: "MacBook Waterschade? Dit Moet je NU Doen [Stap-voor-Stap] | TechSolutionsUtrecht",
   description: "MacBook nat geworden? Snelheid is essentieel. Volg deze stappen om schade te beperken. Reparatie in Utrecht nodig? Bel of WhatsApp!",
   keywords: ["macbook waterschade", "laptop waterschade", "mac nat geworden", "macbook reparatie utrecht", "waterschade laptop"],
+  alternates: { canonical: "https://techsolutionsutrecht.nl/blog/macbook-waterschade-wat-te-doen" },
 };
 
 const steps = [

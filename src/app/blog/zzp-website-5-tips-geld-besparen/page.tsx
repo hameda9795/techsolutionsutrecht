@@ -7,7 +7,8 @@ import { Calendar, Clock, ArrowLeft, User, CheckCircle, Euro } from "lucide-reac
 export const metadata: Metadata = {
   title: "ZZP Website Laten Maken: 5 Tips om Geld te Besparen | TechSolutionsUtrecht",
   description: "ZZP website laten maken goedkoop? 5 praktische tips om geld te besparen zonder in te leveren op kwaliteit. Lees hoe je slim kunt besparen!",
-  keywords: ["zzp website goedkoop", "website zzp starter", "geld besparen website", "zzp website tips", "goedkope website zzp"],
+  keywords: ["zzp website starter", "geld besparen website", "zzp website tips", "betaalbare website zzp"],
+  alternates: { canonical: "https://techsolutionsutrecht.nl/blog/zzp-website-5-tips-geld-besparen" },
 };
 
 const tips = [

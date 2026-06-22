@@ -8,6 +8,7 @@ export const metadata: Metadata = {
   title: "Laptop Start Niet Op? 5 Oplossingen die Wél Werken | TechSolutionsUtrecht",
   description: "Laptop doet niets meer? Probeer deze 5 oplossingen voordat je naar de reparateur gaat. Werkt het niet? Wij helpen in Utrecht. Bel of WhatsApp!",
   keywords: ["laptop start niet op", "laptop doet niets", "laptop start niet", "laptop probleem", "laptop reparatie utrecht"],
+  alternates: { canonical: "https://techsolutionsutrecht.nl/blog/laptop-start-niet-op-5-oplossingen" },
 };
 
 const solutions = [

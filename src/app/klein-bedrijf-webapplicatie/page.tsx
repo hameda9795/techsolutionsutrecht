@@ -2,12 +2,52 @@ import { Metadata } from "next";
 import Footer from "@/components/Footer";
 import Link from "next/link";
 import { Code, Check, ArrowRight, Building, Lightbulb, Shield } from "lucide-react";
+import { breadcrumbSchema, serviceSchema, faqPageSchema } from "@/lib/schema";
+
+const pageUrl = "https://techsolutionsutrecht.nl/klein-bedrijf-webapplicatie";
 
 export const metadata: Metadata = {
   title: "Webapplicatie Laten Bouwen voor Klein Bedrijf | React & Next.js | TechSolutions",
   description: "Webapplicatie laten bouwen voor je kleine bedrijf of MKB? Schaalbaar maatwerk met React en Next.js, gebouwd door een ervaren developer in Utrecht. Vraag een offerte aan.",
-  alternates: { canonical: "https://techsolutionsutrecht.nl/klein-bedrijf-webapplicatie" },
+  alternates: { canonical: pageUrl },
 };
+
+const service = serviceSchema({
+  name: "Webapplicatie laten bouwen voor klein bedrijf Utrecht",
+  description:
+    "Schaalbare maatwerk webapplicaties voor MKB en kleine bedrijven in Utrecht, gebouwd met React en Next.js. Klantportalen, dashboards en interne tools vanaf €400.",
+  url: pageUrl,
+});
+
+const breadcrumb = breadcrumbSchema([
+  { name: "Home", url: "https://techsolutionsutrecht.nl" },
+  { name: "Webapplicatie voor Klein Bedrijf", url: pageUrl },
+]);
+
+const faqs = [
+  {
+    question: "Wat kost een webapplicatie voor een klein bedrijf?",
+    answer:
+      "Maatwerk webapplicaties starten vanaf €400 en lopen op afhankelijk van de complexiteit en het aantal functies. Waar grote softwarebedrijven al snel €10.000+ rekenen, bied ik een betaalbaar alternatief voor MKB, met een heldere offerte vooraf.",
+  },
+  {
+    question: "Welke soorten webapplicaties bouw je voor MKB?",
+    answer:
+      "Denk aan klantportalen, reserverings- en boekingssystemen, interne tools voor facturatie of voorraadbeheer en dashboards die je bedrijfsdata visualiseren. Alles wordt op maat gemaakt rond jouw proces.",
+  },
+  {
+    question: "Kan de applicatie meegroeien met mijn bedrijf?",
+    answer:
+      "Ja. Ik bouw met schaalbare technologie (React, Next.js en Node.js), zodat je applicatie probleemloos meegroeit met meer gebruikers en nieuwe functies, zonder dat je later opnieuw moet beginnen.",
+  },
+  {
+    question: "Hoe lang duurt het bouwen van een webapplicatie?",
+    answer:
+      "Een afgebakend project lever ik vaak binnen 5 tot 12 werkdagen op. Grotere applicaties pakken we gefaseerd aan: eerst een werkende eerste versie, daarna stap voor stap uitbreiden.",
+  },
+];
+
+const faqSchema = faqPageSchema(faqs);
 
 const features = [
   "Next.js & React",
@@ -41,6 +81,9 @@ const benefits = [
 export default function KleinBedrijfWebapplicatiePage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(service) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <main className="pt-32 pb-24">
         <div className="container-custom">
           <nav className="text-sm text-[var(--text-muted)] mb-8">
@@ -219,6 +262,19 @@ export default function KleinBedrijfWebapplicatiePage() {
               </div>
             </div>
           </div>
+
+          {/* FAQ */}
+          <section className="mt-20 max-w-3xl">
+            <h2 className="text-3xl font-bold text-[var(--text-primary)] mb-10">Veelgestelde vragen — webapplicatie voor MKB</h2>
+            <div className="space-y-4">
+              {faqs.map((faq) => (
+                <div key={faq.question} className="bg-[var(--bg-card)] border border-[var(--border)] rounded-xl p-6">
+                  <h3 className="text-lg font-semibold text-[var(--text-primary)] mb-2">{faq.question}</h3>
+                  <p className="text-[var(--text-secondary)] leading-relaxed">{faq.answer}</p>
+                </div>
+              ))}
+            </div>
+          </section>
         </div>
       </main>
       <Footer />

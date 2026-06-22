@@ -86,7 +86,7 @@ const services = [
       "Maandelijkse rapportage",
       "Meetbare resultaten",
     ],
-    price: "Vanaf €250/maand",
+    price: "Vanaf €200/maand",
     time: "Doorlopend",
     href: "/diensten/seo",
   },

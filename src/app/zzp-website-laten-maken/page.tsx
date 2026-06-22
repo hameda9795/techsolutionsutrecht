@@ -2,12 +2,52 @@ import { Metadata } from "next";
 import Footer from "@/components/Footer";
 import Link from "next/link";
 import { User, Check, ArrowRight, Euro, Clock, Star } from "lucide-react";
+import { breadcrumbSchema, serviceSchema, faqPageSchema } from "@/lib/schema";
+
+const pageUrl = "https://techsolutionsutrecht.nl/zzp-website-laten-maken";
 
 export const metadata: Metadata = {
   title: "ZZP Website Laten Maken Utrecht | Snel & Persoonlijk | TechSolutions",
   description: "ZZP website laten maken in Utrecht? Een professionele, betaalbare website binnen 1 week online. Direct contact met de developer. Ideaal voor starters en ZZP'ers.",
-  alternates: { canonical: "https://techsolutionsutrecht.nl/zzp-website-laten-maken" },
+  alternates: { canonical: pageUrl },
 };
+
+const service = serviceSchema({
+  name: "ZZP website laten maken Utrecht",
+  description:
+    "Professionele, betaalbare website voor ZZP'ers en starters in Utrecht. Binnen 1 week online, SEO-klaar en zelf te beheren. Direct contact met de developer.",
+  url: pageUrl,
+});
+
+const breadcrumb = breadcrumbSchema([
+  { name: "Home", url: "https://techsolutionsutrecht.nl" },
+  { name: "ZZP Website Laten Maken", url: pageUrl },
+]);
+
+const faqs = [
+  {
+    question: "Wat kost een ZZP website?",
+    answer:
+      "Een complete ZZP-website start vanaf €250 all-in, zonder verborgen kosten. De exacte prijs hangt af van het aantal pagina's en je wensen. Je krijgt vooraf een heldere offerte, zodat je precies weet waar je aan toe bent.",
+  },
+  {
+    question: "Hoe snel staat mijn ZZP-website online?",
+    answer:
+      "De meeste ZZP-websites zijn binnen 1 week online. Lever je je teksten en logo snel aan, dan kan het soms nog sneller. Bij spoed is express-oplevering mogelijk.",
+  },
+  {
+    question: "Kan ik mijn website zelf aanpassen?",
+    answer:
+      "Ja. Je website wordt gebouwd met een gebruiksvriendelijk CMS, zodat je zelf teksten, foto's en prijzen kunt aanpassen zonder technische kennis. Wil je het beheer uitbesteden, dan kan dat ook.",
+  },
+  {
+    question: "Is de website geschikt om gevonden te worden in Google?",
+    answer:
+      "Zeker. Elke ZZP-website lever ik SEO-klaar op: snelle laadtijden, nette structuur en mobielvriendelijk. Zo maak je vanaf dag één kans om lokaal gevonden te worden door nieuwe klanten.",
+  },
+];
+
+const faqSchema = faqPageSchema(faqs);
 
 const features = [
   "Professioneel design",
@@ -39,6 +79,9 @@ const benefits = [
 export default function ZZPWebsitePage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(service) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <main className="pt-32 pb-24">
         <div className="container-custom">
           {/* Breadcrumb */}
@@ -170,6 +213,19 @@ export default function ZZPWebsitePage() {
               </div>
             </div>
           </div>
+
+          {/* FAQ */}
+          <section className="mt-20 max-w-3xl">
+            <h2 className="text-3xl font-bold text-[var(--text-primary)] mb-10">Veelgestelde vragen — ZZP website</h2>
+            <div className="space-y-4">
+              {faqs.map((faq) => (
+                <div key={faq.question} className="bg-[var(--bg-card)] border border-[var(--border)] rounded-xl p-6">
+                  <h3 className="text-lg font-semibold text-[var(--text-primary)] mb-2">{faq.question}</h3>
+                  <p className="text-[var(--text-secondary)] leading-relaxed">{faq.answer}</p>
+                </div>
+              ))}
+            </div>
+          </section>
         </div>
       </main>
       <Footer />

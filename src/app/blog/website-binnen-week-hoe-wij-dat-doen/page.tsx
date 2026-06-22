@@ -8,6 +8,7 @@ export const metadata: Metadata = {
   title: "Website Binnen 1 Week Online: Zo Doen Wij Dat | TechSolutionsUtrecht",
   description: "Website binnen 1 week online? Lees hoe wij dat doen. Onze snelle oplevering proces uitgelegd. Express website laten maken in Utrecht.",
   keywords: ["website binnen 1 week online", "snel website laten maken", "express website", "snelle oplevering website", "website binnen week"],
+  alternates: { canonical: "https://techsolutionsutrecht.nl/blog/website-binnen-week-hoe-wij-dat-doen" },
 };
 
 const processSteps = [

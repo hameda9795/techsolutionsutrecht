@@ -5,6 +5,7 @@ export const metadata = {
   title: '5 Redenen Waarom je Website Niet op Google Verschijnt | TechSolutionsUtrecht',
   description: 'Is je website niet zichtbaar in Google? Ontdek de 5 meest voorkomende redenen en leer hoe je dit eenvoudig oplost. Praktische tips van een SEO specialist in Utrecht.',
   keywords: 'website niet gevonden google, wordpress niet zichtbaar, website staat niet in google, seo problemen oplossen',
+  alternates: { canonical: 'https://techsolutionsutrecht.nl/blog/website-niet-in-google' },
   openGraph: {
     title: '5 Redenen Waarom je Website Niet op Google Verschijnt',
     description: 'Ontdek waarom je website niet in Google verschijnt en hoe je dit oplost. Praktische SEO tips!',
