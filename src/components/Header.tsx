@@ -9,6 +9,7 @@ import AnnouncementBar from "./AnnouncementBar";
 const navLinks = [
   { href: "/", label: "Home" },
   { href: "/diensten", label: "Diensten" },
+  { href: "/whatsapp-assistent", label: "WhatsApp AI" },
   { href: "/projecten", label: "Projecten" },
   { href: "/portfolio", label: "Portfolio" },
   { href: "/blog", label: "Blog" },
