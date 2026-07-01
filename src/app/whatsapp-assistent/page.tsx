@@ -29,7 +29,7 @@ const breadcrumb = breadcrumbSchema([
 ]);
 
 const service = serviceSchema({
-  name: "WhatsApp AI-assistent voor bedrijven",
+  name: "Baliebot – WhatsApp AI-assistent voor bedrijven",
   description:
     "Een AI-assistent op je eigen WhatsApp Business-nummer die 24/7 klantvragen beantwoordt, afspraken inplant in je agenda en bestellingen opneemt. Voor kapsalons, restaurants, klinieken en webshops. Vanaf €30 per maand.",
   url: pageUrl,
@@ -71,14 +71,14 @@ const faqs = [
 const faqSchema = faqPageSchema(faqs);
 
 export const metadata: Metadata = {
-  title: "WhatsApp AI-assistent voor Bedrijven | 24/7 Klantenservice | TechSolutionsUtrecht",
+  title: "Baliebot – WhatsApp AI-assistent voor Bedrijven | 24/7 Klantenservice | TechSolutionsUtrecht",
   description:
-    "Een slimme AI-assistent op je eigen WhatsApp-nummer die 24/7 klanten te woord staat, afspraken inplant en bestellingen opneemt. Voor kapsalons, restaurants en webshops. Vanaf €30 p/m.",
+    "Baliebot is een slimme AI-assistent op je eigen WhatsApp-nummer die 24/7 klanten te woord staat, afspraken inplant en bestellingen opneemt. Voor kapsalons, restaurants en webshops. Vanaf €30 p/m.",
   alternates: { canonical: pageUrl },
   openGraph: {
-    title: "WhatsApp AI-assistent voor Bedrijven | TechSolutionsUtrecht",
+    title: "Baliebot – WhatsApp AI-assistent voor Bedrijven | TechSolutionsUtrecht",
     description:
-      "Een AI-assistent op je eigen WhatsApp-nummer die 24/7 klantvragen beantwoordt, afspraken inplant en bestellingen opneemt. Vanaf €30 per maand.",
+      "Baliebot: een AI-assistent op je eigen WhatsApp-nummer die 24/7 klantvragen beantwoordt, afspraken inplant en bestellingen opneemt. Vanaf €30 per maand.",
     type: "website",
     locale: "nl_NL",
     url: pageUrl,
@@ -170,12 +170,17 @@ export default function WhatsAppAssistentPage() {
           {/* Hero */}
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-[#25D366] to-[#128C7E] mb-6">
-                <MessageSquare className="w-8 h-8 text-white" />
+              <div className="inline-flex items-center gap-3 mb-6">
+                <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-[#25D366] to-[#128C7E]">
+                  <MessageSquare className="w-8 h-8 text-white" />
+                </div>
+                <span className="text-sm font-semibold tracking-wide text-[#128C7E] bg-[#25D366]/10 px-3 py-1 rounded-full">
+                  Baliebot
+                </span>
               </div>
 
               <h1 className="text-4xl sm:text-5xl font-bold text-[var(--text-primary)] mb-4">
-                WhatsApp <span className="gradient-text">AI-assistent</span> voor jouw bedrijf
+                Baliebot: je <span className="gradient-text">WhatsApp AI-assistent</span> voor jouw bedrijf
               </h1>
 
               <div className="flex flex-wrap gap-3 mb-6">
@@ -224,8 +229,9 @@ export default function WhatsAppAssistentPage() {
               <div className="aspect-square rounded-2xl bg-gradient-to-br from-[#25D366]/20 to-[#128C7E]/20 flex items-center justify-center">
                 <div className="text-center px-6">
                   <MessageSquare className="w-24 h-24 text-[#128C7E] mx-auto mb-4" />
-                  <div className="text-2xl font-bold text-[var(--text-primary)]">WhatsApp AI-assistent</div>
-                  <div className="text-3xl font-extrabold text-primary mt-2">Vanaf €30 p/m</div>
+                  <div className="text-2xl font-bold text-[var(--text-primary)]">Baliebot</div>
+                  <div className="text-[var(--text-muted)] text-sm mt-1">WhatsApp AI-assistent</div>
+                  <div className="text-3xl font-extrabold text-primary mt-3">Vanaf €30 p/m</div>
                   <div className="text-[var(--text-muted)] mt-1">Binnen 1 dag live</div>
                 </div>
               </div>
@@ -243,9 +249,9 @@ export default function WhatsAppAssistentPage() {
               afspraak, bestelling of klant.
             </p>
             <p className="text-[var(--text-secondary)] mb-4 leading-relaxed">
-              Met onze <strong className="text-[var(--text-primary)]">WhatsApp AI-assistent</strong> koppel je je
-              eigen WhatsApp Business-nummer aan een slimme assistent die jouw klanten meteen te woord staat. Hij is
-              getraind op jouw bedrijf: je diensten, prijzen, openingstijden en veelgestelde vragen. Zo voelt elk
+              Met <strong className="text-[var(--text-primary)]">Baliebot</strong>, onze WhatsApp AI-assistent, koppel
+              je je eigen WhatsApp Business-nummer aan een slimme assistent die jouw klanten meteen te woord staat. Hij
+              is getraind op jouw bedrijf: je diensten, prijzen, openingstijden en veelgestelde vragen. Zo voelt elk
               gesprek alsof het van jou komt.
             </p>
             <p className="text-[var(--text-secondary)] leading-relaxed">
@@ -316,7 +322,7 @@ export default function WhatsAppAssistentPage() {
               blijft eigenaar van je nummer en je gesprekken.
             </p>
             <p className="text-[var(--text-secondary)] leading-relaxed">
-              De assistent gebruikt jouw bedrijfsgegevens uitsluitend om jóuw klanten te helpen. Niets wordt gedeeld of
+              Baliebot gebruikt jouw bedrijfsgegevens uitsluitend om jóuw klanten te helpen. Niets wordt gedeeld of
               doorverkocht. In je beheeromgeving zie je alle gesprekken, afspraken en bestellingen op één plek terug.
             </p>
           </section>
@@ -357,9 +363,10 @@ export default function WhatsAppAssistentPage() {
           <section className="mt-20 text-center bg-[var(--bg-card)] border border-[var(--border)] rounded-2xl p-10">
             <h2 className="text-3xl font-bold text-[var(--text-primary)] mb-4">Klaar om geen klant meer te missen?</h2>
             <p className="text-[var(--text-secondary)] mb-8 max-w-2xl mx-auto leading-relaxed">
-              Vraag een gratis demo aan en ervaar zelf hoe de assistent jouw klanten te woord staat. Je krijgt binnen
-              één werkdag antwoord, direct van de developer.
+              Vraag een gratis demo aan en ervaar zelf hoe Baliebot jouw klanten te woord staat. Je krijgt binnen één
+              werkdag antwoord, direct van de developer.
             </p>
+            <p className="text-sm text-[var(--text-muted)] mb-8 -mt-4">Binnenkort ook te vinden op baliebot.nl</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a href="https://wa.me/31625518708" className="inline-flex items-center justify-center gap-2 bg-[#25D366] text-white px-8 py-4 rounded-xl font-semibold hover:bg-[#128C7E] transition-colors">
                 <Phone className="w-5 h-5" /> WhatsApp direct
