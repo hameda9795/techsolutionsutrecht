@@ -32,13 +32,13 @@ export default async function LatestProjects() {
         </Link>
       </div>
 
-      {/* Altijd één rij, zowel mobiel als desktop — volledige beeldkaarten */}
-      <div className="grid grid-cols-5 gap-2 sm:gap-4">
-        {latest.map((project) => (
+      {/* Eén rij: mobiel 3 zichtbaar, desktop 5 zichtbaar */}
+      <div className="grid grid-cols-3 lg:grid-cols-5 gap-2 sm:gap-4">
+        {latest.map((project, i) => (
           <Link
             key={project.id}
             href="/projecten"
-            className="group flex flex-col gap-2"
+            className={`group flex flex-col gap-2 ${i >= 3 ? "hidden lg:flex" : ""}`}
           >
             {/* Volledige projectafbeelding (9:16), niet bijgesneden */}
             <span className="relative block aspect-[9/16] w-full overflow-hidden transition-transform group-hover:-translate-y-1">
