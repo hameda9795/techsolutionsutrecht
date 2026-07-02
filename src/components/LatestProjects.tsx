@@ -41,7 +41,7 @@ export default async function LatestProjects() {
             className="group flex flex-col gap-2"
           >
             {/* Volledige projectafbeelding (9:16), niet bijgesneden */}
-            <span className="relative block aspect-[9/16] w-full rounded-2xl overflow-hidden bg-slate-100 ring-1 ring-slate-200 shadow-sm transition-all group-hover:shadow-lg group-hover:ring-[#0f766e]/40 group-hover:-translate-y-1">
+            <span className="relative block aspect-[9/16] w-full overflow-hidden transition-transform group-hover:-translate-y-1">
               {project.image ? (
                 <Image
                   src={project.image}
