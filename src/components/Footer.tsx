@@ -88,7 +88,7 @@ export default function Footer() {
 
           {/* Diensten */}
           <div>
-            <h4 className="text-white font-medium mb-4">Diensten</h4>
+            <h3 className="text-white font-medium mb-4">Diensten</h3>
             <ul className="space-y-2 text-sm">
               {footerLinks.diensten.map((link) => (
                 <li key={link.href}>
@@ -105,7 +105,7 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h4 className="text-white font-medium mb-4">Contact</h4>
+            <h3 className="text-white font-medium mb-4">Contact</h3>
             <ul className="space-y-3 text-sm">
               <li className="flex items-start gap-2">
                 <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0" />
@@ -140,7 +140,7 @@ export default function Footer() {
 
           {/* Legal & Links */}
           <div>
-            <h4 className="text-white font-medium mb-4">Links</h4>
+            <h3 className="text-white font-medium mb-4">Links</h3>
             <ul className="space-y-2 text-sm">
               {footerLinks.company.map((link) => (
                 <li key={link.href}>
@@ -158,7 +158,7 @@ export default function Footer() {
 
         {/* Branches */}
         <div className="pt-8 border-t border-slate-800 mb-6">
-          <h4 className="text-white font-medium mb-4">Website laten maken per branche</h4>
+          <h3 className="text-white font-medium mb-4">Website laten maken per branche</h3>
           <ul className="flex flex-wrap gap-x-5 gap-y-2 text-sm">
             {footerLinks.branches.map((link) => (
               <li key={link.href}>
@@ -172,7 +172,7 @@ export default function Footer() {
 
         {/* Regio / Steden */}
         <div className="mb-8">
-          <h4 className="text-white font-medium mb-4">Website laten maken in de regio Utrecht</h4>
+          <h3 className="text-white font-medium mb-4">Website laten maken in de regio Utrecht</h3>
           <ul className="flex flex-wrap gap-x-5 gap-y-2 text-sm">
             {footerLinks.regio.map((link) => (
               <li key={link.href}>
