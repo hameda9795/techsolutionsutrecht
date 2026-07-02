@@ -2,6 +2,11 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
+  experimental: {
+    // Inline kritische CSS en laad de rest niet-blokkerend (critters).
+    // Lost de "render-blocking requests" van de CSS-bundels op.
+    optimizeCss: true,
+  },
   images: {
     unoptimized: true,
   },
