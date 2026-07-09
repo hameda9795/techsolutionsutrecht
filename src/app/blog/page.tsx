@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import Link from "next/link";
-import { getAllPosts } from "@/lib/blog";
+import { getAllPosts, type BlogPostMeta } from "@/lib/blog";
 import BlogCard from "@/components/blog/BlogCard";
 import Footer from "@/components/Footer";
 
@@ -22,6 +22,22 @@ export const metadata: Metadata = {
 
 export default function BlogPage() {
   const posts = getAllPosts();
+
+  // Static blog post (custom page, not rendered via dynamic [slug] route)
+  const staticPosts: BlogPostMeta[] = [
+    {
+      slug: "website-laten-maken",
+      title: "Website Laten Maken in 2026: Kosten, Tijdlijn en Complete Gids",
+      description: "Website laten maken? Ontdek wat het kost, hoe lang het duurt en waar je op moet letten. De complete gids voor ondernemers en ZZP'ers die online willen groeien.",
+      date: "2026-07-10",
+      readTime: "10 min",
+      category: "Websites",
+      image: "/images/blog/website-laten-maken.svg",
+      author: "TechSolutionsUtrecht",
+    },
+  ];
+
+  const allPosts = [...staticPosts, ...posts];
 
   return (
     <>
@@ -59,9 +75,9 @@ export default function BlogPage() {
             </div>
           </div>
 
-          {posts.length > 0 ? (
+          {allPosts.length > 0 ? (
             <div className="grid gap-8 max-w-3xl mx-auto">
-              {posts.map((post, index) => (
+              {allPosts.map((post, index) => (
                 <BlogCard 
                   key={post.slug} 
                   post={post} 
@@ -78,13 +94,13 @@ export default function BlogPage() {
           )}
 
           {/* Categories Section */}
-          {posts.length > 0 && (
+          {allPosts.length > 0 && (
             <div className="mt-20 pt-12 border-t border-[var(--border)]">
               <h2 className="text-2xl font-bold text-[var(--text-primary)] mb-8 text-center">
                 Populaire onderwerpen
               </h2>
               <div className="flex flex-wrap justify-center gap-4">
-                {Array.from(new Set(posts.map(p => p.category))).map((category) => (
+                {Array.from(new Set(allPosts.map(p => p.category))).map((category) => (
                   <span
                     key={category}
                     className="px-4 py-2 bg-[var(--bg-card)] border border-[var(--border)] rounded-full text-[var(--text-secondary)] hover:border-primary hover:text-primary transition-colors cursor-pointer"

@@ -233,6 +233,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     // Dynamically generated blog posts
     ...blogPostEntries,
+    // Static/custom blog posts
+    {
+      url: `${baseUrl}/blog/website-laten-maken`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
     // Legacy blog posts (keep for SEO)
     {
       url: `${baseUrl}/blog/laptop-start-niet-op-5-oplossingen`,

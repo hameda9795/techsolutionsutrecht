@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Tijdlijn die laat zien hoe lang het duurt om een website te laten maken, van start tot livegang.">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0D1117"/>
+      <stop offset="100%" stop-color="#161B22"/>
+    </linearGradient>
+    <linearGradient id="line" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FF5722"/>
+      <stop offset="100%" stop-color="#7C4DFF"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <text x="600" y="90" text-anchor="middle" fill="#F0F6FC" font-family="Inter, system-ui, sans-serif" font-size="36" font-weight="700">Tijdlijn Website Laten Maken</text>
+  <line x1="150" y1="320" x2="1050" y2="320" stroke="#30363D" stroke-width="4"/>
+  <line x1="150" y1="320" x2="900" y2="320" stroke="url(#line)" stroke-width="4"/>
+  <circle cx="150" cy="320" r="20" fill="#FF5722"/>
+  <text x="150" y="375" text-anchor="middle" fill="#F0F6FC" font-family="Inter, system-ui, sans-serif" font-size="18" font-weight="600">Kennismaking</text>
+  <circle cx="400" cy="320" r="20" fill="#FF5722"/>
+  <text x="400" y="375" text-anchor="middle" fill="#F0F6FC" font-family="Inter, system-ui, sans-serif" font-size="18" font-weight="600">Design</text>
+  <circle cx="650" cy="320" r="20" fill="#7C4DFF"/>
+  <text x="650" y="375" text-anchor="middle" fill="#F0F6FC" font-family="Inter, system-ui, sans-serif" font-size="18" font-weight="600">Bouw</text>
+  <circle cx="900" cy="320" r="20" fill="#7C4DFF"/>
+  <text x="900" y="375" text-anchor="middle" fill="#F0F6FC" font-family="Inter, system-ui, sans-serif" font-size="18" font-weight="600">Content &amp; Test</text>
+  <circle cx="1050" cy="320" r="20" fill="#00E5FF"/>
+  <text x="1050" y="375" text-anchor="middle" fill="#F0F6FC" font-family="Inter, system-ui, sans-serif" font-size="18" font-weight="600">Live</text>
+  <text x="600" y="500" text-anchor="middle" fill="#8B949E" font-family="Inter, system-ui, sans-serif" font-size="20">Standaard website: binnen 1 week online</text>
+</svg>
