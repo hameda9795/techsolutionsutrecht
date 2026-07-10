@@ -50,14 +50,14 @@ const faqs = [
 const faqSchema = faqPageSchema(faqs);
 
 export const metadata: Metadata = {
-  title: "Maatwerk Webapplicatie Laten Maken Utrecht | React & Next.js",
+  title: "Webapplicatie Laten Maken | Maatwerk in React & Next.js | TechSolutions",
   description:
-    "Maatwerk webapplicaties, dashboards en portals laten bouwen in Utrecht met React, Next.js en Node.js. Schaalbaar en op maat. Direct contact met de developer.",
+    "Webapplicatie laten maken? Maatwerk webapplicaties, dashboards en portals in React, Next.js en Node.js, gebouwd in Utrecht. Direct contact met de developer.",
   alternates: { canonical: pageUrl },
   openGraph: {
-    title: "Maatwerk Webapplicatie Laten Maken Utrecht | React & Next.js",
+    title: "Webapplicatie Laten Maken | Maatwerk in React & Next.js | TechSolutions",
     description:
-      "Maatwerk webapplicaties, dashboards en portals laten bouwen in Utrecht met React, Next.js en Node.js. Schaalbaar en op maat.",
+      "Webapplicatie laten maken? Maatwerk webapplicaties, dashboards en portals in React, Next.js en Node.js, gebouwd in Utrecht.",
     type: "website",
     locale: "nl_NL",
     url: pageUrl,
@@ -126,8 +126,8 @@ export default function MaatwerkPage() {
               </div>
 
               <h1 className="text-4xl sm:text-5xl font-bold text-[var(--color-ink)] mb-4">
-                Maatwerk Webapplicatie Laten Maken in{" "}
-                <span className="text-[var(--color-primary)]">Utrecht</span>
+                Webapplicatie Laten Maken —{" "}
+                <span className="text-[var(--color-primary)]">Maatwerk uit Utrecht</span>
               </h1>
 
               <div className="flex flex-wrap gap-3 mb-6">

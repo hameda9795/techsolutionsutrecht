@@ -50,14 +50,14 @@ const faqs = [
 const faqSchema = faqPageSchema(faqs);
 
 export const metadata: Metadata = {
-  title: "SEO Specialist Utrecht | Hoger in Google | TechSolutions",
+  title: "SEO Specialist Utrecht | Zoekmachine Optimalisatie | TechSolutions",
   description:
-    "SEO specialist in Utrecht voor technische SEO, content en local SEO. Hoger in Google met meetbare resultaten. Direct contact met de developer, vanaf €200 per maand.",
+    "SEO specialist in Utrecht voor zoekmachine optimalisatie: technische SEO, SEO teksten en lokale SEO. Hoger in Google met meetbare resultaten, vanaf €200 per maand.",
   alternates: { canonical: pageUrl },
   openGraph: {
-    title: "SEO Specialist Utrecht | Hoger in Google | TechSolutionsUtrecht",
+    title: "SEO Specialist Utrecht | Zoekmachine Optimalisatie | TechSolutionsUtrecht",
     description:
-      "SEO specialist in Utrecht voor technische SEO, content en local SEO. Hoger in Google met meetbare resultaten. Direct contact met de developer.",
+      "SEO specialist in Utrecht voor zoekmachine optimalisatie: technische SEO, SEO teksten en lokale SEO. Hoger in Google met meetbare resultaten.",
     type: "website",
     locale: "nl_NL",
     url: pageUrl,
@@ -174,7 +174,7 @@ export default function SEOPage() {
           {/* Intro / Waarom SEO */}
           <section className="mt-24 max-w-3xl">
             <h2 className="text-3xl font-bold text-[var(--color-ink)] mb-6">
-              Waarom SEO belangrijk is voor ondernemers in Utrecht
+              Waarom zoekmachine optimalisatie belangrijk is voor ondernemers in Utrecht
             </h2>
             <p className="text-[var(--color-muted)] mb-4 leading-relaxed">
               De meeste mensen die op zoek zijn naar een product of dienst beginnen bij Google. Wie op de eerste
@@ -254,23 +254,23 @@ export default function SEOPage() {
 
           {/* Interne links */}
           <section className="mt-20">
-            <h2 className="text-3xl font-bold text-[var(--color-ink)] mb-4">Meer weten?</h2>
+            <h2 className="text-3xl font-bold text-[var(--color-ink)] mb-4">Verdiep je in mijn SEO-diensten</h2>
             <p className="text-[var(--color-muted)] mb-8 max-w-3xl leading-relaxed">
-              SEO werkt het best in combinatie met een snelle, goed gebouwde website. Bekijk ook deze pagina&apos;s,
-              of lees mijn blog over lokale vindbaarheid.
+              Zoekmachine optimalisatie bestaat uit meerdere specialismen. Voor de twee belangrijkste heb ik een
+              eigen pagina met uitleg en aanpak — of bekijk hoe SEO samenwerkt met een snelle website.
             </p>
             <div className="grid md:grid-cols-3 gap-6">
+              <Link href="/diensten/seo/teksten" className="card-service block p-6 rounded-2xl bg-[var(--color-bg)] border border-[var(--color-border)] hover:border-primary/40 transition-colors">
+                <h3 className="text-lg font-bold text-[var(--color-ink)] mb-2">SEO Teksten Laten Schrijven</h3>
+                <p className="text-[var(--color-muted)] text-sm">Webteksten en blogs op basis van echt zoekwoordonderzoek.</p>
+              </Link>
+              <Link href="/diensten/seo/lokale-seo" className="card-service block p-6 rounded-2xl bg-[var(--color-bg)] border border-[var(--color-border)] hover:border-primary/40 transition-colors">
+                <h3 className="text-lg font-bold text-[var(--color-ink)] mb-2">Lokale SEO</h3>
+                <p className="text-[var(--color-muted)] text-sm">Bovenaan in het kaartje van Google in jouw regio.</p>
+              </Link>
               <Link href="/diensten/wordpress" className="card-service block p-6 rounded-2xl bg-[var(--color-bg)] border border-[var(--color-border)] hover:border-primary/40 transition-colors">
                 <h3 className="text-lg font-bold text-[var(--color-ink)] mb-2">WordPress website laten maken</h3>
                 <p className="text-[var(--color-muted)] text-sm">Een snelle, SEO-klare website die je zelf kunt beheren.</p>
-              </Link>
-              <Link href="/blog/lokale-seo-utrecht" className="card-service block p-6 rounded-2xl bg-[var(--color-bg)] border border-[var(--color-border)] hover:border-primary/40 transition-colors">
-                <h3 className="text-lg font-bold text-[var(--color-ink)] mb-2">Blog: Lokale SEO in Utrecht</h3>
-                <p className="text-[var(--color-muted)] text-sm">Zo word je gevonden door klanten in jouw regio.</p>
-              </Link>
-              <Link href="/blog/website-niet-in-google" className="card-service block p-6 rounded-2xl bg-[var(--color-bg)] border border-[var(--color-border)] hover:border-primary/40 transition-colors">
-                <h3 className="text-lg font-bold text-[var(--color-ink)] mb-2">Blog: Website niet in Google?</h3>
-                <p className="text-[var(--color-muted)] text-sm">De meest voorkomende oorzaken en oplossingen.</p>
               </Link>
             </div>
           </section>

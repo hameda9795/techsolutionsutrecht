@@ -45,9 +45,17 @@ const faqs = [
 const faqSchema = faqPageSchema(faqs);
 
 export const metadata: Metadata = {
-  title: "Website Onderhoud Utrecht | Updates, Beveiliging & Backups | TechSolutions",
-  description: "Zorgeloos website onderhoud in Utrecht: updates, beveiliging, dagelijkse backups en snelle support. Houd je WordPress-website veilig en up-to-date.",
+  title: "Website Onderhoud | WordPress Updates, Beveiliging & Backups | TechSolutions",
+  description: "Website onderhoud vanaf €50 per maand: WordPress onderhoud met updates, beveiliging, dagelijkse backups en snelle support vanuit Utrecht. Maandelijks opzegbaar.",
   alternates: { canonical: "https://techsolutionsutrecht.nl/diensten/website-onderhoud" },
+  openGraph: {
+    title: "Website Onderhoud | WordPress Updates, Beveiliging & Backups | TechSolutions",
+    description: "Website onderhoud vanaf €50 per maand: WordPress onderhoud met updates, beveiliging, dagelijkse backups en snelle support vanuit Utrecht.",
+    type: "website",
+    locale: "nl_NL",
+    url: "https://techsolutionsutrecht.nl/diensten/website-onderhoud",
+    siteName: "TechSolutionsUtrecht",
+  },
 };
 
 const features = [
