@@ -110,11 +110,11 @@ export default function FAQPage() {
             <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-primary/10 mb-6">
               <HelpCircle className="w-8 h-8 text-primary" />
             </div>
-            <h1 className="text-4xl sm:text-5xl font-bold text-[var(--text-primary)] mb-6">
+            <h1 className="text-4xl sm:text-5xl font-bold text-[var(--color-ink)] mb-6">
               Veelgestelde{" "}
-              <span className="gradient-text">Vragen</span>
+              <span className="text-[var(--color-primary)]">Vragen</span>
             </h1>
-            <p className="text-lg text-[var(--text-secondary)]">
+            <p className="text-lg text-[var(--color-muted)]">
               Antwoorden op de meest gestelde vragen. Niet gevonden wat je zocht?{" "}
               <Link href="/contact" className="text-primary hover:underline">Neem contact op</Link>.
             </p>
@@ -124,7 +124,7 @@ export default function FAQPage() {
           <div className="space-y-12">
             {faqs.map((section) => (
               <div key={section.category}>
-                <h2 className="text-2xl font-bold text-[var(--text-primary)] mb-6 flex items-center gap-3">
+                <h2 className="text-2xl font-bold text-[var(--color-ink)] mb-6 flex items-center gap-3">
                   <span className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary text-lg">
                     {section.category[0]}
                   </span>
@@ -135,14 +135,14 @@ export default function FAQPage() {
                   {section.questions.map((faq, index) => (
                     <div 
                       key={index}
-                      className="bg-[var(--bg-card)] border border-[var(--border)] rounded-xl overflow-hidden"
+                      className="bg-[var(--color-bg)] border border-[var(--color-border)] rounded-xl overflow-hidden"
                     >
                       <div className="p-6">
-                        <h3 className="text-lg font-semibold text-[var(--text-primary)] mb-3 flex items-start gap-3">
+                        <h3 className="text-lg font-semibold text-[var(--color-ink)] mb-3 flex items-start gap-3">
                           <ChevronDown className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
                           {faq.q}
                         </h3>
-                        <p className="text-[var(--text-secondary)] pl-8">
+                        <p className="text-[var(--color-muted)] pl-8">
                           {faq.a}
                         </p>
                       </div>
@@ -154,11 +154,11 @@ export default function FAQPage() {
           </div>
 
           {/* CTA */}
-          <div className="mt-16 p-8 bg-gradient-to-br from-primary/10 to-secondary/10 border border-primary/20 rounded-2xl text-center">
-            <h3 className="text-2xl font-bold text-[var(--text-primary)] mb-4">
+          <div className="mt-16 p-8 bg-[var(--color-primary)]/10 border border-primary/20 rounded-2xl text-center">
+            <h3 className="text-2xl font-bold text-[var(--color-ink)] mb-4">
               Nog vragen?
             </h3>
-            <p className="text-[var(--text-secondary)] mb-6">
+            <p className="text-[var(--color-muted)] mb-6">
               We helpen je graag persoonlijk. Stuur ons een bericht en we reageren binnen 4 uur.
             </p>
             <div className="flex flex-wrap justify-center gap-4">

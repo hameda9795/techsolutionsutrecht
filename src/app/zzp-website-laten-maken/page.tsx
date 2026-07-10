@@ -85,7 +85,7 @@ export default function ZZPWebsitePage() {
       <main className="pt-32 pb-24">
         <div className="container-custom">
           {/* Breadcrumb */}
-          <nav className="text-sm text-[var(--text-muted)] mb-8">
+          <nav className="text-sm text-[var(--color-muted)] mb-8">
             <Link href="/" className="hover:text-primary">Home</Link>
             <span className="mx-2">/</span>
             <span>ZZP Website</span>
@@ -93,20 +93,20 @@ export default function ZZPWebsitePage() {
 
           <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">
             <div>
-              <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-primary to-secondary mb-6">
+              <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-[var(--color-primary)] mb-6">
                 <User className="w-8 h-8 text-white" />
               </div>
               
-              <h1 className="text-4xl sm:text-5xl font-bold text-[var(--text-primary)] mb-4">
+              <h1 className="text-4xl sm:text-5xl font-bold text-[var(--color-ink)] mb-4">
                 ZZP Website{" "}
-                <span className="gradient-text">Laten Maken in Utrecht</span>
+                <span className="text-[var(--color-primary)]">Laten Maken in Utrecht</span>
               </h1>
 
-              <p className="text-lg text-[var(--text-secondary)] mb-6">
-                <strong className="text-[var(--text-primary)]">Een betaalbare, professionele website voor ZZP'ers.</strong>{" "}
+              <p className="text-lg text-[var(--color-muted)] mb-6">
+                <strong className="text-[var(--color-ink)]">Een betaalbare, professionele website voor ZZP'ers.</strong>{" "}
                 Scherp geprijsd, binnen <strong className="text-primary">1 week</strong> online en met{" "}
                 <strong className="text-primary">direct contact met de developer</strong>.
-                Perfect voor <strong className="text-[var(--text-primary)]">startende ondernemers</strong> en ZZP'ers in Utrecht.
+                Perfect voor <strong className="text-[var(--color-ink)]">startende ondernemers</strong> en ZZP'ers in Utrecht.
               </p>
 
               <div className="grid sm:grid-cols-2 gap-3 mb-8">
@@ -115,14 +115,14 @@ export default function ZZPWebsitePage() {
                     <div className="w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
                       <Check className="w-3 h-3 text-primary" />
                     </div>
-                    <span className="text-[var(--text-secondary)]">{feature}</span>
+                    <span className="text-[var(--color-muted)]">{feature}</span>
                   </div>
                 ))}
               </div>
 
               <div className="flex flex-wrap items-center gap-6 mb-8">
                 <div className="text-3xl font-bold text-primary">Vanaf €250</div>
-                <div className="text-[var(--text-muted)]">Binnen 1 week online</div>
+                <div className="text-[var(--color-muted)]">Binnen 1 week online</div>
               </div>
 
               <div className="flex flex-wrap gap-4">
@@ -142,12 +142,12 @@ export default function ZZPWebsitePage() {
             </div>
 
             <div className="relative">
-              <div className="aspect-square rounded-2xl bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center">
+              <div className="aspect-square rounded-2xl bg-[var(--color-primary)]/10 flex items-center justify-center">
                 <div className="text-center">
                   <User className="w-24 h-24 text-primary mx-auto mb-4" />
-                  <div className="text-2xl font-bold text-[var(--text-primary)]">ZZP Website</div>
+                  <div className="text-2xl font-bold text-[var(--color-ink)]">ZZP Website</div>
                   <div className="text-3xl font-extrabold text-primary mt-2">€250</div>
-                  <div className="text-[var(--text-muted)] mt-1">All-in prijs</div>
+                  <div className="text-[var(--color-muted)] mt-1">All-in prijs</div>
                 </div>
               </div>
             </div>
@@ -156,26 +156,26 @@ export default function ZZPWebsitePage() {
           {/* Benefits */}
           <div className="grid md:grid-cols-3 gap-6 mb-20">
             {benefits.map((benefit) => (
-              <div key={benefit.title} className="p-6 bg-[var(--bg-card)] border border-[var(--border)] rounded-xl">
+              <div key={benefit.title} className="p-6 bg-[var(--color-bg)] border border-[var(--color-border)] rounded-xl">
                 <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
                   <benefit.icon className="w-6 h-6 text-primary" />
                 </div>
-                <h3 className="text-xl font-bold text-[var(--text-primary)] mb-2">{benefit.title}</h3>
-                <p className="text-[var(--text-secondary)]">{benefit.description}</p>
+                <h3 className="text-xl font-bold text-[var(--color-ink)] mb-2">{benefit.title}</h3>
+                <p className="text-[var(--color-muted)]">{benefit.description}</p>
               </div>
             ))}
           </div>
 
           {/* Why ZZP */}
-          <div className="bg-[var(--bg-card)] border border-[var(--border)] rounded-2xl p-8">
-            <h2 className="text-2xl font-bold text-[var(--text-primary)] mb-6">
+          <div className="bg-[var(--color-bg)] border border-[var(--color-border)] rounded-2xl p-8">
+            <h2 className="text-2xl font-bold text-[var(--color-ink)] mb-6">
               Waarom Kiezen voor een Betaalbare ZZP Website?
             </h2>
             
-            <div className="grid md:grid-cols-2 gap-6 text-[var(--text-secondary)]">
+            <div className="grid md:grid-cols-2 gap-6 text-[var(--color-muted)]">
               <div>
                 <p className="mb-4">
-                  Als <strong className="text-[var(--text-primary)]">startende ondernemer</strong> of ZZP'er 
+                  Als <strong className="text-[var(--color-ink)]">startende ondernemer</strong> of ZZP'er 
                   heeft u vaak een beperkt budget. Een dure website van €2.000+ is dan niet haalbaar. 
                   Toch heeft u een professionele online presentatie nodig om klanten te winnen.
                 </p>
@@ -187,7 +187,7 @@ export default function ZZPWebsitePage() {
               </div>
               
               <div>
-                <h3 className="font-semibold text-[var(--text-primary)] mb-3">Wat krijgt u?</h3>
+                <h3 className="font-semibold text-[var(--color-ink)] mb-3">Wat krijgt u?</h3>
                 <ul className="space-y-2">
                   <li className="flex items-start gap-2">
                     <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
@@ -216,12 +216,12 @@ export default function ZZPWebsitePage() {
 
           {/* FAQ */}
           <section className="mt-20 max-w-3xl">
-            <h2 className="text-3xl font-bold text-[var(--text-primary)] mb-10">Veelgestelde vragen — ZZP website</h2>
+            <h2 className="text-3xl font-bold text-[var(--color-ink)] mb-10">Veelgestelde vragen — ZZP website</h2>
             <div className="space-y-4">
               {faqs.map((faq) => (
-                <div key={faq.question} className="bg-[var(--bg-card)] border border-[var(--border)] rounded-xl p-6">
-                  <h3 className="text-lg font-semibold text-[var(--text-primary)] mb-2">{faq.question}</h3>
-                  <p className="text-[var(--text-secondary)] leading-relaxed">{faq.answer}</p>
+                <div key={faq.question} className="bg-[var(--color-bg)] border border-[var(--color-border)] rounded-xl p-6">
+                  <h3 className="text-lg font-semibold text-[var(--color-ink)] mb-2">{faq.question}</h3>
+                  <p className="text-[var(--color-muted)] leading-relaxed">{faq.answer}</p>
                 </div>
               ))}
             </div>

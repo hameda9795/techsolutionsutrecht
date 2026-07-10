@@ -192,18 +192,18 @@ export default function PortfolioContent() {
 
   return (
     <>
-      <main className="pt-24 pb-24 min-h-screen bg-[var(--bg-secondary)]">
+      <main className="pt-24 pb-24 min-h-screen bg-[var(--color-surface)]">
         <div className="container-custom">
           {/* Header */}
           <div className="text-center max-w-3xl mx-auto mb-12">
             <span className="text-primary font-semibold text-sm uppercase tracking-wider">
               Portfolio
             </span>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[var(--text-primary)] mt-4 mb-6">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[var(--color-ink)] mt-4 mb-6">
               Onze{" "}
-              <span className="gradient-text">Demo Projecten</span>
+              <span className="text-[var(--color-primary)]">Demo Projecten</span>
             </h1>
-            <p className="text-[var(--text-secondary)] text-lg">
+            <p className="text-[var(--color-muted)] text-lg">
               Bekijk voorbeeld websites voor verschillende branches. 
               Klik op een subcategorie om de projecten te zien.
             </p>
@@ -211,7 +211,7 @@ export default function PortfolioContent() {
             {/* Admin Link */}
             <Link
               href="/admin/login"
-              className="inline-flex items-center gap-2 mt-4 text-sm text-[var(--text-muted)] hover:text-primary transition-colors"
+              className="inline-flex items-center gap-2 mt-4 text-sm text-[var(--color-muted)] hover:text-primary transition-colors"
             >
               <Settings className="w-4 h-4" />
               Admin Panel
@@ -239,17 +239,17 @@ export default function PortfolioContent() {
                   className="absolute inset-0 bg-black/50 backdrop-blur-sm"
                   onClick={() => setIsMobileMenuOpen(false)}
                 />
-                <div className="absolute right-0 top-0 bottom-0 w-80 max-w-[85vw] bg-[var(--bg-card)] shadow-2xl">
-                  <div className="flex items-center justify-between p-4 border-b border-[var(--border)]">
-                    <h2 className="text-lg font-bold text-[var(--text-primary)] flex items-center gap-2">
+                <div className="absolute right-0 top-0 bottom-0 w-80 max-w-[85vw] bg-[var(--color-bg)] shadow-2xl">
+                  <div className="flex items-center justify-between p-4 border-b border-[var(--color-border)]">
+                    <h2 className="text-lg font-bold text-[var(--color-ink)] flex items-center gap-2">
                       <Building2 className="w-5 h-5 text-primary" />
                       Categorieën
                     </h2>
                     <button
                       onClick={() => setIsMobileMenuOpen(false)}
-                      className="p-2 hover:bg-[var(--bg-tertiary)] rounded-lg transition-colors"
+                      className="p-2 hover:bg-[var(--color-surface)] rounded-lg transition-colors"
                     >
-                      <X className="w-5 h-5 text-[var(--text-secondary)]" />
+                      <X className="w-5 h-5 text-[var(--color-muted)]" />
                     </button>
                   </div>
                   <div className="overflow-y-auto h-[calc(100vh-70px)]">
@@ -259,13 +259,13 @@ export default function PortfolioContent() {
                       const Icon = iconMap[category.icon] || Building2;
 
                       return (
-                        <div key={category.id} className="border-b border-[var(--border)] last:border-b-0">
+                        <div key={category.id} className="border-b border-[var(--color-border)] last:border-b-0">
                           <button
                             onClick={() => handleCategoryClick(category.id)}
                             className={`w-full text-left px-4 py-3 transition-all duration-200 flex items-center gap-3 ${
                               isSelected
                                 ? "bg-primary/5 text-primary" 
-                                : "text-[var(--text-secondary)] hover:bg-[var(--bg-tertiary)]"
+                                : "text-[var(--color-muted)] hover:bg-[var(--color-surface)]"
                             }`}
                           >
                             <Icon className={`w-5 h-5 flex-shrink-0 ${isSelected ? "text-primary" : ""}`} />
@@ -275,7 +275,7 @@ export default function PortfolioContent() {
                                 e.stopPropagation();
                                 toggleCategory(category.id);
                               }}
-                              className="p-1 hover:bg-[var(--bg-primary)] rounded transition-colors"
+                              className="p-1 hover:bg-[var(--color-bg)] rounded transition-colors"
                             >
                               {isExpanded ? (
                                 <ChevronDown className="w-4 h-4" />
@@ -286,7 +286,7 @@ export default function PortfolioContent() {
                           </button>
 
                           {isExpanded && (
-                            <div className="bg-[var(--bg-tertiary)]">
+                            <div className="bg-[var(--color-surface)]">
                               {category.subcategories.map((sub) => {
                                 const isSubSelected = selectedSubcategory === sub.name;
                                 const hasProjects = subcategoryHasProjects(category.id, sub.name);
@@ -301,7 +301,7 @@ export default function PortfolioContent() {
                                     className={`w-full text-left px-4 py-3 pl-12 transition-all duration-200 flex items-center justify-between text-sm border-l-2 ${
                                       isSubSelected
                                         ? "bg-primary/10 text-primary border-primary" 
-                                        : "text-[var(--text-muted)] hover:text-[var(--text-primary)] hover:bg-[var(--bg-secondary)] border-transparent"
+                                        : "text-[var(--color-muted)] hover:text-[var(--color-ink)] hover:bg-[var(--color-surface)] border-transparent"
                                     }`}
                                   >
                                     <span>{sub.name}</span>
@@ -323,9 +323,9 @@ export default function PortfolioContent() {
 
             {/* Left Sidebar - Desktop Only */}
             <aside className="hidden lg:block lg:w-80 flex-shrink-0">
-              <div className="bg-[var(--bg-card)] border border-[var(--border)] rounded-2xl overflow-hidden sticky top-28">
-                <div className="p-5 border-b border-[var(--border)]">
-                  <h2 className="text-lg font-bold text-[var(--text-primary)] flex items-center gap-2">
+              <div className="bg-[var(--color-bg)] border border-[var(--color-border)] rounded-2xl overflow-hidden sticky top-28">
+                <div className="p-5 border-b border-[var(--color-border)]">
+                  <h2 className="text-lg font-bold text-[var(--color-ink)] flex items-center gap-2">
                     <Building2 className="w-5 h-5 text-primary" />
                     Categorieën
                   </h2>
@@ -338,13 +338,13 @@ export default function PortfolioContent() {
                     const Icon = iconMap[category.icon] || Building2;
 
                     return (
-                      <div key={category.id} className="border-b border-[var(--border)] last:border-b-0">
+                      <div key={category.id} className="border-b border-[var(--color-border)] last:border-b-0">
                         <button
                           onClick={() => handleCategoryClick(category.id)}
                           className={`w-full text-left px-5 py-4 transition-all duration-200 flex items-center gap-3 ${
                             isSelected
                               ? "bg-primary/5 text-primary" 
-                              : "text-[var(--text-secondary)] hover:bg-[var(--bg-tertiary)]"
+                              : "text-[var(--color-muted)] hover:bg-[var(--color-surface)]"
                           }`}
                         >
                           <Icon className={`w-5 h-5 flex-shrink-0 ${isSelected ? "text-primary" : ""}`} />
@@ -354,7 +354,7 @@ export default function PortfolioContent() {
                               e.stopPropagation();
                               toggleCategory(category.id);
                             }}
-                            className="p-1 hover:bg-[var(--bg-primary)] rounded transition-colors"
+                            className="p-1 hover:bg-[var(--color-bg)] rounded transition-colors"
                           >
                             {isExpanded ? (
                               <ChevronDown className="w-4 h-4" />
@@ -365,7 +365,7 @@ export default function PortfolioContent() {
                         </button>
 
                         {isExpanded && (
-                          <div className="bg-[var(--bg-tertiary)]">
+                          <div className="bg-[var(--color-surface)]">
                             {category.subcategories.map((sub) => {
                               const isSubSelected = selectedSubcategory === sub.name;
                               const hasProjects = subcategoryHasProjects(category.id, sub.name);
@@ -377,7 +377,7 @@ export default function PortfolioContent() {
                                   className={`w-full text-left px-5 py-3 pl-14 transition-all duration-200 flex items-center justify-between text-sm border-l-2 ${
                                     isSubSelected
                                       ? "bg-primary/10 text-primary border-primary" 
-                                      : "text-[var(--text-muted)] hover:text-[var(--text-primary)] hover:bg-[var(--bg-secondary)] border-transparent"
+                                      : "text-[var(--color-muted)] hover:text-[var(--color-ink)] hover:bg-[var(--color-surface)] border-transparent"
                                   }`}
                                 >
                                   <span>{sub.name}</span>
@@ -400,7 +400,7 @@ export default function PortfolioContent() {
             <div className="flex-1">
               {/* Mobile Selected Category Info */}
               <div className="lg:hidden mb-6">
-                <div className="flex items-center gap-2 text-sm text-[var(--text-muted)] mb-3">
+                <div className="flex items-center gap-2 text-sm text-[var(--color-muted)] mb-3">
                   <span>{getCategoryName(selectedCategory || "")}</span>
                   <ChevronRight className="w-4 h-4" />
                   <span className="text-primary font-medium">{selectedSubcategory}</span>
@@ -410,7 +410,7 @@ export default function PortfolioContent() {
               {selectedSubcategory ? (
                 <div className="space-y-8">
                   {/* Breadcrumb - Desktop Only */}
-                  <div className="hidden lg:flex items-center gap-2 text-sm text-[var(--text-muted)]">
+                  <div className="hidden lg:flex items-center gap-2 text-sm text-[var(--color-muted)]">
                     <Link href="/portfolio" className="hover:text-primary transition-colors">Portfolio</Link>
                     <ChevronRight className="w-4 h-4" />
                     <span>{getCategoryName(selectedCategory || "")}</span>
@@ -420,10 +420,10 @@ export default function PortfolioContent() {
 
                   {/* Section Title */}
                   <div>
-                    <h2 className="text-2xl sm:text-3xl font-bold text-[var(--text-primary)]">
+                    <h2 className="text-2xl sm:text-3xl font-bold text-[var(--color-ink)]">
                       {selectedSubcategory} Websites
                     </h2>
-                    <p className="text-[var(--text-secondary)] mt-2">
+                    <p className="text-[var(--color-muted)] mt-2">
                       Bekijk onze demo projecten voor {selectedSubcategory.toLowerCase()}.
                       {hasRealProjects 
                         ? ` ${projectsToDisplay.length} project${projectsToDisplay.length > 1 ? 'en' : ''} gevonden.`
@@ -444,7 +444,7 @@ export default function PortfolioContent() {
                         {projectsToDisplay.map((project, index) => (
                           <div 
                             key={project.id || index}
-                            className="bg-[var(--bg-card)] border border-[var(--border)] rounded-2xl overflow-hidden hover:shadow-xl transition-shadow duration-300"
+                            className="bg-[var(--color-bg)] border border-[var(--color-border)] rounded-2xl overflow-hidden hover:shadow-xl transition-shadow duration-300"
                           >
                             <div className="grid lg:grid-cols-2 gap-0">
                               {/* Left Side - Project Info */}
@@ -461,23 +461,23 @@ export default function PortfolioContent() {
                                     )}
                                   </div>
                                   
-                                  <h3 className="text-2xl font-bold text-[var(--text-primary)] mb-3">
+                                  <h3 className="text-2xl font-bold text-[var(--color-ink)] mb-3">
                                     {project.title}
                                   </h3>
                                   
-                                  <p className="text-[var(--text-secondary)] leading-relaxed">
+                                  <p className="text-[var(--color-muted)] leading-relaxed">
                                     {project.short_desc}
                                   </p>
                                 </div>
 
                                 <div className="flex-1">
-                                  <h4 className="text-sm font-semibold text-[var(--text-primary)] mb-3 flex items-center gap-2">
+                                  <h4 className="text-sm font-semibold text-[var(--color-ink)] mb-3 flex items-center gap-2">
                                     <Code2 className="w-4 h-4 text-primary" />
                                     Kenmerken
                                   </h4>
                                   <ul className="space-y-2">
                                     {project.features.slice(0, 6).map((feature, fIdx) => (
-                                      <li key={fIdx} className="flex items-start gap-2 text-sm text-[var(--text-secondary)]">
+                                      <li key={fIdx} className="flex items-start gap-2 text-sm text-[var(--color-muted)]">
                                         <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
                                         <span>{feature}</span>
                                       </li>
@@ -485,7 +485,7 @@ export default function PortfolioContent() {
                                   </ul>
                                 </div>
 
-                                <div className="mt-6 pt-6 border-t border-[var(--border)] flex flex-wrap gap-3">
+                                <div className="mt-6 pt-6 border-t border-[var(--color-border)] flex flex-wrap gap-3">
                                   {hasRealProjects && project.demo_url ? (
                                     <>
                                       <a
@@ -500,7 +500,7 @@ export default function PortfolioContent() {
                                       </a>
                                       <Link
                                         href="/contact"
-                                        className="inline-flex items-center gap-2 px-5 py-2.5 border border-[var(--border)] text-[var(--text-primary)] rounded-xl font-semibold hover:bg-[var(--bg-tertiary)] transition-all duration-300 text-sm"
+                                        className="inline-flex items-center gap-2 px-5 py-2.5 border border-[var(--color-border)] text-[var(--color-ink)] rounded-xl font-semibold hover:bg-[var(--color-surface)] transition-all duration-300 text-sm"
                                       >
                                         <Globe className="w-4 h-4" />
                                         Vraag offerte aan
@@ -515,7 +515,7 @@ export default function PortfolioContent() {
                                         <Monitor className="w-4 h-4" />
                                         Vraag voorbeeld aan
                                       </Link>
-                                      <span className="inline-flex items-center gap-2 px-5 py-2.5 text-[var(--text-muted)] text-sm">
+                                      <span className="inline-flex items-center gap-2 px-5 py-2.5 text-[var(--color-muted)] text-sm">
                                         🎨 Binnenkort live
                                       </span>
                                     </>
@@ -524,7 +524,7 @@ export default function PortfolioContent() {
                               </div>
 
                               {/* Right Side - Project Image */}
-                              <div className="relative bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 min-h-[300px] lg:min-h-full">
+                              <div className="relative bg-[var(--color-ink)] min-h-[300px] lg:min-h-full">
                                 <div className="absolute inset-0 opacity-10">
                                   <div className="absolute inset-0" style={{
                                     backgroundImage: `linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)`,
@@ -574,7 +574,7 @@ export default function PortfolioContent() {
                                   ) : (
                                     <div className="flex-1 flex items-center justify-center">
                                       <div className="text-center">
-                                        <div className="w-24 h-24 rounded-2xl bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center mx-auto mb-6 border border-primary/20">
+                                        <div className="w-24 h-24 rounded-2xl bg-[var(--color-primary)]/10 flex items-center justify-center mx-auto mb-6 border border-[var(--color-primary)]/20">
                                           {(() => {
                                             const IconComponent = getCategoryIcon(selectedCategory || "");
                                             return <IconComponent className="w-12 h-12 text-primary/60" />;
@@ -597,7 +597,7 @@ export default function PortfolioContent() {
                                   )}
                                 </div>
 
-                                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-primary/20 to-transparent" style={{
+                                <div className="absolute top-0 right-0 w-32 h-32 bg-[var(--color-primary)]/10" style={{
                                   clipPath: "polygon(100% 0, 0 0, 100% 100%)"
                                 }} />
                               </div>
@@ -607,11 +607,11 @@ export default function PortfolioContent() {
                       </div>
 
                       {/* CTA Section */}
-                      <div className="p-8 bg-gradient-to-br from-primary/10 to-secondary/10 border border-primary/20 rounded-2xl text-center">
-                        <h3 className="text-xl font-bold text-[var(--text-primary)] mb-3">
+                      <div className="p-8 bg-[var(--color-surface)] border border-[var(--color-primary)]/20 rounded-2xl text-center">
+                        <h3 className="text-xl font-bold text-[var(--color-ink)] mb-3">
                           Ook een {selectedSubcategory.toLowerCase()} website nodig?
                         </h3>
-                        <p className="text-[var(--text-secondary)] mb-6 max-w-2xl mx-auto">
+                        <p className="text-[var(--color-muted)] mb-6 max-w-2xl mx-auto">
                           Wij maken een op maat gemaakte website voor uw bedrijf. 
                           Neem contact met ons op voor een vrijblijvende offerte.
                         </p>
@@ -627,7 +627,7 @@ export default function PortfolioContent() {
                             href="https://wa.me/31625518708"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="inline-flex items-center gap-2 px-6 py-3 border-2 border-[var(--border)] text-[var(--text-primary)] rounded-xl font-semibold hover:bg-[var(--bg-tertiary)] transition-all duration-300"
+                            className="inline-flex items-center gap-2 px-6 py-3 border-2 border-[var(--color-border)] text-[var(--color-ink)] rounded-xl font-semibold hover:bg-[var(--color-surface)] transition-all duration-300"
                           >
                             WhatsApp ons
                           </a>
@@ -638,23 +638,23 @@ export default function PortfolioContent() {
                 </div>
               ) : (
                 <div className="space-y-8">
-                  <div className="text-center py-20 bg-[var(--bg-card)] border border-[var(--border)] rounded-3xl">
+                  <div className="text-center py-20 bg-[var(--color-bg)] border border-[var(--color-border)] rounded-3xl">
                     <div className="w-20 h-20 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto mb-6">
                       <Building2 className="w-10 h-10 text-primary" />
                     </div>
-                    <h3 className="text-xl font-bold text-[var(--text-primary)] mb-2">
+                    <h3 className="text-xl font-bold text-[var(--color-ink)] mb-2">
                       Selecteer een subcategorie
                     </h3>
-                    <p className="text-[var(--text-secondary)] max-w-md mx-auto px-6">
+                    <p className="text-[var(--color-muted)] max-w-md mx-auto px-6">
                       Klik op een categorie aan de linkerkant om de projecten te bekijken.
                     </p>
                   </div>
 
-                  <div className="p-8 bg-gradient-to-br from-primary/10 to-secondary/10 border border-primary/20 rounded-2xl text-center">
-                    <h2 className="text-2xl sm:text-3xl font-bold text-[var(--text-primary)] mb-4">
+                  <div className="p-8 bg-[var(--color-surface)] border border-primary/20 rounded-2xl text-center">
+                    <h2 className="text-2xl sm:text-3xl font-bold text-[var(--color-ink)] mb-4">
                       Ook een Website Nodig?
                     </h2>
-                    <p className="text-[var(--text-secondary)] mb-6 max-w-2xl mx-auto">
+                    <p className="text-[var(--color-muted)] mb-6 max-w-2xl mx-auto">
                       Laat ons je helpen met een professionele website voor jouw branche.
                     </p>
                     <div className="flex flex-wrap justify-center gap-4">

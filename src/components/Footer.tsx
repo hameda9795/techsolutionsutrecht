@@ -53,17 +53,17 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-slate-950 text-slate-400 border-t border-slate-800">
+    <footer className="bg-[var(--color-ink)] text-[var(--color-muted)] border-t border-[var(--color-border)]">
       <div className="max-w-6xl mx-auto px-6 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           
           {/* Brand Column */}
           <div>
             <Link href="/" className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 bg-[#0f766e] rounded-lg flex items-center justify-center">
+              <div className="w-8 h-8 bg-[var(--color-primary)] rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-lg">T</span>
               </div>
-              <span className="font-semibold text-white">
+              <span className="font-semibold text-[var(--color-bg)]">
                 TechSolutionsUtrecht
               </span>
             </Link>
@@ -77,7 +77,7 @@ export default function Footer() {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-9 h-9 rounded-lg bg-slate-800 flex items-center justify-center hover:bg-[#0f766e] hover:text-white transition-all"
+                  className="w-9 h-9 rounded-lg bg-[var(--color-surface)]/20 flex items-center justify-center hover:bg-[var(--color-primary)] hover:text-white transition-all"
                   aria-label={social.label}
                 >
                   <social.icon className="w-4 h-4" />
@@ -88,13 +88,13 @@ export default function Footer() {
 
           {/* Diensten */}
           <div>
-            <h3 className="text-white font-medium mb-4">Diensten</h3>
+            <h3 className="text-[var(--color-bg)] font-medium mb-4">Diensten</h3>
             <ul className="space-y-2 text-sm">
               {footerLinks.diensten.map((link) => (
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="hover:text-white transition-colors"
+                    className="hover:text-[var(--color-bg)] transition-colors"
                   >
                     {link.label}
                   </Link>
@@ -105,7 +105,7 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h3 className="text-white font-medium mb-4">Contact</h3>
+            <h3 className="text-[var(--color-bg)] font-medium mb-4">Contact</h3>
             <ul className="space-y-3 text-sm">
               <li className="flex items-start gap-2">
                 <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0" />
@@ -117,7 +117,7 @@ export default function Footer() {
                   href="https://wa.me/31625518708"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-white transition-colors"
+                  className="hover:text-[var(--color-bg)] transition-colors"
                 >
                   +31 6 25518708
                 </a>
@@ -126,7 +126,7 @@ export default function Footer() {
                 <Mail className="w-4 h-4 flex-shrink-0" />
                 <a
                   href="mailto:info@techsolutionsutrecht.nl"
-                  className="hover:text-white transition-colors"
+                  className="hover:text-[var(--color-bg)] transition-colors"
                 >
                   info@techsolutionsutrecht.nl
                 </a>
@@ -140,13 +140,13 @@ export default function Footer() {
 
           {/* Legal & Links */}
           <div>
-            <h3 className="text-white font-medium mb-4">Links</h3>
+            <h3 className="text-[var(--color-bg)] font-medium mb-4">Links</h3>
             <ul className="space-y-2 text-sm">
               {footerLinks.company.map((link) => (
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="hover:text-white transition-colors"
+                    className="hover:text-[var(--color-bg)] transition-colors"
                   >
                     {link.label}
                   </Link>
@@ -157,12 +157,12 @@ export default function Footer() {
         </div>
 
         {/* Branches */}
-        <div className="pt-8 border-t border-slate-800 mb-6">
-          <h3 className="text-white font-medium mb-4">Website laten maken per branche</h3>
+        <div className="pt-8 border-t border-[var(--color-border)] mb-6">
+          <h3 className="text-[var(--color-bg)] font-medium mb-4">Website laten maken per branche</h3>
           <ul className="flex flex-wrap gap-x-5 gap-y-2 text-sm">
             {footerLinks.branches.map((link) => (
               <li key={link.href}>
-                <Link href={link.href} className="hover:text-white transition-colors">
+                <Link href={link.href} className="hover:text-[var(--color-bg)] transition-colors">
                   Website voor {link.label.toLowerCase()}
                 </Link>
               </li>
@@ -172,11 +172,11 @@ export default function Footer() {
 
         {/* Regio / Steden */}
         <div className="mb-8">
-          <h3 className="text-white font-medium mb-4">Website laten maken in de regio Utrecht</h3>
+          <h3 className="text-[var(--color-bg)] font-medium mb-4">Website laten maken in de regio Utrecht</h3>
           <ul className="flex flex-wrap gap-x-5 gap-y-2 text-sm">
             {footerLinks.regio.map((link) => (
               <li key={link.href}>
-                <Link href={link.href} className="hover:text-white transition-colors">
+                <Link href={link.href} className="hover:text-[var(--color-bg)] transition-colors">
                   Website laten maken {link.label}
                 </Link>
               </li>
@@ -185,7 +185,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 border-t border-slate-800 flex flex-col md:flex-row items-center justify-between gap-4 text-sm">
+        <div className="pt-8 border-t border-[var(--color-border)] flex flex-col md:flex-row items-center justify-between gap-4 text-sm">
           <p>© 2025 TechSolutionsUtrecht • KvK: 99202301</p>
           
           <div className="flex items-center gap-6">
@@ -193,14 +193,14 @@ export default function Footer() {
               <Link
                 key={link.label}
                 href={link.href}
-                className="hover:text-white transition-colors"
+                className="hover:text-[var(--color-bg)] transition-colors"
               >
                 {link.label}
               </Link>
             ))}
             <button
               onClick={scrollToTop}
-              className="w-9 h-9 rounded-lg bg-slate-800 flex items-center justify-center hover:bg-[#0f766e] hover:text-white transition-all"
+              className="w-9 h-9 rounded-lg bg-[var(--color-surface)]/20 flex items-center justify-center hover:bg-[var(--color-primary)] hover:text-white transition-all"
               aria-label="Scroll to top"
             >
               <ArrowUp className="w-4 h-4" />

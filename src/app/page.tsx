@@ -26,8 +26,8 @@ export default function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
       <main>
-        <LatestProjects />
         <Hero />
+        <LatestProjects />
         <Services />
         <WhyChooseUs />
         <Testimonials />

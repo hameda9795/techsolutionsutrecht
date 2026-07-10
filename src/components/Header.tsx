@@ -2,29 +2,36 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
-import AnnouncementBar from "./AnnouncementBar";
-
 const navLinks = [
   { href: "/", label: "Home" },
   { href: "/diensten", label: "Diensten" },
-  { href: "/whatsapp-assistent", label: "WhatsApp AI" },
   { href: "/projecten", label: "Projecten" },
-  { href: "/portfolio", label: "Portfolio" },
   { href: "/blog", label: "Blog" },
   { href: "/over-ons", label: "Over mij" },
 ];
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => setIsScrolled(window.scrollY > 8);
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50">
-      {/* Altijd zichtbare aankondigingsbalk */}
-      <AnnouncementBar />
-
-      <div className="bg-white/80 backdrop-blur-md border-b border-slate-200/50">
+      <div
+        className={`transition-all duration-200 border-b border-[var(--color-border)] ${
+          isScrolled
+            ? "bg-[var(--color-bg)] shadow-sm"
+            : "bg-[var(--color-bg)]/95 backdrop-blur-md"
+        }`}
+      >
       <div className="max-w-6xl mx-auto px-6 py-3 flex items-center justify-between">
         
         {/* Logo */}
@@ -51,7 +58,7 @@ export default function Header() {
               className="w-10 h-10 object-contain transition-transform group-hover:scale-105"
               priority
             />
-            <span className="font-semibold text-slate-900 text-lg">
+            <span className="font-semibold text-[var(--color-ink)] text-lg">
               TechSolutions
             </span>
           </div>
@@ -63,7 +70,7 @@ export default function Header() {
             <Link
               key={link.href}
               href={link.href}
-              className="text-sm text-slate-600 hover:text-[#0f766e] transition-colors"
+              className="text-sm text-[var(--color-muted)] hover:text-[var(--color-primary)] transition-colors"
             >
               {link.label}
             </Link>
@@ -72,7 +79,7 @@ export default function Header() {
           {/* CTA Button */}
           <Link
             href="/contact"
-            className="bg-[#0f766e] text-white px-5 py-2.5 rounded-lg text-sm font-medium hover:bg-[#0d9488] transition-colors shadow-lg shadow-[#0f766e]/20"
+            className="bg-[var(--color-primary)] text-white px-5 py-2.5 rounded-lg text-sm font-medium hover:bg-[var(--color-primary-dark)] transition-colors"
           >
             Offerte
           </Link>
@@ -81,27 +88,27 @@ export default function Header() {
         {/* Mobile Menu Button */}
         <button
           onClick={() => setIsMenuOpen(!isMenuOpen)}
-          className="md:hidden p-2 hover:bg-slate-100 rounded-lg transition-colors"
+          className="md:hidden p-2 hover:bg-[var(--color-surface)] rounded-lg transition-colors"
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
         >
           {isMenuOpen ? (
-            <X className="w-6 h-6 text-slate-700" />
+            <X className="w-6 h-6 text-[var(--color-ink)]" />
           ) : (
-            <Menu className="w-6 h-6 text-slate-700" />
+            <Menu className="w-6 h-6 text-[var(--color-ink)]" />
           )}
         </button>
       </div>
 
       {/* Mobile Navigation Menu */}
       {isMenuOpen && (
-        <div className="md:hidden bg-white/95 backdrop-blur-md border-t border-slate-200">
+        <div className="md:hidden bg-[var(--color-bg)]/95 border-t border-[var(--color-border)]">
           <nav className="max-w-6xl mx-auto px-6 py-4 flex flex-col gap-2">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
                 onClick={() => setIsMenuOpen(false)}
-                className="text-slate-700 hover:text-[#0f766e] hover:bg-slate-50 px-4 py-3 rounded-lg transition-colors"
+                className="text-[var(--color-ink)] hover:text-[var(--color-primary)] hover:bg-[var(--color-surface)] px-4 py-3 rounded-lg transition-colors"
               >
                 {link.label}
               </Link>
@@ -111,7 +118,7 @@ export default function Header() {
             <Link
               href="/contact"
               onClick={() => setIsMenuOpen(false)}
-              className="bg-[#0f766e] text-white px-4 py-3 rounded-lg font-medium hover:bg-[#0d9488] transition-colors text-center mt-2"
+              className="bg-[var(--color-primary)] text-white px-4 py-3 rounded-lg font-medium hover:bg-[var(--color-primary-dark)] transition-colors text-center mt-2"
             >
               Offerte aanvragen
             </Link>

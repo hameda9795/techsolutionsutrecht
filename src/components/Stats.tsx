@@ -69,7 +69,7 @@ function AnimatedCounter({ value, suffix }: { value: number; suffix: string }) {
   }, [isVisible, value]);
 
   return (
-    <div ref={ref} className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-[var(--text-primary)] stat-glow">
+    <div ref={ref} className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-[var(--color-ink)] stat-glow">
       {value % 1 !== 0 ? count.toFixed(1) : Math.floor(count)}
       <span className="text-primary">{suffix}</span>
     </div>
@@ -78,7 +78,7 @@ function AnimatedCounter({ value, suffix }: { value: number; suffix: string }) {
 
 export default function Stats() {
   return (
-    <section className="py-20 bg-[var(--bg-secondary)] border-y border-[var(--border)]">
+    <section className="py-20 bg-[var(--color-surface)] border-y border-[var(--color-border)]">
       <div className="container-custom">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           {stats.map((stat, index) => (
@@ -88,7 +88,7 @@ export default function Stats() {
               style={{ animationDelay: `${index * 100}ms` }}
             >
               <AnimatedCounter value={stat.value} suffix={stat.suffix} />
-              <div className="mt-2 text-[var(--text-secondary)] font-medium">
+              <div className="mt-2 text-[var(--color-muted)] font-medium">
                 {stat.label}
               </div>
             </div>

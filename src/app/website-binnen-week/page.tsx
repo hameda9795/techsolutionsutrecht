@@ -94,25 +94,25 @@ export default function WebsiteBinnenWeekPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <main className="pt-32 pb-24">
         <div className="container-custom">
-          <nav className="text-sm text-[var(--text-muted)] mb-8">
+          <nav className="text-sm text-[var(--color-muted)] mb-8">
             <Link href="/" className="hover:text-primary">Home</Link>
             <span className="mx-2">/</span>
             <span>Binnen 1 Week</span>
           </nav>
 
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-yellow-500 to-orange-500 mb-6">
+            <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-[var(--color-primary)] mb-6">
               <Rocket className="w-8 h-8 text-white" />
             </div>
             
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-[var(--text-primary)] mb-6">
-              Website{" "}<span className="gradient-text">Binnen 1 Week</span>
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-[var(--color-ink)] mb-6">
+              Website{" "}<span className="text-[var(--color-primary)]">Binnen 1 Week</span>
               <br />
-              <span className="text-2xl sm:text-3xl text-[var(--text-secondary)]">Laten Maken</span>
+              <span className="text-2xl sm:text-3xl text-[var(--color-muted)]">Laten Maken</span>
             </h1>
             
-            <p className="text-lg sm:text-xl text-[var(--text-secondary)] mb-8">
-              <strong className="text-[var(--text-primary)]">Website laten maken binnen 1 week?</strong> 
+            <p className="text-lg sm:text-xl text-[var(--color-muted)] mb-8">
+              <strong className="text-[var(--color-ink)]">Website laten maken binnen 1 week?</strong> 
               Bij ons kan het! <strong className="text-primary">Snelle oplevering</strong> binnen 
               3-10 dagen. Soms zelfs sneller. Express service beschikbaar. 
               Geen lange wachtlijsten, direct aan de slag.
@@ -136,21 +136,21 @@ export default function WebsiteBinnenWeekPage() {
 
           {/* Timeline */}
           <div className="mb-20">
-            <h2 className="text-3xl font-bold text-[var(--text-primary)] text-center mb-12">
-              Hoe Wij Uw Website{" "}<span className="gradient-text">Binnen 1 Week</span>{" "}
+            <h2 className="text-3xl font-bold text-[var(--color-ink)] text-center mb-12">
+              Hoe Wij Uw Website{" "}<span className="text-[var(--color-primary)]">Binnen 1 Week</span>{" "}
               Opleveren
             </h2>
 
             <div className="grid md:grid-cols-5 gap-4">
               {timeline.map((item, index) => (
                 <div key={item.day} className="relative">
-                  <div className="p-6 bg-[var(--bg-card)] border border-[var(--border)] rounded-xl h-full">
+                  <div className="p-6 bg-[var(--color-bg)] border border-[var(--color-border)] rounded-xl h-full">
                     <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center mb-4">
                       <span className="text-white font-bold text-sm">{index + 1}</span>
                     </div>
                     <div className="text-primary font-semibold mb-2">{item.day}</div>
-                    <h3 className="text-lg font-bold text-[var(--text-primary)] mb-2">{item.title}</h3>
-                    <p className="text-[var(--text-secondary)] text-sm">{item.description}</p>
+                    <h3 className="text-lg font-bold text-[var(--color-ink)] mb-2">{item.title}</h3>
+                    <p className="text-[var(--color-muted)] text-sm">{item.description}</p>
                   </div>
                 </div>
               ))}
@@ -160,8 +160,8 @@ export default function WebsiteBinnenWeekPage() {
           {/* Features */}
           <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">
             <div>
-              <h2 className="text-3xl font-bold text-[var(--text-primary)] mb-6">
-                Wat Krijgt U Bij Onze{" "}<span className="gradient-text">Snelle Service?</span>
+              <h2 className="text-3xl font-bold text-[var(--color-ink)] mb-6">
+                Wat Krijgt U Bij Onze{" "}<span className="text-[var(--color-primary)]">Snelle Service?</span>
               </h2>
               
               <div className="grid sm:grid-cols-2 gap-4">
@@ -170,7 +170,7 @@ export default function WebsiteBinnenWeekPage() {
                     <div className="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
                       <Check className="w-4 h-4 text-primary" />
                     </div>
-                    <span className="text-[var(--text-secondary)]">{feature}</span>
+                    <span className="text-[var(--color-muted)]">{feature}</span>
                   </div>
                 ))}
               </div>
@@ -178,9 +178,9 @@ export default function WebsiteBinnenWeekPage() {
               <div className="mt-8 p-6 bg-primary/10 rounded-xl">
                 <div className="flex items-center gap-3 mb-3">
                   <Target className="w-6 h-6 text-primary" />
-                  <span className="font-semibold text-[var(--text-primary)]">Onze Belofte</span>
+                  <span className="font-semibold text-[var(--color-ink)]">Onze Belofte</span>
                 </div>
-                <p className="text-[var(--text-secondary)]">
+                <p className="text-[var(--color-muted)]">
                   We leveren altijd op tijd. Als we een deadline afspreken, houden we ons daaraan. 
                   Geen excuses, geen vertragingen. Uw website gaat live wanneer afgesproken.
                 </p>
@@ -188,12 +188,12 @@ export default function WebsiteBinnenWeekPage() {
             </div>
 
             <div className="relative">
-              <div className="aspect-square rounded-2xl bg-gradient-to-br from-yellow-500/20 to-orange-500/20 flex items-center justify-center">
+              <div className="aspect-square rounded-2xl bg-[var(--color-primary)]/10 flex items-center justify-center">
                 <div className="text-center">
                   <Clock className="w-24 h-24 text-yellow-500 mx-auto mb-4" />
-                  <div className="text-2xl font-bold text-[var(--text-primary)]">Snelle Oplevering</div>
+                  <div className="text-2xl font-bold text-[var(--color-ink)]">Snelle Oplevering</div>
                   <div className="text-3xl font-extrabold text-primary mt-2">3-10 Dagen</div>
-                  <div className="text-[var(--text-muted)] mt-1">Soms zelfs 1 week</div>
+                  <div className="text-[var(--color-muted)] mt-1">Soms zelfs 1 week</div>
                 </div>
               </div>
             </div>
@@ -201,25 +201,25 @@ export default function WebsiteBinnenWeekPage() {
 
           {/* FAQ */}
           <section className="mb-20 max-w-3xl">
-            <h2 className="text-3xl font-bold text-[var(--text-primary)] mb-10">Veelgestelde vragen — snel een website</h2>
+            <h2 className="text-3xl font-bold text-[var(--color-ink)] mb-10">Veelgestelde vragen — snel een website</h2>
             <div className="space-y-4">
               {faqs.map((faq) => (
-                <div key={faq.question} className="bg-[var(--bg-card)] border border-[var(--border)] rounded-xl p-6">
-                  <h3 className="text-lg font-semibold text-[var(--text-primary)] mb-2">{faq.question}</h3>
-                  <p className="text-[var(--text-secondary)] leading-relaxed">{faq.answer}</p>
+                <div key={faq.question} className="bg-[var(--color-bg)] border border-[var(--color-border)] rounded-xl p-6">
+                  <h3 className="text-lg font-semibold text-[var(--color-ink)] mb-2">{faq.question}</h3>
+                  <p className="text-[var(--color-muted)] leading-relaxed">{faq.answer}</p>
                 </div>
               ))}
             </div>
           </section>
 
           {/* CTA Section */}
-          <div className="bg-gradient-to-br from-primary/10 to-secondary/10 border border-primary/20 rounded-2xl p-8 text-center">
-            <h2 className="text-2xl sm:text-3xl font-bold text-[var(--text-primary)] mb-4">
-              Klaar om Uw Website{" "}<span className="gradient-text">Snel Online</span>{" "}
+          <div className="bg-[var(--color-primary)]/10 border border-primary/20 rounded-2xl p-8 text-center">
+            <h2 className="text-2xl sm:text-3xl font-bold text-[var(--color-ink)] mb-4">
+              Klaar om Uw Website{" "}<span className="text-[var(--color-primary)]">Snel Online</span>{" "}
               te Hebben?
             </h2>
             
-            <p className="text-[var(--text-secondary)] mb-6 max-w-2xl mx-auto">
+            <p className="text-[var(--color-muted)] mb-6 max-w-2xl mx-auto">
               Neem vandaag nog contact op. We bespreken uw wensen en kunnen vaak 
               binnen enkele dagen al starten. Snelle oplevering gegarandeerd.
             </p>

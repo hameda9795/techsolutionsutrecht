@@ -14,7 +14,7 @@ export function renderOgImage() {
           display: "flex",
           flexDirection: "column",
           justifyContent: "space-between",
-          background: "linear-gradient(135deg, #0f766e 0%, #134e4a 100%)",
+          background: "linear-gradient(135deg, oklch(0.520 0.170 247) 0%, oklch(0.420 0.160 247) 100%)",
           padding: "72px",
           fontFamily: "sans-serif",
           color: "#ffffff",
@@ -52,12 +52,12 @@ export function renderOgImage() {
           >
             Website laten maken in Utrecht
           </div>
-          <div style={{ fontSize: "34px", color: "#99f6e4", fontWeight: 500 }}>
+          <div style={{ fontSize: "34px", color: "oklch(0.900 0.020 247)", fontWeight: 500 }}>
             Professioneel, snel &amp; SEO-klaar — binnen 1 week online
           </div>
         </div>
 
-        <div style={{ display: "flex", gap: "16px", fontSize: "26px", color: "#ccfbf1" }}>
+        <div style={{ display: "flex", gap: "16px", fontSize: "26px", color: "oklch(0.950 0.010 247)" }}>
           <span>12+ jaar ervaring</span>
           <span>•</span>
           <span>Direct contact met de developer</span>

@@ -71,7 +71,7 @@ function ProjectPreview({
           />
         ) : (
           <div
-            className={`absolute inset-0 bg-gradient-to-br ${project.accent} flex items-center justify-center`}
+            className="absolute inset-0 bg-[var(--color-primary)] flex items-center justify-center"
           >
             <div
               className="absolute inset-0 opacity-20"
@@ -103,7 +103,7 @@ function ProjectCard({
 }) {
   return (
     <article
-      className={`group relative flex flex-col bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 ${
+      className={`group relative flex flex-col bg-[var(--color-bg)] border border-[var(--color-border)] rounded-2xl overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 ${
         featured ? "md:col-span-2 md:flex-row" : ""
       }`}
     >
@@ -116,7 +116,7 @@ function ProjectCard({
 
       <div className={`flex flex-col flex-1 p-5 sm:p-6 ${featured ? "md:justify-center" : ""}`}>
         <div className="flex flex-wrap items-center gap-2 mb-3">
-          <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-[#0f766e]/10 text-[#0f766e] text-[11px] font-semibold uppercase tracking-wide">
+          <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-[var(--color-primary)]/10 text-[var(--color-primary)] text-[11px] font-semibold uppercase tracking-wide">
             {projectTypeLabels[project.type]}
           </span>
           {featured && (
@@ -129,24 +129,24 @@ function ProjectCard({
           </span>
         </div>
 
-        <h3 className={`font-bold text-slate-900 ${featured ? "text-xl sm:text-2xl" : "text-lg"}`}>
+        <h3 className={`font-bold text-[var(--color-ink)] ${featured ? "text-xl sm:text-2xl" : "text-lg"}`}>
           {project.title}
         </h3>
-        <p className="text-slate-500 text-sm mt-1.5 leading-relaxed">{project.tagline}</p>
+        <p className="text-[var(--color-muted)] text-sm mt-1.5 leading-relaxed">{project.tagline}</p>
 
         {/* Stack-chips */}
         <div className="flex flex-wrap gap-1.5 mt-4">
           {project.stack.map((tech) => (
             <span
               key={tech}
-              className="px-2 py-0.5 rounded-md bg-slate-100 text-slate-600 text-[11px] font-medium"
+              className="px-2 py-0.5 rounded-md bg-[var(--color-surface)] text-[var(--color-muted)] text-[11px] font-medium"
             >
               {tech}
             </span>
           ))}
         </div>
 
-        <div className="flex items-center gap-2 mt-5 pt-5 border-t border-slate-100">
+        <div className="flex items-center gap-2 mt-5 pt-5 border-t border-[var(--color-border)]">
           <button
             onClick={onOpen}
             className="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-xl bg-slate-900 text-white text-sm font-semibold hover:bg-slate-800 transition-colors active:scale-95"
@@ -158,7 +158,7 @@ function ProjectCard({
               href={project.liveUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-xl border border-slate-200 text-slate-700 text-sm font-semibold hover:border-[#0f766e] hover:text-[#0f766e] transition-colors active:scale-95"
+              className="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-xl border border-[var(--color-border)] text-[var(--color-ink)] text-sm font-semibold hover:border-[var(--color-primary)] hover:text-[var(--color-primary)] transition-colors active:scale-95"
             >
               Live <ArrowUpRight className="w-4 h-4" />
             </a>
@@ -193,12 +193,12 @@ function ProjectModal({
         className="absolute inset-0 bg-slate-900/60 backdrop-blur-sm animate-[fadeIn_.2s_ease]"
         onClick={onClose}
       />
-      <div className="relative w-full sm:max-w-2xl max-h-[92vh] overflow-y-auto bg-white rounded-t-3xl sm:rounded-3xl shadow-2xl">
+      <div className="relative w-full sm:max-w-2xl max-h-[92vh] overflow-y-auto bg-[var(--color-bg)] rounded-t-3xl sm:rounded-3xl shadow-2xl">
         {/* Sluitknop */}
         <button
           onClick={onClose}
           aria-label="Sluiten"
-          className="absolute top-3 right-3 z-10 p-2 rounded-full bg-white/90 backdrop-blur text-slate-700 hover:bg-white shadow-md active:scale-90 transition"
+          className="absolute top-3 right-3 z-10 p-2 rounded-full bg-[var(--color-bg)]/90 backdrop-blur text-[var(--color-muted)] hover:bg-[var(--color-bg)] shadow-md active:scale-90 transition"
         >
           <X className="w-5 h-5" />
         </button>
@@ -214,37 +214,37 @@ function ProjectModal({
 
         <div className="p-5 sm:p-7">
           <div className="flex flex-wrap items-center gap-2 mb-3">
-            <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-[#0f766e]/10 text-[#0f766e] text-[11px] font-semibold uppercase tracking-wide">
+            <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-[var(--color-primary)]/10 text-[var(--color-primary)] text-[11px] font-semibold uppercase tracking-wide">
               {projectTypeLabels[project.type]}
             </span>
-            <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-slate-100 text-slate-600 text-[11px] font-semibold">
+            <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-[var(--color-surface)] text-[var(--color-muted)] text-[11px] font-semibold">
               <Layers className="w-3 h-3" /> {project.sector}
             </span>
           </div>
 
-          <h2 className="text-2xl font-bold text-slate-900">{project.title}</h2>
-          <p className="text-slate-600 mt-2 leading-relaxed">{project.description}</p>
+          <h2 className="text-2xl font-bold text-[var(--color-ink)]">{project.title}</h2>
+          <p className="text-[var(--color-muted)] mt-2 leading-relaxed">{project.description}</p>
 
-          <h3 className="flex items-center gap-2 text-sm font-bold text-slate-900 mt-6 mb-3">
-            <Check className="w-4 h-4 text-[#0f766e]" /> Belangrijkste features
+          <h3 className="flex items-center gap-2 text-sm font-bold text-[var(--color-ink)] mt-6 mb-3">
+            <Check className="w-4 h-4 text-[var(--color-primary)]" /> Belangrijkste features
           </h3>
           <ul className="grid sm:grid-cols-2 gap-2.5">
             {project.highlights.map((h) => (
-              <li key={h} className="flex items-start gap-2 text-sm text-slate-600">
-                <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-[#0f766e] flex-shrink-0" />
+              <li key={h} className="flex items-start gap-2 text-sm text-[var(--color-muted)]">
+                <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-[var(--color-primary)] flex-shrink-0" />
                 {h}
               </li>
             ))}
           </ul>
 
-          <h3 className="flex items-center gap-2 text-sm font-bold text-slate-900 mt-6 mb-3">
-            <Code2 className="w-4 h-4 text-[#0f766e]" /> Techniek
+          <h3 className="flex items-center gap-2 text-sm font-bold text-[var(--color-ink)] mt-6 mb-3">
+            <Code2 className="w-4 h-4 text-[var(--color-primary)]" /> Techniek
           </h3>
           <div className="flex flex-wrap gap-1.5">
             {project.stack.map((tech) => (
               <span
                 key={tech}
-                className="px-2.5 py-1 rounded-md bg-slate-100 text-slate-600 text-xs font-medium"
+                className="px-2.5 py-1 rounded-md bg-[var(--color-surface)] text-[var(--color-muted)] text-xs font-medium"
               >
                 {tech}
               </span>
@@ -257,14 +257,14 @@ function ProjectModal({
                 href={project.liveUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex-1 inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-[#0f766e] text-white font-semibold hover:bg-[#0d9488] transition-colors active:scale-95"
+                className="flex-1 inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-[var(--color-primary)] text-white font-semibold hover:bg-[var(--color-primary-dark)] transition-colors active:scale-95"
               >
                 Bekijk live project <ArrowUpRight className="w-4 h-4" />
               </a>
             )}
             <Link
               href="/contact"
-              className="flex-1 inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl border border-slate-200 text-slate-700 font-semibold hover:border-[#0f766e] hover:text-[#0f766e] transition-colors active:scale-95"
+              className="flex-1 inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl border border-[var(--color-border)] text-[var(--color-ink)] font-semibold hover:border-[var(--color-primary)] hover:text-[var(--color-primary)] transition-colors active:scale-95"
             >
               Zoiets ook? Neem contact op
             </Link>
@@ -305,19 +305,19 @@ export default function ProjectenContent({
     <>
       {/* Hero */}
       <section className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-slate-50 via-white to-teal-50/40 pointer-events-none" />
+        <div className="absolute inset-0 bg-[var(--color-bg)] pointer-events-none" />
         <div className="relative max-w-6xl mx-auto px-5 sm:px-6 pt-10 pb-12 sm:pt-16 sm:pb-16">
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#0f766e]/10 text-[#0f766e] text-sm font-medium mb-5">
-            <span className="w-2 h-2 rounded-full bg-[#0f766e] animate-pulse" />
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[var(--color-primary)]/10 text-[var(--color-primary)] text-sm font-medium mb-5">
+            <span className="w-2 h-2 rounded-full bg-[var(--color-primary)] animate-pulse" />
             Mijn werk
           </div>
-          <h1 className="text-3xl sm:text-5xl font-bold text-slate-900 tracking-tight max-w-3xl">
+          <h1 className="text-3xl sm:text-5xl font-bold text-[var(--color-ink)] tracking-tight max-w-3xl">
             Projecten die ik{" "}
-            <span className="bg-gradient-to-r from-[#0f766e] to-[#14b8a6] bg-clip-text text-transparent">
+            <span className="text-[var(--color-primary)]">
               heb gebouwd
             </span>
           </h1>
-          <p className="text-slate-600 text-base sm:text-lg mt-4 max-w-2xl leading-relaxed">
+          <p className="text-[var(--color-muted)] text-base sm:text-lg mt-4 max-w-2xl leading-relaxed">
             Een selectie van echte websites, webshops en applicaties. Klik op een
             project voor de details of bekijk het direct live.
           </p>
@@ -325,25 +325,25 @@ export default function ProjectenContent({
           {/* Mini-stats */}
           <div className="flex flex-wrap gap-6 sm:gap-10 mt-8">
             <div>
-              <div className="text-2xl sm:text-3xl font-bold text-[#0f766e]">
+              <div className="text-2xl sm:text-3xl font-bold text-[var(--color-primary)]">
                 {projects.length}+
               </div>
-              <div className="text-xs sm:text-sm text-slate-500">Live projecten</div>
+              <div className="text-xs sm:text-sm text-[var(--color-muted)]">Live projecten</div>
             </div>
             <div>
-              <div className="text-2xl sm:text-3xl font-bold text-[#0f766e]">100%</div>
-              <div className="text-xs sm:text-sm text-slate-500">Maatwerk</div>
+              <div className="text-2xl sm:text-3xl font-bold text-[var(--color-primary)]">100%</div>
+              <div className="text-xs sm:text-sm text-[var(--color-muted)]">Maatwerk</div>
             </div>
             <div>
-              <div className="text-2xl sm:text-3xl font-bold text-[#0f766e]">Utrecht</div>
-              <div className="text-xs sm:text-sm text-slate-500">& omgeving</div>
+              <div className="text-2xl sm:text-3xl font-bold text-[var(--color-primary)]">Utrecht</div>
+              <div className="text-xs sm:text-sm text-[var(--color-muted)]">& omgeving</div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Filters — horizontaal scrollbaar op mobiel */}
-      <div className="sticky top-[100px] md:top-[120px] z-30 bg-white/85 backdrop-blur-md border-y border-slate-200/70">
+      <div className="sticky top-[100px] md:top-[120px] z-30 bg-[var(--color-bg)]/95 border-y border-[var(--color-border)]">
         <div className="max-w-6xl mx-auto px-3 sm:px-6">
           <div className="flex gap-2 overflow-x-auto py-3 -mx-1 px-1 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
             {filters.map((f) => {
@@ -358,8 +358,8 @@ export default function ProjectenContent({
                   onClick={() => setFilter(f.id)}
                   className={`flex-shrink-0 inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-medium transition-all active:scale-95 ${
                     isActive
-                      ? "bg-[#0f766e] text-white shadow-md shadow-[#0f766e]/20"
-                      : "bg-slate-100 text-slate-600 hover:bg-slate-200"
+                      ? "bg-[var(--color-primary)] text-white shadow-md shadow-[var(--color-primary)]/20"
+                      : "bg-[var(--color-surface)] text-[var(--color-muted)] hover:bg-[var(--color-border)]"
                   }`}
                 >
                   {f.label}
@@ -391,7 +391,7 @@ export default function ProjectenContent({
         </div>
 
         {visible.length === 0 && (
-          <p className="text-center text-slate-500 py-16">
+          <p className="text-center text-[var(--color-muted)] py-16">
             Geen projecten in deze categorie.
           </p>
         )}
@@ -399,7 +399,7 @@ export default function ProjectenContent({
 
       {/* CTA */}
       <section className="max-w-6xl mx-auto px-5 sm:px-6 pb-16 sm:pb-24">
-        <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#0f766e] to-[#0d9488] px-6 py-10 sm:px-12 sm:py-14 text-center">
+        <div className="relative overflow-hidden rounded-3xl bg-[var(--color-primary)] px-6 py-10 sm:px-12 sm:py-14 text-center">
           <div
             className="absolute inset-0 opacity-10"
             style={{
@@ -418,7 +418,7 @@ export default function ProjectenContent({
           <div className="relative flex flex-col sm:flex-row justify-center gap-3 mt-7">
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-white text-[#0f766e] font-semibold hover:bg-slate-50 transition-colors active:scale-95"
+              className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-[var(--color-bg)] text-[var(--color-primary)] font-semibold hover:bg-[var(--color-surface)] transition-colors active:scale-95"
             >
               Start een project <ArrowRight className="w-5 h-5" />
             </Link>
@@ -426,7 +426,7 @@ export default function ProjectenContent({
               href="https://wa.me/31625518708"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl border border-white/40 text-white font-semibold hover:bg-white/10 transition-colors active:scale-95"
+              className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl border border-white/40 text-white font-semibold hover:bg-[var(--color-bg)]/10 transition-colors active:scale-95"
             >
               WhatsApp mij
             </a>

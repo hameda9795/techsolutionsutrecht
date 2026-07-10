@@ -120,21 +120,21 @@ export default function WebsiteOnderhoudPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(service) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
         {/* Breadcrumb */}
-        <nav className="py-4 bg-[var(--bg-secondary)] border-b border-[var(--border)]">
+        <nav className="py-4 bg-[var(--color-surface)] border-b border-[var(--color-border)]">
           <div className="container-custom">
             <ol className="flex items-center gap-2 text-sm flex-wrap">
-              <li><Link href="/" className="text-[var(--text-muted)] hover:text-primary transition-colors">Home</Link></li>
-              <li className="text-[var(--text-muted)]">/</li>
-              <li><Link href="/diensten" className="text-[var(--text-muted)] hover:text-primary transition-colors">Diensten</Link></li>
-              <li className="text-[var(--text-muted)]">/</li>
-              <li><span className="text-[var(--text-primary)] font-medium capitalize">website-onderhoud</span></li>
+              <li><Link href="/" className="text-[var(--color-muted)] hover:text-primary transition-colors">Home</Link></li>
+              <li className="text-[var(--color-muted)]">/</li>
+              <li><Link href="/diensten" className="text-[var(--color-muted)] hover:text-primary transition-colors">Diensten</Link></li>
+              <li className="text-[var(--color-muted)]">/</li>
+              <li><span className="text-[var(--color-ink)] font-medium capitalize">website-onderhoud</span></li>
             </ol>
           </div>
         </nav>
 
          <main className="pt-32 pb-24">
         <div className="container-custom">
-          <nav className="text-sm text-[var(--text-muted)] mb-8">
+          <nav className="text-sm text-[var(--color-muted)] mb-8">
             <Link href="/" className="hover:text-primary">Home</Link>
             <span className="mx-2">/</span>
             <Link href="/diensten" className="hover:text-primary">Diensten</Link>
@@ -144,17 +144,17 @@ export default function WebsiteOnderhoudPage() {
 
           <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">
             <div>
-              <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-green-500 to-emerald-500 mb-6">
+              <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-[var(--color-primary)] mb-6">
                 <Wrench className="w-8 h-8 text-white" />
               </div>
               
-              <h1 className="text-4xl sm:text-5xl font-bold text-[var(--text-primary)] mb-4">
+              <h1 className="text-4xl sm:text-5xl font-bold text-[var(--color-ink)] mb-4">
                 Website{" "}
-                <span className="gradient-text">Onderhoud</span>
+                <span className="text-[var(--color-primary)]">Onderhoud</span>
               </h1>
               
-              <p className="text-lg text-[var(--text-secondary)] mb-8">
-                <strong className="text-[var(--text-primary)]">Voordelig website onderhoud</strong> vanaf slechts 
+              <p className="text-lg text-[var(--color-muted)] mb-8">
+                <strong className="text-[var(--color-ink)]">Voordelig website onderhoud</strong> vanaf slechts 
                 <strong className="text-primary">€50 per maand</strong>. 
                 Updates, beveiliging, backups — wij zorgen dat je site veilig en snel blijft, 
                 zonder hoge kosten.
@@ -167,8 +167,8 @@ export default function WebsiteOnderhoudPage() {
                       <feature.icon className="w-5 h-5 text-primary" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-[var(--text-primary)]">{feature.title}</h3>
-                      <p className="text-sm text-[var(--text-secondary)]">{feature.description}</p>
+                      <h3 className="font-semibold text-[var(--color-ink)]">{feature.title}</h3>
+                      <p className="text-sm text-[var(--color-muted)]">{feature.description}</p>
                     </div>
                   </div>
                 ))}
@@ -181,12 +181,12 @@ export default function WebsiteOnderhoudPage() {
             </div>
 
             <div className="relative">
-              <div className="aspect-square rounded-2xl bg-gradient-to-br from-green-500/20 to-emerald-500/20 flex items-center justify-center">
+              <div className="aspect-square rounded-2xl bg-[var(--color-primary)]/10 flex items-center justify-center">
                 <div className="text-center">
-                  <Wrench className="w-32 h-32 text-green-500 mx-auto mb-4" />
-                  <div className="text-2xl font-bold text-[var(--text-primary)]">Onderhoud</div>
+                  <Wrench className="w-32 h-32 text-[var(--color-primary)] mx-auto mb-4" />
+                  <div className="text-2xl font-bold text-[var(--color-ink)]">Onderhoud</div>
                   <div className="text-3xl font-extrabold text-primary mt-2">Vanaf €50/maand</div>
-                  <div className="text-[var(--text-muted)] mt-1">Scherpe prijs</div>
+                  <div className="text-[var(--color-muted)] mt-1">Scherpe prijs</div>
                 </div>
               </div>
             </div>
@@ -194,20 +194,20 @@ export default function WebsiteOnderhoudPage() {
 
           {/* Intro */}
           <section className="mb-20 max-w-3xl">
-            <h2 className="text-3xl font-bold text-[var(--text-primary)] mb-6">
+            <h2 className="text-3xl font-bold text-[var(--color-ink)] mb-6">
               Waarom doorlopend onderhoud loont
             </h2>
-            <p className="text-[var(--text-secondary)] mb-4 leading-relaxed">
+            <p className="text-[var(--color-muted)] mb-4 leading-relaxed">
               Een website is geen eenmalig product maar levende software. WordPress, plugins en themes krijgen
               regelmatig updates die beveiligingslekken dichten en je site snel en stabiel houden. Sla je die over,
               dan groeit het risico op hacks, een trage website of een wit scherm na een mislukte update.
             </p>
-            <p className="text-[var(--text-secondary)] mb-4 leading-relaxed">
+            <p className="text-[var(--color-muted)] mb-4 leading-relaxed">
               Met een onderhoudsabonnement neem ik dat werk uit handen. Ik houd je website up-to-date, maak
               regelmatig backups, bewaak de beveiliging en grijp in als er iets misgaat, zodat jij je kunt richten
               op je bedrijf in plaats van op je website.
             </p>
-            <p className="text-[var(--text-secondary)] leading-relaxed">
+            <p className="text-[var(--color-muted)] leading-relaxed">
               Je hebt direct contact met de developer die je site beheert, en alle pakketten zijn maandelijks
               opzegbaar. Geen lange contracten, gewoon een veilige en snelle website.
             </p>
@@ -216,10 +216,10 @@ export default function WebsiteOnderhoudPage() {
           {/* Packages */}
           <div className="mb-20">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-[var(--text-primary)] mb-4">
-                Onderhouds<span className="gradient-text">pakketten</span>
+              <h2 className="text-3xl font-bold text-[var(--color-ink)] mb-4">
+                Onderhouds<span className="text-[var(--color-primary)]">pakketten</span>
               </h2>
-              <p className="text-[var(--text-secondary)]">
+              <p className="text-[var(--color-muted)]">
                 Kies het pakket dat bij jou past. Alle pakketten zijn maandelijks opzegbaar.
               </p>
             </div>
@@ -230,8 +230,8 @@ export default function WebsiteOnderhoudPage() {
                   key={pkg.name}
                   className={`relative p-6 rounded-2xl border ${
                     pkg.recommended 
-                      ? 'bg-[var(--bg-card)] border-primary' 
-                      : 'bg-[var(--bg-secondary)] border-[var(--border)]'
+                      ? 'bg-[var(--color-bg)] border-primary' 
+                      : 'bg-[var(--color-surface)] border-[var(--color-border)]'
                   }`}
                 >
                   {pkg.recommended && (
@@ -241,10 +241,10 @@ export default function WebsiteOnderhoudPage() {
                   )}
                   
                   <div className="text-center mb-6">
-                    <h3 className="text-xl font-bold text-[var(--text-primary)]">{pkg.name}</h3>
+                    <h3 className="text-xl font-bold text-[var(--color-ink)]">{pkg.name}</h3>
                     <div className="mt-4">
                       <span className="text-4xl font-bold text-primary">{pkg.price}</span>
-                      <span className="text-[var(--text-muted)]">{pkg.period}</span>
+                      <span className="text-[var(--color-muted)]">{pkg.period}</span>
                     </div>
                   </div>
 
@@ -252,7 +252,7 @@ export default function WebsiteOnderhoudPage() {
                     {pkg.features.map((feature, idx) => (
                       <li key={idx} className="flex items-center gap-3">
                         <Check className="w-5 h-5 text-primary flex-shrink-0" />
-                        <span className="text-[var(--text-secondary)] text-sm">{feature}</span>
+                        <span className="text-[var(--color-muted)] text-sm">{feature}</span>
                       </li>
                     ))}
                   </ul>
@@ -262,7 +262,7 @@ export default function WebsiteOnderhoudPage() {
                     className={`block text-center py-3 rounded-lg font-medium transition-colors ${
                       pkg.recommended
                         ? 'btn-primary'
-                        : 'bg-[var(--bg-tertiary)] text-[var(--text-primary)] hover:bg-primary hover:text-white'
+                        : 'bg-[var(--color-surface)] text-[var(--color-ink)] hover:bg-primary hover:text-white'
                     }`}
                   >
                     Kies {pkg.name}
@@ -274,12 +274,12 @@ export default function WebsiteOnderhoudPage() {
 
           {/* FAQ */}
           <section className="max-w-3xl">
-            <h2 className="text-3xl font-bold text-[var(--text-primary)] mb-10">Veelgestelde vragen over website onderhoud</h2>
+            <h2 className="text-3xl font-bold text-[var(--color-ink)] mb-10">Veelgestelde vragen over website onderhoud</h2>
             <div className="space-y-4">
               {faqs.map((faq) => (
-                <div key={faq.question} className="bg-[var(--bg-card)] border border-[var(--border)] rounded-xl p-6">
-                  <h3 className="text-lg font-semibold text-[var(--text-primary)] mb-2">{faq.question}</h3>
-                  <p className="text-[var(--text-secondary)] leading-relaxed">{faq.answer}</p>
+                <div key={faq.question} className="bg-[var(--color-bg)] border border-[var(--color-border)] rounded-xl p-6">
+                  <h3 className="text-lg font-semibold text-[var(--color-ink)] mb-2">{faq.question}</h3>
+                  <p className="text-[var(--color-muted)] leading-relaxed">{faq.answer}</p>
                 </div>
               ))}
             </div>

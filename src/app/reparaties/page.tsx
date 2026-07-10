@@ -144,10 +144,10 @@ export default function ReparatiesPage() {
             <span className="text-primary font-semibold text-sm uppercase tracking-wider">
               Reparaties
             </span>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[var(--text-primary)] mt-4 mb-6">
-              Reparatie <span className="gradient-text">Utrecht</span>
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[var(--color-ink)] mt-4 mb-6">
+              Reparatie <span className="text-[var(--color-primary)]">Utrecht</span>
             </h1>
-            <p className="text-[var(--text-secondary)] text-lg">
+            <p className="text-[var(--color-muted)] text-lg">
               Laptop, computer, telefoon of tablet kapot? <strong className="text-primary">Vanaf €35</strong> repareer ik
               je apparaat snel en betrouwbaar, met een eerlijke prijs vooraf, 6 maanden garantie en no cure no pay.
             </p>
@@ -158,10 +158,10 @@ export default function ReparatiesPage() {
             {trustSignals.map((signal) => (
               <div
                 key={signal.text}
-                className="flex items-center gap-3 p-4 bg-[var(--bg-card)] border border-[var(--border)] rounded-xl"
+                className="flex items-center gap-3 p-4 bg-[var(--color-bg)] border border-[var(--color-border)] rounded-xl"
               >
                 <signal.icon className="w-6 h-6 text-primary flex-shrink-0" />
-                <span className="text-[var(--text-primary)] font-medium text-sm">{signal.text}</span>
+                <span className="text-[var(--color-ink)] font-medium text-sm">{signal.text}</span>
               </div>
             ))}
           </div>
@@ -175,10 +175,10 @@ export default function ReparatiesPage() {
 
           {/* Direct naar je apparaat */}
           <section className="mt-16">
-            <h2 className="text-2xl font-bold text-[var(--text-primary)] mb-4">Direct naar je apparaat</h2>
+            <h2 className="text-2xl font-bold text-[var(--color-ink)] mb-4">Direct naar je apparaat</h2>
             <div className="flex flex-wrap gap-3">
               {deviceLinks.map((d) => (
-                <Link key={d.s} href={`/reparaties/${d.s}`} className="px-4 py-2 rounded-full bg-[var(--bg-card)] border border-[var(--border)] text-[var(--text-secondary)] hover:border-primary/40 transition-colors text-sm">
+                <Link key={d.s} href={`/reparaties/${d.s}`} className="px-4 py-2 rounded-full bg-[var(--color-bg)] border border-[var(--color-border)] text-[var(--color-muted)] hover:border-primary/40 transition-colors text-sm">
                   {d.l}
                 </Link>
               ))}
@@ -187,18 +187,18 @@ export default function ReparatiesPage() {
 
           {/* Waarom kiezen */}
           <section className="mt-20 max-w-3xl">
-            <h2 className="text-3xl font-bold text-[var(--text-primary)] mb-6">Waarom je reparatie bij mij in goede handen is</h2>
-            <p className="text-[var(--text-secondary)] mb-4 leading-relaxed">
+            <h2 className="text-3xl font-bold text-[var(--color-ink)] mb-6">Waarom je reparatie bij mij in goede handen is</h2>
+            <p className="text-[var(--color-muted)] mb-4 leading-relaxed">
               Een kapot apparaat is vervelend, zeker als je ervan afhankelijk bent voor werk of studie. Daarom werk ik
               snel, eerlijk en transparant: je krijgt vooraf te horen wat het probleem is en wat de reparatie kost,
               zonder verborgen kosten achteraf.
             </p>
-            <p className="text-[var(--text-secondary)] mb-4 leading-relaxed">
+            <p className="text-[var(--color-muted)] mb-4 leading-relaxed">
               Met 12 jaar ervaring repareer ik laptops, desktops, Macs, telefoons en tablets van vrijwel elk merk. Je
               hebt direct contact met de technicus die je apparaat onder handen neemt, geen anonieme balie of
               wachtrij. En dankzij no cure no pay loop je geen risico.
             </p>
-            <p className="text-[var(--text-secondary)] leading-relaxed">
+            <p className="text-[var(--color-muted)] leading-relaxed">
               Ik help klanten in heel Utrecht en omgeving, waaronder Nieuwegein, Houten, Zeist, IJsselstein, De Meern
               en Vleuten. Stuur een berichtje via WhatsApp met je klacht en je krijgt snel een eerlijke prijsindicatie.
             </p>
@@ -206,21 +206,21 @@ export default function ReparatiesPage() {
 
           {/* FAQ */}
           <section className="mt-20 max-w-3xl">
-            <h2 className="text-3xl font-bold text-[var(--text-primary)] mb-10">Veelgestelde vragen over reparaties</h2>
+            <h2 className="text-3xl font-bold text-[var(--color-ink)] mb-10">Veelgestelde vragen over reparaties</h2>
             <div className="space-y-4">
               {faqs.map((faq) => (
-                <div key={faq.question} className="bg-[var(--bg-card)] border border-[var(--border)] rounded-xl p-6">
-                  <h3 className="text-lg font-semibold text-[var(--text-primary)] mb-2">{faq.question}</h3>
-                  <p className="text-[var(--text-secondary)] leading-relaxed">{faq.answer}</p>
+                <div key={faq.question} className="bg-[var(--color-bg)] border border-[var(--color-border)] rounded-xl p-6">
+                  <h3 className="text-lg font-semibold text-[var(--color-ink)] mb-2">{faq.question}</h3>
+                  <p className="text-[var(--color-muted)] leading-relaxed">{faq.answer}</p>
                 </div>
               ))}
             </div>
           </section>
 
           {/* CTA */}
-          <section className="mt-20 text-center bg-[var(--bg-card)] border border-[var(--border)] rounded-2xl p-10">
-            <h2 className="text-3xl font-bold text-[var(--text-primary)] mb-4">Apparaat kapot? Ik help je snel verder.</h2>
-            <p className="text-[var(--text-secondary)] mb-8 max-w-2xl mx-auto leading-relaxed">
+          <section className="mt-20 text-center bg-[var(--color-bg)] border border-[var(--color-border)] rounded-2xl p-10">
+            <h2 className="text-3xl font-bold text-[var(--color-ink)] mb-4">Apparaat kapot? Ik help je snel verder.</h2>
+            <p className="text-[var(--color-muted)] mb-8 max-w-2xl mx-auto leading-relaxed">
               Stuur een berichtje met je klacht en je krijgt snel een eerlijke prijsindicatie. No cure, no pay en 6 maanden garantie op de reparatie.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

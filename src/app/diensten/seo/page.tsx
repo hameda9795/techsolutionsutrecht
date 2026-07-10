@@ -105,14 +105,14 @@ export default function SEOPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       {/* Breadcrumb */}
-      <nav className="py-4 bg-[var(--bg-secondary)] border-b border-[var(--border)]">
+      <nav className="py-4 bg-[var(--color-surface)] border-b border-[var(--color-border)]">
         <div className="container-custom">
           <ol className="flex items-center gap-2 text-sm flex-wrap">
-            <li><Link href="/" className="text-[var(--text-muted)] hover:text-primary transition-colors">Home</Link></li>
-            <li className="text-[var(--text-muted)]">/</li>
-            <li><Link href="/diensten" className="text-[var(--text-muted)] hover:text-primary transition-colors">Diensten</Link></li>
-            <li className="text-[var(--text-muted)]">/</li>
-            <li><span className="text-[var(--text-primary)] font-medium">SEO</span></li>
+            <li><Link href="/" className="text-[var(--color-muted)] hover:text-primary transition-colors">Home</Link></li>
+            <li className="text-[var(--color-muted)]">/</li>
+            <li><Link href="/diensten" className="text-[var(--color-muted)] hover:text-primary transition-colors">Diensten</Link></li>
+            <li className="text-[var(--color-muted)]">/</li>
+            <li><span className="text-[var(--color-ink)] font-medium">SEO</span></li>
           </ol>
         </div>
       </nav>
@@ -122,16 +122,16 @@ export default function SEOPage() {
           {/* Hero */}
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-green-500 to-emerald-500 mb-6">
+              <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-[var(--color-primary)] mb-6">
                 <TrendingUp className="w-8 h-8 text-white" />
               </div>
 
-              <h1 className="text-4xl sm:text-5xl font-bold text-[var(--text-primary)] mb-4">
-                SEO Specialist <span className="gradient-text">Utrecht</span>
+              <h1 className="text-4xl sm:text-5xl font-bold text-[var(--color-ink)] mb-4">
+                SEO Specialist <span className="text-[var(--color-primary)]">Utrecht</span>
               </h1>
 
-              <p className="text-lg text-[var(--text-secondary)] mb-8">
-                <strong className="text-[var(--text-primary)]">Hoger in Google</strong> met technische SEO,
+              <p className="text-lg text-[var(--color-muted)] mb-8">
+                <strong className="text-[var(--color-ink)]">Hoger in Google</strong> met technische SEO,
                 sterke content en lokale optimalisatie. Meetbaar resultaat voor ondernemers in Utrecht en omgeving,
                 met <strong className="text-primary">direct contact met de developer</strong> en transparante prijzen
                 vanaf €200 per maand.
@@ -143,14 +143,14 @@ export default function SEOPage() {
                     <div className="w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
                       <Check className="w-3 h-3 text-primary" />
                     </div>
-                    <span className="text-[var(--text-secondary)]">{feature}</span>
+                    <span className="text-[var(--color-muted)]">{feature}</span>
                   </div>
                 ))}
               </div>
 
               <div className="flex flex-wrap items-center gap-6 mb-8">
                 <div className="text-3xl font-bold text-primary">€200/maand</div>
-                <div className="text-[var(--text-muted)]">Maandelijks opzegbaar</div>
+                <div className="text-[var(--color-muted)]">Maandelijks opzegbaar</div>
               </div>
 
               <Link href="/contact" className="btn-primary group inline-flex">
@@ -160,12 +160,12 @@ export default function SEOPage() {
             </div>
 
             <div className="relative">
-              <div className="aspect-square rounded-2xl bg-gradient-to-br from-green-500/20 to-emerald-500/20 flex items-center justify-center">
+              <div className="aspect-square rounded-2xl bg-[var(--color-primary)]/10 flex items-center justify-center">
                 <div className="text-center">
-                  <TrendingUp className="w-24 h-24 text-green-500 mx-auto mb-4" />
-                  <div className="text-2xl font-bold text-[var(--text-primary)]">SEO</div>
+                  <TrendingUp className="w-24 h-24 text-[var(--color-primary)] mx-auto mb-4" />
+                  <div className="text-2xl font-bold text-[var(--color-ink)]">SEO</div>
                   <div className="text-3xl font-extrabold text-primary mt-2">€200/maand</div>
-                  <div className="text-[var(--text-muted)] mt-1">Maandelijks opzegbaar</div>
+                  <div className="text-[var(--color-muted)] mt-1">Maandelijks opzegbaar</div>
                 </div>
               </div>
             </div>
@@ -173,22 +173,22 @@ export default function SEOPage() {
 
           {/* Intro / Waarom SEO */}
           <section className="mt-24 max-w-3xl">
-            <h2 className="text-3xl font-bold text-[var(--text-primary)] mb-6">
+            <h2 className="text-3xl font-bold text-[var(--color-ink)] mb-6">
               Waarom SEO belangrijk is voor ondernemers in Utrecht
             </h2>
-            <p className="text-[var(--text-secondary)] mb-4 leading-relaxed">
+            <p className="text-[var(--color-muted)] mb-4 leading-relaxed">
               De meeste mensen die op zoek zijn naar een product of dienst beginnen bij Google. Wie op de eerste
               pagina staat, krijgt het overgrote deel van de klikken; wie op pagina twee of verder staat, wordt
               nauwelijks gevonden. Zoekmachineoptimalisatie (SEO) zorgt ervoor dat jouw website juist wél bovenaan
               verschijnt voor de zoekwoorden waar jouw klanten op zoeken, zoals “webshop laten maken Utrecht” of
               “SEO specialist Utrecht”.
             </p>
-            <p className="text-[var(--text-secondary)] mb-4 leading-relaxed">
+            <p className="text-[var(--color-muted)] mb-4 leading-relaxed">
               Anders dan advertenties, waarbij je per klik betaalt en je zichtbaarheid verdwijnt zodra je budget op
               is, bouw je met SEO een blijvende stroom van gratis, organisch verkeer op. Het is een investering die
               zich maand na maand opstapelt: de posities die je verdient, blijven bezoekers en aanvragen opleveren.
             </p>
-            <p className="text-[var(--text-secondary)] leading-relaxed">
+            <p className="text-[var(--color-muted)] leading-relaxed">
               Als developer én SEO-specialist kijk ik niet alleen naar teksten en zoekwoorden, maar ook naar de
               techniek onder je website. Die combinatie is precies wat veel losse tekstschrijvers of klassieke
               bureaus missen, en wat het verschil maakt tussen wat ranken en écht ranken.
@@ -197,19 +197,19 @@ export default function SEOPage() {
 
           {/* Aanpak / pillars */}
           <section className="mt-20">
-            <h2 className="text-3xl font-bold text-[var(--text-primary)] mb-4">Mijn SEO-aanpak</h2>
-            <p className="text-[var(--text-secondary)] mb-10 max-w-3xl leading-relaxed">
+            <h2 className="text-3xl font-bold text-[var(--color-ink)] mb-4">Mijn SEO-aanpak</h2>
+            <p className="text-[var(--color-muted)] mb-10 max-w-3xl leading-relaxed">
               Goede SEO rust op vier pijlers. Ik werk ze stap voor stap af, met je eigen doelen en branche als
               uitgangspunt, en houd je elke maand op de hoogte van de voortgang.
             </p>
             <div className="grid md:grid-cols-2 gap-6">
               {pillars.map((p) => (
-                <div key={p.title} className="bg-[var(--bg-card)] border border-[var(--border)] rounded-2xl p-6">
+                <div key={p.title} className="bg-[var(--color-bg)] border border-[var(--color-border)] rounded-2xl p-6">
                   <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-primary/10 mb-4">
                     <p.icon className="w-6 h-6 text-primary" />
                   </div>
-                  <h3 className="text-xl font-bold text-[var(--text-primary)] mb-2">{p.title}</h3>
-                  <p className="text-[var(--text-secondary)] leading-relaxed">{p.text}</p>
+                  <h3 className="text-xl font-bold text-[var(--color-ink)] mb-2">{p.title}</h3>
+                  <p className="text-[var(--color-muted)] leading-relaxed">{p.text}</p>
                 </div>
               ))}
             </div>
@@ -218,23 +218,23 @@ export default function SEOPage() {
           {/* Resultaten / rapportage */}
           <section className="mt-20 grid lg:grid-cols-2 gap-12 items-start">
             <div>
-              <h2 className="text-3xl font-bold text-[var(--text-primary)] mb-6">Wat SEO jou oplevert</h2>
-              <p className="text-[var(--text-secondary)] mb-4 leading-relaxed">
+              <h2 className="text-3xl font-bold text-[var(--color-ink)] mb-6">Wat SEO jou oplevert</h2>
+              <p className="text-[var(--color-muted)] mb-4 leading-relaxed">
                 Het doel is nooit “hoger in Google” op zich, maar méér klanten. Daarom stuur ik op cijfers die er
                 echt toe doen: organisch verkeer, posities op je belangrijkste zoekwoorden en het aantal aanvragen
                 via je website. Elke maand ontvang je een begrijpelijke rapportage met de stand van zaken en de
                 acties die ik heb uitgevoerd.
               </p>
-              <p className="text-[var(--text-secondary)] leading-relaxed">
+              <p className="text-[var(--color-muted)] leading-relaxed">
                 Geen vage beloftes als “nummer 1 in Google” en geen langlopende contracten. Je betaalt per maand,
                 bent maandelijks opzegbaar, en kunt aan de resultaten zelf zien of het werkt.
               </p>
             </div>
-            <div className="bg-[var(--bg-card)] border border-[var(--border)] rounded-2xl p-8">
+            <div className="bg-[var(--color-bg)] border border-[var(--color-border)] rounded-2xl p-8">
               <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-primary/10 mb-4">
                 <BarChart3 className="w-6 h-6 text-primary" />
               </div>
-              <h3 className="text-xl font-bold text-[var(--text-primary)] mb-4">Inbegrepen bij elk SEO-traject</h3>
+              <h3 className="text-xl font-bold text-[var(--color-ink)] mb-4">Inbegrepen bij elk SEO-traject</h3>
               <ul className="space-y-3">
                 {[
                   "Maandelijkse rapportage met posities en verkeer",
@@ -245,7 +245,7 @@ export default function SEOPage() {
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-3">
                     <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                    <span className="text-[var(--text-secondary)]">{item}</span>
+                    <span className="text-[var(--color-muted)]">{item}</span>
                   </li>
                 ))}
               </ul>
@@ -254,44 +254,44 @@ export default function SEOPage() {
 
           {/* Interne links */}
           <section className="mt-20">
-            <h2 className="text-3xl font-bold text-[var(--text-primary)] mb-4">Meer weten?</h2>
-            <p className="text-[var(--text-secondary)] mb-8 max-w-3xl leading-relaxed">
+            <h2 className="text-3xl font-bold text-[var(--color-ink)] mb-4">Meer weten?</h2>
+            <p className="text-[var(--color-muted)] mb-8 max-w-3xl leading-relaxed">
               SEO werkt het best in combinatie met een snelle, goed gebouwde website. Bekijk ook deze pagina&apos;s,
               of lees mijn blog over lokale vindbaarheid.
             </p>
             <div className="grid md:grid-cols-3 gap-6">
-              <Link href="/diensten/wordpress" className="card-service block p-6 rounded-2xl bg-[var(--bg-card)] border border-[var(--border)] hover:border-primary/40 transition-colors">
-                <h3 className="text-lg font-bold text-[var(--text-primary)] mb-2">WordPress website laten maken</h3>
-                <p className="text-[var(--text-secondary)] text-sm">Een snelle, SEO-klare website die je zelf kunt beheren.</p>
+              <Link href="/diensten/wordpress" className="card-service block p-6 rounded-2xl bg-[var(--color-bg)] border border-[var(--color-border)] hover:border-primary/40 transition-colors">
+                <h3 className="text-lg font-bold text-[var(--color-ink)] mb-2">WordPress website laten maken</h3>
+                <p className="text-[var(--color-muted)] text-sm">Een snelle, SEO-klare website die je zelf kunt beheren.</p>
               </Link>
-              <Link href="/blog/lokale-seo-utrecht" className="card-service block p-6 rounded-2xl bg-[var(--bg-card)] border border-[var(--border)] hover:border-primary/40 transition-colors">
-                <h3 className="text-lg font-bold text-[var(--text-primary)] mb-2">Blog: Lokale SEO in Utrecht</h3>
-                <p className="text-[var(--text-secondary)] text-sm">Zo word je gevonden door klanten in jouw regio.</p>
+              <Link href="/blog/lokale-seo-utrecht" className="card-service block p-6 rounded-2xl bg-[var(--color-bg)] border border-[var(--color-border)] hover:border-primary/40 transition-colors">
+                <h3 className="text-lg font-bold text-[var(--color-ink)] mb-2">Blog: Lokale SEO in Utrecht</h3>
+                <p className="text-[var(--color-muted)] text-sm">Zo word je gevonden door klanten in jouw regio.</p>
               </Link>
-              <Link href="/blog/website-niet-in-google" className="card-service block p-6 rounded-2xl bg-[var(--bg-card)] border border-[var(--border)] hover:border-primary/40 transition-colors">
-                <h3 className="text-lg font-bold text-[var(--text-primary)] mb-2">Blog: Website niet in Google?</h3>
-                <p className="text-[var(--text-secondary)] text-sm">De meest voorkomende oorzaken en oplossingen.</p>
+              <Link href="/blog/website-niet-in-google" className="card-service block p-6 rounded-2xl bg-[var(--color-bg)] border border-[var(--color-border)] hover:border-primary/40 transition-colors">
+                <h3 className="text-lg font-bold text-[var(--color-ink)] mb-2">Blog: Website niet in Google?</h3>
+                <p className="text-[var(--color-muted)] text-sm">De meest voorkomende oorzaken en oplossingen.</p>
               </Link>
             </div>
           </section>
 
           {/* FAQ */}
           <section className="mt-20 max-w-3xl">
-            <h2 className="text-3xl font-bold text-[var(--text-primary)] mb-10">Veelgestelde vragen over SEO</h2>
+            <h2 className="text-3xl font-bold text-[var(--color-ink)] mb-10">Veelgestelde vragen over SEO</h2>
             <div className="space-y-4">
               {faqs.map((faq) => (
-                <div key={faq.question} className="bg-[var(--bg-card)] border border-[var(--border)] rounded-xl p-6">
-                  <h3 className="text-lg font-semibold text-[var(--text-primary)] mb-2">{faq.question}</h3>
-                  <p className="text-[var(--text-secondary)] leading-relaxed">{faq.answer}</p>
+                <div key={faq.question} className="bg-[var(--color-bg)] border border-[var(--color-border)] rounded-xl p-6">
+                  <h3 className="text-lg font-semibold text-[var(--color-ink)] mb-2">{faq.question}</h3>
+                  <p className="text-[var(--color-muted)] leading-relaxed">{faq.answer}</p>
                 </div>
               ))}
             </div>
           </section>
 
           {/* CTA */}
-          <section className="mt-20 text-center bg-[var(--bg-card)] border border-[var(--border)] rounded-2xl p-10">
-            <h2 className="text-3xl font-bold text-[var(--text-primary)] mb-4">Klaar om hoger in Google te komen?</h2>
-            <p className="text-[var(--text-secondary)] mb-8 max-w-2xl mx-auto leading-relaxed">
+          <section className="mt-20 text-center bg-[var(--color-bg)] border border-[var(--color-border)] rounded-2xl p-10">
+            <h2 className="text-3xl font-bold text-[var(--color-ink)] mb-4">Klaar om hoger in Google te komen?</h2>
+            <p className="text-[var(--color-muted)] mb-8 max-w-2xl mx-auto leading-relaxed">
               Vraag vrijblijvend een gratis SEO-advies aan. Je krijgt binnen één werkdag een eerlijke analyse van je
               kansen, direct van de developer die ermee aan de slag gaat.
             </p>

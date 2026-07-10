@@ -61,14 +61,14 @@ export default function MacBookWaterschadePage() {
     <>
       <main className="pb-24">
         {/* Breadcrumb */}
-        <nav className="py-4 bg-[var(--bg-secondary)] border-b border-[var(--border)]">
+        <nav className="py-4 bg-[var(--color-surface)] border-b border-[var(--color-border)]">
           <div className="container-custom">
             <ol className="flex items-center gap-2 text-sm flex-wrap">
-              <li><Link href="/" className="text-[var(--text-muted)] hover:text-primary transition-colors">Home</Link></li>
-              <li className="text-[var(--text-muted)]">/</li>
-              <li><Link href="/blog" className="text-[var(--text-muted)] hover:text-primary transition-colors">Blog</Link></li>
-              <li className="text-[var(--text-muted)]">/</li>
-              <li><span className="text-[var(--text-primary)] font-medium">Artikel</span></li>
+              <li><Link href="/" className="text-[var(--color-muted)] hover:text-primary transition-colors">Home</Link></li>
+              <li className="text-[var(--color-muted)]">/</li>
+              <li><Link href="/blog" className="text-[var(--color-muted)] hover:text-primary transition-colors">Blog</Link></li>
+              <li className="text-[var(--color-muted)]">/</li>
+              <li><span className="text-[var(--color-ink)] font-medium">Artikel</span></li>
             </ol>
           </div>
         </nav>
@@ -78,7 +78,7 @@ export default function MacBookWaterschadePage() {
             {/* Back Link */}
             <Link 
               href="/blog"
-              className="inline-flex items-center text-[var(--text-secondary)] hover:text-primary transition-colors mb-8"
+              className="inline-flex items-center text-[var(--color-muted)] hover:text-primary transition-colors mb-8"
             >
               <ArrowLeft className="w-4 h-4 mr-2" />
               Terug naar blog
@@ -90,13 +90,13 @@ export default function MacBookWaterschadePage() {
             </span>
 
             {/* Title */}
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[var(--text-primary)] mb-6">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[var(--color-ink)] mb-6">
               MacBook Waterschade?{" "}
-              <span className="gradient-text">Dit Moet je NU Doen</span>
+              <span className="text-[var(--color-primary)]">Dit Moet je NU Doen</span>
             </h1>
 
             {/* Meta */}
-            <div className="flex flex-wrap items-center gap-6 text-[var(--text-muted)] mb-12 pb-12 border-b border-[var(--border)]">
+            <div className="flex flex-wrap items-center gap-6 text-[var(--color-muted)] mb-12 pb-12 border-b border-[var(--color-border)]">
               <div className="flex items-center gap-2">
                 <User className="w-4 h-4" />
                 <span>TechSolutionsUtrecht</span>
@@ -116,13 +116,13 @@ export default function MacBookWaterschadePage() {
               <div className="flex items-start gap-4">
                 <AlertTriangle className="w-8 h-8 text-red-500 flex-shrink-0" />
                 <div>
-                  <h2 className="text-xl font-bold text-[var(--text-primary)] mb-2">
+                  <h2 className="text-xl font-bold text-[var(--color-ink)] mb-2">
                     ⚠️ Tijd is Cruciaal!
                   </h2>
-                  <p className="text-[var(--text-secondary)]">
+                  <p className="text-[var(--color-muted)]">
                     Elke seconde telt bij waterschade. Corrosie begint binnen 
                     <strong className="text-red-400">en uur</strong>. 
-                    Volg deze stappen <strong className="text-[var(--text-primary)]">NU</strong>.
+                    Volg deze stappen <strong className="text-[var(--color-ink)]">NU</strong>.
                   </p>
                 </div>
               </div>
@@ -130,9 +130,9 @@ export default function MacBookWaterschadePage() {
 
             {/* Intro */}
             <div className="prose prose-invert max-w-none mb-12">
-              <p className="text-xl text-[var(--text-secondary)] leading-relaxed">
+              <p className="text-xl text-[var(--color-muted)] leading-relaxed">
                 Koffie gemorst? In de regen laten liggen? MacBook in het water laten vallen? 
-                Paniek is normaal, maar <strong className="text-[var(--text-primary)]">snel handelen</strong>{" "}
+                Paniek is normaal, maar <strong className="text-[var(--color-ink)]">snel handelen</strong>{" "}
                 kan het verschil maken tussen een werkende MacBook en een dure papiergewicht.
               </p>
             </div>
@@ -142,8 +142,8 @@ export default function MacBookWaterschadePage() {
               {steps.map((step) => (
                 <div 
                   key={step.step} 
-                  className={`bg-[var(--bg-card)] border rounded-2xl p-6 md:p-8 ${
-                    step.critical ? 'border-red-500/30' : 'border-[var(--border)]'
+                  className={`bg-[var(--color-bg)] border rounded-2xl p-6 md:p-8 ${
+                    step.critical ? 'border-red-500/30' : 'border-[var(--color-border)]'
                   }`}
                 >
                   <div className="flex items-start gap-4">
@@ -164,7 +164,7 @@ export default function MacBookWaterschadePage() {
                         >
                           {step.step}
                         </span>
-                        <h2 className="text-xl font-bold text-[var(--text-primary)]">
+                        <h2 className="text-xl font-bold text-[var(--color-ink)]">
                           {step.title}
                         </h2>
                         {step.critical && (
@@ -173,7 +173,7 @@ export default function MacBookWaterschadePage() {
                           </span>
                         )}
                       </div>
-                      <p className="text-[var(--text-secondary)]">
+                      <p className="text-[var(--color-muted)]">
                         {step.description}
                       </p>
                     </div>
@@ -183,39 +183,39 @@ export default function MacBookWaterschadePage() {
             </div>
 
             {/* Cost Section */}
-            <div className="p-8 bg-[var(--bg-card)] border border-[var(--border)] rounded-2xl mb-12">
-              <h2 className="text-2xl font-bold text-[var(--text-primary)] mb-4">
+            <div className="p-8 bg-[var(--color-bg)] border border-[var(--color-border)] rounded-2xl mb-12">
+              <h2 className="text-2xl font-bold text-[var(--color-ink)] mb-4">
                 Wat Kost Waterschade Reparatie?
               </h2>
               
-              <p className="text-[var(--text-secondary)] mb-6">
+              <p className="text-[var(--color-muted)] mb-6">
                 De kosten hangen af van de ernst:
               </p>
               
               <div className="grid md:grid-cols-3 gap-4 mb-6">
-                <div className="p-4 bg-[var(--bg-tertiary)] rounded-xl">
-                  <div className="text-lg font-bold text-[var(--text-primary)] mb-2">Licht</div>
+                <div className="p-4 bg-[var(--color-surface)] rounded-xl">
+                  <div className="text-lg font-bold text-[var(--color-ink)] mb-2">Licht</div>
                   <div className="text-2xl font-bold text-primary mb-2">€99-149</div>
-                  <div className="text-sm text-[var(--text-muted)]">Cleaning + inspectie</div>
+                  <div className="text-sm text-[var(--color-muted)]">Cleaning + inspectie</div>
                 </div>
                 
-                <div className="p-4 bg-[var(--bg-tertiary)] rounded-xl">
-                  <div className="text-lg font-bold text-[var(--text-primary)] mb-2">Gemiddeld</div>
+                <div className="p-4 bg-[var(--color-surface)] rounded-xl">
+                  <div className="text-lg font-bold text-[var(--color-ink)] mb-2">Gemiddeld</div>
                   <div className="text-2xl font-bold text-primary mb-2">€150-299</div>
-                  <div className="text-sm text-[var(--text-muted)]">+ Onderdelen vervangen</div>
+                  <div className="text-sm text-[var(--color-muted)]">+ Onderdelen vervangen</div>
                 </div>
                 
-                <div className="p-4 bg-[var(--bg-tertiary)] rounded-xl">
-                  <div className="text-lg font-bold text-[var(--text-primary)] mb-2">Ernstig</div>
+                <div className="p-4 bg-[var(--color-surface)] rounded-xl">
+                  <div className="text-lg font-bold text-[var(--color-ink)] mb-2">Ernstig</div>
                   <div className="text-2xl font-bold text-primary mb-2">€300+</div>
-                  <div className="text-sm text-[var(--text-muted)]">Moederbord schade</div>
+                  <div className="text-sm text-[var(--color-muted)]">Moederbord schade</div>
                 </div>
               </div>
 
               <div className="flex items-start gap-3 p-4 bg-primary/10 rounded-xl">
                 <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                <p className="text-[var(--text-secondary)]">
-                  <strong className="text-[var(--text-primary)]">Goed nieuws:</strong>{" "}
+                <p className="text-[var(--color-muted)]">
+                  <strong className="text-[var(--color-ink)]">Goed nieuws:</strong>{" "}
                   Met snelle actie is 70% van MacBooks met waterschade te redden. 
                   Wacht niet te lang!
                 </p>
@@ -223,12 +223,12 @@ export default function MacBookWaterschadePage() {
             </div>
 
             {/* CTA */}
-            <div className="p-8 bg-gradient-to-br from-primary/10 to-secondary/10 border border-primary/20 rounded-2xl mb-12">
-              <h3 className="text-xl font-bold text-[var(--text-primary)] mb-4">
+            <div className="p-8 bg-[var(--color-primary)]/10 border border-primary/20 rounded-2xl mb-12">
+              <h3 className="text-xl font-bold text-[var(--color-ink)] mb-4">
                 MacBook Nat Geworden? Wij Helpen in Utrecht
               </h3>
               
-              <p className="text-[var(--text-secondary)] mb-6">
+              <p className="text-[var(--color-muted)] mb-6">
                 Specialist in Apple reparaties. Snelle diagnose. Originele onderdelen. 
                 6 maanden garantie.
               </p>
@@ -249,28 +249,28 @@ export default function MacBookWaterschadePage() {
             </div>
 
             {/* Related Posts */}
-            <div className="border-t border-[var(--border)] pt-12">
-              <h3 className="text-xl font-bold text-[var(--text-primary)] mb-6">
+            <div className="border-t border-[var(--color-border)] pt-12">
+              <h3 className="text-xl font-bold text-[var(--color-ink)] mb-6">
                 Gerelateerde artikelen
               </h3>
               
               <div className="grid md:grid-cols-2 gap-6">
                 <Link 
                   href="/blog/laptop-start-niet-op-5-oplossingen"
-                  className="p-6 bg-[var(--bg-card)] border border-[var(--border)] rounded-xl hover:border-primary transition-colors"
+                  className="p-6 bg-[var(--color-bg)] border border-[var(--color-border)] rounded-xl hover:border-primary transition-colors"
                 >
                   <span className="text-xs text-primary font-medium">Reparaties</span>
-                  <h4 className="font-semibold text-[var(--text-primary)] mt-2">
+                  <h4 className="font-semibold text-[var(--color-ink)] mt-2">
                     Laptop Start Niet Op? 5 Oplossingen
                   </h4>
                 </Link>
                 
                 <Link 
                   href="/blog/wat-kost-een-website-laten-maken"
-                  className="p-6 bg-[var(--bg-card)] border border-[var(--border)] rounded-xl hover:border-primary transition-colors"
+                  className="p-6 bg-[var(--color-bg)] border border-[var(--color-border)] rounded-xl hover:border-primary transition-colors"
                 >
                   <span className="text-xs text-primary font-medium">Websites</span>
-                  <h4 className="font-semibold text-[var(--text-primary)] mt-2">
+                  <h4 className="font-semibold text-[var(--color-ink)] mt-2">
                     Wat Kost een Website Laten Maken?
                   </h4>
                 </Link>

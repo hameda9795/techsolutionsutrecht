@@ -83,14 +83,14 @@ export default function WebsiteBinnenWeekBlogPost() {
     <>
       <main className="pb-24">
         {/* Breadcrumb */}
-        <nav className="py-4 bg-[var(--bg-secondary)] border-b border-[var(--border)]">
+        <nav className="py-4 bg-[var(--color-surface)] border-b border-[var(--color-border)]">
           <div className="container-custom">
             <ol className="flex items-center gap-2 text-sm flex-wrap">
-              <li><Link href="/" className="text-[var(--text-muted)] hover:text-primary transition-colors">Home</Link></li>
-              <li className="text-[var(--text-muted)]">/</li>
-              <li><Link href="/blog" className="text-[var(--text-muted)] hover:text-primary transition-colors">Blog</Link></li>
-              <li className="text-[var(--text-muted)]">/</li>
-              <li><span className="text-[var(--text-primary)] font-medium">Artikel</span></li>
+              <li><Link href="/" className="text-[var(--color-muted)] hover:text-primary transition-colors">Home</Link></li>
+              <li className="text-[var(--color-muted)]">/</li>
+              <li><Link href="/blog" className="text-[var(--color-muted)] hover:text-primary transition-colors">Blog</Link></li>
+              <li className="text-[var(--color-muted)]">/</li>
+              <li><span className="text-[var(--color-ink)] font-medium">Artikel</span></li>
             </ol>
           </div>
         </nav>
@@ -100,7 +100,7 @@ export default function WebsiteBinnenWeekBlogPost() {
             {/* Back Link */}
             <Link 
               href="/blog"
-              className="inline-flex items-center text-[var(--text-secondary)] hover:text-primary transition-colors mb-8"
+              className="inline-flex items-center text-[var(--color-muted)] hover:text-primary transition-colors mb-8"
             >
               <ArrowLeft className="w-4 h-4 mr-2" />
               Terug naar blog
@@ -112,14 +112,14 @@ export default function WebsiteBinnenWeekBlogPost() {
             </span>
 
             {/* Title */}
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[var(--text-primary)] mb-6">
-              Website{" "}<span className="gradient-text">Binnen 1 Week Online:</span>
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[var(--color-ink)] mb-6">
+              Website{" "}<span className="text-[var(--color-primary)]">Binnen 1 Week Online:</span>
               <br />
               <span className="text-2xl sm:text-3xl">Zo Doen Wij Dat</span>
             </h1>
 
             {/* Meta */}
-            <div className="flex flex-wrap items-center gap-6 text-[var(--text-muted)] mb-12 pb-12 border-b border-[var(--border)]">
+            <div className="flex flex-wrap items-center gap-6 text-[var(--color-muted)] mb-12 pb-12 border-b border-[var(--color-border)]">
               <div className="flex items-center gap-2">
                 <User className="w-4 h-4" />
                 <span>TechSolutionsUtrecht</span>
@@ -136,17 +136,17 @@ export default function WebsiteBinnenWeekBlogPost() {
 
             {/* Intro */}
             <div className="prose prose-invert max-w-none mb-12">
-              <p className="text-xl text-[var(--text-secondary)] leading-relaxed">
+              <p className="text-xl text-[var(--color-muted)] leading-relaxed">
                 "Kan mijn website echt binnen 1 week online zijn?" Deze vraag krijgen we vaak. 
                 Het antwoord is: <strong className="text-primary">ja, dat kan!</strong> In dit artikel nemen we je mee 
-                in ons proces. Je leert <strong className="text-[var(--text-primary)]">hoe wij een professionele website 
+                in ons proces. Je leert <strong className="text-[var(--color-ink)]">hoe wij een professionele website 
                 binnen 7-10 dagen opleveren</strong>, zonder in te leveren op kwaliteit.
               </p>
             </div>
 
             {/* Process */}
             <div className="mb-12">
-              <h2 className="text-2xl font-bold text-[var(--text-primary)] mb-8">
+              <h2 className="text-2xl font-bold text-[var(--color-ink)] mb-8">
                 Ons 7-10 Dagen Proces
               </h2>
 
@@ -158,7 +158,7 @@ export default function WebsiteBinnenWeekBlogPost() {
                       <div className="absolute left-6 top-14 w-0.5 h-full bg-primary/20" />
                     )}
                     
-                    <div className="bg-[var(--bg-card)] border border-[var(--border)] rounded-2xl p-6">
+                    <div className="bg-[var(--color-bg)] border border-[var(--color-border)] rounded-2xl p-6">
                       <div className="flex items-start gap-4">
                         {/* Day badge */}
                         <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center text-white font-bold flex-shrink-0">
@@ -168,11 +168,11 @@ export default function WebsiteBinnenWeekBlogPost() {
                         <div className="flex-1">
                           <div className="text-primary font-semibold mb-1">{step.day}</div>
                           
-                          <h3 className="text-xl font-bold text-[var(--text-primary)] mb-3">
+                          <h3 className="text-xl font-bold text-[var(--color-ink)] mb-3">
                             {step.title}
                           </h3>
                           
-                          <p className="text-[var(--text-secondary)] mb-4">
+                          <p className="text-[var(--color-muted)] mb-4">
                             {step.description}
                           </p>
                           
@@ -193,8 +193,8 @@ export default function WebsiteBinnenWeekBlogPost() {
             </div>
 
             {/* Why We Can Do This */}
-            <div className="bg-[var(--bg-card)] border border-[var(--border)] rounded-2xl p-8 mb-12">
-              <h2 className="text-2xl font-bold text-[var(--text-primary)] mb-8">
+            <div className="bg-[var(--color-bg)] border border-[var(--color-border)] rounded-2xl p-8 mb-12">
+              <h2 className="text-2xl font-bold text-[var(--color-ink)] mb-8">
                 Waarom Kunnen Wij Zo Snel Leveren?
               </h2>
               
@@ -203,9 +203,9 @@ export default function WebsiteBinnenWeekBlogPost() {
                   <div key={item.title}>
                     <div className="flex items-center gap-3 mb-2">
                       <Rocket className="w-5 h-5 text-primary" />
-                      <h3 className="font-semibold text-[var(--text-primary)]">{item.title}</h3>
+                      <h3 className="font-semibold text-[var(--color-ink)]">{item.title}</h3>
                     </div>
-                    <p className="text-[var(--text-secondary)] text-sm">{item.description}</p>
+                    <p className="text-[var(--color-muted)] text-sm">{item.description}</p>
                   </div>
                 ))}
               </div>
@@ -216,8 +216,8 @@ export default function WebsiteBinnenWeekBlogPost() {
               <div className="flex items-start gap-4">
                 <CheckCircle className="w-6 h-6 text-yellow-500 flex-shrink-0 mt-0.5" />
                 <div>
-                  <h3 className="font-semibold text-[var(--text-primary)] mb-2">Belangrijk: Snel betekent niet haastig</h3>
-                  <p className="text-[var(--text-secondary)]">
+                  <h3 className="font-semibold text-[var(--color-ink)] mb-2">Belangrijk: Snel betekent niet haastig</h3>
+                  <p className="text-[var(--color-muted)]">
                     Onze snelle oplevering betekent niet dat we concessies doen aan kwaliteit. 
                     We werken efficiënt omdat we een bewezen proces hebben, niet omdat we hoeken afsnijden. 
                     Elke website wordt grondig getest voordat deze live gaat.
@@ -227,12 +227,12 @@ export default function WebsiteBinnenWeekBlogPost() {
             </div>
 
             {/* CTA */}
-            <div className="p-8 bg-gradient-to-br from-primary/10 to-secondary/10 border border-primary/20 rounded-2xl mb-12">
-              <h3 className="text-2xl font-bold text-[var(--text-primary)] mb-4">
+            <div className="p-8 bg-[var(--color-primary)]/10 border border-primary/20 rounded-2xl mb-12">
+              <h3 className="text-2xl font-bold text-[var(--color-ink)] mb-4">
                 Ook Binnen 1 Week Online?
               </h3>
               
-              <p className="text-[var(--text-secondary)] mb-6">
+              <p className="text-[var(--color-muted)] mb-6">
                 Start vandaag nog! Neem contact met ons op voor een gratis offerte. 
                 We bespreken je wensen en kunnen vaak direct aan de slag. 
                 Jouw website kan al volgende week live zijn.
@@ -257,17 +257,17 @@ export default function WebsiteBinnenWeekBlogPost() {
             </div>
 
             {/* FAQ */}
-            <div className="bg-[var(--bg-card)] border border-[var(--border)] rounded-2xl p-8 mb-12">
-              <h2 className="text-2xl font-bold text-[var(--text-primary)] mb-6">
+            <div className="bg-[var(--color-bg)] border border-[var(--color-border)] rounded-2xl p-8 mb-12">
+              <h2 className="text-2xl font-bold text-[var(--color-ink)] mb-6">
                 Veelgestelde Vragen over Snelle Oplevering
               </h2>
               
               <div className="space-y-6">
                 <div>
-                  <h3 className="font-semibold text-[var(--text-primary)] mb-2">
+                  <h3 className="font-semibold text-[var(--color-ink)] mb-2">
                     Kan elke website binnen 1 week?
                   </h3>
-                  <p className="text-[var(--text-secondary)]">
+                  <p className="text-[var(--color-muted)]">
                     De meeste standaard websites (ZZP, MKB) kunnen inderdaad binnen 1 week. 
                     Heel complexe websites of webshops met honderden producten nemen wat langer. 
                     We bespreken dit altijd vooraf.
@@ -275,20 +275,20 @@ export default function WebsiteBinnenWeekBlogPost() {
                 </div>
                 
                 <div>
-                  <h3 className="font-semibold text-[var(--text-primary)] mb-2">
+                  <h3 className="font-semibold text-[var(--color-ink)] mb-2">
                     Wat heb ik zelf nodig voor een snelle oplevering?
                   </h3>
-                  <p className="text-[var(--text-secondary)]">
+                  <p className="text-[var(--color-muted)]">
                     Hoe sneller je content (teksten, foto's) aanlevert, hoe sneller we kunnen starten. 
                     We geven je een duidelijke checklist zodat je precies weet wat we nodig hebben.
                   </p>
                 </div>
                 
                 <div>
-                  <h3 className="font-semibold text-[var(--text-primary)] mb-2">
+                  <h3 className="font-semibold text-[var(--color-ink)] mb-2">
                     Is een snelle website van mindere kwaliteit?
                   </h3>
-                  <p className="text-[var(--text-secondary)]">
+                  <p className="text-[var(--color-muted)]">
                     Absoluut niet! We leveren dezelfde hoge kwaliteit, alleen efficiënter. 
                     Onze snelheid komt door ervaring en slimme processen, niet door haast.
                   </p>
@@ -297,28 +297,28 @@ export default function WebsiteBinnenWeekBlogPost() {
             </div>
 
             {/* Related Posts */}
-            <div className="border-t border-[var(--border)] pt-12">
-              <h3 className="text-xl font-bold text-[var(--text-primary)] mb-6">
+            <div className="border-t border-[var(--color-border)] pt-12">
+              <h3 className="text-xl font-bold text-[var(--color-ink)] mb-6">
                 Gerelateerde artikelen
               </h3>
               
               <div className="grid md:grid-cols-2 gap-6">
                 <Link 
                   href="/blog/zzp-website-5-tips-geld-besparen"
-                  className="p-6 bg-[var(--bg-card)] border border-[var(--border)] rounded-xl hover:border-primary transition-colors"
+                  className="p-6 bg-[var(--color-bg)] border border-[var(--color-border)] rounded-xl hover:border-primary transition-colors"
                 >
                   <span className="text-xs text-primary font-medium">ZZP Tips</span>
-                  <h4 className="font-semibold text-[var(--text-primary)] mt-2">
+                  <h4 className="font-semibold text-[var(--color-ink)] mt-2">
                     ZZP Website Laten Maken: 5 Tips om Geld te Besparen
                   </h4>
                 </Link>
                 
                 <Link 
                   href="/blog/wat-kost-een-website-laten-maken"
-                  className="p-6 bg-[var(--bg-card)] border border-[var(--border)] rounded-xl hover:border-primary transition-colors"
+                  className="p-6 bg-[var(--color-bg)] border border-[var(--color-border)] rounded-xl hover:border-primary transition-colors"
                 >
                   <span className="text-xs text-primary font-medium">Kosten</span>
-                  <h4 className="font-semibold text-[var(--text-primary)] mt-2">
+                  <h4 className="font-semibold text-[var(--color-ink)] mt-2">
                     Wat Kost een Website Laten Maken in 2025?
                   </h4>
                 </Link>

@@ -100,14 +100,14 @@ export default function AiPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       {/* Breadcrumb */}
-      <nav className="py-4 bg-[var(--bg-secondary)] border-b border-[var(--border)]">
+      <nav className="py-4 bg-[var(--color-surface)] border-b border-[var(--color-border)]">
         <div className="container-custom">
           <ol className="flex items-center gap-2 text-sm flex-wrap">
-            <li><Link href="/" className="text-[var(--text-muted)] hover:text-primary transition-colors">Home</Link></li>
-            <li className="text-[var(--text-muted)]">/</li>
-            <li><Link href="/diensten" className="text-[var(--text-muted)] hover:text-primary transition-colors">Diensten</Link></li>
-            <li className="text-[var(--text-muted)]">/</li>
-            <li><span className="text-[var(--text-primary)] font-medium capitalize">AI Integraties</span></li>
+            <li><Link href="/" className="text-[var(--color-muted)] hover:text-primary transition-colors">Home</Link></li>
+            <li className="text-[var(--color-muted)]">/</li>
+            <li><Link href="/diensten" className="text-[var(--color-muted)] hover:text-primary transition-colors">Diensten</Link></li>
+            <li className="text-[var(--color-muted)]">/</li>
+            <li><span className="text-[var(--color-ink)] font-medium capitalize">AI Integraties</span></li>
           </ol>
         </div>
       </nav>
@@ -116,12 +116,12 @@ export default function AiPage() {
         <div className="container-custom">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-[#0f766e] to-[#0d9488] mb-6">
+              <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-[var(--color-primary)] mb-6">
                 <Sparkles className="w-8 h-8 text-white" />
               </div>
 
-              <h1 className="text-4xl sm:text-5xl font-bold text-[var(--text-primary)] mb-4">
-                AI Integraties &amp; Chatbots <span className="gradient-text">Utrecht</span>
+              <h1 className="text-4xl sm:text-5xl font-bold text-[var(--color-ink)] mb-4">
+                AI Integraties &amp; Chatbots <span className="text-[var(--color-primary)]">Utrecht</span>
               </h1>
 
               <div className="flex flex-wrap gap-3 mb-6">
@@ -129,14 +129,14 @@ export default function AiPage() {
                   <Zap className="w-4 h-4 text-primary" />
                   <span className="text-sm text-primary font-medium">Op maat ontwikkeld</span>
                 </div>
-                <div className="flex items-center gap-2 px-3 py-1 bg-green-500/10 rounded-full">
-                  <Clock className="w-4 h-4 text-green-500" />
-                  <span className="text-sm text-green-500 font-medium">Projectafhankelijk</span>
+                <div className="flex items-center gap-2 px-3 py-1 bg-[var(--color-primary)]/10 rounded-full">
+                  <Clock className="w-4 h-4 text-[var(--color-primary)]" />
+                  <span className="text-sm text-[var(--color-primary)] font-medium">Projectafhankelijk</span>
                 </div>
               </div>
 
-              <p className="text-lg text-[var(--text-secondary)] mb-8">
-                <strong className="text-[var(--text-primary)]">AI-tools en chatbots</strong> laten bouwen die echt tijd besparen?
+              <p className="text-lg text-[var(--color-muted)] mb-8">
+                <strong className="text-[var(--color-ink)]">AI-tools en chatbots</strong> laten bouwen die echt tijd besparen?
                 Vanaf <strong className="text-primary">€500</strong> ontwikkel ik slimme automatisering en AI-oplossingen
                 die naadloos integreren met jouw website of werkproces, met direct contact met de developer.
               </p>
@@ -147,14 +147,14 @@ export default function AiPage() {
                     <div className="w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
                       <Check className="w-3 h-3 text-primary" />
                     </div>
-                    <span className="text-[var(--text-secondary)]">{feature}</span>
+                    <span className="text-[var(--color-muted)]">{feature}</span>
                   </div>
                 ))}
               </div>
 
               <div className="flex flex-wrap items-center gap-6 mb-8">
                 <div className="text-3xl font-bold text-primary">Vanaf €500</div>
-                <div className="text-[var(--text-muted)]">Oplevering: projectafhankelijk</div>
+                <div className="text-[var(--color-muted)]">Oplevering: projectafhankelijk</div>
               </div>
 
               <Link href="/contact" className="btn-primary group inline-flex">
@@ -164,12 +164,12 @@ export default function AiPage() {
             </div>
 
             <div className="relative">
-              <div className="aspect-square rounded-2xl bg-gradient-to-br from-[#0f766e]/20 to-[#0d9488]/20 flex items-center justify-center">
+              <div className="aspect-square rounded-2xl bg-[var(--color-primary)]/10 flex items-center justify-center">
                 <div className="text-center">
-                  <Sparkles className="w-24 h-24 text-[#0f766e] mx-auto mb-4" />
-                  <div className="text-2xl font-bold text-[var(--text-primary)]">AI Integraties</div>
+                  <Sparkles className="w-24 h-24 text-[var(--color-primary)] mx-auto mb-4" />
+                  <div className="text-2xl font-bold text-[var(--color-ink)]">AI Integraties</div>
                   <div className="text-3xl font-extrabold text-primary mt-2">Vanaf €500</div>
-                  <div className="text-[var(--text-muted)] mt-1">Projectafhankelijk</div>
+                  <div className="text-[var(--color-muted)] mt-1">Projectafhankelijk</div>
                 </div>
               </div>
             </div>
@@ -177,20 +177,20 @@ export default function AiPage() {
 
           {/* Intro */}
           <section className="mt-24 max-w-3xl">
-            <h2 className="text-3xl font-bold text-[var(--text-primary)] mb-6">
+            <h2 className="text-3xl font-bold text-[var(--color-ink)] mb-6">
               AI die je bedrijf echt verder helpt
             </h2>
-            <p className="text-[var(--text-secondary)] mb-4 leading-relaxed">
+            <p className="text-[var(--color-muted)] mb-4 leading-relaxed">
               AI is geen hype meer maar een praktisch hulpmiddel waarmee ook kleine bedrijven en ZZP&apos;ers tijd en
               geld besparen. Het lastige is alleen: de meeste kant-en-klare tools passen niet precies bij jouw manier
               van werken. Daar komt maatwerk om de hoek kijken.
             </p>
-            <p className="text-[var(--text-secondary)] mb-4 leading-relaxed">
+            <p className="text-[var(--color-muted)] mb-4 leading-relaxed">
               Als developer bouw ik AI-oplossingen die aansluiten op jóuw situatie: een chatbot die je klanten te woord
               staat met de juiste informatie, een automatisering die handmatig werk overneemt, of een integratie die je
               tools met elkaar laat praten. Geen standaardpakket, maar een oplossing die meetbaar resultaat oplevert.
             </p>
-            <p className="text-[var(--text-secondary)] leading-relaxed">
+            <p className="text-[var(--color-muted)] leading-relaxed">
               We beginnen altijd klein en concreet: één duidelijk probleem, één werkende oplossing. Daarna kunnen we
               stap voor stap uitbreiden naarmate je de waarde ziet.
             </p>
@@ -198,15 +198,15 @@ export default function AiPage() {
 
           {/* Pillars */}
           <section className="mt-20">
-            <h2 className="text-3xl font-bold text-[var(--text-primary)] mb-10">Wat ik voor je bouw</h2>
+            <h2 className="text-3xl font-bold text-[var(--color-ink)] mb-10">Wat ik voor je bouw</h2>
             <div className="grid md:grid-cols-2 gap-6">
               {pillars.map((p) => (
-                <div key={p.title} className="bg-[var(--bg-card)] border border-[var(--border)] rounded-2xl p-6">
+                <div key={p.title} className="bg-[var(--color-bg)] border border-[var(--color-border)] rounded-2xl p-6">
                   <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-primary/10 mb-4">
                     <p.icon className="w-6 h-6 text-primary" />
                   </div>
-                  <h3 className="text-xl font-bold text-[var(--text-primary)] mb-2">{p.title}</h3>
-                  <p className="text-[var(--text-secondary)] leading-relaxed">{p.text}</p>
+                  <h3 className="text-xl font-bold text-[var(--color-ink)] mb-2">{p.title}</h3>
+                  <p className="text-[var(--color-muted)] leading-relaxed">{p.text}</p>
                 </div>
               ))}
             </div>
@@ -214,40 +214,40 @@ export default function AiPage() {
 
           {/* Interne links */}
           <section className="mt-20">
-            <h2 className="text-3xl font-bold text-[var(--text-primary)] mb-4">Past dit bij jouw plannen?</h2>
+            <h2 className="text-3xl font-bold text-[var(--color-ink)] mb-4">Past dit bij jouw plannen?</h2>
             <div className="grid md:grid-cols-3 gap-6">
-              <Link href="/diensten/maatwerk" className="card-service block p-6 rounded-2xl bg-[var(--bg-card)] border border-[var(--border)] hover:border-primary/40 transition-colors">
-                <h3 className="text-lg font-bold text-[var(--text-primary)] mb-2">Maatwerk development</h3>
-                <p className="text-[var(--text-secondary)] text-sm">Webapplicaties en dashboards op maat met React en Next.js.</p>
+              <Link href="/diensten/maatwerk" className="card-service block p-6 rounded-2xl bg-[var(--color-bg)] border border-[var(--color-border)] hover:border-primary/40 transition-colors">
+                <h3 className="text-lg font-bold text-[var(--color-ink)] mb-2">Maatwerk development</h3>
+                <p className="text-[var(--color-muted)] text-sm">Webapplicaties en dashboards op maat met React en Next.js.</p>
               </Link>
-              <Link href="/diensten/wordpress" className="card-service block p-6 rounded-2xl bg-[var(--bg-card)] border border-[var(--border)] hover:border-primary/40 transition-colors">
-                <h3 className="text-lg font-bold text-[var(--text-primary)] mb-2">WordPress website</h3>
-                <p className="text-[var(--text-secondary)] text-sm">Een professionele website om je AI-oplossing op te laten draaien.</p>
+              <Link href="/diensten/wordpress" className="card-service block p-6 rounded-2xl bg-[var(--color-bg)] border border-[var(--color-border)] hover:border-primary/40 transition-colors">
+                <h3 className="text-lg font-bold text-[var(--color-ink)] mb-2">WordPress website</h3>
+                <p className="text-[var(--color-muted)] text-sm">Een professionele website om je AI-oplossing op te laten draaien.</p>
               </Link>
-              <Link href="/blog/ai-chatbot-implementeren" className="card-service block p-6 rounded-2xl bg-[var(--bg-card)] border border-[var(--border)] hover:border-primary/40 transition-colors">
-                <h3 className="text-lg font-bold text-[var(--text-primary)] mb-2">Blog: AI-chatbot implementeren</h3>
-                <p className="text-[var(--text-secondary)] text-sm">Hoe je een chatbot succesvol inzet voor je bedrijf.</p>
+              <Link href="/blog/ai-chatbot-implementeren" className="card-service block p-6 rounded-2xl bg-[var(--color-bg)] border border-[var(--color-border)] hover:border-primary/40 transition-colors">
+                <h3 className="text-lg font-bold text-[var(--color-ink)] mb-2">Blog: AI-chatbot implementeren</h3>
+                <p className="text-[var(--color-muted)] text-sm">Hoe je een chatbot succesvol inzet voor je bedrijf.</p>
               </Link>
             </div>
           </section>
 
           {/* FAQ */}
           <section className="mt-20 max-w-3xl">
-            <h2 className="text-3xl font-bold text-[var(--text-primary)] mb-10">Veelgestelde vragen over AI</h2>
+            <h2 className="text-3xl font-bold text-[var(--color-ink)] mb-10">Veelgestelde vragen over AI</h2>
             <div className="space-y-4">
               {faqs.map((faq) => (
-                <div key={faq.question} className="bg-[var(--bg-card)] border border-[var(--border)] rounded-xl p-6">
-                  <h3 className="text-lg font-semibold text-[var(--text-primary)] mb-2">{faq.question}</h3>
-                  <p className="text-[var(--text-secondary)] leading-relaxed">{faq.answer}</p>
+                <div key={faq.question} className="bg-[var(--color-bg)] border border-[var(--color-border)] rounded-xl p-6">
+                  <h3 className="text-lg font-semibold text-[var(--color-ink)] mb-2">{faq.question}</h3>
+                  <p className="text-[var(--color-muted)] leading-relaxed">{faq.answer}</p>
                 </div>
               ))}
             </div>
           </section>
 
           {/* CTA */}
-          <section className="mt-20 text-center bg-[var(--bg-card)] border border-[var(--border)] rounded-2xl p-10">
-            <h2 className="text-3xl font-bold text-[var(--text-primary)] mb-4">Benieuwd wat AI voor jou kan doen?</h2>
-            <p className="text-[var(--text-secondary)] mb-8 max-w-2xl mx-auto leading-relaxed">
+          <section className="mt-20 text-center bg-[var(--color-bg)] border border-[var(--color-border)] rounded-2xl p-10">
+            <h2 className="text-3xl font-bold text-[var(--color-ink)] mb-4">Benieuwd wat AI voor jou kan doen?</h2>
+            <p className="text-[var(--color-muted)] mb-8 max-w-2xl mx-auto leading-relaxed">
               Bespreek vrijblijvend je idee. Je krijgt binnen één werkdag een eerlijke inschatting van de mogelijkheden
               en de kosten, direct van de developer die het bouwt.
             </p>

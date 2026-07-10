@@ -31,7 +31,7 @@ function mapRow(row: Record<string, unknown>): ShowcaseProject {
     stack: (row.stack as string[]) ?? [],
     liveUrl: (row.live_url as string) ?? "",
     image: (row.image as string) ?? "",
-    accent: (row.accent as string) ?? "from-teal-500 to-emerald-700",
+    accent: (row.accent as string) ?? "bg-[var(--color-primary)]",
     featured: Boolean(row.featured),
   };
 }
@@ -55,7 +55,7 @@ export async function initShowcaseDatabase(): Promise<boolean> {
         stack TEXT[] NOT NULL DEFAULT '{}',
         live_url VARCHAR(500) NOT NULL DEFAULT '',
         image VARCHAR(500) NOT NULL DEFAULT '',
-        accent VARCHAR(120) NOT NULL DEFAULT 'from-teal-500 to-emerald-700',
+        accent VARCHAR(120) NOT NULL DEFAULT 'bg-[var(--color-primary)]',
         featured BOOLEAN NOT NULL DEFAULT false,
         created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
         updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP

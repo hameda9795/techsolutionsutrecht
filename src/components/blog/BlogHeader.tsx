@@ -26,12 +26,12 @@ export default function BlogHeader({
       </span>
 
       {/* Title */}
-      <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[var(--text-primary)] mb-6 leading-tight">
+      <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[var(--color-ink)] mb-6 leading-tight">
         {title}
       </h1>
 
       {/* Meta */}
-      <div className="flex flex-wrap items-center gap-6 text-[var(--text-muted)] pb-8 border-b border-[var(--border)]">
+      <div className="flex flex-wrap items-center gap-6 text-[var(--color-muted)] pb-8 border-b border-[var(--color-border)]">
         <div className="flex items-center gap-2">
           <User className="w-4 h-4" />
           <span>{author}</span>

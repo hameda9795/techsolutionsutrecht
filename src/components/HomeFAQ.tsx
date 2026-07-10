@@ -7,19 +7,19 @@ const faqs = homeFaqs;
 
 export default function HomeFAQ() {
   return (
-    <section className="py-20 bg-slate-50">
+    <section className="py-20 bg-[var(--color-surface)]">
       <div className="max-w-4xl mx-auto px-6">
         <div className="text-center mb-12">
-          <span className="text-[#0f766e] font-semibold text-sm uppercase tracking-wider">
+          <span className="text-[var(--color-primary)] font-semibold text-sm uppercase tracking-wider">
             Veelgestelde Vragen
           </span>
-          <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mt-4 mb-4">
+          <h2 className="text-3xl sm:text-4xl font-bold text-[var(--color-ink)] mt-4 mb-4">
             Wat Kost een Website{" "}
-            <span className="bg-gradient-to-r from-[#0f766e] to-[#14b8a6] bg-clip-text text-transparent">
+            <span className="text-[var(--color-primary)]">
               Laten Maken?
             </span>
           </h2>
-          <p className="text-slate-600">
+          <p className="text-[var(--color-muted)]">
             Transparante prijzen, geen verborgen kosten. Alles wat je moet weten over mijn werkwijze.
           </p>
         </div>
@@ -28,14 +28,14 @@ export default function HomeFAQ() {
           {faqs.map((faq, index) => (
             <div 
               key={index}
-              className="bg-white border border-slate-200 rounded-xl overflow-hidden hover:shadow-md transition-shadow"
+              className="bg-[var(--color-bg)] border border-[var(--color-border)] rounded-xl overflow-hidden hover:shadow-md transition-shadow"
             >
               <div className="p-6">
-                <h3 className="text-lg font-semibold text-slate-900 mb-3 flex items-start gap-3">
-                  <ChevronDown className="w-5 h-5 text-[#0f766e] flex-shrink-0 mt-1" />
+                <h3 className="text-lg font-semibold text-[var(--color-ink)] mb-3 flex items-start gap-3">
+                  <ChevronDown className="w-5 h-5 text-[var(--color-primary)] flex-shrink-0 mt-1" />
                   {faq.question}
                 </h3>
-                <p className="text-slate-600 pl-8 leading-relaxed">
+                <p className="text-[var(--color-muted)] pl-8 leading-relaxed">
                   {faq.answer}
                 </p>
               </div>
@@ -45,7 +45,7 @@ export default function HomeFAQ() {
         
         {/* CTA */}
         <div className="mt-12 text-center">
-          <p className="text-slate-600 mb-4">
+          <p className="text-[var(--color-muted)] mb-4">
             Nog vragen? Neem direct contact op!
           </p>
           <a 

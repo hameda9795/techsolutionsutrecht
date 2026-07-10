@@ -97,29 +97,29 @@ export default function OverMijPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }} />
-      <main className="pt-24 pb-24 bg-white">
+      <main className="pt-24 pb-24 bg-[var(--color-bg)]">
         <div className="max-w-6xl mx-auto px-6">
           {/* Breadcrumb */}
           <nav className="py-4 mb-8">
             <ol className="flex items-center gap-2 text-sm">
-              <li><Link href="/" className="text-slate-500 hover:text-[#0f766e]">Home</Link></li>
+              <li><Link href="/" className="text-[var(--color-muted)] hover:text-[var(--color-primary)]">Home</Link></li>
               <li className="text-slate-400">/</li>
-              <li><span className="text-slate-900 font-medium">Over mij</span></li>
+              <li><span className="text-[var(--color-ink)] font-medium">Over mij</span></li>
             </ol>
           </nav>
 
           {/* Header */}
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <span className="text-[#0f766e] font-semibold text-sm uppercase tracking-wider">
+            <span className="text-[var(--color-primary)] font-semibold text-sm uppercase tracking-wider">
               Over mij
             </span>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-900 mt-4 mb-6">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[var(--color-ink)] mt-4 mb-6">
               Hallo, ik ben{" "}
-              <span className="bg-gradient-to-r from-[#0f766e] to-[#14b8a6] bg-clip-text text-transparent">
+              <span className="text-[var(--color-primary)]">
                 Max
               </span>
             </h1>
-            <p className="text-xl text-slate-600">
+            <p className="text-xl text-[var(--color-muted)]">
               Webdeveloper, IT-consultant en SEO-specialist in Utrecht
             </p>
             <div className="mt-4">
@@ -138,11 +138,11 @@ export default function OverMijPage() {
           {/* Story Section */}
           <div className="grid lg:grid-cols-2 gap-12 items-center mb-24">
             <div>
-              <blockquote className="text-2xl sm:text-3xl font-medium text-slate-900 leading-relaxed mb-6">
+              <blockquote className="text-2xl sm:text-3xl font-medium text-[var(--color-ink)] leading-relaxed mb-6">
                 "Technologie verandert, maar mijn passie voor goede websites blijft. Met 12+ jaar ervaring bouw ik sites die werken."
               </blockquote>
               
-              <div className="space-y-4 text-slate-600">
+              <div className="space-y-4 text-[var(--color-muted)]">
                 <p>
                   Ik ben Max, software engineer en de persoon achter TechSolutionsUtrecht. 
                   Naast mijn studie wiskunde hier in Utrecht heb ik de afgelopen 12 jaar gewerkt aan websites en webapplicaties.
@@ -165,19 +165,19 @@ export default function OverMijPage() {
             </div>
 
             <div className="relative">
-              <div className="aspect-[4/3] rounded-2xl bg-gradient-to-br from-[#0f766e]/20 to-[#14b8a6]/20 flex items-center justify-center">
+              <div className="aspect-[4/3] rounded-2xl bg-[var(--color-primary)]/10 flex items-center justify-center">
                 <div className="text-center">
                   <div className="w-32 h-32 mx-auto mb-4 rounded-2xl overflow-hidden border-4 border-white shadow-xl">
                     <img 
                       src="/profile.webp" 
                       alt="Max" 
-                      className="w-full h-full object-contain bg-slate-100"
+                      className="w-full h-full object-contain bg-[var(--color-surface)]"
                     />
                   </div>
-                  <div className="text-6xl font-extrabold bg-gradient-to-r from-[#0f766e] to-[#14b8a6] bg-clip-text text-transparent">
+                  <div className="text-6xl font-extrabold text-[var(--color-primary)]">
                     2013
                   </div>
-                  <div className="text-slate-600 mt-2">Gestart met webdevelopment</div>
+                  <div className="text-[var(--color-muted)] mt-2">Gestart met webdevelopment</div>
                 </div>
               </div>
             </div>
@@ -185,7 +185,7 @@ export default function OverMijPage() {
 
           {/* Values Section */}
           <div className="mb-24">
-            <h2 className="text-3xl font-bold text-slate-900 text-center mb-12">
+            <h2 className="text-3xl font-bold text-[var(--color-ink)] text-center mb-12">
               Mijn waarden
             </h2>
             
@@ -193,20 +193,20 @@ export default function OverMijPage() {
               {values.map((value) => (
                 <div
                   key={value.title}
-                  className="p-6 bg-slate-50 rounded-2xl border border-slate-200 hover:shadow-lg transition-shadow"
+                  className="p-6 bg-[var(--color-surface)] rounded-2xl border border-[var(--color-border)] hover:shadow-lg transition-shadow"
                 >
-                  <div className="w-12 h-12 rounded-xl bg-[#0f766e]/10 flex items-center justify-center mb-4">
-                    <value.icon className="w-6 h-6 text-[#0f766e]" />
+                  <div className="w-12 h-12 rounded-xl bg-[var(--color-primary)]/10 flex items-center justify-center mb-4">
+                    <value.icon className="w-6 h-6 text-[var(--color-primary)]" />
                   </div>
-                  <h3 className="text-lg font-semibold text-slate-900 mb-2">{value.title}</h3>
-                  <p className="text-slate-600">{value.description}</p>
+                  <h3 className="text-lg font-semibold text-[var(--color-ink)] mb-2">{value.title}</h3>
+                  <p className="text-[var(--color-muted)]">{value.description}</p>
                 </div>
               ))}
             </div>
           </div>
 
           {/* Certifications */}
-          <div className="bg-gradient-to-r from-[#0f766e] to-[#14b8a6] rounded-2xl p-8 text-white">
+          <div className="bg-[var(--color-primary)] rounded-2xl p-8 text-white">
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <div>
                 <h2 className="text-2xl font-bold mb-4">Expertise & Ervaring</h2>

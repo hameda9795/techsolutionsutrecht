@@ -67,10 +67,10 @@ export default function TableOfContents({ headings }: TableOfContentsProps) {
   }
 
   return (
-    <nav className="bg-gradient-to-br from-[var(--bg-card)] to-[var(--bg-secondary)] border border-[var(--border)] rounded-xl p-6 sticky top-28 shadow-lg">
-      <h2 className="text-lg font-bold text-[var(--text-primary)] mb-4 flex items-center gap-2">
+    <nav className="bg-[var(--color-bg)] border border-[var(--color-border)] rounded-xl p-6 sticky top-28 shadow-lg">
+      <h2 className="text-lg font-bold text-[var(--color-ink)] mb-4 flex items-center gap-2">
         <svg 
-          className="w-5 h-5 text-primary" 
+          className="w-5 h-5 text-[var(--color-primary)]" 
           fill="none" 
           stroke="currentColor" 
           viewBox="0 0 24 24"
@@ -98,8 +98,8 @@ export default function TableOfContents({ headings }: TableOfContentsProps) {
                 block py-2 px-3 rounded-lg text-sm transition-all duration-200
                 ${heading.level === 2 ? 'font-medium' : 'text-xs'}
                 ${activeId === heading.id 
-                  ? 'bg-primary/10 text-primary border-l-2 border-primary' 
-                  : 'text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:bg-[var(--bg-tertiary)] border-l-2 border-transparent'
+                  ? 'bg-[var(--color-primary)]/10 text-[var(--color-primary)] border-l-2 border-[var(--color-primary)]' 
+                  : 'text-[var(--color-muted)] hover:text-[var(--color-ink)] hover:bg-[var(--color-surface)] border-l-2 border-transparent'
                 }
               `}
             >

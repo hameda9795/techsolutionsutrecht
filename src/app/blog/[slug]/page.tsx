@@ -124,29 +124,29 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
       
       <main className="pb-24">
         {/* Breadcrumb */}
-        <nav className="py-4 bg-[var(--bg-secondary)] border-b border-[var(--border)]">
+        <nav className="py-4 bg-[var(--color-surface)] border-b border-[var(--color-border)]">
           <div className="container-custom">
             <ol className="flex items-center gap-2 text-sm flex-wrap">
               <li>
                 <Link 
                   href="/" 
-                  className="text-[var(--text-muted)] hover:text-primary transition-colors"
+                  className="text-[var(--color-muted)] hover:text-primary transition-colors"
                 >
                   Home
                 </Link>
               </li>
-              <li className="text-[var(--text-muted)]">/</li>
+              <li className="text-[var(--color-muted)]">/</li>
               <li>
                 <Link 
                   href="/blog" 
-                  className="text-[var(--text-muted)] hover:text-primary transition-colors"
+                  className="text-[var(--color-muted)] hover:text-primary transition-colors"
                 >
                   Blog
                 </Link>
               </li>
-              <li className="text-[var(--text-muted)]">/</li>
+              <li className="text-[var(--color-muted)]">/</li>
               <li>
-                <span className="text-[var(--text-primary)] font-medium truncate max-w-[200px] sm:max-w-xs block">
+                <span className="text-[var(--color-ink)] font-medium truncate max-w-[200px] sm:max-w-xs block">
                   {post.title}
                 </span>
               </li>
@@ -161,7 +161,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               {/* Back Link */}
               <Link 
                 href="/blog"
-                className="inline-flex items-center text-[var(--text-secondary)] hover:text-primary transition-colors mb-8"
+                className="inline-flex items-center text-[var(--color-muted)] hover:text-primary transition-colors mb-8"
               >
                 <ArrowLeft className="w-4 h-4 mr-2" />
                 Terug naar blog
@@ -190,7 +190,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               <BlogContent contentHtml={post.contentHtml} />
 
               {/* Share at bottom */}
-              <div className="mt-12 pt-8 border-t border-[var(--border)]">
+              <div className="mt-12 pt-8 border-t border-[var(--color-border)]">
                 <ShareButtons title={post.title} url={canonicalUrl} />
               </div>
 

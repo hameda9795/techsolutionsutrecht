@@ -64,14 +64,14 @@ export default function ContactForm() {
 
   if (isSubmitted) {
     return (
-      <div className="bg-[var(--bg-card)] border border-[var(--border)] rounded-2xl p-12 text-center">
+      <div className="bg-[var(--color-bg)] border border-[var(--color-border)] rounded-2xl p-12 text-center">
         <div className="w-20 h-20 rounded-full bg-success/20 flex items-center justify-center mx-auto mb-6">
           <CheckCircle className="w-10 h-10 text-success" />
         </div>
-        <h3 className="text-2xl font-bold text-[var(--text-primary)] mb-4">
+        <h3 className="text-2xl font-bold text-[var(--color-ink)] mb-4">
           Bedankt voor je bericht!
         </h3>
-        <p className="text-[var(--text-secondary)] mb-6">
+        <p className="text-[var(--color-muted)] mb-6">
           We nemen binnen 4 uur contact met je op.
         </p>
         <button
@@ -96,7 +96,7 @@ export default function ContactForm() {
   return (
     <form 
       onSubmit={handleSubmit}
-      className="bg-[var(--bg-card)] border border-[var(--border)] rounded-2xl p-8"
+      className="bg-[var(--color-bg)] border border-[var(--color-border)] rounded-2xl p-8"
     >
       {/* Error Message */}
       {error && (
@@ -112,7 +112,7 @@ export default function ContactForm() {
         <div>
           <label 
             htmlFor="name" 
-            className="block text-sm font-medium text-[var(--text-primary)] mb-2"
+            className="block text-sm font-medium text-[var(--color-ink)] mb-2"
           >
             Naam *
           </label>
@@ -123,7 +123,7 @@ export default function ContactForm() {
             required
             value={formData.name}
             onChange={handleChange}
-            className="w-full px-4 py-3 bg-[var(--bg-tertiary)] border border-[var(--border)] rounded-lg text-[var(--text-primary)] placeholder-[var(--text-muted)] focus:outline-none focus:border-primary transition-colors"
+            className="w-full px-4 py-3 bg-[var(--color-surface)] border border-[var(--color-border)] rounded-lg text-[var(--color-ink)] placeholder-[var(--text-muted)] focus:outline-none focus:border-primary transition-colors"
             placeholder="Jouw naam"
           />
         </div>
@@ -132,7 +132,7 @@ export default function ContactForm() {
         <div>
           <label 
             htmlFor="email" 
-            className="block text-sm font-medium text-[var(--text-primary)] mb-2"
+            className="block text-sm font-medium text-[var(--color-ink)] mb-2"
           >
             Email *
           </label>
@@ -143,7 +143,7 @@ export default function ContactForm() {
             required
             value={formData.email}
             onChange={handleChange}
-            className="w-full px-4 py-3 bg-[var(--bg-tertiary)] border border-[var(--border)] rounded-lg text-[var(--text-primary)] placeholder-[var(--text-muted)] focus:outline-none focus:border-primary transition-colors"
+            className="w-full px-4 py-3 bg-[var(--color-surface)] border border-[var(--color-border)] rounded-lg text-[var(--color-ink)] placeholder-[var(--text-muted)] focus:outline-none focus:border-primary transition-colors"
             placeholder="jouw@email.nl"
           />
         </div>
@@ -152,7 +152,7 @@ export default function ContactForm() {
         <div>
           <label 
             htmlFor="phone" 
-            className="block text-sm font-medium text-[var(--text-primary)] mb-2"
+            className="block text-sm font-medium text-[var(--color-ink)] mb-2"
           >
             Telefoon
           </label>
@@ -162,7 +162,7 @@ export default function ContactForm() {
             name="phone"
             value={formData.phone}
             onChange={handleChange}
-            className="w-full px-4 py-3 bg-[var(--bg-tertiary)] border border-[var(--border)] rounded-lg text-[var(--text-primary)] placeholder-[var(--text-muted)] focus:outline-none focus:border-primary transition-colors"
+            className="w-full px-4 py-3 bg-[var(--color-surface)] border border-[var(--color-border)] rounded-lg text-[var(--color-ink)] placeholder-[var(--text-muted)] focus:outline-none focus:border-primary transition-colors"
             placeholder="06-12345678"
           />
         </div>
@@ -171,7 +171,7 @@ export default function ContactForm() {
         <div>
           <label 
             htmlFor="subject" 
-            className="block text-sm font-medium text-[var(--text-primary)] mb-2"
+            className="block text-sm font-medium text-[var(--color-ink)] mb-2"
           >
             Onderwerp
           </label>
@@ -180,7 +180,7 @@ export default function ContactForm() {
             name="subject"
             value={formData.subject}
             onChange={handleChange}
-            className="w-full px-4 py-3 bg-[var(--bg-tertiary)] border border-[var(--border)] rounded-lg text-[var(--text-primary)] focus:outline-none focus:border-primary transition-colors"
+            className="w-full px-4 py-3 bg-[var(--color-surface)] border border-[var(--color-border)] rounded-lg text-[var(--color-ink)] focus:outline-none focus:border-primary transition-colors"
           >
             <option value="">Selecteer een onderwerp</option>
             {subjects.map((subject) => (
@@ -194,7 +194,7 @@ export default function ContactForm() {
       <div className="mt-6">
         <label 
           htmlFor="message" 
-          className="block text-sm font-medium text-[var(--text-primary)] mb-2"
+          className="block text-sm font-medium text-[var(--color-ink)] mb-2"
         >
           Bericht *
         </label>
@@ -205,7 +205,7 @@ export default function ContactForm() {
           rows={5}
           value={formData.message}
           onChange={handleChange}
-          className="w-full px-4 py-3 bg-[var(--bg-tertiary)] border border-[var(--border)] rounded-lg text-[var(--text-primary)] placeholder-[var(--text-muted)] focus:outline-none focus:border-primary transition-colors resize-none"
+          className="w-full px-4 py-3 bg-[var(--color-surface)] border border-[var(--color-border)] rounded-lg text-[var(--color-ink)] placeholder-[var(--text-muted)] focus:outline-none focus:border-primary transition-colors resize-none"
           placeholder="Vertel ons over je project of probleem..."
         />
       </div>

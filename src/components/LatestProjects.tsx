@@ -17,15 +17,15 @@ export default async function LatestProjects() {
   if (latest.length === 0) return null;
 
   return (
-    <section className="relative z-20 max-w-7xl mx-auto px-5 sm:px-6 pt-4 sm:pt-6">
+    <section className="relative z-20 max-w-7xl mx-auto px-5 sm:px-6 pt-10 sm:pt-14 lg:pt-16 pb-4 sm:pb-6">
       <div className="flex items-center justify-between mb-3">
-        <span className="inline-flex items-center gap-2 text-xs sm:text-sm font-semibold text-slate-500 uppercase tracking-wide">
-          <span className="w-2 h-2 rounded-full bg-[#0f766e] animate-pulse" />
+        <span className="inline-flex items-center gap-2 text-xs sm:text-sm font-semibold text-[var(--color-muted)] uppercase tracking-wide">
+          <span className="w-2 h-2 rounded-full bg-[var(--color-primary)] animate-pulse" />
           Recent opgeleverd
         </span>
         <Link
           href="/projecten"
-          className="inline-flex items-center gap-1 text-xs sm:text-sm font-semibold text-[#0f766e] hover:text-[#0d9488] transition-colors"
+          className="inline-flex items-center gap-1 text-xs sm:text-sm font-semibold text-[var(--color-primary)] hover:text-[var(--color-primary-dark)] transition-colors"
         >
           Alles bekijken
           <ArrowRight className="w-3.5 h-3.5" />
@@ -52,7 +52,7 @@ export default async function LatestProjects() {
                 />
               ) : (
                 <span
-                  className={`absolute inset-0 bg-gradient-to-br ${project.accent} flex items-center justify-center`}
+                  className="absolute inset-0 bg-[var(--color-primary)] flex items-center justify-center"
                 >
                   <span className="text-2xl sm:text-3xl font-black text-white/90">
                     {getInitials(project.title)}
@@ -63,10 +63,10 @@ export default async function LatestProjects() {
 
             {/* Label */}
             <span className="block w-full text-center">
-              <span className="block text-[9px] sm:text-[10px] font-semibold uppercase tracking-wide text-[#0f766e]">
+              <span className="block text-[9px] sm:text-[10px] font-semibold uppercase tracking-wide text-[var(--color-primary)]">
                 {projectTypeLabels[project.type]}
               </span>
-              <span className="block text-[11px] sm:text-sm font-bold text-slate-900 leading-tight line-clamp-2">
+              <span className="block text-[11px] sm:text-sm font-bold text-[var(--color-ink)] leading-tight line-clamp-2">
                 {project.title}
               </span>
             </span>

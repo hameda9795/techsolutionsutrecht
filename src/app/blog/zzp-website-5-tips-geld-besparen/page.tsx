@@ -61,14 +61,14 @@ export default function ZZPTipsBlogPost() {
     <>
       <main className="pb-24">
         {/* Breadcrumb */}
-        <nav className="py-4 bg-[var(--bg-secondary)] border-b border-[var(--border)]">
+        <nav className="py-4 bg-[var(--color-surface)] border-b border-[var(--color-border)]">
           <div className="container-custom">
             <ol className="flex items-center gap-2 text-sm flex-wrap">
-              <li><Link href="/" className="text-[var(--text-muted)] hover:text-primary transition-colors">Home</Link></li>
-              <li className="text-[var(--text-muted)]">/</li>
-              <li><Link href="/blog" className="text-[var(--text-muted)] hover:text-primary transition-colors">Blog</Link></li>
-              <li className="text-[var(--text-muted)]">/</li>
-              <li><span className="text-[var(--text-primary)] font-medium">Artikel</span></li>
+              <li><Link href="/" className="text-[var(--color-muted)] hover:text-primary transition-colors">Home</Link></li>
+              <li className="text-[var(--color-muted)]">/</li>
+              <li><Link href="/blog" className="text-[var(--color-muted)] hover:text-primary transition-colors">Blog</Link></li>
+              <li className="text-[var(--color-muted)]">/</li>
+              <li><span className="text-[var(--color-ink)] font-medium">Artikel</span></li>
             </ol>
           </div>
         </nav>
@@ -78,7 +78,7 @@ export default function ZZPTipsBlogPost() {
             {/* Back Link */}
             <Link 
               href="/blog"
-              className="inline-flex items-center text-[var(--text-secondary)] hover:text-primary transition-colors mb-8"
+              className="inline-flex items-center text-[var(--color-muted)] hover:text-primary transition-colors mb-8"
             >
               <ArrowLeft className="w-4 h-4 mr-2" />
               Terug naar blog
@@ -90,13 +90,13 @@ export default function ZZPTipsBlogPost() {
             </span>
 
             {/* Title */}
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[var(--text-primary)] mb-6">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[var(--color-ink)] mb-6">
               ZZP Website Laten Maken:{" "}
-              <span className="gradient-text">5 Tips om Geld te Besparen</span>
+              <span className="text-[var(--color-primary)]">5 Tips om Geld te Besparen</span>
             </h1>
 
             {/* Meta */}
-            <div className="flex flex-wrap items-center gap-6 text-[var(--text-muted)] mb-12 pb-12 border-b border-[var(--border)]">
+            <div className="flex flex-wrap items-center gap-6 text-[var(--color-muted)] mb-12 pb-12 border-b border-[var(--color-border)]">
               <div className="flex items-center gap-2">
                 <User className="w-4 h-4" />
                 <span>TechSolutionsUtrecht</span>
@@ -113,8 +113,8 @@ export default function ZZPTipsBlogPost() {
 
             {/* Intro */}
             <div className="prose prose-invert max-w-none mb-12">
-              <p className="text-xl text-[var(--text-secondary)] leading-relaxed">
-                Als <strong className="text-[var(--text-primary)]">ZZP'er of startende ondernemer</strong> 
+              <p className="text-xl text-[var(--color-muted)] leading-relaxed">
+                Als <strong className="text-[var(--color-ink)]">ZZP'er of startende ondernemer</strong> 
                 heb je waarschijnlijk een beperkt budget. Een professionele website is essentieel, 
                 maar hoeft niet duur te zijn. In dit artikel delen we <strong className="text-primary">5 praktische tips</strong>{" "}
                 om geld te besparen bij het laten maken van je website, zonder in te leveren op kwaliteit.
@@ -124,21 +124,21 @@ export default function ZZPTipsBlogPost() {
             {/* Tips */}
             <div className="space-y-12 mb-12">
               {tips.map((tip) => (
-                <div key={tip.number} className="bg-[var(--bg-card)] border border-[var(--border)] rounded-2xl p-8">
+                <div key={tip.number} className="bg-[var(--color-bg)] border border-[var(--color-border)] rounded-2xl p-8">
                   <div className="flex items-center gap-4 mb-6">
                     <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center text-white text-xl font-bold">
                       {tip.number}
                     </div>
-                    <h2 className="text-2xl font-bold text-[var(--text-primary)]">
+                    <h2 className="text-2xl font-bold text-[var(--color-ink)]">
                       {tip.title}
                     </h2>
                   </div>
                   
-                  <p className="text-[var(--text-secondary)] mb-6 leading-relaxed">
+                  <p className="text-[var(--color-muted)] mb-6 leading-relaxed">
                     {tip.content}
                   </p>
                   
-                  <div className="flex items-center gap-2 p-4 bg-green-500/10 rounded-xl">
+                  <div className="flex items-center gap-2 p-4 bg-[var(--color-surface)]0/10 rounded-xl">
                     <Euro className="w-5 h-5 text-green-500" />
                     <span className="text-green-400 font-semibold">{tip.saving}</span>
                   </div>
@@ -147,12 +147,12 @@ export default function ZZPTipsBlogPost() {
             </div>
 
             {/* Summary */}
-            <div className="p-8 bg-gradient-to-br from-primary/10 to-secondary/10 border border-primary/20 rounded-2xl mb-12">
-              <h2 className="text-2xl font-bold text-[var(--text-primary)] mb-4">
+            <div className="p-8 bg-[var(--color-primary)]/10 border border-primary/20 rounded-2xl mb-12">
+              <h2 className="text-2xl font-bold text-[var(--color-ink)] mb-4">
                 Samenvatting: Hoeveel Kun je Besparen?
               </h2>
               
-              <p className="text-[var(--text-secondary)] mb-6">
+              <p className="text-[var(--color-muted)] mb-6">
                 Door deze 5 tips toe te passen, kun je gemakkelijk <strong className="text-primary">€2.000 - €5.000 besparen</strong>{" "}
                 op je website. Het belangrijkste is dat je slim keuzes maakt: kies WordPress, 
                 bereid je content voor, start simpel en vergelijk offertes.
@@ -160,8 +160,8 @@ export default function ZZPTipsBlogPost() {
               
               <div className="flex items-start gap-3">
                 <CheckCircle className="w-6 h-6 text-primary flex-shrink-0 mt-0.5" />
-                <p className="text-[var(--text-secondary)]">
-                  <strong className="text-[var(--text-primary)]">Ons advies:</strong>{" "}
+                <p className="text-[var(--color-muted)]">
+                  <strong className="text-[var(--color-ink)]">Ons advies:</strong>{" "}
                   Begin met een goede basiswebsite vanaf €250. Je kunt altijd later uitbreiden 
                   wanneer je bedrijf groeit. Zo heb je snel een professionele online presentatie 
                   zonder je hele budget te verbruiken.
@@ -170,12 +170,12 @@ export default function ZZPTipsBlogPost() {
             </div>
 
             {/* CTA */}
-            <div className="p-8 bg-[var(--bg-card)] border border-[var(--border)] rounded-2xl mb-12">
-              <h3 className="text-xl font-bold text-[var(--text-primary)] mb-4">
+            <div className="p-8 bg-[var(--color-bg)] border border-[var(--color-border)] rounded-2xl mb-12">
+              <h3 className="text-xl font-bold text-[var(--color-ink)] mb-4">
                 Klaar om te Starten?
               </h3>
               
-              <p className="text-[var(--text-secondary)] mb-6">
+              <p className="text-[var(--color-muted)] mb-6">
                 Bij TechSolutionsUtrecht maken we professionele ZZP websites vanaf €250. 
                 Binnen 1 week online, zonder verborgen kosten. Vraag een gratis offerte aan!
               </p>
@@ -198,28 +198,28 @@ export default function ZZPTipsBlogPost() {
             </div>
 
             {/* Related Posts */}
-            <div className="border-t border-[var(--border)] pt-12">
-              <h3 className="text-xl font-bold text-[var(--text-primary)] mb-6">
+            <div className="border-t border-[var(--color-border)] pt-12">
+              <h3 className="text-xl font-bold text-[var(--color-ink)] mb-6">
                 Gerelateerde artikelen
               </h3>
               
               <div className="grid md:grid-cols-2 gap-6">
                 <Link 
                   href="/blog/website-binnen-week-hoe-wij-dat-doen"
-                  className="p-6 bg-[var(--bg-card)] border border-[var(--border)] rounded-xl hover:border-primary transition-colors"
+                  className="p-6 bg-[var(--color-bg)] border border-[var(--color-border)] rounded-xl hover:border-primary transition-colors"
                 >
                   <span className="text-xs text-primary font-medium">Snelle Oplevering</span>
-                  <h4 className="font-semibold text-[var(--text-primary)] mt-2">
+                  <h4 className="font-semibold text-[var(--color-ink)] mt-2">
                     Website Binnen 1 Week Online: Zo Doen Wij Dat
                   </h4>
                 </Link>
                 
                 <Link 
                   href="/blog/wat-kost-een-website-laten-maken"
-                  className="p-6 bg-[var(--bg-card)] border border-[var(--border)] rounded-xl hover:border-primary transition-colors"
+                  className="p-6 bg-[var(--color-bg)] border border-[var(--color-border)] rounded-xl hover:border-primary transition-colors"
                 >
                   <span className="text-xs text-primary font-medium">Kosten</span>
-                  <h4 className="font-semibold text-[var(--text-primary)] mt-2">
+                  <h4 className="font-semibold text-[var(--color-ink)] mt-2">
                     Wat Kost een Website Laten Maken in 2025?
                   </h4>
                 </Link>

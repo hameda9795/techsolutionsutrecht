@@ -13,7 +13,7 @@ interface BlogCardProps {
 export default function BlogCard({ post, featured = false }: BlogCardProps) {
   return (
     <article
-      className={`card-hover bg-[var(--bg-card)] rounded-xl overflow-hidden border border-[var(--border)] ${
+      className={`card-hover bg-[var(--color-bg)] rounded-xl overflow-hidden border border-[var(--color-border)] ${
         featured ? 'md:col-span-2' : ''
       }`}
     >
@@ -22,7 +22,7 @@ export default function BlogCard({ post, featured = false }: BlogCardProps) {
           <span className="inline-block px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium">
             {post.category}
           </span>
-          <div className="flex items-center gap-4 text-[var(--text-muted)] text-sm">
+          <div className="flex items-center gap-4 text-[var(--color-muted)] text-sm">
             <span className="flex items-center gap-1">
               <Calendar className="w-4 h-4" />
               {formatDate(post.date)}
@@ -34,12 +34,12 @@ export default function BlogCard({ post, featured = false }: BlogCardProps) {
           </div>
         </div>
 
-        <h2 className={`font-bold text-[var(--text-primary)] mb-3 group-hover:text-primary transition-colors ${
+        <h2 className={`font-bold text-[var(--color-ink)] mb-3 group-hover:text-primary transition-colors ${
           featured ? 'text-2xl md:text-3xl' : 'text-xl md:text-2xl'
         }`}>
           {post.title}
         </h2>
-        <p className="text-[var(--text-secondary)] mb-4 line-clamp-3">
+        <p className="text-[var(--color-muted)] mb-4 line-clamp-3">
           {post.description}
         </p>
 

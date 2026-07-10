@@ -107,7 +107,7 @@ export default function WordPressPage() {
       <main className="pt-32 pb-24">
         <div className="container-custom">
           {/* Breadcrumb */}
-          <nav className="text-sm text-[var(--text-muted)] mb-8">
+          <nav className="text-sm text-[var(--color-muted)] mb-8">
             <Link href="/" className="hover:text-primary">Home</Link>
             <span className="mx-2">/</span>
             <Link href="/diensten" className="hover:text-primary">Diensten</Link>
@@ -118,13 +118,13 @@ export default function WordPressPage() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Content */}
             <div>
-              <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-500 to-cyan-500 mb-6">
+              <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-[var(--color-primary)] mb-6">
                 <Globe className="w-8 h-8 text-white" />
               </div>
 
-              <h1 className="text-4xl sm:text-5xl font-bold text-[var(--text-primary)] mb-4">
+              <h1 className="text-4xl sm:text-5xl font-bold text-[var(--color-ink)] mb-4">
                 WordPress Website Laten Maken in{" "}
-                <span className="gradient-text">Utrecht</span>
+                <span className="text-[var(--color-primary)]">Utrecht</span>
               </h1>
 
               {/* Speed + Price badges */}
@@ -133,14 +133,14 @@ export default function WordPressPage() {
                   <Zap className="w-4 h-4 text-primary" />
                   <span className="text-sm text-primary font-medium">Binnen 3-10 dagen online</span>
                 </div>
-                <div className="flex items-center gap-2 px-3 py-1 bg-green-500/10 rounded-full">
-                  <Clock className="w-4 h-4 text-green-500" />
-                  <span className="text-sm text-green-500 font-medium">Express levering mogelijk</span>
+                <div className="flex items-center gap-2 px-3 py-1 bg-[var(--color-primary)]/10 rounded-full">
+                  <Clock className="w-4 h-4 text-[var(--color-primary)]" />
+                  <span className="text-sm text-[var(--color-primary)] font-medium">Express levering mogelijk</span>
                 </div>
               </div>
 
-              <p className="text-lg text-[var(--text-secondary)] mb-8">
-                Op zoek naar een <strong className="text-[var(--text-primary)]">professionele WordPress website</strong> in Utrecht?
+              <p className="text-lg text-[var(--color-muted)] mb-8">
+                Op zoek naar een <strong className="text-[var(--color-ink)]">professionele WordPress website</strong> in Utrecht?
                 Ik bouw een snelle, responsive en SEO-klare website met{" "}
                 <strong className="text-primary">direct contact met de developer</strong>. Scherp geprijsd en zonder concessies aan kwaliteit.
               </p>
@@ -151,14 +151,14 @@ export default function WordPressPage() {
                     <div className="w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
                       <Check className="w-3 h-3 text-primary" />
                     </div>
-                    <span className="text-[var(--text-secondary)]">{feature}</span>
+                    <span className="text-[var(--color-muted)]">{feature}</span>
                   </div>
                 ))}
               </div>
 
               <div className="flex flex-wrap items-center gap-6 mb-8">
                 <div className="text-3xl font-bold text-primary">€250 - €800</div>
-                <div className="text-[var(--text-muted)]">Oplevering: 3-10 dagen</div>
+                <div className="text-[var(--color-muted)]">Oplevering: 3-10 dagen</div>
               </div>
 
               <Link href="/contact" className="btn-primary group inline-flex">
@@ -169,12 +169,12 @@ export default function WordPressPage() {
 
             {/* Visual */}
             <div className="relative">
-              <div className="aspect-square rounded-2xl bg-gradient-to-br from-blue-500/20 to-cyan-500/20 flex items-center justify-center">
+              <div className="aspect-square rounded-2xl bg-[var(--color-primary)]/10 flex items-center justify-center">
                 <div className="text-center">
-                  <Globe className="w-24 h-24 text-blue-500 mx-auto mb-4" />
-                  <div className="text-2xl font-bold text-[var(--text-primary)]">WordPress</div>
+                  <Globe className="w-24 h-24 text-[var(--color-primary)] mx-auto mb-4" />
+                  <div className="text-2xl font-bold text-[var(--color-ink)]">WordPress</div>
                   <div className="text-3xl font-extrabold text-primary mt-2">Vanaf €250</div>
-                  <div className="text-[var(--text-muted)] mt-1">3-10 dagen</div>
+                  <div className="text-[var(--color-muted)] mt-1">3-10 dagen</div>
                 </div>
               </div>
             </div>
@@ -182,22 +182,22 @@ export default function WordPressPage() {
 
           {/* Intro */}
           <section className="mt-24 max-w-3xl">
-            <h2 className="text-3xl font-bold text-[var(--text-primary)] mb-6">
+            <h2 className="text-3xl font-bold text-[var(--color-ink)] mb-6">
               Waarom een WordPress website voor jouw bedrijf?
             </h2>
-            <p className="text-[var(--text-secondary)] mb-4 leading-relaxed">
+            <p className="text-[var(--color-muted)] mb-4 leading-relaxed">
               WordPress is wereldwijd het meest gebruikte systeem om websites mee te bouwen, en niet zonder reden.
               Het combineert een gebruiksvriendelijk beheer met enorme flexibiliteit: van een eenvoudige bedrijfssite
               of portfolio tot een uitgebreide website met blog, contactformulieren en koppelingen. Voor de meeste
               ZZP&apos;ers en kleine bedrijven in Utrecht is het de ideale balans tussen kwaliteit, kosten en
               zelfstandigheid.
             </p>
-            <p className="text-[var(--text-secondary)] mb-4 leading-relaxed">
+            <p className="text-[var(--color-muted)] mb-4 leading-relaxed">
               Het verschil zit hem in de uitvoering. Een WordPress-site die slordig is opgezet, is traag en slecht
               vindbaar. Ik bouw je website met aandacht voor snelheid, schone code en een stevige SEO-basis, zodat je
               niet alleen een mooie, maar ook een goed presterende website krijgt.
             </p>
-            <p className="text-[var(--text-secondary)] leading-relaxed">
+            <p className="text-[var(--color-muted)] leading-relaxed">
               En omdat je rechtstreeks met de developer werkt, zijn de lijnen kort. Geen accountmanagers, geen
               wachtrijen, gewoon snel en persoonlijk contact van begin tot eind.
             </p>
@@ -205,15 +205,15 @@ export default function WordPressPage() {
 
           {/* Pillars */}
           <section className="mt-20">
-            <h2 className="text-3xl font-bold text-[var(--text-primary)] mb-10">Wat je krijgt</h2>
+            <h2 className="text-3xl font-bold text-[var(--color-ink)] mb-10">Wat je krijgt</h2>
             <div className="grid md:grid-cols-2 gap-6">
               {pillars.map((p) => (
-                <div key={p.title} className="bg-[var(--bg-card)] border border-[var(--border)] rounded-2xl p-6">
+                <div key={p.title} className="bg-[var(--color-bg)] border border-[var(--color-border)] rounded-2xl p-6">
                   <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-primary/10 mb-4">
                     <p.icon className="w-6 h-6 text-primary" />
                   </div>
-                  <h3 className="text-xl font-bold text-[var(--text-primary)] mb-2">{p.title}</h3>
-                  <p className="text-[var(--text-secondary)] leading-relaxed">{p.text}</p>
+                  <h3 className="text-xl font-bold text-[var(--color-ink)] mb-2">{p.title}</h3>
+                  <p className="text-[var(--color-muted)] leading-relaxed">{p.text}</p>
                 </div>
               ))}
             </div>
@@ -221,7 +221,7 @@ export default function WordPressPage() {
 
           {/* Aanpak / proces */}
           <section className="mt-20 max-w-3xl">
-            <h2 className="text-3xl font-bold text-[var(--text-primary)] mb-6">Zo verloopt het traject</h2>
+            <h2 className="text-3xl font-bold text-[var(--color-ink)] mb-6">Zo verloopt het traject</h2>
             <ul className="space-y-4">
               {[
                 "Kennismaking en offerte: we bespreken je doelen, voorbeelden en budget. Je ontvangt een heldere offerte zonder verborgen kosten.",
@@ -231,7 +231,7 @@ export default function WordPressPage() {
               ].map((step) => (
                 <li key={step} className="flex items-start gap-3">
                   <Check className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
-                  <span className="text-[var(--text-secondary)] leading-relaxed">{step}</span>
+                  <span className="text-[var(--color-muted)] leading-relaxed">{step}</span>
                 </li>
               ))}
             </ul>
@@ -239,43 +239,43 @@ export default function WordPressPage() {
 
           {/* Interne links */}
           <section className="mt-20">
-            <h2 className="text-3xl font-bold text-[var(--text-primary)] mb-4">Past dit bij jou?</h2>
-            <p className="text-[var(--text-secondary)] mb-8 max-w-3xl leading-relaxed">
+            <h2 className="text-3xl font-bold text-[var(--color-ink)] mb-4">Past dit bij jou?</h2>
+            <p className="text-[var(--color-muted)] mb-8 max-w-3xl leading-relaxed">
               Bekijk ook deze opties, of laat je website na de bouw structureel hoger in Google komen.
             </p>
             <div className="grid md:grid-cols-3 gap-6">
-              <Link href="/diensten/webshop" className="card-service block p-6 rounded-2xl bg-[var(--bg-card)] border border-[var(--border)] hover:border-primary/40 transition-colors">
-                <h3 className="text-lg font-bold text-[var(--text-primary)] mb-2">Webshop laten maken</h3>
-                <p className="text-[var(--text-secondary)] text-sm">Een complete WooCommerce-webshop met iDEAL en voorraadbeheer.</p>
+              <Link href="/diensten/webshop" className="card-service block p-6 rounded-2xl bg-[var(--color-bg)] border border-[var(--color-border)] hover:border-primary/40 transition-colors">
+                <h3 className="text-lg font-bold text-[var(--color-ink)] mb-2">Webshop laten maken</h3>
+                <p className="text-[var(--color-muted)] text-sm">Een complete WooCommerce-webshop met iDEAL en voorraadbeheer.</p>
               </Link>
-              <Link href="/diensten/maatwerk" className="card-service block p-6 rounded-2xl bg-[var(--bg-card)] border border-[var(--border)] hover:border-primary/40 transition-colors">
-                <h3 className="text-lg font-bold text-[var(--text-primary)] mb-2">Maatwerk development</h3>
-                <p className="text-[var(--text-secondary)] text-sm">Webapplicaties en dashboards op maat met React en Next.js.</p>
+              <Link href="/diensten/maatwerk" className="card-service block p-6 rounded-2xl bg-[var(--color-bg)] border border-[var(--color-border)] hover:border-primary/40 transition-colors">
+                <h3 className="text-lg font-bold text-[var(--color-ink)] mb-2">Maatwerk development</h3>
+                <p className="text-[var(--color-muted)] text-sm">Webapplicaties en dashboards op maat met React en Next.js.</p>
               </Link>
-              <Link href="/diensten/seo" className="card-service block p-6 rounded-2xl bg-[var(--bg-card)] border border-[var(--border)] hover:border-primary/40 transition-colors">
-                <h3 className="text-lg font-bold text-[var(--text-primary)] mb-2">SEO optimalisatie</h3>
-                <p className="text-[var(--text-secondary)] text-sm">Structureel hoger in Google na de lancering van je site.</p>
+              <Link href="/diensten/seo" className="card-service block p-6 rounded-2xl bg-[var(--color-bg)] border border-[var(--color-border)] hover:border-primary/40 transition-colors">
+                <h3 className="text-lg font-bold text-[var(--color-ink)] mb-2">SEO optimalisatie</h3>
+                <p className="text-[var(--color-muted)] text-sm">Structureel hoger in Google na de lancering van je site.</p>
               </Link>
             </div>
           </section>
 
           {/* FAQ */}
           <section className="mt-20 max-w-3xl">
-            <h2 className="text-3xl font-bold text-[var(--text-primary)] mb-10">Veelgestelde vragen over WordPress</h2>
+            <h2 className="text-3xl font-bold text-[var(--color-ink)] mb-10">Veelgestelde vragen over WordPress</h2>
             <div className="space-y-4">
               {faqs.map((faq) => (
-                <div key={faq.question} className="bg-[var(--bg-card)] border border-[var(--border)] rounded-xl p-6">
-                  <h3 className="text-lg font-semibold text-[var(--text-primary)] mb-2">{faq.question}</h3>
-                  <p className="text-[var(--text-secondary)] leading-relaxed">{faq.answer}</p>
+                <div key={faq.question} className="bg-[var(--color-bg)] border border-[var(--color-border)] rounded-xl p-6">
+                  <h3 className="text-lg font-semibold text-[var(--color-ink)] mb-2">{faq.question}</h3>
+                  <p className="text-[var(--color-muted)] leading-relaxed">{faq.answer}</p>
                 </div>
               ))}
             </div>
           </section>
 
           {/* CTA */}
-          <section className="mt-20 text-center bg-[var(--bg-card)] border border-[var(--border)] rounded-2xl p-10">
-            <h2 className="text-3xl font-bold text-[var(--text-primary)] mb-4">Klaar voor een nieuwe WordPress website?</h2>
-            <p className="text-[var(--text-secondary)] mb-8 max-w-2xl mx-auto leading-relaxed">
+          <section className="mt-20 text-center bg-[var(--color-bg)] border border-[var(--color-border)] rounded-2xl p-10">
+            <h2 className="text-3xl font-bold text-[var(--color-ink)] mb-4">Klaar voor een nieuwe WordPress website?</h2>
+            <p className="text-[var(--color-muted)] mb-8 max-w-2xl mx-auto leading-relaxed">
               Vraag vrijblijvend een offerte aan. Je krijgt binnen één werkdag een reactie, direct van de developer
               die je website bouwt.
             </p>

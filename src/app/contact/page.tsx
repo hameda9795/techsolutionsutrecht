@@ -58,12 +58,12 @@ export default function ContactPage() {
     <>
       
       {/* Breadcrumb */}
-      <nav className="py-4 bg-[var(--bg-secondary)] border-b border-[var(--border)]">
+      <nav className="py-4 bg-[var(--color-surface)] border-b border-[var(--color-border)]">
         <div className="container-custom">
           <ol className="flex items-center gap-2 text-sm flex-wrap">
-            <li><Link href="/" className="text-[var(--text-muted)] hover:text-primary transition-colors">Home</Link></li>
-            <li className="text-[var(--text-muted)]">/</li>
-            <li><span className="text-[var(--text-primary)] font-medium">Contact</span></li>
+            <li><Link href="/" className="text-[var(--color-muted)] hover:text-primary transition-colors">Home</Link></li>
+            <li className="text-[var(--color-muted)]">/</li>
+            <li><span className="text-[var(--color-ink)] font-medium">Contact</span></li>
           </ol>
         </div>
       </nav>
@@ -75,12 +75,12 @@ export default function ContactPage() {
             <span className="text-primary font-semibold text-sm uppercase tracking-wider">
               Contact
             </span>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[var(--text-primary)] mt-4 mb-6">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[var(--color-ink)] mt-4 mb-6">
               Neem{" "}
-              <span className="gradient-text">Contact</span>{" "}
+              <span className="text-[var(--color-primary)]">Contact</span>{" "}
               Op
             </h1>
-            <p className="text-[var(--text-secondary)] text-lg">
+            <p className="text-[var(--color-muted)] text-lg">
               Heb je een vraag of wil je een offerte aanvragen? 
               We helpen je graag. Vul het formulier in of neem direct contact op.
             </p>
@@ -92,25 +92,25 @@ export default function ContactPage() {
               {contactInfo.map((item) => (
                 <div
                   key={item.label}
-                  className="card-hover bg-[var(--bg-card)] rounded-xl p-6 border border-[var(--border)]"
+                  className="card-hover bg-[var(--color-bg)] rounded-xl p-6 border border-[var(--color-border)]"
                 >
                   <div className="flex items-start gap-4">
                     <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
                       <item.icon className="w-6 h-6 text-primary" />
                     </div>
                     <div>
-                      <p className="text-[var(--text-muted)] text-sm mb-1">{item.label}</p>
+                      <p className="text-[var(--color-muted)] text-sm mb-1">{item.label}</p>
                       {item.href ? (
                         <a
                           href={item.href}
                           target={item.isWhatsApp ? "_blank" : undefined}
                           rel={item.isWhatsApp ? "noopener noreferrer" : undefined}
-                          className="text-[var(--text-primary)] font-semibold hover:text-primary transition-colors"
+                          className="text-[var(--color-ink)] font-semibold hover:text-primary transition-colors"
                         >
                           {item.value}
                         </a>
                       ) : (
-                        <p className="text-[var(--text-primary)] font-semibold">{item.value}</p>
+                        <p className="text-[var(--color-ink)] font-semibold">{item.value}</p>
                       )}
                     </div>
                   </div>
@@ -118,15 +118,15 @@ export default function ContactPage() {
               ))}
 
               {/* FAQ */}
-              <div className="bg-[var(--bg-card)] rounded-xl p-6 border border-[var(--border)] mt-8">
-                <h3 className="text-xl font-bold text-[var(--text-primary)] mb-6">
+              <div className="bg-[var(--color-bg)] rounded-xl p-6 border border-[var(--color-border)] mt-8">
+                <h3 className="text-xl font-bold text-[var(--color-ink)] mb-6">
                   Veelgestelde vragen
                 </h3>
                 <div className="space-y-4">
                   {faqs.map((faq) => (
                     <div key={faq.q}>
-                      <p className="font-semibold text-[var(--text-primary)] mb-1">{faq.q}</p>
-                      <p className="text-[var(--text-secondary)] text-sm">{faq.a}</p>
+                      <p className="font-semibold text-[var(--color-ink)] mb-1">{faq.q}</p>
+                      <p className="text-[var(--color-muted)] text-sm">{faq.a}</p>
                     </div>
                   ))}
                 </div>
@@ -135,7 +135,7 @@ export default function ContactPage() {
 
             {/* Contact Form */}
             <div className="lg:col-span-2">
-              <div className="card-hover bg-[var(--bg-card)] rounded-xl p-8 border border-[var(--border)]">
+              <div className="card-hover bg-[var(--color-bg)] rounded-xl p-8 border border-[var(--color-border)]">
                 <ContactForm />
               </div>
             </div>

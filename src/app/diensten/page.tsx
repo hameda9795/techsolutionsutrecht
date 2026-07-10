@@ -126,18 +126,18 @@ export default function DienstenPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webdesignService) }} />
       <Breadcrumb items={[{ label: "Diensten", href: "/diensten" }]} />
       
-      <main className="pt-24 pb-24 bg-white">
+      <main className="pt-24 pb-24 bg-[var(--color-bg)]">
         <div className="max-w-6xl mx-auto px-6">
           {/* Header */}
           <div className="text-center max-w-3xl mx-auto mb-20">
-            <span className="text-[#0f766e] font-semibold text-sm uppercase tracking-wider">
+            <span className="text-[var(--color-primary)] font-semibold text-sm uppercase tracking-wider">
               Diensten
             </span>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-900 mt-4 mb-6">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[var(--color-ink)] mt-4 mb-6">
               Professionele Webdesign{" "}
-              <span className="bg-gradient-to-r from-[#0f766e] to-[#14b8a6] bg-clip-text text-transparent">Diensten in Utrecht</span>
+              <span className="text-[var(--color-primary)]">Diensten in Utrecht</span>
             </h1>
-            <p className="text-slate-600 text-lg">
+            <p className="text-[var(--color-muted)] text-lg">
               Met 12+ jaar ervaring en moderne technologie bouw ik websites die werken. 
               Van eenvoudige WordPress sites tot complexe webapplicaties met AI.
             </p>
@@ -152,17 +152,17 @@ export default function DienstenPage() {
               >
                 <div className={index % 2 === 1 ? 'md:order-2' : ''}>
                   <div className="text-4xl mb-4">{service.icon}</div>
-                  <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-4">{service.title}</h2>
-                  <p className="text-slate-600 mb-6">{service.description}</p>
+                  <h2 className="text-2xl sm:text-3xl font-bold text-[var(--color-ink)] mb-4">{service.title}</h2>
+                  <p className="text-[var(--color-muted)] mb-6">{service.description}</p>
                   
                   <div className="flex flex-wrap gap-4 mb-6">
-                    <span className="px-4 py-2 bg-[#0f766e]/10 text-[#0f766e] rounded-lg font-semibold">{service.price}</span>
-                    <span className="px-4 py-2 bg-slate-100 text-slate-600 rounded-lg">⏱️ {service.time}</span>
+                    <span className="px-4 py-2 bg-[var(--color-primary)]/10 text-[var(--color-primary)] rounded-lg font-semibold">{service.price}</span>
+                    <span className="px-4 py-2 bg-[var(--color-surface)] text-[var(--color-muted)] rounded-lg">⏱️ {service.time}</span>
                   </div>
                   
                   <a 
                     href={service.href}
-                    className="inline-flex items-center gap-2 text-[#0f766e] font-semibold hover:underline"
+                    className="inline-flex items-center gap-2 text-[var(--color-primary)] font-semibold hover:underline"
                   >
                     Meer over {service.title}
                     <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -171,15 +171,15 @@ export default function DienstenPage() {
                   </a>
                 </div>
                 
-                <div className={`bg-slate-50 rounded-2xl p-8 border border-slate-200 ${index % 2 === 1 ? 'md:order-1' : ''}`}>
-                  <h3 className="font-semibold text-slate-900 mb-4">Wat je krijgt:</h3>
+                <div className={`bg-[var(--color-surface)] rounded-2xl p-8 border border-[var(--color-border)] ${index % 2 === 1 ? 'md:order-1' : ''}`}>
+                  <h3 className="font-semibold text-[var(--color-ink)] mb-4">Wat je krijgt:</h3>
                   <ul className="space-y-3">
                     {service.features.map((feature) => (
                       <li key={feature} className="flex items-start gap-3">
-                        <svg className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg className="w-5 h-5 text-[var(--color-primary)] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                         </svg>
-                        <span className="text-slate-600">{feature}</span>
+                        <span className="text-[var(--color-muted)]">{feature}</span>
                       </li>
                     ))}
                   </ul>
@@ -189,7 +189,7 @@ export default function DienstenPage() {
           </div>
 
           {/* CTA */}
-          <div className="mt-20 text-center bg-gradient-to-r from-[#0f766e] to-[#14b8a6] rounded-2xl p-12 text-white">
+          <div className="mt-20 text-center bg-[var(--color-primary)] rounded-2xl p-12 text-white">
             <h2 className="text-3xl font-bold mb-4">Klaar om te starten?</h2>
             <p className="text-white/90 mb-8 max-w-2xl mx-auto">
               Laten we samen kijken wat het beste past bij jouw project. 
@@ -199,13 +199,13 @@ export default function DienstenPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
                 href="https://wa.me/31625518708"
-                className="inline-flex items-center justify-center gap-2 bg-white text-[#0f766e] px-8 py-4 rounded-xl font-semibold hover:bg-slate-100 transition-colors"
+                className="inline-flex items-center justify-center gap-2 bg-[var(--color-bg)] text-[var(--color-primary)] px-8 py-4 rounded-xl font-semibold hover:bg-[var(--color-surface)] transition-colors"
               >
                 📱 WhatsApp direct
               </a>
               <a 
                 href="/contact"
-                className="inline-flex items-center justify-center gap-2 bg-white/20 text-white border-2 border-white px-8 py-4 rounded-xl font-semibold hover:bg-white/30 transition-colors"
+                className="inline-flex items-center justify-center gap-2 bg-[var(--color-bg)]/20 text-white border-2 border-white px-8 py-4 rounded-xl font-semibold hover:bg-[var(--color-bg)]/30 transition-colors"
               >
                 ✉️ Contactformulier
               </a>

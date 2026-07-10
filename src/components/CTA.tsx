@@ -5,19 +5,19 @@ import { ArrowRight, Phone } from "lucide-react";
 
 export default function CTA() {
   return (
-    <section className="py-24 bg-[var(--bg-primary)] relative overflow-hidden">
+    <section className="py-24 bg-[var(--color-bg)] relative overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0 hero-bg opacity-50" />
-      <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl" />
-      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-secondary/10 rounded-full blur-3xl" />
+      <div className="absolute top-0 left-1/4 w-96 h-96 bg-[var(--color-primary)]/10 rounded-full blur-3xl" />
+      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-[var(--color-primary)]/10 rounded-full blur-3xl" />
 
       <div className="container-custom relative z-10">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[var(--text-primary)] mb-6">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[var(--color-ink)] mb-6">
             Klaar om je tech naar het{" "}
-            <span className="gradient-text">volgende niveau</span> te brengen?
+            <span className="text-[var(--color-primary)]">volgende niveau</span> te brengen?
           </h2>
-          <p className="text-xl text-[var(--text-secondary)] mb-10 max-w-2xl mx-auto">
+          <p className="text-xl text-[var(--color-muted)] mb-10 max-w-2xl mx-auto">
             Vraag een gratis offerte aan. Binnen 4 uur reactie. Geen verplichtingen.
           </p>
 
@@ -40,7 +40,7 @@ export default function CTA() {
           </div>
 
           {/* Trust Text */}
-          <p className="mt-8 text-[var(--text-muted)] text-sm">
+          <p className="mt-8 text-[var(--color-muted)] text-sm">
             ✓ Gratis adviesgesprek ✓ Binnen 4 uur reactie ✓ Geen verplichtingen
           </p>
         </div>

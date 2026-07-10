@@ -35,7 +35,7 @@ export const metadata: Metadata = {
 
 export default function UtrechtPage() {
   return (
-    <main className="bg-[var(--bg-primary)] text-[var(--text-primary)]">
+    <main className="bg-[var(--color-bg)] text-[var(--color-ink)]">
       {/* Hero Section */}
       <section className="relative min-h-[70vh] flex items-center pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 grid-pattern opacity-30" />
@@ -47,16 +47,16 @@ export default function UtrechtPage() {
             </div>
             
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight mb-6">
-              <span className="text-[var(--text-primary)]">Webdesign &</span>
+              <span className="text-[var(--color-ink)]">Webdesign &</span>
               <br />
-              <span className="gradient-text">Tech Reparatie</span>
+              <span className="text-[var(--color-primary)]">Tech Reparatie</span>
               <br />
-              <span className="text-3xl sm:text-4xl text-[var(--text-secondary)]">in Utrecht</span>
+              <span className="text-3xl sm:text-4xl text-[var(--color-muted)]">in Utrecht</span>
             </h1>
             
-            <p className="text-lg sm:text-xl text-[var(--text-secondary)] max-w-2xl mx-auto mb-8">
-              Zoekt u een <strong className="text-[var(--text-primary)]">betrouwbare website bouwer</strong> of 
-              <strong className="text-[var(--text-primary)]"> snelle laptop reparatie</strong> in Utrecht? 
+            <p className="text-lg sm:text-xl text-[var(--color-muted)] max-w-2xl mx-auto mb-8">
+              Zoekt u een <strong className="text-[var(--color-ink)]">betrouwbare website bouwer</strong> of 
+              <strong className="text-[var(--color-ink)]"> snelle laptop reparatie</strong> in Utrecht? 
               Wij zijn dé all-in-one tech partner voor ondernemers en particulieren in Utrecht en omgeving. 
               Vanaf <strong className="text-primary">€250</strong>, binnen <strong className="text-primary">1 week</strong>.
             </p>
@@ -76,13 +76,13 @@ export default function UtrechtPage() {
       </section>
 
       {/* Services Section */}
-      <section className="section bg-[var(--bg-secondary)]">
+      <section className="section bg-[var(--color-surface)]">
         <div className="container-custom">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-              Onze Diensten in <span className="gradient-text">Utrecht</span>
+              Onze Diensten in <span className="text-[var(--color-primary)]">Utrecht</span>
             </h2>
-            <p className="text-[var(--text-secondary)] max-w-2xl mx-auto">
+            <p className="text-[var(--color-muted)] max-w-2xl mx-auto">
               Als uw lokale tech partner in Utrecht bieden wij zowel professionele webdesign 
               als snelle hardware reparaties. Alles onder één dak!
             </p>
@@ -95,7 +95,7 @@ export default function UtrechtPage() {
                 <Globe className="w-7 h-7 text-primary" />
               </div>
               <h3 className="text-2xl font-bold mb-4">Website Laten Maken Utrecht</h3>
-              <p className="text-[var(--text-secondary)] mb-6">
+              <p className="text-[var(--color-muted)] mb-6">
                 Professionele WordPress websites voor ondernemers in Utrecht. 
                 Vanaf €250, inclusief hosting, domeinnaam en onderhoud. 
                 Binnen 1 week online!
@@ -108,7 +108,7 @@ export default function UtrechtPage() {
                   "Mobiel-vriendelijk design",
                   "Inclusief onderhoud",
                 ].map((item, i) => (
-                  <li key={i} className="flex items-center gap-3 text-[var(--text-secondary)]">
+                  <li key={i} className="flex items-center gap-3 text-[var(--color-muted)]">
                     <CheckCircle className="w-5 h-5 text-primary flex-shrink-0" />
                     {item}
                   </li>
@@ -121,11 +121,11 @@ export default function UtrechtPage() {
 
             {/* Repair Service */}
             <div className="card-service">
-              <div className="w-14 h-14 rounded-xl bg-secondary/20 flex items-center justify-center mb-6">
-                <Wrench className="w-7 h-7 text-secondary" />
+              <div className="w-14 h-14 rounded-xl bg-[var(--color-primary)]/20 flex items-center justify-center mb-6">
+                <Wrench className="w-7 h-7 text-[var(--color-primary)]" />
               </div>
               <h3 className="text-2xl font-bold mb-4">Laptop & Computer Reparatie Utrecht</h3>
-              <p className="text-[var(--text-secondary)] mb-6">
+              <p className="text-[var(--color-muted)] mb-6">
                 Snelle reparatie van laptops, computers en MacBooks in Utrecht. 
                 Meeste reparaties binnen 24 uur. Geen dataverlies, garantie inbegrepen.
               </p>
@@ -137,13 +137,13 @@ export default function UtrechtPage() {
                   "Virus verwijderen",
                   "Data herstel",
                 ].map((item, i) => (
-                  <li key={i} className="flex items-center gap-3 text-[var(--text-secondary)]">
-                    <CheckCircle className="w-5 h-5 text-secondary flex-shrink-0" />
+                  <li key={i} className="flex items-center gap-3 text-[var(--color-muted)]">
+                    <CheckCircle className="w-5 h-5 text-[var(--color-primary)] flex-shrink-0" />
                     {item}
                   </li>
                 ))}
               </ul>
-              <Link href="/reparaties" className="text-secondary font-semibold hover:underline">
+              <Link href="/reparaties" className="text-[var(--color-primary)] font-semibold hover:underline">
                 Meer over reparaties →
               </Link>
             </div>
@@ -156,7 +156,7 @@ export default function UtrechtPage() {
         <div className="container-custom">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-              Waarom TechSolutionsUtrecht in <span className="gradient-text">Utrecht</span>?
+              Waarom TechSolutionsUtrecht in <span className="text-[var(--color-primary)]">Utrecht</span>?
             </h2>
           </div>
 
@@ -188,7 +188,7 @@ export default function UtrechtPage() {
                   <item.icon className="w-6 h-6 text-primary" />
                 </div>
                 <h3 className="text-lg font-bold mb-2">{item.title}</h3>
-                <p className="text-[var(--text-secondary)] text-sm">{item.desc}</p>
+                <p className="text-[var(--color-muted)] text-sm">{item.desc}</p>
               </div>
             ))}
           </div>
@@ -196,13 +196,13 @@ export default function UtrechtPage() {
       </section>
 
       {/* Areas in Utrecht */}
-      <section className="section bg-[var(--bg-secondary)]">
+      <section className="section bg-[var(--color-surface)]">
         <div className="container-custom">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4">
-              Wij zijn actief in <span className="gradient-text">Utrecht</span> en omgeving
+              Wij zijn actief in <span className="text-[var(--color-primary)]">Utrecht</span> en omgeving
             </h2>
-            <p className="text-[var(--text-secondary)] max-w-2xl mx-auto">
+            <p className="text-[var(--color-muted)] max-w-2xl mx-auto">
               Van Lombok tot Oudwijk, van Overvecht tot Tolsteeg. 
               Wij helpen klanten in heel Utrecht met hun tech vraagstukken.
             </p>
@@ -225,10 +225,10 @@ export default function UtrechtPage() {
             ].map((area, i) => (
               <div
                 key={i}
-                className="flex items-center gap-2 px-4 py-3 bg-[var(--bg-card)] border border-[var(--border)] rounded-lg"
+                className="flex items-center gap-2 px-4 py-3 bg-[var(--color-bg)] border border-[var(--color-border)] rounded-lg"
               >
                 <MapPin className="w-4 h-4 text-primary flex-shrink-0" />
-                <span className="text-sm text-[var(--text-secondary)]">Utrecht {area}</span>
+                <span className="text-sm text-[var(--color-muted)]">Utrecht {area}</span>
               </div>
             ))}
           </div>
@@ -236,13 +236,13 @@ export default function UtrechtPage() {
       </section>
 
       {/* Local Business Context — Utrecht specific */}
-      <section className="section bg-[var(--bg-secondary)]">
+      <section className="section bg-[var(--color-surface)]">
         <div className="container-custom">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-center">
-              Utrecht: een stad vol <span className="gradient-text">kansen voor ondernemers</span>
+              Utrecht: een stad vol <span className="text-[var(--color-primary)]">kansen voor ondernemers</span>
             </h2>
-            <div className="space-y-4 text-[var(--text-secondary)] text-lg leading-relaxed">
+            <div className="space-y-4 text-[var(--color-muted)] text-lg leading-relaxed">
               <p>
                 Utrecht is niet voor niets één van de snelst groeiende steden van Nederland. 
                 Met zijn centrale ligging, het grootste studentenpopulatie van het land en een 
@@ -275,9 +275,9 @@ export default function UtrechtPage() {
         <div className="container-custom">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl sm:text-4xl font-bold mb-6">
-              Klaar voor uw nieuwe website of reparatie in <span className="gradient-text">Utrecht</span>?
+              Klaar voor uw nieuwe website of reparatie in <span className="text-[var(--color-primary)]">Utrecht</span>?
             </h2>
-            <p className="text-[var(--text-secondary)] text-lg mb-8">
+            <p className="text-[var(--color-muted)] text-lg mb-8">
               Vraag nu een gratis offerte aan. Wij reageren binnen 4 uur. 
               Geen verplichtingen, gewoon eerlijk advies.
             </p>

@@ -10,78 +10,72 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Brand colors
+        // Brand colors — sourced from CSS custom properties
         primary: {
-          DEFAULT: "#FF5722",
-          light: "#FF8A65",
-          dark: "#E64A19",
-        },
-        secondary: {
-          DEFAULT: "#7C4DFF",
-          light: "#B388FF",
-          dark: "#651FFF",
+          DEFAULT: "var(--color-primary)",
+          light: "var(--color-primary-light)",
+          dark: "var(--color-primary-dark)",
         },
         accent: {
-          DEFAULT: "#00E5FF",
-          light: "#6EFFFF",
+          DEFAULT: "var(--color-accent)",
+          dark: "var(--color-accent-dark)",
         },
-        // Dark theme
+        secondary: {
+          DEFAULT: "var(--color-primary-light)",
+          dark: "var(--color-primary)",
+        },
+        // Dark theme (legacy structural tokens)
         dark: {
           bg: {
-            primary: "#0D1117",
-            secondary: "#161B22",
-            tertiary: "#21262D",
-            card: "#1C2128",
+            primary: "var(--color-bg)",
+            secondary: "var(--color-surface)",
+            tertiary: "var(--color-surface)",
+            card: "var(--color-bg)",
           },
           text: {
-            primary: "#F0F6FC",
-            secondary: "#8B949E",
-            muted: "#6E7681",
+            primary: "var(--color-ink)",
+            secondary: "var(--color-muted)",
+            muted: "var(--color-muted)",
           },
           border: {
-            DEFAULT: "#30363D",
-            hover: "#8B949E",
+            DEFAULT: "var(--color-border)",
+            hover: "var(--color-border)",
           },
         },
-        // Light theme
+        // Light theme (legacy structural tokens)
         light: {
           bg: {
-            primary: "#FFFFFF",
-            secondary: "#F6F8FA",
-            tertiary: "#EAEEF2",
-            card: "#FFFFFF",
+            primary: "var(--color-bg)",
+            secondary: "var(--color-surface)",
+            tertiary: "var(--color-surface)",
+            card: "var(--color-bg)",
           },
           text: {
-            primary: "#1F2328",
-            secondary: "#656D76",
-            muted: "#8C959F",
+            primary: "var(--color-ink)",
+            secondary: "var(--color-muted)",
+            muted: "var(--color-muted)",
           },
           border: {
-            DEFAULT: "#D0D7DE",
+            DEFAULT: "var(--color-border)",
           },
         },
         // Semantic
-        success: "#238636",
-        warning: "#F0883E",
-        error: "#DA3633",
-        info: "#58A6FF",
+        success: "var(--color-success)",
+        warning: "oklch(0.700 0.150 75)",
+        error: "oklch(0.550 0.180 25)",
+        info: "oklch(0.600 0.120 247)",
+        whatsapp: "var(--color-whatsapp)",
       },
       fontFamily: {
         sans: ["var(--font-inter)", "Inter", "system-ui", "-apple-system", "sans-serif"],
         mono: ["JetBrains Mono", "Fira Code", "monospace"],
       },
       animation: {
-        "mesh-move": "meshMove 20s ease-in-out infinite",
         float: "float 4s ease-in-out infinite",
         "fade-in-up": "fadeInUp 0.6s ease forwards",
         pulse: "pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite",
       },
       keyframes: {
-        meshMove: {
-          "0%, 100%": { transform: "translate(0, 0)" },
-          "33%": { transform: "translate(30px, -30px)" },
-          "66%": { transform: "translate(-20px, 20px)" },
-        },
         float: {
           "0%, 100%": { transform: "translateY(0)" },
           "50%": { transform: "translateY(-10px)" },
@@ -100,41 +94,36 @@ const config: Config = {
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic": "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-        "hero-mesh": `
-          radial-gradient(ellipse at 20% 20%, rgba(255, 87, 34, 0.15) 0%, transparent 50%),
-          radial-gradient(ellipse at 80% 80%, rgba(124, 77, 255, 0.15) 0%, transparent 50%),
-          radial-gradient(ellipse at 50% 50%, rgba(0, 229, 255, 0.05) 0%, transparent 70%)
-        `,
       },
       typography: {
         DEFAULT: {
           css: {
             maxWidth: 'none',
-            color: 'var(--text-secondary)',
+            color: 'var(--color-muted)',
             h1: {
-              color: 'var(--text-primary)',
+              color: 'var(--color-ink)',
             },
             h2: {
-              color: 'var(--text-primary)',
+              color: 'var(--color-ink)',
             },
             h3: {
-              color: 'var(--text-primary)',
+              color: 'var(--color-ink)',
             },
             h4: {
-              color: 'var(--text-primary)',
+              color: 'var(--color-ink)',
             },
             strong: {
-              color: 'var(--text-primary)',
+              color: 'var(--color-ink)',
             },
             a: {
-              color: '#FF5722',
+              color: 'var(--color-primary)',
               '&:hover': {
-                color: '#E64A19',
+                color: 'var(--color-primary-dark)',
               },
             },
             code: {
-              color: '#FF5722',
-              backgroundColor: 'var(--bg-secondary)',
+              color: 'var(--color-primary)',
+              backgroundColor: 'var(--color-surface)',
               padding: '0.25rem 0.5rem',
               borderRadius: '0.25rem',
               fontWeight: '400',
@@ -146,15 +135,15 @@ const config: Config = {
               content: '""',
             },
             pre: {
-              backgroundColor: 'var(--bg-secondary)',
+              backgroundColor: 'var(--color-surface)',
               code: {
                 backgroundColor: 'transparent',
                 padding: '0',
               },
             },
             blockquote: {
-              borderLeftColor: '#FF5722',
-              color: 'var(--text-secondary)',
+              borderLeftColor: 'var(--color-primary)',
+              color: 'var(--color-muted)',
             },
           },
         },

@@ -214,7 +214,7 @@ export default function AdminProjectenPage() {
         <div className="container-custom">
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center">
+              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-primary-light flex items-center justify-center">
                 <Shield className="w-5 h-5 text-white" />
               </div>
               <div>

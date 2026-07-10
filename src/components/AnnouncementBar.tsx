@@ -9,12 +9,12 @@ export default function AnnouncementBar() {
   return (
     <Link
       href="/projecten"
-      className="group block bg-gradient-to-r from-[#0f766e] via-[#0d9488] to-[#0f766e] text-white"
+      className="group block bg-[var(--color-primary)] text-white"
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 h-9 flex items-center justify-center gap-2 text-center">
         <span className="relative flex h-2 w-2 flex-shrink-0">
-          <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-white/70 opacity-75" />
-          <span className="relative inline-flex h-2 w-2 rounded-full bg-white" />
+          <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[var(--color-bg)]/70 opacity-75" />
+          <span className="relative inline-flex h-2 w-2 rounded-full bg-[var(--color-bg)]" />
         </span>
 
         <Sparkles className="w-3.5 h-3.5 flex-shrink-0" aria-hidden />

@@ -8,13 +8,13 @@ export default function BlogPostNotFound() {
       <main className="pb-24">
         <div className="container-custom pt-8">
           <div className="max-w-2xl mx-auto text-center py-16">
-            <FileQuestion className="w-24 h-24 text-[var(--text-muted)] mx-auto mb-8" />
+            <FileQuestion className="w-24 h-24 text-[var(--color-muted)] mx-auto mb-8" />
             
-            <h1 className="text-3xl sm:text-4xl font-bold text-[var(--text-primary)] mb-4">
+            <h1 className="text-3xl sm:text-4xl font-bold text-[var(--color-ink)] mb-4">
               Artikel niet gevonden
             </h1>
             
-            <p className="text-[var(--text-secondary)] text-lg mb-8">
+            <p className="text-[var(--color-muted)] text-lg mb-8">
               Het artikel dat je zoekt bestaat niet (meer). 
               Misschien is het verplaatst of verwijderd.
             </p>

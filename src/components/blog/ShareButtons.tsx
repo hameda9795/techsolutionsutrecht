@@ -44,14 +44,14 @@ export default function ShareButtons({ title, url }: ShareButtonsProps) {
 
   return (
     <div className="flex items-center gap-3">
-      <span className="text-sm text-[var(--text-muted)] mr-2">Delen:</span>
+      <span className="text-sm text-[var(--color-muted)] mr-2">Delen:</span>
       {shareLinks.map((link) => (
         <a
           key={link.name}
           href={link.href}
           target="_blank"
           rel="noopener noreferrer"
-          className="p-2 rounded-lg bg-[var(--bg-secondary)] text-[var(--text-secondary)] hover:bg-primary hover:text-white transition-colors"
+          className="p-2 rounded-lg bg-[var(--color-surface)] text-[var(--color-muted)] hover:bg-primary hover:text-white transition-colors"
           aria-label={`Deel op ${link.name}`}
         >
           <link.icon className="w-4 h-4" />
@@ -59,7 +59,7 @@ export default function ShareButtons({ title, url }: ShareButtonsProps) {
       ))}
       <button
         onClick={copyToClipboard}
-        className="p-2 rounded-lg bg-[var(--bg-secondary)] text-[var(--text-secondary)] hover:bg-primary hover:text-white transition-colors"
+        className="p-2 rounded-lg bg-[var(--color-surface)] text-[var(--color-muted)] hover:bg-primary hover:text-white transition-colors"
         aria-label="Kopieer link"
       >
         {copied ? <Check className="w-4 h-4" /> : <Link2 className="w-4 h-4" />}

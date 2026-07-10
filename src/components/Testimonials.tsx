@@ -28,16 +28,16 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <section className="section bg-[var(--bg-secondary)]">
+    <section className="section bg-[var(--color-surface)]">
       <div className="container-custom">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="text-primary font-semibold text-sm uppercase tracking-wider">
+          <span className="text-[var(--color-primary)] font-semibold text-sm uppercase tracking-wider">
             Testimonials
           </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[var(--text-primary)] mt-4 mb-6">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[var(--color-ink)] mt-4 mb-6">
             Vertrouwd door{" "}
-            <span className="gradient-text">20+ klanten</span> in Utrecht
+            <span className="text-[var(--color-primary)]">20+ klanten</span> in Utrecht
           </h2>
         </div>
 
@@ -46,12 +46,12 @@ export default function Testimonials() {
           {testimonials.map((testimonial, index) => (
             <div
               key={testimonial.author}
-              className="relative bg-[var(--bg-card)] border border-[var(--border)] rounded-2xl p-8"
+              className="relative bg-[var(--color-bg)] border border-[var(--color-border)] rounded-2xl p-8"
               style={{ animationDelay: `${index * 100}ms` }}
             >
               {/* Quote Icon */}
               <div className="absolute top-6 right-6">
-                <Quote className="w-8 h-8 text-primary/20" />
+                <Quote className="w-8 h-8 text-[var(--color-primary)]/20" />
               </div>
 
               {/* Stars */}
@@ -65,20 +65,20 @@ export default function Testimonials() {
               </div>
 
               {/* Quote */}
-              <blockquote className="text-[var(--text-primary)] text-lg mb-6 leading-relaxed">
+              <blockquote className="text-[var(--color-ink)] text-lg mb-6 leading-relaxed">
                 "{testimonial.quote}"
               </blockquote>
 
               {/* Author */}
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center text-white font-bold">
+                <div className="w-12 h-12 rounded-full bg-[var(--color-primary)] flex items-center justify-center text-white font-bold">
                   {testimonial.author[0]}
                 </div>
                 <div>
-                  <div className="font-semibold text-[var(--text-primary)]">
+                  <div className="font-semibold text-[var(--color-ink)]">
                     {testimonial.author}
                   </div>
-                  <div className="text-sm text-[var(--text-secondary)]">
+                  <div className="text-sm text-[var(--color-muted)]">
                     {testimonial.location}
                   </div>
                 </div>

@@ -105,14 +105,14 @@ export default function WebshopPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       {/* Breadcrumb */}
-      <nav className="py-4 bg-[var(--bg-secondary)] border-b border-[var(--border)]">
+      <nav className="py-4 bg-[var(--color-surface)] border-b border-[var(--color-border)]">
         <div className="container-custom">
           <ol className="flex items-center gap-2 text-sm flex-wrap">
-            <li><Link href="/" className="text-[var(--text-muted)] hover:text-primary transition-colors">Home</Link></li>
-            <li className="text-[var(--text-muted)]">/</li>
-            <li><Link href="/diensten" className="text-[var(--text-muted)] hover:text-primary transition-colors">Diensten</Link></li>
-            <li className="text-[var(--text-muted)]">/</li>
-            <li><span className="text-[var(--text-primary)] font-medium capitalize">webshop</span></li>
+            <li><Link href="/" className="text-[var(--color-muted)] hover:text-primary transition-colors">Home</Link></li>
+            <li className="text-[var(--color-muted)]">/</li>
+            <li><Link href="/diensten" className="text-[var(--color-muted)] hover:text-primary transition-colors">Diensten</Link></li>
+            <li className="text-[var(--color-muted)]">/</li>
+            <li><span className="text-[var(--color-ink)] font-medium capitalize">webshop</span></li>
           </ol>
         </div>
       </nav>
@@ -121,13 +121,13 @@ export default function WebshopPage() {
         <div className="container-custom">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-primary to-orange-500 mb-6">
+              <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-[var(--color-primary)] mb-6">
                 <ShoppingCart className="w-8 h-8 text-white" />
               </div>
 
-              <h1 className="text-4xl sm:text-5xl font-bold text-[var(--text-primary)] mb-4">
+              <h1 className="text-4xl sm:text-5xl font-bold text-[var(--color-ink)] mb-4">
                 Webshop Laten Maken in{" "}
-                <span className="gradient-text">Utrecht</span>
+                <span className="text-[var(--color-primary)]">Utrecht</span>
               </h1>
 
               <div className="flex flex-wrap gap-3 mb-6">
@@ -135,14 +135,14 @@ export default function WebshopPage() {
                   <Zap className="w-4 h-4 text-primary" />
                   <span className="text-sm text-primary font-medium">Binnen 5-12 dagen online</span>
                 </div>
-                <div className="flex items-center gap-2 px-3 py-1 bg-green-500/10 rounded-full">
-                  <Clock className="w-4 h-4 text-green-500" />
-                  <span className="text-sm text-green-500 font-medium">Snelle oplevering</span>
+                <div className="flex items-center gap-2 px-3 py-1 bg-[var(--color-primary)]/10 rounded-full">
+                  <Clock className="w-4 h-4 text-[var(--color-primary)]" />
+                  <span className="text-sm text-[var(--color-primary)] font-medium">Snelle oplevering</span>
                 </div>
               </div>
 
-              <p className="text-lg text-[var(--text-secondary)] mb-8">
-                <strong className="text-[var(--text-primary)]">Een webshop laten maken</strong> in Utrecht?
+              <p className="text-lg text-[var(--color-muted)] mb-8">
+                <strong className="text-[var(--color-ink)]">Een webshop laten maken</strong> in Utrecht?
                 Ik bouw een complete WooCommerce-webshop met iDEAL, voorraadbeheer en verzending — scherp geprijsd en
                 klaar om te verkopen, met <strong className="text-primary">direct contact met de developer</strong>.
               </p>
@@ -153,14 +153,14 @@ export default function WebshopPage() {
                     <div className="w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
                       <Check className="w-3 h-3 text-primary" />
                     </div>
-                    <span className="text-[var(--text-secondary)]">{feature}</span>
+                    <span className="text-[var(--color-muted)]">{feature}</span>
                   </div>
                 ))}
               </div>
 
               <div className="flex flex-wrap items-center gap-6 mb-8">
                 <div className="text-3xl font-bold text-primary">€350 - €1.200</div>
-                <div className="text-[var(--text-muted)]">Oplevering: 5-12 dagen</div>
+                <div className="text-[var(--color-muted)]">Oplevering: 5-12 dagen</div>
               </div>
 
               <Link href="/contact" className="btn-primary group inline-flex">
@@ -170,12 +170,12 @@ export default function WebshopPage() {
             </div>
 
             <div className="relative">
-              <div className="aspect-square rounded-2xl bg-gradient-to-br from-primary/20 to-orange-500/20 flex items-center justify-center">
+              <div className="aspect-square rounded-2xl bg-[var(--color-primary)]/10 flex items-center justify-center">
                 <div className="text-center">
                   <ShoppingCart className="w-24 h-24 text-primary mx-auto mb-4" />
-                  <div className="text-2xl font-bold text-[var(--text-primary)]">WooCommerce</div>
+                  <div className="text-2xl font-bold text-[var(--color-ink)]">WooCommerce</div>
                   <div className="text-3xl font-extrabold text-primary mt-2">Vanaf €350</div>
-                  <div className="text-[var(--text-muted)] mt-1">5-12 dagen</div>
+                  <div className="text-[var(--color-muted)] mt-1">5-12 dagen</div>
                 </div>
               </div>
             </div>
@@ -183,21 +183,21 @@ export default function WebshopPage() {
 
           {/* Intro */}
           <section className="mt-24 max-w-3xl">
-            <h2 className="text-3xl font-bold text-[var(--text-primary)] mb-6">
+            <h2 className="text-3xl font-bold text-[var(--color-ink)] mb-6">
               Online verkopen met een professionele webshop
             </h2>
-            <p className="text-[var(--text-secondary)] mb-4 leading-relaxed">
+            <p className="text-[var(--color-muted)] mb-4 leading-relaxed">
               Een eigen webshop is voor steeds meer ondernemers in Utrecht dé manier om te groeien: je verkoopt
               24 uur per dag, bereikt klanten buiten je directe omgeving en bent niet afhankelijk van marktplaatsen
               die een fors deel van je marge afromen. Met een goed gebouwde WooCommerce-webshop heb je alles in
               eigen hand, van prijzen tot uitstraling.
             </p>
-            <p className="text-[var(--text-secondary)] mb-4 leading-relaxed">
+            <p className="text-[var(--color-muted)] mb-4 leading-relaxed">
               WooCommerce is het meest gebruikte webshopplatform ter wereld en draait op WordPress. Dat betekent
               maximale flexibiliteit, geen maandelijkse platformkosten zoals bij gesloten systemen, en de vrijheid om
               je webshop later uit te breiden met nieuwe functies, koppelingen of een blog.
             </p>
-            <p className="text-[var(--text-secondary)] leading-relaxed">
+            <p className="text-[var(--color-muted)] leading-relaxed">
               Ik bouw je webshop met aandacht voor snelheid, een soepel afrekenproces en een stevige SEO-basis, zodat
               je niet alleen kunt verkopen, maar ook daadwerkelijk gevonden wordt. En je werkt rechtstreeks met de
               developer: korte lijnen, snelle reactie.
@@ -206,15 +206,15 @@ export default function WebshopPage() {
 
           {/* Pillars */}
           <section className="mt-20">
-            <h2 className="text-3xl font-bold text-[var(--text-primary)] mb-10">Wat je webshop kan</h2>
+            <h2 className="text-3xl font-bold text-[var(--color-ink)] mb-10">Wat je webshop kan</h2>
             <div className="grid md:grid-cols-2 gap-6">
               {pillars.map((p) => (
-                <div key={p.title} className="bg-[var(--bg-card)] border border-[var(--border)] rounded-2xl p-6">
+                <div key={p.title} className="bg-[var(--color-bg)] border border-[var(--color-border)] rounded-2xl p-6">
                   <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-primary/10 mb-4">
                     <p.icon className="w-6 h-6 text-primary" />
                   </div>
-                  <h3 className="text-xl font-bold text-[var(--text-primary)] mb-2">{p.title}</h3>
-                  <p className="text-[var(--text-secondary)] leading-relaxed">{p.text}</p>
+                  <h3 className="text-xl font-bold text-[var(--color-ink)] mb-2">{p.title}</h3>
+                  <p className="text-[var(--color-muted)] leading-relaxed">{p.text}</p>
                 </div>
               ))}
             </div>
@@ -222,7 +222,7 @@ export default function WebshopPage() {
 
           {/* Proces */}
           <section className="mt-20 max-w-3xl">
-            <h2 className="text-3xl font-bold text-[var(--text-primary)] mb-6">Zo bouwen we je webshop</h2>
+            <h2 className="text-3xl font-bold text-[var(--color-ink)] mb-6">Zo bouwen we je webshop</h2>
             <ul className="space-y-4">
               {[
                 "Kennismaking en offerte: we bespreken je assortiment, gewenste betaal- en verzendmethoden en budget. Je ontvangt een all-in offerte.",
@@ -232,7 +232,7 @@ export default function WebshopPage() {
               ].map((step) => (
                 <li key={step} className="flex items-start gap-3">
                   <Check className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
-                  <span className="text-[var(--text-secondary)] leading-relaxed">{step}</span>
+                  <span className="text-[var(--color-muted)] leading-relaxed">{step}</span>
                 </li>
               ))}
             </ul>
@@ -240,40 +240,40 @@ export default function WebshopPage() {
 
           {/* Interne links */}
           <section className="mt-20">
-            <h2 className="text-3xl font-bold text-[var(--text-primary)] mb-4">Bekijk ook</h2>
+            <h2 className="text-3xl font-bold text-[var(--color-ink)] mb-4">Bekijk ook</h2>
             <div className="grid md:grid-cols-3 gap-6">
-              <Link href="/diensten/wordpress" className="card-service block p-6 rounded-2xl bg-[var(--bg-card)] border border-[var(--border)] hover:border-primary/40 transition-colors">
-                <h3 className="text-lg font-bold text-[var(--text-primary)] mb-2">WordPress website</h3>
-                <p className="text-[var(--text-secondary)] text-sm">Een professionele bedrijfswebsite die je zelf beheert.</p>
+              <Link href="/diensten/wordpress" className="card-service block p-6 rounded-2xl bg-[var(--color-bg)] border border-[var(--color-border)] hover:border-primary/40 transition-colors">
+                <h3 className="text-lg font-bold text-[var(--color-ink)] mb-2">WordPress website</h3>
+                <p className="text-[var(--color-muted)] text-sm">Een professionele bedrijfswebsite die je zelf beheert.</p>
               </Link>
-              <Link href="/diensten/seo" className="card-service block p-6 rounded-2xl bg-[var(--bg-card)] border border-[var(--border)] hover:border-primary/40 transition-colors">
-                <h3 className="text-lg font-bold text-[var(--text-primary)] mb-2">SEO optimalisatie</h3>
-                <p className="text-[var(--text-secondary)] text-sm">Meer bezoekers en omzet via Google.</p>
+              <Link href="/diensten/seo" className="card-service block p-6 rounded-2xl bg-[var(--color-bg)] border border-[var(--color-border)] hover:border-primary/40 transition-colors">
+                <h3 className="text-lg font-bold text-[var(--color-ink)] mb-2">SEO optimalisatie</h3>
+                <p className="text-[var(--color-muted)] text-sm">Meer bezoekers en omzet via Google.</p>
               </Link>
-              <Link href="/portfolio" className="card-service block p-6 rounded-2xl bg-[var(--bg-card)] border border-[var(--border)] hover:border-primary/40 transition-colors">
-                <h3 className="text-lg font-bold text-[var(--text-primary)] mb-2">Portfolio</h3>
-                <p className="text-[var(--text-secondary)] text-sm">Bekijk eerder gebouwde websites en webshops.</p>
+              <Link href="/portfolio" className="card-service block p-6 rounded-2xl bg-[var(--color-bg)] border border-[var(--color-border)] hover:border-primary/40 transition-colors">
+                <h3 className="text-lg font-bold text-[var(--color-ink)] mb-2">Portfolio</h3>
+                <p className="text-[var(--color-muted)] text-sm">Bekijk eerder gebouwde websites en webshops.</p>
               </Link>
             </div>
           </section>
 
           {/* FAQ */}
           <section className="mt-20 max-w-3xl">
-            <h2 className="text-3xl font-bold text-[var(--text-primary)] mb-10">Veelgestelde vragen over webshops</h2>
+            <h2 className="text-3xl font-bold text-[var(--color-ink)] mb-10">Veelgestelde vragen over webshops</h2>
             <div className="space-y-4">
               {faqs.map((faq) => (
-                <div key={faq.question} className="bg-[var(--bg-card)] border border-[var(--border)] rounded-xl p-6">
-                  <h3 className="text-lg font-semibold text-[var(--text-primary)] mb-2">{faq.question}</h3>
-                  <p className="text-[var(--text-secondary)] leading-relaxed">{faq.answer}</p>
+                <div key={faq.question} className="bg-[var(--color-bg)] border border-[var(--color-border)] rounded-xl p-6">
+                  <h3 className="text-lg font-semibold text-[var(--color-ink)] mb-2">{faq.question}</h3>
+                  <p className="text-[var(--color-muted)] leading-relaxed">{faq.answer}</p>
                 </div>
               ))}
             </div>
           </section>
 
           {/* CTA */}
-          <section className="mt-20 text-center bg-[var(--bg-card)] border border-[var(--border)] rounded-2xl p-10">
-            <h2 className="text-3xl font-bold text-[var(--text-primary)] mb-4">Klaar om online te verkopen?</h2>
-            <p className="text-[var(--text-secondary)] mb-8 max-w-2xl mx-auto leading-relaxed">
+          <section className="mt-20 text-center bg-[var(--color-bg)] border border-[var(--color-border)] rounded-2xl p-10">
+            <h2 className="text-3xl font-bold text-[var(--color-ink)] mb-4">Klaar om online te verkopen?</h2>
+            <p className="text-[var(--color-muted)] mb-8 max-w-2xl mx-auto leading-relaxed">
               Vraag vrijblijvend een offerte aan voor je webshop. Je krijgt binnen één werkdag een reactie, direct van
               de developer die je webshop bouwt.
             </p>

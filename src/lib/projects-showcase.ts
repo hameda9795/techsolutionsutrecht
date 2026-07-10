@@ -24,7 +24,7 @@ export interface ShowcaseProject {
   liveUrl: string;
   /** Screenshot/preview in /public. Leeg = gradient-mockup met initialen. */
   image: string;
-  /** Tailwind gradient-classes voor de mockup-achtergrond. */
+  /** Tailwind classes voor de mockup-achtergrond (geen paars/cyaan gradients). */
   accent: string;
   /** Uitgelicht project (groter weergegeven). */
   featured?: boolean;
@@ -56,7 +56,7 @@ export const showcaseProjects: ShowcaseProject[] = [
     stack: ["Next.js", "Tailwind CSS", "Framer Motion"],
     liveUrl: "https://bouwbedrijf-vandenberg.demo.techsolutionsutrecht.nl/",
     image: "/images/portfolio/aannemer.webp",
-    accent: "from-amber-500 to-orange-600",
+    accent: "bg-[var(--color-primary)]",
     featured: true,
   },
   {
@@ -77,7 +77,7 @@ export const showcaseProjects: ShowcaseProject[] = [
     stack: ["HTML", "CSS", "JavaScript"],
     liveUrl: "/demo/barbershop/index.html",
     image: "",
-    accent: "from-slate-700 to-slate-900",
+    accent: "bg-[var(--color-ink)]",
   },
   {
     id: "admin-dashboard",
@@ -97,7 +97,7 @@ export const showcaseProjects: ShowcaseProject[] = [
     stack: ["Next.js", "PostgreSQL", "Tailwind CSS"],
     liveUrl: "https://admin.demo.techsolutionsutrecht.nl/",
     image: "",
-    accent: "from-indigo-500 to-violet-700",
+    accent: "bg-[var(--color-primary)]",
   },
   {
     id: "klant-portal",
@@ -117,7 +117,7 @@ export const showcaseProjects: ShowcaseProject[] = [
     stack: ["Next.js", "PostgreSQL", "Vercel Blob"],
     liveUrl: "https://portal.demo.techsolutionsutrecht.nl/",
     image: "",
-    accent: "from-teal-500 to-emerald-700",
+    accent: "bg-[var(--color-primary)]",
   },
   {
     id: "device-toggle",
@@ -137,7 +137,7 @@ export const showcaseProjects: ShowcaseProject[] = [
     stack: ["React", "Tailwind CSS"],
     liveUrl: "https://device-toggle.demo.techsolutionsutrecht.nl/",
     image: "",
-    accent: "from-sky-500 to-blue-700",
+    accent: "bg-[var(--color-primary)]",
   },
 ];
 

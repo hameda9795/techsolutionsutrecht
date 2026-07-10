@@ -49,14 +49,14 @@ export default function LaptopStartNietOpPage() {
     <>
       <main className="pb-24">
         {/* Breadcrumb */}
-        <nav className="py-4 bg-[var(--bg-secondary)] border-b border-[var(--border)]">
+        <nav className="py-4 bg-[var(--color-surface)] border-b border-[var(--color-border)]">
           <div className="container-custom">
             <ol className="flex items-center gap-2 text-sm flex-wrap">
-              <li><Link href="/" className="text-[var(--text-muted)] hover:text-primary transition-colors">Home</Link></li>
-              <li className="text-[var(--text-muted)]">/</li>
-              <li><Link href="/blog" className="text-[var(--text-muted)] hover:text-primary transition-colors">Blog</Link></li>
-              <li className="text-[var(--text-muted)]">/</li>
-              <li><span className="text-[var(--text-primary)] font-medium">Artikel</span></li>
+              <li><Link href="/" className="text-[var(--color-muted)] hover:text-primary transition-colors">Home</Link></li>
+              <li className="text-[var(--color-muted)]">/</li>
+              <li><Link href="/blog" className="text-[var(--color-muted)] hover:text-primary transition-colors">Blog</Link></li>
+              <li className="text-[var(--color-muted)]">/</li>
+              <li><span className="text-[var(--color-ink)] font-medium">Artikel</span></li>
             </ol>
           </div>
         </nav>
@@ -66,7 +66,7 @@ export default function LaptopStartNietOpPage() {
             {/* Back Link */}
             <Link 
               href="/blog"
-              className="inline-flex items-center text-[var(--text-secondary)] hover:text-primary transition-colors mb-8"
+              className="inline-flex items-center text-[var(--color-muted)] hover:text-primary transition-colors mb-8"
             >
               <ArrowLeft className="w-4 h-4 mr-2" />
               Terug naar blog
@@ -78,14 +78,14 @@ export default function LaptopStartNietOpPage() {
             </span>
 
             {/* Title */}
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[var(--text-primary)] mb-6">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[var(--color-ink)] mb-6">
               Laptop Start Niet Op?{" "}
-              <span className="gradient-text">5 Oplossingen</span>{" "}
+              <span className="text-[var(--color-primary)]">5 Oplossingen</span>{" "}
               die Wél Werken
             </h1>
 
             {/* Meta */}
-            <div className="flex flex-wrap items-center gap-6 text-[var(--text-muted)] mb-12 pb-12 border-b border-[var(--border)]">
+            <div className="flex flex-wrap items-center gap-6 text-[var(--color-muted)] mb-12 pb-12 border-b border-[var(--color-border)]">
               <div className="flex items-center gap-2">
                 <User className="w-4 h-4" />
                 <span>TechSolutionsUtrecht</span>
@@ -102,9 +102,9 @@ export default function LaptopStartNietOpPage() {
 
             {/* Intro */}
             <div className="prose prose-invert max-w-none mb-12">
-              <p className="text-xl text-[var(--text-secondary)] leading-relaxed">
+              <p className="text-xl text-[var(--color-muted)] leading-relaxed">
                 Paniek is niet nodig. Voordat je naar de reparateur rent, probeer deze 
-                <strong className="text-[var(--text-primary)]">5 oplossingen</strong>. 
+                <strong className="text-[var(--color-ink)]">5 oplossingen</strong>. 
                 Ze lossen 70% van de startproblemen op — zonder kosten.
               </p>
             </div>
@@ -114,8 +114,8 @@ export default function LaptopStartNietOpPage() {
               <div className="flex items-start gap-4">
                 <AlertTriangle className="w-6 h-6 text-yellow-500 flex-shrink-0 mt-0.5" />
                 <div>
-                  <h3 className="font-semibold text-[var(--text-primary)] mb-2">Belangrijk</h3>
-                  <p className="text-[var(--text-secondary)]">
+                  <h3 className="font-semibold text-[var(--color-ink)] mb-2">Belangrijk</h3>
+                  <p className="text-[var(--color-muted)]">
                     Heb je recent <strong>vloeistof gemorst</strong> op je laptop? 
                     Doe dan <strong>NIET</strong> proberen op te starten. 
                     Neem direct contact op met een reparateur voor waterschade behandeling.
@@ -127,7 +127,7 @@ export default function LaptopStartNietOpPage() {
             {/* Solutions */}
             <div className="space-y-8 mb-12">
               {solutions.map((solution) => (
-                <div key={solution.step} className="bg-[var(--bg-card)] border border-[var(--border)] rounded-2xl p-6 md:p-8">
+                <div key={solution.step} className="bg-[var(--color-bg)] border border-[var(--color-border)] rounded-2xl p-6 md:p-8">
                   <div className="flex items-start gap-4">
                     <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
                       <solution.icon className="w-6 h-6 text-primary" />
@@ -137,11 +137,11 @@ export default function LaptopStartNietOpPage() {
                         <span className="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center text-sm font-bold">
                           {solution.step}
                         </span>
-                        <h2 className="text-xl font-bold text-[var(--text-primary)]">
+                        <h2 className="text-xl font-bold text-[var(--color-ink)]">
                           {solution.title}
                         </h2>
                       </div>
-                      <p className="text-[var(--text-secondary)]">
+                      <p className="text-[var(--color-muted)]">
                         {solution.description}
                       </p>
                     </div>
@@ -151,36 +151,36 @@ export default function LaptopStartNietOpPage() {
             </div>
 
             {/* When to Call Pro */}
-            <div className="p-8 bg-[var(--bg-card)] border border-[var(--border)] rounded-2xl mb-12">
-              <h2 className="text-2xl font-bold text-[var(--text-primary)] mb-6">
+            <div className="p-8 bg-[var(--color-bg)] border border-[var(--color-border)] rounded-2xl mb-12">
+              <h2 className="text-2xl font-bold text-[var(--color-ink)] mb-6">
                 Wanneer naar de reparateur?
               </h2>
               
-              <p className="text-[var(--text-secondary)] mb-4">
+              <p className="text-[var(--color-muted)] mb-4">
                 Geen van de oplossingen geholpen? Dan is er mogelijk sprake van:
               </p>
               
               <ul className="space-y-3 mb-6">
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                  <span className="text-[var(--text-secondary)]">Defect moederbord</span>
+                  <span className="text-[var(--color-muted)]">Defect moederbord</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                  <span className="text-[var(--text-secondary)]">Kapotte voedingscircuit</span>
+                  <span className="text-[var(--color-muted)]">Kapotte voedingscircuit</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                  <span className="text-[var(--text-secondary)]">Beschadigde schermkabel</span>
+                  <span className="text-[var(--color-muted)]">Beschadigde schermkabel</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                  <span className="text-[var(--text-secondary)]">Harde schijf defect</span>
+                  <span className="text-[var(--color-muted)]">Harde schijf defect</span>
                 </li>
               </ul>
 
               <div className="p-4 bg-primary/10 rounded-xl">
-                <p className="text-[var(--text-primary)] font-medium mb-4">
+                <p className="text-[var(--color-ink)] font-medium mb-4">
                   Wij repareren laptops in Utrecht. Vaak binnen 24 uur.
                 </p>
                 <div className="flex flex-wrap gap-4">
@@ -200,28 +200,28 @@ export default function LaptopStartNietOpPage() {
             </div>
 
             {/* Related Posts */}
-            <div className="border-t border-[var(--border)] pt-12">
-              <h3 className="text-xl font-bold text-[var(--text-primary)] mb-6">
+            <div className="border-t border-[var(--color-border)] pt-12">
+              <h3 className="text-xl font-bold text-[var(--color-ink)] mb-6">
                 Gerelateerde artikelen
               </h3>
               
               <div className="grid md:grid-cols-2 gap-6">
                 <Link 
                   href="/blog/macbook-waterschade-wat-te-doen"
-                  className="p-6 bg-[var(--bg-card)] border border-[var(--border)] rounded-xl hover:border-primary transition-colors"
+                  className="p-6 bg-[var(--color-bg)] border border-[var(--color-border)] rounded-xl hover:border-primary transition-colors"
                 >
                   <span className="text-xs text-primary font-medium">Reparaties</span>
-                  <h4 className="font-semibold text-[var(--text-primary)] mt-2">
+                  <h4 className="font-semibold text-[var(--color-ink)] mt-2">
                     MacBook Waterschade? Dit Moet je NU Doen
                   </h4>
                 </Link>
                 
                 <Link 
                   href="/blog/wat-kost-een-website-laten-maken"
-                  className="p-6 bg-[var(--bg-card)] border border-[var(--border)] rounded-xl hover:border-primary transition-colors"
+                  className="p-6 bg-[var(--color-bg)] border border-[var(--color-border)] rounded-xl hover:border-primary transition-colors"
                 >
                   <span className="text-xs text-primary font-medium">Websites</span>
-                  <h4 className="font-semibold text-[var(--text-primary)] mt-2">
+                  <h4 className="font-semibold text-[var(--color-ink)] mt-2">
                     Wat Kost een Website Laten Maken?
                   </h4>
                 </Link>
