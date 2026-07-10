@@ -2,12 +2,12 @@ import type { Metadata } from "next";
 import NichePageLayout from "@/components/NichePageLayout";
 
 export const metadata: Metadata = {
-  title: "Website Laten Maken voor Restaurants | Menu & Reserveren | TechSolutions",
-  description: "Website laten maken voor je restaurant of café? Een smaakvolle site met online menukaart, reserveringen en route. Trek meer gasten aan. Vraag een offerte aan.",
+  title: "Restaurant Website Laten Maken | Menukaart & Online Reserveren | TechSolutions",
+  description: "Restaurant website laten maken? Een smaakvolle site met online menukaart, reserveringen en route. Trek meer gasten aan. Vraag een offerte aan.",
   alternates: { canonical: "https://techsolutionsutrecht.nl/website-laten-maken-restaurant" },
   openGraph: {
-    title: "Website Laten Maken voor Restaurants | Menu & Reserveren | TechSolutions",
-    description: "Website laten maken voor je restaurant of café? Een smaakvolle site met online menukaart, reserveringen en route. Trek meer gasten aan.",
+    title: "Restaurant Website Laten Maken | Menukaart & Online Reserveren | TechSolutions",
+    description: "Restaurant website laten maken? Een smaakvolle site met online menukaart, reserveringen en route. Trek meer gasten aan.",
     type: "website",
     locale: "nl_NL",
     url: "https://techsolutionsutrecht.nl/website-laten-maken-restaurant",
@@ -15,8 +15,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Website Laten Maken voor Restaurants | Menu & Reserveren | TechSolutions",
-    description: "Website laten maken voor je restaurant of café? Een smaakvolle site met online menukaart, reserveringen en route. Trek meer gasten aan.",
+    title: "Restaurant Website Laten Maken | Menukaart & Online Reserveren | TechSolutions",
+    description: "Restaurant website laten maken? Een smaakvolle site met online menukaart, reserveringen en route. Trek meer gasten aan.",
   },
 };
 
@@ -25,8 +25,15 @@ export default function RestaurantPage() {
     <NichePageLayout
       niche="restaurants"
       nicheTitle="Restaurant"
+      h1={{ pre: "Restaurant Website", highlight: "Laten Maken" }}
+      heroImage={{
+        src: "/images/restaurant-website-laten-maken-hero.webp",
+        alt: "Restaurant website laten maken: tablet met online menukaart op een tafel in een sfeervol restaurant",
+        width: 1344,
+        height: 768,
+      }}
       slug="website-laten-maken-restaurant"
-      tagline="Een restaurantwebsite die honger opwekt: een actuele menukaart, online reserveren en alle praktische info die gasten nodig hebben om bij jou te eten."
+      tagline="Een restaurant website laten maken die honger opwekt: een actuele menukaart, online reserveren en alle praktische info die gasten nodig hebben om bij jou te eten."
       intro={[
         "Voordat iemand bij je komt eten, checkt hij je website. Staat het menu er niet op, of kan men niet reserveren, dan is de kans groot dat de gast naar de buurman gaat. Voor de horeca is een goede website daarom geen visitekaartje, maar een directe bron van reserveringen.",
         "Ik bouw restaurantwebsites die de sfeer van je zaak ademen: smaakvolle foto's, een menukaart die je zelf bijwerkt, online reserveren en een duidelijke route. Alles geoptimaliseerd voor mobiel, want daar komen je gasten vandaan.",

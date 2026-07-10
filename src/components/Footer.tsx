@@ -38,6 +38,9 @@ const footerLinks = {
     { href: "/ijsselstein", label: "IJsselstein" },
     { href: "/de-meern", label: "De Meern" },
     { href: "/vleuten", label: "Vleuten" },
+    { href: "/veenendaal", label: "Veenendaal" },
+    { href: "/woerden", label: "Woerden" },
+    { href: "/culemborg", label: "Culemborg" },
   ],
 };
 

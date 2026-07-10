@@ -2,12 +2,12 @@ import type { Metadata } from "next";
 import NichePageLayout from "@/components/NichePageLayout";
 
 export const metadata: Metadata = {
-  title: "Website Laten Maken voor Coaches | Vertrouwen & Aanmeldingen | TechSolutions",
-  description: "Website laten maken als coach of therapeut? Een persoonlijke site die vertrouwen wekt, je aanpak uitlegt en aanmeldingen oplevert. Vraag een offerte aan.",
+  title: "Website voor Coaches | Vertrouwen & Aanmeldingen | TechSolutions",
+  description: "Website voor coaches en therapeuten: een persoonlijke site die vertrouwen wekt, je aanpak uitlegt en aanmeldingen oplevert. Vraag een offerte aan.",
   alternates: { canonical: "https://techsolutionsutrecht.nl/website-laten-maken-coach" },
   openGraph: {
-    title: "Website Laten Maken voor Coaches | Vertrouwen & Aanmeldingen | TechSolutions",
-    description: "Website laten maken als coach of therapeut? Een persoonlijke site die vertrouwen wekt, je aanpak uitlegt en aanmeldingen oplevert.",
+    title: "Website voor Coaches | Vertrouwen & Aanmeldingen | TechSolutions",
+    description: "Website voor coaches en therapeuten: een persoonlijke site die vertrouwen wekt, je aanpak uitlegt en aanmeldingen oplevert.",
     type: "website",
     locale: "nl_NL",
     url: "https://techsolutionsutrecht.nl/website-laten-maken-coach",
@@ -15,8 +15,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Website Laten Maken voor Coaches | Vertrouwen & Aanmeldingen | TechSolutions",
-    description: "Website laten maken als coach of therapeut? Een persoonlijke site die vertrouwen wekt, je aanpak uitlegt en aanmeldingen oplevert.",
+    title: "Website voor Coaches | Vertrouwen & Aanmeldingen | TechSolutions",
+    description: "Website voor coaches en therapeuten: een persoonlijke site die vertrouwen wekt, je aanpak uitlegt en aanmeldingen oplevert.",
   },
 };
 
@@ -25,8 +25,15 @@ export default function CoachPage() {
     <NichePageLayout
       niche="coaches"
       nicheTitle="Coach"
+      h1={{ pre: "Website voor", highlight: "Coaches" }}
+      heroImage={{
+        src: "/images/website-voor-coaches-hero.webp",
+        alt: "Website voor coaches: laptop met persoonlijke coachwebsite in een lichte, rustige praktijkruimte",
+        width: 1344,
+        height: 768,
+      }}
       slug="website-laten-maken-coach"
-      tagline="Een coachwebsite die vertrouwen wekt: jouw verhaal, je aanpak en concrete resultaten — zo overtuig je bezoekers om de eerste stap te zetten en zich aan te melden."
+      tagline="Een website voor coaches die vertrouwen wekt: jouw verhaal, je aanpak en concrete resultaten — zo overtuig je bezoekers om de eerste stap te zetten en zich aan te melden."
       intro={[
         "Als coach, therapeut of trainer verkoop je geen product, maar vertrouwen. Een potentiële klant moet voelen dat jij hem begrijpt voordat hij contact opneemt. Een website die dat vertrouwen niet uitstraalt, kost je waardevolle aanmeldingen — hoe goed je werk ook is.",
         "Ik bouw coachwebsites die persoonlijk en professioneel tegelijk zijn: een sterk verhaal, een heldere uitleg van je traject, ruimte voor ervaringen van klanten en een eenvoudige manier om een kennismaking in te plannen.",

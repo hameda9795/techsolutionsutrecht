@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Phone, CheckCircle, ArrowRight, X, Check } from "lucide-react";
 import Footer from "@/components/Footer";
 import { breadcrumbSchema, faqPageSchema, serviceSchema } from "@/lib/schema";
@@ -13,6 +14,10 @@ export interface NichePageProps {
   niche: string;
   /** Human title fragment, e.g. "Kapper" */
   nicheTitle: string;
+  /** Optional H1 override; when set, replaces the default "Website Laten Maken voor {nicheTitle}s" */
+  h1?: { pre: string; highlight: string };
+  /** Optional hero image shown under the hero copy (path in /public, plus SEO alt text) */
+  heroImage?: { src: string; alt: string; width: number; height: number };
   slug: string;
   tagline: string;
   intro: string[];
@@ -30,6 +35,8 @@ const baseUrl = "https://techsolutionsutrecht.nl";
 export default function NichePageLayout({
   niche,
   nicheTitle,
+  h1,
+  heroImage,
   slug,
   tagline,
   intro,
@@ -79,8 +86,8 @@ export default function NichePageLayout({
           <div className="max-w-6xl mx-auto px-6">
             <div className="max-w-3xl">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[var(--color-ink)] mb-6">
-                Website Laten Maken voor{" "}
-                <span className="text-[var(--color-primary)]">{nicheTitle}s</span>
+                {h1 ? h1.pre : "Website Laten Maken voor"}{" "}
+                <span className="text-[var(--color-primary)]">{h1 ? h1.highlight : `${nicheTitle}s`}</span>
               </h1>
               <p className="text-xl text-[var(--color-muted)] mb-6 leading-relaxed">{tagline}</p>
               {intro.map((p, i) => (
@@ -95,6 +102,18 @@ export default function NichePageLayout({
                 </Link>
               </div>
             </div>
+            {heroImage && (
+              <div className="mt-12">
+                <Image
+                  src={heroImage.src}
+                  alt={heroImage.alt}
+                  width={heroImage.width}
+                  height={heroImage.height}
+                  priority
+                  className="w-full h-auto rounded-2xl border border-[var(--color-border)]"
+                />
+              </div>
+            )}
           </div>
         </section>
 
