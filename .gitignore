@@ -36,3 +36,14 @@ logs/
 # Cache
 .cache/
 *.tsbuildinfo
+
+# Agent / critique artifacts
+.agents/
+.impeccable/
+assessment-a-design-review.md
+report/
+skills-lock.json
+
+# Temporary screenshots
+/playwright-mcp
+tsu-*.png
