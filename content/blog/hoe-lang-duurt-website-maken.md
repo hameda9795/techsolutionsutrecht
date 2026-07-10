@@ -13,7 +13,7 @@ author: "Max"
 
 "Hoe lang duurt het om mijn website te laten maken?" is misschien wel de vraag die ik het vaakst krijg. Het eerlijke antwoord: dat hangt ervan af. Maar dat is voor jou natuurlijk geen bruikbaar antwoord. Daarom geef ik je in dit artikel realistische doorlooptijden per type project, plus de factoren die het tempo bepalen.
 
-Kort samengevat: een eenvoudige, professionele website kan vaak **binnen 1 week** online staan. Een uitgebreidere site met meerdere pagina's en functionaliteiten kost doorgaans **1 tot 2 weken**. Een webshop of een [maatwerk webapplicatie](/diensten/maatwerk) zit eerder op **2 tot 4 weken**. Hieronder leg ik uit waarom.
+Kort samengevat: een eenvoudige, professionele website kan vaak **binnen 1 week** online staan. Een uitgebreidere site met meerdere pagina's en functionaliteiten kost doorgaans **1 tot 2 weken**. Een [webshop](/diensten/webshop) lever ik binnen **5 tot 12 dagen** op, en een [maatwerk webapplicatie](/diensten/maatwerk) duurt meestal **2 tot 3 weken**. Hieronder leg ik uit waarom.
 
 ## Doorlooptijd per type website
 
@@ -21,13 +21,13 @@ Kort samengevat: een eenvoudige, professionele website kan vaak **binnen 1 week*
 
 Een one-pager of een kleine website met een paar pagina's (home, over mij, diensten, contact) is het snelst te realiseren. Het ontwerp en de techniek zijn overzichtelijk, en als jij je teksten en foto's klaar hebt liggen, kan zo'n site binnen een werkweek live. Voor veel ZZP'ers is dit precies wat ze nodig hebben — bekijk daarvoor ook mijn aanpak voor een [ZZP website](/zzp-website-laten-maken).
 
-### Professionele WordPress-website (1 tot 2 weken)
+### Professionele WordPress-website (3 tot 10 dagen)
 
-Wil je zelf je content kunnen beheren, een blog draaien of meer pagina's? Dan kom je uit op een [WordPress website](/diensten/wordpress). Reken op 1 tot 2 weken. Het bouwen zelf gaat snel; de tijd zit vooral in afstemming, contentstructuur en het netjes inrichten van SEO.
+Wil je zelf je content kunnen beheren, een blog draaien of meer pagina's? Dan kom je uit op een [WordPress website](/diensten/wordpress). Reken op 3 tot 10 werkdagen. Het bouwen zelf gaat snel; de tijd zit vooral in afstemming, contentstructuur en het netjes inrichten van SEO.
 
-### Webshop (2 tot 4 weken)
+### Webshop (5 tot 12 dagen)
 
-Een [webshop](/diensten/webshop) is complexer: producten, categorieën, betaalmethoden zoals iDEAL, verzendregels en voorraadbeheer. Hoe meer producten en uitzonderingen, hoe langer de doorlooptijd. Een kleine webshop kan binnen 2 weken klaar zijn; een grotere catalogus duurt langer.
+Een [webshop](/diensten/webshop) is complexer: producten, categorieën, betaalmethoden zoals iDEAL, verzendregels en voorraadbeheer. Hoe meer producten en uitzonderingen, hoe langer de doorlooptijd. De meeste webshops lever ik binnen 5 tot 12 werkdagen op; een grotere catalogus kan iets langer duren.
 
 ### Maatwerk webapplicatie (vanaf enkele weken)
 

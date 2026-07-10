@@ -1,6 +1,6 @@
 ---
 title: "Wat Kost een Website Laten Maken in 2026? De Complete Gids voor Ondernemers"
-description: "Ontdek wat een website kost in 2026. Complete prijsgids voor WordPress, webshops en maatwerk. Van €500 tot €50.000+ - alles wat je moet weten over website kosten."
+description: "Ontdek wat een website kost in 2026. Complete prijsgids voor WordPress, webshops en maatwerk. Vanaf €250 - alles wat je moet weten over website kosten bij TechSolutionsUtrecht."
 date: "2026-03-15"
 readTime: "12 min"
 category: "Websites"
@@ -37,15 +37,14 @@ Sommige webbouwers leveren alleen het technische deel. Anderen schrijven ook all
 
 Laten we eerlijk zijn: er is geen vaste prijs voor een website. Maar om je een idee te geven, heb ik de markt voor je in kaart gebracht:
 
-| Type Website | Prijsindicatie | Geschikt Voor |
+| Type Website | Prijsindicatie TechSolutionsUtrecht | Geschikt Voor |
 |-------------|----------------|---------------|
+| **WordPress website** | €250 - €800 | ZZP'ers, starters, MKB |
+| **WooCommerce webshop** | €350 - €1.200 | Ondernemers die online verkopen |
+| **Maatwerk webapplicatie** | €400 - €2.000+ | Bedrijven met specifieke wensen |
 | **DIY (Zelf Bouwen)** | €0 - €300/jaar | Hobbyisten, kleine start |
-| **Website via Student/Freelancer** | €500 - €2.000 | ZZP'ers, starters |
-| **Professionele Freelancer** | €2.000 - €5.000 | MKB, serieuze ondernemers |
-| **Webdesign Bureau** | €5.000 - €15.000+ | Grotere bedrijven, maatwerk |
-| **Enterprise/Large Scale** | €15.000 - €50.000+ | Corporates, complexe projecten |
 
-*Let op: dit zijn indicaties. De uiteindelijke prijs hangt af van je specifieke wensen.*
+*Dit zijn de tarieven die TechSolutionsUtrecht hanteert. In de bredere markt vragen bureaus voor grotere of enterprise-projecten vaak €5.000 tot €50.000+. Die prijzen gelden niet bij TechSolutionsUtrecht, maar geven wel context over waarom prijzen in de markt zo verschillen.*
 
 ## Optie 1: Zelf een Website Maken (€0 - €300/jaar)
 
@@ -64,7 +63,7 @@ Platforms zoals Wix, Squarespace, en WordPress.com maken het tegenwoordig makkel
 
 **Mijn advies:** Dit werkt als je tijd hebt en technisch bent aangelegd. Maar eerlijk? De meeste ondernemers onderschatten hoeveel werk het is om een professionele website zelf te bouwen. [Lees ook: Website Maken of Laten Maken?](/blog/website-maken-of-laten-maken)
 
-## Optie 2: Een ZZP Website Laten Maken (€500 - €2.000)
+## Optie 2: Een ZZP Website Laten Maken (€250 - €800)
 
 Dit is waar de meeste kleine ondernemers terechtkomen. Je werkt met een freelancer die gespecialiseerd is in websites voor kleine bedrijven.
 
@@ -80,9 +79,9 @@ Vraag precies wat er inbegrepen is. Sommige freelancers leveren alleen het techn
 
 Ben je ZZP'er en wil je weten waar je op moet letten? [Bekijk mijn complete gids voor ZZP websites](/blog/zzp-website-laten-maken)
 
-## Optie 3: Professionele Freelancer (€2.000 - €5.000)
+## Optie 3: Professionele Freelancer of Bureau (marktprijzen)
 
-In deze prijsklasse krijg je echt maatwerk. De freelancer besteedt tijd aan:
+In de bredere markt zie je voor uitgebreid maatwerk en bureauwerk prijzen van €2.000 tot €15.000+. Daarvoor krijg je vaak:
 
 - Uitgebreid intakegesprek over jouw doelgroep
 - Uniek design (geen templates)
@@ -92,12 +91,12 @@ In deze prijsklasse krijg je echt maatwerk. De freelancer besteedt tijd aan:
 - Snelheidsoptimalisatie
 - Koppelingen met andere systemen (CRM, boekhouding)
 
-Dit is ideaal voor ondernemers die serieus zijn met hun online aanwezigheid en willen dat hun website écht converteert.
+Dit kan ideaal zijn voor ondernemers met grotere budgetten die serieus zijn met hun online aanwezigheid.
 
-**Het verschil met goedkopere opties:**
-Hier krijg je geen 'website die er leuk uitziet', maar een 'website die verkocht'. Er wordt gekeken naar je doelgroep, je concurrentie, en je bedrijfsdoelen.
+**Het verschil met lagere prijsklassen:**
+Hier krijg je vaak niet alleen een website, maar ook strategie, branding en uitgebreide SEO. Let wel: dit zijn marktprijzen, niet de tarieven van TechSolutionsUtrecht.
 
-## Optie 4: Webdesign Bureau (€5.000 - €15.000+)
+## Optie 4: Enterprise / Large Scale (marktprijzen €15.000+)
 
 Wanneer kies je voor een bureau? Als je:
 - Een groter bedrijf hebt met complexe wensen
@@ -118,8 +117,8 @@ Dit valt vaak niet onder het bouwen van de website zelf. Vraag of dit is inbegre
 ### SSL Certificaat (€0 - €100/jaar)
 Dit is essentieel voor de beveiliging van je website. Tegenwoordig is dit vaak gratis (via Let's Encrypt), maar sommige bureaus rekenen er wel voor.
 
-### Onderhoud (€0 - €200/maand)
-Websites hebben onderhoud nodig: updates, backups, beveiliging. Vraag of dit is inbegrepen of dat je een onderhoudscontract af moet sluiten.
+### Onderhoud (€50 - €150/maand)
+Websites hebben onderhoud nodig: updates, backups, beveiliging. Bij TechSolutionsUtrecht zijn er drie pakketten: Basic (€50/maand), Pro (€100/maand) en Enterprise (€150/maand). Vraag of onderhoud is inbegrepen of dat je een onderhoudscontract af moet sluiten.
 
 ### Aanpassingen Na Oplevering
 Wat als je na een maand bedenkt dat je iets wilt wijzigen? Sommige freelancers rekenen per uur voor wijzigingen, anderen bieden een 'wijzigingstermijn' aan.
@@ -145,14 +144,15 @@ Een mooie website die niet gevonden wordt in Google heeft weinig waarde. Vraag h
 Na jaren in dit vak te werken, zie ik één patroon: ondernemers die willen besparen op hun website komen er later achter dat ze uiteindelijk meer betalen. Of omdat ze alles opnieuw moeten laten doen, of omdat ze zelf uren kwijt zijn aan iets wat een professional in een fractie van de tijd doet.
 
 **Mijn advies?**
-- **Heb je een budget van €500-€1.000?** Kies dan voor een freelancer die gespecialiseerd is in starters. Je krijgt een professionele basis die je later kunt uitbreiden.
-- **Kun je €2.000-€3.000 investeren?** Ga voor maatwerk met een ervaren freelancer. Dit is de sweet spot waar je het meeste waar voor je geld krijgt.
-- **Heb je complexe wensen of een groter bedrijf?** Overweeg dan een bureau, maar wees bereid om €5.000+ te investeren.
+- **Heb je een budget van €250-€800?** Kies dan voor een professionele WordPress-website. Dit is de sweet spot voor de meeste ZZP'ers en kleine bedrijven: je krijgt een snelle, SEO-klaare site die je zelf kunt beheren.
+- **Wil je online verkopen?** Reken op €350-€1.200 voor een WooCommerce-webshop, afhankelijk van het aantal producten en betaalmethoden.
+- **Heb je specifieke functionaliteit nodig?** Maatwerk webapplicaties starten bij €400 en lopen op tot €2.000+, afhankelijk van de complexiteit.
+- **Heb je grotere, complexe wensen of een enterprise-traject?** Dan zijn bureau-prijzen van €5.000+ in de markt realistisch, maar niet iets wat TechSolutionsUtrecht aanbiedt.
 
 ## Veelgestelde Vragen
 
-### Kan ik een goede website voor minder dan €500 krijgen?
-Eerlijk? Waarschijnlijk niet. Een professional die zijn vak verstaat, kan niet leven van €500 voor een complete website. Wat je dan krijgt is vaak een snel in elkaar gezet template met weinig aandacht voor jouw specifieke situatie.
+### Kan ik een goede website voor minder dan €250 krijgen?
+Eerlijk? Waarschijnlijk niet, tenzij je zelf aan de slag gaat met een DIY-platform. Een professional die zijn vak verstaat, kan niet leven van €200 voor een complete website. Bij TechSolutionsUtrecht start een professionele WordPress-website vanaf €250, wat een eerlijke prijs is voor kwaliteit en persoonlijk contact.
 
 ### Waarom vragen sommige bureaus €10.000+ voor een website?
 Omdat ze meer leveren dan alleen een website. Ze leveren strategie, branding, uitgebreide SEO, content creatie, en vaak ook doorlopend onderhoud en optimalisatie. Voor grote bedrijven is dit de investering waard.

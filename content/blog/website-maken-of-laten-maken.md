@@ -96,20 +96,20 @@ Vragen? Problemen? Je hebt iemand die je kunt bellen.
 ### Nadelen van Laten Maken
 
 **1. Het Kost Meer**
-Je betaalt €1.500-€3.000 voor een goede website. Dat is een investering, geen uitgave – maar het moet wel in je budget passen.
+Je betaalt €250-€2.000 voor een goede website, afhankelijk van het type project. Dat is een investering, geen uitgave – maar het moet wel in je budget passen.
 
 **2. Je Moet Wachten**
-Een professionele website kost 3-6 weken. Als je morgen live wilt, is dit geen optie.
+Een professionele website staat doorgaans binnen 1 tot 3 weken live. Als je morgen live wilt, is dit geen optie.
 
 **3. Niet Iedereen is Even Goed**
-Er zijn veel "webbouwers" die een template installeren en €2.000 vragen. Je moet wel weten waarnaar je kijkt.
+Er zijn veel "webbouwers" die een template installeren en €800 vragen. Je moet wel weten waarnaar je kijkt.
 
 ## De Eerlijke Vergelijkingstabel
 
 | Criterium | Zelf Maken | Laten Maken |
 |-----------|-----------|-------------|
-| **Kosten** | €10-€30/maand | €1.500-€3.000 eenmalig |
-| **Tijd** | 20-40 uur van jouw tijd | 3-6 weken wachten |
+| **Kosten** | €10-€30/maand | €250-€2.000 eenmalig, afhankelijk van type project |
+| **Tijd** | 20-40 uur van jouw tijd | 1 tot 3 weken wachten |
 | **Kwaliteit** | Goed genoeg voor start | Professioneel |
 | **SEO** | Basis | Geavanceerd |
 | **Uniekheid** | Template (meestal zichtbaar) | Uniek design |
@@ -140,21 +140,6 @@ Laat me je helpen met een eerlijk advies.
 ✅ Je een professionele uitstraling nodig hebt  
 ✅ Je serieus bent over je bedrijf  
 ✅ Je wilt dat het goed geregeld is
-
-## De Grijze Zone: Hybride Opties
-
-Er is ook een tussenweg. Sommige freelancers (zoals ik) bieden pakketten waarbij je zelf de basis doet, maar professionele hulp krijgt waar het telt.
-
-### Wat Ik Aanbied als "Middelweg":
-
-**DIY Met Professionele Begeleiding (€500-€800)**
-- Jij regelt het WordPress hosting en basis installatie
-- Ik lever een custom design (geen template)
-- Ik bouw de homepage volledig voor je
-- Ik leer je hoe je zelf pagina's toevoegt
-- Je krijgt een SEO-checklist
-
-Dit werkt voor mensen die wat tijd hebben, maar niet alles zelf willen doen.
 
 ## De Vragen Die Je Jezelf Moet Stellen
 
@@ -227,7 +212,7 @@ Wil je weten wat een professionele website kost? [Bekijk mijn prijsgids](/blog/w
 Laat me je helpen met een simpel beslissingsframework:
 
 ### Stap 1: Budget Check
-- Heb je €1.500+ beschikbaar? → Overweeg laten maken
+- Heb je €250+ beschikbaar? → Overweeg laten maken
 - Is je budget beperkter? → Begin met DIY, maar plan upgrade
 
 ### Stap 2: Tijdsinvestering
@@ -248,7 +233,7 @@ Eerlijk? Zowel DIY als laten maken kunnen werken. Het hangt ervan af wie je bent
 
 **De enige verkeerde keuze is geen website hebben.**
 
-Of je nu €20 per maand uitgeeft aan Wix of €2.000 aan een freelancer – zorg dat je online zichtbaar bent. In 2026 is dat geen luxe, dat is zakelijk overleven.
+Of je nu €20 per maand uitgeeft aan Wix of €800 aan een freelancer voor een professionele WordPress-website – zorg dat je online zichtbaar bent. In 2026 is dat geen luxe, dat is zakelijk overleven.
 
 **Mijn aanbod:**
 Als je twijfelt, bel me. Een vrijblijvend gesprek kost niets, en ik help je graag de juiste keuze te maken – ook als dat betekent dat je beter zelf aan de slag kunt.

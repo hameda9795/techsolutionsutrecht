@@ -150,7 +150,7 @@ Voorbeeld:
 
 **Meta Description**
 De korte omschrijving onder je title in Google:
-"Op zoek naar een professionele website in Utrecht? Wij bouwen WordPress websites op maat. Vanaf €495. Gratis intakegesprek."
+"Op zoek naar een professionele website in Utrecht? Wij bouwen WordPress websites op maat. Vanaf €250. Gratis intakegesprek."
 
 **H1 Heading**
 De hoofdtitel van je pagina:

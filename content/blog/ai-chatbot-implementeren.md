@@ -39,7 +39,7 @@ Deze gebruiken kunstmatige intelligentie, specifiek Large Language Models (LLM) 
 
 **Voorbeeld:**
 - Klant: "Ik wil graag een website laten maken maar weet niet wat het gaat kosten. Ik ben starter in Utrecht."
-- AI Chatbot: "Leuk dat je een website wilt laten maken! Als starter in Utrecht heb je verschillende opties. Afhankelijk van je wensen liggen de kosten tussen de €500 en €2.500. Zou je meer willen weten over wat er bij jouw specifieke situatie past?"
+- AI Chatbot: "Leuk dat je een website wilt laten maken! Als starter in Utrecht heb je verschillende opties. Afhankelijk van je wensen liggen de kosten bijvoorbeeld tussen de €250 en €2.000. Zou je meer willen weten over wat er bij jouw specifieke situatie past?"
 
 Zie je het verschil? De AI chatbot begrijpt de context (starter, Utrecht, onzekerheid over kosten) en geeft een relevant, persoonlijk antwoord.
 
@@ -259,7 +259,9 @@ Laten we over geld praten. Wat kun je verwachten?
 
 ### Custom Development (Eenmalig + Maandelijks):
 
-Een op maat gemaakte chatbot kost:
+> **Let op:** De bedragen hieronder zijn indicatieve marktprijzen voor op maat gebouwde chatbots. TechSolutionsUtrecht hanteert geen vaste tarieven voor maatwerk-AI; elke oplossing wordt op aanvraag en op basis van je specifieke wensen geprijsd. [Neem contact op](/contact) voor een offerte op maat.
+
+Een op maat gemaakte chatbot kost in de markt vaak:
 - **Eenvoudig:** €2.000 - €4.000 (eenmalig) + €100-300/maand
 - **Gemiddeld:** €5.000 - €10.000 (eenmalig) + €300-500/maand
 - **Complex:** €10.000+ (eenmalig) + €500+/maand

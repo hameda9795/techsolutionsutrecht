@@ -6,7 +6,7 @@ readTime: "15 min"
 category: "ZZP"
 image: "/images/blog/zzp-website.jpg"
 slug: "zzp-website-laten-maken"
-author: "TechSolutionsUtrecht"
+author: "Max"
 ---
 
 ## Je Bent Gestart als ZZP'er – En Nu?
@@ -69,14 +69,14 @@ Dit is de vraag die iedereen heeft. En zoals je misschien al weet, er is geen ee
 | Oplossing | Prijs | Geschikt Voor |
 |-----------|-------|---------------|
 | **Zelf bouwen (Wix/WordPress)** | €0 - €300/jaar | Als je tijd hebt en technisch bent |
-| **Starter pakket freelancer** | €500 - €1.200 | Als je snel online wilt met een professionele basis |
-| **Maatwerk ZZP website** | €1.500 - €2.500 | Als je serieus aan de slag wilt met groei |
+| **WordPress website** | €250 - €800 | Als je snel online wilt met een professionele basis |
+| **Maatwerk webapplicatie** | €400 - €2.000 | Als je serieus aan de slag wilt met groei of specifieke functionaliteit nodig hebt |
 
 *Wil je meer weten over website kosten in het algemeen? [Bekijk mijn uitgebreide gids over website prijzen](/blog/wat-kost-website-laten-maken).*
 
-### Wat Je Krijgt voor €1.500 - €2.000 (Mijn Aanbeveling)
+### Wat Je Krijgt voor €250 - €800 (Mijn Aanbeveling)
 
-Dit is de prijsrange waar de meeste ZZP'ers het beste uitkomen. Voor dit bedrag krijg je:
+Dit is de prijsrange waar de meeste ZZP'ers het beste uitkomen. Voor een professionele WordPress-website in deze range krijg je:
 
 - Een uniek design (geen standaard template dat bij 100 anderen staat)
 - 5-7 professionele pagina's
@@ -172,16 +172,16 @@ We bespreken:
 - Wat je wilt uitstralen
 - Je budget en tijdlijn
 
-### Stap 2: Ontwerp (1-2 weken)
+### Stap 2: Ontwerp (1-2 dagen)
 Ik maak een design voor je homepagina. Pas als je hier 100% tevreden over bent, gaan we verder met de rest.
 
-### Stap 3: Bouw (2-3 weken)
+### Stap 3: Bouw (2-4 dagen)
 De technische realisatie. Je krijgt tussendoor updates en kunt feedback geven.
 
 ### Stap 4: Content (overlap met bouw)
 Jij levert teksten en foto's aan, of ik regel een copywriter/fotograaf voor je.
 
-### Stap 5: Testen en Oplevering (1 week)
+### Stap 5: Testen en Oplevering (1 dag)
 We testen alles grondig, ik leer je hoe je zelf aanpassingen kunt doen, en dan gaat je site live!
 
 ### Stap 6: Nazorg
@@ -189,12 +189,12 @@ Na oplevering sta ik nog klaar voor vragen en kleine aanpassingen.
 
 ## Hoe Lang Duurt Het?
 
-Een realistische tijdlijn voor een ZZP website is **3-6 weken**. Dit hangt af van:
+Een realistische tijdlijn voor een standaard ZZP-website is **binnen 1 week**. Dit hangt af van:
 - Hoe snel je feedback geeft
 - Of je zelf content aanlevert of dit door mij laat doen
 - Hoe complex je wensen zijn
 
-**Belangrijk:** Websites die in 1-2 dagen worden gebouwd, zijn templates met jouw logo erop geplakt. Een goede website die écht werkt, kost tijd.
+**Belangrijk:** Websites die in 1-2 dagen worden gebouwd, zijn templates met jouw logo erop geplakt. Een goede website die écht werkt, kost iets meer tijd — maar met een professionele aanpak sta je al binnen een week online.
 
 ## Na de Lancering: Wat Dan?
 
@@ -216,9 +216,9 @@ Je website is live – gefeliciteerd! Maar nu begint het pas. Een website is gee
 ### Ik Kan Je Helpen Met
 
 Na de lancering bied ik verschillende onderhoudspakketten:
-- **Basis:** Maandelijkse updates en backups (€50/maand)
-- **Groei:** Updates + 1 blogartikel per maand + SEO monitoring (€150/maand)
-- **All-in:** Compleet website management (€300/maand)
+- **Basic:** Maandelijkse updates en backups (€50/maand)
+- **Pro:** Wekelijkse updates, dagelijkse backups, performance-optimalisatie en priority support (€100/maand)
+- **Enterprise:** Real-time backups, directe updates, premium security en 24/7 support (€150/maand)
 
 ## Veelgestelde Vragen van ZZP'ers
 
