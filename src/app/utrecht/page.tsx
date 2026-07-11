@@ -232,6 +232,15 @@ export default function UtrechtPage() {
               </div>
             ))}
           </div>
+
+          <p className="text-[var(--color-muted)] max-w-3xl mx-auto mt-10 text-center leading-relaxed">
+            Ook buiten de stad help ik ondernemers aan een sterke website. Bekijk bijvoorbeeld{" "}
+            <Link href="/vleuten" className="text-[var(--color-primary)] underline underline-offset-2 hover:no-underline">website laten maken in Vleuten</Link>,{" "}
+            <Link href="/de-meern" className="text-[var(--color-primary)] underline underline-offset-2 hover:no-underline">webdesign in De Meern</Link>,{" "}
+            <Link href="/nieuwegein" className="text-[var(--color-primary)] underline underline-offset-2 hover:no-underline">een professionele website in Nieuwegein</Link>,{" "}
+            <Link href="/veenendaal" className="text-[var(--color-primary)] underline underline-offset-2 hover:no-underline">website laten maken in Veenendaal</Link> of{" "}
+            <Link href="/woerden" className="text-[var(--color-primary)] underline underline-offset-2 hover:no-underline">webdesign in Woerden</Link>.
+          </p>
         </div>
       </section>
 

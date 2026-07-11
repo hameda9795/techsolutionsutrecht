@@ -29,6 +29,70 @@ export interface CityPageProps {
 
 const baseUrl = "https://techsolutionsutrecht.nl";
 
+/**
+ * Geographically adjacent city pages, used for contextual in-body interlinking
+ * (in-content links carry more SEO weight than the sitewide footer list).
+ */
+const nearbyCities: Record<string, { slug: string; name: string }[]> = {
+  nieuwegein: [
+    { slug: "ijsselstein", name: "IJsselstein" },
+    { slug: "houten", name: "Houten" },
+    { slug: "utrecht", name: "Utrecht" },
+  ],
+  zeist: [
+    { slug: "utrecht", name: "Utrecht" },
+    { slug: "amersfoort", name: "Amersfoort" },
+    { slug: "houten", name: "Houten" },
+  ],
+  houten: [
+    { slug: "nieuwegein", name: "Nieuwegein" },
+    { slug: "culemborg", name: "Culemborg" },
+    { slug: "utrecht", name: "Utrecht" },
+  ],
+  amersfoort: [
+    { slug: "zeist", name: "Zeist" },
+    { slug: "veenendaal", name: "Veenendaal" },
+    { slug: "utrecht", name: "Utrecht" },
+  ],
+  ijsselstein: [
+    { slug: "nieuwegein", name: "Nieuwegein" },
+    { slug: "de-meern", name: "De Meern" },
+    { slug: "utrecht", name: "Utrecht" },
+  ],
+  "de-meern": [
+    { slug: "vleuten", name: "Vleuten" },
+    { slug: "woerden", name: "Woerden" },
+    { slug: "utrecht", name: "Utrecht" },
+  ],
+  vleuten: [
+    { slug: "de-meern", name: "De Meern" },
+    { slug: "woerden", name: "Woerden" },
+    { slug: "utrecht", name: "Utrecht" },
+  ],
+  veenendaal: [
+    { slug: "amersfoort", name: "Amersfoort" },
+    { slug: "zeist", name: "Zeist" },
+    { slug: "utrecht", name: "Utrecht" },
+  ],
+  woerden: [
+    { slug: "de-meern", name: "De Meern" },
+    { slug: "vleuten", name: "Vleuten" },
+    { slug: "utrecht", name: "Utrecht" },
+  ],
+  culemborg: [
+    { slug: "houten", name: "Houten" },
+    { slug: "ijsselstein", name: "IJsselstein" },
+    { slug: "utrecht", name: "Utrecht" },
+  ],
+};
+
+/** Varied anchor phrasing to keep interlinks natural instead of exact-match repetition. */
+const anchorPhrases = [
+  (name: string) => `website laten maken in ${name}`,
+  (name: string) => `webdesign in ${name}`,
+  (name: string) => `een professionele website in ${name}`,
+];
+
 export default function CityPageLayout({
   city,
   slug,
@@ -168,6 +232,20 @@ export default function CityPageLayout({
                 Ik werk regelmatig voor ondernemers in {neighbourhoods.join(", ")} en de rest van de regio.
                 Korte lijnen, snelle reactie en geen anonieme helpdesk.
               </p>
+              {nearbyCities[slug] && (
+                <p className="text-[var(--color-muted)] leading-relaxed mt-4">
+                  Zit je bedrijf net buiten {city}? Bekijk dan ook{" "}
+                  {nearbyCities[slug].map((nc, i, arr) => (
+                    <span key={nc.slug}>
+                      <Link href={`/${nc.slug}`} className="text-[var(--color-primary)] underline underline-offset-2 hover:no-underline">
+                        {anchorPhrases[i % anchorPhrases.length](nc.name)}
+                      </Link>
+                      {i < arr.length - 2 ? ", " : i === arr.length - 2 ? " of " : ""}
+                    </span>
+                  ))}
+                  .
+                </p>
+              )}
             </div>
             <div>
               <h2 className="text-3xl font-bold text-[var(--color-ink)] mb-6">Zo werken we samen</h2>
