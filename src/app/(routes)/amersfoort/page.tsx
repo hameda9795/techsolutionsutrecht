@@ -31,7 +31,7 @@ export default function AmersfoortPage() {
       localHighlight={{
         title: "Amersfoort: waar geschiedenis en innovatie samenkomen",
         content: [
-          "Amersfoort is een van de snelst groeiende steden van Nederland — en dat zie je terug in het ondernemersklimaat. De historische binnenstad met zijn grachten en monumentale panden trekt toeristen en lokale shoppers, terwijl Vathorst en Nieuwland booming zijn met techbedrijven, ZZP'ers en startups. Die diversiteit vraagt om webdesign dat flexibel is: van een sfeervolle horecasite tot een strakke zakelijke portal.",
+          "Amersfoort is een van de snelst groeiende steden van Nederland — en dat zie je terug in het ondernemersklimaat. De historische binnenstad met zijn grachten en monumentale panden trekt toeristen en lokale shoppers, terwijl Vathorst en Nieuwland booming zijn met techbedrijven, ZZP'ers en startups. Die diversiteit vraagt om webdesign dat flexibel is: van een sfeervolle horecasite tot een strakke zakelijke website.",
           "Ik werk regelmatig voor klanten in Amersfoort en ken de dynamiek van de stad. Of je nu een winkel hebt in de Langestraat, een praktijk in Schothorst of een techbedrijf in Vathorst: ik zorg voor een website die aansluit bij jouw doelgroep én bij het karakter van Amersfoort. Met lokale SEO richt ik je site zo in dat je ook echt gevonden wordt door mensen die in Amersfoort zoeken — niet alleen in de regio.",
         ],
       }}

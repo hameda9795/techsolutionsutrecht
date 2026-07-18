@@ -10,22 +10,22 @@ export const dynamic = "force-dynamic";
 const SITE = "https://techsolutionsutrecht.nl";
 
 export const metadata: Metadata = {
-  title: "Projecten | Websites & Webapps die ik bouwde | TechSolutionsUtrecht",
+  title: "Projecten | Websites & Webshops | TechSolutionsUtrecht",
   description:
-    "Bekijk een selectie van echte projecten: websites, webshops en webapplicaties gebouwd door een developer uit Utrecht. Klik door voor details of bekijk ze live.",
+    "Bekijk een selectie van echte websites, webshops en andere digitale projecten van een developer uit Utrecht. Klik door voor details of bekijk ze live.",
   keywords: [
     "projecten",
     "portfolio webdeveloper Utrecht",
     "website voorbeelden",
     "webshop voorbeelden",
-    "webapplicatie projecten",
+    "digitale projecten",
     "gemaakte websites Utrecht",
   ],
   alternates: { canonical: `${SITE}/projecten` },
   openGraph: {
     title: "Projecten | TechSolutionsUtrecht",
     description:
-      "Echte websites, webshops en webapplicaties gebouwd in Utrecht. Bekijk het werk en de details.",
+      "Echte websites, webshops en digitale projecten gebouwd in Utrecht. Bekijk het werk en de details.",
     url: `${SITE}/projecten`,
     type: "website",
     locale: "nl_NL",
@@ -52,7 +52,7 @@ export default async function ProjectenPage() {
     "@type": "CollectionPage",
     name: "Projecten — TechSolutionsUtrecht",
     description:
-      "Echte opgeleverde websites, webshops en webapplicaties gebouwd door TechSolutionsUtrecht.",
+      "Echte opgeleverde websites, webshops en digitale projecten van TechSolutionsUtrecht.",
     url: `${SITE}/projecten`,
     isPartOf: { "@type": "WebSite", name: "TechSolutionsUtrecht", url: SITE },
     mainEntity: {

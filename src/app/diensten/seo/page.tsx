@@ -419,37 +419,31 @@ export default function SEOPage() {
 
             <section>
               <h2 className="mb-4 text-balance text-3xl font-bold text-[var(--color-ink)]">
-                Verdiep je in mijn SEO-diensten
+                Wat valt binnen onze SEO-aanpak?
               </h2>
               <p className="mb-8 max-w-3xl leading-relaxed text-[var(--color-muted)]">
-                Lees meer over de twee gespecialiseerde SEO-diensten die momenteel
-                beschikbaar zijn.
+                Hoger in Google is één samenhangende dienst. We bepalen na de controle
+                welke onderdelen voor jouw website de meeste prioriteit hebben.
               </p>
               <div className="grid gap-6 md:grid-cols-2">
-                <Link
-                  href="/diensten/seo/teksten"
-                  className="card-service block rounded-2xl border border-[var(--color-border)] bg-[var(--color-bg)] p-6 transition-colors hover:border-primary/40"
-                >
+                <article className="card-service rounded-2xl border border-[var(--color-border)] bg-[var(--color-bg)] p-6">
                   <h3 className="mb-2 text-lg font-bold text-[var(--color-ink)]">
-                    SEO Teksten Laten Schrijven
+                    Belangrijke pagina’s verbeteren
                   </h3>
                   <p className="text-sm leading-relaxed text-[var(--color-muted)]">
-                    Webteksten en artikelen op basis van zoekwoordonderzoek en de
-                    vragen van je doelgroep.
+                    We verbeteren structuur, zoekintentie, teksten en interne links op
+                    pagina’s die belangrijk zijn voor je klanten.
                   </p>
-                </Link>
-                <Link
-                  href="/diensten/seo/lokale-seo"
-                  className="card-service block rounded-2xl border border-[var(--color-border)] bg-[var(--color-bg)] p-6 transition-colors hover:border-primary/40"
-                >
+                </article>
+                <article className="card-service rounded-2xl border border-[var(--color-border)] bg-[var(--color-bg)] p-6">
                   <h3 className="mb-2 text-lg font-bold text-[var(--color-ink)]">
-                    Lokale SEO
+                    Lokale vindbaarheid verbeteren
                   </h3>
                   <p className="text-sm leading-relaxed text-[var(--color-muted)]">
-                    Verbeter je lokale vindbaarheid voor klanten in Utrecht en de
-                    regio’s waarop je bedrijf zich richt.
+                    We optimaliseren relevante lokale signalen en je Google
+                    Bedrijfsprofiel als dat aansluit op jouw bedrijf.
                   </p>
-                </Link>
+                </article>
               </div>
             </section>
 

@@ -263,7 +263,7 @@ export async function resetToDefaults(): Promise<boolean> {
     },
     {
       title: "Admin Dashboard",
-      short_desc: "Complete backend interface voor projectbeheer. Toont capaciteit voor complexe webapplicaties, niet alleen statische sites.",
+      short_desc: "Technische demonstratie van een beheeromgeving voor projectbeheer; geen afzonderlijk aangeboden dienst.",
       features: [
         "Login systeem (demo/demo123)",
         "Statistieken dashboard met charts",
@@ -279,7 +279,7 @@ export async function resetToDefaults(): Promise<boolean> {
     },
     {
       title: "Klant Portal",
-      short_desc: "Klantomgeving waar opdrachtgevers hun project kunnen volgen. Laat zien dat je full-stack kunt bouwen.",
+      short_desc: "Technische demonstratie van een klantomgeving voor projectvoortgang; geen afzonderlijk aangeboden dienst.",
       features: [
         "Aparte login voor klanten",
         "Project tijdlijn visualisatie",

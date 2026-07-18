@@ -47,15 +47,18 @@ const nextConfig = {
   },
   async redirects() {
     return [
-      // Old portfolio section -> current portfolio
-      { source: "/projects", destination: "/portfolio", permanent: true },
-      { source: "/projects/:path*", destination: "/portfolio", permanent: true },
+      // Old portfolio URLs -> the single current projects page
+      { source: "/projects", destination: "/projecten", permanent: true },
+      { source: "/projects/:path*", destination: "/projecten", permanent: true },
+      { source: "/portfolio", destination: "/projecten", permanent: true },
+      { source: "/portfolio/", destination: "/projecten", permanent: true },
+      { source: "/portfolio/:path*", destination: "/projecten", permanent: true },
 
       // Old services section -> current diensten/reparaties
       { source: "/services", destination: "/diensten", permanent: true },
       { source: "/services/repair", destination: "/reparaties", permanent: true },
       { source: "/services/web-design", destination: "/diensten", permanent: true },
-      { source: "/services/software", destination: "/diensten/maatwerk", permanent: true },
+      { source: "/services/software", destination: "/diensten", permanent: true },
 
       // Renamed website service -> canonical service URL
       {
@@ -81,10 +84,20 @@ const nextConfig = {
         permanent: true,
       },
 
-      // Old "software op maat" pages -> current maatwerk service
-      { source: "/software-op-maat", destination: "/diensten/maatwerk", permanent: true },
-      { source: "/software-op-maat/", destination: "/diensten/maatwerk", permanent: true },
-      { source: "/webdesign-software-op-maat", destination: "/diensten/maatwerk", permanent: true },
+      // Retired services -> the closest current service overview
+      { source: "/diensten/maatwerk", destination: "/diensten", permanent: true },
+      { source: "/diensten/maatwerk/", destination: "/diensten", permanent: true },
+      { source: "/klein-bedrijf-webapplicatie", destination: "/diensten", permanent: true },
+      { source: "/klein-bedrijf-webapplicatie/", destination: "/diensten", permanent: true },
+      { source: "/software-op-maat", destination: "/diensten", permanent: true },
+      { source: "/software-op-maat/", destination: "/diensten", permanent: true },
+      { source: "/webdesign-software-op-maat", destination: "/diensten", permanent: true },
+
+      // Consolidated SEO subpages -> the current Hoger in Google service
+      { source: "/diensten/seo/teksten", destination: "/diensten/seo", permanent: true },
+      { source: "/diensten/seo/teksten/", destination: "/diensten/seo", permanent: true },
+      { source: "/diensten/seo/lokale-seo", destination: "/diensten/seo", permanent: true },
+      { source: "/diensten/seo/lokale-seo/", destination: "/diensten/seo", permanent: true },
 
       // Old appointment pages -> contact
       { source: "/afspraak", destination: "/contact", permanent: true },

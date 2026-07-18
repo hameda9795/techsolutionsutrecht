@@ -375,7 +375,7 @@ export default function WebshopPage() {
                     Projecten
                   </h3>
                   <p className="text-sm leading-relaxed text-[var(--color-muted)]">
-                    Bekijk eerder opgeleverde websites en webapplicaties.
+                    Bekijk eerder opgeleverde websites en webshops.
                   </p>
                 </Link>
               </div>

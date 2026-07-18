@@ -1,4 +1,5 @@
 import type { NextRequest } from "next/server";
+import { isContactSubject } from "@/lib/contact-subjects";
 
 export async function POST(request: NextRequest) {
   try {
@@ -6,9 +7,16 @@ export async function POST(request: NextRequest) {
     const { name, email, phone, subject, message } = body;
 
     // Validate required fields
-    if (!name || !email || !message) {
+    if (!name || !email || !message || !subject) {
       return new Response(
-        JSON.stringify({ error: "Naam, email en bericht zijn verplicht" }),
+        JSON.stringify({ error: "Naam, email, onderwerp en bericht zijn verplicht" }),
+        { status: 400, headers: { "Content-Type": "application/json" } }
+      );
+    }
+
+    if (!isContactSubject(subject)) {
+      return new Response(
+        JSON.stringify({ error: "Selecteer een geldig onderwerp" }),
         { status: 400, headers: { "Content-Type": "application/json" } }
       );
     }
@@ -36,7 +44,7 @@ export async function POST(request: NextRequest) {
 👤 *Naam:* ${name}
 📧 *Email:* ${email}
 📱 *Telefoon:* ${phone || "Niet opgegeven"}
-📝 *Onderwerp:* ${subject || "Geen onderwerp"}
+📝 *Onderwerp:* ${subject}
 
 💬 *Bericht:*
 ${message}

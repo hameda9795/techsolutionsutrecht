@@ -380,14 +380,14 @@ export default function WebsiteLatenMakenPage() {
                   </p>
                 </Link>
                 <Link
-                  href="/diensten/maatwerk"
+                  href="/diensten/website-onderhoud"
                   className="card-service block rounded-2xl border border-[var(--color-border)] bg-[var(--color-bg)] p-6 transition-colors hover:border-primary/40"
                 >
                   <h3 className="mb-2 text-lg font-bold text-[var(--color-ink)]">
-                    Maatwerk development
+                    Website onderhoud
                   </h3>
                   <p className="text-sm text-[var(--color-muted)]">
-                    Webapplicaties en dashboards op maat met React en Next.js.
+                    Updates, back-ups en technische controles vanaf €29 per maand.
                   </p>
                 </Link>
                 <Link
@@ -441,7 +441,7 @@ export default function WebsiteLatenMakenPage() {
                   <Phone className="h-5 w-5" /> WhatsApp direct
                 </a>
                 <Link
-                  href="/portfolio"
+                  href="/projecten"
                   className="btn-primary inline-flex items-center justify-center"
                 >
                   Bekijk portfolio

@@ -57,7 +57,7 @@ Gebruik deze richtlijn:
 - Je een ZZP'er, starter of klein/middelgroot bedrijf bent.
 - Je direct contact en korte lijnen waardeert.
 - Budget belangrijk is, zonder in te leveren op kwaliteit.
-- Je een [website](/diensten/website-laten-maken), [webshop](/diensten/webshop) of overzichtelijk [maatwerkproject](/diensten/maatwerk) wilt.
+- Je hulp zoekt bij een [website](/diensten/website-laten-maken), [webshop](/diensten/webshop), [SEO](/diensten/seo), [onderhoud](/diensten/website-onderhoud) of een eenvoudige [bedrijfsautomatisering](/diensten/whatsapp-automatisering).
 
 **Kies een bureau als:**
 

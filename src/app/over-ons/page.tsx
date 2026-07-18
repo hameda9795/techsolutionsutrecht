@@ -145,7 +145,7 @@ export default function OverMijPage() {
               <div className="space-y-4 text-[var(--color-muted)]">
                 <p>
                   Ik ben Max, software engineer en de persoon achter TechSolutionsUtrecht. 
-                  Naast mijn studie wiskunde hier in Utrecht heb ik de afgelopen 12 jaar gewerkt aan websites en webapplicaties.
+                  Naast mijn studie wiskunde hier in Utrecht heb ik de afgelopen 12 jaar gewerkt aan websites, webshops en online vindbaarheid.
                 </p>
                 <p>
                   Wat begon als freelance projecten is nu mijn eigen bedrijf geworden. 
@@ -153,8 +153,8 @@ export default function OverMijPage() {
                 </p>
                 
                 <p>
-                  Ik programmeer niet alleen code; ik denk mee over je merk. Of het nu een WordPress website is 
-                  of een maatwerk applicatie in React, Next.js, Angular of Python - ik bouw het technisch solide en SEO-geoptimaliseerd.
+                  Ik programmeer niet alleen code; ik denk mee over je merk. Voor websites kies ik een passende
+                  techniek, bijvoorbeeld WordPress of Next.js. Daarnaast help ik met webshops, SEO, onderhoud en praktische automatisering.
                 </p>
                 
                 <p>

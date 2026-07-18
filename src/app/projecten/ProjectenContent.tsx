@@ -28,7 +28,7 @@ const filters: { id: Filter; label: string }[] = [
   { id: "all", label: "Alles" },
   { id: "website", label: "Websites" },
   { id: "webshop", label: "Webshops" },
-  { id: "webapp", label: "Webapplicaties" },
+  { id: "webapp", label: "Technische demo's" },
   { id: "tool", label: "Tools" },
 ];
 

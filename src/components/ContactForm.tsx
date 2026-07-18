@@ -2,15 +2,7 @@
 
 import { useState } from "react";
 import { Send, CheckCircle, AlertCircle } from "lucide-react";
-
-const subjects = [
-  "Website laten maken",
-  "Webshop laten maken",
-  "Reparatie laptop",
-  "Reparatie computer",
-  "Reparatie telefoon/tablet",
-  "Anders",
-];
+import { contactSubjects } from "@/lib/contact-subjects";
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
@@ -173,17 +165,18 @@ export default function ContactForm() {
             htmlFor="subject" 
             className="block text-sm font-medium text-[var(--color-ink)] mb-2"
           >
-            Onderwerp
+            Onderwerp *
           </label>
           <select
             id="subject"
             name="subject"
+            required
             value={formData.subject}
             onChange={handleChange}
             className="w-full px-4 py-3 bg-[var(--color-surface)] border border-[var(--color-border)] rounded-lg text-[var(--color-ink)] focus:outline-none focus:border-primary transition-colors"
           >
-            <option value="">Selecteer een onderwerp</option>
-            {subjects.map((subject) => (
+            <option value="" disabled>Selecteer een onderwerp</option>
+            {contactSubjects.map((subject) => (
               <option key={subject} value={subject}>{subject}</option>
             ))}
           </select>

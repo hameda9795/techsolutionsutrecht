@@ -46,7 +46,7 @@
 #### مقاله ۲: "Hoe Kies je de Beste Webdesigner in Utrecht?"
 - **کلمات کلیدی:** webdesigner utrecht kiezen, goede website laten maken, betrouwbare webbouwer
 - **هدف:** ترافیک + اعتمادسازی
-- **لینک داخلی:** `/diensten`, `/over-ons`, `/portfolio`
+- **لینک داخلی:** `/diensten`, `/over-ons`, `/projecten`
 - **CTA:** "Bekijk onze portfolio of vraag een offerte aan"
 - **تعداد کلمات:** ۱۸۰۰-۲۵۰۰
 
@@ -108,7 +108,7 @@
 #### مقاله ۶: "Hoe Lang Duurt een Website Laten Maken? [Realistische Tijden]"
 - **کلمات کلیدی:** hoe lang website laten maken, website bouwen tijd, snelle website
 - **هدف:** ترافیک + مدیریت انتظارات
-- **لینک داخلی:** `/diensten/website-laten-maken`, `/website-binnen-week`
+- **لینک داخلی:** `/diensten/website-laten-maken`, `/blog/website-binnen-week-hoe-wij-dat-doen`
 - **CTA:** "Express oplevering mogelijk"
 - **تعداد کلمات:** ۱۵۰۰-۲۰۰۰
 
@@ -213,7 +213,7 @@
 #### مقاله ۱۵: "De Toekomst van Webdesign: Trends voor 2026"
 - **کلمات کلیدی:** webdesign trends 2026, toekomst website, nieuwe technologie webdesign
 - **هدف:** thought leadership
-- **لینک داخلی:** `/diensten`, `/diensten/maatwerk`
+- **لینک داخلی:** `/diensten`, `/diensten/website-laten-maken`
 - **CTA:** "Blijf voorop met een moderne website"
 - **تعداد کلمات:** ۱۸۰۰-۲۲۰۰
 
@@ -222,7 +222,7 @@
 #### مقاله ۱۶: "Case Study: Hoe wij een ZZP-er Hielpen met 300% Meer Leads"
 - **کلمات کلیدی:** case study website, succesverhaal webdesign, voorbeeld website
 - **هدف:** اعتمادسازی + proof
-- **لینک داخلی:** `/portfolio`, `/diensten/website-laten-maken`
+- **لینک داخلی:** `/projecten`, `/diensten/website-laten-maken`
 - **CTA:** "Wil jij ook meer leads? Neem contact op"
 - **تعداد کلمات:** ۱۵۰۰-۲۰۰۰
 

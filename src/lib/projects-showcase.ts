@@ -33,7 +33,7 @@ export interface ShowcaseProject {
 export const projectTypeLabels: Record<ProjectType, string> = {
   website: "Bedrijfswebsite",
   webshop: "Webshop",
-  webapp: "Webapplicatie",
+  webapp: "Technische demo",
   tool: "Tool / Component",
 };
 
@@ -84,8 +84,8 @@ export const showcaseProjects: ShowcaseProject[] = [
     title: "Admin Dashboard",
     tagline: "Backend voor projectbeheer met statistieken",
     description:
-      "Complete beheeromgeving die laat zien dat ik niet alleen statische sites bouw, maar ook complexe webapplicaties. Inclusief login, statistieken en projectbeheer.",
-    sector: "Webapplicatie",
+      "Technische demonstratie van een beheeromgeving met login, statistieken en projectbeheer. Dit is een portfolio-item en geen afzonderlijk aangeboden dienst.",
+    sector: "Technische demo",
     type: "webapp",
     year: "2025",
     highlights: [
@@ -104,8 +104,8 @@ export const showcaseProjects: ShowcaseProject[] = [
     title: "Klant Portal",
     tagline: "Omgeving waar klanten hun project live volgen",
     description:
-      "Een klantomgeving waarin opdrachtgevers de voortgang van hun project kunnen volgen, documenten uploaden en facturen inzien. Een echte full-stack toepassing.",
-    sector: "Webapplicatie",
+      "Technische demonstratie van een klantomgeving voor voortgang, documenten en facturen. Dit is een portfolio-item en geen afzonderlijk aangeboden dienst.",
+    sector: "Technische demo",
     type: "webapp",
     year: "2025",
     highlights: [

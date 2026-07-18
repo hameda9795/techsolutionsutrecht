@@ -1,7 +1,7 @@
 ---
 title: "Wat Kost een Website Laten Maken in 2026? Alle Prijzen op een Rij"
 seoTitle: "Wat Kost een Website Laten Maken in 2026?"
-description: "Wat kost een website laten maken in 2026? Bekijk actuele prijzen voor websites, webshops en maatwerk, plus mogelijke bijkomende kosten."
+description: "Wat kost een website laten maken in 2026? Bekijk actuele prijzen voor websites en webshops, plus SEO, onderhoud, automatisering en bijkomende kosten."
 date: "2026-07-10"
 dateModified: "2026-07-18"
 readTime: "12 min"
@@ -43,7 +43,9 @@ Laten we eerlijk zijn: er is geen vaste prijs voor een website. Maar om je een i
 |-------------|----------------|---------------|
 | **[Professionele website](/diensten/website-laten-maken)** | Vanaf €250 · meestal €350–€650 | ZZP'ers, starters, MKB |
 | **[WooCommerce webshop](/diensten/webshop)** | Vanaf €795 · meestal €1.000–€2.000 | Ondernemers die online verkopen |
-| **[Maatwerk webapplicatie](/diensten/maatwerk)** | €400 - €2.000+ | Bedrijven met specifieke wensen |
+| **[Hoger in Google](/diensten/seo)** | Vanaf €200 per maand | Ondernemers die structureel beter gevonden willen worden |
+| **[Website onderhoud](/diensten/website-onderhoud)** | Vanaf €29 per maand | Updates, back-ups en technische controles |
+| **[WhatsApp & automatisering](/diensten/whatsapp-automatisering)** | Vanaf €450 | Eén eenvoudige workflow tussen maximaal twee systemen |
 | **DIY (Zelf Bouwen)** | €0 - €300/jaar | Hobbyisten, kleine start |
 
 *Dit zijn de tarieven die TechSolutionsUtrecht hanteert. In de bredere markt vragen bureaus voor grotere of enterprise-projecten vaak €5.000 tot €50.000+. Die prijzen gelden niet bij TechSolutionsUtrecht, maar geven wel context over waarom prijzen in de markt zo verschillen.*
@@ -150,7 +152,9 @@ Na jaren in dit vak te werken, zie ik één patroon: ondernemers die willen besp
 **Mijn advies?**
 - **Wil je een complete bedrijfswebsite?** De basisuitvoering start vanaf €250 en de meeste projecten vallen tussen €350 en €650. De techniek wordt gekozen op basis van je doelen.
 - **Wil je online verkopen?** Een WooCommerce-webshop start vanaf €795 en kost meestal €1.000–€2.000, afhankelijk van producten, variaties, verzendregels en koppelingen.
-- **Heb je specifieke functionaliteit nodig?** Maatwerk webapplicaties starten bij €400 en lopen op tot €2.000+, afhankelijk van de complexiteit.
+- **Wil je beter gevonden worden?** Hoger in Google start vanaf €200 per maand en combineert technische controle, belangrijke pagina’s, lokale vindbaarheid en rapportage.
+- **Wil je het technische beheer uitbesteden?** Websiteonderhoud start vanaf €29 per maand.
+- **Wil je één terugkerende taak automatiseren?** WhatsApp & automatisering start vanaf €450 voor één eenvoudige workflow en maximaal twee gekoppelde systemen.
 - **Heb je grotere, complexe wensen of een enterprise-traject?** Dan zijn bureau-prijzen van €5.000+ in de markt realistisch, maar niet iets wat TechSolutionsUtrecht aanbiedt.
 
 ## Veelgestelde Vragen
@@ -165,7 +169,7 @@ Omdat ze meer leveren dan alleen een website. Ze leveren strategie, branding, ui
 Nee, absoluut niet. Een €2.000 website van een goede freelancer kan veel beter werken dan een €10.000 website van een bureau dat niet luistert naar je wensen. Het gaat om de match tussen wat je nodig hebt en wat je krijgt.
 
 ### Moet ik zelf teksten schrijven of regelt de webbouwer dat?
-Vraag dit expliciet! Sommigen doen alles, anderen verwachten dat jij de content aanlevert. Content schrijven kost tijd en expertise, dus dit wordt vaak apart berekend. Wil je teksten die ook in Google scoren, kijk dan naar [SEO teksten laten schrijven](/diensten/seo/teksten).
+Vraag dit expliciet! Sommigen doen alles, anderen verwachten dat jij de content aanlevert. Content schrijven kost tijd en expertise en wordt daarom vaak apart berekend. Binnen [Hoger in Google](/diensten/seo) kunnen belangrijke bestaande pagina’s worden verbeterd; volledige nieuwe teksten worden alleen opgenomen als dat vooraf in de offerte is afgesproken.
 
 ### Wat is de gemiddelde prijs om een website te laten maken?
 Marktprijzen lopen sterk uiteen door verschillen in ontwerp, inhoud, begeleiding en functionaliteit. Bij TechSolutionsUtrecht start een complete bedrijfswebsite vanaf €250 en ligt de gebruikelijke projectprijs tussen €350 en €650. Je betaalt voor de afgesproken uitvoering, niet voor een vast aantal pagina's of een verplichte techniek.

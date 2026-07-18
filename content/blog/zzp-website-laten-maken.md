@@ -72,7 +72,7 @@ Dit is de vraag die iedereen heeft. En zoals je misschien al weet, er is geen ee
 |-----------|-------|---------------|
 | **Zelf bouwen (Wix/WordPress)** | €0 - €300/jaar | Als je tijd hebt en technisch bent |
 | **Professionele bedrijfswebsite** | Vanaf €250 · meestal €350–€650 | Als je compleet en professioneel online wilt zijn |
-| **Maatwerk webapplicatie** | €400 - €2.000 | Als je serieus aan de slag wilt met groei of specifieke functionaliteit nodig hebt |
+| **WooCommerce-webshop** | Vanaf €795 · meestal €1.000–€2.000 | Als je producten online wilt verkopen en betalingen wilt ontvangen |
 
 *Wil je meer weten over website kosten in het algemeen? [Bekijk mijn uitgebreide gids over website prijzen](/blog/wat-kost-website-laten-maken).*
 
@@ -162,32 +162,28 @@ Als ZZP'er hoef je niet te concurreren op nationale termen. Focus op:
 - "ZZP + [Jouw vak]" (bijv. "ZZP marketing specialist")
 - Specifieke probleemoplossingen (bijv. "website traag maken sneller")
 
-## De Bouwproces: Wat Kun Je Verwachten?
+## Het Bouwproces: Wat Kun Je Verwachten?
 
-Als je besluit om een website te laten maken, wat gebeurt er dan precies? Dit is het proces dat ik volg met mijn klanten:
+Als je besluit om een website te laten maken, wat gebeurt er dan precies? Het traject bestaat uit vier overzichtelijke stappen:
 
-### Stap 1: Intake (1-2 uur)
+### Stap 1: Kennismaking en offerte
 We bespreken:
 - Wat je doet en voor wie
 - Wat je doelen zijn met de website
-- Welke pagina's je nodig hebt
+- Welke inhoud en functies je nodig hebt
 - Wat je wilt uitstralen
 - Je budget en tijdlijn
 
-### Stap 2: Ontwerp
-Ik maak een design voor je homepagina. Pas als je hier 100% tevreden over bent, gaan we verder met de rest.
+Daarna ontvang je een duidelijke offerte met scope, totaalprijs en planning.
 
-### Stap 3: Bouw
-De technische realisatie. Je krijgt tussendoor updates en kunt feedback geven.
+### Stap 2: Ontwerp en ontwikkeling
+De structuur, uitstraling en techniek worden uitgewerkt voor de complete website. Je krijgt tussendoor updates en kunt gerichte feedback geven.
 
-### Stap 4: Content (overlap met bouw)
-Jij levert teksten en foto's aan, of ik regel een copywriter/fotograaf voor je.
+### Stap 3: Controle en aanpassingen
+We controleren inhoud, mobiel gebruik, formulieren en de technische basis. Afgesproken correcties worden vóór de oplevering verwerkt.
 
-### Stap 5: Testen en Oplevering
-We testen alles grondig, ik leer je hoe je zelf aanpassingen kunt doen, en dan gaat je site live!
-
-### Stap 6: Nazorg
-Na oplevering sta ik nog klaar voor vragen en kleine aanpassingen.
+### Stap 4: Oplevering en uitleg
+Na de laatste controle gaat de website live. Als eigen beheer bij het project past, krijg je uitleg over de onderdelen die je zelf kunt aanpassen. Nazorg en verdere ondersteuning volgen de afspraken in de offerte.
 
 ## Hoe Lang Duurt Het?
 
@@ -228,10 +224,10 @@ Ja, absoluut. LinkedIn is geweldig voor netwerken, maar je hebt geen volledige c
 Zeker! Ik bouw websites met groei in gedachten. Je begint met de essentie en kunt later altijd pagina's, functionaliteit, of zelfs een webshop toevoegen.
 
 ### Wat als ik geen goede foto's van mezelf heb?
-Geen probleem. Ik werk samen met professionele fotografen die gespecialiseerd zijn in ondernemersportretten. Of we gebruiken stockfoto's die bij je uitstraling passen.
+Bespreek dit tijdens de intake. We bepalen welke beelden nodig zijn en leggen vast of jij eigen foto's aanlevert, passende stockbeelden gebruikt of zelf een fotograaf inschakelt.
 
 ### Hoe snel sta ik op de eerste pagina van Google?
-Realistisch? Reken op 3-6 maanden voor lokale zoektermen. SEO is een marathon, geen sprint. Maar met de juiste strategie kom je er zeker.
+Daar is geen vaste termijn of garantie voor. Concurrentie, locatie, techniek, inhoud en de autoriteit van je website spelen allemaal mee. Met [Hoger in Google](/diensten/seo) kunnen technische verbeteringen, belangrijke pagina's en lokale vindbaarheid structureel worden aangepakt en gemonitord.
 
 ### Kan ik mijn website zelf bijhouden?
 Dat kan wanneer eigen beheer bij jouw wensen past. WordPress is bijvoorbeeld geschikt voor uitgebreid contentbeheer; voor andere projecten kan een andere techniek beter passen. De keuze en uitleg bij oplevering worden vooraf afgesproken.

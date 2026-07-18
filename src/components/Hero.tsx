@@ -210,7 +210,7 @@ export default function Hero() {
               <div className="prose prose-slate text-[var(--color-muted)] max-w-none">
                 <p className="text-lg mb-4">
                   Ik ben Max, webdeveloper, IT-consultant en SEO-specialist - de persoon achter TechSolutionsUtrecht. 
-                  Naast mijn studie wiskunde hier in Utrecht heb ik de afgelopen 12 jaar gewerkt aan websites en webapplicaties.
+                  Naast mijn studie wiskunde hier in Utrecht heb ik de afgelopen 12 jaar gewerkt aan websites, webshops en online vindbaarheid.
                 </p>
                 
                 <p className="mb-4">
@@ -220,8 +220,8 @@ export default function Hero() {
                 
                 <p className="mb-4">
                   Ik programmeer niet alleen code; ik denk mee over je merk en zorg dat het ontwerp past bij wie jij bent. 
-                  Of het nu een WordPress website is of een maatwerk applicatie in <strong className="text-[var(--color-ink)]">React, Next.js, Angular of Python</strong> - 
-                  ik bouw het technisch solide en SEO-geoptimaliseerd.
+                  Voor websites kies ik de techniek die bij het project past, bijvoorbeeld <strong className="text-[var(--color-ink)]">WordPress of Next.js</strong>.
+                  Daarnaast help ik met webshops, SEO, onderhoud en praktische automatisering.
                 </p>
                 
                 <p className="mb-4">

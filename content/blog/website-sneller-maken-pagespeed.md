@@ -71,9 +71,9 @@ Webfonts zijn mooi, maar kunnen het laden vertragen.
 - Gebruik `font-display: swap` zodat tekst direct zichtbaar is.
 - Host fonts lokaal of laad ze efficiënt in.
 
-## 7. Het voordeel van maatwerk en moderne frameworks
+## 7. Kies een technische basis die bij je website past
 
-Een groot deel van mijn werk bouw ik met moderne technologie zoals Next.js. Het voordeel: snelheid zit ingebakken. Pagina's worden waar mogelijk vooraf gegenereerd, afbeeldingen en lettertypen worden automatisch geoptimaliseerd, en er draait geen overbodige code. Voor projecten waar prestaties cruciaal zijn, is zo'n [maatwerkaanpak](/diensten/maatwerk) vaak de snelste route naar topscores op de Core Web Vitals.
+Bij een nieuwe [professionele website](/diensten/website-laten-maken) kiezen we de techniek op basis van het doel. WordPress kan goed passen wanneer je veel inhoud zelf wilt beheren. Next.js kan geschikt zijn wanneer snelheid en een slanke technische opbouw zwaar wegen. Geen enkele techniek garandeert automatisch goede Core Web Vitals: afbeeldingen, scripts, hosting en zorgvuldig onderhoud blijven bepalend.
 
 ## Snelheid en SEO horen bij elkaar
 
@@ -83,7 +83,7 @@ Snelheid staat niet los van vindbaarheid. Een snelle, technisch nette website is
 
 Een snellere website draait om een handvol concrete stappen: optimaliseer je afbeeldingen, beperk plugins, gebruik caching, kies goede hosting en houd je code en lettertypen slank. Meet voor- en achteraf, zodat je ziet wat werkt.
 
-Wil je dat ik je website laat vliegen — of meteen een nieuwe, razendsnelle site bouw? [Neem contact op](/contact) voor een vrijblijvende analyse van je laadsnelheid en concrete verbeterpunten.
+Wil je een technisch nette nieuwe website of snelheid meenemen in een bredere SEO-aanpak? Bekijk [Website laten maken](/diensten/website-laten-maken) en [Hoger in Google](/diensten/seo), of [neem contact op](/contact) om je situatie te bespreken.
 
 ## Bronnen en gratis meettools
 

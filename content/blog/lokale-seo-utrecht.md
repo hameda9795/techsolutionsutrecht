@@ -383,4 +383,4 @@ Lees ook de uitleg van Google over [hoe lokale resultaten worden bepaald](https:
 
 ---
 
-**[Neem Contact Op](/contact)** voor een gratis SEO scan van je website. Ik laat je zien waar je kansen liggen.
+Wil je structureel werken aan technische SEO, belangrijke pagina's en lokale vindbaarheid? Bekijk [onze aanpak voor Hoger in Google](/diensten/seo) of [neem contact op](/contact) voor een korte intake. Na de intake ontvang je een duidelijke offerte; een specifieke positie in Google kan niet worden gegarandeerd.

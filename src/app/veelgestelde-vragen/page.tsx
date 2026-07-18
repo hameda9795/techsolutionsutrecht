@@ -30,8 +30,8 @@ const faqs = [
         a: "Absoluut. Alle websites die wij maken zijn 'responsive', wat betekent dat ze perfect werken op desktop, tablet én smartphone."
       },
       {
-        q: "Wat is het verschil tussen WordPress en maatwerk?",
-        a: "WordPress is ideaal voor de meeste websites: snel, flexibel en betaalbaar. Maatwerk (Next.js/React) is nodig voor complexe webapplicaties, platforms of specifieke functionaliteit die standaard CMS'en niet bieden."
+        q: "Bouwen jullie websites met WordPress of Next.js?",
+        a: "Dat hangt af van je doelen. WordPress past vaak goed wanneer je veel inhoud zelf wilt beheren. Next.js kan beter passen wanneer snelheid of specifieke websitefuncties belangrijk zijn. Beide vallen onder de dienst Website laten maken."
       }
     ]
   },

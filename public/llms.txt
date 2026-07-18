@@ -1,16 +1,15 @@
 # TechSolutionsUtrecht
 
-> Professionele website laten maken in Utrecht. Websites, WooCommerce-webshops, maatwerk webapplicaties en slimme bedrijfsautomatisering. Direct contact met de developer. 12+ jaar ervaring. KvK 99202301.
+> Digitale diensten voor ondernemers in Utrecht: professionele websites, WooCommerce-webshops, SEO, websiteonderhoud en praktische WhatsApp-automatisering. Direct contact met de developer. 12+ jaar ervaring. KvK 99202301.
 
 TechSolutionsUtrecht is een eenmanszaak van Max, webdeveloper en IT-consultant in Utrecht (Nederland). Werkgebied: Utrecht, Nieuwegein, Zeist, Houten, Amersfoort, IJsselstein, De Meern en Vleuten. Contact: info@techsolutionsutrecht.nl, +31 6 25518708.
 
 ## Diensten
 - [Website laten maken](https://techsolutionsutrecht.nl/diensten/website-laten-maken): Complete professionele websites vanaf €250, meestal €350–€650, inclusief basis-SEO en volledig eigendom.
 - [Webshop laten maken (WooCommerce)](https://techsolutionsutrecht.nl/diensten/webshop): Webshops met iDEAL, voorraadbeheer en verzending.
-- [Maatwerk webapplicaties](https://techsolutionsutrecht.nl/diensten/maatwerk): Dashboards en portals in React, Next.js of Angular.
-- [SEO-optimalisatie](https://techsolutionsutrecht.nl/diensten/seo): Hoger in Google met technische SEO en content.
-- [WhatsApp & automatisering](https://techsolutionsutrecht.nl/diensten/whatsapp-automatisering): Maatwerk workflows vanaf €450 voor WhatsApp, websites, e-mail en bestaande bedrijfssystemen.
-- [Website-onderhoud](https://techsolutionsutrecht.nl/diensten/website-onderhoud): Updates, beveiliging en back-ups.
+- [Hoger in Google](https://techsolutionsutrecht.nl/diensten/seo): Technische SEO, belangrijke pagina’s, lokale vindbaarheid en rapportage vanaf €200 per maand.
+- [Website onderhoud](https://techsolutionsutrecht.nl/diensten/website-onderhoud): Updates, back-ups en technische controles vanaf €29 per maand.
+- [WhatsApp & automatisering](https://techsolutionsutrecht.nl/diensten/whatsapp-automatisering): Eén eenvoudige workflow vanaf €450 voor WhatsApp, websites, e-mail en maximaal twee systemen.
 - [Alle diensten](https://techsolutionsutrecht.nl/diensten)
 
 ## Doelgroep-pagina's
@@ -22,8 +21,8 @@ TechSolutionsUtrecht is een eenmanszaak van Max, webdeveloper en IT-consultant i
 
 ## Belangrijke pagina's
 - [Over ons](https://techsolutionsutrecht.nl/over-ons)
-- [Projecten](https://techsolutionsutrecht.nl/projecten): Echte opgeleverde websites, webshops en webapplicaties met live-links en details.
-- [Portfolio](https://techsolutionsutrecht.nl/portfolio)
+- [Projecten](https://techsolutionsutrecht.nl/projecten): Echte opgeleverde digitale projecten met live-links en details.
+- [Projecten](https://techsolutionsutrecht.nl/projecten)
 - [Blog](https://techsolutionsutrecht.nl/blog)
 - [Veelgestelde vragen](https://techsolutionsutrecht.nl/veelgestelde-vragen)
 - [Contact](https://techsolutionsutrecht.nl/contact)

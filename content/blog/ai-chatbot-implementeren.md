@@ -1,7 +1,7 @@
 ---
 title: "AI Chatbot voor Je Bedrijf: Complete Implementatie Gids (2026)"
 seoTitle: "AI Chatbot voor Bedrijven: Implementatiegids 2026"
-description: "Wil je een AI chatbot voor je bedrijf? Leer alles over implementatie, kosten, platforms en best practices. Complete gids voor ondernemers."
+description: "Informatieve gids over AI-chatbots, platforms, kosten en risico's, plus het verschil met de eenvoudige automatiseringsdienst van TechSolutionsUtrecht."
 date: "2026-03-11"
 dateModified: "2026-07-18"
 readTime: "14 min"
@@ -21,7 +21,7 @@ Nee, maar wat wél nieuw is, is dat technologie eindelijk heeft ingehaald op dez
 
 Als ondernemer betekent dit dat je 24/7 beschikbaar kunt zijn voor je klanten, zonder dat je zelf 24/7 hoeft te werken. Klinkt goed? Dat is het ook. Maar alleen als je het goed aanpakt.
 
-In deze gids neem ik je mee door het hele proces: van "is dit iets voor mij?" tot "mijn chatbot draait en helpt klanten".
+In deze gids lees je welke keuzes en risico's bij een AI-chatbot horen. Belangrijk: TechSolutionsUtrecht biedt geen volledige maatwerk-chatbot als afzonderlijke dienst. De actuele dienst [WhatsApp & automatisering](/diensten/whatsapp-automatisering) is beperkter en richt zich op één eenvoudige workflow met maximaal twee gekoppelde systemen.
 
 ## Wat is een AI Chatbot (en Wat Niet)?
 
@@ -259,16 +259,10 @@ De onderstaande bedragen zijn momentopnames uit 2026 en kunnen door aanbieders w
 | Tidio | €29/maand | €79/maand | Goed voor starters |
 | Intercom | €74/maand | €299/maand | Krachtig maar prijzig |
 | Chatbase | €19/maand | €99/maand | Gebruiksvriendelijk |
-| Custom | €200-500/maand | €1000+/maand | Op maat gemaakt |
 
-### Custom Development (Eenmalig + Maandelijks):
+### Volledig op maat gebouwde AI-chatbots
 
-> **Let op:** De bedragen hieronder zijn indicatieve marktprijzen voor op maat gebouwde chatbots. TechSolutionsUtrecht hanteert geen vaste tarieven voor maatwerk-AI; elke oplossing wordt op aanvraag en op basis van je specifieke wensen geprijsd. [Neem contact op](/contact) voor een offerte op maat.
-
-Een op maat gemaakte chatbot kost in de markt vaak:
-- **Eenvoudig:** €2.000 - €4.000 (eenmalig) + €100-300/maand
-- **Gemiddeld:** €5.000 - €10.000 (eenmalig) + €300-500/maand
-- **Complex:** €10.000+ (eenmalig) + €500+/maand
+Een chatbot die op eigen databronnen wordt getraind, complexe vragen zelfstandig afhandelt of diep met bedrijfssystemen integreert, is een ander type project dan de automatiseringsdienst van TechSolutionsUtrecht. Wij bieden zo’n volledige maatwerk-chatbot niet als afzonderlijke dienst aan. De prijzen, beveiliging en doorlopende beheerkosten moeten daarom bij een gespecialiseerde aanbieder worden beoordeeld.
 
 ### Return on Investment (ROI)
 
@@ -339,9 +333,9 @@ Dat hangt af van het platform. Check altijd:
 - Is er encryptie?
 - Voldoen ze aan AVG/GDPR?
 
-### Kan ik een chatbot laten maken die lijkt op ChatGPT?
+### Kan een chatbot worden gemaakt die lijkt op ChatGPT?
 
-Ja, dat is precies wat deze gids beschrijft. Je kunt een chatbot maken die is getraind op jouw specifieke kennis en in jouw tone of voice communiceert.
+Technisch is dat mogelijk, maar het valt niet binnen de standaarddienst van TechSolutionsUtrecht. Onze dienst richt zich op één eenvoudige automatisering, bijvoorbeeld het doorsturen en bevestigen van aanvragen via WhatsApp, e-mail en je website.
 
 ## De Toekomst van AI Chatbots
 
@@ -386,6 +380,6 @@ Begin klein. Test een chatbot op één pagina, of alleen buiten kantooruren. Mee
 
 Een volledige maatwerk-chatbot en een eenvoudige bedrijfsautomatisering zijn verschillende projecten. De dienst [WhatsApp & automatisering](/diensten/whatsapp-automatisering) start vanaf €450 voor één duidelijke workflow en een koppeling tussen maximaal twee systemen. Denk aan het doorsturen van aanvragen, bevestigingen of terugkerende berichten via WhatsApp, e-mail en je website.
 
-Een chatbot die op bedrijfskennis wordt getraind, meerdere databronnen gebruikt of zelfstandig complexe vragen afhandelt, valt daar niet standaard onder. Zo'n traject wordt eerst technisch beoordeeld en krijgt een aparte offerte.
+Een chatbot die op bedrijfskennis wordt getraind, meerdere databronnen gebruikt of zelfstandig complexe vragen afhandelt, valt buiten deze dienst. Daarvoor heb je een gespecialiseerde chatbotleverancier nodig.
 
 **[Bekijk de automatiseringsmogelijkheden](/diensten/whatsapp-automatisering)** of [neem contact op](/contact) voor een vrijblijvende beoordeling van je proces.

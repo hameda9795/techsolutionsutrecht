@@ -98,10 +98,10 @@ Vragen? Problemen? Je hebt iemand die je kunt bellen.
 ### Nadelen van Laten Maken
 
 **1. Het Kost Meer**
-Je betaalt €250-€2.000 voor een goede website, afhankelijk van het type project. Dat is een investering, geen uitgave – maar het moet wel in je budget passen.
+Bij TechSolutionsUtrecht start een complete bedrijfswebsite vanaf €250 en ligt de gebruikelijke projectprijs tussen €350 en €650. Een WooCommerce-webshop is een afzonderlijke dienst vanaf €795 en kost meestal €1.000–€2.000. De definitieve totaalprijs hangt af van inhoud, functies en koppelingen.
 
 **2. Je Moet Wachten**
-Een professionele website staat doorgaans binnen 1 tot 3 weken live. Als je morgen live wilt, is dit geen optie.
+Ontwerp, inhoud, bouw en controle kosten tijd. De planning voor een bedrijfswebsite wordt daarom na de intake vastgelegd; er geldt geen standaard oplevertermijn. Voor een webshop is 1 tot 3 weken een gemiddelde indicatie, geen garantie.
 
 **3. Niet Iedereen is Even Goed**
 Er zijn veel "webbouwers" die een template installeren en €800 vragen. Je moet wel weten waarnaar je kijkt.
@@ -110,8 +110,8 @@ Er zijn veel "webbouwers" die een template installeren en €800 vragen. Je moet
 
 | Criterium | Zelf Maken | Laten Maken |
 |-----------|-----------|-------------|
-| **Kosten** | €10-€30/maand | €250-€2.000 eenmalig, afhankelijk van type project |
-| **Tijd** | 20-40 uur van jouw tijd | 1 tot 3 weken wachten |
+| **Kosten** | €10-€30/maand | Website vanaf €250; webshop vanaf €795 |
+| **Tijd** | 20-40 uur van jouw tijd | Planning na intake en volgens offerte |
 | **Kwaliteit** | Goed genoeg voor start | Professioneel |
 | **SEO** | Basis | Geavanceerd |
 | **Uniekheid** | Template (meestal zichtbaar) | Uniek design |

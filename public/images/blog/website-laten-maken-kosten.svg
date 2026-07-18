@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Overzicht van de kosten voor het laten maken van een website, webshop of maatwerk webapplicatie.">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Overzicht van de startprijzen voor een website, webshop en websiteonderhoud.">
   <defs>
     <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#0D1117"/>
@@ -23,16 +23,16 @@
   <rect x="160" y="220" width="220" height="140" rx="12" fill="url(#card1)" opacity="0.2"/>
   <text x="270" y="280" text-anchor="middle" fill="#FF8A65" font-family="Inter, system-ui, sans-serif" font-size="48" font-weight="700">€250</text>
   <text x="270" y="330" text-anchor="middle" fill="#F0F6FC" font-family="Inter, system-ui, sans-serif" font-size="24" font-weight="600">Website</text>
-  <text x="270" y="360" text-anchor="middle" fill="#8B949E" font-family="Inter, system-ui, sans-serif" font-size="16">Basis presentatie</text>
+  <text x="270" y="360" text-anchor="middle" fill="#8B949E" font-family="Inter, system-ui, sans-serif" font-size="16">Complete bedrijfswebsite</text>
   <rect x="450" y="180" width="300" height="320" rx="16" fill="#1C2128" stroke="#30363D" stroke-width="2"/>
   <rect x="490" y="220" width="220" height="140" rx="12" fill="url(#card2)" opacity="0.2"/>
-  <text x="600" y="280" text-anchor="middle" fill="#B388FF" font-family="Inter, system-ui, sans-serif" font-size="48" font-weight="700">€350</text>
+  <text x="600" y="280" text-anchor="middle" fill="#B388FF" font-family="Inter, system-ui, sans-serif" font-size="48" font-weight="700">€795</text>
   <text x="600" y="330" text-anchor="middle" fill="#F0F6FC" font-family="Inter, system-ui, sans-serif" font-size="24" font-weight="600">Webshop</text>
   <text x="600" y="360" text-anchor="middle" fill="#8B949E" font-family="Inter, system-ui, sans-serif" font-size="16">WooCommerce</text>
   <rect x="780" y="180" width="300" height="320" rx="16" fill="#1C2128" stroke="#30363D" stroke-width="2"/>
   <rect x="820" y="220" width="220" height="140" rx="12" fill="url(#card3)" opacity="0.2"/>
-  <text x="930" y="280" text-anchor="middle" fill="#6EFFFF" font-family="Inter, system-ui, sans-serif" font-size="48" font-weight="700">€400</text>
-  <text x="930" y="330" text-anchor="middle" fill="#F0F6FC" font-family="Inter, system-ui, sans-serif" font-size="24" font-weight="600">Maatwerk</text>
-  <text x="930" y="360" text-anchor="middle" fill="#8B949E" font-family="Inter, system-ui, sans-serif" font-size="16">Custom applicatie</text>
+  <text x="930" y="280" text-anchor="middle" fill="#6EFFFF" font-family="Inter, system-ui, sans-serif" font-size="48" font-weight="700">€29/mnd</text>
+  <text x="930" y="330" text-anchor="middle" fill="#F0F6FC" font-family="Inter, system-ui, sans-serif" font-size="24" font-weight="600">Onderhoud</text>
+  <text x="930" y="360" text-anchor="middle" fill="#8B949E" font-family="Inter, system-ui, sans-serif" font-size="16">Updates • Back-ups • Controle</text>
   <text x="600" y="570" text-anchor="middle" fill="#6E7681" font-family="Inter, system-ui, sans-serif" font-size="18">Indicatieve startprijzen 2026</text>
 </svg>

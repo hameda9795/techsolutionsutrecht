@@ -27,7 +27,7 @@ export default function BlogPage() {
   const staticPosts: BlogPostMeta[] = [
     {
       slug: "website-laten-maken",
-      title: "Website Laten Maken: Checklist voor Ondernemers",
+      title: "Website Laten Maken: Praktische Checklist voor Ondernemers",
       description: "Een praktische checklist voor doelen, inhoud, techniek, planning en eigendom van je nieuwe bedrijfswebsite.",
       date: "2026-07-10",
       readTime: "10 min",

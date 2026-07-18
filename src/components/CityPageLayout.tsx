@@ -198,9 +198,9 @@ export default function CityPageLayout({
                 <h3 className="text-xl font-bold text-[var(--color-ink)] mb-2 flex items-center gap-2">Webshop <ArrowRight className="w-4 h-4 text-[var(--color-primary)] opacity-0 group-hover:opacity-100 transition-opacity" /></h3>
                 <p className="text-[var(--color-muted)] text-sm">Een complete WooCommerce-webshop met iDEAL en voorraadbeheer, klaar om te verkopen.</p>
               </Link>
-              <Link href="/diensten/maatwerk" className="group bg-[var(--color-bg)] p-6 rounded-2xl border border-[var(--color-border)] hover:shadow-md transition-shadow">
-                <h3 className="text-xl font-bold text-[var(--color-ink)] mb-2 flex items-center gap-2">Maatwerk <ArrowRight className="w-4 h-4 text-[var(--color-primary)] opacity-0 group-hover:opacity-100 transition-opacity" /></h3>
-                <p className="text-[var(--color-muted)] text-sm">Webapplicaties, dashboards en portals op maat, gebouwd met React en Next.js.</p>
+              <Link href="/diensten/seo" className="group bg-[var(--color-bg)] p-6 rounded-2xl border border-[var(--color-border)] hover:shadow-md transition-shadow">
+                <h3 className="text-xl font-bold text-[var(--color-ink)] mb-2 flex items-center gap-2">Hoger in Google <ArrowRight className="w-4 h-4 text-[var(--color-primary)] opacity-0 group-hover:opacity-100 transition-opacity" /></h3>
+                <p className="text-[var(--color-muted)] text-sm">Technische SEO, belangrijke pagina’s en lokale vindbaarheid vanaf €200 per maand.</p>
               </Link>
             </div>
           </div>
@@ -288,7 +288,7 @@ export default function CityPageLayout({
               <a href="https://wa.me/31625518708" className="inline-flex items-center justify-center gap-2 bg-[#25D366] text-white px-8 py-4 rounded-xl font-semibold hover:bg-[#128C7E] transition-colors">
                 <Phone className="w-5 h-5" /> WhatsApp direct
               </a>
-              <Link href="/portfolio" className="inline-flex items-center justify-center gap-2 bg-[var(--color-bg)] text-[var(--color-muted)] border-2 border-[var(--color-border)] px-8 py-4 rounded-xl font-semibold hover:bg-[var(--color-surface)] transition-colors">
+              <Link href="/projecten" className="inline-flex items-center justify-center gap-2 bg-[var(--color-bg)] text-[var(--color-muted)] border-2 border-[var(--color-border)] px-8 py-4 rounded-xl font-semibold hover:bg-[var(--color-surface)] transition-colors">
                 Bekijk portfolio
               </Link>
             </div>

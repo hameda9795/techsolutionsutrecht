@@ -199,7 +199,7 @@ export const defaultProjects: ProjectDemo[] = [
   {
     id: "2",
     title: "Admin Dashboard",
-    shortDesc: "Complete backend interface voor projectbeheer. Toont capaciteit voor complexe webapplicaties, niet alleen statische sites.",
+    shortDesc: "Technische demonstratie van een beheeromgeving voor projectbeheer; geen afzonderlijk aangeboden dienst.",
     features: [
       "Login systeem (demo/demo123)",
       "Statistieken dashboard met charts",
@@ -218,7 +218,7 @@ export const defaultProjects: ProjectDemo[] = [
   {
     id: "3",
     title: "Klant Portal",
-    shortDesc: "Klantomgeving waar opdrachtgevers hun project kunnen volgen. Laat zien dat je full-stack kunt bouwen.",
+    shortDesc: "Technische demonstratie van een klantomgeving voor projectvoortgang; geen afzonderlijk aangeboden dienst.",
     features: [
       "Aparte login voor klanten",
       "Project tijdlijn visualisatie",

@@ -19,7 +19,7 @@ const footerLinks = {
   company: [
     { href: "/over-ons", label: "Over mij" },
     { href: "/projecten", label: "Projecten" },
-    { href: "/portfolio", label: "Portfolio" },
+    { href: "/projecten", label: "Projecten" },
     { href: "/zzp-website-laten-maken", label: "Website voor ZZP'ers" },
     { href: "/blog", label: "Blog" },
     { href: "/veelgestelde-vragen", label: "FAQ" },

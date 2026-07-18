@@ -312,7 +312,7 @@ export default function AdminDashboardPage() {
                 <span className="hidden sm:inline">Projecten CMS</span>
               </Link>
               <Link
-                href="/portfolio"
+                href="/projecten"
                 target="_blank"
                 className="flex items-center gap-2 px-4 py-2 text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors"
               >

@@ -15,7 +15,7 @@ author: "Max"
 
 "Hoe lang duurt het om mijn website te laten maken?" is misschien wel de vraag die ik het vaakst krijg. Het eerlijke antwoord: dat hangt ervan af. Maar dat is voor jou natuurlijk geen bruikbaar antwoord. Daarom geef ik je in dit artikel realistische doorlooptijden per type project, plus de factoren die het tempo bepalen.
 
-Kort samengevat: na de intake ontvang je een planning die past bij de inhoud, functies en benodigde koppelingen. Een complete bedrijfswebsite kan soms snel worden opgeleverd wanneer teksten, beelden en feedback beschikbaar zijn. Voor een [webshop](/diensten/webshop) is de gemiddelde indicatie 1 tot 3 weken; een [maatwerk webapplicatie](/diensten/maatwerk) vraagt doorgaans meer tijd en wordt meestal in fases gepland.
+Kort samengevat: na de intake ontvang je een planning die past bij de inhoud, functies en benodigde koppelingen. Een complete bedrijfswebsite kan soms snel worden opgeleverd wanneer teksten, beelden en feedback beschikbaar zijn. Voor een [webshop](/diensten/webshop) is de gemiddelde indicatie 1 tot 3 weken. Extra websitefuncties en koppelingen worden afzonderlijk in de planning opgenomen.
 
 ## Doorlooptijd per type website
 
@@ -31,9 +31,9 @@ Wil je een complete website met de pagina's en functies die jouw bedrijf nodig h
 
 Een [webshop](/diensten/webshop) is complexer: producten, categorieën, betaalmethoden zoals iDEAL, verzendregels en voorraadbeheer. Hoe meer producten, variaties en uitzonderingen, hoe langer de doorlooptijd. De indicatie van 1 tot 3 weken wordt na de intake afgestemd en is geen vaste oplevergarantie.
 
-### Maatwerk webapplicatie (vanaf enkele weken)
+### Extra functies en koppelingen
 
-Een dashboard, klantportaal of applicatie met inlog en database is echt maatwerk. Hier praten we niet over dagen maar over weken, afhankelijk van de functionaliteiten. Zulke projecten verdeel ik in fases, zodat je gaandeweg ziet wat er gebouwd wordt.
+Functies zoals online reserveren, meertaligheid of een koppeling met een bestaand systeem vragen extra analyse en testwerk. De haalbaarheid, kosten en invloed op de planning worden daarom vóór de start besproken. Gaat het vooral om het automatisch verwerken van aanvragen of terugkerende berichten, bekijk dan de dienst [WhatsApp & automatisering](/diensten/whatsapp-automatisering).
 
 ## Welke factoren bepalen de snelheid?
 
@@ -62,6 +62,6 @@ Wat wél tijd kost en de moeite waard is: nadenken over je doelgroep, je structu
 
 ## Conclusie
 
-Hoe lang het duurt om een website te laten maken, hangt vooral af van het type project en hoe goed je voorbereid bent. Een eenvoudige uitvoering kan sneller worden gepland dan een webshop of maatwerkproject. De belangrijkste versneller? Heldere afspraken en op tijd aangeleverde content.
+Hoe lang het duurt om een website te laten maken, hangt vooral af van het type project en hoe goed je voorbereid bent. Een eenvoudige uitvoering kan sneller worden gepland dan een webshop of een website met extra koppelingen. De belangrijkste versneller? Heldere afspraken en op tijd aangeleverde content.
 
 Benieuwd hoe snel jouw specifieke project kan? [Neem contact op](/contact) of stuur een appje — je krijgt binnen één werkdag een realistische inschatting, direct van de developer.

@@ -1,84 +1,92 @@
 ---
-title: "WordPress of Maatwerk: Wat Past bij Jouw Bedrijf?"
-seoTitle: "WordPress of Maatwerk: Wat Past bij Jouw Bedrijf?"
-description: "WordPress of een maatwerk website? Ontdek de verschillen in kosten, flexibiliteit, onderhoud en snelheid, zodat je de juiste keuze maakt voor jouw bedrijf."
+title: "WordPress of Next.js: Wat Past bij Jouw Website?"
+seoTitle: "WordPress of Next.js voor Jouw Website?"
+description: "WordPress of Next.js voor je bedrijfswebsite? Vergelijk beheer, snelheid, onderhoud en flexibiliteit en kies de techniek die bij jouw doelen past."
 date: "2026-04-22"
 dateModified: "2026-07-18"
-readTime: "3 min"
+readTime: "4 min"
 category: "Webdevelopment"
 image: "/images/blog/wordpress-of-maatwerk.jpg"
 slug: "wordpress-of-maatwerk"
 author: "Max"
 ---
 
-## De kern van de keuze
+## De techniek volgt uit je doelen
 
-Bij vrijwel elk nieuw project komt deze vraag op tafel: bouwen we het in **WordPress** of maken we iets op **maat**? Het is een belangrijke beslissing, want ze bepaalt je kosten, je flexibiliteit en hoe je website meegroeit met je bedrijf. In dit artikel leg ik beide opties eerlijk naast elkaar — inclusief wanneer ik welke aanraad.
+Bij een nieuwe website komt vaak dezelfde vraag op tafel: bouwen we met **WordPress** of **Next.js**? Beide kunnen een professionele, snelle en mobielvriendelijke bedrijfswebsite opleveren. De beste keuze hangt niet af van welke techniek het populairst klinkt, maar van wat je zelf wilt beheren, welke functies nodig zijn en hoe de website later moet meegroeien.
 
-Kort door de bocht: WordPress is ideaal voor de meeste bedrijfswebsites en blogs. Maatwerk is de juiste keuze zodra je iets nodig hebt wat verder gaat dan "een website", zoals een applicatie, dashboard of een proces dat geautomatiseerd moet worden.
+TechSolutionsUtrecht biedt één algemene dienst voor een [professionele website](/diensten/website-laten-maken). WordPress en Next.js zijn mogelijke technische keuzes binnen die dienst; het zijn geen afzonderlijke pakketten.
 
-## Wat is WordPress precies?
+## Wanneer past WordPress goed?
 
-WordPress is het meest gebruikte contentmanagementsysteem ter wereld. Het draait achter een groot deel van alle websites. Je krijgt een beheeromgeving waarin je zelf pagina's, blogs en afbeeldingen kunt aanpassen, zonder code.
+WordPress is een contentmanagementsysteem. Je logt in via een beheeromgeving en kunt zelf teksten, afbeeldingen, pagina’s en nieuwsberichten aanpassen.
 
-**Voordelen van WordPress:**
+**WordPress past vaak goed wanneer:**
 
-- **Snel en betaalbaar** te bouwen ten opzichte van volledig maatwerk.
-- **Zelf te beheren**: je past teksten en foto's zelf aan.
-- **Enorm uitbreidbaar** met plugins (webshop, formulieren, SEO).
-- **Veel kennis beschikbaar**, dus je zit nergens vast aan één partij.
+- Je regelmatig zelf inhoud wilt wijzigen.
+- Je een blog, nieuwsoverzicht of veel informatieve pagina’s nodig hebt.
+- Bestaande plugins de gewenste functies veilig en betrouwbaar kunnen leveren.
+- Meerdere medewerkers met content moeten kunnen werken.
+- Je een WooCommerce-webshop nodig hebt.
 
-**Nadelen van WordPress:**
+**Aandachtspunten:**
 
-- Plugins moeten **onderhouden** worden (updates, beveiliging) — zie [website onderhoud](/diensten/website-onderhoud).
-- Voor heel specifieke functionaliteit loop je soms tegen grenzen aan.
-- Te veel plugins kan de **snelheid** drukken als het niet goed wordt opgezet.
+- WordPress, het thema en plugins moeten technisch worden bijgehouden.
+- Te veel of slecht gekozen plugins kunnen snelheid en veiligheid beïnvloeden.
+- Updates moeten worden getest, zeker wanneer meerdere plugins samenwerken.
 
-Voor veel ondernemers, ZZP'ers en kleine bedrijven is een [professionele website](/diensten/website-laten-maken) de slimste keuze. Afhankelijk van de doelen kan die met WordPress, Next.js of een andere passende techniek worden gebouwd.
+Wil je updates, back-ups en controles uitbesteden, dan kun je gebruikmaken van [website onderhoud](/diensten/website-onderhoud) vanaf €29 per maand.
 
-## Wat is maatwerk?
+## Wanneer kan Next.js beter passen?
 
-Bij maatwerk bouw ik je oplossing van de grond af op met moderne technologie zoals React, Next.js of Angular. Er zit geen kant-en-klaar systeem onder; alles is precies gemaakt voor jouw situatie.
+Next.js is een modern framework waarmee een website gericht kan worden opgebouwd. Het kan goed passen wanneer snelheid, een slanke technische basis of specifieke websitefuncties extra belangrijk zijn.
 
-**Voordelen van maatwerk:**
+**Next.js past vaak goed wanneer:**
 
-- **Exact wat je nodig hebt**, zonder overbodige ballast.
-- **Maximale snelheid en prestaties**, want er draait geen onnodige code.
-- **Volledige vrijheid** in functionaliteit en integraties.
-- **Schaalbaar**: meegroeien met complexe processen is geen probleem.
+- De website vooral door de developer wordt beheerd.
+- Snelheid en technische controle zwaar wegen.
+- Het ontwerp of de websitefuncties niet goed binnen een standaard thema passen.
+- De website gegevens uit een bestaande bron moet tonen.
+- Je een moderne, schaalbare technische basis wilt.
 
-**Nadelen van maatwerk:**
+**Aandachtspunten:**
 
-- **Hogere initiële investering** dan WordPress.
-- Langere **doorlooptijd** (zie ook: [hoe lang duurt het om een website te laten maken](/blog/hoe-lang-duurt-website-maken)).
-- Aanpassingen vragen meestal een developer.
+- Zelf pagina’s aanpassen is alleen eenvoudig wanneer daar een passende beheeroplossing voor is ingericht.
+- Nieuwe functies en wijzigingen vragen vaker ondersteuning van een developer.
+- Hosting en beheer werken anders dan bij een traditionele WordPress-website.
 
-Maatwerk komt het beste tot zijn recht bij [webapplicaties, dashboards en portals](/diensten/maatwerk).
+Next.js betekent niet automatisch dat een website sneller is. Afbeeldingen, scripts, hosting en zorgvuldig onderhoud blijven belangrijk. Lees daarvoor ook de [praktische Pagespeed-gids](/blog/website-sneller-maken-pagespeed).
 
-## Wanneer kies je wat?
+## WordPress en Next.js kort vergeleken
 
-Gebruik deze vuistregels:
+| Onderdeel | WordPress | Next.js |
+|---|---|---|
+| Zelf content beheren | Standaard sterk | Afhankelijk van gekozen beheeroplossing |
+| Blog en veel pagina’s | Zeer geschikt | Goed mogelijk met passende contentbron |
+| Technische flexibiliteit | Groot via thema’s en plugins | Groot binnen de afgesproken websitescope |
+| Onderhoud | CMS-, thema- en plugin-updates | Framework-, hosting- en code-updates |
+| Webshop | WooCommerce | Niet de webshopdienst van TechSolutionsUtrecht |
 
-**Kies WordPress als:**
+## En als je online wilt verkopen?
 
-- Je een bedrijfswebsite, portfolio of blog wilt.
-- Je content zelf wilt kunnen beheren.
-- Budget en snelle oplevering belangrijk zijn.
-- Een (eenvoudige) webshop volstaat — WooCommerce draait prima op WordPress.
+Voor producten, iDEAL-betalingen, voorraadbeheer en verzending biedt TechSolutionsUtrecht een aparte [WooCommerce-webshop](/diensten/webshop). Die dienst start vanaf €795 en kost meestal €1.000–€2.000. De keuze voor WooCommerce is hier bewust, zodat product- en orderbeheer overzichtelijk blijven.
 
-**Kies maatwerk als:**
+## En als je een proces wilt automatiseren?
 
-- Je een applicatie nodig hebt met inlog, gebruikers of een database.
-- Je een uniek proces wilt automatiseren.
-- Prestaties en schaalbaarheid cruciaal zijn.
-- Standaardoplossingen telkens net niet passen.
+Een websitefunctie is iets anders dan een bedrijfsautomatisering. Wil je bijvoorbeeld een aanvraag automatisch bevestigen of informatie tussen WhatsApp, e-mail en je website doorsturen, bekijk dan [WhatsApp & automatisering](/diensten/whatsapp-automatisering). Deze dienst start vanaf €450 voor één eenvoudige workflow en een koppeling tussen maximaal twee systemen.
 
-## En de tussenweg?
+Volledige webapplicaties, dashboards en klantportalen worden niet als afzonderlijke dienst aangeboden.
 
-In de praktijk is het zelden zwart-wit. Soms bouw ik een WordPress-website met daarin een stukje maatwerk: een custom plugin, een specifieke koppeling of een [bedrijfsautomatisering](/diensten/whatsapp-automatisering). Zo combineer je het gemak van WordPress met de kracht van maatwerk waar dat nodig is.
+## Welke keuze is verstandig?
 
-## Het belangrijkste advies
+Kies niet vooraf een techniek omdat iemand zegt dat die altijd beter is. Zet eerst deze punten op papier:
 
-Laat de keuze niet leiden door de techniek, maar door je doel. Wat moet de website voor je bedrijf doen? Welke groei verwacht je? Wie gaat hem beheren? Vanuit die antwoorden volgt de techniek vanzelf.
+1. Welke pagina’s en functies heeft je bedrijf nodig?
+2. Wie gaat teksten en afbeeldingen beheren?
+3. Moet de website producten en betalingen verwerken?
+4. Welke koppelingen zijn echt noodzakelijk?
+5. Wie verzorgt updates, back-ups en technische controles?
 
-Twijfel je nog? Dat is logisch. [Neem contact op](/contact) voor een vrijblijvend gesprek. Ik denk graag met je mee en geef een eerlijk advies — ook als dat betekent dat de goedkopere of eenvoudigere oplossing voor jou de beste is.
+Op basis daarvan kan de juiste techniek worden gekozen en in de offerte worden vastgelegd. Zo betaal je niet voor onderdelen die je niet nodig hebt en voorkom je dat de website later moeilijk te beheren is.
+
+Wil je weten welke aanpak bij jouw bedrijf past? Bekijk [Website laten maken](/diensten/website-laten-maken) of [neem contact op](/contact) voor een korte intake.

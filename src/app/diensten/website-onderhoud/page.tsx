@@ -139,7 +139,7 @@ const excludedServices = [
   "Nieuwe pagina’s of functionaliteiten",
   "Volledig redesign",
   "Grote inhoudelijke wijzigingen",
-  "Maatwerk development",
+  "Nieuwe functies en grote inhoudelijke wijzigingen",
   "Problemen veroorzaakt door externe diensten of hostingpartijen",
   "Herstel van bestaande ernstige problemen vóór de start van het abonnement",
 ];
