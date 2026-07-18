@@ -1,10 +1,12 @@
+import { coreServices } from "@/lib/services";
+
 export const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
   "@id": "https://techsolutionsutrecht.nl",
   "name": "TechSolutionsUtrecht",
   "alternateName": "Tech Solutions Utrecht",
-  "description": "Professionele websites en betrouwbare tech reparaties in Utrecht. 12+ jaar ervaring. Webdevelopment en hardware reparaties onder één dak.",
+  "description": "Professionele websites, webshops, SEO, websiteonderhoud, bedrijfsautomatisering en betrouwbare tech reparaties in Utrecht.",
   "image": "https://techsolutionsutrecht.nl/profile.webp",
   "url": "https://techsolutionsutrecht.nl",
   "telephone": "+31625518708",
@@ -52,24 +54,20 @@ export const localBusinessSchema = {
   },
   "hasOfferCatalog": {
     "@type": "OfferCatalog",
-    "name": "Web & Repair Services",
+    "name": "Digitale diensten en reparaties",
     "itemListElement": [
-      {
+      ...coreServices.map((service) => ({
         "@type": "Offer",
+        "url": `https://techsolutionsutrecht.nl${service.href}`,
+        "price": service.schemaPrice,
+        "priceCurrency": "EUR",
         "itemOffered": {
           "@type": "Service",
-          "name": "Website Laten Maken",
-          "description": "Professionele WordPress websites op maat"
+          "name": service.title,
+          "description": service.pageDescription,
+          "url": `https://techsolutionsutrecht.nl${service.href}`
         }
-      },
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "Webshop Laten Maken",
-          "description": "WooCommerce webshops die converteren"
-        }
-      },
+      })),
       {
         "@type": "Offer",
         "itemOffered": {
@@ -102,17 +100,9 @@ export const websiteSchema = {
   "url": "https://techsolutionsutrecht.nl",
   "name": "TechSolutionsUtrecht",
   "alternateName": "Tech Solutions Utrecht",
-  "description": "Website laten maken en computer reparatie in Utrecht",
+  "description": "Websites, webshops, SEO, websiteonderhoud, automatisering en computerreparatie in Utrecht",
   "publisher": {
     "@id": "https://techsolutionsutrecht.nl"
-  },
-  "potentialAction": {
-    "@type": "SearchAction",
-    "target": {
-      "@type": "EntryPoint",
-      "urlTemplate": "https://techsolutionsutrecht.nl/search?q={search_term_string}"
-    },
-    "query-input": "required name=search_term_string"
   }
 };
 

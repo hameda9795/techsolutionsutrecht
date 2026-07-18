@@ -1,8 +1,10 @@
 ---
 title: "5 Fouten die ZZP'ers Maken met Hun Website (en Hoe je Ze Voorkomt)"
+seoTitle: "5 Websitefouten van ZZP'ers en de Oplossing"
 description: "De 5 meest gemaakte fouten van ZZP'ers met hun website — van een onduidelijke boodschap tot slechte vindbaarheid. Plus praktische tips om ze te voorkomen."
 date: "2026-05-20"
-readTime: "8 min"
+dateModified: "2026-07-18"
+readTime: "3 min"
 category: "Webdevelopment"
 image: "/images/blog/5-fouten-zzp-website.jpg"
 slug: "5-fouten-zzp-website"

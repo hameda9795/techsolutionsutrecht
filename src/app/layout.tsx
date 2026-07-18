@@ -13,8 +13,8 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://techsolutionsutrecht.nl"),
-  title: "Website Laten Maken Utrecht | Binnen 1 Week Online | TechSolutionsUtrecht",
-  description: "Professionele website laten maken in Utrecht. Responsive, snel en SEO-klaar. Direct contact met de developer, binnen 1 week online. Vraag een offerte aan.",
+  title: "Websites, Webshops & SEO Utrecht | TechSolutions",
+  description: "Websites vanaf €250, webshops vanaf €795, SEO, onderhoud en automatisering voor ondernemers. Direct contact met de developer in Utrecht.",
   authors: [{ name: "Max", url: "https://techsolutionsutrecht.nl/over-ons" }],
   icons: {
     icon: [
@@ -29,8 +29,8 @@ export const metadata: Metadata = {
     ],
   },
   openGraph: {
-    title: "Website Laten Maken Utrecht | Binnen 1 Week Online | TechSolutionsUtrecht",
-    description: "Professionele website laten maken in Utrecht. Responsive, snel en SEO-klaar. Direct contact met de developer. Vraag een offerte aan.",
+    title: "Websites, Webshops & SEO Utrecht | TechSolutions",
+    description: "Websites, webshops, SEO, onderhoud en automatisering voor ondernemers, met transparante startprijzen en direct contact met de developer.",
     type: "website",
     locale: "nl_NL",
     url: "https://techsolutionsutrecht.nl",
@@ -38,8 +38,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Website Laten Maken Utrecht | Binnen 1 Week Online | TechSolutionsUtrecht",
-    description: "Professionele website laten maken in Utrecht. Responsive, snel en SEO-klaar. Direct contact met de developer.",
+    title: "Websites, Webshops & SEO Utrecht | TechSolutions",
+    description: "Digitale diensten voor ondernemers met transparante startprijzen en direct contact met de developer in Utrecht.",
   },
   verification: {
     google: "GIWDm0RfeTrOlSmP_ZnDC_atk7BE8xUVSL6AZDP8fuU",

@@ -5,13 +5,13 @@ import BlogCard from "@/components/blog/BlogCard";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Webdesign & SEO Blog voor Ondernemers in Utrecht | TechSolutionsUtrecht",
+  title: "Webdesign & SEO Blog Utrecht | TechSolutions",
   description: "Praktische tips over websites, SEO, tech reparaties en meer. Lees onze laatste artikelen over webdesign, online marketing en technologie.",
   alternates: {
     canonical: "https://techsolutionsutrecht.nl/blog",
   },
   openGraph: {
-    title: "Webdesign & SEO Blog voor Ondernemers in Utrecht | TechSolutionsUtrecht",
+    title: "Webdesign & SEO Blog Utrecht | TechSolutions",
     description: "Praktische tips over websites, SEO, tech reparaties en meer. Lees onze laatste artikelen.",
     type: "website",
     locale: "nl_NL",
@@ -27,8 +27,8 @@ export default function BlogPage() {
   const staticPosts: BlogPostMeta[] = [
     {
       slug: "website-laten-maken",
-      title: "Website Laten Maken in 2026: Kosten, Tijdlijn en Complete Gids",
-      description: "Website laten maken? Ontdek wat het kost, hoe lang het duurt en waar je op moet letten. De complete gids voor ondernemers en ZZP'ers die online willen groeien.",
+      title: "Website Laten Maken: Checklist voor Ondernemers",
+      description: "Een praktische checklist voor doelen, inhoud, techniek, planning en eigendom van je nieuwe bedrijfswebsite.",
       date: "2026-07-10",
       readTime: "10 min",
       category: "Websites",

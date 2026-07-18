@@ -1,7 +1,9 @@
 ---
 title: "ZZP Website Laten Maken: De Complete Gids voor Starters (2026)"
+seoTitle: "ZZP Website Laten Maken: Complete Gids 2026"
 description: "Alles wat je moet weten als ZZP'er over een website laten maken. Kosten, essentiële pagina's, SEO-tips en veelgemaakte fouten. Lees de complete gids!"
 date: "2026-03-14"
+dateModified: "2026-07-18"
 readTime: "15 min"
 category: "ZZP"
 image: "/images/blog/zzp-website.jpg"
@@ -69,22 +71,22 @@ Dit is de vraag die iedereen heeft. En zoals je misschien al weet, er is geen ee
 | Oplossing | Prijs | Geschikt Voor |
 |-----------|-------|---------------|
 | **Zelf bouwen (Wix/WordPress)** | €0 - €300/jaar | Als je tijd hebt en technisch bent |
-| **WordPress website** | €250 - €800 | Als je snel online wilt met een professionele basis |
+| **Professionele bedrijfswebsite** | Vanaf €250 · meestal €350–€650 | Als je compleet en professioneel online wilt zijn |
 | **Maatwerk webapplicatie** | €400 - €2.000 | Als je serieus aan de slag wilt met groei of specifieke functionaliteit nodig hebt |
 
 *Wil je meer weten over website kosten in het algemeen? [Bekijk mijn uitgebreide gids over website prijzen](/blog/wat-kost-website-laten-maken).*
 
-### Wat Je Krijgt voor €250 - €800 (Mijn Aanbeveling)
+### Wat Je Krijgt bij een Professionele Bedrijfswebsite
 
-Dit is de prijsrange waar de meeste ZZP'ers het beste uitkomen. Voor een professionele WordPress-website in deze range krijg je:
+De basisuitvoering start vanaf €250 en de meeste projecten vallen tussen €350 en €650. De definitieve prijs hangt af van inhoud, functies en koppelingen. Je krijgt een complete website met de pagina's die jouw bedrijf nodig heeft, bijvoorbeeld:
 
-- Een uniek design (geen standaard template dat bij 100 anderen staat)
-- 5-7 professionele pagina's
-- Teksten die converteren (geschreven door een copywriter)
-- Basis SEO-optimalisatie
-- Google Analytics en Search Console installatie
-- Een CMS waarmee je zelf aanpassingen kunt doen
-- Opleiding in het gebruik van je website
+- Een professionele uitstraling die aansluit bij je bedrijf
+- Pagina's voor je diensten, bedrijf, projecten en contact waar nodig
+- Goede werking op mobiel, tablet en desktop
+- Contactformulier en WhatsApp-mogelijkheid
+- Basis-SEO en volledige eigendom
+- Een passende techniek, bijvoorbeeld WordPress of Next.js
+- Mogelijkheid tot eigen beheer wanneer dat bij de gekozen techniek past
 
 ### Waar Kun Je Op Besparen?
 
@@ -172,16 +174,16 @@ We bespreken:
 - Wat je wilt uitstralen
 - Je budget en tijdlijn
 
-### Stap 2: Ontwerp (1-2 dagen)
+### Stap 2: Ontwerp
 Ik maak een design voor je homepagina. Pas als je hier 100% tevreden over bent, gaan we verder met de rest.
 
-### Stap 3: Bouw (2-4 dagen)
+### Stap 3: Bouw
 De technische realisatie. Je krijgt tussendoor updates en kunt feedback geven.
 
 ### Stap 4: Content (overlap met bouw)
 Jij levert teksten en foto's aan, of ik regel een copywriter/fotograaf voor je.
 
-### Stap 5: Testen en Oplevering (1 dag)
+### Stap 5: Testen en Oplevering
 We testen alles grondig, ik leer je hoe je zelf aanpassingen kunt doen, en dan gaat je site live!
 
 ### Stap 6: Nazorg
@@ -189,12 +191,12 @@ Na oplevering sta ik nog klaar voor vragen en kleine aanpassingen.
 
 ## Hoe Lang Duurt Het?
 
-Een realistische tijdlijn voor een standaard ZZP-website is **binnen 1 week**. Dit hangt af van:
+De planning wordt na de intake vastgesteld en in de offerte vastgelegd. De doorlooptijd hangt onder andere af van:
 - Hoe snel je feedback geeft
 - Of je zelf content aanlevert of dit door mij laat doen
 - Hoe complex je wensen zijn
 
-**Belangrijk:** Websites die in 1-2 dagen worden gebouwd, zijn templates met jouw logo erop geplakt. Een goede website die écht werkt, kost iets meer tijd — maar met een professionele aanpak sta je al binnen een week online.
+Een snelle oplevering is soms mogelijk als inhoud en feedback op tijd beschikbaar zijn. Het is geen standaardgarantie: kwaliteit, werking en duidelijke afspraken blijven leidend.
 
 ## Na de Lancering: Wat Dan?
 
@@ -210,15 +212,12 @@ Je website is live – gefeliciteerd! Maar nu begint het pas. Een website is gee
 ### Maandelijks
 - **Content toevoegen** – Een nieuw blogartikel of case study
 - **Prestaties checken** – Hoeveel bezoekers heb je? Waar komen ze vandaan?
-- **Updates** – WordPress en plugins up-to-date houden
+- **Technische updates** – Software en onderdelen gecontroleerd en actueel houden
 - **Backups** – Zorg dat je altijd een recente backup hebt
 
 ### Ik Kan Je Helpen Met
 
-Na de lancering bied ik verschillende onderhoudspakketten:
-- **Basic:** Maandelijkse updates en backups (€50/maand)
-- **Pro:** Wekelijkse updates, dagelijkse backups, performance-optimalisatie en priority support (€100/maand)
-- **Enterprise:** Real-time backups, directe updates, premium security en 24/7 support (€150/maand)
+Wil je dit uitbesteden, dan start [websiteonderhoud](/diensten/website-onderhoud) vanaf €29 per maand. De exacte prijs en frequentie van updates, back-ups en controles hangen af van de techniek, omvang en huidige staat van je website.
 
 ## Veelgestelde Vragen van ZZP'ers
 
@@ -235,7 +234,7 @@ Geen probleem. Ik werk samen met professionele fotografen die gespecialiseerd zi
 Realistisch? Reken op 3-6 maanden voor lokale zoektermen. SEO is een marathon, geen sprint. Maar met de juiste strategie kom je er zeker.
 
 ### Kan ik mijn website zelf bijhouden?
-Ja! Ik bouw in WordPress, wat intuïtief te gebruiken is. Na oplevering krijg je een uitgebreide uitleg en video's zodat je zelf teksten kunt aanpassen en blogartikelen kunt plaatsen.
+Dat kan wanneer eigen beheer bij jouw wensen past. WordPress is bijvoorbeeld geschikt voor uitgebreid contentbeheer; voor andere projecten kan een andere techniek beter passen. De keuze en uitleg bij oplevering worden vooraf afgesproken.
 
 ## Conclusie: Jouw Website Is Je Digitale Winkel
 

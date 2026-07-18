@@ -1,8 +1,10 @@
 ---
 title: "Website Laten Maken: Freelancer of Bureau? (Eerlijke Vergelijking)"
+seoTitle: "Website Laten Maken: Freelancer of Bureau?"
 description: "Freelancer of webbureau voor je nieuwe website? Een eerlijke vergelijking van kosten, communicatie, snelheid en continuïteit, zodat je de juiste partner kiest."
 date: "2026-05-06"
-readTime: "9 min"
+dateModified: "2026-07-18"
+readTime: "3 min"
 category: "Webdevelopment"
 image: "/images/blog/freelancer-of-bureau.jpg"
 slug: "freelancer-of-bureau"
@@ -55,7 +57,7 @@ Gebruik deze richtlijn:
 - Je een ZZP'er, starter of klein/middelgroot bedrijf bent.
 - Je direct contact en korte lijnen waardeert.
 - Budget belangrijk is, zonder in te leveren op kwaliteit.
-- Je een [WordPress website](/diensten/wordpress), [webshop](/diensten/webshop) of overzichtelijk [maatwerkproject](/diensten/maatwerk) wilt.
+- Je een [website](/diensten/website-laten-maken), [webshop](/diensten/webshop) of overzichtelijk [maatwerkproject](/diensten/maatwerk) wilt.
 
 **Kies een bureau als:**
 

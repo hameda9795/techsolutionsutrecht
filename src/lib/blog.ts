@@ -10,8 +10,10 @@ const postsDirectory = path.join(process.cwd(), 'content/blog');
 export interface BlogPost {
   slug: string;
   title: string;
+  seoTitle?: string;
   description: string;
   date: string;
+  dateModified?: string;
   readTime: string;
   category: string;
   image: string;
@@ -23,8 +25,10 @@ export interface BlogPost {
 export interface BlogPostMeta {
   slug: string;
   title: string;
+  seoTitle?: string;
   description: string;
   date: string;
+  dateModified?: string;
   readTime: string;
   category: string;
   image: string;
@@ -56,7 +60,7 @@ export function getAllPosts(): BlogPostMeta[] {
     return [];
   }
   
-  const posts = slugs.map(slug => {
+  const posts = slugs.map<BlogPostMeta | null>((slug) => {
     const fullPath = path.join(postsDirectory, `${slug}.md`);
     
     // Skip if file doesn't exist
@@ -70,8 +74,10 @@ export function getAllPosts(): BlogPostMeta[] {
     return {
       slug,
       title: data.title || '',
+      seoTitle: data.seoTitle || '',
       description: data.description || '',
       date: data.date || '',
+      dateModified: data.dateModified || '',
       readTime: data.readTime || '5 min',
       category: data.category || 'Algemeen',
       image: data.image || '/images/blog/default.jpg',
@@ -109,8 +115,10 @@ export async function getPostBySlug(slug: string): Promise<BlogPost | null> {
   return {
     slug,
     title: data.title || '',
+    seoTitle: data.seoTitle || '',
     description: data.description || '',
     date: data.date || '',
+    dateModified: data.dateModified || '',
     readTime: data.readTime || '5 min',
     category: data.category || 'Algemeen',
     image: data.image || '/images/blog/default.jpg',
@@ -122,9 +130,21 @@ export async function getPostBySlug(slug: string): Promise<BlogPost | null> {
 
 export function getRelatedPosts(currentSlug: string, limit: number = 3): BlogPostMeta[] {
   const allPosts = getAllPosts();
-  return allPosts
-    .filter(post => post.slug !== currentSlug)
-    .slice(0, limit);
+  const currentPost = allPosts.find((post) => post.slug === currentSlug);
+  const candidates = allPosts.filter((post) => post.slug !== currentSlug);
+
+  if (!currentPost) {
+    return candidates.slice(0, limit);
+  }
+
+  const sameCategory = candidates.filter(
+    (post) => post.category.toLowerCase() === currentPost.category.toLowerCase()
+  );
+  const otherCategories = candidates.filter(
+    (post) => post.category.toLowerCase() !== currentPost.category.toLowerCase()
+  );
+
+  return [...sameCategory, ...otherCategories].slice(0, limit);
 }
 
 export function getPostsByCategory(category: string): BlogPostMeta[] {

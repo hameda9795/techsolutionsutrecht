@@ -15,7 +15,7 @@ const breadcrumb = breadcrumbSchema([
 const service = serviceSchema({
   name: "Goedkope website laten maken",
   description:
-    "Goedkope website laten maken vanaf €250: professioneel WordPress-webdesign, responsive en SEO-klaar, binnen 1 week online. Direct contact met de developer.",
+    "Betaalbare complete bedrijfswebsite vanaf €250, responsive en met een technische SEO-basis. Direct contact met de developer.",
   url: pageUrl,
 });
 
@@ -23,12 +23,12 @@ const faqs = [
   {
     question: "Hoe kan een professionele website zo goedkoop zijn?",
     answer:
-      "Omdat je rechtstreeks met de developer werkt. Je betaalt niet mee aan accountmanagers, verkopers of een duur kantoorpand — kosten die bij bureaus in de prijs zitten. Daarnaast werk ik met een efficiënt, bewezen proces waardoor een standaard website binnen een week af is. Lage overhead, geen lage kwaliteit.",
+      "Omdat je rechtstreeks met de developer werkt. Je betaalt niet mee aan accountmanagers, verkopers of een duur kantoorpand. Daarnaast werk ik met een efficiënt proces en een duidelijke scope. Lage overhead betekent geen lage kwaliteit of automatische haast.",
   },
   {
     question: "Wat krijg ik voor €250?",
     answer:
-      "Een complete professionele WordPress-website van 3 tot 5 pagina's: responsive design, contactformulier, koppeling met Google Maps en Bedrijfsprofiel, technische SEO-basis en uitleg zodat je zelf teksten kunt aanpassen. Hosting en domein regel je zelf of via mij (circa €10-€25 per maand).",
+      "Een complete professionele bedrijfswebsite in de basisuitvoering, geschikt voor mobiel, met contactmogelijkheden, basis-SEO en volledige eigendom. De pagina's en techniek worden afgestemd op wat jouw bedrijf nodig heeft. Extra functies en koppelingen kunnen de prijs verhogen.",
   },
   {
     question: "Waar zit het verschil met websites van €1.000+?",
@@ -43,21 +43,21 @@ const faqs = [
   {
     question: "Zijn er verborgen kosten?",
     answer:
-      "Nee. Je krijgt vooraf een vaste prijs op papier. De enige terugkerende kosten zijn hosting en domein (circa €10-€25 per maand) en eventueel een onderhoudspakket vanaf €50 per maand — beide optioneel en vooraf helder.",
+      "Nee. Je krijgt vooraf een vaste prijs op papier. Hosting en domein zijn terugkerende kosten bij je gekozen provider. Optioneel websiteonderhoud start vanaf €29 per maand; de exacte prijs hangt af van de techniek en gewenste ondersteuning.",
   },
 ];
 
 const faqSchema = faqPageSchema(faqs);
 
 export const metadata: Metadata = {
-  title: "Goedkope Website Laten Maken | Vanaf €250, Binnen 1 Week | TechSolutions",
+  title: "Goedkope Website Laten Maken vanaf €250 | Utrecht",
   description:
-    "Goedkope website laten maken zonder in te leveren op kwaliteit? Professionele WordPress-website vanaf €250, SEO-klaar en binnen 1 week online. Vraag een offerte aan.",
+    "Laat een complete betaalbare bedrijfswebsite maken vanaf €250. Responsive, inclusief contactmogelijkheden, basis-SEO en volledige eigendom.",
   alternates: { canonical: pageUrl },
   openGraph: {
-    title: "Goedkope Website Laten Maken | Vanaf €250, Binnen 1 Week | TechSolutions",
+    title: "Goedkope Website Laten Maken vanaf €250 | Utrecht",
     description:
-      "Goedkope website laten maken zonder in te leveren op kwaliteit? Professionele WordPress-website vanaf €250, SEO-klaar en binnen 1 week online.",
+      "Een complete betaalbare bedrijfswebsite vanaf €250, responsive en met basis-SEO.",
     type: "website",
     locale: "nl_NL",
     url: pageUrl,
@@ -67,10 +67,10 @@ export const metadata: Metadata = {
 
 const included = [
   "Professioneel responsive design",
-  "WordPress: zelf teksten aanpassen",
+  "Techniek passend bij je project",
   "Technische SEO-basis inbegrepen",
   "Contactformulier & Google Maps",
-  "Binnen 1 week online",
+  "Duidelijke planning na de intake",
   "Vaste prijs, vooraf afgesproken",
 ];
 
@@ -128,7 +128,7 @@ export default function GoedkopeWebsitePage() {
                 Een <strong className="text-[var(--color-ink)]">goedkope website laten maken</strong> hoeft niet
                 te betekenen dat je inlevert op kwaliteit. Vanaf{" "}
                 <strong className="text-primary">€250</strong> krijg je een professionele, SEO-klare
-                WordPress-website — binnen 1 week online, met direct contact met de developer.
+                bedrijfswebsite, met een techniek die past bij je project en direct contact met de developer.
               </p>
 
               <div className="grid sm:grid-cols-2 gap-3 mb-8">
@@ -144,7 +144,7 @@ export default function GoedkopeWebsitePage() {
 
               <div className="flex flex-wrap items-center gap-6 mb-8">
                 <div className="text-3xl font-bold text-primary">vanaf €250</div>
-                <div className="text-[var(--color-muted)]">Vaste prijs, geen verrassingen</div>
+                <div className="text-[var(--color-muted)]">Meestal €350–€650</div>
               </div>
 
               <Link href="/contact" className="btn-primary group inline-flex">
@@ -156,7 +156,7 @@ export default function GoedkopeWebsitePage() {
             <div className="relative">
               <Image
                 src="/images/goedkope-website-laten-maken-hero.webp"
-                alt="Goedkope website laten maken: professionele WordPress-website op laptop en smartphone, vanaf 250 euro"
+                alt="Betaalbare professionele bedrijfswebsite op laptop en smartphone, vanaf 250 euro"
                 width={1344}
                 height={768}
                 priority
@@ -177,12 +177,11 @@ export default function GoedkopeWebsitePage() {
               duizenden euro&apos;s móét kosten.
             </p>
             <p className="text-[var(--color-muted)] mb-4 leading-relaxed">
-              De werkelijkheid: de gemiddelde prijs voor een professionele website ligt in Nederland tussen de
-              €750 en €2.500. Dat betaal je grotendeels voor overhead — accountmanagers, verkooptrajecten,
-              kantoorkosten. Werk je rechtstreeks met de developer, dan vervalt die overhead en blijft de
-              vakkennis over. Zo kan een{" "}
-              <Link href="/diensten/wordpress" className="text-[var(--color-primary)] underline underline-offset-2 hover:no-underline">
-                professionele WordPress-website
+              De werkelijkheid: marktprijzen lopen sterk uiteen door verschillen in ontwerp, inhoud, begeleiding
+              en functionaliteit. Werk je rechtstreeks met de developer, dan betaal je minder bureau-overhead en
+              blijft de vakkennis centraal staan. Zo kan een{" "}
+              <Link href="/diensten/website-laten-maken" className="text-[var(--color-primary)] underline underline-offset-2 hover:no-underline">
+                complete professionele bedrijfswebsite
               </Link>{" "}
               vanaf €250.
             </p>
@@ -262,9 +261,9 @@ export default function GoedkopeWebsitePage() {
               <h3 className="text-xl font-bold text-[var(--color-ink)] mb-4">Snel online, zorgeloos daarna</h3>
               <ul className="space-y-3">
                 {[
-                  "Standaard website binnen 1 week live",
+                  "Duidelijke planning en opleverdatum vooraf",
                   "Binnen 4 uur reactie op vragen",
-                  "Optioneel onderhoud vanaf €50/maand",
+                  "Optioneel onderhoud vanaf €29/maand",
                   "12+ jaar ervaring, KvK-geregistreerd",
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-3">

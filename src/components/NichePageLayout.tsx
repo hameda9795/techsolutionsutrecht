@@ -158,8 +158,8 @@ export default function NichePageLayout({
               ))}
             </div>
             <div className="mt-10 flex flex-wrap gap-4">
-              <Link href="/diensten/wordpress" className="inline-flex items-center gap-2 text-[var(--color-primary)] font-semibold hover:underline">
-                Bekijk WordPress websites <ArrowRight className="w-4 h-4" />
+              <Link href="/diensten/website-laten-maken" className="inline-flex items-center gap-2 text-[var(--color-primary)] font-semibold hover:underline">
+                Bekijk professionele websites <ArrowRight className="w-4 h-4" />
               </Link>
               <Link href="/diensten/seo" className="inline-flex items-center gap-2 text-[var(--color-primary)] font-semibold hover:underline">
                 Meer over SEO <ArrowRight className="w-4 h-4" />

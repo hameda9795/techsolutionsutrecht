@@ -1,219 +1,265 @@
-import { Metadata } from "next";
-import Footer from "@/components/Footer";
+import type { Metadata } from "next";
+import Image from "next/image";
+import Link from "next/link";
+import {
+  ArrowRight,
+  Check,
+  Globe,
+  Mail,
+  MessageCircle,
+  Phone,
+  ShieldCheck,
+  ShoppingCart,
+  TrendingUp,
+  type LucideIcon,
+} from "lucide-react";
 import Breadcrumb from "@/components/Breadcrumb";
-import { breadcrumbSchema, serviceSchema } from "@/lib/schema";
+import Footer from "@/components/Footer";
+import { breadcrumbSchema } from "@/lib/schema";
+import { coreServices, type ServiceIcon } from "@/lib/services";
+
+const pageUrl = "https://techsolutionsutrecht.nl/diensten";
 
 export const metadata: Metadata = {
-  title: "Webdesign Diensten Utrecht | WordPress, SEO & Maatwerk | TechSolutionsUtrecht",
-  description: "Laat je professionele website maken in Utrecht. 12+ jaar ervaring, moderne technologie (Next.js, WordPress), SEO-geoptimaliseerd. Vanaf €250. Gratis offerte!",
-  keywords: ["website laten maken utrecht", "professionele website", "webdesign utrecht", "wordpress utrecht", "nextjs developer"],
+  title: "Websites, SEO, Onderhoud & Automatisering | TechSolutions",
+  description:
+    "Bekijk onze digitale diensten: websites vanaf €250, webshops vanaf €795, SEO vanaf €200 per maand, websiteonderhoud vanaf €29 en automatisering vanaf €450.",
+  alternates: { canonical: pageUrl },
   openGraph: {
-    title: "Webdesign Diensten Utrecht | WordPress, SEO & Maatwerk | TechSolutionsUtrecht",
-    description: "Laat je professionele website maken in Utrecht. 12+ jaar ervaring, moderne technologie, SEO-geoptimaliseerd. Vanaf €250. Gratis offerte!",
+    title: "Websites, SEO, Onderhoud & Automatisering | TechSolutions",
+    description:
+      "Websites, webshops, SEO, websiteonderhoud en automatisering met duidelijke startprijzen en direct contact met de developer.",
     type: "website",
     locale: "nl_NL",
-    url: "https://techsolutionsutrecht.nl/diensten",
+    url: pageUrl,
     siteName: "TechSolutionsUtrecht",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Webdesign Diensten Utrecht | WordPress, SEO & Maatwerk | TechSolutionsUtrecht",
-    description: "Laat je professionele website maken in Utrecht. 12+ jaar ervaring, moderne technologie, SEO-geoptimaliseerd. Vanaf €250. Gratis offerte!",
-  },
-  alternates: {
-    canonical: "https://techsolutionsutrecht.nl/diensten",
+    title: "Websites, SEO, Onderhoud & Automatisering | TechSolutions",
+    description:
+      "Bekijk websites, webshops, SEO, websiteonderhoud en automatisering met transparante startprijzen.",
   },
 };
 
-const services = [
-  {
-    icon: "🌐",
-    title: "WordPress Websites",
-    description: "Professionele WordPress website vanaf €250. Modern design, SEO-geoptimaliseerd, en snel online. Perfect voor ZZP'ers en startende ondernemers.",
-    features: [
-      "Responsive design op maat",
-      "SEO-technische basis",
-      "Snelle laadtijden",
-      "CMS - zelf te beheren",
-      "Binnen 1 week online",
-      "12+ jaar ervaring",
-    ],
-    price: "€250 - €800",
-    time: "1 week",
-    href: "/diensten/wordpress",
-  },
-  {
-    icon: "🛒",
-    title: "WooCommerce Webshops",
-    description: "Webshop die converteert vanaf €350. Professioneel design, veilige betalingen, en volledig geoptimaliseerd voor verkoop.",
-    features: [
-      "Professioneel design",
-      "iDEAL, creditcard, PayPal",
-      "Voorraadbeheer",
-      "Verzendintegraties",
-      "SEO voor producten",
-      "Mobiel geoptimaliseerd",
-    ],
-    price: "€350 - €1.200",
-    time: "1-2 weken",
-    href: "/diensten/webshop",
-  },
-  {
-    icon: "⚡",
-    title: "Maatwerk Webapplicaties",
-    description: "Complexere oplossingen met Next.js, React of Angular. Vanaf €400 voor applicaties die echt iets toevoegen voor jouw bedrijf.",
-    features: [
-      "Next.js & React",
-      "Node.js backend",
-      "Database architectuur",
-      "API integraties",
-      "Real-time features",
-      "Schaalbaar & snel",
-    ],
-    price: "€400 - €2.000",
-    time: "2-4 weken",
-    href: "/diensten/maatwerk",
-  },
-  {
-    icon: "📈",
-    title: "SEO Optimalisatie",
-    description: "Hoger in Google met technische SEO en content-optimalisatie. Niet alleen advies, maar ook implementatie.",
-    features: [
-      "Technische SEO analyse",
-      "Keyword onderzoek",
-      "Content optimalisatie",
-      "Local SEO (Google Business)",
-      "Maandelijkse rapportage",
-      "Meetbare resultaten",
-    ],
-    price: "Vanaf €200/maand",
-    time: "Doorlopend",
-    href: "/diensten/seo",
-  },
-  {
-    icon: "🤖",
-    title: "AI Integraties",
-    description: "Slimme chatbots en AI-tools die tijd besparen. Vanaf €500 voor technologie die jouw bedrijf vooruit helpt.",
-    features: [
-      "Slimme chatbots",
-      "Automatisering",
-      "AI-gestuurde analyses",
-      "Integratie met je website",
-      "Custom AI oplossingen",
-      "Training & support",
-    ],
-    price: "Vanaf €500",
-    time: "Projectafhankelijk",
-    href: "/diensten/ai",
-  },
-];
+const serviceIcons: Record<ServiceIcon, LucideIcon> = {
+  website: Globe,
+  webshop: ShoppingCart,
+  seo: TrendingUp,
+  maintenance: ShieldCheck,
+  automation: MessageCircle,
+};
+
+const breadcrumbJsonLd = breadcrumbSchema([
+  { name: "Home", url: "https://techsolutionsutrecht.nl" },
+  { name: "Diensten", url: pageUrl },
+]);
+
+const servicesJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  name: "Digitale diensten van TechSolutionsUtrecht",
+  numberOfItems: coreServices.length,
+  itemListElement: coreServices.map((service, index) => ({
+    "@type": "ListItem",
+    position: index + 1,
+    item: {
+      "@type": "Service",
+      name: service.title,
+      description: service.pageDescription,
+      url: `https://techsolutionsutrecht.nl${service.href}`,
+      provider: {
+        "@type": "ProfessionalService",
+        name: "TechSolutionsUtrecht",
+        url: "https://techsolutionsutrecht.nl",
+      },
+      areaServed: {
+        "@type": "City",
+        name: "Utrecht",
+      },
+      offers: {
+        "@type": "Offer",
+        price: service.schemaPrice,
+        priceCurrency: "EUR",
+        description: service.price,
+        url: `https://techsolutionsutrecht.nl${service.href}`,
+      },
+    },
+  })),
+};
 
 export default function DienstenPage() {
-  const breadcrumbJsonLd = breadcrumbSchema([
-    { name: "Home", url: "https://techsolutionsutrecht.nl" },
-    { name: "Diensten", url: "https://techsolutionsutrecht.nl/diensten" },
-  ]);
-
-  const webdesignService = serviceSchema({
-    name: "Webdesign Diensten Utrecht",
-    description: "Professionele websites, webshops en maatwerk applicaties in Utrecht. WordPress, Next.js en SEO-geoptimaliseerd.",
-    url: "https://techsolutionsutrecht.nl/diensten",
-  });
-
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webdesignService) }} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(servicesJsonLd) }}
+      />
+
       <Breadcrumb items={[{ label: "Diensten", href: "/diensten" }]} />
-      
-      <main className="pt-24 pb-24 bg-[var(--color-bg)]">
-        <div className="max-w-6xl mx-auto px-6">
-          {/* Header */}
-          <div className="text-center max-w-3xl mx-auto mb-20">
-            <span className="text-[var(--color-primary)] font-semibold text-sm uppercase tracking-wider">
-              Diensten
-            </span>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[var(--color-ink)] mt-4 mb-6">
-              Professionele Webdesign{" "}
-              <span className="text-[var(--color-primary)]">Diensten in Utrecht</span>
-            </h1>
-            <p className="text-[var(--color-muted)] text-lg">
-              Met 12+ jaar ervaring en moderne technologie bouw ik websites die werken. 
-              Van eenvoudige WordPress sites tot complexe webapplicaties met AI.
-            </p>
+
+      <main className="bg-[var(--color-bg)]">
+        <section className="relative overflow-hidden border-b border-[var(--color-border)] bg-[var(--color-bg)]">
+          <div className="absolute inset-0 hidden xl:block" aria-hidden="true">
+            <Image
+              src="/images/diensten-hero-banner.webp"
+              alt=""
+              fill
+              priority
+              sizes="100vw"
+              className="object-contain object-center"
+            />
           </div>
 
-          {/* Services Grid */}
-          <div className="space-y-12">
-            {services.map((service, index) => (
-              <div 
-                key={service.title}
-                className={`grid md:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? 'md:flex-row-reverse' : ''}`}
-              >
-                <div className={index % 2 === 1 ? 'md:order-2' : ''}>
-                  <div className="text-4xl mb-4">{service.icon}</div>
-                  <h2 className="text-2xl sm:text-3xl font-bold text-[var(--color-ink)] mb-4">{service.title}</h2>
-                  <p className="text-[var(--color-muted)] mb-6">{service.description}</p>
-                  
-                  <div className="flex flex-wrap gap-4 mb-6">
-                    <span className="px-4 py-2 bg-[var(--color-primary)]/10 text-[var(--color-primary)] rounded-lg font-semibold">{service.price}</span>
-                    <span className="px-4 py-2 bg-[var(--color-surface)] text-[var(--color-muted)] rounded-lg">⏱️ {service.time}</span>
-                  </div>
-                  
-                  <a 
-                    href={service.href}
-                    className="inline-flex items-center gap-2 text-[var(--color-primary)] font-semibold hover:underline"
-                  >
-                    Meer over {service.title}
-                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                    </svg>
-                  </a>
-                </div>
-                
-                <div className={`bg-[var(--color-surface)] rounded-2xl p-8 border border-[var(--color-border)] ${index % 2 === 1 ? 'md:order-1' : ''}`}>
-                  <h3 className="font-semibold text-[var(--color-ink)] mb-4">Wat je krijgt:</h3>
-                  <ul className="space-y-3">
-                    {service.features.map((feature) => (
-                      <li key={feature} className="flex items-start gap-3">
-                        <svg className="w-5 h-5 text-[var(--color-primary)] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                        </svg>
-                        <span className="text-[var(--color-muted)]">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {/* CTA */}
-          <div className="mt-20 text-center bg-[var(--color-primary)] rounded-2xl p-12 text-white">
-            <h2 className="text-3xl font-bold mb-4">Klaar om te starten?</h2>
-            <p className="text-white/90 mb-8 max-w-2xl mx-auto">
-              Laten we samen kijken wat het beste past bij jouw project. 
-              Gratis advies, geen verplichtingen.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
-                href="https://wa.me/31625518708"
-                className="inline-flex items-center justify-center gap-2 bg-[var(--color-bg)] text-[var(--color-primary)] px-8 py-4 rounded-xl font-semibold hover:bg-[var(--color-surface)] transition-colors"
-              >
-                📱 WhatsApp direct
-              </a>
-              <a 
-                href="/contact"
-                className="inline-flex items-center justify-center gap-2 bg-[var(--color-bg)]/20 text-white border-2 border-white px-8 py-4 rounded-xl font-semibold hover:bg-[var(--color-bg)]/30 transition-colors"
-              >
-                ✉️ Contactformulier
-              </a>
+          <div className="relative z-10 mx-auto flex max-w-6xl items-center justify-center px-6 py-14 text-center sm:py-16 xl:min-h-[500px] xl:py-20">
+            <div className="mx-auto max-w-3xl xl:max-w-2xl xl:rounded-2xl xl:bg-[var(--color-bg)] xl:px-10 xl:py-10">
+              <p className="text-sm font-semibold uppercase tracking-wider text-[var(--color-primary)]">
+                DIENSTEN
+              </p>
+              <h1 className="mx-auto mt-4 max-w-3xl text-balance text-4xl font-bold text-[var(--color-ink)] sm:text-5xl lg:text-6xl">
+                Digitale diensten voor jouw bedrijf
+              </h1>
+              <p className="mx-auto mt-6 max-w-2xl text-pretty text-lg leading-relaxed text-[var(--color-ink)]">
+                Van een complete website of webshop tot SEO, technisch onderhoud en
+                slimme automatisering. Je krijgt een duidelijke aanpak, transparante
+                startprijs en direct contact met de developer.
+              </p>
             </div>
           </div>
-        </div>
+
+          <div className="relative mx-auto w-full max-w-[2172px] xl:hidden" aria-hidden="true">
+            <Image
+              src="/images/diensten-hero-banner.webp"
+              alt=""
+              width={2172}
+              height={724}
+              priority
+              sizes="100vw"
+              className="h-auto w-full"
+            />
+          </div>
+        </section>
+
+        <section aria-label="Onze digitale diensten" className="py-16 sm:py-20">
+          <div className="mx-auto max-w-6xl px-6">
+            <div className="space-y-16 sm:space-y-20">
+              {coreServices.map((service, index) => {
+                const Icon = serviceIcons[service.id];
+                const isReversed = index % 2 === 1;
+                const priceNote = service.typicalPrice ?? service.pagePriceNote;
+
+                return (
+                  <article
+                    key={service.id}
+                    className={`grid items-stretch gap-8 md:grid-cols-2 md:gap-12 ${
+                      index > 0
+                        ? "border-t border-[var(--color-border)] pt-16 sm:pt-20"
+                        : ""
+                    }`}
+                  >
+                    <div
+                      className={`order-1 flex flex-col justify-center ${
+                        isReversed ? "md:order-2" : "md:order-1"
+                      }`}
+                    >
+                      <div className="flex items-center gap-3">
+                        <Icon
+                          className="h-7 w-7 shrink-0 text-[var(--color-primary)]"
+                          aria-hidden="true"
+                        />
+                        <h2 className="text-balance text-3xl font-bold text-[var(--color-ink)] sm:text-4xl">
+                          {service.title}
+                        </h2>
+                      </div>
+                      <p className="mt-5 max-w-2xl text-pretty text-base leading-relaxed text-[var(--color-ink)] sm:text-lg">
+                        {service.pageDescription}
+                      </p>
+
+                      <div className="mt-6">
+                        <p className="text-2xl font-bold text-[var(--color-primary)]">
+                          {service.price}
+                        </p>
+                        {priceNote && (
+                          <p className="mt-1 text-base font-medium text-[var(--color-muted)]">
+                            {priceNote}
+                          </p>
+                        )}
+                      </div>
+
+                      <Link
+                        href={service.href}
+                        className="mt-7 inline-flex min-h-12 items-center self-start rounded-lg border-2 border-[var(--color-primary)] px-6 py-3 font-semibold text-[var(--color-primary)] transition-colors hover:bg-[var(--color-primary)] hover:text-white"
+                      >
+                        {service.pageCta}
+                        <ArrowRight className="ml-2 h-5 w-5" aria-hidden="true" />
+                      </Link>
+                    </div>
+
+                    <div
+                      className={`order-2 flex h-full flex-col justify-center rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface)] p-7 sm:p-8 ${
+                        isReversed ? "md:order-1" : "md:order-2"
+                      }`}
+                    >
+                      <h3 className="mb-5 text-lg font-bold text-[var(--color-ink)]">
+                        Wat je krijgt
+                      </h3>
+                      <ul className="space-y-4" aria-label={`Kenmerken van ${service.title}`}>
+                        {service.pageFeatures.map((feature) => (
+                          <li
+                            key={feature}
+                            className="flex items-start gap-3 text-base leading-relaxed text-[var(--color-ink)]"
+                          >
+                            <Check
+                              className="mt-0.5 h-5 w-5 shrink-0 text-[var(--color-primary)]"
+                              aria-hidden="true"
+                            />
+                            <span>{feature}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </article>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        <section className="px-6 pb-20 sm:pb-24">
+          <div className="mx-auto max-w-6xl rounded-2xl bg-[var(--color-primary)] px-6 py-10 text-center text-white sm:px-10 sm:py-12">
+            <h2 className="text-balance text-3xl font-bold sm:text-4xl">
+              Welke oplossing past bij jouw bedrijf?
+            </h2>
+            <p className="mx-auto mt-4 max-w-2xl text-pretty text-base leading-relaxed text-white/90 sm:text-lg">
+              Vertel kort wat je nodig hebt. We bekijken vrijblijvend welke aanpak,
+              planning en prijs het beste bij jouw project passen.
+            </p>
+            <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
+              <a
+                href="https://wa.me/31625518708"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex min-h-12 items-center justify-center rounded-lg bg-white px-7 py-3 font-semibold text-[var(--color-primary)] transition-colors hover:bg-[var(--color-surface)]"
+              >
+                <Phone className="mr-2 h-5 w-5" aria-hidden="true" />
+                WhatsApp direct
+              </a>
+              <Link
+                href="/contact"
+                className="inline-flex min-h-12 items-center justify-center rounded-lg border-2 border-white px-7 py-3 font-semibold text-white transition-colors hover:bg-white hover:text-[var(--color-primary)]"
+              >
+                <Mail className="mr-2 h-5 w-5" aria-hidden="true" />
+                Vraag een voorstel aan
+              </Link>
+            </div>
+          </div>
+        </section>
       </main>
-      
+
       <Footer />
     </>
   );

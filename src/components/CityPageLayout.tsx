@@ -190,8 +190,8 @@ export default function CityPageLayout({
             <h2 className="text-3xl font-bold text-[var(--color-ink)] mb-4">Diensten voor ondernemers in {city}</h2>
             <p className="text-[var(--color-muted)] mb-10 max-w-2xl">{approach[0]}</p>
             <div className="grid md:grid-cols-3 gap-6">
-              <Link href="/diensten/wordpress" className="group bg-[var(--color-bg)] p-6 rounded-2xl border border-[var(--color-border)] hover:shadow-md transition-shadow">
-                <h3 className="text-xl font-bold text-[var(--color-ink)] mb-2 flex items-center gap-2">WordPress website <ArrowRight className="w-4 h-4 text-[var(--color-primary)] opacity-0 group-hover:opacity-100 transition-opacity" /></h3>
+              <Link href="/diensten/website-laten-maken" className="group bg-[var(--color-bg)] p-6 rounded-2xl border border-[var(--color-border)] hover:shadow-md transition-shadow">
+                <h3 className="text-xl font-bold text-[var(--color-ink)] mb-2 flex items-center gap-2">Website laten maken <ArrowRight className="w-4 h-4 text-[var(--color-primary)] opacity-0 group-hover:opacity-100 transition-opacity" /></h3>
                 <p className="text-[var(--color-muted)] text-sm">Een professionele, zelf te beheren website die snel laadt en goed scoort in Google.</p>
               </Link>
               <Link href="/diensten/webshop" className="group bg-[var(--color-bg)] p-6 rounded-2xl border border-[var(--color-border)] hover:shadow-md transition-shadow">

@@ -4,7 +4,7 @@ import { ArrowRight, MapPin, Phone, Clock, CheckCircle, Laptop, Globe, Wrench } 
 
 export const metadata: Metadata = {
   title: "Webdesign & Reparatie Utrecht | TechSolutionsUtrecht",
-  description: "Website laten maken in Utrecht én laptop- en computerreparatie. Dé tech partner in Utrecht en omgeving. Professioneel, snel en binnen 1 week online!",
+  description: "Website laten maken in Utrecht vanaf €250 of hulp bij laptop- en computerreparatie. Persoonlijk contact, duidelijke afspraken en lokale service.",
   keywords: [
     "website laten maken utrecht",
     "webdesign utrecht",
@@ -58,7 +58,7 @@ export default function UtrechtPage() {
               Zoekt u een <strong className="text-[var(--color-ink)]">betrouwbare website bouwer</strong> of 
               <strong className="text-[var(--color-ink)]"> snelle laptop reparatie</strong> in Utrecht? 
               Wij zijn dé all-in-one tech partner voor ondernemers en particulieren in Utrecht en omgeving. 
-              Vanaf <strong className="text-primary">€250</strong>, binnen <strong className="text-primary">1 week</strong>.
+              Websites vanaf <strong className="text-primary">€250</strong>, met een duidelijke offerte en planning.
             </p>
             
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -96,17 +96,17 @@ export default function UtrechtPage() {
               </div>
               <h3 className="text-2xl font-bold mb-4">Website Laten Maken Utrecht</h3>
               <p className="text-[var(--color-muted)] mb-6">
-                Professionele WordPress websites voor ondernemers in Utrecht. 
-                Vanaf €250, inclusief hosting, domeinnaam en onderhoud. 
-                Binnen 1 week online!
+                Complete professionele websites voor ondernemers in Utrecht.
+                Vanaf €250 en meestal €350–€650, met basis-SEO en volledige eigendom.
+                Na de intake ontvang je een duidelijke planning.
               </p>
               <ul className="space-y-3 mb-8">
                 {[
-                  "WordPress websites op maat",
+                  "Technologie passend bij je project",
                   "Webshops met WooCommerce",
                   "SEO-geoptimaliseerd",
                   "Mobiel-vriendelijk design",
-                  "Inclusief onderhoud",
+                  "Contactformulier en WhatsApp",
                 ].map((item, i) => (
                   <li key={i} className="flex items-center gap-3 text-[var(--color-muted)]">
                     <CheckCircle className="w-5 h-5 text-primary flex-shrink-0" />
@@ -114,7 +114,7 @@ export default function UtrechtPage() {
                   </li>
                 ))}
               </ul>
-              <Link href="/diensten/wordpress" className="text-primary font-semibold hover:underline">
+              <Link href="/diensten/website-laten-maken" className="text-primary font-semibold hover:underline">
                 Meer over website laten maken →
               </Link>
             </div>
@@ -170,7 +170,7 @@ export default function UtrechtPage() {
               {
                 icon: Clock,
                 title: "Snelle Service",
-                desc: "Website binnen 1 week online. Reparaties vaak binnen 24 uur.",
+                desc: "Heldere planning voor websites en snelle beoordeling van reparaties.",
               },
               {
                 icon: Laptop,

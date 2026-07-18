@@ -3,13 +3,35 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Link from "next/link";
 import { Calendar, Clock, ArrowLeft, User, AlertTriangle, Droplets, Power, Wind, Ban, Clock as ClockIcon, MapPin, CheckCircle } from "lucide-react";
+import { articleSchema } from "@/lib/schema";
+
+const canonicalUrl = "https://techsolutionsutrecht.nl/blog/macbook-waterschade-wat-te-doen";
 
 export const metadata: Metadata = {
-  title: "MacBook Waterschade? Dit Moet je NU Doen [Stap-voor-Stap] | TechSolutionsUtrecht",
+  title: "MacBook Waterschade? Dit Moet je Direct Doen",
   description: "MacBook nat geworden? Snelheid is essentieel. Volg deze stappen om schade te beperken. Reparatie in Utrecht nodig? Bel of WhatsApp!",
   keywords: ["macbook waterschade", "laptop waterschade", "mac nat geworden", "macbook reparatie utrecht", "waterschade laptop"],
-  alternates: { canonical: "https://techsolutionsutrecht.nl/blog/macbook-waterschade-wat-te-doen" },
+  alternates: { canonical: canonicalUrl },
+  openGraph: {
+    title: "MacBook Waterschade? Dit Moet je Direct Doen",
+    description: "Volg deze stappen om verdere schade te beperken en lees wanneer professionele controle nodig is.",
+    type: "article",
+    url: canonicalUrl,
+    locale: "nl_NL",
+    publishedTime: "2025-02-24",
+    modifiedTime: "2026-07-18",
+    authors: ["Max"],
+  },
 };
+
+const blogPostingSchema = articleSchema({
+  title: "MacBook Waterschade? Dit Moet je Direct Doen",
+  description: "MacBook nat geworden? Volg deze stappen om verdere schade te beperken en lees wanneer professionele controle nodig is.",
+  url: canonicalUrl,
+  datePublished: "2025-02-24",
+  dateModified: "2026-07-18",
+  author: "Max",
+});
 
 const steps = [
   {
@@ -59,6 +81,10 @@ const steps = [
 export default function MacBookWaterschadePage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(blogPostingSchema) }}
+      />
       <main className="pb-24">
         {/* Breadcrumb */}
         <nav className="py-4 bg-[var(--color-surface)] border-b border-[var(--color-border)]">
@@ -266,7 +292,7 @@ export default function MacBookWaterschadePage() {
                 </Link>
                 
                 <Link 
-                  href="/blog/wat-kost-een-website-laten-maken"
+                  href="/blog/wat-kost-website-laten-maken"
                   className="p-6 bg-[var(--color-bg)] border border-[var(--color-border)] rounded-xl hover:border-primary transition-colors"
                 >
                   <span className="text-xs text-primary font-medium">Websites</span>

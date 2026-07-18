@@ -1,7 +1,9 @@
 ---
 title: "Lokale SEO voor Utrechtse Ondernemers: Zo Word je Gevonden in Je Eigen Stad"
+seoTitle: "Lokale SEO Utrecht: Zo Word je Beter Gevonden"
 description: "Praktische gids voor lokale SEO in Utrecht. Leer hoe je met Google Bedrijfsprofiel, lokale keywords en content hoger rankt in Utrecht en omgeving."
 date: "2026-03-12"
+dateModified: "2026-07-18"
 readTime: "12 min"
 category: "SEO"
 image: "/images/blog/lokale-seo.jpg"
@@ -150,7 +152,7 @@ Voorbeeld:
 
 **Meta Description**
 De korte omschrijving onder je title in Google:
-"Op zoek naar een professionele website in Utrecht? Wij bouwen WordPress websites op maat. Vanaf €250. Gratis intakegesprek."
+"Op zoek naar een professionele website in Utrecht? Wij bouwen complete bedrijfswebsites met een techniek die past bij je doelen. Vanaf €250. Gratis intakegesprek."
 
 **H1 Heading**
 De hoofdtitel van je pagina:
@@ -341,17 +343,16 @@ Je optimaliseert één keer en denkt dat het klaar is. SEO is een doorlopend pro
 
 **Oplossing:** Plan maandelijks tijd in voor SEO checken en bijwerken.
 
-## Realistische Tijdlijn
+## Realistische Verwachtingen
 
-Lokale SEO is geen quick fix. Dit is wat je kunt verwachten:
+Lokale SEO is geen quick fix en kent geen gegarandeerde positie of vaste doorlooptijd. Een praktisch traject bestaat meestal uit:
 
-**Week 1-2:** Google Bedrijfsprofiel opzetten en verifiëren  
-**Week 3-4:** Website optimaliseren voor lokale zoekwoorden  
-**Week 5-8:** Lokale links bouwen  
-**Maand 3-6:** Zichtbare verbeteringen in rankings  
-**Maand 6-12:** Top 3 posities voor lokale zoektermen
+- Google Bedrijfsprofiel controleren en waar nodig verifiëren
+- Belangrijke pagina's en lokale signalen verbeteren
+- Reviews, vermeldingen en relevante lokale links opbouwen
+- Vertoningen, klikken en aanvragen maandelijks volgen
 
-Geduld is belangrijk. Maar het resultaat? Die blijft jarenlang waarde opleveren.
+Hoe snel zichtbaarheid verandert, hangt af van concurrentie, uitgangspositie, locatie en de kwaliteit van je website en profiel. Monitor daarom niet alleen posities, maar ook telefoontjes, route-aanvragen, websiteklikken en echte leads.
 
 ## Wanneer Schakel Je Een Professional In?
 
@@ -374,7 +375,11 @@ Lokale SEO is niet rocket science. Het is consistentie en aandacht voor detail.
 3. Optimaliseer je homepage title en meta description
 4. Vraag 3 tevreden klanten om een review
 
-Doe dit, en je bent al ver vooruit op 80% van je concurrenten.
+Met deze vier stappen leg je een controleerbare basis waarop je verder kunt verbeteren.
+
+## Officiële bron
+
+Lees ook de uitleg van Google over [hoe lokale resultaten worden bepaald](https://support.google.com/business/answer/7091?hl=nl). Google noemt relevantie, afstand en bekendheid als belangrijke factoren en geeft geen garantie op een specifieke positie.
 
 ---
 

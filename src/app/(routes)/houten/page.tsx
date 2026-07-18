@@ -42,7 +42,7 @@ export default function HoutenPage() {
         },
         {
           question: "Hoe snel kan mijn website in Houten online staan?",
-          answer: "Een standaard website is doorgaans binnen 1 week online. Webshops en maatwerkprojecten duren meestal 2 tot 3 weken, afhankelijk van de wensen.",
+          answer: "De doorlooptijd hangt af van de omvang, functies en beschikbaarheid van de content. Na een korte intake ontvang je een duidelijke planning en spreken we vooraf een opleverdatum af.",
         },
         {
           question: "Krijg ik ook hulp met vindbaarheid in Google?",

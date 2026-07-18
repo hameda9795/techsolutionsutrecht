@@ -28,7 +28,7 @@
 #### مقاله ۱: "5 Redenen Waarom je Website Niet op Google Verschijnt"
 - **کلمات کلیدی:** website niet gevonden google, wordpress niet zichtbaar, website staat niet in google
 - **هدف:** ترافیک + لید برای سرویس SEO
-- **لینک داخلی:** `/diensten/seo`, `/diensten/wordpress`
+- **لینک داخلی:** `/diensten/seo`, `/diensten/website-laten-maken`
 - **CTA:** "Wil je hoger in Google? Bekijk onze SEO dienst"
 - **تعداد کلمات:** ۱۵۰۰-۲۰۰۰
 
@@ -80,7 +80,7 @@
 #### مقاله ۴: "WordPress vs Wix vs Squarespace: Wat is Beter in 2025?"
 - **کلمات کلیدی:** wordpress vs wix, beste website platform, wix vs wordpress nederland
 - **هدف:** مقایسه + ترافیک
-- **لینک داخلی:** `/diensten/wordpress`
+- **لینک داخلی:** `/diensten/website-laten-maken`
 - **CTA:** "Kies voor WordPress met professionele hulp"
 - **تعداد کلمات:** ۲۰۰۰-۲۵۰۰
 
@@ -108,7 +108,7 @@
 #### مقاله ۶: "Hoe Lang Duurt een Website Laten Maken? [Realistische Tijden]"
 - **کلمات کلیدی:** hoe lang website laten maken, website bouwen tijd, snelle website
 - **هدف:** ترافیک + مدیریت انتظارات
-- **لینک داخلی:** `/diensten/wordpress`, `/website-binnen-week`
+- **لینک داخلی:** `/diensten/website-laten-maken`, `/website-binnen-week`
 - **CTA:** "Express oplevering mogelijk"
 - **تعداد کلمات:** ۱۵۰۰-۲۰۰۰
 
@@ -169,7 +169,7 @@
 #### مقاله ۱۱: "Hoe Schrijf je Teksten die Converteren voor je Website?"
 - **کلمات کلیدی:** website teksten schrijven, copywriting tips, conversie teksten
 - **هدف:** آموزش + لید
-- **لینک داخلی:** `/diensten/wordpress`
+- **لینک داخلی:** `/diensten/website-laten-maken`
 - **CTA:** "Wil je professionele teksten? Wij helpen je"
 - **تعداد کلمات:** ۱۸۰۰-۲۲۰۰
 
@@ -178,7 +178,7 @@
 #### مقاله ۱۲: "De Kosten van een Website in 2025: Wat Betaal je Echt?"
 - **کلمات کلیدی:** website kosten 2025, wat kost een website, website prijzen nederland
 - **هدف:** ترافیک + شفافیت
-- **لینک داخلی:** `/diensten/wordpress`, `/diensten/webshop`
+- **لینک داخلی:** `/diensten/website-laten-maken`, `/diensten/webshop`
 - **CTA:** "Bekijk onze scherpe prijzen"
 - **تعداد کلمات:** ۲۰۰۰-۲۵۰۰
 
@@ -222,7 +222,7 @@
 #### مقاله ۱۶: "Case Study: Hoe wij een ZZP-er Hielpen met 300% Meer Leads"
 - **کلمات کلیدی:** case study website, succesverhaal webdesign, voorbeeld website
 - **هدف:** اعتمادسازی + proof
-- **لینک داخلی:** `/portfolio`, `/diensten/wordpress`
+- **لینک داخلی:** `/portfolio`, `/diensten/website-laten-maken`
 - **CTA:** "Wil jij ook meer leads? Neem contact op"
 - **تعداد کلمات:** ۱۵۰۰-۲۰۰۰
 

@@ -54,7 +54,7 @@ export default function VleutenPage() {
         },
         {
           question: "Hoe snel staat mijn website in Vleuten online?",
-          answer: "Een standaard website is doorgaans binnen 1 week online. Voor een webshop of maatwerkproject reken je op 2 tot 3 weken, afhankelijk van de wensen.",
+          answer: "De doorlooptijd hangt af van de omvang, functies en beschikbaarheid van de content. Na een korte intake ontvang je een duidelijke planning en spreken we vooraf een opleverdatum af.",
         },
         {
           question: "Krijg ik ook hulp met vindbaarheid in Google?",

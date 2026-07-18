@@ -1,8 +1,18 @@
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
-import { projectTypeLabels, getInitials } from "@/lib/projects-showcase";
+import {
+  projectTypeLabels,
+  getInitials,
+  type ProjectType,
+  type ShowcaseProject,
+} from "@/lib/projects-showcase";
 import { getAllShowcaseProjects } from "@/lib/showcase-db";
+
+type LatestProjectsProps = {
+  type?: ProjectType;
+  projects?: ShowcaseProject[];
+};
 
 /**
  * Strook met de nieuwste projecten als volledige beeldkaarten (geen story-ring).
@@ -10,9 +20,12 @@ import { getAllShowcaseProjects } from "@/lib/showcase-db";
  * Mobiel 3 per rij, desktop 5 per rij.
  * Leest live uit de database, zodat admin-wijzigingen direct verschijnen.
  */
-export default async function LatestProjects() {
-  const all = await getAllShowcaseProjects();
-  const latest = all.slice(0, 5);
+export default async function LatestProjects({
+  type,
+  projects,
+}: LatestProjectsProps = {}) {
+  const all = projects ?? (await getAllShowcaseProjects());
+  const latest = (type ? all.filter((project) => project.type === type) : all).slice(0, 5);
 
   if (latest.length === 0) return null;
 

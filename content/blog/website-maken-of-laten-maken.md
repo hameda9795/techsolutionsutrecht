@@ -1,7 +1,9 @@
 ---
 title: "Website Maken of Laten Maken? Een Eerlijke Vergelijking (2026)"
+seoTitle: "Website Zelf Maken of Laten Maken? Vergelijking 2026"
 description: "Twijfel je tussen zelf een website maken of laten maken? Lees deze eerlijke vergelijking met voor- en nadelen, kosten en een beslissingsframework."
 date: "2026-03-13"
+dateModified: "2026-07-18"
 readTime: "10 min"
 category: "Websites"
 image: "/images/blog/diy-vs-professional.jpg"
@@ -233,7 +235,7 @@ Eerlijk? Zowel DIY als laten maken kunnen werken. Het hangt ervan af wie je bent
 
 **De enige verkeerde keuze is geen website hebben.**
 
-Of je nu €20 per maand uitgeeft aan Wix of €800 aan een freelancer voor een professionele WordPress-website – zorg dat je online zichtbaar bent. In 2026 is dat geen luxe, dat is zakelijk overleven.
+Of je nu zelf met een websitebouwer werkt of een complete professionele website laat maken: zorg dat je online aanwezigheid betrouwbaar en passend bij je bedrijf is. De techniek kan WordPress, Next.js of een andere geschikte oplossing zijn; het resultaat voor je klant staat voorop.
 
 **Mijn aanbod:**
 Als je twijfelt, bel me. Een vrijblijvend gesprek kost niets, en ik help je graag de juiste keuze te maken – ook als dat betekent dat je beter zelf aan de slag kunt.

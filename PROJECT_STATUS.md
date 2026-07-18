@@ -36,7 +36,7 @@
 - [x] /blog (Blog listing)
 
 #### Service Pages (5)
-- [x] /diensten/wordpress
+- [x] /diensten/website-laten-maken
 - [x] /diensten/webshop
 - [x] /diensten/maatwerk
 - [x] /diensten/seo
@@ -51,7 +51,7 @@
 - [x] /reparaties/tablet ⭐ NEW
 
 #### Content Pages (4)
-- [x] /blog/wat-kost-een-website-laten-maken
+- [x] /blog/wat-kost-website-laten-maken
 - [x] /blog/laptop-start-niet-op-5-oplossingen
 - [x] /blog/macbook-waterschade-wat-te-doen
 - [x] /veelgestelde-vragen (FAQ) ⭐ NEW

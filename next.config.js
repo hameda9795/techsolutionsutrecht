@@ -2,6 +2,9 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
+  // Trailing slashes are normalized in middleware so legacy URLs can redirect
+  // straight to their final destination without an intermediate hop.
+  skipTrailingSlashRedirect: true,
   experimental: {
     // Inline kritische CSS en laad de rest niet-blokkerend (critters).
     // Lost de "render-blocking requests" van de CSS-bundels op.
@@ -54,6 +57,30 @@ const nextConfig = {
       { source: "/services/web-design", destination: "/diensten", permanent: true },
       { source: "/services/software", destination: "/diensten/maatwerk", permanent: true },
 
+      // Renamed website service -> canonical service URL
+      {
+        source: "/diensten/wordpress/",
+        destination: "/diensten/website-laten-maken",
+        permanent: true,
+      },
+      {
+        source: "/diensten/wordpress",
+        destination: "/diensten/website-laten-maken",
+        permanent: true,
+      },
+
+      // Renamed automation service -> canonical service URL
+      {
+        source: "/diensten/ai/",
+        destination: "/diensten/whatsapp-automatisering",
+        permanent: true,
+      },
+      {
+        source: "/diensten/ai",
+        destination: "/diensten/whatsapp-automatisering",
+        permanent: true,
+      },
+
       // Old "software op maat" pages -> current maatwerk service
       { source: "/software-op-maat", destination: "/diensten/maatwerk", permanent: true },
       { source: "/software-op-maat/", destination: "/diensten/maatwerk", permanent: true },
@@ -73,7 +100,9 @@ const nextConfig = {
       { source: "/cookiebeleid", destination: "/privacy", permanent: true },
 
       // Duplicate blog posts -> canonical version (fix keyword cannibalization)
+      { source: "/blog/wat-kost-een-website-laten-maken/", destination: "/blog/wat-kost-website-laten-maken", permanent: true },
       { source: "/blog/wat-kost-een-website-laten-maken", destination: "/blog/wat-kost-website-laten-maken", permanent: true },
+      { source: "/blog/5-redenen-website-niet-op-google/", destination: "/blog/website-niet-in-google", permanent: true },
       { source: "/blog/5-redenen-website-niet-op-google", destination: "/blog/website-niet-in-google", permanent: true },
     ];
   },

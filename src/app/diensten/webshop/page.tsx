@@ -1,8 +1,16 @@
 import { Metadata } from "next";
-import Footer from "@/components/Footer";
 import Link from "next/link";
-import { ShoppingCart, Check, ArrowRight, Zap, Clock, CreditCard, Package, Search, Phone } from "lucide-react";
-import { breadcrumbSchema, serviceSchema, faqPageSchema } from "@/lib/schema";
+import {
+  ArrowRight,
+  Check,
+  Clock,
+  Phone,
+  ShoppingCart,
+} from "lucide-react";
+import Footer from "@/components/Footer";
+import LatestProjects from "@/components/LatestProjects";
+import ServiceHeroVisual from "@/components/ServiceHeroVisual";
+import { breadcrumbSchema, serviceSchema } from "@/lib/schema";
 
 const pageUrl = "https://techsolutionsutrecht.nl/diensten/webshop";
 
@@ -23,31 +31,29 @@ const faqs = [
   {
     question: "Wat kost een webshop laten maken in Utrecht?",
     answer:
-      "Een complete WooCommerce-webshop kost bij TechSolutionsUtrecht doorgaans tussen €350 en €1.200, afhankelijk van het aantal producten, gewenste betaalmethoden en koppelingen. De prijs is all-in: iDEAL-koppeling, design, installatie en een SEO-basis zijn inbegrepen. Je krijgt vooraf een heldere offerte zonder verborgen kosten.",
+      "Een professionele webshop begint bij €795. De meeste webshops kosten €1.000–€2.000, afhankelijk van het aantal producten, productvariaties, betaalmethoden, verzendregels en gewenste koppelingen. Je ontvangt vooraf een duidelijke offerte met een vaste totaalprijs.",
   },
   {
     question: "Welke betaalmethoden kan mijn webshop accepteren?",
     answer:
-      "Je webshop kan alle gangbare betaalmethoden aan: iDEAL, creditcard, PayPal, Bancontact en meer, via een betrouwbare payment provider zoals Mollie of Stripe. Zo kunnen je klanten betalen zoals ze gewend zijn, wat zorgt voor minder afgebroken bestellingen.",
+      "Via Mollie kan je webshop onder andere iDEAL, creditcard, PayPal en Bancontact accepteren. Tijdens de intake bepalen we welke betaalmethoden bij jouw klanten en verkoopgebied passen.",
   },
   {
     question: "Hoe lang duurt het om een webshop te bouwen?",
     answer:
-      "De meeste webshops lever ik binnen 5 tot 12 werkdagen op. De doorlooptijd hangt af van het aantal producten en hoe snel je productinformatie en foto's aanlevert. Bij spoed is express-oplevering mogelijk.",
+      "De planning wordt na de intake vastgesteld. De gemiddelde doorlooptijd is 1–3 weken, afhankelijk van het aantal producten, de gewenste betaalmethoden, verzendinstellingen en koppelingen. Dit is een indicatie en geen vaste oplevergarantie.",
   },
   {
     question: "Kan ik mijn producten en voorraad zelf beheren?",
     answer:
-      "Ja. WooCommerce geeft je een overzichtelijk dashboard waarin je producten toevoegt, prijzen aanpast, voorraad bijhoudt en bestellingen verwerkt, zonder technische kennis. Bij oplevering krijg je uitleg, en wil je het beheer uitbesteden, dan kan dat via website-onderhoud.",
+      "Ja. Je krijgt een gebruiksvriendelijke beheeromgeving waarin je producten, prijzen, voorraad en bestellingen zelf kunt beheren. Bij de oplevering leggen we uit hoe alles werkt.",
   },
   {
     question: "Is mijn webshop ook goed vindbaar in Google?",
     answer:
-      "Zeker. Ik lever je webshop SEO-klaar op met nette producturl's, snelle laadtijden, mobielvriendelijk design en de juiste structured data voor producten. Daardoor maken je productpagina's kans om gevonden te worden. Wil je structureel meer bezoekers, dan sluit SEO-optimalisatie hier perfect op aan.",
+      "De webshop wordt opgeleverd met een technische SEO-basis voor producten en categorieën, een logische URL-structuur, snelle pagina’s en een responsive ontwerp. Voor structurele groei kan dit later worden uitgebreid met doorlopende SEO-optimalisatie.",
   },
 ];
-
-const faqSchema = faqPageSchema(faqs);
 
 export const metadata: Metadata = {
   title: "Webshop Laten Maken Utrecht | WooCommerce | TechSolutions",
@@ -65,227 +71,362 @@ export const metadata: Metadata = {
   },
 };
 
-const features = [
-  "Professioneel design",
-  "Betalingen (iDEAL, creditcard, PayPal)",
-  "Voorraadbeheer",
-  "Verzendintegraties",
-  "BTW-rapportages",
-  "SEO voor producten",
+export const dynamic = "force-dynamic";
+
+const heroFeatures = [
+  "Complete responsive webshop",
+  "iDEAL-betalingen via Mollie",
+  "Product-, voorraad- en orderbeheer",
+  "Verzendinstellingen en basis-SEO",
 ];
 
-const pillars = [
+const deliverables = [
+  "Complete responsive webshop",
+  "Product- en categoriepagina’s",
+  "Winkelwagen en checkout",
+  "iDEAL-betalingen via Mollie",
+  "Voorraadbeheer",
+  "Verzendmethoden en verzendkosten",
+  "Automatische bestelbevestigingen",
+  "Basis-SEO voor producten en categorieën",
+  "Gebruiksvriendelijke beheeromgeving",
+  "Uitleg bij de oplevering",
+  "Volledig eigendom van de webshop",
+];
+
+const priceExamples = [
   {
-    icon: CreditCard,
-    title: "Veilig betalen met iDEAL",
-    text: "Je klanten rekenen vertrouwd af met iDEAL, creditcard of PayPal via een betrouwbare payment provider. Een soepel en veilig afrekenproces zorgt voor minder afgebroken bestellingen en meer omzet.",
+    price: "Vanaf €795",
+    text: "Voor een professionele webshop met de belangrijkste verkoopfuncties.",
   },
   {
-    icon: Package,
-    title: "Voorraad en verzending",
-    text: "Beheer je producten, voorraad en bestellingen vanuit één overzichtelijk dashboard, met koppelingen voor verzending en automatische BTW-rapportages. Alles wat je nodig hebt om professioneel te verkopen.",
+    price: "Meestal €1.000–€2.000",
+    text: "Voor webshops met meerdere categorieën, productvariaties, uitgebreide verzendinstellingen of extra functionaliteiten.",
   },
   {
-    icon: Search,
-    title: "SEO voor productpagina's",
-    text: "Nette producturl's, snelle laadtijden, mobielvriendelijk design en productschema: je webshop is opgebouwd om gevonden te worden in Google en in Google Shopping.",
+    price: "Maatwerk en koppelingen — op aanvraag",
+    text: "Voor koppelingen met externe voorraad-, boekhoud-, reserverings- of andere bedrijfssystemen.",
+  },
+];
+
+const processSteps = [
+  {
+    title: "Kennismaking en webshopplan",
+    text: "We bespreken je assortiment, klanten, betaalmethoden, verzending en gewenste koppelingen. Daarna ontvang je een heldere offerte.",
   },
   {
-    icon: Zap,
-    title: "Snel online en schaalbaar",
-    text: "De meeste webshops staan binnen 5 tot 12 werkdagen live. WooCommerce groeit mee met je bedrijf, of je nu tien of duizend producten verkoopt.",
+    title: "Ontwerp en inrichting",
+    text: "We bouwen de structuur, productpagina’s, winkelwagen en checkout in de stijl van jouw bedrijf.",
+  },
+  {
+    title: "Betaling, verzending en producten",
+    text: "We richten Mollie, verzendregels en het productbeheer in en leggen vooraf vast welke producten wij invoeren.",
+  },
+  {
+    title: "Controle en oplevering",
+    text: "We testen het volledige bestelproces, verwerken je feedback en geven uitleg voordat de webshop livegaat.",
   },
 ];
 
 export default function WebshopPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(service) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(service) }}
+      />
 
-      {/* Breadcrumb */}
-      <nav className="py-4 bg-[var(--color-surface)] border-b border-[var(--color-border)]">
+      <nav className="border-b border-[var(--color-border)] bg-[var(--color-surface)] py-4">
         <div className="container-custom">
-          <ol className="flex items-center gap-2 text-sm flex-wrap">
-            <li><Link href="/" className="text-[var(--color-muted)] hover:text-primary transition-colors">Home</Link></li>
+          <ol className="flex flex-wrap items-center gap-2 text-sm">
+            <li>
+              <Link
+                href="/"
+                className="text-[var(--color-muted)] transition-colors hover:text-primary"
+              >
+                Home
+              </Link>
+            </li>
             <li className="text-[var(--color-muted)]">/</li>
-            <li><Link href="/diensten" className="text-[var(--color-muted)] hover:text-primary transition-colors">Diensten</Link></li>
+            <li>
+              <Link
+                href="/diensten"
+                className="text-[var(--color-muted)] transition-colors hover:text-primary"
+              >
+                Diensten
+              </Link>
+            </li>
             <li className="text-[var(--color-muted)]">/</li>
-            <li><span className="text-[var(--color-ink)] font-medium capitalize">webshop</span></li>
+            <li>
+              <span className="font-medium text-[var(--color-ink)]">
+                Webshop
+              </span>
+            </li>
           </ol>
         </div>
       </nav>
 
-      <main className="pt-32 pb-24">
+      <main className="pb-24 pt-16 sm:pt-20">
         <div className="container-custom">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-[var(--color-primary)] mb-6">
-                <ShoppingCart className="w-8 h-8 text-white" />
-              </div>
+          <section className="grid gap-10 lg:grid-cols-[minmax(0,1.25fr)_minmax(360px,0.95fr)] lg:items-center xl:gap-14">
+            <div className="min-w-0">
+            <div className="mb-6 inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-[var(--color-primary)]">
+              <ShoppingCart className="h-8 w-8 text-white" aria-hidden="true" />
+            </div>
 
-              <h1 className="text-4xl sm:text-5xl font-bold text-[var(--color-ink)] mb-4">
-                Webshop Laten Maken in{" "}
-                <span className="text-[var(--color-primary)]">Utrecht</span>
-              </h1>
+            <h1 className="mb-6 max-w-3xl text-balance text-4xl font-bold text-[var(--color-ink)] sm:text-5xl">
+              Webshop laten maken in{" "}
+              <span className="text-[var(--color-primary)]">Utrecht</span>
+            </h1>
 
-              <div className="flex flex-wrap gap-3 mb-6">
-                <div className="flex items-center gap-2 px-3 py-1 bg-primary/10 rounded-full">
-                  <Zap className="w-4 h-4 text-primary" />
-                  <span className="text-sm text-primary font-medium">Binnen 5-12 dagen online</span>
-                </div>
-                <div className="flex items-center gap-2 px-3 py-1 bg-[var(--color-primary)]/10 rounded-full">
-                  <Clock className="w-4 h-4 text-[var(--color-primary)]" />
-                  <span className="text-sm text-[var(--color-primary)] font-medium">Snelle oplevering</span>
-                </div>
-              </div>
+            <div className="mb-6 inline-flex items-center gap-2 rounded-full bg-primary/10 px-3 py-1">
+              <Clock className="h-4 w-4 text-primary" aria-hidden="true" />
+              <span className="text-sm font-medium text-primary">
+                Planning na intake
+              </span>
+            </div>
 
-              <p className="text-lg text-[var(--color-muted)] mb-8">
-                <strong className="text-[var(--color-ink)]">Een webshop laten maken</strong> in Utrecht?
-                Ik bouw een complete WooCommerce-webshop met iDEAL, voorraadbeheer en verzending — scherp geprijsd en
-                klaar om te verkopen, met <strong className="text-primary">direct contact met de developer</strong>.
-              </p>
+            <p className="mb-8 max-w-3xl text-lg leading-relaxed text-[var(--color-muted)]">
+              Laat een{" "}
+              <strong className="text-[var(--color-ink)]">
+                complete professionele webshop
+              </strong>{" "}
+              maken die past bij je producten, klanten en manier van werken. Je
+              krijgt een snelle en gebruiksvriendelijke webshop met online
+              betalingen, voorraadbeheer en een overzichtelijke beheeromgeving.
+            </p>
 
-              <div className="grid sm:grid-cols-2 gap-3 mb-8">
-                {features.map((feature) => (
-                  <div key={feature} className="flex items-center gap-3">
-                    <div className="w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
-                      <Check className="w-3 h-3 text-primary" />
-                    </div>
-                    <span className="text-[var(--color-muted)]">{feature}</span>
+            <div className="mb-8 grid max-w-3xl gap-3 sm:grid-cols-2">
+              {heroFeatures.map((feature) => (
+                <div key={feature} className="flex items-center gap-3">
+                  <div className="flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-primary/20">
+                    <Check className="h-3 w-3 text-primary" aria-hidden="true" />
                   </div>
+                  <span className="text-[var(--color-muted)]">{feature}</span>
+                </div>
+              ))}
+            </div>
+
+            <div className="mb-8">
+              <div className="text-3xl font-bold text-primary">Vanaf €795</div>
+              <div className="mt-1 text-[var(--color-muted)]">
+                Meestal €1.000–€2.000
+              </div>
+            </div>
+
+            <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
+              <Link href="/contact" className="btn-primary group">
+                Vraag een vaste prijs aan
+                <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+              </Link>
+              <Link href="#voorbeelden" className="btn-secondary">
+                Bekijk voorbeelden
+              </Link>
+            </div>
+            </div>
+
+            <ServiceHeroVisual
+              src="/images/webshop-laten-maken-hero.webp"
+              alt="Illustratie van een professionele webshop met producten, bestellingen en voorraadbeheer"
+            />
+          </section>
+
+          <div className="mt-16 space-y-16 sm:mt-20 sm:space-y-20">
+            <section className="max-w-3xl">
+              <h2 className="mb-6 text-balance text-3xl font-bold text-[var(--color-ink)]">
+                Online verkopen met een professionele webshop
+              </h2>
+              <div className="space-y-4 leading-relaxed text-[var(--color-muted)]">
+                <p>
+                  Je ontvangt een complete webshop waarmee klanten producten kunnen
+                  bekijken, veilig betalen en hun bestelling afronden. De inrichting
+                  sluit aan op jouw assortiment, merk en dagelijkse werkwijze.
+                </p>
+                <p>
+                  We kiezen de technische oplossing die bij je bedrijf past.
+                  WooCommerce kan daarbij een geschikte keuze zijn vanwege de
+                  flexibiliteit, het gebruiksvriendelijke beheer en de vele
+                  uitbreidingsmogelijkheden, maar de webshop zelf staat centraal.
+                </p>
+                <p>
+                  De gemiddelde doorlooptijd is 1–3 weken, afhankelijk van het aantal
+                  producten, de gewenste betaalmethoden, verzendinstellingen en
+                  koppelingen. Na de intake ontvang je een realistische planning.
+                </p>
+              </div>
+            </section>
+
+            <section id="voorbeelden" className="scroll-mt-28">
+              <h2 className="text-balance text-3xl font-bold text-[var(--color-ink)]">
+                Bekijk websites die we hebben gemaakt
+              </h2>
+              <div className="-mx-4 sm:-mx-6 lg:-mx-8">
+                <LatestProjects />
+              </div>
+            </section>
+
+            <section>
+              <h2 className="mb-8 text-balance text-3xl font-bold text-[var(--color-ink)]">
+                Wat je krijgt
+              </h2>
+              <ul className="grid gap-x-10 gap-y-4 rounded-2xl bg-[var(--color-surface)] p-6 sm:p-8 md:grid-cols-2 lg:grid-cols-3">
+                {deliverables.map((item) => (
+                  <li key={item} className="flex items-start gap-3">
+                    <div className="mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-primary/20">
+                      <Check className="h-3 w-3 text-primary" aria-hidden="true" />
+                    </div>
+                    <span className="leading-relaxed text-[var(--color-ink)]">
+                      {item}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            </section>
+
+            <section>
+              <h2 className="mb-4 text-balance text-3xl font-bold text-[var(--color-ink)]">
+                Wat kost een webshop laten maken?
+              </h2>
+              <p className="mb-8 max-w-3xl leading-relaxed text-[var(--color-muted)]">
+                De prijs hangt af van het aantal producten, productvariaties,
+                betaalmethoden, verzendregels en benodigde koppelingen. Het aantal
+                producten dat wij voor je invoeren, wordt vooraf in de offerte
+                vastgelegd.
+              </p>
+              <div className="grid gap-6 md:grid-cols-3">
+                {priceExamples.map((example) => (
+                  <article
+                    key={example.price}
+                    className="rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface)] p-6"
+                  >
+                    <h3 className="text-xl font-bold text-[var(--color-primary)]">
+                      {example.price}
+                    </h3>
+                    <p className="mt-4 leading-relaxed text-[var(--color-muted)]">
+                      {example.text}
+                    </p>
+                  </article>
                 ))}
               </div>
+            </section>
 
-              <div className="flex flex-wrap items-center gap-6 mb-8">
-                <div className="text-3xl font-bold text-primary">€350 - €1.200</div>
-                <div className="text-[var(--color-muted)]">Oplevering: 5-12 dagen</div>
+            <section>
+              <h2 className="mb-8 text-balance text-3xl font-bold text-[var(--color-ink)]">
+                Zo bouwen we je webshop
+              </h2>
+              <ol className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+                {processSteps.map((step, index) => (
+                  <li
+                    key={step.title}
+                    className="rounded-2xl border border-[var(--color-border)] bg-[var(--color-bg)] p-6"
+                  >
+                    <div className="mb-5 flex h-10 w-10 items-center justify-center rounded-full bg-[var(--color-primary)] font-bold text-white">
+                      {index + 1}
+                    </div>
+                    <h3 className="text-lg font-bold text-[var(--color-ink)]">
+                      {step.title}
+                    </h3>
+                    <p className="mt-3 text-sm leading-relaxed text-[var(--color-muted)]">
+                      {step.text}
+                    </p>
+                  </li>
+                ))}
+              </ol>
+            </section>
+
+            <section>
+              <h2 className="mb-6 text-3xl font-bold text-[var(--color-ink)]">
+                Bekijk ook
+              </h2>
+              <div className="grid gap-6 md:grid-cols-3">
+                <Link
+                  href="/diensten/website-laten-maken"
+                  className="card-service block rounded-2xl border border-[var(--color-border)] bg-[var(--color-bg)] p-6 transition-colors hover:border-primary/40"
+                >
+                  <h3 className="mb-2 text-lg font-bold text-[var(--color-ink)]">
+                    Website laten maken
+                  </h3>
+                  <p className="text-sm leading-relaxed text-[var(--color-muted)]">
+                    Een complete professionele bedrijfswebsite die bij jouw bedrijf
+                    past.
+                  </p>
+                </Link>
+                <Link
+                  href="/diensten/seo"
+                  className="card-service block rounded-2xl border border-[var(--color-border)] bg-[var(--color-bg)] p-6 transition-colors hover:border-primary/40"
+                >
+                  <h3 className="mb-2 text-lg font-bold text-[var(--color-ink)]">
+                    SEO optimalisatie
+                  </h3>
+                  <p className="text-sm leading-relaxed text-[var(--color-muted)]">
+                    Werk na de lancering structureel aan meer relevante bezoekers uit
+                    Google.
+                  </p>
+                </Link>
+                <Link
+                  href="/projecten"
+                  className="card-service block rounded-2xl border border-[var(--color-border)] bg-[var(--color-bg)] p-6 transition-colors hover:border-primary/40"
+                >
+                  <h3 className="mb-2 text-lg font-bold text-[var(--color-ink)]">
+                    Projecten
+                  </h3>
+                  <p className="text-sm leading-relaxed text-[var(--color-muted)]">
+                    Bekijk eerder opgeleverde websites en webapplicaties.
+                  </p>
+                </Link>
               </div>
+            </section>
 
-              <Link href="/contact" className="btn-primary group inline-flex">
-                Start je webshop
-                <ArrowRight className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1" />
-              </Link>
-            </div>
-
-            <div className="relative">
-              <div className="aspect-square rounded-2xl bg-[var(--color-primary)]/10 flex items-center justify-center">
-                <div className="text-center">
-                  <ShoppingCart className="w-24 h-24 text-primary mx-auto mb-4" />
-                  <div className="text-2xl font-bold text-[var(--color-ink)]">WooCommerce</div>
-                  <div className="text-3xl font-extrabold text-primary mt-2">Vanaf €350</div>
-                  <div className="text-[var(--color-muted)] mt-1">5-12 dagen</div>
-                </div>
+            <section className="max-w-3xl">
+              <h2 className="mb-10 text-balance text-3xl font-bold text-[var(--color-ink)]">
+                Veelgestelde vragen over webshops
+              </h2>
+              <div className="space-y-4">
+                {faqs.map((faq) => (
+                  <article
+                    key={faq.question}
+                    className="rounded-xl border border-[var(--color-border)] bg-[var(--color-bg)] p-6"
+                  >
+                    <h3 className="mb-2 text-lg font-semibold text-[var(--color-ink)]">
+                      {faq.question}
+                    </h3>
+                    <p className="leading-relaxed text-[var(--color-muted)]">
+                      {faq.answer}
+                    </p>
+                  </article>
+                ))}
               </div>
-            </div>
+            </section>
+
+            <section className="rounded-2xl border border-[var(--color-border)] bg-[var(--color-bg)] p-8 text-center sm:p-10">
+              <h2 className="mb-4 text-balance text-3xl font-bold text-[var(--color-ink)]">
+                Klaar om online te verkopen?
+              </h2>
+              <p className="mx-auto mb-8 max-w-2xl leading-relaxed text-[var(--color-muted)]">
+                Vertel ons wat je wilt verkopen en welke functies je nodig hebt. Na
+                een korte intake ontvang je een duidelijke offerte met een vaste
+                totaalprijs.
+              </p>
+              <div className="flex flex-col justify-center gap-4 sm:flex-row">
+                <a
+                  href="https://wa.me/31625518708"
+                  className="inline-flex items-center justify-center gap-2 rounded-xl bg-[#25D366] px-8 py-4 font-semibold text-white transition-colors hover:bg-[#128C7E]"
+                >
+                  <Phone className="h-5 w-5" aria-hidden="true" /> WhatsApp direct
+                </a>
+                <Link
+                  href="/contact"
+                  className="btn-primary inline-flex items-center justify-center"
+                >
+                  Vraag een vaste prijs aan
+                </Link>
+              </div>
+            </section>
           </div>
-
-          {/* Intro */}
-          <section className="mt-24 max-w-3xl">
-            <h2 className="text-3xl font-bold text-[var(--color-ink)] mb-6">
-              Online verkopen met een professionele webshop
-            </h2>
-            <p className="text-[var(--color-muted)] mb-4 leading-relaxed">
-              Een eigen webshop is voor steeds meer ondernemers in Utrecht dé manier om te groeien: je verkoopt
-              24 uur per dag, bereikt klanten buiten je directe omgeving en bent niet afhankelijk van marktplaatsen
-              die een fors deel van je marge afromen. Met een goed gebouwde WooCommerce-webshop heb je alles in
-              eigen hand, van prijzen tot uitstraling.
-            </p>
-            <p className="text-[var(--color-muted)] mb-4 leading-relaxed">
-              WooCommerce is het meest gebruikte webshopplatform ter wereld en draait op WordPress. Dat betekent
-              maximale flexibiliteit, geen maandelijkse platformkosten zoals bij gesloten systemen, en de vrijheid om
-              je webshop later uit te breiden met nieuwe functies, koppelingen of een blog.
-            </p>
-            <p className="text-[var(--color-muted)] leading-relaxed">
-              Ik bouw je webshop met aandacht voor snelheid, een soepel afrekenproces en een stevige SEO-basis, zodat
-              je niet alleen kunt verkopen, maar ook daadwerkelijk gevonden wordt. En je werkt rechtstreeks met de
-              developer: korte lijnen, snelle reactie.
-            </p>
-          </section>
-
-          {/* Pillars */}
-          <section className="mt-20">
-            <h2 className="text-3xl font-bold text-[var(--color-ink)] mb-10">Wat je webshop kan</h2>
-            <div className="grid md:grid-cols-2 gap-6">
-              {pillars.map((p) => (
-                <div key={p.title} className="bg-[var(--color-bg)] border border-[var(--color-border)] rounded-2xl p-6">
-                  <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-primary/10 mb-4">
-                    <p.icon className="w-6 h-6 text-primary" />
-                  </div>
-                  <h3 className="text-xl font-bold text-[var(--color-ink)] mb-2">{p.title}</h3>
-                  <p className="text-[var(--color-muted)] leading-relaxed">{p.text}</p>
-                </div>
-              ))}
-            </div>
-          </section>
-
-          {/* Proces */}
-          <section className="mt-20 max-w-3xl">
-            <h2 className="text-3xl font-bold text-[var(--color-ink)] mb-6">Zo bouwen we je webshop</h2>
-            <ul className="space-y-4">
-              {[
-                "Kennismaking en offerte: we bespreken je assortiment, gewenste betaal- en verzendmethoden en budget. Je ontvangt een all-in offerte.",
-                "Opbouw en inrichting: ik bouw de webshop, richt de betaal- en verzendkoppelingen in en zet je producten netjes online.",
-                "SEO en testen: producturl's, snelheid en productschema worden geoptimaliseerd, en we testen het bestelproces grondig.",
-                "Live en uitleg: na je akkoord gaat de webshop live en krijg je uitleg om zelf producten en bestellingen te beheren.",
-              ].map((step) => (
-                <li key={step} className="flex items-start gap-3">
-                  <Check className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
-                  <span className="text-[var(--color-muted)] leading-relaxed">{step}</span>
-                </li>
-              ))}
-            </ul>
-          </section>
-
-          {/* Interne links */}
-          <section className="mt-20">
-            <h2 className="text-3xl font-bold text-[var(--color-ink)] mb-4">Bekijk ook</h2>
-            <div className="grid md:grid-cols-3 gap-6">
-              <Link href="/diensten/wordpress" className="card-service block p-6 rounded-2xl bg-[var(--color-bg)] border border-[var(--color-border)] hover:border-primary/40 transition-colors">
-                <h3 className="text-lg font-bold text-[var(--color-ink)] mb-2">WordPress website</h3>
-                <p className="text-[var(--color-muted)] text-sm">Een professionele bedrijfswebsite die je zelf beheert.</p>
-              </Link>
-              <Link href="/diensten/seo" className="card-service block p-6 rounded-2xl bg-[var(--color-bg)] border border-[var(--color-border)] hover:border-primary/40 transition-colors">
-                <h3 className="text-lg font-bold text-[var(--color-ink)] mb-2">SEO optimalisatie</h3>
-                <p className="text-[var(--color-muted)] text-sm">Meer bezoekers en omzet via Google.</p>
-              </Link>
-              <Link href="/portfolio" className="card-service block p-6 rounded-2xl bg-[var(--color-bg)] border border-[var(--color-border)] hover:border-primary/40 transition-colors">
-                <h3 className="text-lg font-bold text-[var(--color-ink)] mb-2">Portfolio</h3>
-                <p className="text-[var(--color-muted)] text-sm">Bekijk eerder gebouwde websites en webshops.</p>
-              </Link>
-            </div>
-          </section>
-
-          {/* FAQ */}
-          <section className="mt-20 max-w-3xl">
-            <h2 className="text-3xl font-bold text-[var(--color-ink)] mb-10">Veelgestelde vragen over webshops</h2>
-            <div className="space-y-4">
-              {faqs.map((faq) => (
-                <div key={faq.question} className="bg-[var(--color-bg)] border border-[var(--color-border)] rounded-xl p-6">
-                  <h3 className="text-lg font-semibold text-[var(--color-ink)] mb-2">{faq.question}</h3>
-                  <p className="text-[var(--color-muted)] leading-relaxed">{faq.answer}</p>
-                </div>
-              ))}
-            </div>
-          </section>
-
-          {/* CTA */}
-          <section className="mt-20 text-center bg-[var(--color-bg)] border border-[var(--color-border)] rounded-2xl p-10">
-            <h2 className="text-3xl font-bold text-[var(--color-ink)] mb-4">Klaar om online te verkopen?</h2>
-            <p className="text-[var(--color-muted)] mb-8 max-w-2xl mx-auto leading-relaxed">
-              Vraag vrijblijvend een offerte aan voor je webshop. Je krijgt binnen één werkdag een reactie, direct van
-              de developer die je webshop bouwt.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="https://wa.me/31625518708" className="inline-flex items-center justify-center gap-2 bg-[#25D366] text-white px-8 py-4 rounded-xl font-semibold hover:bg-[#128C7E] transition-colors">
-                <Phone className="w-5 h-5" /> WhatsApp direct
-              </a>
-              <Link href="/contact" className="btn-primary inline-flex items-center justify-center">
-                Offerte aanvragen
-              </Link>
-            </div>
-          </section>
         </div>
       </main>
       <Footer />

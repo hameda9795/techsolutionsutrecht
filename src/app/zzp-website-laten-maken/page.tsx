@@ -7,15 +7,28 @@ import { breadcrumbSchema, serviceSchema, faqPageSchema } from "@/lib/schema";
 const pageUrl = "https://techsolutionsutrecht.nl/zzp-website-laten-maken";
 
 export const metadata: Metadata = {
-  title: "ZZP Website Laten Maken Utrecht | Snel & Persoonlijk | TechSolutions",
-  description: "ZZP website laten maken in Utrecht? Een professionele, betaalbare website binnen 1 week online. Direct contact met de developer. Ideaal voor starters en ZZP'ers.",
+  title: "ZZP Website Laten Maken Utrecht vanaf €250 | TechSolutions",
+  description: "Laat een complete ZZP-website maken vanaf €250. Mobielvriendelijk, met contactmogelijkheden, basis-SEO en direct contact met de developer in Utrecht.",
   alternates: { canonical: pageUrl },
+  openGraph: {
+    title: "ZZP Website Laten Maken Utrecht vanaf €250 | TechSolutions",
+    description: "Een complete professionele ZZP-website vanaf €250, afgestemd op je bedrijf en klanten.",
+    type: "website",
+    locale: "nl_NL",
+    url: pageUrl,
+    siteName: "TechSolutionsUtrecht",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "ZZP Website Laten Maken Utrecht vanaf €250 | TechSolutions",
+    description: "Een complete professionele ZZP-website vanaf €250, afgestemd op je bedrijf en klanten.",
+  },
 };
 
 const service = serviceSchema({
   name: "ZZP website laten maken Utrecht",
   description:
-    "Professionele, betaalbare website voor ZZP'ers en starters in Utrecht. Binnen 1 week online, SEO-klaar en zelf te beheren. Direct contact met de developer.",
+    "Complete professionele website voor ZZP'ers en starters in Utrecht vanaf €250, met een duidelijke planning, basis-SEO en direct contact met de developer.",
   url: pageUrl,
 });
 
@@ -28,22 +41,22 @@ const faqs = [
   {
     question: "Wat kost een ZZP website?",
     answer:
-      "Een complete ZZP-website start vanaf €250 all-in, zonder verborgen kosten. De exacte prijs hangt af van het aantal pagina's en je wensen. Je krijgt vooraf een heldere offerte, zodat je precies weet waar je aan toe bent.",
+      "Een complete ZZP-website start vanaf €250 en kost meestal €350–€650. De uiteindelijke prijs hangt af van de inhoud, functies en koppelingen. Je ontvangt vooraf een heldere offerte met een vaste totaalprijs.",
   },
   {
     question: "Hoe snel staat mijn ZZP-website online?",
     answer:
-      "De meeste ZZP-websites zijn binnen 1 week online. Lever je je teksten en logo snel aan, dan kan het soms nog sneller. Bij spoed is express-oplevering mogelijk.",
+      "De doorlooptijd hangt af van de omvang, functies en beschikbaarheid van teksten en beeldmateriaal. Na een korte intake ontvang je een duidelijke planning en spreken we vooraf een opleverdatum af.",
   },
   {
     question: "Kan ik mijn website zelf aanpassen?",
     answer:
-      "Ja. Je website wordt gebouwd met een gebruiksvriendelijk CMS, zodat je zelf teksten, foto's en prijzen kunt aanpassen zonder technische kennis. Wil je het beheer uitbesteden, dan kan dat ook.",
+      "Ja, als zelf beheren belangrijk is kiezen we een passende oplossing waarmee je teksten, foto's en prijzen kunt aanpassen. Bij oplevering krijg je uitleg en het technische onderhoud kun je ook uitbesteden.",
   },
   {
     question: "Is de website geschikt om gevonden te worden in Google?",
     answer:
-      "Zeker. Elke ZZP-website lever ik SEO-klaar op: snelle laadtijden, nette structuur en mobielvriendelijk. Zo maak je vanaf dag één kans om lokaal gevonden te worden door nieuwe klanten.",
+      "Elke ZZP-website krijgt een goede technische SEO-basis met snelle laadtijden, een nette structuur en mobielvriendelijke pagina's. Voor structurele groei kan dit worden uitgebreid met doorlopende SEO-optimalisatie.",
   },
 ];
 
@@ -61,13 +74,13 @@ const features = [
 const benefits = [
   {
     icon: Euro,
-    title: "Scherpe Prijs",
-    description: "Vanaf €250 all-in. Geen verborgen kosten. Betaalbaar voor elke ZZP'er."
+    title: "Heldere Prijs",
+    description: "Vanaf €250 en meestal €350–€650. Je ontvangt vooraf een vaste totaalprijs."
   },
   {
     icon: Clock,
-    title: "Snel Online",
-    description: "Binnen 1 week uw website live. Soms zelfs sneller bij spoed."
+    title: "Duidelijke Planning",
+    description: "Na de intake spreken we een haalbare planning en opleverdatum af."
   },
   {
     icon: Star,
@@ -103,10 +116,10 @@ export default function ZZPWebsitePage() {
               </h1>
 
               <p className="text-lg text-[var(--color-muted)] mb-6">
-                <strong className="text-[var(--color-ink)]">Een betaalbare, professionele website voor ZZP'ers.</strong>{" "}
-                Scherp geprijsd, binnen <strong className="text-primary">1 week</strong> online en met{" "}
+                <strong className="text-[var(--color-ink)]">Een betaalbare, professionele website voor ZZP&apos;ers.</strong>{" "}
+                Scherp geprijsd, met een <strong className="text-primary">duidelijke planning</strong> en{" "}
                 <strong className="text-primary">direct contact met de developer</strong>.
-                Perfect voor <strong className="text-[var(--color-ink)]">startende ondernemers</strong> en ZZP'ers in Utrecht.
+                Perfect voor <strong className="text-[var(--color-ink)]">startende ondernemers</strong> en ZZP&apos;ers in Utrecht.
               </p>
 
               <div className="grid sm:grid-cols-2 gap-3 mb-8">
@@ -122,7 +135,7 @@ export default function ZZPWebsitePage() {
 
               <div className="flex flex-wrap items-center gap-6 mb-8">
                 <div className="text-3xl font-bold text-primary">Vanaf €250</div>
-                <div className="text-[var(--color-muted)]">Binnen 1 week online</div>
+                <div className="text-[var(--color-muted)]">Meestal €350–€650</div>
               </div>
 
               <div className="flex flex-wrap gap-4">
@@ -146,8 +159,8 @@ export default function ZZPWebsitePage() {
                 <div className="text-center">
                   <User className="w-24 h-24 text-primary mx-auto mb-4" />
                   <div className="text-2xl font-bold text-[var(--color-ink)]">ZZP Website</div>
-                  <div className="text-3xl font-extrabold text-primary mt-2">€250</div>
-                  <div className="text-[var(--color-muted)] mt-1">All-in prijs</div>
+                  <div className="text-3xl font-extrabold text-primary mt-2">Vanaf €250</div>
+                  <div className="text-[var(--color-muted)] mt-1">Offerte met vaste totaalprijs</div>
                 </div>
               </div>
             </div>
@@ -175,12 +188,12 @@ export default function ZZPWebsitePage() {
             <div className="grid md:grid-cols-2 gap-6 text-[var(--color-muted)]">
               <div>
                 <p className="mb-4">
-                  Als <strong className="text-[var(--color-ink)]">startende ondernemer</strong> of ZZP'er 
+                  Als <strong className="text-[var(--color-ink)]">startende ondernemer</strong> of ZZP&apos;er
                   heeft u vaak een beperkt budget. Een dure website van €2.000+ is dan niet haalbaar. 
                   Toch heeft u een professionele online presentatie nodig om klanten te winnen.
                 </p>
                 <p>
-                  Daarom bied ik <strong className="text-primary">scherp geprijsde websites voor ZZP'ers</strong>.
+                  Daarom bied ik <strong className="text-primary">scherp geprijsde websites voor ZZP&apos;ers</strong>.
                   Voor een eerlijke prijs krijgt u een complete website die er professioneel uitziet en goed werkt.
                   Geen watermerken, geen beperkingen — gewoon een goede website, met direct contact met de developer.
                 </p>

@@ -2,15 +2,17 @@ import Image from 'next/image';
 import { Calendar, Clock, User, ArrowRight, Share2 } from 'lucide-react';
 
 export const metadata = {
-  title: '5 Redenen Waarom je Website Niet op Google Verschijnt | TechSolutionsUtrecht',
-  description: 'Is je website niet zichtbaar in Google? Ontdek de 5 meest voorkomende redenen en leer hoe je dit eenvoudig oplost. Praktische tips van een SEO specialist in Utrecht.',
+  title: 'Website Niet in Google? 5 Oorzaken en Oplossingen',
+  description: 'Is je website niet zichtbaar in Google? Ontdek vijf veelvoorkomende oorzaken en praktische stappen om indexering en vindbaarheid te verbeteren.',
   keywords: 'website niet gevonden google, wordpress niet zichtbaar, website staat niet in google, seo problemen oplossen',
   alternates: { canonical: 'https://techsolutionsutrecht.nl/blog/website-niet-in-google' },
   openGraph: {
     title: '5 Redenen Waarom je Website Niet op Google Verschijnt',
     description: 'Ontdek waarom je website niet in Google verschijnt en hoe je dit oplost. Praktische SEO tips!',
     type: 'article',
+    url: 'https://techsolutionsutrecht.nl/blog/website-niet-in-google',
     publishedTime: '2025-03-04T00:00:00Z',
+    modifiedTime: '2026-07-18T00:00:00Z',
     authors: ['TechSolutionsUtrecht'],
   },
 };
@@ -35,7 +37,7 @@ const articleSchema = {
     }
   },
   "datePublished": "2025-03-04",
-  "dateModified": "2025-03-04",
+  "dateModified": "2026-07-18",
   "mainEntityOfPage": {
     "@type": "WebPage",
     "@id": "https://techsolutionsutrecht.nl/blog/website-niet-in-google"

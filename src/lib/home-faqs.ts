@@ -7,12 +7,12 @@ export const homeFaqs: HomeFaq[] = [
   {
     question: "Wat kost een website laten maken in Utrecht?",
     answer:
-      "Elke website krijgt een prijs op maat, afgestemd op jouw wensen en functionaliteiten. Een professionele WordPress-website ligt in een ander segment dan een maatwerk webapplicatie. Je krijgt vooraf een transparante offerte, zodat je precies weet waar je aan toe bent — zonder verrassingen achteraf.",
+      "Een complete professionele website start vanaf €250 en kost meestal €350–€650. De uiteindelijke prijs hangt af van de gewenste inhoud, functies en koppelingen. Je krijgt vooraf een transparante offerte met een vaste totaalprijs.",
   },
   {
     question: "Hoe snel kan mijn website online zijn?",
     answer:
-      "Dankzij moderne technologieën zoals Next.js en WordPress werk ik snel en gericht. Een standaard website is doorgaans binnen 1 week online. Voor complexere projecten met maatwerk of integraties moet je rekenen op 2 tot 3 weken.",
+      "Na de intake ontvang je een realistische planning op basis van de inhoud, functies en koppelingen. Een snelle oplevering is soms mogelijk wanneer teksten, beelden en feedback gereed zijn, maar de afgesproken planning staat altijd vooraf in de offerte.",
   },
   {
     question: "Werk ik direct met de developer?",

@@ -242,7 +242,7 @@ export default function MaatwerkPage() {
           <section className="mt-20">
             <h2 className="text-3xl font-bold text-[var(--color-ink)] mb-4">Bekijk ook</h2>
             <div className="grid md:grid-cols-3 gap-6">
-              <Link href="/diensten/wordpress" className="card-service block p-6 rounded-2xl bg-[var(--color-bg)] border border-[var(--color-border)] hover:border-primary/40 transition-colors">
+              <Link href="/diensten/website-laten-maken" className="card-service block p-6 rounded-2xl bg-[var(--color-bg)] border border-[var(--color-border)] hover:border-primary/40 transition-colors">
                 <h3 className="text-lg font-bold text-[var(--color-ink)] mb-2">WordPress website</h3>
                 <p className="text-[var(--color-muted)] text-sm">Een professionele website die je zelf beheert.</p>
               </Link>

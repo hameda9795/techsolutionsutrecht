@@ -27,7 +27,7 @@ export default function VeenendaalPage() {
       slug="veenendaal"
       intro={[
         "Veenendaal is een van de ondernemendste plaatsen van de regio: een bruisend winkelhart dat meerdere keren is uitgeroepen tot beste binnenstad van Nederland, en tegelijk een serieuze ICT-hub met honderden digitale bedrijven. Wie hier onderneemt, weet dat online zichtbaarheid geen luxe is maar noodzaak.",
-        "Ik bouw websites voor ondernemers in Veenendaal die meer willen dan een digitaal visitekaartje: een snelle, professionele site die klanten oplevert. Direct contact met de developer, transparante prijzen en binnen een week online.",
+        "Ik bouw websites voor ondernemers in Veenendaal die meer willen dan een digitaal visitekaartje: een snelle, professionele site die klanten oplevert. Direct contact met de developer, transparante prijzen en een duidelijke planning vooraf.",
       ]}
       neighbourhoods={["het centrum en de Hoofdstraat", "Veenendaal-Oost", "Veenendaal-West", "bedrijventerrein De Batterijen", "bedrijventerrein Nijverkamp"]}
       whyLocal={[
@@ -54,7 +54,7 @@ export default function VeenendaalPage() {
         },
         {
           question: "Hoe snel staat mijn website in Veenendaal online?",
-          answer: "Een standaard website is doorgaans binnen 1 week online. Voor een webshop of maatwerkproject reken je op 2 tot 3 weken, afhankelijk van de wensen.",
+          answer: "De doorlooptijd hangt af van de omvang, functies en beschikbaarheid van de content. Na een korte intake ontvang je een duidelijke planning en spreken we vooraf een opleverdatum af.",
         },
         {
           question: "Krijg ik ook hulp met vindbaarheid in Google?",

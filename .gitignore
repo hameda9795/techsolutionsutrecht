@@ -18,6 +18,9 @@ dist/
 .env.development.local
 .env.test.local
 .env.production.local
+.google-business-profile-token.json
+.google-business-profile-auth-url
+.gbp-auth.*.log
 
 # IDE
 .vscode/

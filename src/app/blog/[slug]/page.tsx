@@ -44,7 +44,7 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
   const canonicalUrl = `https://techsolutionsutrecht.nl/blog/${slug}`;
   
   return {
-    title: `${post.title} | TechSolutionsUtrecht Blog`,
+    title: post.seoTitle || post.title,
     description: post.description,
     authors: [{ name: post.author }],
     alternates: {
@@ -58,6 +58,7 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
       url: canonicalUrl,
       siteName: 'TechSolutionsUtrecht',
       publishedTime: post.date,
+      modifiedTime: post.dateModified || post.date,
       authors: [post.author],
       images: [
         {
@@ -95,7 +96,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     description: post.description,
     url: canonicalUrl,
     datePublished: post.date,
-    dateModified: post.date,
+    dateModified: post.dateModified || post.date,
     image: post.image,
     author: post.author,
   });
@@ -171,6 +172,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               <BlogHeader
                 title={post.title}
                 date={post.date}
+                dateModified={post.dateModified}
                 readTime={post.readTime}
                 category={post.category}
                 author={post.author}

@@ -15,15 +15,15 @@ const faqs = [
     questions: [
       {
         q: "Wat kost een website laten maken?",
-        a: "De kosten hangen af van je wensen. Een professionele WordPress website start vanaf €250, een webshop vanaf €350 en maatwerk-webapplicaties vanaf €400. De uiteindelijke prijs hangt af van het aantal pagina's en functionaliteiten. Vraag een gratis offerte aan voor een exacte prijs."
+        a: "Een complete professionele website start vanaf €250 en kost meestal €350–€650. Een webshop start vanaf €795 en kost meestal €1.000–€2.000. SEO start vanaf €200 per maand, websiteonderhoud vanaf €29 per maand en een eenvoudige automatisering vanaf €450. Na de intake ontvang je een vaste totaalprijs of duidelijke maandprijs."
       },
       {
         q: "Hoe lang duurt het om een website te maken?",
-        a: "Een standaard WordPress website duurt 2-4 weken. Een webshop 3-6 weken. De exacte tijd hangt af van de complexiteit en hoe snel je content aanlevert."
+        a: "De planning hangt af van inhoud, functies, koppelingen en hoe snel feedback wordt gegeven. Voor een webshop is 1–3 weken een gemiddelde indicatie. Voor websites en automatisering leggen we de planning na de intake vast in de offerte."
       },
       {
         q: "Kan ik zelf mijn website beheren?",
-        a: "Ja! We werken met WordPress, het meest gebruiksvriendelijke CMS. Je krijgt een training zodat je zelf teksten en foto's kunt aanpassen."
+        a: "Ja, wanneer eigen beheer bij je wensen past. WordPress kan geschikt zijn voor uitgebreid contentbeheer; bij andere projecten kiezen we een andere passende techniek. Je krijgt uitleg over de afgesproken beheeromgeving."
       },
       {
         q: "Is mijn website geschikt voor mobiel?",

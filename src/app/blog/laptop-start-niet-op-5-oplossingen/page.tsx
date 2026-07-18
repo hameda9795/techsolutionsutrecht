@@ -3,13 +3,35 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Link from "next/link";
 import { Calendar, Clock, ArrowLeft, User, AlertTriangle, CheckCircle, Power, Battery, Monitor, RotateCcw } from "lucide-react";
+import { articleSchema } from "@/lib/schema";
+
+const canonicalUrl = "https://techsolutionsutrecht.nl/blog/laptop-start-niet-op-5-oplossingen";
 
 export const metadata: Metadata = {
-  title: "Laptop Start Niet Op? 5 Oplossingen die Wél Werken | TechSolutionsUtrecht",
+  title: "Laptop Start Niet Op? 5 Praktische Oplossingen",
   description: "Laptop doet niets meer? Probeer deze 5 oplossingen voordat je naar de reparateur gaat. Werkt het niet? Wij helpen in Utrecht. Bel of WhatsApp!",
   keywords: ["laptop start niet op", "laptop doet niets", "laptop start niet", "laptop probleem", "laptop reparatie utrecht"],
-  alternates: { canonical: "https://techsolutionsutrecht.nl/blog/laptop-start-niet-op-5-oplossingen" },
+  alternates: { canonical: canonicalUrl },
+  openGraph: {
+    title: "Laptop Start Niet Op? 5 Praktische Oplossingen",
+    description: "Probeer deze vijf praktische controles voordat je professionele hulp inschakelt.",
+    type: "article",
+    url: canonicalUrl,
+    locale: "nl_NL",
+    publishedTime: "2025-02-25",
+    modifiedTime: "2026-07-18",
+    authors: ["Max"],
+  },
 };
+
+const blogPostingSchema = articleSchema({
+  title: "Laptop Start Niet Op? 5 Praktische Oplossingen",
+  description: "Laptop doet niets meer? Probeer deze vijf praktische controles voordat je professionele hulp inschakelt.",
+  url: canonicalUrl,
+  datePublished: "2025-02-25",
+  dateModified: "2026-07-18",
+  author: "Max",
+});
 
 const solutions = [
   {
@@ -47,6 +69,10 @@ const solutions = [
 export default function LaptopStartNietOpPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(blogPostingSchema) }}
+      />
       <main className="pb-24">
         {/* Breadcrumb */}
         <nav className="py-4 bg-[var(--color-surface)] border-b border-[var(--color-border)]">
@@ -217,7 +243,7 @@ export default function LaptopStartNietOpPage() {
                 </Link>
                 
                 <Link 
-                  href="/blog/wat-kost-een-website-laten-maken"
+                  href="/blog/wat-kost-website-laten-maken"
                   className="p-6 bg-[var(--color-bg)] border border-[var(--color-border)] rounded-xl hover:border-primary transition-colors"
                 >
                   <span className="text-xs text-primary font-medium">Websites</span>

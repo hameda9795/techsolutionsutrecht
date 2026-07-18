@@ -1,8 +1,10 @@
 ---
 title: "WordPress of Maatwerk: Wat Past bij Jouw Bedrijf?"
+seoTitle: "WordPress of Maatwerk: Wat Past bij Jouw Bedrijf?"
 description: "WordPress of een maatwerk website? Ontdek de verschillen in kosten, flexibiliteit, onderhoud en snelheid, zodat je de juiste keuze maakt voor jouw bedrijf."
 date: "2026-04-22"
-readTime: "9 min"
+dateModified: "2026-07-18"
+readTime: "3 min"
 category: "Webdevelopment"
 image: "/images/blog/wordpress-of-maatwerk.jpg"
 slug: "wordpress-of-maatwerk"
@@ -32,7 +34,7 @@ WordPress is het meest gebruikte contentmanagementsysteem ter wereld. Het draait
 - Voor heel specifieke functionaliteit loop je soms tegen grenzen aan.
 - Te veel plugins kan de **snelheid** drukken als het niet goed wordt opgezet.
 
-Voor de meeste ondernemers, ZZP'ers en kleine bedrijven is een [WordPress website](/diensten/wordpress) de slimste keuze: professioneel, flexibel en goed te beheren.
+Voor veel ondernemers, ZZP'ers en kleine bedrijven is een [professionele website](/diensten/website-laten-maken) de slimste keuze. Afhankelijk van de doelen kan die met WordPress, Next.js of een andere passende techniek worden gebouwd.
 
 ## Wat is maatwerk?
 
@@ -73,7 +75,7 @@ Gebruik deze vuistregels:
 
 ## En de tussenweg?
 
-In de praktijk is het zelden zwart-wit. Soms bouw ik een WordPress-website met daarin een stukje maatwerk: een custom plugin, een specifieke koppeling of een [AI-integratie](/diensten/ai). Zo combineer je het gemak van WordPress met de kracht van maatwerk waar dat nodig is.
+In de praktijk is het zelden zwart-wit. Soms bouw ik een WordPress-website met daarin een stukje maatwerk: een custom plugin, een specifieke koppeling of een [bedrijfsautomatisering](/diensten/whatsapp-automatisering). Zo combineer je het gemak van WordPress met de kracht van maatwerk waar dat nodig is.
 
 ## Het belangrijkste advies
 

@@ -2,15 +2,14 @@
 
 import Link from "next/link";
 import { Phone, Mail, MapPin, Clock, Facebook, Instagram, Linkedin, ArrowUp } from "lucide-react";
+import { coreServices } from "@/lib/services";
 
 const footerLinks = {
   diensten: [
-    { href: "/diensten/wordpress", label: "WordPress Websites" },
-    { href: "/diensten/webshop", label: "WooCommerce Webshops" },
-    { href: "/diensten/maatwerk", label: "Maatwerk Development" },
-    { href: "/diensten/seo", label: "SEO Optimalisatie" },
-    { href: "/diensten/ai", label: "AI Integraties" },
-    { href: "/zzp-website-laten-maken", label: "Website voor ZZP'ers" },
+    ...coreServices.map((service) => ({
+      href: service.href,
+      label: service.title,
+    })),
   ],
   branches: [
     { href: "/website-laten-maken-kapper", label: "Kappers" },
@@ -21,6 +20,7 @@ const footerLinks = {
     { href: "/over-ons", label: "Over mij" },
     { href: "/projecten", label: "Projecten" },
     { href: "/portfolio", label: "Portfolio" },
+    { href: "/zzp-website-laten-maken", label: "Website voor ZZP'ers" },
     { href: "/blog", label: "Blog" },
     { href: "/veelgestelde-vragen", label: "FAQ" },
     { href: "/contact", label: "Contact" },
@@ -71,7 +71,7 @@ export default function Footer() {
               </span>
             </Link>
             <p className="text-sm mb-4">
-              Professionele websites, webapplicaties en AI-oplossingen in Utrecht.
+              Professionele websites, webshops, SEO en slimme automatisering in Utrecht.
             </p>
             <div className="flex gap-3">
               {socialLinks.map((social) => (

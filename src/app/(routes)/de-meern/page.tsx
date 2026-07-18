@@ -4,7 +4,7 @@ import CityPageLayout from "@/components/CityPageLayout";
 export const metadata: Metadata = {
   title: "Website Laten Maken De Meern | Webdeveloper Leidsche Rijn",
   description:
-    "Website laten maken in De Meern door een freelance webdeveloper uit de regio Utrecht. Snel, responsive en lokaal vindbaar in Google. Direct contact met de developer, binnen 1 week online. Vraag een offerte aan.",
+    "Website laten maken in De Meern vanaf €250. Responsive, met een goede SEO-basis, duidelijke planning en direct contact met de developer uit de regio Utrecht.",
   alternates: { canonical: "https://techsolutionsutrecht.nl/de-meern" },
 };
 
@@ -52,12 +52,12 @@ export default function DeMeernPage() {
         {
           question: "Hoe snel staat mijn website in De Meern online?",
           answer:
-            "Een standaard website is meestal binnen 1 week online. Voor een WooCommerce-webshop of een maatwerkproject reken je op 2 tot 3 weken, afhankelijk van de functionaliteiten die je nodig hebt.",
+            "De doorlooptijd hangt af van de omvang, functies en beschikbaarheid van de content. Na een korte intake ontvang je een duidelijke planning en spreken we vooraf een opleverdatum af.",
         },
         {
           question: "Wat kost een website laten maken in De Meern?",
           answer:
-            "Een verzorgde WordPress-website begint bij €250 en een webshop bij €350. De uiteindelijke prijs hangt af van het aantal pagina's, de functionaliteiten en of je zelf teksten en beeld aanlevert. Je krijgt altijd vooraf een vaste prijs.",
+            "Een complete professionele website start vanaf €250 en kost meestal €350–€650. Een webshop start vanaf €795 en kost meestal €1.000–€2.000. De uiteindelijke prijs hangt af van inhoud, functies en koppelingen. Je krijgt altijd vooraf een vaste prijs.",
         },
         {
           question: "Zorg je ook dat ik lokaal gevonden word in Google?",

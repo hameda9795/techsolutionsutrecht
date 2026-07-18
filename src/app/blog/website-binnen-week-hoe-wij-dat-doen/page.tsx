@@ -3,44 +3,66 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Link from "next/link";
 import { Calendar, Clock, ArrowLeft, User, CheckCircle, Rocket } from "lucide-react";
+import { articleSchema } from "@/lib/schema";
+
+const canonicalUrl = "https://techsolutionsutrecht.nl/blog/website-binnen-week-hoe-wij-dat-doen";
 
 export const metadata: Metadata = {
-  title: "Website Binnen 1 Week Online: Zo Doen Wij Dat | TechSolutionsUtrecht",
-  description: "Website binnen 1 week online? Lees hoe wij dat doen. Onze snelle oplevering proces uitgelegd. Express website laten maken in Utrecht.",
+  title: "Website Binnen 1 Week: Wanneer Is Dat Haalbaar?",
+  description: "Wanneer kan een website binnen een week online? Bekijk de voorwaarden, fasen en aandachtspunten van een versneld websiteproject.",
   keywords: ["website binnen 1 week online", "snel website laten maken", "express website", "snelle oplevering website", "website binnen week"],
-  alternates: { canonical: "https://techsolutionsutrecht.nl/blog/website-binnen-week-hoe-wij-dat-doen" },
+  alternates: { canonical: canonicalUrl },
+  openGraph: {
+    title: "Website Binnen 1 Week: Wanneer Is Dat Haalbaar?",
+    description: "Bekijk de voorwaarden en fasen van een versneld websiteproject.",
+    type: "article",
+    url: canonicalUrl,
+    locale: "nl_NL",
+    publishedTime: "2025-02-26",
+    modifiedTime: "2026-07-18",
+    authors: ["Max"],
+  },
 };
+
+const blogPostingSchema = articleSchema({
+  title: "Website Binnen 1 Week: Wanneer Is Dat Haalbaar?",
+  description: "Lees welke voorwaarden, fasen en aandachtspunten bepalen of een versneld websiteproject binnen een week haalbaar is.",
+  url: canonicalUrl,
+  datePublished: "2025-02-26",
+  dateModified: "2026-07-18",
+  author: "Max",
+});
 
 const processSteps = [
   {
-    day: "Dag 1",
+    day: "Fase 1",
     title: "Kennismaking & Strategie",
     description: `De eerste dag is cruciaal. We plannen direct een intakegesprek (telefonisch of via video) 
     waarin we je wensen, doelgroep en concurrenten bespreken. Je ontvangt een vragenlijst waarmee 
     we inzicht krijgen in je huisstijl, voorkeuren en benodigde functionaliteit. 
-    Aan het einde van dag 1 hebben we een duidelijk plan en een tijdlijn.`,
+    Aan het einde van deze fase hebben we een duidelijk plan en een haalbare tijdlijn.`,
     deliverable: "✓ Plan van aanpak ✓ Tijdlijn"
   },
   {
-    day: "Dag 2-3",
+    day: "Fase 2",
     title: "Design & Concept",
-    description: `Onze designer gaat aan de slag met een eerste ontwerp. Dit is geen standaard template, 
+    description: `Ik ga aan de slag met een eerste ontwerp. Dit is geen standaard template,
     maar een custom design gebaseerd op jouw huisstijl en wensen. Je ontvangt een concept waarmee 
     je kunt visualiseren hoe je website eruit komt te zien. We plannen direct een feedbackronde 
     zodat we eventuele wijzigingen direct kunnen doorvoeren.`,
     deliverable: "✓ Design concept ✓ Feedbackronde"
   },
   {
-    day: "Dag 4-5",
+    day: "Fase 3",
     title: "Ontwikkeling & Bouw",
-    description: `Zodra het design is goedgekeurd, starten we met de bouw. We werken met WordPress 
-    als basis, wat ons in staat stelt snel en efficiënt te werken. Tegelijkertijd vraag je ons 
+    description: `Zodra het design is goedgekeurd, starten we met de bouw. We kiezen een passende
+    technische basis, bijvoorbeeld WordPress of Next.js. Tegelijkertijd vragen we je
     om de content (teksten en afbeeldingen) die we hebben afgesproken. De website begint vorm te krijgen 
     met alle pagina's en functionaliteit.`,
     deliverable: "✓ Website structuur ✓ Functionaliteit"
   },
   {
-    day: "Dag 6-7",
+    day: "Fase 4",
     title: "Content & Testen",
     description: `We plaatsen de content op de website en optimaliseren deze voor zoekmachines (SEO). 
     Tegelijkertijd testen we grondig: werken alle links? Is de website mobiel-vriendelijk? 
@@ -49,7 +71,7 @@ const processSteps = [
     deliverable: "✓ Content geplaatst ✓ Getest"
   },
   {
-    day: "Dag 7-10",
+    day: "Fase 5",
     title: "Lancering & Oplevering",
     description: `Na jouw definitieve goedkeuring zetten we de website live. We configureren je domeinnaam, 
     zorgen voor SSL-beveiliging (het groene slotje), en testen nogmaals of alles correct werkt. 
@@ -65,8 +87,8 @@ const whyFast = [
     description: "We hebben een bewezen proces dat we keer op keer toepassen. Geen tijdverlies, direct aan de slag."
   },
   {
-    title: "Ervaren Team",
-    description: "Met meer dan 12 jaar ervaring weten we precies wat werkt. Geen experimenteren, maar direct resultaat."
+    title: "Ervaren Developer",
+    description: "Met meer dan 12 jaar ervaring werk ik met een duidelijke aanpak en heb je direct contact met de persoon die je website bouwt."
   },
   {
     title: "Smart Templates",
@@ -81,6 +103,10 @@ const whyFast = [
 export default function WebsiteBinnenWeekBlogPost() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(blogPostingSchema) }}
+      />
       <main className="pb-24">
         {/* Breadcrumb */}
         <nav className="py-4 bg-[var(--color-surface)] border-b border-[var(--color-border)]">
@@ -113,9 +139,9 @@ export default function WebsiteBinnenWeekBlogPost() {
 
             {/* Title */}
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[var(--color-ink)] mb-6">
-              Website{" "}<span className="text-[var(--color-primary)]">Binnen 1 Week Online:</span>
+              Website{" "}<span className="text-[var(--color-primary)]">Binnen 1 Week Online?</span>
               <br />
-              <span className="text-2xl sm:text-3xl">Zo Doen Wij Dat</span>
+              <span className="text-2xl sm:text-3xl">Wanneer een Versneld Traject Haalbaar Is</span>
             </h1>
 
             {/* Meta */}
@@ -126,7 +152,7 @@ export default function WebsiteBinnenWeekBlogPost() {
               </div>
               <div className="flex items-center gap-2">
                 <Calendar className="w-4 h-4" />
-                <span>26 februari 2025</span>
+                <time dateTime="2026-07-18">Bijgewerkt op 18 juli 2026</time>
               </div>
               <div className="flex items-center gap-2">
                 <Clock className="w-4 h-4" />
@@ -137,17 +163,14 @@ export default function WebsiteBinnenWeekBlogPost() {
             {/* Intro */}
             <div className="prose prose-invert max-w-none mb-12">
               <p className="text-xl text-[var(--color-muted)] leading-relaxed">
-                "Kan mijn website echt binnen 1 week online zijn?" Deze vraag krijgen we vaak. 
-                Het antwoord is: <strong className="text-primary">ja, dat kan!</strong> In dit artikel nemen we je mee 
-                in ons proces. Je leert <strong className="text-[var(--color-ink)]">hoe wij een professionele website 
-                binnen 7-10 dagen opleveren</strong>, zonder in te leveren op kwaliteit.
+                &quot;Kan mijn website binnen één week online zijn?&quot; Dat kan in sommige situaties, maar het is geen standaardgarantie. In dit artikel lees je welke voorwaarden een versneld traject haalbaar maken en waarom de definitieve planning pas na de intake wordt vastgelegd.
               </p>
             </div>
 
             {/* Process */}
             <div className="mb-12">
               <h2 className="text-2xl font-bold text-[var(--color-ink)] mb-8">
-                Ons 7-10 Dagen Proces
+                De Fasen van een Versneld Traject
               </h2>
 
               <div className="space-y-6">
@@ -229,13 +252,11 @@ export default function WebsiteBinnenWeekBlogPost() {
             {/* CTA */}
             <div className="p-8 bg-[var(--color-primary)]/10 border border-primary/20 rounded-2xl mb-12">
               <h3 className="text-2xl font-bold text-[var(--color-ink)] mb-4">
-                Ook Binnen 1 Week Online?
+                Een Snelle Planning Nodig?
               </h3>
               
               <p className="text-[var(--color-muted)] mb-6">
-                Start vandaag nog! Neem contact met ons op voor een gratis offerte. 
-                We bespreken je wensen en kunnen vaak direct aan de slag. 
-                Jouw website kan al volgende week live zijn.
+                Neem contact op voor een gratis intake. We beoordelen de inhoud, functies en beschikbaarheid en geven daarna een realistische planning. Als een oplevering binnen een week haalbaar is, leggen we de voorwaarden duidelijk vast in de offerte.
               </p>
               
               <div className="flex flex-wrap gap-4">
@@ -268,9 +289,7 @@ export default function WebsiteBinnenWeekBlogPost() {
                     Kan elke website binnen 1 week?
                   </h3>
                   <p className="text-[var(--color-muted)]">
-                    De meeste standaard websites (ZZP, MKB) kunnen inderdaad binnen 1 week. 
-                    Heel complexe websites of webshops met honderden producten nemen wat langer. 
-                    We bespreken dit altijd vooraf.
+                    Nee. Het is alleen haalbaar wanneer de scope overzichtelijk is, teksten en beelden gereed zijn en feedback snel wordt gegeven. Complete websites, webshops en koppelingen kunnen meer tijd vragen. De planning wordt altijd vooraf afgesproken.
                   </p>
                 </div>
                 
@@ -279,7 +298,7 @@ export default function WebsiteBinnenWeekBlogPost() {
                     Wat heb ik zelf nodig voor een snelle oplevering?
                   </h3>
                   <p className="text-[var(--color-muted)]">
-                    Hoe sneller je content (teksten, foto's) aanlevert, hoe sneller we kunnen starten. 
+                    Hoe sneller je content (teksten, foto&apos;s) aanlevert, hoe sneller we kunnen starten.
                     We geven je een duidelijke checklist zodat je precies weet wat we nodig hebben.
                   </p>
                 </div>
@@ -289,8 +308,7 @@ export default function WebsiteBinnenWeekBlogPost() {
                     Is een snelle website van mindere kwaliteit?
                   </h3>
                   <p className="text-[var(--color-muted)]">
-                    Absoluut niet! We leveren dezelfde hoge kwaliteit, alleen efficiënter. 
-                    Onze snelheid komt door ervaring en slimme processen, niet door haast.
+                    Niet wanneer de scope realistisch is. We slaan controles op mobiel, formulieren, inhoud en SEO-basis niet over. Als de gewenste kwaliteit niet binnen de beschikbare tijd past, adviseren we een ruimere planning.
                   </p>
                 </div>
               </div>
@@ -314,7 +332,7 @@ export default function WebsiteBinnenWeekBlogPost() {
                 </Link>
                 
                 <Link 
-                  href="/blog/wat-kost-een-website-laten-maken"
+                  href="/blog/wat-kost-website-laten-maken"
                   className="p-6 bg-[var(--color-bg)] border border-[var(--color-border)] rounded-xl hover:border-primary transition-colors"
                 >
                   <span className="text-xs text-primary font-medium">Kosten</span>

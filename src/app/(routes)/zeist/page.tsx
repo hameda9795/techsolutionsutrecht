@@ -42,7 +42,7 @@ export default function ZeistPage() {
         },
         {
           question: "Hoe lang duurt het om mijn website in Zeist online te krijgen?",
-          answer: "Een standaard website is doorgaans binnen 1 week online. Voor een webshop of maatwerk reken je op 2 tot 3 weken, afhankelijk van de functionaliteiten en hoe snel je content aanlevert.",
+          answer: "De doorlooptijd hangt af van de omvang, functies en beschikbaarheid van de content. Na een korte intake ontvang je een duidelijke planning en spreken we vooraf een opleverdatum af.",
         },
         {
           question: "Help je ook met hoger in Google komen in Zeist?",

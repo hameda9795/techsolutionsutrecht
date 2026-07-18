@@ -1,63 +1,86 @@
 import { Metadata } from "next";
-import Footer from "@/components/Footer";
 import Link from "next/link";
-import { TrendingUp, Check, ArrowRight, Search, MapPin, FileText, Link2, BarChart3, Phone } from "lucide-react";
-import { breadcrumbSchema, serviceSchema, faqPageSchema } from "@/lib/schema";
+import {
+  ArrowRight,
+  BarChart3,
+  Check,
+  FileText,
+  Link2,
+  MapPin,
+  Phone,
+  Search,
+  TrendingUp,
+} from "lucide-react";
+import Footer from "@/components/Footer";
+import ServiceHeroVisual from "@/components/ServiceHeroVisual";
+import { breadcrumbSchema, serviceSchema } from "@/lib/schema";
 
 const pageUrl = "https://techsolutionsutrecht.nl/diensten/seo";
 
 const breadcrumb = breadcrumbSchema([
   { name: "Home", url: "https://techsolutionsutrecht.nl" },
   { name: "Diensten", url: "https://techsolutionsutrecht.nl/diensten" },
-  { name: "SEO Specialist", url: pageUrl },
+  { name: "Hoger in Google met SEO", url: pageUrl },
 ]);
 
-const service = serviceSchema({
-  name: "SEO optimalisatie Utrecht",
-  description:
-    "SEO specialist in Utrecht voor technische SEO, contentoptimalisatie, local SEO en linkbuilding. Hoger in Google met meetbare resultaten voor ondernemers in Utrecht en omgeving.",
-  url: pageUrl,
-});
+const service = {
+  ...serviceSchema({
+    name: "Hoger in Google met SEO",
+    description:
+      "Praktisch SEO-traject vanaf €200 per maand voor technische verbeteringen, optimalisatie van belangrijke pagina’s, lokale vindbaarheid en maandelijkse monitoring.",
+    url: pageUrl,
+  }),
+  offers: {
+    "@type": "Offer",
+    price: "200",
+    priceCurrency: "EUR",
+    description:
+      "Vanaf €200 per maand. De prijs hangt af van de website, concurrentie en gewenste werkzaamheden.",
+  },
+};
 
 const faqs = [
   {
-    question: "Wat kost SEO in Utrecht?",
+    question: "Wat kost SEO?",
     answer:
-      "SEO bij TechSolutionsUtrecht start vanaf €200 per maand en is maandelijks opzegbaar. Je betaalt geen lange contracten of opstartkosten zoals bij veel grote bureaus. Het exacte bedrag hangt af van je branche, de concurrentie op je belangrijkste zoekwoorden en hoeveel pagina's we optimaliseren. In een gratis adviesgesprek bepalen we samen een realistisch budget en de verwachte opbrengst.",
+      "Een SEO-traject start vanaf €200 per maand. De uiteindelijke prijs hangt af van de omvang en technische staat van je website, de concurrentie en de afgesproken werkzaamheden.",
   },
   {
-    question: "Hoe lang duurt het voordat ik resultaat zie van SEO?",
+    question: "Hoe lang duurt het voordat SEO resultaat geeft?",
     answer:
-      "De eerste verbeteringen in technische SEO en posities zijn vaak na 4 tot 8 weken zichtbaar in Google Search Console. Echte groei in organische bezoekers en aanvragen kost meestal 3 tot 6 maanden, omdat Google tijd nodig heeft om nieuwe content en signalen te verwerken. SEO is een investering die zich opstapelt: het verkeer dat je opbouwt blijft maand na maand binnenkomen, zonder dat je per klik betaalt.",
+      "SEO is een langetermijntraject. Technische verbeteringen kunnen snel zichtbaar zijn, maar groei in posities en bezoekers kost meestal meer tijd. De snelheid verschilt per website en markt.",
   },
   {
-    question: "Wat is het verschil tussen SEO en Google Ads?",
+    question: "Kun je een eerste positie in Google garanderen?",
     answer:
-      "Met Google Ads betaal je per klik en stopt je zichtbaarheid zodra je budget op is. Met SEO bouw je organische posities op die blijven staan, ook als je even niets uitgeeft. Ads is ideaal voor snelle resultaten en campagnes; SEO is de duurzame basis die op lange termijn de voordeligste bezoeker oplevert. Voor de meeste ondernemers in Utrecht is een combinatie het sterkst, met SEO als fundament.",
+      "Nee. Niemand kan een specifieke positie in Google garanderen. We werken transparant, meten de voortgang en laten iedere maand zien welke werkzaamheden zijn uitgevoerd.",
   },
   {
-    question: "Doen jullie ook local SEO voor mijn vestiging in Utrecht?",
+    question: "Wat gebeurt er iedere maand?",
     answer:
-      "Ja. Local SEO is een kernonderdeel van mijn aanpak. Ik optimaliseer je Google Bedrijfsprofiel, zorg voor consistente NAW-gegevens (naam, adres, telefoon) op je website en in belangrijke bedrijvengidsen, en bouw lokale landingspagina's voor plaatsen als Nieuwegein, Zeist, Houten en Amersfoort. Zo word je gevonden door klanten die specifiek in jouw regio zoeken.",
+      "We controleren technische aandachtspunten, optimaliseren de afgesproken pagina’s, verbeteren waar nodig de sitestructuur en volgen vindbaarheid en verkeer. Je ontvangt een overzicht van het uitgevoerde werk en de vervolgstappen.",
   },
   {
-    question: "Kan ik SEO uitbesteden en zelf de regie houden?",
+    question: "Is SEO geschikt voor een klein bedrijf?",
     answer:
-      "Zeker. Je hebt direct contact met de developer die het werk doet, geen accountmanager ertussen. Je ontvangt elke maand een heldere rapportage met posities, verkeer en de uitgevoerde acties, en je beslist zelf mee over de prioriteiten. Geen vakjargon en geen verrassingen, gewoon transparante samenwerking.",
+      "Ja, wanneer potentiële klanten online naar jouw diensten zoeken. We stemmen de prioriteiten en werkzaamheden af op je doelen, markt en beschikbare budget.",
+  },
+  {
+    question: "Kan ik het SEO-traject stoppen?",
+    answer:
+      "De looptijd en opzegvoorwaarden worden vooraf duidelijk in het voorstel vastgelegd.",
   },
 ];
 
-const faqSchema = faqPageSchema(faqs);
-
 export const metadata: Metadata = {
-  title: "SEO Specialist Utrecht | Zoekmachine Optimalisatie | TechSolutions",
+  title: "Hoger in Google met SEO | SEO Specialist Utrecht",
   description:
-    "SEO specialist in Utrecht voor zoekmachine optimalisatie: technische SEO, SEO teksten en lokale SEO. Hoger in Google met meetbare resultaten, vanaf €200 per maand.",
+    "Hoger in Google met praktische SEO van een SEO specialist in Utrecht. Technische SEO, pagina-optimalisatie en lokale vindbaarheid vanaf €200 per maand.",
   alternates: { canonical: pageUrl },
   openGraph: {
-    title: "SEO Specialist Utrecht | Zoekmachine Optimalisatie | TechSolutionsUtrecht",
+    title: "Hoger in Google met SEO | SEO Specialist Utrecht",
     description:
-      "SEO specialist in Utrecht voor zoekmachine optimalisatie: technische SEO, SEO teksten en lokale SEO. Hoger in Google met meetbare resultaten.",
+      "Praktisch SEO-traject voor technische SEO, belangrijke pagina’s en lokale vindbaarheid, met duidelijke maandelijkse rapportage.",
     type: "website",
     locale: "nl_NL",
     url: pageUrl,
@@ -65,245 +88,417 @@ export const metadata: Metadata = {
   },
 };
 
-const features = [
-  "Technische SEO analyse",
-  "Keyword onderzoek",
-  "Content optimalisatie",
-  "Linkbuilding strategie",
-  "Local SEO (Google Bedrijfsprofiel)",
-  "Maandelijkse rapportage",
+const heroFeatures = [
+  "Technische SEO-controle",
+  "Zoekwoordenonderzoek",
+  "Optimalisatie van belangrijke pagina’s",
+  "Lokale SEO voor Utrecht en omgeving",
+  "Monitoring en maandelijkse rapportage",
 ];
 
-const pillars = [
+const approach = [
   {
     icon: Search,
     title: "Technische SEO",
-    text: "Een snelle, foutloze website is de basis voor goede posities. Ik controleer laadtijden (Core Web Vitals), crawlbaarheid, indexering, mobiele weergave, structured data en interne links. Technische problemen die Google tegenhouden los ik op, zodat elke pagina de beste kans krijgt om te ranken.",
+    text: "We controleren indexering, snelheid, mobiele werking, metadata, sitemap, canonical en belangrijke technische problemen.",
   },
   {
     icon: FileText,
-    title: "Content & zoekwoorden",
-    text: "Ik onderzoek waar jouw klanten écht op zoeken en vertaal dat naar pagina's die die vragen beantwoorden. Bestaande teksten optimaliseer ik op zoekintentie, koppenstructuur en leesbaarheid, en samen bouwen we de content uit die ontbreekt om hoger te komen.",
+    title: "Content en zoekwoorden",
+    text: "We onderzoeken wat echte klanten zoeken en optimaliseren de belangrijkste pagina’s op zoekintentie, inhoud en leesbaarheid.",
   },
   {
     icon: MapPin,
-    title: "Local SEO",
-    text: "Voor ondernemers in Utrecht en omgeving is lokale vindbaarheid goud waard. Ik optimaliseer je Google Bedrijfsprofiel, zorg voor consistente NAW-gegevens en bouw lokale landingspagina's, zodat je verschijnt bij zoekopdrachten met 'in de buurt' of een plaatsnaam.",
+    title: "Lokale SEO",
+    text: "We verbeteren lokale signalen, relevante regiopagina’s en, wanneer afgesproken, je Google Bedrijfsprofiel.",
   },
   {
     icon: Link2,
-    title: "Linkbuilding & autoriteit",
-    text: "Relevante, kwalitatieve links vertellen Google dat jouw site te vertrouwen is. Ik focus op natuurlijke, lokaal en thematisch relevante links in plaats van massa-tactieken die op de lange termijn schade doen.",
+    title: "Interne links en structuur",
+    text: "We versterken de sitestructuur, headings en interne links, zodat bezoekers en zoekmachines pagina’s beter begrijpen.",
+  },
+];
+
+const monthlyWork = [
+  "Controle van technische SEO-problemen",
+  "Optimalisatie van afgesproken pagina’s",
+  "Monitoring van vindbaarheid en verkeer",
+  "Verbetering van interne links en paginastructuur",
+  "Duidelijk overzicht van uitgevoerde werkzaamheden",
+  "Maandelijkse rapportage met aandachtspunten en vervolgstappen",
+];
+
+const priceFactors = [
+  "Omvang en technische staat van de website",
+  "Concurrentie binnen de branche",
+  "Aantal pagina’s en zoekgebieden",
+  "Benodigde content en technische aanpassingen",
+];
+
+const processSteps = [
+  {
+    title: "Website-analyse",
+    text: "We bekijken de techniek, belangrijkste pagina’s, huidige vindbaarheid en lokale uitgangspositie.",
+  },
+  {
+    title: "Prioriteiten en voorstel",
+    text: "Je ontvangt een helder voorstel met de belangrijkste verbeterpunten, scope en maandprijs.",
+  },
+  {
+    title: "Optimalisatie en uitvoering",
+    text: "We voeren de afgesproken technische, inhoudelijke en lokale verbeteringen stap voor stap uit.",
+  },
+  {
+    title: "Monitoring en rapportage",
+    text: "We volgen de ontwikkeling en delen maandelijks het uitgevoerde werk, aandachtspunten en vervolgstappen.",
   },
 ];
 
 export default function SEOPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(service) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(service) }}
+      />
 
-      {/* Breadcrumb */}
-      <nav className="py-4 bg-[var(--color-surface)] border-b border-[var(--color-border)]">
+      <nav className="border-b border-[var(--color-border)] bg-[var(--color-surface)] py-4">
         <div className="container-custom">
-          <ol className="flex items-center gap-2 text-sm flex-wrap">
-            <li><Link href="/" className="text-[var(--color-muted)] hover:text-primary transition-colors">Home</Link></li>
+          <ol className="flex flex-wrap items-center gap-2 text-sm">
+            <li>
+              <Link
+                href="/"
+                className="text-[var(--color-muted)] transition-colors hover:text-primary"
+              >
+                Home
+              </Link>
+            </li>
             <li className="text-[var(--color-muted)]">/</li>
-            <li><Link href="/diensten" className="text-[var(--color-muted)] hover:text-primary transition-colors">Diensten</Link></li>
+            <li>
+              <Link
+                href="/diensten"
+                className="text-[var(--color-muted)] transition-colors hover:text-primary"
+              >
+                Diensten
+              </Link>
+            </li>
             <li className="text-[var(--color-muted)]">/</li>
-            <li><span className="text-[var(--color-ink)] font-medium">SEO</span></li>
+            <li>
+              <span className="font-medium text-[var(--color-ink)]">SEO</span>
+            </li>
           </ol>
         </div>
       </nav>
 
-      <main className="pt-32 pb-24">
+      <main className="pb-24 pt-16 sm:pt-20">
         <div className="container-custom">
-          {/* Hero */}
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-[var(--color-primary)] mb-6">
-                <TrendingUp className="w-8 h-8 text-white" />
-              </div>
-
-              <h1 className="text-4xl sm:text-5xl font-bold text-[var(--color-ink)] mb-4">
-                SEO Specialist <span className="text-[var(--color-primary)]">Utrecht</span>
-              </h1>
-
-              <p className="text-lg text-[var(--color-muted)] mb-8">
-                <strong className="text-[var(--color-ink)]">Hoger in Google</strong> met technische SEO,
-                sterke content en lokale optimalisatie. Meetbaar resultaat voor ondernemers in Utrecht en omgeving,
-                met <strong className="text-primary">direct contact met de developer</strong> en transparante prijzen
-                vanaf €200 per maand.
-              </p>
-
-              <div className="grid sm:grid-cols-2 gap-3 mb-8">
-                {features.map((feature) => (
-                  <div key={feature} className="flex items-center gap-3">
-                    <div className="w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
-                      <Check className="w-3 h-3 text-primary" />
-                    </div>
-                    <span className="text-[var(--color-muted)]">{feature}</span>
-                  </div>
-                ))}
-              </div>
-
-              <div className="flex flex-wrap items-center gap-6 mb-8">
-                <div className="text-3xl font-bold text-primary">€200/maand</div>
-                <div className="text-[var(--color-muted)]">Maandelijks opzegbaar</div>
-              </div>
-
-              <Link href="/contact" className="btn-primary group inline-flex">
-                Vraag een gratis SEO-advies aan
-                <ArrowRight className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1" />
-              </Link>
+          <section className="grid gap-10 lg:grid-cols-[minmax(0,1.25fr)_minmax(360px,0.95fr)] lg:items-center xl:gap-14">
+            <div className="min-w-0">
+            <div className="mb-6 inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-[var(--color-primary)]">
+              <TrendingUp className="h-8 w-8 text-white" aria-hidden="true" />
             </div>
 
-            <div className="relative">
-              <div className="aspect-square rounded-2xl bg-[var(--color-primary)]/10 flex items-center justify-center">
-                <div className="text-center">
-                  <TrendingUp className="w-24 h-24 text-[var(--color-primary)] mx-auto mb-4" />
-                  <div className="text-2xl font-bold text-[var(--color-ink)]">SEO</div>
-                  <div className="text-3xl font-extrabold text-primary mt-2">€200/maand</div>
-                  <div className="text-[var(--color-muted)] mt-1">Maandelijks opzegbaar</div>
-                </div>
-              </div>
-            </div>
-          </div>
+            <h1 className="mb-6 max-w-3xl text-balance text-4xl font-bold text-[var(--color-ink)] sm:text-5xl">
+              Hoger in Google met <span className="text-primary">SEO</span>
+            </h1>
 
-          {/* Intro / Waarom SEO */}
-          <section className="mt-24 max-w-3xl">
-            <h2 className="text-3xl font-bold text-[var(--color-ink)] mb-6">
-              Waarom zoekmachine optimalisatie belangrijk is voor ondernemers in Utrecht
-            </h2>
-            <p className="text-[var(--color-muted)] mb-4 leading-relaxed">
-              De meeste mensen die op zoek zijn naar een product of dienst beginnen bij Google. Wie op de eerste
-              pagina staat, krijgt het overgrote deel van de klikken; wie op pagina twee of verder staat, wordt
-              nauwelijks gevonden. Zoekmachineoptimalisatie (SEO) zorgt ervoor dat jouw website juist wél bovenaan
-              verschijnt voor de zoekwoorden waar jouw klanten op zoeken, zoals “webshop laten maken Utrecht” of
-              “SEO specialist Utrecht”.
+            <p className="mb-8 max-w-3xl text-lg leading-relaxed text-[var(--color-muted)]">
+              Verbeter de vindbaarheid van je website met een praktisch SEO-traject.
+              We optimaliseren de techniek, belangrijke pagina’s en lokale
+              vindbaarheid en laten iedere maand duidelijk zien wat er is uitgevoerd.
             </p>
-            <p className="text-[var(--color-muted)] mb-4 leading-relaxed">
-              Anders dan advertenties, waarbij je per klik betaalt en je zichtbaarheid verdwijnt zodra je budget op
-              is, bouw je met SEO een blijvende stroom van gratis, organisch verkeer op. Het is een investering die
-              zich maand na maand opstapelt: de posities die je verdient, blijven bezoekers en aanvragen opleveren.
-            </p>
-            <p className="text-[var(--color-muted)] leading-relaxed">
-              Als developer én SEO-specialist kijk ik niet alleen naar teksten en zoekwoorden, maar ook naar de
-              techniek onder je website. Die combinatie is precies wat veel losse tekstschrijvers of klassieke
-              bureaus missen, en wat het verschil maakt tussen wat ranken en écht ranken.
-            </p>
-          </section>
 
-          {/* Aanpak / pillars */}
-          <section className="mt-20">
-            <h2 className="text-3xl font-bold text-[var(--color-ink)] mb-4">Mijn SEO-aanpak</h2>
-            <p className="text-[var(--color-muted)] mb-10 max-w-3xl leading-relaxed">
-              Goede SEO rust op vier pijlers. Ik werk ze stap voor stap af, met je eigen doelen en branche als
-              uitgangspunt, en houd je elke maand op de hoogte van de voortgang.
-            </p>
-            <div className="grid md:grid-cols-2 gap-6">
-              {pillars.map((p) => (
-                <div key={p.title} className="bg-[var(--color-bg)] border border-[var(--color-border)] rounded-2xl p-6">
-                  <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-primary/10 mb-4">
-                    <p.icon className="w-6 h-6 text-primary" />
+            <div className="mb-8 grid max-w-3xl gap-3 sm:grid-cols-2">
+              {heroFeatures.map((feature) => (
+                <div key={feature} className="flex items-center gap-3">
+                  <div className="flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-primary/20">
+                    <Check className="h-3 w-3 text-primary" aria-hidden="true" />
                   </div>
-                  <h3 className="text-xl font-bold text-[var(--color-ink)] mb-2">{p.title}</h3>
-                  <p className="text-[var(--color-muted)] leading-relaxed">{p.text}</p>
+                  <span className="text-[var(--color-muted)]">{feature}</span>
                 </div>
               ))}
             </div>
+
+            <div className="mb-8 max-w-2xl">
+              <div className="text-3xl font-bold text-primary">
+                Vanaf €200 per maand
+              </div>
+              <div className="mt-2 leading-relaxed text-[var(--color-muted)]">
+                Prijs afhankelijk van de website, concurrentie en gewenste
+                werkzaamheden.
+              </div>
+            </div>
+
+            <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
+              <Link href="/contact" className="btn-primary group">
+                Vraag een SEO-voorstel aan
+                <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+              </Link>
+              <Link href="#seo-aanpak" className="btn-secondary">
+                Bekijk de aanpak
+              </Link>
+            </div>
+            </div>
+
+            <ServiceHeroVisual
+              src="/images/hoger-in-google-hero.webp"
+              alt="Illustratie van zoekmachineoptimalisatie, lokale vindbaarheid en groei"
+            />
           </section>
 
-          {/* Resultaten / rapportage */}
-          <section className="mt-20 grid lg:grid-cols-2 gap-12 items-start">
-            <div>
-              <h2 className="text-3xl font-bold text-[var(--color-ink)] mb-6">Wat SEO jou oplevert</h2>
-              <p className="text-[var(--color-muted)] mb-4 leading-relaxed">
-                Het doel is nooit “hoger in Google” op zich, maar méér klanten. Daarom stuur ik op cijfers die er
-                echt toe doen: organisch verkeer, posities op je belangrijkste zoekwoorden en het aantal aanvragen
-                via je website. Elke maand ontvang je een begrijpelijke rapportage met de stand van zaken en de
-                acties die ik heb uitgevoerd.
-              </p>
-              <p className="text-[var(--color-muted)] leading-relaxed">
-                Geen vage beloftes als “nummer 1 in Google” en geen langlopende contracten. Je betaalt per maand,
-                bent maandelijks opzegbaar, en kunt aan de resultaten zelf zien of het werkt.
-              </p>
-            </div>
-            <div className="bg-[var(--color-bg)] border border-[var(--color-border)] rounded-2xl p-8">
-              <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-primary/10 mb-4">
-                <BarChart3 className="w-6 h-6 text-primary" />
+          <div className="mt-16 space-y-16 sm:mt-20 sm:space-y-20">
+            <section className="max-w-3xl">
+              <h2 className="mb-6 text-balance text-3xl font-bold text-[var(--color-ink)]">
+                Beter vindbaar voor de juiste klanten
+              </h2>
+              <div className="space-y-4 leading-relaxed text-[var(--color-muted)]">
+                <p>
+                  SEO gaat niet alleen om meer bezoekers, maar vooral om gevonden
+                  worden door mensen die daadwerkelijk naar jouw diensten zoeken. We
+                  verbeteren stap voor stap de technische basis, inhoud en lokale
+                  vindbaarheid van je website.
+                </p>
+                <p>
+                  Als SEO specialist in Utrecht combineren we technische kennis met
+                  begrijpelijke optimalisaties. Je weet vooraf wat de prioriteiten
+                  zijn en ziet iedere maand welke werkzaamheden zijn uitgevoerd.
+                </p>
               </div>
-              <h3 className="text-xl font-bold text-[var(--color-ink)] mb-4">Inbegrepen bij elk SEO-traject</h3>
-              <ul className="space-y-3">
-                {[
-                  "Maandelijkse rapportage met posities en verkeer",
-                  "Doorlopende technische optimalisatie",
-                  "Content- en zoekwoordadvies",
-                  "Local SEO en Google Bedrijfsprofiel",
-                  "Direct contact met de developer",
-                ].map((item) => (
+            </section>
+
+            <section id="seo-aanpak" className="scroll-mt-28">
+              <h2 className="mb-4 text-balance text-3xl font-bold text-[var(--color-ink)]">
+                Mijn SEO-aanpak
+              </h2>
+              <p className="mb-8 max-w-3xl leading-relaxed text-[var(--color-muted)]">
+                We bepalen de prioriteiten op basis van je website, markt en doelen.
+                Deze vier onderdelen vormen de basis van het traject.
+              </p>
+              <div className="grid gap-6 md:grid-cols-2">
+                {approach.map((item) => (
+                  <article
+                    key={item.title}
+                    className="rounded-2xl border border-[var(--color-border)] bg-[var(--color-bg)] p-6"
+                  >
+                    <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10">
+                      <item.icon className="h-6 w-6 text-primary" aria-hidden="true" />
+                    </div>
+                    <h3 className="text-xl font-bold text-[var(--color-ink)]">
+                      {item.title}
+                    </h3>
+                    <p className="mt-3 leading-relaxed text-[var(--color-muted)]">
+                      {item.text}
+                    </p>
+                  </article>
+                ))}
+              </div>
+            </section>
+
+            <section>
+              <h2 className="mb-8 text-balance text-3xl font-bold text-[var(--color-ink)]">
+                Wat krijg je iedere maand?
+              </h2>
+              <ul className="grid gap-x-10 gap-y-4 rounded-2xl bg-[var(--color-surface)] p-6 sm:p-8 md:grid-cols-2">
+                {monthlyWork.map((item) => (
                   <li key={item} className="flex items-start gap-3">
-                    <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                    <span className="text-[var(--color-muted)]">{item}</span>
+                    <div className="mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-primary/20">
+                      <Check className="h-3 w-3 text-primary" aria-hidden="true" />
+                    </div>
+                    <span className="leading-relaxed text-[var(--color-ink)]">
+                      {item}
+                    </span>
                   </li>
                 ))}
               </ul>
-            </div>
-          </section>
+              <p className="mt-5 max-w-3xl leading-relaxed text-[var(--color-muted)]">
+                De exacte werkzaamheden worden vooraf afgestemd op je website, doelen
+                en beschikbare budget.
+              </p>
+            </section>
 
-          {/* Interne links */}
-          <section className="mt-20">
-            <h2 className="text-3xl font-bold text-[var(--color-ink)] mb-4">Verdiep je in mijn SEO-diensten</h2>
-            <p className="text-[var(--color-muted)] mb-8 max-w-3xl leading-relaxed">
-              Zoekmachine optimalisatie bestaat uit meerdere specialismen. Voor de twee belangrijkste heb ik een
-              eigen pagina met uitleg en aanpak — of bekijk hoe SEO samenwerkt met een snelle website.
-            </p>
-            <div className="grid md:grid-cols-3 gap-6">
-              <Link href="/diensten/seo/teksten" className="card-service block p-6 rounded-2xl bg-[var(--color-bg)] border border-[var(--color-border)] hover:border-primary/40 transition-colors">
-                <h3 className="text-lg font-bold text-[var(--color-ink)] mb-2">SEO Teksten Laten Schrijven</h3>
-                <p className="text-[var(--color-muted)] text-sm">Webteksten en blogs op basis van echt zoekwoordonderzoek.</p>
-              </Link>
-              <Link href="/diensten/seo/lokale-seo" className="card-service block p-6 rounded-2xl bg-[var(--color-bg)] border border-[var(--color-border)] hover:border-primary/40 transition-colors">
-                <h3 className="text-lg font-bold text-[var(--color-ink)] mb-2">Lokale SEO</h3>
-                <p className="text-[var(--color-muted)] text-sm">Bovenaan in het kaartje van Google in jouw regio.</p>
-              </Link>
-              <Link href="/diensten/wordpress" className="card-service block p-6 rounded-2xl bg-[var(--color-bg)] border border-[var(--color-border)] hover:border-primary/40 transition-colors">
-                <h3 className="text-lg font-bold text-[var(--color-ink)] mb-2">WordPress website laten maken</h3>
-                <p className="text-[var(--color-muted)] text-sm">Een snelle, SEO-klare website die je zelf kunt beheren.</p>
-              </Link>
-            </div>
-          </section>
-
-          {/* FAQ */}
-          <section className="mt-20 max-w-3xl">
-            <h2 className="text-3xl font-bold text-[var(--color-ink)] mb-10">Veelgestelde vragen over SEO</h2>
-            <div className="space-y-4">
-              {faqs.map((faq) => (
-                <div key={faq.question} className="bg-[var(--color-bg)] border border-[var(--color-border)] rounded-xl p-6">
-                  <h3 className="text-lg font-semibold text-[var(--color-ink)] mb-2">{faq.question}</h3>
-                  <p className="text-[var(--color-muted)] leading-relaxed">{faq.answer}</p>
+            <section>
+              <h2 className="mb-6 text-balance text-3xl font-bold text-[var(--color-ink)]">
+                Wat kost SEO?
+              </h2>
+              <div className="grid gap-8 rounded-2xl bg-[var(--color-surface)] p-6 sm:p-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.15fr)]">
+                <div>
+                  <div className="text-3xl font-bold text-primary">
+                    Vanaf €200 per maand
+                  </div>
+                  <p className="mt-4 leading-relaxed text-[var(--color-muted)]">
+                    Een praktisch SEO-traject voor technische verbeteringen,
+                    optimalisatie van belangrijke pagina’s, lokale vindbaarheid en
+                    maandelijkse monitoring.
+                  </p>
+                  <Link href="/contact" className="btn-primary mt-6">
+                    Vraag een passend SEO-voorstel aan
+                  </Link>
                 </div>
-              ))}
-            </div>
-          </section>
+                <div>
+                  <h3 className="text-xl font-bold text-[var(--color-ink)]">
+                    Waar hangt de prijs van af?
+                  </h3>
+                  <ul className="mt-5 space-y-3">
+                    {priceFactors.map((factor) => (
+                      <li key={factor} className="flex items-start gap-3">
+                        <Check
+                          className="mt-0.5 h-5 w-5 flex-shrink-0 text-primary"
+                          aria-hidden="true"
+                        />
+                        <span className="leading-relaxed text-[var(--color-ink)]">
+                          {factor}
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </section>
 
-          {/* CTA */}
-          <section className="mt-20 text-center bg-[var(--color-bg)] border border-[var(--color-border)] rounded-2xl p-10">
-            <h2 className="text-3xl font-bold text-[var(--color-ink)] mb-4">Klaar om hoger in Google te komen?</h2>
-            <p className="text-[var(--color-muted)] mb-8 max-w-2xl mx-auto leading-relaxed">
-              Vraag vrijblijvend een gratis SEO-advies aan. Je krijgt binnen één werkdag een eerlijke analyse van je
-              kansen, direct van de developer die ermee aan de slag gaat.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="https://wa.me/31625518708" className="inline-flex items-center justify-center gap-2 bg-[#25D366] text-white px-8 py-4 rounded-xl font-semibold hover:bg-[#128C7E] transition-colors">
-                <Phone className="w-5 h-5" /> WhatsApp direct
-              </a>
-              <Link href="/contact" className="btn-primary inline-flex items-center justify-center">
-                Offerte aanvragen
-              </Link>
-            </div>
-          </section>
+            <section className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(280px,0.65fr)] lg:items-start">
+              <div className="max-w-3xl">
+                <h2 className="mb-6 text-balance text-3xl font-bold text-[var(--color-ink)]">
+                  Wanneer kun je resultaat verwachten?
+                </h2>
+                <div className="space-y-4 leading-relaxed text-[var(--color-muted)]">
+                  <p>
+                    SEO is een langetermijntraject. Kleine technische verbeteringen
+                    kunnen snel zichtbaar zijn, maar groei in posities en bezoekers
+                    kost meestal meer tijd. De snelheid hangt onder andere af van de
+                    concurrentie, de huidige website en de hoeveelheid benodigde
+                    verbeteringen.
+                  </p>
+                  <p>
+                    We kunnen geen specifieke positie in Google garanderen. Wel werken
+                    we transparant, meten we de voortgang en laten we zien welke
+                    werkzaamheden zijn uitgevoerd.
+                  </p>
+                </div>
+              </div>
+              <aside className="rounded-2xl border border-[var(--color-border)] bg-[var(--color-bg)] p-6">
+                <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10">
+                  <BarChart3 className="h-6 w-6 text-primary" aria-hidden="true" />
+                </div>
+                <h3 className="text-xl font-bold text-[var(--color-ink)]">
+                  Transparante voortgang
+                </h3>
+                <p className="mt-3 leading-relaxed text-[var(--color-muted)]">
+                  Je ziet wat er is aangepast, welke aandachtspunten er zijn en welke
+                  vervolgstappen we adviseren.
+                </p>
+              </aside>
+            </section>
+
+            <section>
+              <h2 className="mb-8 text-balance text-3xl font-bold text-[var(--color-ink)]">
+                Zo werken we
+              </h2>
+              <ol className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+                {processSteps.map((step, index) => (
+                  <li
+                    key={step.title}
+                    className="rounded-2xl border border-[var(--color-border)] bg-[var(--color-bg)] p-6"
+                  >
+                    <div className="mb-5 flex h-10 w-10 items-center justify-center rounded-full bg-[var(--color-primary)] font-bold text-white">
+                      {index + 1}
+                    </div>
+                    <h3 className="text-lg font-bold text-[var(--color-ink)]">
+                      {step.title}
+                    </h3>
+                    <p className="mt-3 text-sm leading-relaxed text-[var(--color-muted)]">
+                      {step.text}
+                    </p>
+                  </li>
+                ))}
+              </ol>
+            </section>
+
+            <section>
+              <h2 className="mb-4 text-balance text-3xl font-bold text-[var(--color-ink)]">
+                Verdiep je in mijn SEO-diensten
+              </h2>
+              <p className="mb-8 max-w-3xl leading-relaxed text-[var(--color-muted)]">
+                Lees meer over de twee gespecialiseerde SEO-diensten die momenteel
+                beschikbaar zijn.
+              </p>
+              <div className="grid gap-6 md:grid-cols-2">
+                <Link
+                  href="/diensten/seo/teksten"
+                  className="card-service block rounded-2xl border border-[var(--color-border)] bg-[var(--color-bg)] p-6 transition-colors hover:border-primary/40"
+                >
+                  <h3 className="mb-2 text-lg font-bold text-[var(--color-ink)]">
+                    SEO Teksten Laten Schrijven
+                  </h3>
+                  <p className="text-sm leading-relaxed text-[var(--color-muted)]">
+                    Webteksten en artikelen op basis van zoekwoordonderzoek en de
+                    vragen van je doelgroep.
+                  </p>
+                </Link>
+                <Link
+                  href="/diensten/seo/lokale-seo"
+                  className="card-service block rounded-2xl border border-[var(--color-border)] bg-[var(--color-bg)] p-6 transition-colors hover:border-primary/40"
+                >
+                  <h3 className="mb-2 text-lg font-bold text-[var(--color-ink)]">
+                    Lokale SEO
+                  </h3>
+                  <p className="text-sm leading-relaxed text-[var(--color-muted)]">
+                    Verbeter je lokale vindbaarheid voor klanten in Utrecht en de
+                    regio’s waarop je bedrijf zich richt.
+                  </p>
+                </Link>
+              </div>
+            </section>
+
+            <section className="max-w-3xl">
+              <h2 className="mb-10 text-balance text-3xl font-bold text-[var(--color-ink)]">
+                Veelgestelde vragen over SEO
+              </h2>
+              <div className="space-y-4">
+                {faqs.map((faq) => (
+                  <article
+                    key={faq.question}
+                    className="rounded-xl border border-[var(--color-border)] bg-[var(--color-bg)] p-6"
+                  >
+                    <h3 className="mb-2 text-lg font-semibold text-[var(--color-ink)]">
+                      {faq.question}
+                    </h3>
+                    <p className="leading-relaxed text-[var(--color-muted)]">
+                      {faq.answer}
+                    </p>
+                  </article>
+                ))}
+              </div>
+            </section>
+
+            <section className="rounded-2xl border border-[var(--color-border)] bg-[var(--color-bg)] p-8 text-center sm:p-10">
+              <h2 className="mb-4 text-balance text-3xl font-bold text-[var(--color-ink)]">
+                Klaar om beter gevonden te worden?
+              </h2>
+              <p className="mx-auto mb-8 max-w-2xl leading-relaxed text-[var(--color-muted)]">
+                Vraag een vrijblijvend SEO-voorstel aan. Na een eerste controle
+                bespreken we welke verbeteringen voor jouw website het belangrijkst
+                zijn.
+              </p>
+              <div className="flex flex-col justify-center gap-4 sm:flex-row">
+                <a
+                  href="https://wa.me/31625518708"
+                  className="inline-flex items-center justify-center gap-2 rounded-xl bg-[#25D366] px-8 py-4 font-semibold text-white transition-colors hover:bg-[#128C7E]"
+                >
+                  <Phone className="h-5 w-5" aria-hidden="true" /> WhatsApp direct
+                </a>
+                <Link
+                  href="/contact"
+                  className="btn-primary inline-flex items-center justify-center"
+                >
+                  Vraag een SEO-voorstel aan
+                </Link>
+              </div>
+            </section>
+          </div>
         </div>
       </main>
       <Footer />

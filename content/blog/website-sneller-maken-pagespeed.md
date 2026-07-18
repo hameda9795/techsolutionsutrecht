@@ -1,8 +1,10 @@
 ---
 title: "Hoe Maak je je Website Sneller? Complete Pagespeed-Gids"
-description: "Een trage website kost je klanten en rankings. In deze complete pagespeed-gids lees je hoe je je website sneller maakt: van afbeeldingen tot hosting en Core Web Vitals."
+seoTitle: "Website Sneller Maken: Complete Pagespeed-gids"
+description: "Trage website? Verbeter afbeeldingen, caching, hosting en code. Lees hoe je Core Web Vitals controleert en je website merkbaar sneller maakt."
 date: "2026-06-03"
-readTime: "11 min"
+dateModified: "2026-07-18"
+readTime: "4 min"
 category: "SEO"
 image: "/images/blog/website-sneller-maken-pagespeed.jpg"
 slug: "website-sneller-maken-pagespeed"
@@ -38,7 +40,7 @@ Alleen al dit punt maakt veel websites merkbaar sneller.
 
 ## 2. Beperk en optimaliseer je plugins (WordPress)
 
-Bij een [WordPress website](/diensten/wordpress) is plugin-wildgroei een veelvoorkomend probleem. Elke plugin voegt code toe, en te veel plugins maken je site traag en kwetsbaar.
+Bij een [professionele website](/diensten/website-laten-maken) die met WordPress is gebouwd, is plugin-wildgroei een veelvoorkomend probleem. Elke plugin voegt code toe, en te veel plugins maken je site traag en kwetsbaar.
 
 - Verwijder plugins die je niet gebruikt.
 - Vermijd meerdere plugins die hetzelfde doen.
@@ -82,3 +84,10 @@ Snelheid staat niet los van vindbaarheid. Een snelle, technisch nette website is
 Een snellere website draait om een handvol concrete stappen: optimaliseer je afbeeldingen, beperk plugins, gebruik caching, kies goede hosting en houd je code en lettertypen slank. Meet voor- en achteraf, zodat je ziet wat werkt.
 
 Wil je dat ik je website laat vliegen — of meteen een nieuwe, razendsnelle site bouw? [Neem contact op](/contact) voor een vrijblijvende analyse van je laadsnelheid en concrete verbeterpunten.
+
+## Bronnen en gratis meettools
+
+- [Core Web Vitals uitgelegd door web.dev](https://web.dev/articles/vitals)
+- [Test een URL met Google PageSpeed Insights](https://pagespeed.web.dev/)
+
+Gebruik tests als diagnose, niet als los doel. Een verbetering moet zowel in de metingen als in de ervaring van echte bezoekers merkbaar zijn.

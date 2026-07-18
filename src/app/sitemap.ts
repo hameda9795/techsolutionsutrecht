@@ -2,6 +2,16 @@ import type { MetadataRoute } from "next";
 import { getAllPosts } from "@/lib/blog";
 
 const baseUrl = "https://techsolutionsutrecht.nl";
+const siteContentUpdatedAt = new Date("2026-07-18");
+
+const staticBlogLastModified: Record<string, Date> = {
+  [`${baseUrl}/blog/website-laten-maken`]: new Date("2026-07-18"),
+  [`${baseUrl}/blog/laptop-start-niet-op-5-oplossingen`]: new Date("2026-07-18"),
+  [`${baseUrl}/blog/macbook-waterschade-wat-te-doen`]: new Date("2026-07-18"),
+  [`${baseUrl}/blog/zzp-website-5-tips-geld-besparen`]: new Date("2026-07-18"),
+  [`${baseUrl}/blog/website-binnen-week-hoe-wij-dat-doen`]: new Date("2026-07-18"),
+  [`${baseUrl}/blog/website-niet-in-google`]: new Date("2026-07-18"),
+};
 
 export default function sitemap(): MetadataRoute.Sitemap {
   // Get all blog posts for dynamic sitemap
@@ -9,12 +19,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
   
   const blogPostEntries = blogPosts.map((post) => ({
     url: `${baseUrl}/blog/${post.slug}`,
-    lastModified: new Date(post.date),
+    lastModified: new Date(post.dateModified || post.date),
     changeFrequency: "monthly" as const,
     priority: 0.7,
   }));
+  const dynamicBlogUrls = new Set(blogPostEntries.map((entry) => entry.url));
 
-  return [
+  const entries: MetadataRoute.Sitemap = [
     {
       url: baseUrl,
       lastModified: new Date(),
@@ -94,7 +105,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
-      url: `${baseUrl}/diensten/wordpress`,
+      url: `${baseUrl}/diensten/website-laten-maken`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.8,
@@ -208,7 +219,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.85,
     },
     {
-      url: `${baseUrl}/diensten/ai`,
+      url: `${baseUrl}/diensten/whatsapp-automatisering`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.8,
@@ -262,6 +273,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
+      url: `${baseUrl}/privacy`,
+      lastModified: new Date(),
+      changeFrequency: "yearly",
+      priority: 0.3,
+    },
+    {
       url: `${baseUrl}/blog`,
       lastModified: new Date(),
       changeFrequency: "weekly",
@@ -308,4 +325,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
   ];
+
+  return entries.map((entry) => ({
+    ...entry,
+    lastModified: dynamicBlogUrls.has(entry.url)
+      ? entry.lastModified
+      : staticBlogLastModified[entry.url] ?? siteContentUpdatedAt,
+  }));
 }

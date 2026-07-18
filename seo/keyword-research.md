@@ -22,7 +22,7 @@
 |------------|-----|--------|----------|
 | website laten maken Utrecht | Transactional | ⭐⭐⭐ HIGH | Homepage |
 | webdesign bureau Utrecht | Transactional | ⭐⭐⭐ HIGH | Homepage |
-| WordPress specialist Utrecht | Transactional | ⭐⭐⭐ HIGH | /diensten/wordpress |
+| WordPress specialist Utrecht | Transactional | ⭐⭐⭐ HIGH | /diensten/website-laten-maken |
 | webshop laten maken | Transactional | ⭐⭐⭐ HIGH | /diensten/webshop |
 | WooCommerce webshop Nederland | Transactional | ⭐⭐⭐ HIGH | /diensten/webshop |
 | professionele website laten maken | Transactional | ⭐⭐⭐ HIGH | Homepage |
@@ -49,7 +49,7 @@
 |------------|-----------|-------|------|
 | website laten maken kosten | High | Medium | Blog: "Wat kost een website?" |
 | website laten maken zonder kosten | Medium | Low | Blog |
-| snelle website laten maken | Medium | Low | /diensten/wordpress |
+| snelle website laten maken | Medium | Low | /diensten/website-laten-maken |
 | website SEO optimalisatie | High | Medium | /diensten/seo |
 | WordPress website onderhoud | Medium | Low | /diensten/onderhoud |
 | maatwerk webapplicatie laten bouwen | Low | Low | /diensten/webapplicaties |
@@ -186,7 +186,7 @@
 3. Blog: "Wat kost een website laten maken in 2025?"
 
 ### ماه ۲: Services
-4. /diensten/wordpress — "WordPress specialist"
+4. /diensten/website-laten-maken — "Website laten maken"
 5. /diensten/webshop — "WooCommerce webshop"
 6. Blog: "Laptop start niet op: 5 oplossingen"
 
@@ -228,9 +228,9 @@ Include "Utrecht" voor local SEO.
 
 ### URL Structure
 ```
-/diensten/wordpress-website-laten-maken/
+/diensten/website-laten-maken/
 /reparaties/laptop-reparatie-utrecht/
-/blog/wat-kost-een-website-laten-maken/
+/blog/wat-kost-website-laten-maken
 ```
 
 ---

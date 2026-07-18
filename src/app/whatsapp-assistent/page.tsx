@@ -331,9 +331,9 @@ export default function WhatsAppAssistentPage() {
           <section className="mt-20">
             <h2 className="text-3xl font-bold text-[var(--color-ink)] mb-4">Past dit bij jouw plannen?</h2>
             <div className="grid md:grid-cols-3 gap-6">
-              <Link href="/diensten/ai" className="card-service block p-6 rounded-2xl bg-[var(--color-bg)] border border-[var(--color-border)] hover:border-primary/40 transition-colors">
-                <h3 className="text-lg font-bold text-[var(--color-ink)] mb-2">AI-integraties & chatbots</h3>
-                <p className="text-[var(--color-muted)] text-sm">Maatwerk AI-oplossingen voor je website of werkproces.</p>
+              <Link href="/diensten/whatsapp-automatisering" className="card-service block p-6 rounded-2xl bg-[var(--color-bg)] border border-[var(--color-border)] hover:border-primary/40 transition-colors">
+                <h3 className="text-lg font-bold text-[var(--color-ink)] mb-2">WhatsApp & automatisering op maat</h3>
+                <p className="text-[var(--color-muted)] text-sm">Maatwerk workflows voor je website en bestaande systemen.</p>
               </Link>
               <Link href="/diensten/website-onderhoud" className="card-service block p-6 rounded-2xl bg-[var(--color-bg)] border border-[var(--color-border)] hover:border-primary/40 transition-colors">
                 <h3 className="text-lg font-bold text-[var(--color-ink)] mb-2">Website laten maken</h3>

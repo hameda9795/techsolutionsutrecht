@@ -1,8 +1,10 @@
 ---
 title: "Hoe Lang Duurt het om een Website te Laten Maken?"
-description: "Hoe lang duurt het om een website te laten maken? Van een eenvoudige site binnen 1 week tot maatwerk van enkele weken. Ontdek de realistische doorlooptijden en wat ze beïnvloedt."
+seoTitle: "Hoe Lang Duurt een Website Laten Maken?"
+description: "Hoe lang duurt het om een website te laten maken? Bekijk realistische indicaties en ontdek welke inhoud, functies en feedback de planning beïnvloeden."
 date: "2026-04-08"
-readTime: "8 min"
+dateModified: "2026-07-18"
+readTime: "4 min"
 category: "Webdevelopment"
 image: "/images/blog/hoe-lang-duurt-website-maken.jpg"
 slug: "hoe-lang-duurt-website-maken"
@@ -13,21 +15,21 @@ author: "Max"
 
 "Hoe lang duurt het om mijn website te laten maken?" is misschien wel de vraag die ik het vaakst krijg. Het eerlijke antwoord: dat hangt ervan af. Maar dat is voor jou natuurlijk geen bruikbaar antwoord. Daarom geef ik je in dit artikel realistische doorlooptijden per type project, plus de factoren die het tempo bepalen.
 
-Kort samengevat: een eenvoudige, professionele website kan vaak **binnen 1 week** online staan. Een uitgebreidere site met meerdere pagina's en functionaliteiten kost doorgaans **1 tot 2 weken**. Een [webshop](/diensten/webshop) lever ik binnen **5 tot 12 dagen** op, en een [maatwerk webapplicatie](/diensten/maatwerk) duurt meestal **2 tot 3 weken**. Hieronder leg ik uit waarom.
+Kort samengevat: na de intake ontvang je een planning die past bij de inhoud, functies en benodigde koppelingen. Een complete bedrijfswebsite kan soms snel worden opgeleverd wanneer teksten, beelden en feedback beschikbaar zijn. Voor een [webshop](/diensten/webshop) is de gemiddelde indicatie 1 tot 3 weken; een [maatwerk webapplicatie](/diensten/maatwerk) vraagt doorgaans meer tijd en wordt meestal in fases gepland.
 
 ## Doorlooptijd per type website
 
-### Eenvoudige presentatiewebsite (3 tot 7 dagen)
+### Eenvoudige presentatiewebsite
 
-Een one-pager of een kleine website met een paar pagina's (home, over mij, diensten, contact) is het snelst te realiseren. Het ontwerp en de techniek zijn overzichtelijk, en als jij je teksten en foto's klaar hebt liggen, kan zo'n site binnen een werkweek live. Voor veel ZZP'ers is dit precies wat ze nodig hebben — bekijk daarvoor ook mijn aanpak voor een [ZZP website](/zzp-website-laten-maken).
+Een one-pager of kleine presentatiesite is doorgaans sneller te realiseren dan een complete bedrijfswebsite. Als teksten, foto's en feedback klaarstaan, kan de planning compact blijven. Voor veel zelfstandigen is een complete website met alleen de benodigde onderdelen echter waardevoller dan een vaste pagina- of daglimiet — bekijk daarvoor ook mijn aanpak voor een [ZZP website](/zzp-website-laten-maken).
 
-### Professionele WordPress-website (3 tot 10 dagen)
+### Complete professionele website
 
-Wil je zelf je content kunnen beheren, een blog draaien of meer pagina's? Dan kom je uit op een [WordPress website](/diensten/wordpress). Reken op 3 tot 10 werkdagen. Het bouwen zelf gaat snel; de tijd zit vooral in afstemming, contentstructuur en het netjes inrichten van SEO.
+Wil je een complete website met de pagina's en functies die jouw bedrijf nodig heeft? Bekijk dan de mogelijkheden voor een [professionele website](/diensten/website-laten-maken). De techniek kan bijvoorbeeld WordPress of Next.js zijn. De doorlooptijd hangt af van de omvang, functies en aangeleverde inhoud; de afgesproken planning staat vooraf duidelijk in de offerte.
 
-### Webshop (5 tot 12 dagen)
+### Webshop (gemiddeld 1 tot 3 weken)
 
-Een [webshop](/diensten/webshop) is complexer: producten, categorieën, betaalmethoden zoals iDEAL, verzendregels en voorraadbeheer. Hoe meer producten en uitzonderingen, hoe langer de doorlooptijd. De meeste webshops lever ik binnen 5 tot 12 werkdagen op; een grotere catalogus kan iets langer duren.
+Een [webshop](/diensten/webshop) is complexer: producten, categorieën, betaalmethoden zoals iDEAL, verzendregels en voorraadbeheer. Hoe meer producten, variaties en uitzonderingen, hoe langer de doorlooptijd. De indicatie van 1 tot 3 weken wordt na de intake afgestemd en is geen vaste oplevergarantie.
 
 ### Maatwerk webapplicatie (vanaf enkele weken)
 
@@ -60,6 +62,6 @@ Wat wél tijd kost en de moeite waard is: nadenken over je doelgroep, je structu
 
 ## Conclusie
 
-Hoe lang het duurt om een website te laten maken, hangt vooral af van het type project en hoe goed je voorbereid bent. Een eenvoudige site kan binnen een week, een webshop of maatwerk duurt langer. De belangrijkste versneller? Heldere afspraken en op tijd aangeleverde content.
+Hoe lang het duurt om een website te laten maken, hangt vooral af van het type project en hoe goed je voorbereid bent. Een eenvoudige uitvoering kan sneller worden gepland dan een webshop of maatwerkproject. De belangrijkste versneller? Heldere afspraken en op tijd aangeleverde content.
 
 Benieuwd hoe snel jouw specifieke project kan? [Neem contact op](/contact) of stuur een appje — je krijgt binnen één werkdag een realistische inschatting, direct van de developer.

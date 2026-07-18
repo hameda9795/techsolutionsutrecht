@@ -1,15 +1,15 @@
 # TechSolutionsUtrecht
 
-> Professionele website laten maken in Utrecht. WordPress-websites, WooCommerce-webshops, maatwerk webapplicaties (React/Next.js/Angular) en AI-integraties. Direct contact met de developer, binnen 1 week online. 12+ jaar ervaring. KvK 99202301.
+> Professionele website laten maken in Utrecht. Websites, WooCommerce-webshops, maatwerk webapplicaties en slimme bedrijfsautomatisering. Direct contact met de developer. 12+ jaar ervaring. KvK 99202301.
 
 TechSolutionsUtrecht is een eenmanszaak van Max, webdeveloper en IT-consultant in Utrecht (Nederland). Werkgebied: Utrecht, Nieuwegein, Zeist, Houten, Amersfoort, IJsselstein, De Meern en Vleuten. Contact: info@techsolutionsutrecht.nl, +31 6 25518708.
 
 ## Diensten
-- [Website laten maken (WordPress)](https://techsolutionsutrecht.nl/diensten/wordpress): Professionele responsive websites vanaf €250, binnen 3-10 dagen online.
+- [Website laten maken](https://techsolutionsutrecht.nl/diensten/website-laten-maken): Complete professionele websites vanaf €250, meestal €350–€650, inclusief basis-SEO en volledig eigendom.
 - [Webshop laten maken (WooCommerce)](https://techsolutionsutrecht.nl/diensten/webshop): Webshops met iDEAL, voorraadbeheer en verzending.
 - [Maatwerk webapplicaties](https://techsolutionsutrecht.nl/diensten/maatwerk): Dashboards en portals in React, Next.js of Angular.
 - [SEO-optimalisatie](https://techsolutionsutrecht.nl/diensten/seo): Hoger in Google met technische SEO en content.
-- [AI-integraties](https://techsolutionsutrecht.nl/diensten/ai): Chatbots en automatiseringen.
+- [WhatsApp & automatisering](https://techsolutionsutrecht.nl/diensten/whatsapp-automatisering): Maatwerk workflows vanaf €450 voor WhatsApp, websites, e-mail en bestaande bedrijfssystemen.
 - [Website-onderhoud](https://techsolutionsutrecht.nl/diensten/website-onderhoud): Updates, beveiliging en back-ups.
 - [Alle diensten](https://techsolutionsutrecht.nl/diensten)
 

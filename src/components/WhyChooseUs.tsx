@@ -5,21 +5,21 @@ import { Award, Users, Zap, TrendingUp } from "lucide-react";
 const features = [
   {
     icon: Award,
-    title: "Scherpe prijs, premium kwaliteit",
+    title: "Transparante prijs",
     description:
-      "Betaalbaar betekent niet goedkoop. Dankzij 12+ jaar ervaring en moderne tools werk ik efficiënter dan traditionele bureaus. Je krijgt een professionele website die normaal 3x zo veel zou kosten.",
+      "Je ziet vooraf wat de basis kost en ontvangt na de intake een duidelijke offerte met een vaste totaalprijs, afgestemd op de inhoud en functies.",
   },
   {
     icon: Zap,
-    title: "Binnen 1 week online",
+    title: "Duidelijke planning",
     description:
-      "Geen maanden wachten. Met Next.js en moderne frameworks bouw ik sneller zonder in te leveren op kwaliteit. Wat vroeger maanden duurde, doe ik nu in dagen.",
+      "Na de intake spreken we een haalbare planning en opleverdatum af. De doorlooptijd hangt af van de omvang, functies en beschikbare content.",
   },
   {
     icon: TrendingUp,
     title: "SEO die écht werkt",
     description:
-      "Geen theoretisch advies. Ik implementeer technische SEO, optimaliseer content en zorg dat je website gevonden wordt op Google. Met meetbare resultaten.",
+      "Ik leg een goede technische SEO-basis, optimaliseer belangrijke content en maak resultaten inzichtelijk met monitoring en rapportage.",
   },
   {
     icon: Users,
@@ -94,14 +94,14 @@ export default function WhyChooseUs() {
                   <div className="text-sm text-[var(--color-muted)]">Tevreden klanten</div>
                 </div>
                 <div className="text-center p-4 bg-[var(--color-bg)] rounded-xl border border-[var(--color-border)]">
-                  <div className="text-2xl font-bold text-[var(--color-primary)]">&lt; 1 week</div>
-                  <div className="text-sm text-[var(--color-muted)]">Gemiddelde oplevering</div>
+                  <div className="text-2xl font-bold text-[var(--color-primary)]">Vaste</div>
+                  <div className="text-sm text-[var(--color-muted)]">Totaalprijs vooraf</div>
                 </div>
               </div>
               
               <div className="mt-6 p-4 bg-[var(--color-success)]/10 rounded-xl border border-[var(--color-success)]/20">
                 <p className="text-sm text-[var(--color-success)] text-center">
-                  ✅ <strong>Garantie:</strong> Tevreden of je geld terug
+                  ✓ <strong>Heldere afspraken:</strong> scope, planning en prijs vooraf
                 </p>
               </div>
             </div>

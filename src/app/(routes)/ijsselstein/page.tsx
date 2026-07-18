@@ -54,7 +54,7 @@ export default function IJsselsteinPage() {
         },
         {
           question: "Hoe snel staat mijn website in IJsselstein online?",
-          answer: "Een standaard website is doorgaans binnen 1 week online. Voor een webshop of maatwerkproject reken je op 2 tot 3 weken, afhankelijk van de functionaliteiten.",
+          answer: "De doorlooptijd hangt af van de omvang, functies en beschikbaarheid van de content. Na een korte intake ontvang je een duidelijke planning en spreken we vooraf een opleverdatum af.",
         },
         {
           question: "Is SEO inbegrepen voor IJsselstein?",

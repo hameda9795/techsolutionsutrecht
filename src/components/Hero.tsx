@@ -32,7 +32,7 @@ export default function Hero() {
 
               {/* Subheadline */}
               <p className="text-lg md:text-xl text-[var(--color-muted)] mb-6 leading-relaxed">
-                Professionele WordPress websites, webapplicaties en AI-oplossingen in Utrecht.{" "}
+                Professionele websites, webshops, SEO en bedrijfsautomatisering in Utrecht.{" "}
                 <strong className="text-[var(--color-ink)]">Op maat en transparant geprijsd</strong>, binnen{" "}
                 <strong className="text-[var(--color-ink)]">1 week</strong> online. Direct contact met de developer — SEO-klaar voor ZZP&apos;ers en ondernemers.
               </p>
@@ -132,7 +132,7 @@ export default function Hero() {
 
                 <p className="text-[var(--color-muted)] text-sm leading-relaxed mb-4">
                   Ik ben Max, software engineer in Utrecht. 12 jaar ervaring met websites die écht werken. 
-                  Ik bouw niet alleen code, maar denk mee over je merk — van WordPress tot AI-oplossingen. 
+                  Ik bouw niet alleen code, maar denk mee over je merk — van een complete bedrijfswebsite tot automatisering.
                   Perfect voor startende ZZP&apos;ers die kwaliteit zoeken zonder de hoofdprijs.
                 </p>
 

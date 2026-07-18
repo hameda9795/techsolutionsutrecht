@@ -27,7 +27,7 @@ export default function WoerdenPage() {
       slug="woerden"
       intro={[
         "Woerden, de hoofdstad van het Groene Hart, heeft een verrassend veelzijdige economie: van de historische binnenstad met haar bekende kaasmarkt tot moderne dienstverleners en het bedrijvige Middelland. Ondernemers hier bedienen klanten uit de wijde omgeving — en die klanten zoeken online.",
-        "Ik bouw websites voor ondernemers in Woerden die lokaal sterk willen staan: een snelle, professionele site die vertrouwen uitstraalt en nieuwe klanten oplevert. Persoonlijk contact, transparante prijzen en binnen een week online.",
+        "Ik bouw websites voor ondernemers in Woerden die lokaal sterk willen staan: een snelle, professionele site die vertrouwen uitstraalt en nieuwe klanten oplevert. Persoonlijk contact, transparante prijzen en een duidelijke planning vooraf.",
       ]}
       neighbourhoods={["de binnenstad", "Snel en Polanen", "Molenvliet", "bedrijventerrein Middelland", "Harmelen"]}
       whyLocal={[
@@ -54,7 +54,7 @@ export default function WoerdenPage() {
         },
         {
           question: "Hoe snel staat mijn website in Woerden online?",
-          answer: "Een standaard website is doorgaans binnen 1 week online. Voor een webshop of maatwerkproject reken je op 2 tot 3 weken, afhankelijk van de wensen.",
+          answer: "De doorlooptijd hangt af van de omvang, functies en beschikbaarheid van de content. Na een korte intake ontvang je een duidelijke planning en spreken we vooraf een opleverdatum af.",
         },
         {
           question: "Krijg ik ook hulp met vindbaarheid in Google?",

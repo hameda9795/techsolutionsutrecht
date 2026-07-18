@@ -6,13 +6,13 @@ import { Calendar, Clock, ArrowLeft, User } from "lucide-react";
 import { faqPageSchema, breadcrumbSchema, articleSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
-  title: "Website Laten Maken in 2026: Kosten, Tijdlijn en Complete Gids",
-  description: "Website laten maken? Ontdek wat het kost, hoe lang het duurt en waar je op moet letten. De complete gids voor ondernemers en ZZP'ers die online willen groeien.",
-  keywords: ["website laten maken", "WordPress website laten maken", "goedkope website laten maken", "website laten maken ZZP", "webshop laten maken"],
+  title: "Website Laten Maken: Checklist voor Ondernemers",
+  description: "Gebruik deze praktische checklist voor een nieuwe bedrijfswebsite: doelen, inhoud, techniek, planning, eigendom en vragen voor je webdeveloper.",
+  keywords: ["website laten maken checklist", "bedrijfswebsite laten maken", "website offerte checklist", "website laten maken ZZP"],
   alternates: { canonical: "https://techsolutionsutrecht.nl/blog/website-laten-maken" },
   openGraph: {
-    title: "Website Laten Maken in 2026: Kosten, Tijdlijn en Complete Gids",
-    description: "Website laten maken? Ontdek wat het kost, hoe lang het duurt en waar je op moet letten. De complete gids voor ondernemers en ZZP'ers die online willen groeien.",
+    title: "Website Laten Maken: Checklist voor Ondernemers",
+    description: "Een praktische checklist voor doelen, inhoud, techniek, planning en eigendom van je nieuwe bedrijfswebsite.",
     type: "article",
     locale: "nl_NL",
     url: "https://techsolutionsutrecht.nl/blog/website-laten-maken",
@@ -30,22 +30,22 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Website Laten Maken in 2026: Kosten, Tijdlijn en Complete Gids",
-    description: "Website laten maken? Ontdek wat het kost, hoe lang het duurt en waar je op moet letten. De complete gids voor ondernemers en ZZP'ers die online willen groeien.",
+    title: "Website Laten Maken: Checklist voor Ondernemers",
+    description: "Een praktische checklist voor doelen, inhoud, techniek, planning en eigendom van je nieuwe bedrijfswebsite.",
     images: ["https://techsolutionsutrecht.nl/images/blog/website-laten-maken.svg"],
   },
 };
 
 const sections = [
   {
-    title: "Wat Kost een Website Laten Maken in 2026?",
+    title: "Welk Budget Past bij Jouw Website?",
     content: (
       <>
         <p className="text-[var(--color-muted)] leading-relaxed mb-4">
-          De prijs van een website laten maken hangt sterk af van wat je nodig hebt. Een eenvoudige, professionele website begint meestal rond de 250 tot 800 euro, en is geschikt voor ZZP'ers en kleine bedrijven die zich online willen presenteren. Wil je een <Link href="/diensten/webshop" className="text-primary hover:underline font-medium">webshop</Link> waar klanten daadwerkelijk kunnen bestellen en betalen, dan reken je op ongeveer 350 tot 1.200 euro, afhankelijk van het aantal producten en gewenste koppelingen.
+          De prijs hangt af van wat je nodig hebt. Een complete professionele website start bij TechSolutionsUtrecht vanaf €250 en kost meestal €350–€650. Een <Link href="/diensten/webshop" className="text-primary hover:underline font-medium">webshop</Link> waarmee klanten kunnen bestellen en betalen start vanaf €795 en kost meestal €1.000–€2.000.
         </p>
         <p className="text-[var(--color-muted)] leading-relaxed">
-          Heb je iets complexers nodig, zoals een dashboard, klantportaal of maatwerk webapplicatie, dan ligt de prijs vaak tussen de 400 en 2.000 euro of hoger. Belangrijk is dat je altijd vooraf een transparante offerte krijgt, zodat je precies weet wat er wel en niet inbegrepen is: denk aan responsive design, SEO-basis en een contactformulier.
+          Heb je een dashboard, klantportaal of specifieke koppeling nodig, dan wordt dat apart begroot. Controleer altijd of inhoud, responsive ontwerp, contactmogelijkheden, basis-SEO, eigendom en nazorg duidelijk in de offerte staan. Voor een uitgebreide uitsplitsing kun je de <Link href="/blog/wat-kost-website-laten-maken" className="text-primary hover:underline font-medium">actuele prijsgids</Link> bekijken.
         </p>
       </>
     ),
@@ -53,14 +53,14 @@ const sections = [
     imageAlt: "Overzicht van de kosten voor het laten maken van een website, webshop of maatwerk webapplicatie.",
   },
   {
-    title: "Hoe Lang Duurt het Voordat Je Website Online Staat?",
+    title: "Hoe Wordt de Planning Bepaald?",
     content: (
       <>
         <p className="text-[var(--color-muted)] leading-relaxed mb-4">
-          Een van de meest gestelde vragen is hoe snel een website laten maken kan. Dankzij moderne technologieen zoals WordPress en Next.js hoeft dit tegenwoordig geen maanden meer te duren. Een standaard website staat vaak binnen een week online, terwijl een <Link href="/diensten/webshop" className="text-primary hover:underline font-medium">webshop</Link> met meerdere producten en betaalkoppelingen doorgaans 5 tot 12 werkdagen in beslag neemt.
+          De planning hangt af van de inhoud, functies, koppelingen en snelheid van feedback. Moderne technologieën zoals WordPress en Next.js kunnen het ontwikkelproces efficiënt maken, maar vormen op zichzelf geen garantie voor een vaste opleverdatum. Voor een <Link href="/diensten/webshop" className="text-primary hover:underline font-medium">webshop</Link> is de gemiddelde indicatie 1 tot 3 weken.
         </p>
         <p className="text-[var(--color-muted)] leading-relaxed">
-          Voor complexere projecten met <Link href="/diensten/maatwerk" className="text-primary hover:underline font-medium">maatwerk</Link> functionaliteit of meerdere integraties moet je rekenen op 2 tot 3 weken. De snelheid hangt ook af van hoe snel jij zelf teksten, foto's en feedback aanlevert. Kies je voor een freelancer met korte lijnen in plaats van een groot bureau, dan verloopt het traject vaak sneller omdat je rechtstreeks met de bouwer schakelt.
+          Voor <Link href="/diensten/maatwerk" className="text-primary hover:underline font-medium">maatwerk</Link> en meerdere integraties wordt het traject meestal in fases gepland. Vraag vóór de start om een concrete planning met beslismomenten, wat je zelf moet aanleveren en hoeveel feedbackrondes zijn inbegrepen.
         </p>
       </>
     ),
@@ -68,11 +68,11 @@ const sections = [
     imageAlt: "Tijdlijn die laat zien hoe lang het duurt om een website te laten maken, van start tot livegang.",
   },
   {
-    title: "WordPress, Maatwerk of een Webshop: Welke Website Past bij Jou?",
+    title: "Bedrijfswebsite, Webshop of Maatwerk: Wat Past bij Jou?",
     content: (
       <>
         <p className="text-[var(--color-muted)] leading-relaxed mb-4">
-          Niet elke ondernemer heeft dezelfde website nodig. Een <Link href="/diensten/wordpress" className="text-primary hover:underline font-medium">WordPress website laten maken</Link> is de populairste keuze voor ZZP'ers en MKB-bedrijven: betaalbaar, snel op te leveren en zelf te beheren zonder technische kennis. Wil je producten online verkopen, dan is een <Link href="/diensten/webshop" className="text-primary hover:underline font-medium">WooCommerce webshop</Link> de logische stap, compleet met iDEAL-betalingen, voorraadbeheer en verzendopties.
+          Niet elke ondernemer heeft dezelfde website nodig. Een <Link href="/diensten/website-laten-maken" className="text-primary hover:underline font-medium">professionele website laten maken</Link> is een populaire keuze voor ZZP&apos;ers en MKB-bedrijven: betaalbaar, snel en afgestemd op je bedrijf. Wil je producten online verkopen, dan is een <Link href="/diensten/webshop" className="text-primary hover:underline font-medium">WooCommerce webshop</Link> de logische stap, compleet met iDEAL-betalingen, voorraadbeheer en verzendopties.
         </p>
         <p className="text-[var(--color-muted)] leading-relaxed">
           Heb je specifieke functionaliteit nodig die geen standaard systeem kan bieden, zoals een klantportaal, boekingssysteem of koppeling met interne software, dan is <Link href="/diensten/maatwerk" className="text-primary hover:underline font-medium">maatwerk</Link> met React of Next.js de betere keuze. Dit kost meer, maar geeft volledige vrijheid in functionaliteit en snelheid. Twijfel je? Een goede webdeveloper denkt hierin mee en adviseert op basis van je budget en doelen.
@@ -80,7 +80,7 @@ const sections = [
       </>
     ),
     image: "/images/blog/website-laten-maken-keuze.svg",
-    imageAlt: "Vergelijking tussen WordPress, webshop en maatwerk website laten maken.",
+    imageAlt: "Vergelijking tussen een bedrijfswebsite, webshop en maatwerk webapplicatie.",
   },
   {
     title: "Waar Moet Je op Letten Bij het Kiezen van een Webdesigner?",
@@ -102,7 +102,7 @@ const sections = [
     content: (
       <>
         <p className="text-[var(--color-muted)] leading-relaxed mb-4">
-          Als ZZP'er is een website vaak je digitale visitekaartje en je belangrijkste verkoopkanaal tegelijk. Het is daarom slim om te kiezen voor een oplossing die betaalbaar is, maar wel professioneel oogt en gevonden wordt in Google. Een eenvoudige WordPress website met de mogelijkheid om later uit te breiden is voor de meeste starters de beste balans tussen prijs en resultaat.
+          Als ZZP&apos;er is een website vaak je digitale visitekaartje en je belangrijkste verkoopkanaal tegelijk. Kies daarom voor een complete bedrijfswebsite die professioneel oogt, gevonden kan worden en later kan meegroeien. WordPress kan geschikt zijn voor eigen contentbeheer; Next.js of een andere techniek kan beter passen bij snelheid, maatwerk of koppelingen.
         </p>
         <p className="text-[var(--color-muted)] leading-relaxed">
           Zorg dat je website duidelijk maakt wat je doet, voor wie, en hoe mensen contact met je kunnen opnemen. Een contactformulier, WhatsApp-knop en telefoonnummer verlagen de drempel om contact op te nemen. Investeer daarnaast in een goede basis SEO, zodat potentiele klanten je ook echt vinden wanneer ze zoeken naar jouw diensten in jouw regio.
@@ -117,11 +117,11 @@ const sections = [
 const faqs = [
   {
     question: "Wat kost een eenvoudige website laten maken gemiddeld?",
-    answer: "Voor een professionele, eenvoudige website betaal je meestal tussen de 250 en 800 euro, afhankelijk van het aantal pagina's en gewenste functionaliteit.",
+    answer: "Bij TechSolutionsUtrecht start een complete professionele website vanaf €250 en valt de gebruikelijke projectprijs tussen €350 en €650. De definitieve prijs hangt af van inhoud, functies en koppelingen.",
   },
   {
     question: "Kan ik mijn website na oplevering zelf beheren?",
-    answer: "Ja, bij een WordPress website krijg je een CMS waarmee je zelf teksten en afbeeldingen kunt aanpassen, zonder technische kennis nodig te hebben.",
+    answer: "Ja, wanneer eigen beheer bij je wensen past. WordPress kan geschikt zijn voor uitgebreid contentbeheer; bij andere projecten kan een andere techniek beter passen. Dit wordt vooraf afgesproken.",
   },
   {
     question: "Is een goedkope website ook een goede website?",
@@ -133,20 +133,21 @@ const faqs = [
   },
   {
     question: "Hoe snel kan mijn website online staan?",
-    answer: "Een standaard website staat vaak binnen een week online. Webshops en maatwerk projecten duren gemiddeld 1 tot 3 weken, afhankelijk van de complexiteit.",
+    answer: "Na de intake ontvang je een planning op basis van inhoud, functies en feedbackmomenten. Voor webshops is 1 tot 3 weken een gemiddelde indicatie; een website- of maatwerkplanning wordt per project vastgelegd.",
   },
 ];
 
 export default function WebsiteLatenMakenBlogPost() {
   const canonicalUrl = "https://techsolutionsutrecht.nl/blog/website-laten-maken";
-  const date = "2026-07-10";
+  const datePublished = "2026-07-10";
+  const dateModified = "2026-07-18";
 
   const jsonLd = articleSchema({
-    title: "Website Laten Maken in 2026: Kosten, Tijdlijn en Complete Gids",
-    description: "Website laten maken? Ontdek wat het kost, hoe lang het duurt en waar je op moet letten. De complete gids voor ondernemers en ZZP'ers die online willen groeien.",
+    title: "Website Laten Maken: Checklist voor Ondernemers",
+    description: "Een praktische checklist voor doelen, inhoud, techniek, planning en eigendom van je nieuwe bedrijfswebsite.",
     url: canonicalUrl,
-    datePublished: date,
-    dateModified: date,
+    datePublished,
+    dateModified,
     image: "/images/blog/website-laten-maken.svg",
     author: "TechSolutionsUtrecht",
   });
@@ -154,7 +155,7 @@ export default function WebsiteLatenMakenBlogPost() {
   const breadcrumbJsonLd = breadcrumbSchema([
     { name: "Home", url: "https://techsolutionsutrecht.nl" },
     { name: "Blog", url: "https://techsolutionsutrecht.nl/blog" },
-    { name: "Website Laten Maken in 2026: Kosten, Tijdlijn en Complete Gids", url: canonicalUrl },
+    { name: "Website Laten Maken: Checklist voor Ondernemers", url: canonicalUrl },
   ]);
 
   const faqJsonLd = faqPageSchema(faqs);
@@ -217,8 +218,8 @@ export default function WebsiteLatenMakenBlogPost() {
 
             {/* Title */}
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[var(--color-ink)] mb-6">
-              Website Laten Maken in 2026:{" "}
-              <span className="text-[var(--color-primary)]">Kosten, Tijdlijn en Complete Gids</span>
+              Website Laten Maken:{" "}
+              <span className="text-[var(--color-primary)]">Praktische Checklist voor Ondernemers</span>
             </h1>
 
             {/* Meta */}
@@ -229,7 +230,7 @@ export default function WebsiteLatenMakenBlogPost() {
               </div>
               <div className="flex items-center gap-2">
                 <Calendar className="w-4 h-4" />
-                <time dateTime={date}>10 juli 2026</time>
+                <time dateTime={dateModified}>Bijgewerkt op 18 juli 2026</time>
               </div>
               <div className="flex items-center gap-2">
                 <Clock className="w-4 h-4" />
@@ -252,10 +253,10 @@ export default function WebsiteLatenMakenBlogPost() {
             {/* Intro */}
             <div className="prose prose-invert max-w-none mb-12">
               <p className="text-xl text-[var(--color-muted)] leading-relaxed">
-                Een website laten maken is voor de meeste ondernemers geen luxe meer, maar een noodzaak. Of je nu ZZP'er bent, een lokale winkel runt of een groeiend bedrijf leidt: je website is vaak het eerste contactmoment met een potentiele klant. Toch weten veel ondernemers niet waar ze moeten beginnen — wat kost het, hoe lang duurt het, en waar moet je precies op letten?
+                Een website laten maken begint niet bij een techniek of een vast aantal pagina&apos;s, maar bij wat klanten moeten begrijpen en doen. Of je nu ZZP&apos;er bent, een lokale winkel runt of een groeiend bedrijf leidt: deze checklist helpt je doelen, inhoud en vereisten vóór de offerte helder te krijgen.
               </p>
               <p className="text-xl text-[var(--color-muted)] leading-relaxed">
-                In deze gids leggen we in duidelijke taal uit hoe het proces van website laten maken werkt: van de kosten en de tijdlijn tot de keuze tussen WordPress, maatwerk of een webshop. Zo weet je precies wat je kunt verwachten voordat je een offerte aanvraagt, en voorkom je verrassingen achteraf.
+                Je leest welke afspraken belangrijk zijn over prijs, planning, eigendom, techniek, beheer en SEO. Voor verdieping verwijzen we naar de afzonderlijke prijsgids en servicepagina&apos;s, zodat dit artikel een praktische beslischecklist blijft.
               </p>
             </div>
 
@@ -286,7 +287,7 @@ export default function WebsiteLatenMakenBlogPost() {
                 Klaar om Jouw Website te Laten Maken?
               </h2>
               <p className="text-[var(--color-muted)] mb-6">
-                Bij TechSolutionsUtrecht helpen we je graag met een professionele website die past bij jouw budget en doelen. Van een eenvoudige WordPress website tot een uitgebreide webshop of maatwerk applicatie.
+                Bij TechSolutionsUtrecht krijg je een complete website die past bij jouw bedrijf en doelen. De techniek kan bijvoorbeeld WordPress of Next.js zijn; de keuze volgt uit wat jij nodig hebt.
               </p>
               <div className="flex flex-wrap gap-4">
                 <Link
@@ -296,10 +297,10 @@ export default function WebsiteLatenMakenBlogPost() {
                   Gratis offerte aanvragen
                 </Link>
                 <Link
-                  href="/diensten/wordpress"
+                  href="/diensten/website-laten-maken"
                   className="btn-ghost inline-flex"
                 >
-                  WordPress website
+                  Bekijk de websiteservice
                 </Link>
               </div>
             </div>
@@ -357,7 +358,7 @@ export default function WebsiteLatenMakenBlogPost() {
                 >
                   <span className="text-xs text-primary font-medium">Snelle Oplevering</span>
                   <h4 className="font-semibold text-[var(--color-ink)] mt-2">
-                    Website Binnen 1 Week Online: Zo Doen Wij Dat
+                    Website Binnen 1 Week: Wanneer Is Dat Haalbaar?
                   </h4>
                 </Link>
               </div>

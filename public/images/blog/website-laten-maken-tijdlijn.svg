@@ -23,5 +23,5 @@
   <text x="900" y="375" text-anchor="middle" fill="#F0F6FC" font-family="Inter, system-ui, sans-serif" font-size="18" font-weight="600">Content &amp; Test</text>
   <circle cx="1050" cy="320" r="20" fill="#00E5FF"/>
   <text x="1050" y="375" text-anchor="middle" fill="#F0F6FC" font-family="Inter, system-ui, sans-serif" font-size="18" font-weight="600">Live</text>
-  <text x="600" y="500" text-anchor="middle" fill="#8B949E" font-family="Inter, system-ui, sans-serif" font-size="20">Standaard website: binnen 1 week online</text>
+  <text x="600" y="500" text-anchor="middle" fill="#8B949E" font-family="Inter, system-ui, sans-serif" font-size="20">Planning en opleverdatum na de intake</text>
 </svg>

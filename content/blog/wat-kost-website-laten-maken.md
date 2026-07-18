@@ -1,7 +1,9 @@
 ---
 title: "Wat Kost een Website Laten Maken in 2026? Alle Prijzen op een Rij"
-description: "Website laten maken: welke prijs is normaal in 2026? Eerlijke prijsgids voor WordPress, webshops en maatwerk — van €250 tot marktprijzen, inclusief verborgen kosten."
+seoTitle: "Wat Kost een Website Laten Maken in 2026?"
+description: "Wat kost een website laten maken in 2026? Bekijk actuele prijzen voor websites, webshops en maatwerk, plus mogelijke bijkomende kosten."
 date: "2026-07-10"
+dateModified: "2026-07-18"
 readTime: "12 min"
 category: "Websites"
 image: "/images/blog/website-kosten.jpg"
@@ -39,8 +41,8 @@ Laten we eerlijk zijn: er is geen vaste prijs voor een website. Maar om je een i
 
 | Type Website | Prijsindicatie TechSolutionsUtrecht | Geschikt Voor |
 |-------------|----------------|---------------|
-| **[WordPress website](/diensten/wordpress)** | €250 - €800 | ZZP'ers, starters, MKB |
-| **[WooCommerce webshop](/diensten/webshop)** | €350 - €1.200 | Ondernemers die online verkopen |
+| **[Professionele website](/diensten/website-laten-maken)** | Vanaf €250 · meestal €350–€650 | ZZP'ers, starters, MKB |
+| **[WooCommerce webshop](/diensten/webshop)** | Vanaf €795 · meestal €1.000–€2.000 | Ondernemers die online verkopen |
 | **[Maatwerk webapplicatie](/diensten/maatwerk)** | €400 - €2.000+ | Bedrijven met specifieke wensen |
 | **DIY (Zelf Bouwen)** | €0 - €300/jaar | Hobbyisten, kleine start |
 
@@ -63,16 +65,18 @@ Platforms zoals Wix, Squarespace, en WordPress.com maken het tegenwoordig makkel
 
 **Mijn advies:** Dit werkt als je tijd hebt en technisch bent aangelegd. Maar eerlijk? De meeste ondernemers onderschatten hoeveel werk het is om een professionele website zelf te bouwen. [Lees ook: Website Maken of Laten Maken?](/blog/website-maken-of-laten-maken)
 
-## Optie 2: Een ZZP Website Laten Maken (€250 - €800)
+## Optie 2: Een Professionele Website Laten Maken
 
 Dit is waar de meeste kleine ondernemers terechtkomen. Je werkt met een freelancer die gespecialiseerd is in websites voor kleine bedrijven.
 
 Wat krijg je hiervoor?
-- Een professionele website (meestal 3-7 pagina's)
-- WordPress als CMS (dus je kunt zelf aanpassingen doen)
+- Een complete bedrijfswebsite met de pagina's die jouw bedrijf nodig heeft
+- Een passende techniek, bijvoorbeeld WordPress of Next.js
 - Responsive design (werkt op mobiel en tablet)
 - Basis SEO-optimalisatie
-- Vaak inclusief contactformulier en Google Maps integratie
+- Contactmogelijkheden en volledige eigendom
+
+Bij TechSolutionsUtrecht start deze dienst vanaf €250. De meeste complete bedrijfswebsites vallen tussen €350 en €650. De uiteindelijke prijs hangt af van de inhoud, functies en koppelingen en staat vooraf als vaste totaalprijs in de offerte.
 
 **Let op bij deze prijsklasse:**
 Vraag precies wat er inbegrepen is. Sommige freelancers leveren alleen het technische, terwijl je zelf de teksten en foto's moet regelen. Anderen nemen alles uit handen.
@@ -117,8 +121,8 @@ Dit valt vaak niet onder het bouwen van de website zelf. Vraag of dit is inbegre
 ### SSL Certificaat (€0 - €100/jaar)
 Dit is essentieel voor de beveiliging van je website. Tegenwoordig is dit vaak gratis (via Let's Encrypt), maar sommige bureaus rekenen er wel voor.
 
-### Onderhoud (€50 - €150/maand)
-Websites hebben onderhoud nodig: updates, backups, beveiliging. Bij TechSolutionsUtrecht zijn er drie [website onderhoud](/diensten/website-onderhoud) pakketten: Basic (€50/maand), Pro (€100/maand) en Enterprise (€150/maand). Vraag of onderhoud is inbegrepen of dat je een onderhoudscontract af moet sluiten.
+### Onderhoud (vanaf €29 per maand)
+Websites hebben onderhoud nodig: technische updates, back-ups en beveiligings- en uptimecontroles. [Websiteonderhoud bij TechSolutionsUtrecht](/diensten/website-onderhoud) start vanaf €29 per maand. De exacte prijs hangt af van de techniek, omvang en huidige staat van de website en van de afgesproken ondersteuning.
 
 ### Aanpassingen Na Oplevering
 Wat als je na een maand bedenkt dat je iets wilt wijzigen? Sommige freelancers rekenen per uur voor wijzigingen, anderen bieden een 'wijzigingstermijn' aan.
@@ -144,15 +148,15 @@ Een mooie website die niet gevonden wordt in Google heeft weinig waarde. Vraag h
 Na jaren in dit vak te werken, zie ik één patroon: ondernemers die willen besparen op hun website komen er later achter dat ze uiteindelijk meer betalen. Of omdat ze alles opnieuw moeten laten doen, of omdat ze zelf uren kwijt zijn aan iets wat een professional in een fractie van de tijd doet.
 
 **Mijn advies?**
-- **Heb je een budget van €250-€800?** Kies dan voor een professionele WordPress-website. Dit is de sweet spot voor de meeste ZZP'ers en kleine bedrijven: je krijgt een snelle, SEO-klaare site die je zelf kunt beheren.
-- **Wil je online verkopen?** Reken op €350-€1.200 voor een WooCommerce-webshop, afhankelijk van het aantal producten en betaalmethoden.
+- **Wil je een complete bedrijfswebsite?** De basisuitvoering start vanaf €250 en de meeste projecten vallen tussen €350 en €650. De techniek wordt gekozen op basis van je doelen.
+- **Wil je online verkopen?** Een WooCommerce-webshop start vanaf €795 en kost meestal €1.000–€2.000, afhankelijk van producten, variaties, verzendregels en koppelingen.
 - **Heb je specifieke functionaliteit nodig?** Maatwerk webapplicaties starten bij €400 en lopen op tot €2.000+, afhankelijk van de complexiteit.
 - **Heb je grotere, complexe wensen of een enterprise-traject?** Dan zijn bureau-prijzen van €5.000+ in de markt realistisch, maar niet iets wat TechSolutionsUtrecht aanbiedt.
 
 ## Veelgestelde Vragen
 
 ### Kan ik een goede website voor minder dan €250 krijgen?
-Eerlijk? Waarschijnlijk niet, tenzij je zelf aan de slag gaat met een DIY-platform. Een professional die zijn vak verstaat, kan niet leven van €200 voor een complete website. Bij TechSolutionsUtrecht start een professionele WordPress-website vanaf €250, wat een eerlijke prijs is voor kwaliteit en persoonlijk contact.
+Voor minder dan €250 kom je meestal uit bij een DIY-platform of een zeer beperkte uitvoering. Bij TechSolutionsUtrecht start een complete professionele website vanaf €250. Na de intake krijg je een offerte waarin functies, inhoud en totaalprijs duidelijk zijn vastgelegd.
 
 ### Waarom vragen sommige bureaus €10.000+ voor een website?
 Omdat ze meer leveren dan alleen een website. Ze leveren strategie, branding, uitgebreide SEO, content creatie, en vaak ook doorlopend onderhoud en optimalisatie. Voor grote bedrijven is dit de investering waard.
@@ -164,10 +168,10 @@ Nee, absoluut niet. Een €2.000 website van een goede freelancer kan veel beter
 Vraag dit expliciet! Sommigen doen alles, anderen verwachten dat jij de content aanlevert. Content schrijven kost tijd en expertise, dus dit wordt vaak apart berekend. Wil je teksten die ook in Google scoren, kijk dan naar [SEO teksten laten schrijven](/diensten/seo/teksten).
 
 ### Wat is de gemiddelde prijs om een website te laten maken?
-Voor een professionele website van 3 tot 7 pagina's ligt de gemiddelde prijs in Nederland in 2026 tussen de €750 en €2.500. Bij TechSolutionsUtrecht start een vergelijkbare WordPress-website vanaf €250 tot €800, omdat je rechtstreeks met de developer werkt en niet meebetaalt aan bureaukosten, accountmanagers of een duur pand.
+Marktprijzen lopen sterk uiteen door verschillen in ontwerp, inhoud, begeleiding en functionaliteit. Bij TechSolutionsUtrecht start een complete bedrijfswebsite vanaf €250 en ligt de gebruikelijke projectprijs tussen €350 en €650. Je betaalt voor de afgesproken uitvoering, niet voor een vast aantal pagina's of een verplichte techniek.
 
 ### Hoeveel kost een website per maand?
-Naast de eenmalige bouwkosten betaal je maandelijks voor hosting en domein (circa €10-€25) en eventueel onderhoud (€50-€150). Reken dus op zo'n €60 tot €175 per maand aan vaste lasten voor een professioneel onderhouden website.
+Naast de eenmalige bouwkosten betaal je voor domein en hosting. Wil je het technische beheer uitbesteden, dan start websiteonderhoud bij TechSolutionsUtrecht vanaf €29 per maand. Hostingkosten en de uiteindelijke onderhoudsprijs hangen af van je provider, techniek en gewenste ondersteuning.
 
 ## Conclusie: Investeer Verstandig
 

@@ -35,7 +35,7 @@ Secondary CTA: Bekijk onze diensten
 - Icon: WordPress logo
 - Title: WordPress Websites
 - Desc: Professionele, SEO-vriendelijke websites die je zelf kunt beheren.
-- Link: /diensten/wordpress
+- Link: /diensten/website-laten-maken
 
 **Card 2: Webshops**
 - Icon: Shopping cart
@@ -356,7 +356,7 @@ Prijsindicatie: Vanaf €49
 
 ### Post 1: Wat kost een website laten maken?
 ```
-URL: /blog/wat-kost-een-website-laten-maken
+URL: /blog/wat-kost-website-laten-maken
 Title: Wat Kost een Website Laten Maken in 2025? [Complete Gids]
 Meta: Benieuwd wat een website kost? Bekijk prijzen voor WordPress, 
       webshops en maatwerk. Inclusief bespaartips. 
@@ -382,7 +382,7 @@ Target keywords:
 - Secondary: "website laten maken prijs", "kosten website"
 
 Internal links:
-- Link to /diensten/wordpress
+- Link to /diensten/website-laten-maken
 - Link to /diensten/webshop
 - Link to /contact
 ```

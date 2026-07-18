@@ -7,15 +7,15 @@ import { breadcrumbSchema, serviceSchema, faqPageSchema } from "@/lib/schema";
 const pageUrl = "https://techsolutionsutrecht.nl/website-binnen-week";
 
 export const metadata: Metadata = {
-  title: "Website Laten Maken Binnen 1 Week | Express Service | TechSolutions",
-  description: "Website laten maken binnen 1 week? Express service met snelle oplevering in 3-10 dagen. Professioneel, SEO-klaar en met direct contact met de developer in Utrecht.",
+  title: "Website Binnen 1 Week: Is Dat Haalbaar? | TechSolutions",
+  description: "Website snel laten maken? Bekijk wanneer een versneld traject haalbaar is. Professioneel, SEO-klaar en met direct contact met de developer in Utrecht.",
   alternates: { canonical: pageUrl },
 };
 
 const service = serviceSchema({
-  name: "Website binnen 1 week laten maken Utrecht",
+  name: "Versneld websiteproject in Utrecht",
   description:
-    "Express website laten maken in Utrecht met oplevering binnen 3 tot 10 dagen. Professioneel, SEO-klaar en met direct contact met de developer.",
+    "Laat beoordelen of een versneld websiteproject haalbaar is. De planning hangt af van de omvang, functies en beschikbaarheid van de benodigde content.",
   url: pageUrl,
 });
 
@@ -28,22 +28,22 @@ const faqs = [
   {
     question: "Kan een website echt binnen 1 week online staan?",
     answer:
-      "Ja. De meeste websites lever ik binnen 3 tot 10 werkdagen op. Doordat je direct met de developer werkt en er geen tussenlagen zijn, gaat het snel. Lever je teksten en beeldmateriaal vlot aan, dan kan het soms zelfs binnen een paar dagen.",
+      "Dat kan bij een compact project met een duidelijke scope en direct beschikbare content. Na een korte intake beoordelen we de haalbaarheid en ontvang je een planning met een afgesproken opleverdatum.",
   },
   {
     question: "Gaat snelheid niet ten koste van kwaliteit?",
     answer:
-      "Nee. De snelheid komt door een efficiënt proces en 12+ jaar ervaring, niet door op kwaliteit in te leveren. Je krijgt een professionele, SEO-klare en mobielvriendelijke website, alleen sneller dan bij de meeste bureaus.",
+      "Een versneld traject wordt alleen voorgesteld als ontwerp, ontwikkeling, controle en aanpassingen zorgvuldig kunnen worden uitgevoerd. Als dat niet realistisch is, ontvang je een ruimere planning.",
   },
   {
     question: "Wat heb je van mij nodig om snel te kunnen starten?",
     answer:
-      "Vooral je teksten, logo en beeldmateriaal, plus een idee van je gewenste uitstraling. Hoe sneller je dit aanlevert, hoe sneller je website live kan. Ik denk hierin graag met je mee.",
+      "Je doelen, teksten, logo, beeldmateriaal en een duidelijk beeld van de gewenste functies. Hoe completer deze informatie is, hoe nauwkeuriger we de planning kunnen bepalen.",
   },
   {
     question: "Is express-oplevering duurder?",
     answer:
-      "Standaard lever ik al snel op. Heb je het écht met spoed nodig, dan bespreken we vooraf of een express-traject nodig is en wat dat kost. Geen verrassingen achteraf.",
+      "Als een versneld traject extra planning of capaciteit vraagt, leggen we de eventuele meerkosten vooraf vast in de offerte. Je weet dus vóór de start wat de totaalprijs is.",
   },
 ];
 
@@ -113,9 +113,8 @@ export default function WebsiteBinnenWeekPage() {
             
             <p className="text-lg sm:text-xl text-[var(--color-muted)] mb-8">
               <strong className="text-[var(--color-ink)]">Website laten maken binnen 1 week?</strong> 
-              Bij ons kan het! <strong className="text-primary">Snelle oplevering</strong> binnen 
-              3-10 dagen. Soms zelfs sneller. Express service beschikbaar. 
-              Geen lange wachtlijsten, direct aan de slag.
+              Bij een compact project kan dat haalbaar zijn. Na een korte intake beoordelen we de
+              <strong className="text-primary"> scope, content en benodigde functies</strong> en ontvang je een duidelijke planning.
             </p>
 
             <div className="flex flex-wrap justify-center gap-4">
@@ -178,11 +177,11 @@ export default function WebsiteBinnenWeekPage() {
               <div className="mt-8 p-6 bg-primary/10 rounded-xl">
                 <div className="flex items-center gap-3 mb-3">
                   <Target className="w-6 h-6 text-primary" />
-                  <span className="font-semibold text-[var(--color-ink)]">Onze Belofte</span>
+                  <span className="font-semibold text-[var(--color-ink)]">Duidelijke Afspraken</span>
                 </div>
                 <p className="text-[var(--color-muted)]">
-                  We leveren altijd op tijd. Als we een deadline afspreken, houden we ons daaraan. 
-                  Geen excuses, geen vertragingen. Uw website gaat live wanneer afgesproken.
+                  Scope, feedbackmomenten, planning en opleverdatum worden vooraf vastgelegd.
+                  Als iets de planning beïnvloedt, bespreken we dat direct en transparant.
                 </p>
               </div>
             </div>
@@ -191,9 +190,9 @@ export default function WebsiteBinnenWeekPage() {
               <div className="aspect-square rounded-2xl bg-[var(--color-primary)]/10 flex items-center justify-center">
                 <div className="text-center">
                   <Clock className="w-24 h-24 text-yellow-500 mx-auto mb-4" />
-                  <div className="text-2xl font-bold text-[var(--color-ink)]">Snelle Oplevering</div>
-                  <div className="text-3xl font-extrabold text-primary mt-2">3-10 Dagen</div>
-                  <div className="text-[var(--color-muted)] mt-1">Soms zelfs 1 week</div>
+                  <div className="text-2xl font-bold text-[var(--color-ink)]">Versneld Traject</div>
+                  <div className="text-3xl font-extrabold text-primary mt-2">Planning op maat</div>
+                  <div className="text-[var(--color-muted)] mt-1">Na beoordeling van scope en content</div>
                 </div>
               </div>
             </div>
@@ -215,18 +214,17 @@ export default function WebsiteBinnenWeekPage() {
           {/* CTA Section */}
           <div className="bg-[var(--color-primary)]/10 border border-primary/20 rounded-2xl p-8 text-center">
             <h2 className="text-2xl sm:text-3xl font-bold text-[var(--color-ink)] mb-4">
-              Klaar om Uw Website{" "}<span className="text-[var(--color-primary)]">Snel Online</span>{" "}
-              te Hebben?
+              Is een <span className="text-[var(--color-primary)]">versneld traject</span> voor u haalbaar?
             </h2>
             
             <p className="text-[var(--color-muted)] mb-6 max-w-2xl mx-auto">
-              Neem vandaag nog contact op. We bespreken uw wensen en kunnen vaak 
-              binnen enkele dagen al starten. Snelle oplevering gegarandeerd.
+              Neem contact op voor een korte intake. We beoordelen de omvang, functies en beschikbare
+              content en geven daarna een realistische planning en vaste totaalprijs.
             </p>
             
             <div className="flex flex-wrap justify-center gap-4">
               <Link href="/contact" className="btn-primary text-lg px-8 py-4">
-                Vraag snelle offerte aan
+                Vraag een intake aan
               </Link>
             </div>
           </div>

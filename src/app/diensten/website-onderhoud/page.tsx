@@ -1,297 +1,453 @@
 import { Metadata } from "next";
-import Footer from "@/components/Footer";
 import Link from "next/link";
-import { Wrench, Check, ArrowRight, Shield, Clock } from "lucide-react";
-import { breadcrumbSchema, serviceSchema, faqPageSchema } from "@/lib/schema";
+import {
+  Activity,
+  ArrowRight,
+  Check,
+  ClipboardList,
+  DatabaseBackup,
+  LifeBuoy,
+  Phone,
+  RefreshCw,
+  ShieldCheck,
+  Wrench,
+} from "lucide-react";
+import Footer from "@/components/Footer";
+import ServiceHeroVisual from "@/components/ServiceHeroVisual";
+import { breadcrumbSchema, serviceSchema } from "@/lib/schema";
 
-const pageUrl = "https://techsolutionsutrecht.nl/diensten/website-onderhoud";
+const pageUrl =
+  "https://techsolutionsutrecht.nl/diensten/website-onderhoud";
 
 const breadcrumb = breadcrumbSchema([
   { name: "Home", url: "https://techsolutionsutrecht.nl" },
   { name: "Diensten", url: "https://techsolutionsutrecht.nl/diensten" },
-  { name: "Website Onderhoud", url: pageUrl },
+  { name: "Website onderhoud", url: pageUrl },
 ]);
 
-const service = serviceSchema({
-  name: "Website onderhoud Utrecht",
-  description:
-    "Zorgeloos WordPress website onderhoud in Utrecht: updates, beveiliging, dagelijkse backups en snelle support. Vanaf €50 per maand, maandelijks opzegbaar.",
-  url: pageUrl,
-});
+const service = {
+  ...serviceSchema({
+    name: "Website onderhoud Utrecht",
+    description:
+      "Websiteonderhoud vanaf €29 per maand voor technische updates, regelmatige back-ups, beveiligings- en uptimecontrole en technische ondersteuning.",
+    url: pageUrl,
+  }),
+  offers: {
+    "@type": "Offer",
+    price: "29",
+    priceCurrency: "EUR",
+    description:
+      "Vanaf €29 per maand. De exacte prijs hangt af van de website en het gewenste onderhoud.",
+  },
+};
 
 const faqs = [
   {
-    question: "Waarom is website onderhoud belangrijk?",
+    question: "Waarom is websiteonderhoud belangrijk?",
     answer:
-      "Een website is nooit 'af'. WordPress, plugins en themes krijgen voortdurend updates die beveiligingslekken dichten en de site snel houden. Zonder onderhoud loop je risico op hacks, witte schermen na een mislukte update en dataverlies. Met een onderhoudsabonnement blijft je site veilig, snel en up-to-date zonder dat jij ernaar om hoeft te kijken.",
+      "Updates, verouderde software, beveiligingsproblemen of mislukte back-ups kunnen onderdelen van een website verstoren. Periodiek onderhoud helpt om aandachtspunten eerder te ontdekken en de website betrouwbaarder te houden.",
   },
   {
-    question: "Wat kost website onderhoud?",
+    question: "Wat kost websiteonderhoud?",
     answer:
-      "Onderhoud start vanaf €50 per maand voor het Basic-pakket en is maandelijks opzegbaar. Het Pro-pakket (€100) voegt dagelijkse backups, performance-optimalisatie en priority support toe. Voor zwaardere sites is er een Enterprise-pakket. Je kiest het niveau dat bij jouw website past.",
+      "Websiteonderhoud start vanaf €29 per maand. De exacte prijs hangt af van de techniek, omvang en huidige staat van de website en van de gewenste controles, back-ups en ondersteuning.",
   },
   {
-    question: "Maken jullie backups van mijn website?",
+    question: "Hoe vaak worden back-ups gemaakt?",
     answer:
-      "Ja. Afhankelijk van je pakket maak ik wekelijkse, dagelijkse of real-time backups naar veilige cloudopslag. Gaat er iets mis, dan zet ik je website snel terug naar een werkende versie.",
+      "De back-upfrequentie wordt afgestemd op je website en vooraf vastgelegd in het onderhoudsvoorstel. We controleren ook of de afgesproken back-ups correct worden uitgevoerd.",
   },
   {
-    question: "Werkt onderhoud ook als jullie mijn site niet hebben gebouwd?",
+    question: "Onderhouden jullie ook websites die jullie niet hebben gebouwd?",
     answer:
-      "Meestal wel. Ik neem bestaande WordPress-websites graag in onderhoud. Ik doe eerst een korte controle van de staat van je site en bespreek daarna welk pakket het beste past.",
+      "Dat is soms mogelijk. Voor andere websites voeren we eerst een technische controle uit om te bepalen of we het onderhoud verantwoord kunnen overnemen.",
+  },
+  {
+    question: "Wat valt niet onder het onderhoud?",
+    answer:
+      "Nieuwe pagina’s, grote inhoudelijke wijzigingen, redesigns en maatwerkontwikkeling vallen niet standaard onder onderhoud. Extra werkzaamheden bespreken we altijd vooraf.",
+  },
+  {
+    question: "Wat gebeurt er als mijn website een technisch probleem heeft?",
+    answer:
+      "We onderzoeken het probleem en helpen wanneer dit binnen de afgesproken onderhoudswerkzaamheden valt. Werk buiten de scope of problemen bij externe diensten worden eerst besproken.",
+  },
+  {
+    question: "Kan ik het onderhoud stopzetten?",
+    answer:
+      "De looptijd en opzegvoorwaarden worden vooraf duidelijk in het onderhoudsvoorstel vastgelegd.",
   },
 ];
 
-const faqSchema = faqPageSchema(faqs);
-
 export const metadata: Metadata = {
-  title: "Website Onderhoud | WordPress Updates, Beveiliging & Backups | TechSolutions",
-  description: "Website onderhoud vanaf €50 per maand: WordPress onderhoud met updates, beveiliging, dagelijkse backups en snelle support vanuit Utrecht. Maandelijks opzegbaar.",
-  alternates: { canonical: "https://techsolutionsutrecht.nl/diensten/website-onderhoud" },
+  title: "Websiteonderhoud zonder zorgen | Vanaf €29 per maand",
+  description:
+    "Websiteonderhoud in Utrecht vanaf €29 per maand voor technische updates, back-ups en controles. Eerst beoordelen we de techniek en huidige staat van je website.",
+  alternates: { canonical: pageUrl },
   openGraph: {
-    title: "Website Onderhoud | WordPress Updates, Beveiliging & Backups | TechSolutions",
-    description: "Website onderhoud vanaf €50 per maand: WordPress onderhoud met updates, beveiliging, dagelijkse backups en snelle support vanuit Utrecht.",
+    title: "Websiteonderhoud zonder zorgen | TechSolutionsUtrecht",
+    description:
+      "Technisch websiteonderhoud vanaf €29 per maand met updates, back-ups en controles, afgestemd op je website.",
     type: "website",
     locale: "nl_NL",
-    url: "https://techsolutionsutrecht.nl/diensten/website-onderhoud",
+    url: pageUrl,
     siteName: "TechSolutionsUtrecht",
   },
 };
 
-const features = [
+const heroFeatures = [
+  "Technische updates en controles",
+  "Regelmatige back-ups",
+  "Beveiligings- en uptimecontrole",
+  "Hulp bij technische problemen",
+];
+
+const includedServices = [
   {
-    icon: Shield,
-    title: "Beveiliging",
-    description: "Reguliere security scans, malware verwijdering, en bescherming tegen hacks."
+    icon: RefreshCw,
+    title: "Technische updates",
+    text: "Updates van het CMS, plugins, thema’s of andere onderdelen wanneer dit veilig en technisch mogelijk is.",
   },
   {
-    icon: Clock,
-    title: "Updates",
-    description: "WordPress core, plugins en themes worden up-to-date gehouden."
+    icon: DatabaseBackup,
+    title: "Regelmatige back-ups",
+    text: "Back-ups volgens de afgesproken frequentie en controle of deze correct worden uitgevoerd.",
   },
   {
-    icon: Wrench,
-    title: "Backups",
-    description: "Dagelijkse backups naar veilige cloud opslag. Snel herstel mogelijk."
+    icon: ShieldCheck,
+    title: "Beveiligingscontrole",
+    text: "Controle op opvallende beveiligingsproblemen, verdachte wijzigingen en verouderde onderdelen.",
+  },
+  {
+    icon: Activity,
+    title: "Uptimecontrole",
+    text: "Monitoring om sneller te signaleren wanneer de website niet bereikbaar is.",
+  },
+  {
+    icon: LifeBuoy,
+    title: "Technische ondersteuning",
+    text: "Hulp bij technische problemen die binnen de afgesproken onderhoudswerkzaamheden vallen.",
+  },
+  {
+    icon: ClipboardList,
+    title: "Onderhoudsrapportage",
+    text: "Een duidelijk overzicht van uitgevoerde controles, updates en aandachtspunten.",
   },
 ];
 
-const packages = [
+const excludedServices = [
+  "Nieuwe pagina’s of functionaliteiten",
+  "Volledig redesign",
+  "Grote inhoudelijke wijzigingen",
+  "Maatwerk development",
+  "Problemen veroorzaakt door externe diensten of hostingpartijen",
+  "Herstel van bestaande ernstige problemen vóór de start van het abonnement",
+];
+
+const priceFactors = [
+  "Type website en gebruikte techniek",
+  "Aantal plugins, koppelingen of maatwerkonderdelen",
+  "Gewenste back-upfrequentie",
+  "Benodigde monitoring en ondersteuning",
+  "Huidige technische staat van de website",
+];
+
+const processSteps = [
   {
-    name: "Basic",
-    price: "€50",
-    period: "/maand",
-    features: [
-      "Wekelijkse backups",
-      "Maandelijkse updates",
-      "Security monitoring",
-      "E-mail support",
-      "99.9% uptime garantie"
-    ],
-    recommended: false
+    title: "Technische controle",
+    text: "We bekijken de huidige staat, techniek, updates en mogelijke problemen.",
   },
   {
-    name: "Pro",
-    price: "€100",
-    period: "/maand",
-    features: [
-      "Dagelijkse backups",
-      "Wekelijkse updates",
-      "Advanced security",
-      "Performance optimalisatie",
-      "Priority support",
-      "Maandelijks rapport"
-    ],
-    recommended: true
+    title: "Onderhoudsvoorstel",
+    text: "Je ontvangt een duidelijk voorstel met werkzaamheden, prijs en afspraken.",
   },
   {
-    name: "Enterprise",
-    price: "€150",
-    period: "/maand",
-    features: [
-      "Real-time backups",
-      "Directe updates",
-      "Premium security suite",
-      "CDN integratie",
-      "24/7 support",
-      "Custom development",
-      "Dedicated account manager"
-    ],
-    recommended: false
+    title: "Back-up en inrichting",
+    text: "We maken of controleren eerst een back-up en richten de afgesproken controles in.",
+  },
+  {
+    title: "Periodiek onderhoud",
+    text: "We voeren het onderhoud uit en houden je op de hoogte van belangrijke aandachtspunten.",
   },
 ];
 
 export default function WebsiteOnderhoudPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(service) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-        {/* Breadcrumb */}
-        <nav className="py-4 bg-[var(--color-surface)] border-b border-[var(--color-border)]">
-          <div className="container-custom">
-            <ol className="flex items-center gap-2 text-sm flex-wrap">
-              <li><Link href="/" className="text-[var(--color-muted)] hover:text-primary transition-colors">Home</Link></li>
-              <li className="text-[var(--color-muted)]">/</li>
-              <li><Link href="/diensten" className="text-[var(--color-muted)] hover:text-primary transition-colors">Diensten</Link></li>
-              <li className="text-[var(--color-muted)]">/</li>
-              <li><span className="text-[var(--color-ink)] font-medium capitalize">website-onderhoud</span></li>
-            </ol>
-          </div>
-        </nav>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(service) }}
+      />
 
-         <main className="pt-32 pb-24">
+      <nav className="border-b border-[var(--color-border)] bg-[var(--color-surface)] py-4">
         <div className="container-custom">
-          <nav className="text-sm text-[var(--color-muted)] mb-8">
-            <Link href="/" className="hover:text-primary">Home</Link>
-            <span className="mx-2">/</span>
-            <Link href="/diensten" className="hover:text-primary">Diensten</Link>
-            <span className="mx-2">/</span>
-            <span>Onderhoud</span>
-          </nav>
+          <ol className="flex flex-wrap items-center gap-2 text-sm">
+            <li>
+              <Link
+                href="/"
+                className="text-[var(--color-muted)] transition-colors hover:text-primary"
+              >
+                Home
+              </Link>
+            </li>
+            <li className="text-[var(--color-muted)]">/</li>
+            <li>
+              <Link
+                href="/diensten"
+                className="text-[var(--color-muted)] transition-colors hover:text-primary"
+              >
+                Diensten
+              </Link>
+            </li>
+            <li className="text-[var(--color-muted)]">/</li>
+            <li>
+              <span className="font-medium text-[var(--color-ink)]">
+                Website onderhoud
+              </span>
+            </li>
+          </ol>
+        </div>
+      </nav>
 
-          <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">
-            <div>
-              <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-[var(--color-primary)] mb-6">
-                <Wrench className="w-8 h-8 text-white" />
-              </div>
-              
-              <h1 className="text-4xl sm:text-5xl font-bold text-[var(--color-ink)] mb-4">
-                Website{" "}
-                <span className="text-[var(--color-primary)]">Onderhoud</span>
-              </h1>
-              
-              <p className="text-lg text-[var(--color-muted)] mb-8">
-                <strong className="text-[var(--color-ink)]">Voordelig website onderhoud</strong> vanaf slechts 
-                <strong className="text-primary">€50 per maand</strong>. 
-                Updates, beveiliging, backups — wij zorgen dat je site veilig en snel blijft, 
-                zonder hoge kosten.
-              </p>
+      <main className="pb-24 pt-16 sm:pt-20">
+        <div className="container-custom">
+          <section className="grid gap-10 lg:grid-cols-[minmax(0,1.25fr)_minmax(360px,0.95fr)] lg:items-center xl:gap-14">
+            <div className="min-w-0">
+            <div className="mb-6 inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-[var(--color-primary)]">
+              <Wrench className="h-8 w-8 text-white" aria-hidden="true" />
+            </div>
 
-              <div className="grid sm:grid-cols-3 gap-4 mb-8">
-                {features.map((feature) => (
-                  <div key={feature.title} className="flex items-start gap-3">
-                    <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
-                      <feature.icon className="w-5 h-5 text-primary" />
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-[var(--color-ink)]">{feature.title}</h3>
-                      <p className="text-sm text-[var(--color-muted)]">{feature.description}</p>
-                    </div>
+            <h1 className="mb-6 max-w-3xl text-balance text-4xl font-bold text-[var(--color-ink)] sm:text-5xl">
+              Websiteonderhoud <span className="text-primary">zonder zorgen</span>
+            </h1>
+
+            <p className="mb-8 max-w-3xl text-lg leading-relaxed text-[var(--color-muted)]">
+              Houd je website veilig, snel en betrouwbaar met technisch onderhoud
+              vanaf €29 per maand. We verzorgen updates, back-ups en controles,
+              zodat problemen sneller worden ontdekt en je website goed blijft
+              werken.
+            </p>
+
+            <div className="mb-8 grid max-w-3xl gap-3 sm:grid-cols-2">
+              {heroFeatures.map((feature) => (
+                <div key={feature} className="flex items-center gap-3">
+                  <div className="flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-primary/20">
+                    <Check className="h-3 w-3 text-primary" aria-hidden="true" />
                   </div>
-                ))}
-              </div>
+                  <span className="text-[var(--color-muted)]">{feature}</span>
+                </div>
+              ))}
+            </div>
 
-              <Link href="/contact" className="btn-primary group inline-flex">
-                Gratis consultatie
-                <ArrowRight className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1" />
+            <div className="mb-8 max-w-2xl">
+              <div className="text-3xl font-bold text-primary">
+                Vanaf €29 per maand
+              </div>
+              <div className="mt-2 leading-relaxed text-[var(--color-muted)]">
+                De exacte prijs hangt af van je website en het gewenste onderhoud.
+              </div>
+            </div>
+
+            <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
+              <Link href="/contact" className="btn-primary group">
+                Laat je website controleren
+                <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+              </Link>
+              <Link href="#inbegrepen" className="btn-secondary">
+                Bekijk wat inbegrepen is
               </Link>
             </div>
-
-            <div className="relative">
-              <div className="aspect-square rounded-2xl bg-[var(--color-primary)]/10 flex items-center justify-center">
-                <div className="text-center">
-                  <Wrench className="w-32 h-32 text-[var(--color-primary)] mx-auto mb-4" />
-                  <div className="text-2xl font-bold text-[var(--color-ink)]">Onderhoud</div>
-                  <div className="text-3xl font-extrabold text-primary mt-2">Vanaf €50/maand</div>
-                  <div className="text-[var(--color-muted)] mt-1">Scherpe prijs</div>
-                </div>
-              </div>
             </div>
-          </div>
 
-          {/* Intro */}
-          <section className="mb-20 max-w-3xl">
-            <h2 className="text-3xl font-bold text-[var(--color-ink)] mb-6">
-              Waarom doorlopend onderhoud loont
-            </h2>
-            <p className="text-[var(--color-muted)] mb-4 leading-relaxed">
-              Een website is geen eenmalig product maar levende software. WordPress, plugins en themes krijgen
-              regelmatig updates die beveiligingslekken dichten en je site snel en stabiel houden. Sla je die over,
-              dan groeit het risico op hacks, een trage website of een wit scherm na een mislukte update.
-            </p>
-            <p className="text-[var(--color-muted)] mb-4 leading-relaxed">
-              Met een onderhoudsabonnement neem ik dat werk uit handen. Ik houd je website up-to-date, maak
-              regelmatig backups, bewaak de beveiliging en grijp in als er iets misgaat, zodat jij je kunt richten
-              op je bedrijf in plaats van op je website.
-            </p>
-            <p className="text-[var(--color-muted)] leading-relaxed">
-              Je hebt direct contact met de developer die je site beheert, en alle pakketten zijn maandelijks
-              opzegbaar. Geen lange contracten, gewoon een veilige en snelle website.
-            </p>
+            <ServiceHeroVisual
+              src="/images/website-onderhoud-hero.webp"
+              alt="Illustratie van websiteonderhoud met updates, beveiliging en back-ups"
+            />
           </section>
 
-          {/* Packages */}
-          <div className="mb-20">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-[var(--color-ink)] mb-4">
-                Onderhouds<span className="text-[var(--color-primary)]">pakketten</span>
+          <div className="mt-16 space-y-16 sm:mt-20 sm:space-y-20">
+            <section className="max-w-3xl">
+              <h2 className="mb-6 text-balance text-3xl font-bold text-[var(--color-ink)]">
+                Waarom is websiteonderhoud belangrijk?
               </h2>
-              <p className="text-[var(--color-muted)]">
-                Kies het pakket dat bij jou past. Alle pakketten zijn maandelijks opzegbaar.
+              <div className="space-y-4 leading-relaxed text-[var(--color-muted)]">
+                <p>
+                  Een website heeft regelmatig technische aandacht nodig. Updates,
+                  verouderde software, beveiligingsproblemen of mislukte back-ups
+                  kunnen ervoor zorgen dat onderdelen niet meer goed werken. Met
+                  periodiek onderhoud worden problemen eerder ontdekt en blijft je
+                  website betrouwbaarder.
+                </p>
+                <p>
+                  Onderhoud is mogelijk voor WordPress-websites en websites die door
+                  ons zijn gebouwd. Voor andere websites voeren we eerst een
+                  technische controle uit om te bepalen of we het onderhoud kunnen
+                  overnemen.
+                </p>
+              </div>
+            </section>
+
+            <section id="inbegrepen" className="scroll-mt-28">
+              <h2 className="mb-4 text-balance text-3xl font-bold text-[var(--color-ink)]">
+                Wat is inbegrepen?
+              </h2>
+              <p className="mb-8 max-w-3xl leading-relaxed text-[var(--color-muted)]">
+                De precieze frequentie en omvang van het onderhoud worden in het
+                voorstel vastgelegd. Deze onderdelen vormen de basis.
               </p>
-            </div>
+              <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+                {includedServices.map((item) => (
+                  <article
+                    key={item.title}
+                    className="rounded-2xl border border-[var(--color-border)] bg-[var(--color-bg)] p-6"
+                  >
+                    <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10">
+                      <item.icon className="h-6 w-6 text-primary" aria-hidden="true" />
+                    </div>
+                    <h3 className="text-xl font-bold text-[var(--color-ink)]">
+                      {item.title}
+                    </h3>
+                    <p className="mt-3 leading-relaxed text-[var(--color-muted)]">
+                      {item.text}
+                    </p>
+                  </article>
+                ))}
+              </div>
+            </section>
 
-            <div className="grid md:grid-cols-3 gap-6">
-              {packages.map((pkg) => (
-                <div 
-                  key={pkg.name}
-                  className={`relative p-6 rounded-2xl border ${
-                    pkg.recommended 
-                      ? 'bg-[var(--color-bg)] border-primary' 
-                      : 'bg-[var(--color-surface)] border-[var(--color-border)]'
-                  }`}
-                >
-                  {pkg.recommended && (
-                    <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 bg-primary text-white text-sm rounded-full">
-                      Aanbevolen
-                    </div>
-                  )}
-                  
-                  <div className="text-center mb-6">
-                    <h3 className="text-xl font-bold text-[var(--color-ink)]">{pkg.name}</h3>
-                    <div className="mt-4">
-                      <span className="text-4xl font-bold text-primary">{pkg.price}</span>
-                      <span className="text-[var(--color-muted)]">{pkg.period}</span>
-                    </div>
+            <section>
+              <h2 className="mb-6 text-balance text-3xl font-bold text-[var(--color-ink)]">
+                Wat valt niet standaard onder onderhoud?
+              </h2>
+              <ul className="grid gap-x-10 gap-y-4 rounded-2xl bg-[var(--color-surface)] p-6 sm:p-8 md:grid-cols-2">
+                {excludedServices.map((item) => (
+                  <li key={item} className="flex items-start gap-3">
+                    <div className="mt-2 h-2 w-2 flex-shrink-0 rounded-full bg-primary" />
+                    <span className="leading-relaxed text-[var(--color-ink)]">
+                      {item}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+              <p className="mt-5 max-w-3xl leading-relaxed text-[var(--color-muted)]">
+                Extra werkzaamheden worden altijd vooraf besproken en pas na akkoord
+                uitgevoerd.
+              </p>
+            </section>
+
+            <section>
+              <h2 className="mb-6 text-balance text-3xl font-bold text-[var(--color-ink)]">
+                Wat kost websiteonderhoud?
+              </h2>
+              <div className="grid gap-8 rounded-2xl bg-[var(--color-surface)] p-6 sm:p-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.15fr)]">
+                <div>
+                  <div className="text-3xl font-bold text-primary">
+                    Vanaf €29 per maand
                   </div>
-
-                  <ul className="space-y-3 mb-8">
-                    {pkg.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-center gap-3">
-                        <Check className="w-5 h-5 text-primary flex-shrink-0" />
-                        <span className="text-[var(--color-muted)] text-sm">{feature}</span>
+                  <p className="mt-4 leading-relaxed text-[var(--color-muted)]">
+                    De exacte prijs hangt af van de techniek, omvang en huidige staat
+                    van je website en van de gewenste frequentie van back-ups,
+                    controles en ondersteuning.
+                  </p>
+                  <Link href="/contact" className="btn-primary mt-6">
+                    Vraag een passend onderhoudsvoorstel aan
+                  </Link>
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-[var(--color-ink)]">
+                    Waar hangt de prijs van af?
+                  </h3>
+                  <ul className="mt-5 space-y-3">
+                    {priceFactors.map((factor) => (
+                      <li key={factor} className="flex items-start gap-3">
+                        <Check
+                          className="mt-0.5 h-5 w-5 flex-shrink-0 text-primary"
+                          aria-hidden="true"
+                        />
+                        <span className="leading-relaxed text-[var(--color-ink)]">
+                          {factor}
+                        </span>
                       </li>
                     ))}
                   </ul>
+                </div>
+              </div>
+            </section>
 
-                  <Link 
-                    href="/contact"
-                    className={`block text-center py-3 rounded-lg font-medium transition-colors ${
-                      pkg.recommended
-                        ? 'btn-primary'
-                        : 'bg-[var(--color-surface)] text-[var(--color-ink)] hover:bg-primary hover:text-white'
-                    }`}
+            <section>
+              <h2 className="mb-8 text-balance text-3xl font-bold text-[var(--color-ink)]">
+                Zo starten we met het onderhoud
+              </h2>
+              <ol className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+                {processSteps.map((step, index) => (
+                  <li
+                    key={step.title}
+                    className="rounded-2xl border border-[var(--color-border)] bg-[var(--color-bg)] p-6"
                   >
-                    Kies {pkg.name}
-                  </Link>
-                </div>
-              ))}
-            </div>
-          </div>
+                    <div className="mb-5 flex h-10 w-10 items-center justify-center rounded-full bg-[var(--color-primary)] font-bold text-white">
+                      {index + 1}
+                    </div>
+                    <h3 className="text-lg font-bold text-[var(--color-ink)]">
+                      {step.title}
+                    </h3>
+                    <p className="mt-3 text-sm leading-relaxed text-[var(--color-muted)]">
+                      {step.text}
+                    </p>
+                  </li>
+                ))}
+              </ol>
+            </section>
 
-          {/* FAQ */}
-          <section className="max-w-3xl">
-            <h2 className="text-3xl font-bold text-[var(--color-ink)] mb-10">Veelgestelde vragen over website onderhoud</h2>
-            <div className="space-y-4">
-              {faqs.map((faq) => (
-                <div key={faq.question} className="bg-[var(--color-bg)] border border-[var(--color-border)] rounded-xl p-6">
-                  <h3 className="text-lg font-semibold text-[var(--color-ink)] mb-2">{faq.question}</h3>
-                  <p className="text-[var(--color-muted)] leading-relaxed">{faq.answer}</p>
-                </div>
-              ))}
-            </div>
-          </section>
+            <section className="max-w-3xl">
+              <h2 className="mb-10 text-balance text-3xl font-bold text-[var(--color-ink)]">
+                Veelgestelde vragen over websiteonderhoud
+              </h2>
+              <div className="space-y-4">
+                {faqs.map((faq) => (
+                  <article
+                    key={faq.question}
+                    className="rounded-xl border border-[var(--color-border)] bg-[var(--color-bg)] p-6"
+                  >
+                    <h3 className="mb-2 text-lg font-semibold text-[var(--color-ink)]">
+                      {faq.question}
+                    </h3>
+                    <p className="leading-relaxed text-[var(--color-muted)]">
+                      {faq.answer}
+                    </p>
+                  </article>
+                ))}
+              </div>
+            </section>
+
+            <section className="rounded-2xl border border-[var(--color-border)] bg-[var(--color-bg)] p-8 text-center sm:p-10">
+              <h2 className="mb-4 text-balance text-3xl font-bold text-[var(--color-ink)]">
+                Websiteonderhoud nodig?
+              </h2>
+              <p className="mx-auto mb-8 max-w-2xl leading-relaxed text-[var(--color-muted)]">
+                Laat je website eerst controleren. Daarna ontvang je een duidelijk
+                voorstel dat past bij de techniek, omvang en huidige staat van je
+                website.
+              </p>
+              <div className="flex flex-col justify-center gap-4 sm:flex-row">
+                <a
+                  href="https://wa.me/31625518708"
+                  className="inline-flex items-center justify-center gap-2 rounded-xl bg-[#25D366] px-8 py-4 font-semibold text-white transition-colors hover:bg-[#128C7E]"
+                >
+                  <Phone className="h-5 w-5" aria-hidden="true" /> WhatsApp direct
+                </a>
+                <Link
+                  href="/contact"
+                  className="btn-primary inline-flex items-center justify-center"
+                >
+                  Vraag onderhoud aan
+                </Link>
+              </div>
+            </section>
+          </div>
         </div>
       </main>
       <Footer />

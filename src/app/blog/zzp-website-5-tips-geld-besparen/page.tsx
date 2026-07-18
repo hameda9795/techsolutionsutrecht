@@ -3,22 +3,44 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Link from "next/link";
 import { Calendar, Clock, ArrowLeft, User, CheckCircle, Euro } from "lucide-react";
+import { articleSchema } from "@/lib/schema";
+
+const canonicalUrl = "https://techsolutionsutrecht.nl/blog/zzp-website-5-tips-geld-besparen";
 
 export const metadata: Metadata = {
-  title: "ZZP Website Laten Maken: 5 Tips om Geld te Besparen | TechSolutionsUtrecht",
+  title: "ZZP Website: 5 Manieren om Slim te Besparen",
   description: "ZZP website laten maken goedkoop? 5 praktische tips om geld te besparen zonder in te leveren op kwaliteit. Lees hoe je slim kunt besparen!",
   keywords: ["zzp website starter", "geld besparen website", "zzp website tips", "betaalbare website zzp"],
-  alternates: { canonical: "https://techsolutionsutrecht.nl/blog/zzp-website-5-tips-geld-besparen" },
+  alternates: { canonical: canonicalUrl },
+  openGraph: {
+    title: "ZZP Website: 5 Manieren om Slim te Besparen",
+    description: "Bespaar gericht op je ZZP-website zonder essentiële kwaliteit weg te laten.",
+    type: "article",
+    url: canonicalUrl,
+    locale: "nl_NL",
+    publishedTime: "2025-02-26",
+    modifiedTime: "2026-07-18",
+    authors: ["Max"],
+    images: ["/images/blog/zzp-website.jpg"],
+  },
 };
+
+const blogPostingSchema = articleSchema({
+  title: "ZZP Website: 5 Manieren om Slim te Besparen",
+  description: "Vijf praktische manieren om als ZZP'er gericht te besparen op je website zonder essentiële kwaliteit weg te laten.",
+  url: canonicalUrl,
+  datePublished: "2025-02-26",
+  dateModified: "2026-07-18",
+  image: "/images/blog/zzp-website.jpg",
+  author: "Max",
+});
 
 const tips = [
   {
     number: 1,
-    title: "Kies voor WordPress",
-    content: `WordPress is 's werelds meest gebruikte CMS en met een goede reden. Het is gratis, flexibel en eindeloos uitbreidbaar. 
-    In plaats van een dure custom ontwikkeling van €5.000+, kun je met WordPress al een professionele website laten maken vanaf €250. 
-    Je krijgt alle functionaliteit die je nodig hebt: CMS, SEO-vriendelijkheid, mobiele optimalisatie, en duizenden gratis plugins.`,
-    saving: "Besparing: €2.000 - €5.000"
+    title: "Kies techniek die past bij je doel",
+    content: `Betaal niet voor maatwerk dat je niet nodig hebt. WordPress kan geschikt zijn als je veel inhoud zelf wilt beheren; Next.js of een andere techniek kan beter passen bij snelheid of specifieke functies. Laat de keuze volgen uit je doelen, niet uit een standaardpakket. Een complete professionele website start bij TechSolutionsUtrecht vanaf €250.`,
+    saving: "Besparing: voorkom onnodig maatwerk"
   },
   {
     number: 2,
@@ -27,7 +49,7 @@ const tips = [
     Als je zelf je teksten schrijft en je foto's verzamelt, bespaar je flink. 
     Zorg wel dat je teksten SEO-geoptimaliseerd zijn en je foto's van goede kwaliteit zijn. 
     We geven je graag een template zodat je weet wat we nodig hebben.`,
-    saving: "Besparing: €200 - €500"
+    saving: "Besparing: minder invoer- en redactiewerk"
   },
   {
     number: 3,
@@ -35,7 +57,7 @@ const tips = [
     content: `Je hoeft niet meteen alles te hebben. Begin met een goede basiswebsite met de essentiële pagina's: 
     Home, Over ons, Diensten en Contact. Zodra je bedrijf groeit, kun je altijd pagina's toevoegen 
     of functionaliteit uitbreiden. Zo heb je snel een professionele online presentatie zonder grote investering.`,
-    saving: "Besparing: €500 - €1.000"
+    saving: "Besparing: lagere startscope"
   },
   {
     number: 4,
@@ -44,7 +66,7 @@ const tips = [
     Door te kiezen voor een lokale webbouwer in Utrecht bespaar je op de overheadkosten. 
     Je krijgt vaak dezelfde kwaliteit voor een fractie van de prijs. Bovendien heb je persoonlijk contact 
     en snellere service.`,
-    saving: "Besparing: €1.000 - €3.000"
+    saving: "Besparing: minder bureau-overhead"
   },
   {
     number: 5,
@@ -52,13 +74,17 @@ const tips = [
     content: `Vergelijk altijd meerdere aanbieders. Let niet alleen op de prijs, maar ook op wat je krijgt. 
     Sommige bureaus bieden een lage instapprijs, maar rekenen daarna extra voor essentiële functies zoals 
     een contactformulier of mobiele optimalisatie. Vraag naar een all-in prijs zonder verborgen kosten.`,
-    saving: "Besparing: Tot 50% op de totale kosten"
+    saving: "Besparing: voorkom onverwachte meerkosten"
   }
 ];
 
 export default function ZZPTipsBlogPost() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(blogPostingSchema) }}
+      />
       <main className="pb-24">
         {/* Breadcrumb */}
         <nav className="py-4 bg-[var(--color-surface)] border-b border-[var(--color-border)]">
@@ -114,7 +140,7 @@ export default function ZZPTipsBlogPost() {
             {/* Intro */}
             <div className="prose prose-invert max-w-none mb-12">
               <p className="text-xl text-[var(--color-muted)] leading-relaxed">
-                Als <strong className="text-[var(--color-ink)]">ZZP'er of startende ondernemer</strong> 
+                Als <strong className="text-[var(--color-ink)]">ZZP&apos;er of startende ondernemer</strong>
                 heb je waarschijnlijk een beperkt budget. Een professionele website is essentieel, 
                 maar hoeft niet duur te zijn. In dit artikel delen we <strong className="text-primary">5 praktische tips</strong>{" "}
                 om geld te besparen bij het laten maken van je website, zonder in te leveren op kwaliteit.
@@ -153,9 +179,7 @@ export default function ZZPTipsBlogPost() {
               </h2>
               
               <p className="text-[var(--color-muted)] mb-6">
-                Door deze 5 tips toe te passen, kun je gemakkelijk <strong className="text-primary">€2.000 - €5.000 besparen</strong>{" "}
-                op je website. Het belangrijkste is dat je slim keuzes maakt: kies WordPress, 
-                bereid je content voor, start simpel en vergelijk offertes.
+                Hoeveel je bespaart hangt af van je oorspronkelijke scope en offertes. Het belangrijkste is dat je alleen betaalt voor wat je bedrijf nodig heeft: kies passende techniek, bereid je content voor, start gericht en vergelijk de inbegrepen werkzaamheden.
               </p>
               
               <div className="flex items-start gap-3">
@@ -176,8 +200,7 @@ export default function ZZPTipsBlogPost() {
               </h3>
               
               <p className="text-[var(--color-muted)] mb-6">
-                Bij TechSolutionsUtrecht maken we professionele ZZP websites vanaf €250. 
-                Binnen 1 week online, zonder verborgen kosten. Vraag een gratis offerte aan!
+                Bij TechSolutionsUtrecht start een complete professionele ZZP-website vanaf €250 en ligt de gebruikelijke projectprijs tussen €350 en €650. Na de intake ontvang je een vaste totaalprijs en een realistische planning.
               </p>
               
               <div className="flex flex-wrap gap-4">
@@ -210,12 +233,12 @@ export default function ZZPTipsBlogPost() {
                 >
                   <span className="text-xs text-primary font-medium">Snelle Oplevering</span>
                   <h4 className="font-semibold text-[var(--color-ink)] mt-2">
-                    Website Binnen 1 Week Online: Zo Doen Wij Dat
+                    Website Binnen 1 Week: Wanneer Is Dat Haalbaar?
                   </h4>
                 </Link>
                 
                 <Link 
-                  href="/blog/wat-kost-een-website-laten-maken"
+                  href="/blog/wat-kost-website-laten-maken"
                   className="p-6 bg-[var(--color-bg)] border border-[var(--color-border)] rounded-xl hover:border-primary transition-colors"
                 >
                   <span className="text-xs text-primary font-medium">Kosten</span>

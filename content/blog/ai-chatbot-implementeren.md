@@ -1,7 +1,9 @@
 ---
 title: "AI Chatbot voor Je Bedrijf: Complete Implementatie Gids (2026)"
+seoTitle: "AI Chatbot voor Bedrijven: Implementatiegids 2026"
 description: "Wil je een AI chatbot voor je bedrijf? Leer alles over implementatie, kosten, platforms en best practices. Complete gids voor ondernemers."
 date: "2026-03-11"
+dateModified: "2026-07-18"
 readTime: "14 min"
 category: "AI & Automatisering"
 image: "/images/blog/ai-chatbot.jpg"
@@ -250,6 +252,8 @@ Laten we over geld praten. Wat kun je verwachten?
 
 ### SaaS Platforms (Maandelijks):
 
+De onderstaande bedragen zijn momentopnames uit 2026 en kunnen door aanbieders worden gewijzigd. Controleer daarom altijd de actuele prijs en voorwaarden op de website van het gekozen platform.
+
 | Platform | Basis | Gevorderd | Opmerkingen |
 |----------|-------|-----------|-------------|
 | Tidio | €29/maand | €79/maand | Goed voor starters |
@@ -378,16 +382,10 @@ Begin klein. Test een chatbot op één pagina, of alleen buiten kantooruren. Mee
 
 ---
 
-## Wil Je Een AI Chatbot Voor Je Bedrijf?
+## Wil Je Berichten of Terugkerende Taken Automatiseren?
 
-Ik help ondernemers bij het implementeren van AI chatbots. Van het kiezen van het juiste platform tot het trainen van de AI op jouw specifieke kennis.
+Een volledige maatwerk-chatbot en een eenvoudige bedrijfsautomatisering zijn verschillende projecten. De dienst [WhatsApp & automatisering](/diensten/whatsapp-automatisering) start vanaf €450 voor één duidelijke workflow en een koppeling tussen maximaal twee systemen. Denk aan het doorsturen van aanvragen, bevestigingen of terugkerende berichten via WhatsApp, e-mail en je website.
 
-**Wat ik voor je doe:**
-- Advies over het beste platform voor jouw situatie
-- Volledige setup en configuratie
-- Training van de AI op je bedrijfskennis
-- Integratie met je website
-- Testen en optimaliseren
-- Opleiding voor jou en je team
+Een chatbot die op bedrijfskennis wordt getraind, meerdere databronnen gebruikt of zelfstandig complexe vragen afhandelt, valt daar niet standaard onder. Zo'n traject wordt eerst technisch beoordeeld en krijgt een aparte offerte.
 
-**[Neem Contact Op](/contact)** voor een vrijblijvend gesprek over wat een chatbot voor jouw bedrijf kan betekenen.
+**[Bekijk de automatiseringsmogelijkheden](/diensten/whatsapp-automatisering)** of [neem contact op](/contact) voor een vrijblijvende beoordeling van je proces.

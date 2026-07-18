@@ -5,6 +5,9 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Privacy Policy | TechSolutionsUtrecht",
   description: "Privacy policy van TechSolutionsUtrecht. Lees hoe wij omgaan met uw persoonlijke gegevens.",
+  alternates: {
+    canonical: "https://techsolutionsutrecht.nl/privacy",
+  },
 };
 
 export default function PrivacyPage() {

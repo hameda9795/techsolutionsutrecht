@@ -39,7 +39,7 @@
 **هدف:** رنک گرفتن برای تمام کلمات کلیدی خدمات وب
 
 ### 1.1 WordPress Services
-**URL:** `/diensten/wordpress-website-laten-maken`  
+**URL:** `/diensten/website-laten-maken`
 **Primary:** "WordPress website laten maken Utrecht"  
 **Secondary:** "WordPress specialist", "WordPress onderhoud"
 
@@ -139,7 +139,7 @@
 **هدف:** Thought leadership + Long-tail keywords + Internal links به Pillars
 
 ### 3.1 Cost Guides (High Search Volume)
-- `/blog/wat-kost-een-website-laten-maken` ⭐ HIGH PRIORITY
+- `/blog/wat-kost-website-laten-maken` ⭐ HIGH PRIORITY
 - `/blog/webshop-laten-maken-kosten`
 - `/blog/laptop-reparatie-kosten`
 
@@ -217,7 +217,7 @@ Each location page:
 ```
 /                          (Homepage)
 /diensten                  (Pillar 1)
-/diensten/wordpress-...
+/diensten/website-laten-maken
 /diensten/webshop-laten-maken
 /diensten/maatwerk-...
 /diensten/seo-optimalisatie
@@ -250,7 +250,7 @@ Each location page:
 5. /over-ons
 
 ### فاز ۲: Core Services (هفته ۳-۴)
-6. /diensten/wordpress-website-laten-maken
+6. /diensten/website-laten-maken
 7. /diensten/webshop-laten-maken
 8. /reparaties/laptop
 9. /reparaties/computer
