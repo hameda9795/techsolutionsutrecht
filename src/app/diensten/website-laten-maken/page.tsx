@@ -19,9 +19,9 @@ export const dynamic = "force-dynamic";
 
 const pageUrl =
   "https://techsolutionsutrecht.nl/diensten/website-laten-maken";
-const pageTitle = "Website Laten Maken Utrecht vanaf €250 | TechSolutions";
+const pageTitle = "Website Laten Maken Utrecht | Snel Online | TechSolutions";
 const pageDescription =
-  "Laat een complete professionele website maken vanaf €250. Geschikt voor mobiel, inclusief contactmogelijkheden, basis-SEO en volledig eigendom.";
+  "Laat een complete professionele website maken, snel online en scherp geprijsd. Geschikt voor mobiel, inclusief contactmogelijkheden, basis-SEO en volledig eigendom.";
 
 const breadcrumb = breadcrumbSchema([
   { name: "Home", url: "https://techsolutionsutrecht.nl" },

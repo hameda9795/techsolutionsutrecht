@@ -7,12 +7,12 @@ import { breadcrumbSchema, serviceSchema, faqPageSchema } from "@/lib/schema";
 const pageUrl = "https://techsolutionsutrecht.nl/zzp-website-laten-maken";
 
 export const metadata: Metadata = {
-  title: "ZZP Website Laten Maken Utrecht vanaf €250 | TechSolutions",
-  description: "Laat een complete ZZP-website maken vanaf €250. Mobielvriendelijk, met contactmogelijkheden, basis-SEO en direct contact met de developer in Utrecht.",
+  title: "ZZP Website Laten Maken Utrecht | Snel Online | TechSolutions",
+  description: "Laat een complete ZZP-website maken, snel online en scherp geprijsd. Mobielvriendelijk, met contactmogelijkheden, basis-SEO en direct contact met de developer in Utrecht.",
   alternates: { canonical: pageUrl },
   openGraph: {
-    title: "ZZP Website Laten Maken Utrecht vanaf €250 | TechSolutions",
-    description: "Een complete professionele ZZP-website vanaf €250, afgestemd op je bedrijf en klanten.",
+    title: "ZZP Website Laten Maken Utrecht | Snel Online | TechSolutions",
+    description: "Een complete professionele ZZP-website, snel online en scherp geprijsd, afgestemd op je bedrijf en klanten.",
     type: "website",
     locale: "nl_NL",
     url: pageUrl,
@@ -20,15 +20,15 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "ZZP Website Laten Maken Utrecht vanaf €250 | TechSolutions",
-    description: "Een complete professionele ZZP-website vanaf €250, afgestemd op je bedrijf en klanten.",
+    title: "ZZP Website Laten Maken Utrecht | Snel Online | TechSolutions",
+    description: "Een complete professionele ZZP-website, snel online en scherp geprijsd, afgestemd op je bedrijf en klanten.",
   },
 };
 
 const service = serviceSchema({
   name: "ZZP website laten maken Utrecht",
   description:
-    "Complete professionele website voor ZZP'ers en starters in Utrecht vanaf €250, met een duidelijke planning, basis-SEO en direct contact met de developer.",
+    "Complete professionele website voor ZZP'ers en starters in Utrecht, snel online en scherp geprijsd, met een duidelijke planning, basis-SEO en direct contact met de developer.",
   url: pageUrl,
 });
 

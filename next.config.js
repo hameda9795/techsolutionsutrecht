@@ -117,6 +117,16 @@ const nextConfig = {
       { source: "/blog/wat-kost-een-website-laten-maken", destination: "/blog/wat-kost-website-laten-maken", permanent: true },
       { source: "/blog/5-redenen-website-niet-op-google/", destination: "/blog/website-niet-in-google", permanent: true },
       { source: "/blog/5-redenen-website-niet-op-google", destination: "/blog/website-niet-in-google", permanent: true },
+
+      // Merged into the main service page (was cannibalizing the same "website laten maken" intent)
+      { source: "/goedkope-website-laten-maken", destination: "/diensten/website-laten-maken", permanent: true },
+      { source: "/goedkope-website-laten-maken/", destination: "/diensten/website-laten-maken", permanent: true },
+
+      // Retired blog posts, still indexed by Google -> closest current equivalent
+      { source: "/blog/computer-traag-oorzaken-en-oplossingen-voor-hardware-software-problemen", destination: "/reparaties/computer", permanent: true },
+      { source: "/blog/computer-traag-oorzaken-en-oplossingen-voor-hardware-software-problemen/", destination: "/reparaties/computer", permanent: true },
+      { source: "/blog/laptop-repareren-of-nieuwe-kopen-5-dingen-waar-je-op-moet-letten", destination: "/reparaties/laptop", permanent: true },
+      { source: "/blog/laptop-repareren-of-nieuwe-kopen-5-dingen-waar-je-op-moet-letten/", destination: "/reparaties/laptop", permanent: true },
     ];
   },
 };

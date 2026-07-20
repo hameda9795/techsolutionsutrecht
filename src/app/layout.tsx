@@ -14,7 +14,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL("https://techsolutionsutrecht.nl"),
   title: "Websites, Webshops & SEO Utrecht | TechSolutions",
-  description: "Websites vanaf €250, webshops vanaf €795, SEO, onderhoud en automatisering voor ondernemers. Direct contact met de developer in Utrecht.",
+  description: "Professionele websites, webshops en SEO voor ondernemers in Utrecht. Snel online, scherp geprijsd en direct contact met de developer.",
   authors: [{ name: "Max", url: "https://techsolutionsutrecht.nl/over-ons" }],
   icons: {
     icon: [

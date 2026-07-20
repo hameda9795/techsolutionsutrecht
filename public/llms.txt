@@ -22,7 +22,6 @@ TechSolutionsUtrecht is een eenmanszaak van Max, webdeveloper en IT-consultant i
 ## Belangrijke pagina's
 - [Over ons](https://techsolutionsutrecht.nl/over-ons)
 - [Projecten](https://techsolutionsutrecht.nl/projecten): Echte opgeleverde digitale projecten met live-links en details.
-- [Projecten](https://techsolutionsutrecht.nl/projecten)
 - [Blog](https://techsolutionsutrecht.nl/blog)
 - [Veelgestelde vragen](https://techsolutionsutrecht.nl/veelgestelde-vragen)
 - [Contact](https://techsolutionsutrecht.nl/contact)

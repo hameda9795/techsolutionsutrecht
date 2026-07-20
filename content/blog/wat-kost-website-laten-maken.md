@@ -83,7 +83,7 @@ Bij TechSolutionsUtrecht start deze dienst vanaf €250. De meeste complete bedr
 **Let op bij deze prijsklasse:**
 Vraag precies wat er inbegrepen is. Sommige freelancers leveren alleen het technische, terwijl je zelf de teksten en foto's moet regelen. Anderen nemen alles uit handen.
 
-Ben je ZZP'er en wil je weten waar je op moet letten? [Bekijk mijn complete gids voor ZZP websites](/blog/zzp-website-laten-maken), of ga direct naar [een ZZP website laten maken](/zzp-website-laten-maken). Zoek je vooral een lage prijs zonder in te leveren op kwaliteit? Lees dan wat je mag verwachten van [een goedkope website laten maken](/goedkope-website-laten-maken).
+Ben je ZZP'er en wil je weten waar je op moet letten? [Bekijk mijn complete gids voor ZZP websites](/blog/zzp-website-laten-maken), of ga direct naar [een ZZP website laten maken](/zzp-website-laten-maken). Zoek je vooral een scherpe prijs zonder in te leveren op kwaliteit? Lees dan wat je mag verwachten van [een website laten maken](/diensten/website-laten-maken).
 
 ## Optie 3: Professionele Freelancer of Bureau (marktprijzen)
 
