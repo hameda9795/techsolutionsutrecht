@@ -294,7 +294,7 @@ async function loadPlacesReviewSummary(): Promise<GoogleReviewSummary | null> {
   };
 }
 
-async function loadReviewSummary(): Promise<GoogleReviewSummary | null> {
+async function loadReviewSummary(): Promise<GoogleReviewSummary> {
   try {
     const businessProfileSummary = await loadBusinessProfileReviewSummary();
     if (businessProfileSummary) return businessProfileSummary;
@@ -305,12 +305,17 @@ async function loadReviewSummary(): Promise<GoogleReviewSummary | null> {
     );
   }
 
-  return loadPlacesReviewSummary();
+  const placesSummary = await loadPlacesReviewSummary();
+  if (placesSummary) return placesSummary;
+
+  throw new Error(
+    "No Google reviews available from Business Profile or Places API.",
+  );
 }
 
 const getCachedGoogleReviewSummary = unstable_cache(
   loadReviewSummary,
-  ["google-business-review-summary"],
+  ["google-business-review-summary-v2"],
   { revalidate: 21_600, tags: ["google-business-reviews"] },
 );
 
