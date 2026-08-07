@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { localBusinessSchema, websiteSchema } from "@/lib/schema";
-import GoogleAnalytics from "@/components/GoogleAnalytics";
+import CookieConsent from "@/components/CookieConsent";
 import Header from "@/components/Header";
 
 const inter = Inter({
@@ -65,7 +65,6 @@ export default function RootLayout({
   return (
     <html lang="nl" className={inter.variable}>
       <head>
-        <GoogleAnalytics />
         {/* LocalBusiness Schema */}
         <script
           type="application/ld+json"
@@ -86,6 +85,7 @@ export default function RootLayout({
         <main className="pt-[88px] md:pt-[96px]">
           {children}
         </main>
+        <CookieConsent />
       </body>
     </html>
   );

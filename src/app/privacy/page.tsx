@@ -62,9 +62,11 @@ export default function PrivacyPage() {
               Cookies
             </h2>
             <p className="text-[var(--color-muted)] mb-6">
-              Wij gebruiken cookies voor het analyseren van websitebezoek (Google Analytics). 
-              Deze cookies bevatten geen persoonlijke informatie en worden alleen gebruikt 
-              om onze website te verbeteren.
+              Wij gebruiken noodzakelijke cookies om uw cookievoorkeur te onthouden. Alleen
+              als u daar toestemming voor geeft, laden wij Google Analytics en plaatsen wij
+              analytische cookies om te begrijpen hoe onze website wordt gebruikt. U kunt uw
+              keuze op ieder moment wijzigen via de knop &quot;Cookie-instellingen&quot; linksonder
+              op de website. Uw keuze wordt maximaal 180 dagen bewaard.
             </p>
 
             <h2 className="text-2xl font-bold text-[var(--color-ink)] mt-8 mb-4">
@@ -176,7 +178,7 @@ export default function PrivacyPage() {
             </p>
 
             <p className="text-[var(--color-muted)] text-sm mt-12">
-              Laatst bijgewerkt: 1 juli 2026
+              Laatst bijgewerkt: 7 augustus 2026
             </p>
           </div>
         </div>
