@@ -18,14 +18,15 @@ export const metadata: Metadata = {
   authors: [{ name: "Max", url: "https://techsolutionsutrecht.nl/over-ons" }],
   icons: {
     icon: [
-      { url: '/logo-icon.png', sizes: '32x32', type: 'image/png' },
-      { url: '/favicon.ico', sizes: '48x48' },
+      { url: '/favicon-v2.svg', type: 'image/svg+xml' },
+      { url: '/favicon-v2-48.png', sizes: '48x48', type: 'image/png' },
+      { url: '/favicon-v2-192.png', sizes: '192x192', type: 'image/png' },
     ],
     apple: [
-      { url: '/logo-icon.png', sizes: '180x180', type: 'image/png' },
+      { url: '/apple-touch-icon-v2.png', sizes: '180x180', type: 'image/png' },
     ],
     other: [
-      { rel: 'icon', url: '/logo-icon.png', sizes: '192x192', type: 'image/png' },
+      { rel: 'shortcut icon', url: '/favicon-v2.ico', type: 'image/x-icon' },
     ],
   },
   openGraph: {
