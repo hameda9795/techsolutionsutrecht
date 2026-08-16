@@ -4,6 +4,7 @@ import "./globals.css";
 import { localBusinessSchema, websiteSchema } from "@/lib/schema";
 import CookieConsent from "@/components/CookieConsent";
 import Header from "@/components/Header";
+import { SITE_URL } from "@/lib/seo";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -12,7 +13,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://techsolutionsutrecht.nl"),
+  metadataBase: new URL(SITE_URL),
   title: "Websites, Webshops & SEO Utrecht | TechSolutions",
   description: "Professionele websites, webshops en SEO voor ondernemers in Utrecht. Snel online, scherp geprijsd en direct contact met de developer.",
   authors: [{ name: "Max", url: "https://techsolutionsutrecht.nl/over-ons" }],

@@ -1,6 +1,19 @@
 import { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, MapPin, Phone, Clock, CheckCircle, Laptop, Globe, Wrench } from "lucide-react";
+import { breadcrumbSchema, serviceSchema } from "@/lib/schema";
+
+const pageUrl = "https://techsolutionsutrecht.nl/utrecht";
+const utrechtService = serviceSchema({
+  name: "Webdesign en tech reparatie Utrecht",
+  description: "Professionele websites en betrouwbare laptop- en computerreparatie voor ondernemers en particulieren in Utrecht.",
+  url: pageUrl,
+  areaServed: "Utrecht",
+});
+const breadcrumb = breadcrumbSchema([
+  { name: "Home", url: "https://techsolutionsutrecht.nl" },
+  { name: "Webdesign en reparatie Utrecht", url: pageUrl },
+]);
 
 export const metadata: Metadata = {
   title: "Webdesign & Reparatie Utrecht | TechSolutionsUtrecht",
@@ -35,7 +48,10 @@ export const metadata: Metadata = {
 
 export default function UtrechtPage() {
   return (
-    <main className="bg-[var(--color-bg)] text-[var(--color-ink)]">
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(utrechtService) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
+      <main className="bg-[var(--color-bg)] text-[var(--color-ink)]">
       {/* Hero Section */}
       <section className="relative min-h-[70vh] flex items-center pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 grid-pattern opacity-30" />
@@ -307,6 +323,7 @@ export default function UtrechtPage() {
           </div>
         </div>
       </section>
-    </main>
+      </main>
+    </>
   );
 }

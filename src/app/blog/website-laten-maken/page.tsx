@@ -18,6 +18,7 @@ export const metadata: Metadata = {
     url: "https://techsolutionsutrecht.nl/blog/website-laten-maken",
     siteName: "TechSolutionsUtrecht",
     publishedTime: "2026-07-10",
+    modifiedTime: "2026-08-16",
     authors: ["TechSolutionsUtrecht"],
     images: [
       {
@@ -140,7 +141,7 @@ const faqs = [
 export default function WebsiteLatenMakenBlogPost() {
   const canonicalUrl = "https://techsolutionsutrecht.nl/blog/website-laten-maken";
   const datePublished = "2026-07-10";
-  const dateModified = "2026-07-18";
+  const dateModified = "2026-08-16";
 
   const jsonLd = articleSchema({
     title: "Website Laten Maken: Praktische Checklist voor Ondernemers",
@@ -230,7 +231,7 @@ export default function WebsiteLatenMakenBlogPost() {
               </div>
               <div className="flex items-center gap-2">
                 <Calendar className="w-4 h-4" />
-                <time dateTime={dateModified}>Bijgewerkt op 18 juli 2026</time>
+                <time dateTime={dateModified}>Bijgewerkt op 16 augustus 2026</time>
               </div>
               <div className="flex items-center gap-2">
                 <Clock className="w-4 h-4" />

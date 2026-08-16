@@ -1,7 +1,8 @@
 import Link from "next/link";
 import { MapPin, Phone, CheckCircle, ArrowRight } from "lucide-react";
 import Footer from "@/components/Footer";
-import { breadcrumbSchema, faqPageSchema } from "@/lib/schema";
+import { breadcrumbSchema, faqPageSchema, serviceSchema } from "@/lib/schema";
+import { SITE_URL } from "@/lib/seo";
 
 export interface CityFaq {
   question: string;
@@ -27,7 +28,7 @@ export interface CityPageProps {
   };
 }
 
-const baseUrl = "https://techsolutionsutrecht.nl";
+const baseUrl = SITE_URL;
 
 /**
  * Geographically adjacent city pages, used for contextual in-body interlinking
@@ -105,31 +106,12 @@ export default function CityPageLayout({
 }: CityPageProps) {
   const url = `${baseUrl}/${slug}`;
 
-  const localBusiness = {
-    "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    "name": `TechSolutionsUtrecht — Website laten maken ${city}`,
-    "description": `Professionele website laten maken in ${city} door een ervaren freelance webdeveloper uit de regio Utrecht.`,
-    "image": `${baseUrl}/profile.webp`,
-    "url": url,
-    "telephone": "+31625518708",
-    "email": "info@techsolutionsutrecht.nl",
-    "priceRange": "€€",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Utrecht",
-      "addressRegion": "Utrecht",
-      "addressCountry": "NL",
-    },
-    "areaServed": { "@type": "City", "name": city },
-    "openingHoursSpecification": {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-      "opens": "09:00",
-      "closes": "18:00",
-    },
-    "founder": { "@type": "Person", "name": "Max", "jobTitle": "Webdeveloper" },
-  };
+  const cityService = serviceSchema({
+    name: `Website laten maken in ${city}`,
+    description: `Professionele website laten maken in ${city} door een ervaren freelance webdeveloper uit de regio Utrecht.`,
+    url,
+    areaServed: city,
+  });
 
   const breadcrumb = breadcrumbSchema([
     { name: "Home", url: baseUrl },
@@ -140,7 +122,7 @@ export default function CityPageLayout({
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusiness) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(cityService) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 

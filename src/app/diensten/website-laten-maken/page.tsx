@@ -146,6 +146,14 @@ const processSteps = [
   },
 ];
 
+const regionalPages = [
+  { href: "/culemborg", label: "Culemborg" },
+  { href: "/ijsselstein", label: "IJsselstein" },
+  { href: "/houten", label: "Houten" },
+  { href: "/vleuten", label: "Vleuten" },
+  { href: "/veenendaal", label: "Veenendaal" },
+];
+
 export default function WebsiteLatenMakenPage() {
   return (
     <>
@@ -402,6 +410,39 @@ export default function WebsiteLatenMakenPage() {
                   </p>
                 </Link>
               </div>
+            </section>
+
+            <section className="rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface)] p-6 sm:p-8">
+              <h2 className="mb-4 text-3xl font-bold text-[var(--color-ink)]">
+                Website laten maken in de regio Utrecht
+              </h2>
+              <p className="max-w-3xl leading-relaxed text-[var(--color-muted)]">
+                Ik werk rechtstreeks met ondernemers in Utrecht en omliggende plaatsen.
+                Op de regionale pagina&apos;s lees je hoe de samenwerking en lokale aanpak
+                per plaats aansluiten op jouw bedrijf.
+              </p>
+              <div className="mt-6 flex flex-wrap gap-3">
+                {regionalPages.map((page) => (
+                  <Link
+                    key={page.href}
+                    href={page.href}
+                    className="rounded-full border border-[var(--color-border)] bg-[var(--color-bg)] px-4 py-2 font-medium text-[var(--color-ink)] transition-colors hover:border-primary hover:text-primary"
+                  >
+                    Webdesign {page.label}
+                  </Link>
+                ))}
+              </div>
+              <p className="mt-6 max-w-3xl text-sm leading-relaxed text-[var(--color-muted)]">
+                Nog aan het vergelijken? Gebruik de{" "}
+                <Link href="/blog/website-laten-maken" className="font-medium text-primary hover:underline">
+                  checklist voor een nieuwe website
+                </Link>{" "}
+                en bekijk daarna de{" "}
+                <Link href="/blog/wat-kost-website-laten-maken" className="font-medium text-primary hover:underline">
+                  actuele uitleg over websitekosten
+                </Link>
+                .
+              </p>
             </section>
 
             <section className="max-w-3xl">

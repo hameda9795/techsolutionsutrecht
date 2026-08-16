@@ -1,0 +1,48 @@
+name: SEO regression
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+  schedule:
+    - cron: "0 6 * * 1"
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    if: github.event_name != 'schedule'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+      - run: npm run lint
+      - run: npm run build
+      - name: Start production build
+        run: |
+          npx next start -p 3100 > /tmp/techsolutions-next.log 2>&1 &
+          for attempt in {1..30}; do
+            if curl --fail --silent http://127.0.0.1:3100/ > /dev/null; then
+              exit 0
+            fi
+            sleep 1
+          done
+          cat /tmp/techsolutions-next.log
+          exit 1
+      - run: npm run seo:verify -- http://127.0.0.1:3100
+
+  verify-production:
+    if: github.event_name == 'schedule'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: node scripts/verify-seo.mjs https://techsolutionsutrecht.nl

@@ -1,14 +1,15 @@
 import { coreServices } from "@/lib/services";
+import { BUSINESS_ID, SITE_URL, WEBSITE_ID } from "@/lib/seo";
 
 export const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
-  "@id": "https://techsolutionsutrecht.nl",
+  "@id": BUSINESS_ID,
   "name": "TechSolutionsUtrecht",
   "alternateName": "Tech Solutions Utrecht",
   "description": "Professionele websites, webshops, SEO, websiteonderhoud, bedrijfsautomatisering en betrouwbare tech reparaties in Utrecht.",
-  "image": "https://techsolutionsutrecht.nl/profile.webp",
-  "url": "https://techsolutionsutrecht.nl",
+  "image": `${SITE_URL}/profile.webp`,
+  "url": SITE_URL,
   "telephone": "+31625518708",
   "email": "info@techsolutionsutrecht.nl",
   "address": {
@@ -16,11 +17,6 @@ export const localBusinessSchema = {
     "addressLocality": "Utrecht",
     "addressRegion": "Utrecht",
     "addressCountry": "NL"
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": 52.0907,
-    "longitude": 5.1214
   },
   "areaServed": [
     { "@type": "City", "name": "Utrecht" },
@@ -45,7 +41,7 @@ export const localBusinessSchema = {
     "@type": "Person",
     "name": "Max",
     "jobTitle": "Webdeveloper",
-    "url": "https://techsolutionsutrecht.nl/over-ons"
+    "url": `${SITE_URL}/over-ons`
   },
   "identifier": {
     "@type": "PropertyValue",
@@ -58,14 +54,14 @@ export const localBusinessSchema = {
     "itemListElement": [
       ...coreServices.map((service) => ({
         "@type": "Offer",
-        "url": `https://techsolutionsutrecht.nl${service.href}`,
+        "url": `${SITE_URL}${service.href}`,
         "price": service.schemaPrice,
         "priceCurrency": "EUR",
         "itemOffered": {
           "@type": "Service",
           "name": service.title,
           "description": service.pageDescription,
-          "url": `https://techsolutionsutrecht.nl${service.href}`
+          "url": `${SITE_URL}${service.href}`
         }
       })),
       {
@@ -96,13 +92,13 @@ export const localBusinessSchema = {
 export const websiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  "@id": "https://techsolutionsutrecht.nl#website",
-  "url": "https://techsolutionsutrecht.nl",
+  "@id": WEBSITE_ID,
+  "url": SITE_URL,
   "name": "TechSolutionsUtrecht",
   "alternateName": "Tech Solutions Utrecht",
   "description": "Websites, webshops, SEO, websiteonderhoud, automatisering en computerreparatie in Utrecht",
   "publisher": {
-    "@id": "https://techsolutionsutrecht.nl"
+    "@id": BUSINESS_ID
   }
 };
 
@@ -121,27 +117,30 @@ export const serviceSchema = ({
   name,
   description,
   url,
-  provider = "TechSolutionsUtrecht"
+  areaServed = "Utrecht"
 }: {
   name: string;
   description: string;
   url: string;
-  provider?: string;
+  areaServed?: string | string[];
 }) => ({
   "@context": "https://schema.org",
   "@type": "Service",
+  "@id": `${url}#service`,
   "name": name,
   "description": description,
   "url": url,
   "provider": {
-    "@type": "LocalBusiness",
-    "name": provider
+    "@id": BUSINESS_ID
   },
-  "areaServed": {
+  "areaServed": (Array.isArray(areaServed) ? areaServed : [areaServed]).map((city) => ({
     "@type": "City",
-    "name": "Utrecht",
-    "containedIn": "Netherlands"
-  }
+    "name": city,
+    "containedInPlace": {
+      "@type": "Country",
+      "name": "Nederland"
+    }
+  }))
 });
 
 export const articleSchema = ({
@@ -163,6 +162,7 @@ export const articleSchema = ({
 }) => ({
   "@context": "https://schema.org",
   "@type": "BlogPosting",
+  "@id": `${url}#article`,
   "headline": title,
   "description": description,
   "url": url,
@@ -172,19 +172,18 @@ export const articleSchema = ({
   },
   "datePublished": datePublished,
   "dateModified": dateModified || datePublished,
-  ...(image ? { "image": image.startsWith("http") ? image : `https://techsolutionsutrecht.nl${image}` } : {}),
-  "author": {
-    "@type": "Person",
-    "name": author,
-    "url": "https://techsolutionsutrecht.nl/over-ons"
-  },
+  "isPartOf": { "@id": WEBSITE_ID },
+  ...(image ? { "image": image.startsWith("http") ? image : `${SITE_URL}${image}` } : {}),
+  "author": author === "TechSolutionsUtrecht"
+    ? { "@id": BUSINESS_ID }
+    : {
+        "@type": "Person",
+        "@id": `${SITE_URL}/over-ons#max`,
+        "name": author,
+        "url": `${SITE_URL}/over-ons`
+      },
   "publisher": {
-    "@type": "Organization",
-    "name": "TechSolutionsUtrecht",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://techsolutionsutrecht.nl/logo-icon.png"
-    }
+    "@id": BUSINESS_ID
   }
 });
 
