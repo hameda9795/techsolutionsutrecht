@@ -91,3 +91,7 @@ Wil je een technisch nette nieuwe website of snelheid meenemen in een bredere SE
 - [Test een URL met Google PageSpeed Insights](https://pagespeed.web.dev/)
 
 Gebruik tests als diagnose, niet als los doel. Een verbetering moet zowel in de metingen als in de ervaring van echte bezoekers merkbaar zijn.
+
+<!-- regio-links -->
+
+Loopt je huidige site tegen zijn grenzen aan? Soms is opnieuw bouwen sneller dan blijven optimaliseren — zie [een website laten maken](/diensten/website-laten-maken). Voor de regio: [website laten maken in Amersfoort](/amersfoort) en [website laten maken in Zeist](/zeist).

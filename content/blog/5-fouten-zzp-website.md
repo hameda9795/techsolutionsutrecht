@@ -52,3 +52,7 @@ Wat deze fouten gemeen hebben? Ze ontstaan bijna allemaal door je website te zie
 ## Hulp nodig?
 
 Herken je een of meer van deze fouten op je eigen website? Geen zorgen — ze zijn allemaal op te lossen. Of je nu een nieuwe [ZZP website](/zzp-website-laten-maken) wilt of je huidige site wilt verbeteren: [neem vrijblijvend contact op](/contact). Je krijgt eerlijk advies, direct van de developer.
+
+<!-- regio-links -->
+
+Wil je deze fouten voor zijn bij een nieuwe site? Op de pagina over [een website laten maken](/diensten/website-laten-maken) lees je hoe het traject loopt. Zit je in de regio, kijk dan bij [website laten maken in Veenendaal](/veenendaal) of [website laten maken in Culemborg](/culemborg).

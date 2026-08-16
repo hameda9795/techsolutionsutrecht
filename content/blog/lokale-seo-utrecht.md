@@ -384,3 +384,7 @@ Lees ook de uitleg van Google over [hoe lokale resultaten worden bepaald](https:
 ---
 
 Wil je structureel werken aan technische SEO, belangrijke pagina's en lokale vindbaarheid? Bekijk [onze aanpak voor Hoger in Google](/diensten/seo) of [neem contact op](/contact) voor een korte intake. Na de intake ontvang je een duidelijke offerte; een specifieke positie in Google kan niet worden gegarandeerd.
+
+<!-- regio-links -->
+
+Begin je liever met een site die technisch al goed staat? Bekijk dan [een website laten maken](/diensten/website-laten-maken). Werk je buiten de stad, dan vind je de lokale aanpak terug bij [website laten maken in Utrecht](/utrecht), [Nieuwegein](/nieuwegein) en [Zeist](/zeist).

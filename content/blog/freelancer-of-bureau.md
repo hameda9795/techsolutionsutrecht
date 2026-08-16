@@ -74,3 +74,7 @@ Veel mensen denken dat een freelancer "goedkoper maar minder goed" is. Dat is ee
 Voor de meeste ZZP'ers en kleine bedrijven is een freelancer de logische keuze: persoonlijk, snel en scherp geprijsd. Voor zeer grote organisaties met complexe, meerjarige trajecten kan een bureau beter passen.
 
 Wil je weten of ik bij jouw project pas? [Neem vrijblijvend contact op](/contact). Ik vertel je eerlijk of ik de juiste partner ben — en zo niet, dan denk ik graag mee over wie dat wél is.
+
+<!-- regio-links -->
+
+Kies je voor een freelancer? Je leest op de pagina over [een website laten maken](/diensten/website-laten-maken) precies wat je krijgt en wat het kost. Voor de regio zijn er aparte pagina's over [website laten maken in Houten](/houten) en [website laten maken in Woerden](/woerden).

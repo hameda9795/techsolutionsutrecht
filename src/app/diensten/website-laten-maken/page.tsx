@@ -14,6 +14,7 @@ import {
   Phone,
 } from "lucide-react";
 import { breadcrumbSchema, serviceSchema } from "@/lib/schema";
+import { cities } from "@/lib/cities";
 
 export const dynamic = "force-dynamic";
 
@@ -146,13 +147,6 @@ const processSteps = [
   },
 ];
 
-const regionalPages = [
-  { href: "/culemborg", label: "Culemborg" },
-  { href: "/ijsselstein", label: "IJsselstein" },
-  { href: "/houten", label: "Houten" },
-  { href: "/vleuten", label: "Vleuten" },
-  { href: "/veenendaal", label: "Veenendaal" },
-];
 
 export default function WebsiteLatenMakenPage() {
   return (
@@ -412,6 +406,61 @@ export default function WebsiteLatenMakenPage() {
               </div>
             </section>
 
+            {/* Deze drie branchepagina's hadden nul contextuele interne links —
+                ze waren alleen via de footer bereikbaar en staan daardoor niet
+                in de index. Hier staan ze inhoudelijk precies op hun plek. */}
+            <section>
+              <h2 className="mb-4 text-3xl font-bold text-[var(--color-ink)]">
+                Werk je in een specifieke branche?
+              </h2>
+              <p className="mb-8 max-w-3xl leading-relaxed text-[var(--color-muted)]">
+                Sommige branches hebben eigen wensen, zoals online afspraken, een menukaart
+                of een aanmeldformulier. Voor deze drie schreef ik een aparte pagina.
+              </p>
+              <div className="grid gap-6 md:grid-cols-3">
+                <Link
+                  href="/website-laten-maken-kapper"
+                  className="block rounded-2xl border border-[var(--color-border)] bg-[var(--color-bg)] p-6 transition-colors hover:border-primary/40"
+                >
+                  <h3 className="mb-2 text-lg font-bold text-[var(--color-ink)]">
+                    Website laten maken voor kappers
+                  </h3>
+                  <p className="text-sm text-[var(--color-muted)]">
+                    Met online afspraken, prijslijst en een galerij van je werk.
+                  </p>
+                </Link>
+                <Link
+                  href="/website-laten-maken-restaurant"
+                  className="block rounded-2xl border border-[var(--color-border)] bg-[var(--color-bg)] p-6 transition-colors hover:border-primary/40"
+                >
+                  <h3 className="mb-2 text-lg font-bold text-[var(--color-ink)]">
+                    Website laten maken voor restaurants
+                  </h3>
+                  <p className="text-sm text-[var(--color-muted)]">
+                    Menukaart, openingstijden en reserveren, ook goed op mobiel.
+                  </p>
+                </Link>
+                <Link
+                  href="/website-laten-maken-coach"
+                  className="block rounded-2xl border border-[var(--color-border)] bg-[var(--color-bg)] p-6 transition-colors hover:border-primary/40"
+                >
+                  <h3 className="mb-2 text-lg font-bold text-[var(--color-ink)]">
+                    Website laten maken voor coaches
+                  </h3>
+                  <p className="text-sm text-[var(--color-muted)]">
+                    Je verhaal, je aanbod en een intakeformulier dat aanvragen oplevert.
+                  </p>
+                </Link>
+              </div>
+              <p className="mt-6 text-sm text-[var(--color-muted)]">
+                Andere branche? Bekijk de{" "}
+                <Link href="/veelgestelde-vragen" className="font-medium text-primary hover:underline">
+                  veelgestelde vragen
+                </Link>{" "}
+                of vraag het gewoon even.
+              </p>
+            </section>
+
             <section className="rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface)] p-6 sm:p-8">
               <h2 className="mb-4 text-3xl font-bold text-[var(--color-ink)]">
                 Website laten maken in de regio Utrecht
@@ -421,17 +470,21 @@ export default function WebsiteLatenMakenPage() {
                 Op de regionale pagina&apos;s lees je hoe de samenwerking en lokale aanpak
                 per plaats aansluiten op jouw bedrijf.
               </p>
-              <div className="mt-6 flex flex-wrap gap-3">
-                {regionalPages.map((page) => (
-                  <Link
-                    key={page.href}
-                    href={page.href}
-                    className="rounded-full border border-[var(--color-border)] bg-[var(--color-bg)] px-4 py-2 font-medium text-[var(--color-ink)] transition-colors hover:border-primary hover:text-primary"
-                  >
-                    Webdesign {page.label}
-                  </Link>
+              {/* Linkte eerder maar naar 5 van de 11 plaatsen, met "Webdesign X"
+                  als ankertekst. Nu alle plaatsen, met de zoekterm waarop deze
+                  pagina's daadwerkelijk vertoningen krijgen. */}
+              <ul className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+                {cities.map((city) => (
+                  <li key={city.slug}>
+                    <Link
+                      href={`/${city.slug}`}
+                      className="block rounded-xl border border-[var(--color-border)] bg-[var(--color-bg)] px-4 py-3 font-medium text-[var(--color-ink)] transition-colors hover:border-primary hover:text-primary"
+                    >
+                      Website laten maken in {city.name}
+                    </Link>
+                  </li>
                 ))}
-              </div>
+              </ul>
               <p className="mt-6 max-w-3xl text-sm leading-relaxed text-[var(--color-muted)]">
                 Nog aan het vergelijken? Gebruik de{" "}
                 <Link href="/blog/website-laten-maken" className="font-medium text-primary hover:underline">

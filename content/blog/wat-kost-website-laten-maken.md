@@ -188,3 +188,7 @@ Focus niet alleen op de prijs, maar op wat je ervoor terugkrijgt. Een goede webb
 ---
 
 *Heb je vragen over website kosten? Stuur me een bericht, ik reageer meestal binnen 24 uur.*
+
+<!-- regio-links -->
+
+Wil je weten wat jouw situatie kost? Op de pagina over [een website laten maken](/diensten/website-laten-maken) staan de prijsvoorbeelden op een rij. Werk je in de regio, kijk dan ook bij [website laten maken in Culemborg](/culemborg) of [website laten maken in Houten](/houten) voor de lokale aanpak.

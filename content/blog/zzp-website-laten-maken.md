@@ -249,3 +249,7 @@ Een goede website:
 Wil je een website die écht werkt voor je ZZP-bedrijf? Neem contact op voor een vrijblijvend gesprek waarin we kijken wat jij nodig hebt.
 
 **[Neem Contact Op](/contact)**
+
+<!-- regio-links -->
+
+Ben je zzp'er en wil je verder praten over de opzet? Bekijk hoe ik [een website laten maken](/diensten/website-laten-maken) aanpak, of lees wat dat betekent voor ondernemers bij [website laten maken in Vleuten](/vleuten) en [website laten maken in IJsselstein](/ijsselstein).

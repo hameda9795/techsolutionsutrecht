@@ -65,3 +65,7 @@ Wat wél tijd kost en de moeite waard is: nadenken over je doelgroep, je structu
 Hoe lang het duurt om een website te laten maken, hangt vooral af van het type project en hoe goed je voorbereid bent. Een eenvoudige uitvoering kan sneller worden gepland dan een webshop of een website met extra koppelingen. De belangrijkste versneller? Heldere afspraken en op tijd aangeleverde content.
 
 Benieuwd hoe snel jouw specifieke project kan? [Neem contact op](/contact) of stuur een appje — je krijgt binnen één werkdag een realistische inschatting, direct van de developer.
+
+<!-- regio-links -->
+
+De planning hangt sterk af van de omvang. Op de pagina over [een website laten maken](/diensten/website-laten-maken) staat per type site wat je kunt verwachten. Ook lokaal, bijvoorbeeld bij [website laten maken in IJsselstein](/ijsselstein) en [website laten maken in Vleuten](/vleuten).

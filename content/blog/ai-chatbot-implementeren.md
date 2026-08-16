@@ -383,3 +383,7 @@ Een volledige maatwerk-chatbot en een eenvoudige bedrijfsautomatisering zijn ver
 Een chatbot die op bedrijfskennis wordt getraind, meerdere databronnen gebruikt of zelfstandig complexe vragen afhandelt, valt buiten deze dienst. Daarvoor heb je een gespecialiseerde chatbotleverancier nodig.
 
 **[Bekijk de automatiseringsmogelijkheden](/diensten/whatsapp-automatisering)** of [neem contact op](/contact) voor een vrijblijvende beoordeling van je proces.
+
+<!-- regio-links -->
+
+Een chatbot werkt het beste op een site die snel en overzichtelijk is. Lees hoe ik dat aanpak bij [een website laten maken](/diensten/website-laten-maken), of bekijk de lokale aanpak voor [website laten maken in Utrecht](/utrecht) en [Amersfoort](/amersfoort).

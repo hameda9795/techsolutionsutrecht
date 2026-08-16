@@ -90,3 +90,7 @@ Kies niet vooraf een techniek omdat iemand zegt dat die altijd beter is. Zet eer
 Op basis daarvan kan de juiste techniek worden gekozen en in de offerte worden vastgelegd. Zo betaal je niet voor onderdelen die je niet nodig hebt en voorkom je dat de website later moeilijk te beheren is.
 
 Wil je weten welke aanpak bij jouw bedrijf past? Bekijk [Website laten maken](/diensten/website-laten-maken) of [neem contact op](/contact) voor een korte intake.
+
+<!-- regio-links -->
+
+Twijfel je nog over de techniek? Bij [een website laten maken](/diensten/website-laten-maken) bespreken we welke keuze bij jouw bedrijf past. Lokaal werk ik onder meer aan [website laten maken in De Meern](/de-meern) en [website laten maken in Nieuwegein](/nieuwegein).
