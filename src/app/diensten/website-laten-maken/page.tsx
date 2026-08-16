@@ -20,9 +20,16 @@ export const dynamic = "force-dynamic";
 
 const pageUrl =
   "https://techsolutionsutrecht.nl/diensten/website-laten-maken";
-const pageTitle = "Website Laten Maken Utrecht | Snel Online | TechSolutions";
+// Bewust zonder "Utrecht" in de title. De homepage is de pagina die op
+// "website laten maken utrecht" moet ranken: daar wijzen alle 51 externe
+// backlinks naartoe. Toen beide pagina's dezelfde term claimden, koos Google
+// deze pagina op positie 66 en het blogoverzicht op 32 — klassieke
+// kannibalisatie. Deze pagina richt zich nu op de landelijke, prijsgedreven
+// zoekvraag ("wat kost een website laten maken", "professionele website laten
+// maken"), waar hij inhoudelijk ook het beste bij past.
+const pageTitle = "Website Laten Maken | Prijzen, Aanpak en Voorbeelden | TechSolutions";
 const pageDescription =
-  "Laat een complete professionele website maken, snel online en scherp geprijsd. Geschikt voor mobiel, inclusief contactmogelijkheden, basis-SEO en volledig eigendom.";
+  "Wat kost een website laten maken en hoe verloopt het traject? Prijsvoorbeelden vanaf €250, een duidelijke planning en direct contact met de developer die hem bouwt.";
 
 const breadcrumb = breadcrumbSchema([
   { name: "Home", url: "https://techsolutionsutrecht.nl" },

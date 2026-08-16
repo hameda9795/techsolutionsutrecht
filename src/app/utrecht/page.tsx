@@ -17,9 +17,10 @@ const breadcrumb = breadcrumbSchema([
 
 export const metadata: Metadata = {
   title: "Webdesign & Reparatie Utrecht | TechSolutionsUtrecht",
-  description: "Website laten maken in Utrecht vanaf €250 of hulp bij laptop- en computerreparatie. Persoonlijk contact, duidelijke afspraken en lokale service.",
+  description: "Webdesign en laptop- en computerreparatie in Utrecht. Persoonlijk contact, duidelijke afspraken en lokale service in Zuilen, Lombok, Overvecht en het centrum.",
   keywords: [
-    "website laten maken utrecht",
+    // "website laten maken utrecht" bewust weggehaald: die term is van de
+    // homepage. Deze pagina ondersteunt hem in plaats van ermee te concurreren.
     "webdesign utrecht",
     "laptop reparatie utrecht",
     "computer reparatie utrecht",
@@ -30,7 +31,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: "Webdesign & Reparatie Utrecht | TechSolutionsUtrecht",
-    description: "Website laten maken in Utrecht vanaf €250. Laptop & computer reparatie in Utrecht. Dé tech partner in Utrecht en omgeving.",
+    description: "Webdesign en tech reparatie in Utrecht. Lokale service in Zuilen, Lombok, Overvecht en het centrum, met direct contact.",
     type: "website",
     locale: "nl_NL",
     url: "https://techsolutionsutrecht.nl/utrecht",
@@ -39,7 +40,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Webdesign & Reparatie Utrecht | TechSolutionsUtrecht",
-    description: "Website laten maken in Utrecht vanaf €250. Laptop & computer reparatie in Utrecht. Dé tech partner in Utrecht en omgeving.",
+    description: "Webdesign en tech reparatie in Utrecht. Lokale service in Zuilen, Lombok, Overvecht en het centrum, met direct contact.",
   },
   alternates: {
     canonical: "https://techsolutionsutrecht.nl/utrecht",
@@ -110,7 +111,7 @@ export default function UtrechtPage() {
               <div className="w-14 h-14 rounded-xl bg-primary/20 flex items-center justify-center mb-6">
                 <Globe className="w-7 h-7 text-primary" />
               </div>
-              <h3 className="text-2xl font-bold mb-4">Website Laten Maken Utrecht</h3>
+              <h3 className="text-2xl font-bold mb-4">Webdesign voor ondernemers in Utrecht</h3>
               <p className="text-[var(--color-muted)] mb-6">
                 Complete professionele websites voor ondernemers in Utrecht.
                 Vanaf €250 en meestal €350–€650, met basis-SEO en volledige eigendom.
@@ -130,9 +131,16 @@ export default function UtrechtPage() {
                   </li>
                 ))}
               </ul>
-              <Link href="/diensten/website-laten-maken" className="text-primary font-semibold hover:underline">
-                Meer over website laten maken →
-              </Link>
+              <div className="space-y-2">
+                {/* Ankertekst wijst bewust naar de homepage: dat is de pagina die
+                    op deze zoekterm moet ranken. */}
+                <Link href="/" className="block text-primary font-semibold hover:underline">
+                  Website laten maken in Utrecht →
+                </Link>
+                <Link href="/diensten/website-laten-maken" className="block text-primary font-semibold hover:underline">
+                  Prijzen en werkwijze bekijken →
+                </Link>
+              </div>
             </div>
 
             {/* Repair Service */}
