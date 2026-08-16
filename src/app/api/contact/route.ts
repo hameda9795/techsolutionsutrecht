@@ -1,94 +1,56 @@
 import type { NextRequest } from "next/server";
 import { isContactSubject } from "@/lib/contact-subjects";
+import { deliverLead } from "@/lib/leads";
 
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
-    const { name, email, phone, subject, message } = body;
+    const { name, email, phone, subject, message, page } = body;
 
-    // Validate required fields
     if (!name || !email || !message || !subject) {
-      return new Response(
-        JSON.stringify({ error: "Naam, email, onderwerp en bericht zijn verplicht" }),
-        { status: 400, headers: { "Content-Type": "application/json" } }
+      return Response.json(
+        { error: "Naam, email, onderwerp en bericht zijn verplicht" },
+        { status: 400 }
       );
     }
 
     if (!isContactSubject(subject)) {
-      return new Response(
-        JSON.stringify({ error: "Selecteer een geldig onderwerp" }),
-        { status: 400, headers: { "Content-Type": "application/json" } }
-      );
+      return Response.json({ error: "Selecteer een geldig onderwerp" }, { status: 400 });
     }
 
-    // Get environment variables (at runtime)
-    const TELEGRAM_BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN;
-    const TELEGRAM_CHAT_ID = process.env.TELEGRAM_CHAT_ID;
-
-    // Check if Telegram is configured
-    if (!TELEGRAM_BOT_TOKEN || !TELEGRAM_CHAT_ID) {
-      console.error("Telegram not configured:", { 
-        hasToken: !!TELEGRAM_BOT_TOKEN, 
-        hasChatId: !!TELEGRAM_CHAT_ID 
-      });
-      return new Response(
-        JSON.stringify({ error: "Service niet geconfigureerd. Contacteer de beheerder." }),
-        { status: 500, headers: { "Content-Type": "application/json" } }
-      );
+    if (typeof email !== "string" || !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) {
+      return Response.json({ error: "Vul een geldig e-mailadres in" }, { status: 400 });
     }
 
-    // Format message for Telegram
-    const telegramMessage = `
-🆕 *Nieuw Contactformulier*
+    const result = await deliverLead({
+      name: String(name).slice(0, 200),
+      email: String(email).slice(0, 200),
+      phone: phone ? String(phone).slice(0, 64) : undefined,
+      subject: String(subject).slice(0, 200),
+      message: String(message).slice(0, 5000),
+      page: typeof page === "string" ? page.slice(0, 500) : undefined,
+      referrer: request.headers.get("referer") || undefined,
+    });
 
-👤 *Naam:* ${name}
-📧 *Email:* ${email}
-📱 *Telefoon:* ${phone || "Niet opgegeven"}
-📝 *Onderwerp:* ${subject}
-
-💬 *Bericht:*
-${message}
-
-⏰ *Tijd:* ${new Date().toLocaleString("nl-NL")}
-🌐 *Bron:* techsolutionsutrecht.nl
-    `.trim();
-
-    // Send to Telegram
-    const telegramResponse = await fetch(
-      `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`,
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
+    if (!result.ok) {
+      return Response.json(
+        {
+          error:
+            "Verzenden lukte niet. Bel of WhatsApp gerust direct: 06 25518708, of mail naar info@techsolutionsutrecht.nl.",
         },
-        body: JSON.stringify({
-          chat_id: TELEGRAM_CHAT_ID,
-          text: telegramMessage,
-          parse_mode: "Markdown",
-        }),
-      }
-    );
-
-    const telegramData = await telegramResponse.json();
-
-    if (!telegramResponse.ok || !telegramData.ok) {
-      console.error("Telegram API error:", telegramData);
-      return new Response(
-        JSON.stringify({ error: "Kon bericht niet verzenden. Probeer later opnieuw." }),
-        { status: 500, headers: { "Content-Type": "application/json" } }
+        { status: 500 }
       );
     }
 
-    return new Response(
-      JSON.stringify({ success: true, message: "Bericht verzonden!" }),
-      { status: 200, headers: { "Content-Type": "application/json" } }
-    );
-
+    return Response.json({ success: true, message: "Bericht verzonden!" }, { status: 200 });
   } catch (error) {
     console.error("Contact form error:", error);
-    return new Response(
-      JSON.stringify({ error: "Er is iets misgegaan. Probeer het later opnieuw." }),
-      { status: 500, headers: { "Content-Type": "application/json" } }
+    return Response.json(
+      {
+        error:
+          "Er ging iets mis. Bel of WhatsApp gerust direct: 06 25518708, of mail naar info@techsolutionsutrecht.nl.",
+      },
+      { status: 500 }
     );
   }
 }

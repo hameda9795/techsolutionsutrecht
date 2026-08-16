@@ -3,7 +3,13 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState, useEffect } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Phone } from "lucide-react";
+
+// Lokale dienstverlening wordt vaak gewoon gebeld. Er stond nergens een
+// klikbaar telefoonnummer op de site — alleen WhatsApp en e-mail.
+const PHONE_DISPLAY = "06 25518708";
+const PHONE_HREF = "tel:+31625518708";
+
 const navLinks = [
   { href: "/", label: "Home" },
   { href: "/diensten", label: "Diensten" },
@@ -76,6 +82,15 @@ export default function Header() {
             </Link>
           ))}
           
+          {/* Klikbaar telefoonnummer */}
+          <a
+            href={PHONE_HREF}
+            className="flex items-center gap-1.5 text-sm font-medium text-[var(--color-ink)] hover:text-[var(--color-primary)] transition-colors"
+          >
+            <Phone className="w-4 h-4" aria-hidden="true" />
+            {PHONE_DISPLAY}
+          </a>
+
           {/* CTA Button */}
           <Link
             href="/contact"
@@ -84,6 +99,15 @@ export default function Header() {
             Offerte
           </Link>
         </nav>
+
+        {/* Mobiel: belknop altijd zichtbaar, ook als het menu dicht is */}
+        <a
+          href={PHONE_HREF}
+          aria-label={`Bel ${PHONE_DISPLAY}`}
+          className="md:hidden ml-auto mr-1 p-2 rounded-lg text-[var(--color-ink)] hover:bg-[var(--color-surface)] transition-colors"
+        >
+          <Phone className="w-5 h-5" aria-hidden="true" />
+        </a>
 
         {/* Mobile Menu Button */}
         <button
@@ -122,6 +146,15 @@ export default function Header() {
             >
               Offerte aanvragen
             </Link>
+
+            <a
+              href={PHONE_HREF}
+              onClick={() => setIsMenuOpen(false)}
+              className="flex items-center justify-center gap-2 px-4 py-3 rounded-lg font-medium text-[var(--color-ink)] ring-1 ring-inset ring-[var(--color-border)] hover:bg-[var(--color-surface)] transition-colors"
+            >
+              <Phone className="w-4 h-4" aria-hidden="true" />
+              Bel {PHONE_DISPLAY}
+            </a>
           </nav>
         </div>
       )}

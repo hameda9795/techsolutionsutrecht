@@ -4,6 +4,7 @@ import "./globals.css";
 import { localBusinessSchema, websiteSchema } from "@/lib/schema";
 import CookieConsent from "@/components/CookieConsent";
 import Header from "@/components/Header";
+import SiteAnalytics from "@/components/SiteAnalytics";
 import { SITE_URL } from "@/lib/seo";
 
 const inter = Inter({
@@ -88,6 +89,7 @@ export default function RootLayout({
           {children}
         </main>
         <CookieConsent />
+        <SiteAnalytics />
       </body>
     </html>
   );

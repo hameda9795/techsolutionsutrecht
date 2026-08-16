@@ -28,7 +28,12 @@ export default function ContactForm() {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(formData),
+        // Stuur mee vanaf welke pagina de aanvraag komt, zodat zichtbaar wordt
+        // welke stads- of dienstpagina daadwerkelijk klanten oplevert.
+        body: JSON.stringify({
+          ...formData,
+          page: typeof window !== "undefined" ? window.location.pathname : undefined,
+        }),
       });
 
       const data = await response.json();

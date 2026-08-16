@@ -14,9 +14,19 @@ export const localBusinessSchema = {
   "email": "info@techsolutionsutrecht.nl",
   "address": {
     "@type": "PostalAddress",
+    "streetAddress": "Sint-Ludgerusstraat",
+    "postalCode": "3553 CW",
     "addressLocality": "Utrecht",
     "addressRegion": "Utrecht",
     "addressCountry": "NL"
+  },
+  // Koppelt de site expliciet aan het Google Bedrijfsprofiel. Zonder deze twee
+  // velden moet Google zelf raden dat site en profiel hetzelfde bedrijf zijn.
+  "hasMap": "https://www.google.com/maps/place/?q=place_id:ChIJ63Igh49SbK8RIoJmxTuLi_I",
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 52.1101,
+    "longitude": 5.0863
   },
   "areaServed": [
     { "@type": "City", "name": "Utrecht" },
@@ -26,7 +36,12 @@ export const localBusinessSchema = {
     { "@type": "City", "name": "Amersfoort" },
     { "@type": "City", "name": "IJsselstein" },
     { "@type": "City", "name": "De Meern" },
-    { "@type": "City", "name": "Vleuten" }
+    { "@type": "City", "name": "Vleuten" },
+    // Ontbraken, terwijl er wel eigen stadspagina's voor bestaan en juist deze
+    // drie op dit moment het dichtst bij een top 3-positie staan.
+    { "@type": "City", "name": "Culemborg" },
+    { "@type": "City", "name": "Woerden" },
+    { "@type": "City", "name": "Veenendaal" }
   ],
   "priceRange": "€€",
   "currenciesAccepted": "EUR",
@@ -85,8 +100,14 @@ export const localBusinessSchema = {
   "sameAs": [
     "https://facebook.com/techsolutionsutrecht",
     "https://www.instagram.com/techsolutionsutrecht/",
-    "https://linkedin.com/company/techsolutionsutrecht"
+    "https://linkedin.com/company/techsolutionsutrecht",
+    // Belangrijkste toevoeging: het Google Bedrijfsprofiel zelf. Dit is voor
+    // lokale SEO het sterkste signaal dat site en profiel één entiteit zijn.
+    "https://www.google.com/maps/place/?q=place_id:ChIJ63Igh49SbK8RIoJmxTuLi_I"
   ]
+  // Bewust géén aggregateRating hier: Google negeert een beoordeling die een
+  // bedrijf over zichzelf plaatst en kan er zelfs een handmatige maatregel voor
+  // geven. De sterren komen uit het Bedrijfsprofiel, niet uit deze schema.
 };
 
 export const websiteSchema = {

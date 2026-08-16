@@ -127,6 +127,15 @@ const nextConfig = {
       { source: "/blog/computer-traag-oorzaken-en-oplossingen-voor-hardware-software-problemen/", destination: "/reparaties/computer", permanent: true },
       { source: "/blog/laptop-repareren-of-nieuwe-kopen-5-dingen-waar-je-op-moet-letten", destination: "/reparaties/laptop", permanent: true },
       { source: "/blog/laptop-repareren-of-nieuwe-kopen-5-dingen-waar-je-op-moet-letten/", destination: "/reparaties/laptop", permanent: true },
+
+      // Nog steeds 404 volgens Search Console (validatie mislukt op 11-07-2026).
+      // Deze drie oude blogs werden nog gecrawld maar hadden geen redirect.
+      { source: "/blog/de-7-belangrijkste-webdesign-trends-voor-2025-die-je-niet-mag-missen", destination: "/blog", permanent: true },
+      { source: "/blog/de-7-belangrijkste-webdesign-trends-voor-2025-die-je-niet-mag-missen/", destination: "/blog", permanent: true },
+      { source: "/blog/maatwerk-software-vs-standaard-pakketten-wat-is-de-beste-keuze-voor-mkb", destination: "/diensten", permanent: true },
+      { source: "/blog/maatwerk-software-vs-standaard-pakketten-wat-is-de-beste-keuze-voor-mkb/", destination: "/diensten", permanent: true },
+      { source: "/blog/hoe-bedrijfsprocessen-automatiseren-met-software-je-tijd-en-geld-bespaart", destination: "/diensten/whatsapp-automatisering", permanent: true },
+      { source: "/blog/hoe-bedrijfsprocessen-automatiseren-met-software-je-tijd-en-geld-bespaart/", destination: "/diensten/whatsapp-automatisering", permanent: true },
     ];
   },
 };

@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Phone, Mail, MapPin, Clock, Facebook, Instagram, Linkedin, ArrowUp } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, Facebook, Instagram, Linkedin, ArrowUp, MessageCircle } from "lucide-react";
 import { coreServices } from "@/lib/services";
 
 const footerLinks = {
@@ -18,7 +18,8 @@ const footerLinks = {
   ],
   company: [
     { href: "/over-ons", label: "Over mij" },
-    { href: "/projecten", label: "Projecten" },
+    // "Projecten" stond hier twee keer — dubbele identieke link in de footer op
+    // elke pagina van de site.
     { href: "/projecten", label: "Projecten" },
     { href: "/zzp-website-laten-maken", label: "Website voor ZZP'ers" },
     { href: "/blog", label: "Blog" },
@@ -110,19 +111,31 @@ export default function Footer() {
           <div>
             <h3 className="text-[var(--color-bg)] font-medium mb-4">Contact</h3>
             <ul className="space-y-3 text-sm">
+              {/* Volledig adres, gelijk aan het Google Bedrijfsprofiel. Een
+                  consistente NAP (naam, adres, telefoon) over site, profiel en
+                  bedrijvengidsen is een directe lokale rankingfactor. */}
               <li className="flex items-start gap-2">
                 <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0" />
-                <span>Utrecht, Nederland</span>
+                <span>Sint-Ludgerusstraat, 3553 CW Utrecht</span>
               </li>
               <li className="flex items-center gap-2">
                 <Phone className="w-4 h-4 flex-shrink-0" />
+                <a
+                  href="tel:+31625518708"
+                  className="hover:text-[var(--color-bg)] transition-colors"
+                >
+                  06 25518708
+                </a>
+              </li>
+              <li className="flex items-center gap-2">
+                <MessageCircle className="w-4 h-4 flex-shrink-0" />
                 <a
                   href="https://wa.me/31625518708"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-[var(--color-bg)] transition-colors"
                 >
-                  +31 6 25518708
+                  WhatsApp
                 </a>
               </li>
               <li className="flex items-center gap-2">
