@@ -1,0 +1,36 @@
+# Release uploads use an explicitly assembled source bundle under .cache.
+# These exclusions also protect a direct upload from the workspace.
+.env*
+.admin-credentials*
+.google-business-profile*
+.gbp-auth*
+.agents
+.codex
+.cache
+.git
+.github
+.impeccable
+.next
+node_modules
+# Root-only folders: a leading slash keeps nested routes such as
+# src/app/diensten/seo in the upload.
+/_to_delete
+/repair-site
+/report
+/research
+/techsolutionsutrecht.nl-audit
+/design
+/docs
+/projemd
+/blog-posts
+/scripts
+/seo
+/graphify-out
+/portfolio-assets
+*.log
+*.tsbuildinfo
+/*.png
+/*.webp
+/*.html
+/*.md
+/*.txt
