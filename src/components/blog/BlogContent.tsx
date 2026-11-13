@@ -1,47 +1,8 @@
-'use client';
-
-import { useEffect } from 'react';
-
 interface BlogContentProps {
   contentHtml: string;
 }
 
-// Function to generate ID from text (must match the one in blog.ts)
-function generateIdFromText(text: string): string {
-  return text
-    .toLowerCase()
-    .replace(/[^a-z0-9\s-]/g, '')
-    .replace(/\s+/g, '-')
-    .substring(0, 50); // Limit length
-}
-
 export default function BlogContent({ contentHtml }: BlogContentProps) {
-  useEffect(() => {
-    // Add IDs to headings for table of contents
-    const headings = document.querySelectorAll('.blog-content h2, .blog-content h3');
-    headings.forEach((heading) => {
-      const text = heading.textContent || '';
-      const id = generateIdFromText(text);
-      heading.id = id;
-    });
-
-    // Add target="_blank" and rel="noopener noreferrer" to external links
-    const links = document.querySelectorAll('.blog-content a');
-    links.forEach((link) => {
-      const href = link.getAttribute('href');
-      if (href && (href.startsWith('http://') || href.startsWith('https://'))) {
-        link.setAttribute('target', '_blank');
-        link.setAttribute('rel', 'noopener noreferrer');
-      }
-    });
-
-    // Add styling to tables
-    const tables = document.querySelectorAll('.blog-content table');
-    tables.forEach((table) => {
-      table.classList.add('w-full', 'border-collapse', 'my-6');
-    });
-  }, [contentHtml]);
-
   return (
     <article 
       className="blog-content prose prose-lg max-w-none
@@ -49,6 +10,7 @@ export default function BlogContent({ contentHtml }: BlogContentProps) {
         prose-headings:text-[var(--color-ink)]
         prose-headings:font-bold
         prose-headings:tracking-tight
+        prose-headings:scroll-mt-28
         prose-h2:text-2xl prose-h2:mt-12 prose-h2:mb-4 prose-h2:pb-2 prose-h2:border-b prose-h2:border-[var(--color-border)]
         prose-h3:text-xl prose-h3:mt-8 prose-h3:mb-3
         

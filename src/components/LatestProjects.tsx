@@ -4,6 +4,7 @@ import { ArrowRight } from "lucide-react";
 import {
   projectTypeLabels,
   getInitials,
+  getProjectPath,
   type ProjectType,
   type ShowcaseProject,
 } from "@/lib/projects-showcase";
@@ -34,7 +35,7 @@ export default async function LatestProjects({
       <div className="flex items-center justify-between mb-3">
         <span className="inline-flex items-center gap-2 text-xs sm:text-sm font-semibold text-[var(--color-muted)] uppercase tracking-wide">
           <span className="w-2 h-2 rounded-full bg-[var(--color-primary)] animate-pulse" />
-          Recent opgeleverd
+          Websitevoorbeelden
         </span>
         <Link
           href="/projecten"
@@ -50,7 +51,7 @@ export default async function LatestProjects({
         {latest.map((project, i) => (
           <Link
             key={project.id}
-            href="/projecten"
+            href={getProjectPath(project)}
             className={`group flex flex-col gap-2 ${i >= 3 ? "hidden lg:flex" : ""}`}
           >
             {/* Volledige projectafbeelding (9:16), niet bijgesneden */}

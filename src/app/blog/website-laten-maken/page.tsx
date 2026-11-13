@@ -4,6 +4,8 @@ import Footer from "@/components/Footer";
 import Link from "next/link";
 import { Calendar, Clock, ArrowLeft, User } from "lucide-react";
 import { faqPageSchema, breadcrumbSchema, articleSchema } from "@/lib/schema";
+import type { ReactNode } from "react";
+import { packageGroups, formatPrice } from "@/lib/packages";
 
 export const metadata: Metadata = {
   title: "Website Laten Maken: Praktische Checklist voor Ondernemers",
@@ -18,7 +20,7 @@ export const metadata: Metadata = {
     url: "https://techsolutionsutrecht.nl/blog/website-laten-maken",
     siteName: "TechSolutionsUtrecht",
     publishedTime: "2026-07-10",
-    modifiedTime: "2026-08-16",
+    modifiedTime: "2026-09-06",
     authors: ["TechSolutionsUtrecht"],
     images: [
       {
@@ -37,28 +39,37 @@ export const metadata: Metadata = {
   },
 };
 
-const sections = [
+const sections: { title: string; content: ReactNode; image?: string; imageAlt?: string; visual?: ReactNode }[] = [
   {
     title: "Welk Budget Past bij Jouw Website?",
     content: (
       <>
         <p className="text-[var(--color-muted)] leading-relaxed mb-4">
-          De prijs hangt af van wat je nodig hebt. Een complete professionele website start bij TechSolutionsUtrecht vanaf €250 en kost meestal €350–€650. Een <Link href="/diensten/webshop" className="text-primary hover:underline font-medium">webshop</Link> waarmee klanten kunnen bestellen en betalen start vanaf €795 en kost meestal €1.000–€2.000.
+          De prijs hangt af van wat je nodig hebt. Een WordPress eenpaginawebsite met basis-SEO kost bij TechSolutionsUtrecht €300. Voor maximaal drie of vijf inhoudspagina’s zijn er pakketten van €500 en €700, exclusief btw. Een <Link href="/diensten/webshop" className="text-primary hover:underline font-medium">webshop</Link> waarmee klanten kunnen bestellen en betalen start met pakketten van €950, €1.450 en €2.100 exclusief btw.
         </p>
         <p className="text-[var(--color-muted)] leading-relaxed">
-          Extra websitefuncties, meertaligheid of koppelingen worden apart begroot. Wil je terugkerende aanvragen of berichten automatiseren, bekijk dan <Link href="/diensten/whatsapp-automatisering" className="text-primary hover:underline font-medium">WhatsApp & automatisering</Link>. Controleer altijd of inhoud, responsive ontwerp, basis-SEO, eigendom en nazorg duidelijk in de offerte staan. Voor een volledige uitsplitsing kun je de <Link href="/blog/wat-kost-website-laten-maken" className="text-primary hover:underline font-medium">actuele prijsgids</Link> bekijken.
+          De WordPress-pakketten gebruiken een bestaande ontwerpbasis en inhoud die je zelf aanlevert. Hosting, domein, licenties en onderhoud zijn apart. Een <Link href="/diensten/maatwerk-website" className="text-primary hover:underline font-medium">website zonder WordPress</Link> met eigen ontwerp begint bij €1.500 exclusief btw. Extra functies, meertaligheid en koppelingen worden afzonderlijk begroot. Bekijk de <Link href="/blog/wat-kost-website-laten-maken" className="text-primary hover:underline font-medium">actuele prijsgids</Link> voor de uitsplitsing.
         </p>
       </>
     ),
-    image: "/images/blog/website-laten-maken-kosten.svg",
-    imageAlt: "Overzicht van de startprijzen voor een website, webshop en websiteonderhoud.",
+    visual: (
+      <div className="rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface)] p-6">
+        <p className="font-semibold mb-4">WordPress-pakketten · exclusief btw</p>
+        <dl className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+          {packageGroups.wordpress.packages.map((plan) => (
+            <div key={plan.id}><dt>{plan.name}</dt><dd className="text-3xl font-bold text-primary my-2">{formatPrice(plan.price)}</dd><dd>{plan.features[0]}</dd></div>
+          ))}
+        </dl>
+        <Link href="/prijzen#wordpress-pakketten" className="inline-block mt-6 text-primary font-semibold underline underline-offset-4">Vergelijk alle inbegrepen werkzaamheden</Link>
+      </div>
+    ),
   },
   {
     title: "Hoe Wordt de Planning Bepaald?",
     content: (
       <>
         <p className="text-[var(--color-muted)] leading-relaxed mb-4">
-          De planning hangt af van de inhoud, functies, koppelingen en snelheid van feedback. Moderne technologieën zoals WordPress en Next.js kunnen het ontwikkelproces efficiënt maken, maar vormen op zichzelf geen garantie voor een vaste opleverdatum. Voor een <Link href="/diensten/webshop" className="text-primary hover:underline font-medium">webshop</Link> is de gemiddelde indicatie 1 tot 3 weken.
+          De planning hangt af van de inhoud, functies, koppelingen, beschikbare capaciteit en feedback. Voor een <Link href="/diensten/webshop" className="text-primary hover:underline font-medium">webshop</Link> zijn ook productgegevens en toegang tot de betaalprovider nodig. Bouwtijd en kalenderduur kunnen verschillen: wachten op materiaal of goedkeuring verlengt het traject.
         </p>
         <p className="text-[var(--color-muted)] leading-relaxed">
           Extra functies en koppelingen kunnen meer tijd vragen. Vraag vóór de start om een concrete planning met beslismomenten, wat je zelf moet aanleveren en hoeveel feedbackrondes zijn inbegrepen.
@@ -76,12 +87,17 @@ const sections = [
           Niet elke ondernemer heeft dezelfde website nodig. Een <Link href="/diensten/website-laten-maken" className="text-primary hover:underline font-medium">professionele website laten maken</Link> is een populaire keuze voor ZZP&apos;ers en MKB-bedrijven: betaalbaar, snel en afgestemd op je bedrijf. Wil je producten online verkopen, dan is een <Link href="/diensten/webshop" className="text-primary hover:underline font-medium">WooCommerce webshop</Link> de logische stap, compleet met iDEAL-betalingen, voorraadbeheer en verzendopties.
         </p>
         <p className="text-[var(--color-muted)] leading-relaxed">
-          Wil je na de lancering beter gevonden worden, kies dan voor <Link href="/diensten/seo" className="text-primary hover:underline font-medium">Hoger in Google</Link>. Voor updates, back-ups en technische controles is er <Link href="/diensten/website-onderhoud" className="text-primary hover:underline font-medium">Website onderhoud</Link>. Terugkerende aanvragen of berichten kun je vereenvoudigen met <Link href="/diensten/whatsapp-automatisering" className="text-primary hover:underline font-medium">WhatsApp & automatisering</Link>.
+          Voor onderzoek naar vindbaarheid en gerichte verbeteringen zijn er <Link href="/diensten/seo" className="text-primary hover:underline font-medium">SEO-pakketten</Link>. Voor updates, back-ups en controles is er <Link href="/diensten/website-onderhoud" className="text-primary hover:underline font-medium">website onderhoud</Link>. Een <Link href="/diensten/chatbot-laten-maken" className="text-primary hover:underline font-medium">chatbot</Link> kan bezoekers helpen antwoorden in je bedrijfsinformatie te vinden, als aanvulling op een duidelijke website.
         </p>
       </>
     ),
-    image: "/images/blog/website-laten-maken-keuze.svg",
-    imageAlt: "Vergelijking tussen een bedrijfswebsite, webshop en WhatsApp-automatisering.",
+    visual: (
+      <ul className="space-y-4 rounded-2xl border border-[var(--color-border)] p-6">
+        <li><Link href="/diensten/website-laten-maken" className="text-primary font-semibold underline">WordPress website</Link><p className="mt-1 text-[var(--color-muted)]">Je bedrijf presenteren en zelf teksten beheren.</p></li>
+        <li><Link href="/diensten/webshop" className="text-primary font-semibold underline">WooCommerce webshop</Link><p className="mt-1 text-[var(--color-muted)]">Producten aanbieden, bestellingen ontvangen en online laten betalen.</p></li>
+        <li><Link href="/diensten/maatwerk-website" className="text-primary font-semibold underline">Maatwerk website</Link><p className="mt-1 text-[var(--color-muted)]">Een eigen ontwerp zonder WordPress, met vooraf afgesproken functies en beheer.</p></li>
+      </ul>
+    ),
   },
   {
     title: "Waar Moet Je op Letten Bij het Kiezen van een Webdesigner?",
@@ -117,8 +133,8 @@ const sections = [
 
 const faqs = [
   {
-    question: "Wat kost een eenvoudige website laten maken gemiddeld?",
-    answer: "Bij TechSolutionsUtrecht start een complete professionele website vanaf €250 en valt de gebruikelijke projectprijs tussen €350 en €650. De definitieve prijs hangt af van inhoud, functies en koppelingen.",
+    question: "Wat kost een eenvoudige website bij TechSolutionsUtrecht?",
+    answer: "Bij TechSolutionsUtrecht kost een WordPress eenpaginawebsite €300; pakketten met maximaal drie of vijf inhoudspagina’s kosten €500 en €700. Alle bedragen zijn exclusief btw. De definitieve prijs hangt af van inhoud, functies en koppelingen.",
   },
   {
     question: "Kan ik mijn website na oplevering zelf beheren?",
@@ -126,7 +142,7 @@ const faqs = [
   },
   {
     question: "Is een goedkope website ook een goede website?",
-    answer: "Absoluut, mits deze door een ervaren developer wordt gebouwd. Een lagere prijs betekent bij een freelancer vaak minder overhead, niet minder kwaliteit.",
+    answer: "Dat hangt af van de scope en uitvoering. Vergelijk het aantal pagina’s, de ontwerpbasis, aangeleverde inhoud, revisies en ondersteuning. Een lagere prijs kan ook betekenen dat minder werkzaamheden zijn inbegrepen.",
   },
   {
     question: "Heb ik een webshop of een gewone website nodig?",
@@ -134,14 +150,14 @@ const faqs = [
   },
   {
     question: "Hoe snel kan mijn website online staan?",
-    answer: "Na de intake ontvang je een planning op basis van inhoud, functies en feedbackmomenten. Voor webshops is 1 tot 3 weken een gemiddelde indicatie; de planning van iedere website wordt vooraf in de offerte vastgelegd.",
+    answer: "Na de intake ontvang je een planning op basis van inhoud, functies, beschikbaarheid en feedbackmomenten. De opleverdatum en wat je vooraf moet aanleveren worden in de offerte vastgelegd.",
   },
 ];
 
 export default function WebsiteLatenMakenBlogPost() {
   const canonicalUrl = "https://techsolutionsutrecht.nl/blog/website-laten-maken";
   const datePublished = "2026-07-10";
-  const dateModified = "2026-08-16";
+  const dateModified = "2026-09-06";
 
   const jsonLd = articleSchema({
     title: "Website Laten Maken: Praktische Checklist voor Ondernemers",
@@ -231,11 +247,11 @@ export default function WebsiteLatenMakenBlogPost() {
               </div>
               <div className="flex items-center gap-2">
                 <Calendar className="w-4 h-4" />
-                <time dateTime={dateModified}>Bijgewerkt op 16 augustus 2026</time>
+                <time dateTime={dateModified}>Bijgewerkt op 6 september 2026</time>
               </div>
               <div className="flex items-center gap-2">
                 <Clock className="w-4 h-4" />
-                <span>10 min leestijd</span>
+                <span>6 min leestijd</span>
               </div>
             </div>
 
@@ -271,13 +287,14 @@ export default function WebsiteLatenMakenBlogPost() {
                   <div className="mb-8">
                     {section.content}
                   </div>
-                  <Image
+                  {section.visual}
+                  {section.image && <Image
                     src={section.image}
-                    alt={section.imageAlt}
+                    alt={section.imageAlt || ""}
                     width={1200}
                     height={630}
                     className="w-full rounded-2xl border border-[var(--color-border)] shadow-lg"
-                  />
+                  />}
                 </section>
               ))}
             </div>

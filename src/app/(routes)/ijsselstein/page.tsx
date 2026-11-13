@@ -27,7 +27,7 @@ export default function IJsselsteinPage() {
       slug="ijsselstein"
       intro={[
         "IJsselstein is een stad met karakter: van de sfeervolle binnenstad rond de Sint-Nicolaaskerk tot de moderne woonwijken en bedrijventerreinen aan de rand. Ondernemers hier — of het nu gaat om de winkels in het centrum, de horeca aan de Hollandse IJssel of de zelfstandige professionals in de nieuwbouwwijken — hebben allemaal één ding gemeen: ze willen gevonden worden door lokale klanten.",
-        "Ik bouw websites voor ondernemers in IJsselstein die willen opvallen in een markt die steeds digitaler wordt. Geen standaard templates, maar maatwerk dat past bij jouw bedrijf en bij de mensen die je wilt bereiken. Snel, vindbaar en betaalbaar.",
+        "Ik bouw websites voor ondernemers in IJsselstein die hun bedrijf online duidelijk willen presenteren. Je kiest een WordPress-pakket met een ontwerpbasis aangepast aan je huisstijl, of een apart maatwerktraject. Inhoud, functies en prijs spreken we vooraf af.",
       ]}
       neighbourhoods={["de historische binnenstad", "Achterveld", "Zenderpark", "Binnenstad-Oost", "Nieuwland", "Kromme Gouwe"]}
       whyLocal={[

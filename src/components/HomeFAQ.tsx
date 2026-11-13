@@ -14,13 +14,13 @@ export default function HomeFAQ() {
             Veelgestelde Vragen
           </span>
           <h2 className="text-3xl sm:text-4xl font-bold text-[var(--color-ink)] mt-4 mb-4">
-            Wat Kost een Website{" "}
+            Vragen over je website{" "}
             <span className="text-[var(--color-primary)]">
-              Laten Maken?
+              en samenwerking
             </span>
           </h2>
           <p className="text-[var(--color-muted)]">
-            Transparante prijzen, geen verborgen kosten. Alles wat je moet weten over mijn werkwijze.
+            Over samenwerken in Utrecht, zelf je website beheren en de kosten naast de bouw.
           </p>
         </div>
 

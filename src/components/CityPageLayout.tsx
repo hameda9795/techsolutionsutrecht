@@ -182,7 +182,7 @@ export default function CityPageLayout({
               </Link>
               <Link href="/diensten/seo" className="group bg-[var(--color-bg)] p-6 rounded-2xl border border-[var(--color-border)] hover:shadow-md transition-shadow">
                 <h3 className="text-xl font-bold text-[var(--color-ink)] mb-2 flex items-center gap-2">Hoger in Google <ArrowRight className="w-4 h-4 text-[var(--color-primary)] opacity-0 group-hover:opacity-100 transition-opacity" /></h3>
-                <p className="text-[var(--color-muted)] text-sm">Technische SEO, belangrijke pagina’s en lokale vindbaarheid vanaf €200 per maand.</p>
+                <p className="text-[var(--color-muted)] text-sm">Technische SEO, belangrijke pagina’s en lokale vindbaarheid vanaf €250 per maand, met €300 eenmalige start.</p>
               </Link>
             </div>
           </div>

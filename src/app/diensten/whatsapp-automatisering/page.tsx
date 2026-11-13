@@ -307,6 +307,7 @@ export default function WhatsAppAutomatiseringPage() {
             </section>
 
             <section id="mogelijkheden" className="scroll-mt-28">
+              <p className="mb-6 max-w-3xl leading-relaxed text-[var(--color-muted)]">Zoek je vooral een assistent voor gesprekken op je eigen WhatsApp-nummer? Bekijk ook de <Link href="/whatsapp-assistent" className="font-semibold text-primary underline underline-offset-4">WhatsApp-assistent</Link>. Dat is een andere keuze dan een workflow tussen meerdere bedrijfssystemen; functionaliteit, inrichting en doorlopende kosten bespreek je voor die oplossing afzonderlijk.</p>
               <h2 className="mb-8 text-balance text-3xl font-bold text-[var(--color-ink)]">
                 Wat kunnen we automatiseren?
               </h2>

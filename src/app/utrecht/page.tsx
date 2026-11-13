@@ -1,337 +1,224 @@
-import { Metadata } from "next";
+import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowRight, MapPin, Phone, Clock, CheckCircle, Laptop, Globe, Wrench } from "lucide-react";
-import { breadcrumbSchema, serviceSchema } from "@/lib/schema";
+import { ArrowRight, MapPin, Phone } from "lucide-react";
+import Footer from "@/components/Footer";
+import { packageGroups, formatPrice } from "@/lib/packages";
+import { getAllShowcaseProjects } from "@/lib/showcase-db";
+import { getProjectPath } from "@/lib/projects-showcase";
+import { breadcrumbSchema, faqPageSchema, serviceSchema } from "@/lib/schema";
 
 const pageUrl = "https://techsolutionsutrecht.nl/utrecht";
-const utrechtService = serviceSchema({
-  name: "Webdesign en tech reparatie Utrecht",
-  description: "Professionele websites en betrouwbare laptop- en computerreparatie voor ondernemers en particulieren in Utrecht.",
-  url: pageUrl,
-  areaServed: "Utrecht",
-});
-const breadcrumb = breadcrumbSchema([
-  { name: "Home", url: "https://techsolutionsutrecht.nl" },
-  { name: "Webdesign en reparatie Utrecht", url: pageUrl },
-]);
+const wordpress = packageGroups.wordpress;
+const startingPrice = formatPrice(wordpress.packages[0].price);
+const contactHref = "/contact?" + new URLSearchParams({
+  dienst: wordpress.subject,
+  van: "/utrecht",
+}).toString();
+const title = "Webdesign vanuit Zuilen, Utrecht | TechSolutions";
+const description = `Bespreek je website met Max in Utrecht-Zuilen. Kennismaken op afspraak of online, lokaal werk en WordPress-pakketten vanaf ${startingPrice} excl. btw.`;
 
 export const metadata: Metadata = {
-  title: "Webdesign & Reparatie Utrecht | TechSolutionsUtrecht",
-  description: "Webdesign en laptop- en computerreparatie in Utrecht. Persoonlijk contact, duidelijke afspraken en lokale service in Zuilen, Lombok, Overvecht en het centrum.",
-  keywords: [
-    // "website laten maken utrecht" bewust weggehaald: die term is van de
-    // homepage. Deze pagina ondersteunt hem in plaats van ermee te concurreren.
-    "webdesign utrecht",
-    "laptop reparatie utrecht",
-    "computer reparatie utrecht",
-    "wordpress website utrecht",
-    "tech solutions utrecht",
-    "website bouwer utrecht",
-    "macbook reparatie utrecht",
-  ],
+  title,
+  description,
   openGraph: {
-    title: "Webdesign & Reparatie Utrecht | TechSolutionsUtrecht",
-    description: "Webdesign en tech reparatie in Utrecht. Lokale service in Zuilen, Lombok, Overvecht en het centrum, met direct contact.",
-    type: "website",
-    locale: "nl_NL",
-    url: "https://techsolutionsutrecht.nl/utrecht",
-    siteName: "TechSolutionsUtrecht",
+    title, description, type: "website", locale: "nl_NL",
+    url: pageUrl, siteName: "TechSolutionsUtrecht",
   },
-  twitter: {
-    card: "summary_large_image",
-    title: "Webdesign & Reparatie Utrecht | TechSolutionsUtrecht",
-    description: "Webdesign en tech reparatie in Utrecht. Lokale service in Zuilen, Lombok, Overvecht en het centrum, met direct contact.",
-  },
-  alternates: {
-    canonical: "https://techsolutionsutrecht.nl/utrecht",
-  },
+  twitter: { card: "summary_large_image", title, description },
+  alternates: { canonical: pageUrl },
 };
 
-export default function UtrechtPage() {
+export const dynamic = "force-dynamic";
+
+const faqs = [
+  {
+    question: "Moet ik voor mijn website naar Zuilen komen?",
+    answer: "Dat hoeft niet. Je kunt kennismaken via telefoon of WhatsApp en we kunnen je website online bespreken. Wil je langskomen in Zuilen, maak dan vooraf een afspraak.",
+  },
+  {
+    question: "Wat bereid ik voor op ons eerste gesprek?",
+    answer: "Vertel wat je bedrijf doet, wie je klanten zijn en wat een bezoeker op je website moet kunnen doen. Een bestaande website, voorbeelden die je aanspreken en een overzicht van je diensten helpen bij het bepalen van de inhoud en omvang.",
+  },
+  {
+    question: "Kan ik mijn WordPress website zelf aanpassen?",
+    answer: "Ja. We spreken af welke inhoud je wilt beheren. Bij de oplevering krijg je uitleg om bijvoorbeeld teksten en foto's zelf te wijzigen. Extra functies en latere uitbreidingen bespreken we apart.",
+  },
+  {
+    question: "Zijn hosting, een domeinnaam en onderhoud inbegrepen?",
+    answer: wordpress.notes[0],
+  },
+];
+
+const schemas = [
+  {
+    ...serviceSchema({
+      name: "Webdesign vanuit Utrecht-Zuilen",
+      description: "Websiteontwerp voor zzp'ers en kleine bedrijven, met rechtstreeks contact met Max vanuit Zuilen. Kennismaken op afspraak of online en een vooraf afgesproken offerte.",
+      url: pageUrl,
+      areaServed: "Utrecht",
+    }),
+    serviceType: "Webdesign",
+    offers: wordpress.packages.map((plan) => ({
+      "@type": "Offer",
+      name: `WordPress ${plan.name}`,
+      url: `https://techsolutionsutrecht.nl${wordpress.href}#${plan.id}`,
+      description: `${plan.features[0]}. ${wordpress.notes[0]}`,
+      priceSpecification: {
+        "@type": "UnitPriceSpecification",
+        price: plan.price,
+        priceCurrency: "EUR",
+        valueAddedTaxIncluded: false,
+        unitText: plan.period === "per maand" ? "maand" : "project",
+      },
+    })),
+  },
+  breadcrumbSchema([
+    { name: "Home", url: "https://techsolutionsutrecht.nl" },
+    { name: "Samenwerken in Utrecht", url: pageUrl },
+  ]),
+  faqPageSchema(faqs),
+];
+
+export default async function UtrechtPage() {
+  const projects = await getAllShowcaseProjects();
+  const localProject = projects.find((project) => project.type === "website"
+    && /^https:\/\/(?:www\.)?tandartszuilenparkwijk\.nl\/?$/.test(project.liveUrl));
+
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(utrechtService) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
+      {schemas.map((schema, index) => (
+        <script key={index} type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema).replace(/</g, "\\u003c") }} />
+      ))}
       <main className="bg-[var(--color-bg)] text-[var(--color-ink)]">
-      {/* Hero Section */}
-      <section className="relative min-h-[70vh] flex items-center pt-32 pb-20 overflow-hidden">
-        <div className="absolute inset-0 grid-pattern opacity-30" />
-        <div className="container-custom relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/20 border border-primary/30 mb-8">
-              <MapPin className="w-4 h-4 text-primary" />
-              <span className="text-sm font-semibold">Uw Tech Partner in Utrecht</span>
-            </div>
-            
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight mb-6">
-              <span className="text-[var(--color-ink)]">Webdesign &</span>
-              <br />
-              <span className="text-[var(--color-primary)]">Tech Reparatie</span>
-              <br />
-              <span className="text-3xl sm:text-4xl text-[var(--color-muted)]">in Utrecht</span>
-            </h1>
-            
-            <p className="text-lg sm:text-xl text-[var(--color-muted)] max-w-2xl mx-auto mb-8">
-              Zoekt u een <strong className="text-[var(--color-ink)]">betrouwbare website bouwer</strong> of 
-              <strong className="text-[var(--color-ink)]"> snelle laptop reparatie</strong> in Utrecht? 
-              Wij zijn dé all-in-one tech partner voor ondernemers en particulieren in Utrecht en omgeving. 
-              Websites vanaf <strong className="text-primary">€250</strong>, met een duidelijke offerte en planning.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Link href="/contact" className="btn-primary group">
-                Gratis offerte aanvragen
-                <ArrowRight className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1" />
-              </Link>
-              <a href="tel:+31625518708" className="btn-ghost">
-                <Phone className="w-5 h-5 mr-2" />
-                Bel direct: 06-25518708
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Services Section */}
-      <section className="section bg-[var(--color-surface)]">
-        <div className="container-custom">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-              Onze Diensten in <span className="text-[var(--color-primary)]">Utrecht</span>
-            </h2>
-            <p className="text-[var(--color-muted)] max-w-2xl mx-auto">
-              Als uw lokale tech partner in Utrecht bieden wij zowel professionele webdesign 
-              als snelle hardware reparaties. Alles onder één dak!
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            {/* Website Service */}
-            <div className="card-service">
-              <div className="w-14 h-14 rounded-xl bg-primary/20 flex items-center justify-center mb-6">
-                <Globe className="w-7 h-7 text-primary" />
-              </div>
-              <h3 className="text-2xl font-bold mb-4">Webdesign voor ondernemers in Utrecht</h3>
-              <p className="text-[var(--color-muted)] mb-6">
-                Complete professionele websites voor ondernemers in Utrecht.
-                Vanaf €250 en meestal €350–€650, met basis-SEO en volledige eigendom.
-                Na de intake ontvang je een duidelijke planning.
+        <section className="py-12 sm:py-16">
+          <div className="container-custom">
+            <nav aria-label="Broodkruimel" className="mb-8 text-sm text-[var(--color-muted)]">
+              <ol className="flex flex-wrap gap-2">
+                <li><Link href="/" className="underline underline-offset-4">Home</Link></li>
+                <li aria-hidden="true">/</li>
+                <li aria-current="page">Samenwerken in Utrecht</li>
+              </ol>
+            </nav>
+            <div className="max-w-3xl">
+              <p className="inline-flex items-center gap-2 text-sm font-semibold text-[var(--color-primary)]">
+                <MapPin size={18} aria-hidden="true" /> Vanuit Zuilen, voor ondernemers in Utrecht
               </p>
-              <ul className="space-y-3 mb-8">
-                {[
-                  "Technologie passend bij je project",
-                  "Webshops met WooCommerce",
-                  "SEO-geoptimaliseerd",
-                  "Mobiel-vriendelijk design",
-                  "Contactformulier en WhatsApp",
-                ].map((item, i) => (
-                  <li key={i} className="flex items-center gap-3 text-[var(--color-muted)]">
-                    <CheckCircle className="w-5 h-5 text-primary flex-shrink-0" />
-                    {item}
-                  </li>
-                ))}
-              </ul>
-              <div className="space-y-2">
-                {/* Ankertekst wijst bewust naar de homepage: dat is de pagina die
-                    op deze zoekterm moet ranken. */}
-                <Link href="/" className="block text-primary font-semibold hover:underline">
-                  Website laten maken in Utrecht →
+              <h1 className="mt-4 text-4xl font-bold tracking-tight sm:text-5xl">Webdesign vanuit Utrecht-Zuilen</h1>
+              <p className="mt-6 text-lg leading-relaxed text-[var(--color-muted)]">
+                Ik ben Max. Vanuit Zuilen werk ik met zzp&apos;ers en kleine bedrijven aan hun website.
+                Je bespreekt je aanbod, de inhoud en het ontwerp rechtstreeks met mij.
+                Hier lees je hoe we kennismaken en wat je kunt voorbereiden.
+              </p>
+              <p className="mt-4 leading-relaxed text-[var(--color-muted)]">
+                WordPress begint bij {startingPrice} eenmalig, exclusief btw, voor één pagina met basis-SEO.
+                Op de <Link href="/" className="font-semibold text-[var(--color-primary)] underline underline-offset-4">pagina over een website laten maken in Utrecht</Link> vind je het overzicht van mijn aanbod, werk en aanpak.
+              </p>
+              <div className="mt-7 flex flex-col gap-4 sm:flex-row sm:flex-wrap">
+                <Link href={contactHref} className="btn-primary">
+                  Bespreek je website <ArrowRight size={18} aria-hidden="true" />
                 </Link>
-                <Link href="/diensten/website-laten-maken" className="block text-primary font-semibold hover:underline">
-                  Prijzen en werkwijze bekijken →
-                </Link>
+                <a href="tel:+31625518708" className="btn-ghost">
+                  <Phone size={18} aria-hidden="true" /> Bel 06 25518708
+                </a>
+              </div>
+              <nav aria-label="Op deze pagina" className="mt-7 flex flex-wrap gap-x-6 gap-y-3 text-sm font-semibold text-[var(--color-primary)]">
+                <Link href="#kennismaken" className="underline underline-offset-4">Kennismaken in Zuilen</Link>
+                <Link href="#websitekosten-utrecht" className="underline underline-offset-4">WordPress-prijzen</Link>
+                {localProject && <Link href="#lokaal-voorbeeld" className="underline underline-offset-4">Een project in Utrecht</Link>}
+              </nav>
+            </div>
+          </div>
+        </section>
+
+        <section id="kennismaken" className="scroll-mt-28 bg-[var(--color-surface)] py-14 sm:py-16" aria-labelledby="kennismaken-heading">
+          <div className="container-custom">
+            <h2 id="kennismaken-heading" className="text-3xl font-bold">Kennismaken en samenwerken</h2>
+            <div className="mt-6 grid gap-8 md:grid-cols-2">
+              <div className="space-y-4 leading-relaxed text-[var(--color-muted)]">
+                <p>Ik werk vanuit de Sint-Ludgerusstraat in Zuilen, Utrecht. Een bezoek is mogelijk op afspraak. Bel of stuur een WhatsAppbericht voordat je langskomt.</p>
+                <p>Een online gesprek kan ook. We bespreken wat je website moet laten zien, welke pagina&apos;s nodig zijn en hoe bezoekers een aanvraag of afspraak kunnen maken.</p>
+                <a href="https://wa.me/31625518708" className="inline-block font-semibold text-[var(--color-primary)] underline underline-offset-4">Maak een afspraak via WhatsApp</a>
+              </div>
+              <div className="rounded-2xl border border-[var(--color-border)] bg-[var(--color-bg)] p-6">
+                <h3 className="text-xl font-bold">Dit helpt bij het eerste gesprek</h3>
+                <ul className="mt-4 list-disc space-y-3 pl-5 leading-relaxed text-[var(--color-muted)]">
+                  <li>Een overzicht van je diensten en de klanten die je wilt bereiken.</li>
+                  <li>Je bestaande website, logo, foto&apos;s en teksten, als je die al hebt.</li>
+                  <li>De taken die een bezoeker moet kunnen uitvoeren, zoals een offerte aanvragen of contact opnemen.</li>
+                </ul>
+                <p className="mt-4 text-sm leading-relaxed text-[var(--color-muted)]">Daarna spreken we de inhoud, functies, prijs en een haalbare planning af. Extra werk krijgt een aparte afspraak.</p>
               </div>
             </div>
+          </div>
+        </section>
 
-            {/* Repair Service */}
-            <div className="card-service">
-              <div className="w-14 h-14 rounded-xl bg-[var(--color-primary)]/20 flex items-center justify-center mb-6">
-                <Wrench className="w-7 h-7 text-[var(--color-primary)]" />
-              </div>
-              <h3 className="text-2xl font-bold mb-4">Laptop & Computer Reparatie Utrecht</h3>
-              <p className="text-[var(--color-muted)] mb-6">
-                Snelle reparatie van laptops, computers en MacBooks in Utrecht. 
-                Meeste reparaties binnen 24 uur. Geen dataverlies, garantie inbegrepen.
-              </p>
-              <ul className="space-y-3 mb-8">
-                {[
-                  "Laptop scherm vervangen",
-                  "MacBook reparatie",
-                  "Computer opschonen",
-                  "Virus verwijderen",
-                  "Data herstel",
-                ].map((item, i) => (
-                  <li key={i} className="flex items-center gap-3 text-[var(--color-muted)]">
-                    <CheckCircle className="w-5 h-5 text-[var(--color-primary)] flex-shrink-0" />
-                    {item}
-                  </li>
-                ))}
+        <section id="websitekosten-utrecht" className="scroll-mt-28 py-14 sm:py-16" aria-labelledby="websitekosten-heading">
+          <div className="container-custom">
+            <h2 id="websitekosten-heading" className="text-3xl font-bold">WordPress-prijzen voor je bedrijfswebsite</h2>
+            <p className="mt-4 max-w-3xl leading-relaxed text-[var(--color-muted)]">{wordpress.shared}</p>
+            <p className="mt-3 font-semibold">Eenmalige bouwkosten · Alle prijzen exclusief btw</p>
+            <div className="mt-7 grid gap-5 md:grid-cols-3">
+              {wordpress.packages.map((plan) => (
+                <article key={plan.id} className="flex min-w-0 flex-col rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface)] p-6">
+                  <h3 className="text-xl font-bold">{plan.name}</h3>
+                  <p className="mt-3 text-3xl font-bold text-[var(--color-primary)]">{formatPrice(plan.price)}<span className="ml-2 text-sm font-normal text-[var(--color-muted)]">{plan.period}</span></p>
+                  <p className="mt-4 leading-relaxed text-[var(--color-muted)]">{plan.features[0]}</p>
+                  <Link href={`/contact?${new URLSearchParams({ pakket: plan.id, van: "/utrecht" })}`} className="mt-6 inline-block font-semibold text-[var(--color-primary)] underline underline-offset-4">Bespreek {plan.name}</Link>
+                </article>
+              ))}
+            </div>
+            <div className="mt-5 max-w-3xl space-y-3 text-sm leading-relaxed text-[var(--color-muted)]">
+              {wordpress.notes.map((note) => <p key={note}>{note}</p>)}
+              <p>Voor een webshop of bijzondere functies bespreken we een andere uitvoering en offerte.</p>
+            </div>
+            <div className="mt-6 flex flex-wrap gap-x-6 gap-y-3 font-semibold text-[var(--color-primary)]">
+              <Link href={wordpress.href} className="underline underline-offset-4">Bekijk wat elk WordPress-pakket omvat</Link>
+              <Link href="/prijzen" className="underline underline-offset-4">Vergelijk alle pakketten</Link>
+              <Link href="/blog/wat-kost-website-laten-maken#websitekosten-berekenen" className="underline underline-offset-4">Bereken bouw en optioneel onderhoud</Link>
+            </div>
+          </div>
+        </section>
+
+        {localProject && (
+          <section id="lokaal-voorbeeld" className="scroll-mt-28 bg-[var(--color-surface)] py-14 sm:py-16" aria-labelledby="lokaal-voorbeeld-heading">
+            <div className="container-custom">
+              <p className="text-sm font-semibold text-[var(--color-primary)]">Een voorbeeld uit Utrecht</p>
+              <h2 id="lokaal-voorbeeld-heading" className="mt-3 text-3xl font-bold">{localProject.title}</h2>
+              <p className="mt-4 max-w-3xl leading-relaxed text-[var(--color-muted)]">{localProject.tagline}</p>
+              <ul className="mt-5 max-w-3xl list-disc space-y-3 pl-5 leading-relaxed text-[var(--color-muted)]">
+                {localProject.highlights.slice(0, 3).map((item) => <li key={item}>{item}</li>)}
               </ul>
-              <Link href="/reparaties" className="text-[var(--color-primary)] font-semibold hover:underline">
-                Meer over reparaties →
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Why Choose Us */}
-      <section className="section">
-        <div className="container-custom">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-              Waarom TechSolutionsUtrecht in <span className="text-[var(--color-primary)]">Utrecht</span>?
-            </h2>
-          </div>
-
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
-              {
-                icon: MapPin,
-                title: "Lokaal in Utrecht",
-                desc: "Persoonlijk contact, geen callcenters. Wij kennen de Utrechtse markt.",
-              },
-              {
-                icon: Clock,
-                title: "Snelle Service",
-                desc: "Heldere planning voor websites en snelle beoordeling van reparaties.",
-              },
-              {
-                icon: Laptop,
-                title: "Alles onder één dak",
-                desc: "Uniek in Utrecht: zowel webdesign als hardware reparatie.",
-              },
-              {
-                icon: CheckCircle,
-                title: "12+ jaar ervaring",
-                desc: "Betrouwbare partner voor al uw tech uitdagingen.",
-              },
-            ].map((item, i) => (
-              <div key={i} className="card-service text-center">
-                <div className="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center mx-auto mb-4">
-                  <item.icon className="w-6 h-6 text-primary" />
-                </div>
-                <h3 className="text-lg font-bold mb-2">{item.title}</h3>
-                <p className="text-[var(--color-muted)] text-sm">{item.desc}</p>
+              <p className="mt-5 max-w-3xl text-sm leading-relaxed text-[var(--color-muted)]">Dit project heeft een eigen omvang. De uitvoering en prijs van jouw website leggen we vooraf apart vast.</p>
+              <div className="mt-6 flex flex-wrap gap-x-6 gap-y-3 font-semibold text-[var(--color-primary)]">
+                <Link href={getProjectPath(localProject)} className="underline underline-offset-4">Bekijk het project en mijn werk</Link>
+                <Link href="/projecten" className="underline underline-offset-4">Bekijk andere websitevoorbeelden</Link>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
+            </div>
+          </section>
+        )}
 
-      {/* Areas in Utrecht */}
-      <section className="section bg-[var(--color-surface)]">
-        <div className="container-custom">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">
-              Wij zijn actief in <span className="text-[var(--color-primary)]">Utrecht</span> en omgeving
-            </h2>
-            <p className="text-[var(--color-muted)] max-w-2xl mx-auto">
-              Van Lombok tot Oudwijk, van Overvecht tot Tolsteeg. 
-              Wij helpen klanten in heel Utrecht met hun tech vraagstukken.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
-            {[
-              "Centrum",
-              "Oost",
-              "West",
-              "Noord",
-              "Overvecht",
-              "Oudwijk",
-              "Lombok",
-              "Tolsteeg",
-              "Wittevrouwen",
-              "Voordorp",
-              "Lunetten",
-              "Zuid",
-            ].map((area, i) => (
-              <div
-                key={i}
-                className="flex items-center gap-2 px-4 py-3 bg-[var(--color-bg)] border border-[var(--color-border)] rounded-lg"
-              >
-                <MapPin className="w-4 h-4 text-primary flex-shrink-0" />
-                <span className="text-sm text-[var(--color-muted)]">Utrecht {area}</span>
-              </div>
-            ))}
-          </div>
-
-          <p className="text-[var(--color-muted)] max-w-3xl mx-auto mt-10 text-center leading-relaxed">
-            Ook buiten de stad help ik ondernemers aan een sterke website. Bekijk bijvoorbeeld{" "}
-            <Link href="/vleuten" className="text-[var(--color-primary)] underline underline-offset-2 hover:no-underline">website laten maken in Vleuten</Link>,{" "}
-            <Link href="/de-meern" className="text-[var(--color-primary)] underline underline-offset-2 hover:no-underline">webdesign in De Meern</Link>,{" "}
-            <Link href="/nieuwegein" className="text-[var(--color-primary)] underline underline-offset-2 hover:no-underline">een professionele website in Nieuwegein</Link>,{" "}
-            <Link href="/veenendaal" className="text-[var(--color-primary)] underline underline-offset-2 hover:no-underline">website laten maken in Veenendaal</Link> of{" "}
-            <Link href="/woerden" className="text-[var(--color-primary)] underline underline-offset-2 hover:no-underline">webdesign in Woerden</Link>.
-          </p>
-        </div>
-      </section>
-
-      {/* Local Business Context — Utrecht specific */}
-      <section className="section bg-[var(--color-surface)]">
-        <div className="container-custom">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-center">
-              Utrecht: een stad vol <span className="text-[var(--color-primary)]">kansen voor ondernemers</span>
-            </h2>
-            <div className="space-y-4 text-[var(--color-muted)] text-lg leading-relaxed">
-              <p>
-                Utrecht is niet voor niets één van de snelst groeiende steden van Nederland. 
-                Met zijn centrale ligging, het grootste studentenpopulatie van het land en een 
-                bloeiende startup-scene is de stad een magneet voor ondernemers. Van de creatieve 
-                ondernemers in Lombok en Dichterswijk tot de zakelijke dienstverleners in Kanaleneiland 
-                en de horeca in het centrum: elke wijk heeft zijn eigen karakter en zijn eigen publiek.
-              </p>
-              <p>
-                Als tech partner in Utrecht begrijp ik die diversiteit. Ik weet dat een website voor 
-                een café aan de Oudegracht een andere aanpak vraagt dan een zakelijke site voor een 
-                adviseur in De Uithof. Daarom bouw ik geen standaardtemplates, maar websites die 
-                aansluiten bij jouw doelgroep — of die nu zoekt vanuit Overvecht, Oudwijk of 
-                Voordorp. Met lokale SEO zorg ik dat je gevonden wordt door de mensen die écht 
-                in Utrecht wonen, werken en shoppen.
-              </p>
-              <p>
-                En omdat ik zelf in Utrecht gevestigd ben, zijn de lijnen kort. Geen anonieme 
-                helpdesks of externe freelancers, maar direct contact met de developer die aan 
-                je project werkt. Of je nu een nieuwe website nodig hebt, je bestaande site 
-                wilt laten optimaliseren, of je laptop snel gerepareerd wilt hebben: ik ben 
-                er voor de Utrechtse ondernemer.
-              </p>
+        <section className="py-14 sm:py-16" aria-labelledby="utrecht-faq-heading">
+          <div className="container-custom">
+            <h2 id="utrecht-faq-heading" className="text-3xl font-bold">Vragen over samenwerken aan je website</h2>
+            <div className="mt-7 max-w-3xl space-y-6">
+              {faqs.map((faq) => <div key={faq.question}>
+                <h3 className="text-lg font-semibold">{faq.question}</h3>
+                <p className="mt-3 leading-relaxed text-[var(--color-muted)]">{faq.answer}</p>
+              </div>)}
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* CTA Section */}
-      <section className="section">
-        <div className="container-custom">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl sm:text-4xl font-bold mb-6">
-              Klaar voor uw nieuwe website of reparatie in <span className="text-[var(--color-primary)]">Utrecht</span>?
-            </h2>
-            <p className="text-[var(--color-muted)] text-lg mb-8">
-              Vraag nu een gratis offerte aan. Wij reageren binnen 4 uur. 
-              Geen verplichtingen, gewoon eerlijk advies.
-            </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Link href="/contact" className="btn-primary group">
-                Gratis offerte aanvragen
-                <ArrowRight className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1" />
-              </Link>
-              <a 
-                href="https://wa.me/31625518708"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-ghost"
-              >
-                WhatsApp direct
-              </a>
-            </div>
+        <section className="bg-[var(--color-surface)] py-14 sm:py-16" aria-labelledby="utrecht-contact-heading">
+          <div className="container-custom">
+            <h2 id="utrecht-contact-heading" className="text-3xl font-bold">Vertel me wat je website nodig heeft</h2>
+            <p className="mt-4 max-w-2xl leading-relaxed text-[var(--color-muted)]">Stuur je bestaande website of vertel kort over je bedrijf. Dan bespreken we de mogelijkheden, de omvang en de prijs.</p>
+            <Link href={contactHref} className="btn-primary mt-6">Bespreek je website <ArrowRight size={18} aria-hidden="true" /></Link>
           </div>
-        </div>
-      </section>
+        </section>
       </main>
+      <Footer />
     </>
   );
 }

@@ -1,9 +1,8 @@
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
-import { remark } from 'remark';
-import html from 'remark-html';
-import gfm from 'remark-gfm';
+import { renderBlogMarkdown, markdownTableOfContents } from './blog-markdown';
+export { formatDate } from './blog-client';
 
 const postsDirectory = path.join(process.cwd(), 'content/blog');
 
@@ -104,13 +103,7 @@ export async function getPostBySlug(slug: string): Promise<BlogPost | null> {
   const fileContents = fs.readFileSync(fullPath, 'utf8');
   const { data, content } = matter(fileContents);
   
-  // Convert markdown to HTML
-  const processedContent = await remark()
-    .use(gfm)
-    .use(html, { sanitize: false })
-    .process(content);
-  
-  const contentHtml = processedContent.toString();
+  const contentHtml = await renderBlogMarkdown(content);
   
   return {
     slug,
@@ -129,7 +122,7 @@ export async function getPostBySlug(slug: string): Promise<BlogPost | null> {
 }
 
 export function getRelatedPosts(currentSlug: string, limit: number = 3): BlogPostMeta[] {
-  const allPosts = getAllPosts();
+  const allPosts = getBlogIndexPosts();
   const currentPost = allPosts.find((post) => post.slug === currentSlug);
   const candidates = allPosts.filter((post) => post.slug !== currentSlug);
 
@@ -144,44 +137,73 @@ export function getRelatedPosts(currentSlug: string, limit: number = 3): BlogPos
     (post) => post.category.toLowerCase() !== currentPost.category.toLowerCase()
   );
 
-  return [...sameCategory, ...otherCategories].slice(0, limit);
+  // Handpicked next questions, rather than sending every article to the same
+  // first three entries in the unsorted discovery list.
+  const relatedBySlug: Record<string, string[]> = {
+    'wat-kost-website-laten-maken': ['zzp-website-5-tips-geld-besparen', 'freelancer-of-bureau', 'website-maken-of-laten-maken'],
+    'website-maken-of-laten-maken': ['freelancer-of-bureau', 'wat-kost-website-laten-maken', 'wordpress-of-maatwerk'],
+    'freelancer-of-bureau': ['website-maken-of-laten-maken', 'hoe-lang-duurt-website-maken', 'zzp-website-laten-maken'],
+    'wordpress-of-maatwerk': ['freelancer-of-bureau', 'wat-kost-website-laten-maken', 'website-maken-of-laten-maken'],
+    'hoe-lang-duurt-website-maken': ['website-binnen-week-hoe-wij-dat-doen', 'zzp-website-laten-maken', 'freelancer-of-bureau'],
+    'zzp-website-laten-maken': ['5-fouten-zzp-website', 'zzp-website-5-tips-geld-besparen', 'wat-kost-website-laten-maken'],
+    '5-fouten-zzp-website': ['website-niet-in-google', 'website-sneller-maken-pagespeed', 'zzp-website-laten-maken'],
+    'website-sneller-maken-pagespeed': ['5-fouten-zzp-website', 'website-niet-in-google', 'wordpress-of-maatwerk'],
+    'website-niet-in-google': ['lokale-seo-utrecht', 'website-sneller-maken-pagespeed', '5-fouten-zzp-website'],
+    'lokale-seo-utrecht': ['website-niet-in-google', '5-fouten-zzp-website', 'zzp-website-laten-maken'],
+    'ai-chatbot-implementeren': ['wordpress-of-maatwerk', 'website-laten-maken', 'wat-kost-website-laten-maken'],
+  };
+  const preferred = (relatedBySlug[currentSlug] || [])
+    .map(slug => candidates.find(post => post.slug === slug))
+    .filter((post): post is BlogPostMeta => post !== undefined);
+  const selected = new Set(preferred.map(post => post.slug));
+  return [...preferred, ...sameCategory.filter(post => !selected.has(post.slug)), ...otherCategories.filter(post => !selected.has(post.slug))].slice(0, limit);
 }
 
 export function getPostsByCategory(category: string): BlogPostMeta[] {
-  const allPosts = getAllPosts();
+  const allPosts = getBlogIndexPosts();
   return allPosts.filter(post => 
     post.category.toLowerCase() === category.toLowerCase()
   );
 }
 
 export function getAllCategories(): string[] {
-  const allPosts = getAllPosts();
+  const allPosts = getBlogIndexPosts();
   const categories = allPosts.map(post => post.category);
   return Array.from(new Set(categories));
 }
 
+// Custom article routes share the same discovery list as Markdown articles.
+// Legacy repair articles retain their URLs but are outside the current service focus.
+export function getBlogIndexPosts(): BlogPostMeta[] {
+  const customPosts: BlogPostMeta[] = [
+    {
+      slug: 'website-laten-maken',
+      title: 'Website laten maken: praktische checklist voor ondernemers',
+      description: 'Bepaal je doel, budget, inhoud, planning en beheer voordat je een websiteofferte aanvraagt.',
+      date: '2026-07-10', dateModified: '2026-09-06', readTime: '6 min',
+      category: 'Websites', image: '/images/blog/website-laten-maken.svg', author: 'TechSolutionsUtrecht',
+    },
+    {
+      slug: 'website-binnen-week-hoe-wij-dat-doen',
+      title: 'Website binnen één week: wanneer is dat haalbaar?',
+      description: 'Welke voorbereiding, afgebakende scope en feedback zijn nodig voor een korte planning?',
+      date: '2025-02-26', dateModified: '2026-10-15', readTime: '4 min',
+      category: 'Websites', image: '/images/blog/default.jpg', author: 'TechSolutionsUtrecht',
+    },
+    {
+      slug: 'zzp-website-5-tips-geld-besparen',
+      title: 'ZZP-website: vijf tips om je budget gericht te besteden',
+      description: 'Bespaar door de juiste scope, aangeleverde inhoud en duidelijke afspraken over terugkerende kosten.',
+      date: '2025-02-26', dateModified: '2026-09-06', readTime: '4 min',
+      category: 'Websites', image: '/images/blog/zzp-website.jpg', author: 'TechSolutionsUtrecht',
+    },
+  ];
+  return [...customPosts, ...getAllPosts()];
+}
+
 // Generate table of contents from markdown content
 export function generateTableOfContents(content: string): { id: string; text: string; level: number }[] {
-  const headings: { id: string; text: string; level: number }[] = [];
-  
-  // Use multiline regex to match H2 and H3 headings (## and ###)
-  // The 'm' flag makes ^ and $ match start/end of each line
-  const headingRegex = /^(#{2,3})\s+(.+)$/gm;
-  let match;
-  
-  while ((match = headingRegex.exec(content)) !== null) {
-    const level = match[1].length;
-    const text = match[2].trim();
-    // Generate ID same way as in BlogContent component
-    const id = text
-      .toLowerCase()
-      .replace(/[^a-z0-9\s-]/g, '')
-      .replace(/\s+/g, '-')
-      .substring(0, 50);
-    headings.push({ id, text, level });
-  }
-  
-  return headings;
+  return markdownTableOfContents(content);
 }
 
 // Calculate reading time from content
@@ -192,13 +214,3 @@ export function calculateReadTime(content: string): string {
   return `${minutes} min`;
 }
 
-// Format date to Dutch format
-export function formatDate(dateString: string): string {
-  const date = new Date(dateString);
-  const options: Intl.DateTimeFormatOptions = {
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric',
-  };
-  return date.toLocaleDateString('nl-NL', options);
-}

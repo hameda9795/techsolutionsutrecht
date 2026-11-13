@@ -1,390 +1,96 @@
 ---
-title: "Lokale SEO voor Utrechtse Ondernemers: Zo Word je Gevonden in Je Eigen Stad"
-seoTitle: "Lokale SEO Utrecht: Zo Word je Beter Gevonden"
-description: "Praktische gids voor lokale SEO in Utrecht. Leer hoe je met Google Bedrijfsprofiel, lokale keywords en content hoger rankt in Utrecht en omgeving."
+title: "Lokale SEO in Utrecht: beginnen bij je diensten en zoekvragen"
+seoTitle: "Lokale SEO Utrecht: zoekwoorden, pagina’s en Google"
+description: "Werk aan lokale vindbaarheid in Utrecht met passende zoekwoorden, duidelijke dienstenpagina’s en een geschikt Google Bedrijfsprofiel. Meet klikken en aanvragen."
 date: "2026-03-12"
-dateModified: "2026-07-18"
-readTime: "12 min"
-category: "SEO"
+dateModified: "2026-09-06"
+readTime: "5 min"
+category: "SEO & onderhoud"
 image: "/images/blog/lokale-seo.jpg"
 slug: "lokale-seo-utrecht"
 author: "Max"
 ---
 
-## Waarom Lokale SEO Belangrijker is Dan Ooit
+## Begin bij de klant die je wilt bereiken
 
-Stel je voor: je hebt een prachtige website. Professioneel design, goede teksten, alles klopt. Maar niemand in Utrecht kan je vinden als ze zoeken naar wat jij aanbiedt.
+Lokale SEO helpt je werken aan zichtbaarheid voor zoekvragen in een bepaald gebied. Voor een ondernemer in Utrecht begint dat bij de dienst waarvoor je klanten wilt krijgen en de plaatsen waar je daadwerkelijk werkt.
 
-Frustrerend, toch?
+Een compleet profiel of correcte openingstijden kan misverstanden voorkomen, maar vervangt geen passende dienstenpagina. Onderzoek eerst de zoekvraag, het aanbod en de inhoud die een klant nodig heeft. Daarna kies je welke verbeteringen prioriteit hebben.
 
-Dit zie ik constant. Ondernemers die investeren in een website, maar vergeten dat Google niet automatisch weet waar je zit en wie je wilt bereiken. Het resultaat? Een website die alleen gevonden wordt als iemand je bedrijfsnaam intoetst – en dat zijn meestal mensen die je al kennen.
+Bij TechSolutionsUtrecht is websitebouw in Utrecht de hoofddienst en Zuilen de werkelijke vestigingsplaats. Die focus bepaalt welke pagina’s en onderwerpen centraal staan.
 
-Lokale SEO verandert dat. Het zorgt ervoor dat mensen in jouw regio jou vinden op het moment dat ze naar jouw diensten zoeken.
+## Gewone zoekresultaten en Google Maps zijn verschillend
 
-En het mooiste? Voor lokale zoektermen is de concurrentie vaak minder hevig dan voor nationale termen. Als je de juiste stappen zet, kun je relatief snel resultaat boeken.
+Een dienstenpagina kan verschijnen tussen de gewone zoekresultaten. Een Google Bedrijfsprofiel kan zichtbaar zijn in Maps of lokale bedrijfsresultaten. Je moet daarom afzonderlijk bekijken waar je nu verschijnt en waar klanten contact opnemen.
 
-## Wat is Lokale SEO?
+Voor lokale bedrijfsresultaten noemt Google relevantie, afstand en bekendheid als belangrijke factoren. Een vermelding van een verre plaats maakt je bedrijf niet fysiek dichter bij de zoeker. Er bestaat ook geen mogelijkheid om een hogere lokale positie bij Google te kopen. [Uitleg van Google over lokale resultaten](https://support.google.com/business/answer/7091?hl=en).
 
-Lokale SEO (Search Engine Optimization) is het optimaliseren van je online aanwezigheid zodat je gevonden wordt door mensen in jouw geografische regio.
+## Zoekwoorden kiezen: relevantie vóór volume
 
-### Voorbeeld:
+Maak een lijst met de diensten waarvoor je daadwerkelijk opdrachten wilt aannemen. Kijk daarna hoe klanten die omschrijven en welk type pagina Google bij zulke vragen toont.
 
-Iemand zoekt naar "website laten maken". Dat is een nationale zoekterm. De concurrentie is moordend – je concurreert met honderden bedrijven door heel Nederland.
+Voorbeelden rond websitebouw zijn “website laten maken Utrecht”, “WordPress website laten maken” en “wat kost een website laten maken”. De eerste twee kunnen bij een dienstenpagina passen; de laatste vraagt om uitleg over kosten. Het zijn verschillende vragen, ook al gaan ze over dezelfde aankoop.
 
-Maar zoeken naar "website laten maken Utrecht"? Dat is een lokale zoekterm. De concurrentie is veel minder, en de zoekintentie is hoger – iemand die specifiek zoekt naar een dienst in Utrecht wil waarschijnlijk ook echt iemand in Utrecht.
+Gebruik Search Console om bestaande vertoningen en klikken te bekijken en een zoekwoordtool voor aanvullende schattingen. Zoekvolume is geen aantal klanten. Een lage moeilijkheidsscore bewijst evenmin dat jouw pagina snel bovenaan komt.
 
-### De Voordelen van Lokale SEO:
+Koppel iedere belangrijke zoekvraag aan een logische bestaande pagina. Maak pas een nieuwe pagina als de inhoud een eigen vraag beantwoordt.
 
-- **Minder concurrentie** – Je concurreert alleen met bedrijven in je regio
-- **Hogere conversie** – Lokale zoekers zijn vaak serieuzer
-- **Gratis zichtbaarheid** – Je Google Bedrijfsprofiel kost niets
-- **Vertrouwen** – Mensen vertrouwen lokale bedrijven meer
+## Wat moet een lokale dienstenpagina vertellen?
 
-## Stap 1: Je Google Bedrijfsprofiel (Google My Business)
+Een klant moet kunnen beoordelen of je aanbod past. Beschrijf de dienst, voor wie die bedoeld is, de prijs of prijsopbouw, de aanpak en de volgende stap. Voeg eigen voorbeelden toe wanneer je die hebt.
 
-Dit is de belangrijkste stap. En het is gratis. Als je één ding doet van dit artikel, laat het dit dan zijn.
+Noem Utrecht of Zuilen waar dat informatie geeft: je werkelijke locatie, een afspraakmogelijkheid of een relevant project. Een opsomming van buurten zonder verdere uitleg maakt de keuze voor de klant niet duidelijker.
 
-### Wat is Het?
+Werk titel, koppen en interne links uit rond het onderwerp. De techniek moet de pagina toegankelijk maken voor bezoekers en zoekmachines. Is de pagina niet geïndexeerd, onderzoek dan eerst [waarom je website niet in Google verschijnt](/blog/website-niet-in-google).
 
-Je Google Bedrijfsprofiel is het kennis paneel dat verschijnt wanneer mensen je bedrijf zoeken op Google of Google Maps. Het bevat:
-- Je bedrijfsnaam en adres
-- Openingstijden
-- Telefoonnummer en website
-- Foto's
-- Reviews
-- Diensten
-- Posts en updates
+## Heb je voor iedere stad een aparte pagina nodig?
 
-### Hoe Zet Je Het Op?
+Nee. Voor een onderneming die vooral Utrecht bedient, kan een sterke hoofdpagina met goede diensteninhoud een logischer begin zijn.
 
-**1. Claim je profiel**
-Ga naar [Google Bedrijfsprofiel](https://business.google.com) en zoek je bedrijf. Als het er al staat, claim je het. Zo niet, voeg je het toe.
+Een extra locatiepagina heeft pas een duidelijke functie als je daar werkelijk werkt en relevante eigen informatie kunt geven. Alleen de plaatsnaam vervangen of bekende gebouwen noemen is onvoldoende onderscheid. Verander bestaande URL’s met verkeer bovendien pas na een beoordeling van hun functie en prestaties.
 
-**2. Vul alles in – écht alles**
-Google geeft je een "compleetheidspercentage". Zorg dat je 100% bereikt. Dit betekent:
-- Bedrijfsnaam (exact zoals je hem gebruikt)
-- Adres (consistent met je website)
-- Telefoonnummer
-- Website URL
-- Categorie (kies de meest specifieke)
-- Beschrijving (750 tekens, gebruik relevante zoekwoorden)
-- Openingstijden
-- Diensten
-- Kenmerken (gratis WiFi, parkeergelegenheid, etc.)
+## Google Bedrijfsprofiel: correct en passend inrichten
 
-**3. Verifieer je bedrijf**
-Google stuurt een brief met een code naar je adres. Dit duurt 1-2 weken. Zodra je de code hebt, voer je deze in.
+Controleer eerst of je bedrijf [in aanmerking komt voor een profiel](https://support.google.com/business/answer/3038177?hl=nl). Gebruik je echte bedrijfsnaam, een passende categorie, actuele contactgegevens en een correcte voorstelling van je locatie of servicegebied.
 
-**4. Voeg foto's toe**
-Bedrijven met foto's krijgen 42% meer verzoeken voor routebeschrijvingen. Voeg toe:
-- Logo
-- Coverfoto
-- Foto's van je pand (binnen en buiten)
-- Foto's van jezelf (mensen kopen van mensen!)
-- Foto's van je werk/producten
+Google bepaalt welke verificatiemethoden beschikbaar zijn. Een brief is niet voor ieder bedrijf beschikbaar; volg de mogelijkheden in jouw profiel. [Officiële uitleg over verificatie](https://support.google.com/business/answer/7107242?hl=en-en).
 
-### Optimalisatie Tips:
+Voeg echte foto’s en duidelijke diensteninformatie toe. Vraag klanten met een echte ervaring om een eerlijke review, zonder vergoeding of vooraf bepaalde beoordeling. Verander je aanbod, dan moeten profiel en website dezelfde actuele informatie geven.
 
-**Gebruik je echte bedrijfsnaam**
-Geen "SEO tricks" zoals "Website Maken Utrecht Beste Goedkoop". Gewoon je bedrijfsnaam.
+Deze werkzaamheden ondersteunen een begrijpelijke presentatie. Ze zijn geen vervanging voor inhoud die aansluit op de zoekvraag.
 
-**Wees consistent**
-Je bedrijfsnaam, adres en telefoonnummer (NAP) moeten overal hetzelfde zijn. Op je website, je Google profiel, je social media – precies hetzelfde.
+## Welke links zijn nuttig?
 
-**Post regelmatig updates**
-Minimaal 1x per week. Dit kan een aanbieding zijn, een nieuw project, of gewoon een tip. Dit toont Google dat je actief bent.
+Een relevante vermelding bij een echte brancheorganisatie, partner of lokaal project kan bezoekers naar je bedrijf brengen. Beoordeel waarom die vermelding bestaat en of de pagina werkelijk nuttig is voor mensen.
 
-**Verzamel reviews**
-Dit is cruciaal. Bedrijven met meer (en betere) reviews ranken hoger. Vraag tevreden klanten om een review.
+Koop geen pakket met willekeurige links om een aantalsdoel te halen. Een betaalde promotie is een marketingkeuze en moet als zodanig worden behandeld. Er is geen vast aantal backlinks dat een positie garandeert.
 
-## Stap 2: Lokale Zoekwoorden Onderzoek
+## Wat meet je?
 
-Voor welke termen wil je gevonden worden? Dit is anders dan normaal zoekwoordenonderzoek omdat we focussen op locatie.
+Houd een nulmeting en een overzicht van wijzigingen bij. Vergelijk bij voorkeur gelijke perioden en bekijk de dienst of pagina waar je aan hebt gewerkt.
 
-### Hoe Vind Je Lokale Zoekwoorden?
+| Meting | Wat vertelt het je? |
+|---|---|
+| Vertoningen in Search Console | Hoe vaak een pagina voor zoekvragen werd getoond |
+| Klikken en CTR | Hoe vaak iemand klikte; CTR is klikken gedeeld door vertoningen |
+| Positie per zoekvraag | Een indicatie van zichtbaarheid die per periode en zoeker kan verschillen |
+| Gemeten contactacties | Formulierverzendingen of klikken, afhankelijk van de inrichting |
+| Echte aanvragen | Of mensen met een passende vraag daadwerkelijk contact opnamen |
 
-**Methode 1: Google Autocomplete**
-Typ in Google: "[jouw dienst] utr" en kijk wat Google aanvult. Je ziet suggesties als:
-- website laten maken utrecht
-- website laten maken utrecht goedkoop
-- website laten maken utrecht student
+Een telefoonknop aanklikken is niet hetzelfde als een gevoerd gesprek. Beoordeel daarom ook de inhoud en kwaliteit van ontvangen aanvragen.
 
-**Methode 2: "Mensen Zoeken Ook Naar"**
-Scroll naar beneden op de zoekresultaten pagina. Daar zie je gerelateerde zoektermen.
+## Welke hulp kun je bij mij krijgen?
 
-**Methode 3: Google Keyword Planner**
-Gratis tool als je een Google Ads account hebt (ook zonder adverteren). Hiermee zie je zoekvolumes.
+De [gratis SEO scan](/contact?pakket=gratis-seo-scan) is een korte beoordeling van maximaal drie pagina’s, met vijf aandachtspunten, drie zoekwoordkansen en kort advies.
 
-### Voorbeelden van Lokale Zoekwoorden:
+**SEO Start kost €300 eenmalig exclusief btw.** Dit omvat een audit tot vijf pagina’s, onderzoek naar vijftien zoekwoorden, de koppeling aan pagina’s, twee bestaande paginaverbeteringen en één uur technische verbeteringen.
 
-Voor een webdesigner in Utrecht:
-- website laten maken utrecht
-- webdesign utrecht
-- wordpress utrecht
-- website bouwer utrecht
-- goedkope website utrecht
+Daarna kun je kiezen voor Lokale SEO van €250 of SEO Groei van €450 per maand exclusief btw. Een nieuw maandtraject begint met SEO Start naast het maandbedrag; een bruikbare eerdere SEO Start wordt niet dubbel gerekend. De hoeveelheid werk staat in de [SEO-pakketten](/diensten/seo#pakketten).
 
-Voor een fotograaf in Utrecht:
-- fotograaf utrecht
-- portretfotografie utrecht
-- zakelijk portret utrecht
-- fotoshoot utrecht
+De **basis-SEO bij een nieuwe WordPress-website** is een andere scope. Dat omvat de afgesproken inrichting bij oplevering, niet automatisch een maandelijks traject of alle profielwerkzaamheden. Bekijk daarvoor de [WordPress-pakketten](/diensten/website-laten-maken).
 
-### Prioriteren
+## Een logische eerste stap
 
-Je kunt niet op alles ranken. Focus op:
-1. Hoog volume, lage concurrentie
-2. Relevant voor je diensten
-3. Commerciële intentie (mensen die willen kopen)
+Kies de dienst waarvoor je klanten wilt krijgen, controleer de huidige zoekvragen en beoordeel de bijbehorende pagina. Gebruik die bevindingen om inhoud, techniek en lokale presentatie gericht te verbeteren.
 
-## Stap 3: Optimaliseer Je Website voor Lokale SEO
-
-Je Google profiel is belangrijk, maar je website is je thuisbasis. Hier moet je lokale SEO ook doorvoeren.
-
-### Op Je Homepage
-
-**Title Tag**
-Dit is wat mensen zien in Google. Format:
-"[Dienst] [Stad] | [Bedrijfsnaam]"
-
-Voorbeeld:
-"Website Laten Maken Utrecht | TechSolutionsUtrecht"
-
-**Meta Description**
-De korte omschrijving onder je title in Google:
-"Op zoek naar een professionele website in Utrecht? Wij bouwen complete bedrijfswebsites met een techniek die past bij je doelen. Vanaf €250. Gratis intakegesprek."
-
-**H1 Heading**
-De hoofdtitel van je pagina:
-"Website Laten Maken in Utrecht en Omgeving"
-
-**Content**
-Noem Utrecht (en omringende plaatsen) natuurlijk in je tekst. Geen keyword stuffing, maar relevante vermeldingen.
-
-Voorbeeld:
-"Als webdesigner in Utrecht help ik dagelijks lokale ondernemers..."
-"Of je nu in Utrecht, Nieuwegein, of Houten zit..."
-
-### Maak Locatie-Specifieke Pagina's
-
-Als je meerdere steden bedient, maak dan aparte pagina's voor elke locatie. Niet copy-paste met alleen de stad veranderd, maar unieke content per stad.
-
-Voorbeeld URL structuur:
-- /website-laten-maken-utrecht
-- /website-laten-maken-nieuwegein
-- /website-laten-maken-houten
-
-Op elke pagina:
-- Specifieke informatie over die stad
-- Lokale referenties of cases
-- Lokale landmarks noemen
-- Unieke foto's (geen stockfoto's)
-
-### Schema Markup (Structured Data)
-
-Dit is technisch, maar essentieel. Het helpt Google begrijpen wat je website is.
-
-Voeg LocalBusiness schema toe aan je website. Dit bevat:
-- Je bedrijfsnaam
-- Adres
-- Telefoonnummer
-- Openingstijden
-- Coördinaten
-
-Als je dit niet zelf kunt, vraag je webbouwer dit toe te voegen.
-
-## Stap 4: Bouw Lokale Links (Backlinks)
-
-Links van andere websites naar de jouwe zijn een van de belangrijkste ranking factoren. Voor lokale SEO zijn lokale links extra waardevol.
-
-### Waar Kun Je Lokale Links Krijgen?
-
-**1. Lokale Bedrijvengidsen**
-- Yelp Nederland
-- Foursquare
-- Hotfrog
-- En alle andere directories
-
-**2. Ondernemersverenigingen**
-- Kamer van Koophandel
-- Lokale netwerkclubs
-- Brancheverenigingen
-
-**3. Lokale Sponsoringen**
-Sponsor een lokaal sportteam of evenement. Je krijgt dan een link terug van hun website.
-
-**4. Samenwerkingen**
-Werk samen met andere lokale bedrijven. Een fotograaf en een webdesigner kunnen elkaar linken bijvoorbeeld.
-
-**5. Gastblogs**
-Schrijf voor lokale nieuwssites of blogs. Vraag of je een link terug mag plaatsen.
-
-### Tips voor Linkbuilding:
-
-**Kwaliteit boven kwantiteit**
-Één link van een gerespecteerde lokale organisatie is meer waard dan tien links van spammy directories.
-
-**Consistentie in NAP**
-Zorg dat je bedrijfsnaam, adres en telefoonnummer overal identiek zijn. Google koppelt deze informatie.
-
-**Lokaal nieuws**
-Heb je iets nieuws? Stuur een persbericht naar lokale media. Gratis publiciteit + link!
-
-## Stap 5: Content Strategie voor Lokale SEO
-
-Content is king, ook voor lokale SEO. Regelmatig nieuwe, relevante content plaatsen helpt je rankings.
-
-### Blog Onderwerpen die Werken:
-
-**Case Studies per Locatie**
-"Hoe wij een website bouwden voor [bedrijf] in Utrecht"
-
-**Lokaal Nieuws + Je Vakgebied**
-"Wat de nieuwe digitaliseringsregeling voor Utrechtse ondernemers betekent"
-
-**Lokale Tips**
-"De 5 beste locaties voor zakelijke fotoshoots in Utrecht"
-
-**Antwoord op Lokale Vragen**
-"Waarom Utrechtse ondernemers investeren in SEO"
-
-### Frequentie
-
-Aim voor minimaal 1 blogartikel per maand. Consistentie is belangrijker dan volume.
-
-## Stap 6: Social Media en Lokale SEO
-
-Je social media profielen ranken ook in Google. Optimaliseer ze:
-
-### Consistentie
-Zorg dat je bedrijfsnaam, adres en telefoonnummer overal hetzelfde zijn.
-
-### Volledig Invullen
-Vul alle velden in op Facebook, LinkedIn, Instagram, etc.
-
-### Lokale Content
-Deel regelmatig content over je werk in Utrecht. Tag locaties wanneer relevant.
-
-### Reviews op Social Media
-Moedig klanten aan om reviews achter te laten op je Facebook pagina.
-
-## Stap 7: Mobiel Optimalisatie
-
-Lokale zoekers gebruiken vaak hun mobiel. "Website laten maken Utrecht" wordt vaak getypt terwijl iemand in de trein zit of op straat loopt.
-
-### Checklist:
-
-- ✅ Je website is responsive (past zich aan aan schermgrootte)
-- ✅ Laadtijd onder 3 seconden
-- ✅ Telefoonnummer is klikbaar (tel: link)
-- ✅ Adres is klikbaar (linkt naar Google Maps)
-- ✅ Formulieren werken goed op mobiel
-
-## Hoe Meet Je Succes?
-
-Je wilt weten of je inspanningen werken. Hoe meet je dat?
-
-### Google Search Console
-
-Gratis tool die laat zien:
-- Voor welke zoektermen je gevonden wordt
-- Je gemiddelde positie
-- Hoe vaak mensen klikken
-
-### Google Analytics
-
-Laat zien:
-- Hoeveel bezoekers je hebt
-- Waar ze vandaan komen
-- Hoe lang ze blijven
-
-### Google Bedrijfsprofiel Insights
-
-Laat zien:
-- Hoe vaak je profiel wordt bekeken
-- Hoe vaak mensen routebeschrijvingen aanvragen
-- Hoe vaak mensen bellen
-
-### Belangrijke Metrics:
-
-**Impressies**
-Hoe vaak je wordt getoond in zoekresultaten.
-
-**Klikken (CTR)**
-Hoe vaak mensen doorklikken naar je website.
-
-**Conversies**
-Contactformulieren ingevuld, telefoontjes, etc.
-
-## Veelgemaakte Fouten (En Hoe Ze te Vermijden)
-
-### Fout 1: Inconsistente NAP-gegevens
-Je hebt "Straat 1" op je website, "Str. 1" op Facebook, en "Straat 1a" op Google. Dit verward Google.
-
-**Oplossing:** Maak een document met je exacte NAP en gebruik dit overal.
-
-### Fout 2: Geen Reviews Actief Verzamelen
-Reviews komen niet vanzelf. Je moet erom vragen.
-
-**Oplossing:** Vraag elke tevreden klant om een review. Maak het makkelijk door een directe link te sturen.
-
-### Fout 3: Niet Reageren op Reviews
-Negatieve reviews negeren is slecht. Positieve reviews negeren is een gemiste kans.
-
-**Oplossing:** Reageer op álle reviews. Professioneel op negatieve, dankbaar op positieve.
-
-### Fout 4: Keyword Stuffing
-"Website laten maken Utrecht goedkoop beste webdesigner Utrecht" – dit werkt niet meer.
-
-**Oplossing:** Schrijf natuurlijk. Zoekwoorden moeten in de tekst passen.
-
-### Fout 5: Vergeten om te Monitoren
-Je optimaliseert één keer en denkt dat het klaar is. SEO is een doorlopend proces.
-
-**Oplossing:** Plan maandelijks tijd in voor SEO checken en bijwerken.
-
-## Realistische Verwachtingen
-
-Lokale SEO is geen quick fix en kent geen gegarandeerde positie of vaste doorlooptijd. Een praktisch traject bestaat meestal uit:
-
-- Google Bedrijfsprofiel controleren en waar nodig verifiëren
-- Belangrijke pagina's en lokale signalen verbeteren
-- Reviews, vermeldingen en relevante lokale links opbouwen
-- Vertoningen, klikken en aanvragen maandelijks volgen
-
-Hoe snel zichtbaarheid verandert, hangt af van concurrentie, uitgangspositie, locatie en de kwaliteit van je website en profiel. Monitor daarom niet alleen posities, maar ook telefoontjes, route-aanvragen, websiteklikken en echte leads.
-
-## Wanneer Schakel Je Een Professional In?
-
-Lokale SEO kun je grotendeels zelf doen. Maar soms is het slim om hulp in te schakelen:
-
-- Je hebt geen tijd om het zelf te doen
-- Je wordt niet gevonden ondanks je inspanningen
-- Je concurrenten domineren de zoekresultaten
-- Je wilt sneller resultaat
-
-Ik help ondernemers in Utrecht met lokale SEO. Niet met beloftes van "#1 in Google in 1 week", maar met een realistische strategie die werkt.
-
-## Conclusie: Start Vandaag
-
-Lokale SEO is niet rocket science. Het is consistentie en aandacht voor detail.
-
-**Je actieplan voor vandaag:**
-1. Claim en optimaliseer je Google Bedrijfsprofiel
-2. Controleer of je NAP-gegevens overal consistent zijn
-3. Optimaliseer je homepage title en meta description
-4. Vraag 3 tevreden klanten om een review
-
-Met deze vier stappen leg je een controleerbare basis waarop je verder kunt verbeteren.
-
-## Officiële bron
-
-Lees ook de uitleg van Google over [hoe lokale resultaten worden bepaald](https://support.google.com/business/answer/7091?hl=nl). Google noemt relevantie, afstand en bekendheid als belangrijke factoren en geeft geen garantie op een specifieke positie.
-
----
-
-Wil je structureel werken aan technische SEO, belangrijke pagina's en lokale vindbaarheid? Bekijk [onze aanpak voor Hoger in Google](/diensten/seo) of [neem contact op](/contact) voor een korte intake. Na de intake ontvang je een duidelijke offerte; een specifieke positie in Google kan niet worden gegarandeerd.
-
-<!-- regio-links -->
-
-Begin je liever met een site die technisch al goed staat? Bekijk dan [een website laten maken](/diensten/website-laten-maken). Werk je buiten de stad, dan vind je de lokale aanpak terug bij [website laten maken in Utrecht](/utrecht), [Nieuwegein](/nieuwegein) en [Zeist](/zeist).
+[Bekijk de SEO-aanpak](/diensten/seo) of [vraag de korte gratis scan aan](/contact?pakket=gratis-seo-scan). Veranderingen in klikken en aanvragen moeten vervolgens in de praktijk worden gemeten; een vaste positie of doorlooptijd wordt niet beloofd.

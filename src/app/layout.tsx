@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import "./packages.css";
 import { localBusinessSchema, websiteSchema } from "@/lib/schema";
 import CookieConsent from "@/components/CookieConsent";
 import Header from "@/components/Header";
@@ -13,15 +14,11 @@ const inter = Inter({
   variable: "--font-inter",
 });
 
-// De homepage is de pagina die op "website laten maken utrecht" moet ranken:
-// alle 51 externe backlinks van de site wijzen hiernaartoe, dus hier zit de
-// autoriteit. De title begint daarom met de zoekterm en noemt de prijs, zoals
-// ook de concurrenten in de top 10 doen. "TechSolutions" blijft erin staan voor
-// de merknaam-zoekopdrachten, waar de site nu op positie 2,6 staat.
+// Shared fallback metadata. Individual pages own their distinct search intent.
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: "Website Laten Maken Utrecht vanaf €250 | TechSolutions",
-  description: "Website laten maken in Utrecht vanaf €250, meestal €350–€650. Binnen een week online, mobielvriendelijk en SEO-klaar. Direct contact met de developer die hem bouwt.",
+  title: "Website Laten Maken Utrecht vanaf €300 | TechSolutions",
+  description: "Website laten maken in Utrecht vanaf €300. Bekijk mijn werk, prijzen en aanpak. Direct contact met Max, webdesigner in Zuilen. Vraag een vrijblijvende offerte aan.",
   authors: [{ name: "Max", url: "https://techsolutionsutrecht.nl/over-ons" }],
   icons: {
     icon: [
@@ -37,8 +34,8 @@ export const metadata: Metadata = {
     ],
   },
   openGraph: {
-    title: "Website Laten Maken Utrecht vanaf €250 | TechSolutions",
-    description: "Websites, webshops, SEO, onderhoud en automatisering voor ondernemers, met transparante startprijzen en direct contact met de developer.",
+    title: "Website Laten Maken Utrecht vanaf €300 | TechSolutions",
+    description: "Websites voor ondernemers in Utrecht. Direct contact met Max in Zuilen, voorbeelden van mijn werk en een duidelijke offerte voor je website.",
     type: "website",
     locale: "nl_NL",
     url: "https://techsolutionsutrecht.nl",
@@ -46,8 +43,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Website Laten Maken Utrecht vanaf €250 | TechSolutions",
-    description: "Digitale diensten voor ondernemers met transparante startprijzen en direct contact met de developer in Utrecht.",
+    title: "Website Laten Maken Utrecht vanaf €300 | TechSolutions",
+    description: "Webdesign in Utrecht vanuit Zuilen. Bekijk websitevoorbeelden, prijzen en de aanpak voor je bedrijfswebsite.",
   },
   verification: {
     google: "GIWDm0RfeTrOlSmP_ZnDC_atk7BE8xUVSL6AZDP8fuU",
@@ -90,9 +87,9 @@ export default function RootLayout({
       </head>
       <body className="min-h-screen">
         <Header />
-        <main className="pt-[88px] md:pt-[96px]">
+        <div className="pt-[88px] md:pt-[96px]">
           {children}
-        </main>
+        </div>
         <CookieConsent />
         <SiteAnalytics />
       </body>

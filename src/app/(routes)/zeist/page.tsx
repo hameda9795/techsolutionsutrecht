@@ -14,11 +14,11 @@ export default function ZeistPage() {
       slug="zeist"
       intro={[
         "Zeist is een dorp met ambitie: van de zelfstandige adviseurs rond de Slotlaan tot de hoveniers, coaches en zorgprofessionals in de groene wijken eromheen. Wie hier onderneemt, concurreert vaak met bedrijven uit Utrecht én De Bilt. Een sterke, vindbare website maakt dan het verschil tussen gevonden worden of niet.",
-        "Ik bouw websites die passen bij het type ondernemer dat Zeist kenmerkt: persoonlijk, betrouwbaar en met oog voor kwaliteit. Geen standaard sjabloon, maar een site die jouw verhaal vertelt en bezoekers omzet in klanten.",
+        "Ik bouw websites die je bedrijf duidelijk presenteren. Bij een WordPress-pakket pas ik de ontwerpbasis aan je huisstijl aan. Voor een eigen ontwerp zonder WordPress is er een apart maatwerktraject. Samen kiezen we de aanpak die past bij je wensen en budget.",
       ]}
       neighbourhoods={["het centrum rond de Slotlaan", "Austerlitz", "Den Dolder", "Huis ter Heide", "Bosch en Duin"]}
       whyLocal={[
-        "Zeist heeft een eigen karakter en een eigen publiek. Een website voor een coach in Den Dolder vraagt om een andere toon dan een webshop voor een speciaalzaak in het centrum. Omdat ik de regio ken, denk ik mee over hoe jouw doelgroep zoekt en wat hen overtuigt.",
+        "Ik werk vanuit Utrecht-Zuilen, niet vanuit een vestiging in Zeist. Voor een bedrijf in Zeist kunnen we online afstemmen of een afspraak voor overleg maken. We gebruiken je echte werkgebied en bedrijfsgegevens op de website.",
         "Voor lokale vindbaarheid richt ik je website zo in dat Google begrijpt dat je actief bent in Zeist en omgeving: van een nette paginastructuur tot correcte lokale signalen en een gekoppeld Google Bedrijfsprofiel.",
       ]}
       approach={[
@@ -32,7 +32,7 @@ export default function ZeistPage() {
         title: "Zeist: groen, groeiend en vol ondernemerschap",
         content: [
           "Zeist staat bekend om zijn groene omgeving en rustige sfeer, maar de economie draait hier op volle toeren. Van de zelfstandige professionals rond de Slotlaan tot de coaches en therapeuten in Bosch en Duin, en van de hoveniers in Huis ter Heide tot de adviseurs in Den Dolder: Zeist heeft een rijk en gevarieerd ondernemerslandschap. Veel ondernemers hier werken op aanbeveling, maar een sterke online aanwezigheid wordt steeds crucialer.",
-          "Ik bouw websites die passen bij het karakter van Zeist: persoonlijk, betrouwbaar en met oog voor detail. Of je nu een praktijk runt in een van de groene wijken of een winkel hebt in het centrum: ik zorg dat je website vertrouwen wekt en lokaal goed vindbaar is. Met een correct ingericht Google Bedrijfsprofiel en lokale SEO richt ik je site zo in dat klanten uit Zeist en omgeving jou het eerst vinden.",
+          "Welke informatie een bezoeker nodig heeft, hangt af van jouw diensten en klanten. We spreken af welke pagina’s, contactmogelijkheden en lokale informatie nodig zijn. Als je bedrijf geschikt is voor een Google Bedrijfsprofiel kan dat deel van de gekozen uitvoering zijn; een website of profiel garandeert geen eerste positie.",
         ],
       }}
       faqs={[

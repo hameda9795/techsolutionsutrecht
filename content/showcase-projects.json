@@ -1,0 +1,207 @@
+[
+  {
+    "id": "14",
+    "title": "Tandartspraktijk Zuilen & Parkwijk",
+    "tagline": "Vernieuwd WordPress-ontwerp en SEO voor twee tandartspraktijken in Utrecht",
+    "description": "Voor Tandartspraktijk Zuilen & Parkwijk vernieuwde ik het ontwerp en werkte ik aan de SEO van de WordPress-website. De site brengt twee Utrechtse praktijken samen en helpt bezoekers snel de juiste informatie en contactroute te vinden.\n\nVanaf de homepage kunnen bezoekers behandelingen bekijken, een e-consult aanvragen of zich als nieuwe patiënt inschrijven. Voor Parkwijk en Zuilen zijn de adressen, openingstijden, contactgegevens en links voor het maken van een afspraak afzonderlijk weergegeven.\n\nHet vernieuwde ontwerp maakt deze routes ook op mobiel duidelijk. De behandelingspagina’s en informatie per vestiging geven bezoekers een logisch startpunt om zich te oriënteren voordat zij contact opnemen.",
+    "sector": "Tandartspraktijk en mondzorg",
+    "type": "website",
+    "year": "2026",
+    "highlights": [
+      "Vernieuwd, mobielvriendelijk ontwerp voor twee praktijken",
+      "Duidelijke routes naar afspraken en inschrijving",
+      "Overzicht van behandelingen en e-consult",
+      "Afzonderlijke vestigingsinformatie voor Zuilen en Parkwijk",
+      "SEO-werkzaamheden aan de website"
+    ],
+    "stack": [
+      "WordPress",
+      "responsive ontwerp",
+      "SEO"
+    ],
+    "liveUrl": "https://www.tandartszuilenparkwijk.nl/",
+    "image": "https://15iakk0bldwwzezw.public.blob.vercel-storage.com/showcase/1790331334016-c4bqek.webp",
+    "accent": "from-teal-500 to-emerald-700",
+    "featured": false,
+    "updatedAt": "2026-09-25T10:15:52.000Z"
+  },
+  {
+    "id": "13",
+    "title": "Kant en Klaar Verbouw",
+    "tagline": "WordPress-website voor woningrenovatie met dienstenpagina’s, projectvoorbeelden en offerteaanvraag",
+    "description": "Voor Kant en Klaar Verbouw bouwde ik een WordPress-bedrijfswebsite waarop bezoekers de mogelijkheden voor hun woningverbouwing kunnen verkennen. De diensten zijn overzichtelijk verdeeld over keukenrenovatie, badkamerrenovatie, bouwbegeleiding, complete renovatie en timmer- en stucwerk.\n\nDe website laat ook zien hoe het bedrijf werkt: van het bespreken van wensen en de voorbereiding tot de uitvoering en oplevering. Via afzonderlijke projectpagina’s krijgen bezoekers een indruk van uitgevoerd werk en de afwerking.\n\nEen offerte aanvragen kan via het formulier op de website. Bezoekers kunnen ook direct bellen of mailen. Het ontwerp gebruikt de herkenbare donkerblauwe en roze huisstijl en is geschikt voor mobiel en desktop.",
+    "sector": "Woningrenovatie en verbouw",
+    "type": "website",
+    "year": "2026",
+    "highlights": [
+      "WordPress-bedrijfswebsite met overzichtelijke dienstenstructuur",
+      "Aparte pagina’s voor vijf renovatie- en verbouwdiensten",
+      "Projectoverzicht met afzonderlijke projectpagina’s",
+      "Uitleg van de werkwijze in drie stappen",
+      "Offerteformulier en directe contactmogelijkheden"
+    ],
+    "stack": [
+      "WordPress",
+      "responsive ontwerp"
+    ],
+    "liveUrl": "https://kantenklaarverbouw.nl/",
+    "image": "https://15iakk0bldwwzezw.public.blob.vercel-storage.com/showcase/1790331372377-ymjt9g.webp",
+    "accent": "from-rose-500 to-pink-700",
+    "featured": false,
+    "updatedAt": "2026-09-25T10:16:26.000Z"
+  },
+  {
+    "id": "12",
+    "title": "Ecco Battery and Metal Recycling",
+    "tagline": "Engelstalige WordPress-website over lithium-ionbatterijrecycling en teruggewonnen materialen",
+    "description": "Voor Ecco Battery and Metal Recycling werkte ik aan een Engelstalige WordPress-website die het recyclen van lithium-ionbatterijen begrijpelijk presenteert. Bezoekers krijgen een introductie tot de nat-mechanische werkwijze en kunnen verder lezen over het proces, de materialen en het bedrijf.\n\nDe website legt de vijf processtappen overzichtelijk uit, van het nat versnipperen tot het drogen van teruggewonnen materiaal. Een apart onderdeel toont onder meer lithium, nikkel, kobalt en grafiet. Zo kunnen potentiële partners zich eerst oriënteren op de activiteiten van Ecco.\n\nVia de contactpagina kunnen bezoekers een vraag stellen over materiaalstromen of samenwerking. Het formulier, e-mailadres en telefoonnummer bieden duidelijke routes om contact op te nemen. De rustige groen-witte vormgeving is ook op mobiel goed leesbaar.",
+    "sector": "Batterij- en metaalrecycling",
+    "type": "website",
+    "year": "2026",
+    "highlights": [
+      "Engelstalige presentatie van batterij- en metaalrecycling",
+      "Overzicht van de vijf stappen van het recyclingproces",
+      "Presentatie van teruggewonnen materialen",
+      "Pagina’s over het bedrijf en de locatie in Geleen",
+      "Contactpagina met formulier, e-mail en telefoon"
+    ],
+    "stack": [
+      "WordPress",
+      "Contact Form 7",
+      "responsive ontwerp"
+    ],
+    "liveUrl": "https://www.ecco-recycling.com/",
+    "image": "https://15iakk0bldwwzezw.public.blob.vercel-storage.com/showcase/1790331403085-hi9d8l.webp",
+    "accent": "from-teal-500 to-emerald-700",
+    "featured": false,
+    "updatedAt": "2026-09-25T10:16:50.000Z"
+  },
+  {
+    "id": "11",
+    "title": "Fijn Rit Taxi",
+    "tagline": "Bedrijfswebsite met ritinformatie en boeken via WhatsApp",
+    "description": "Voor Fijn Rit Taxi bouwde ik een mobielvriendelijke bedrijfswebsite. Bezoekers kunnen de vervoersmogelijkheden en ritinformatie bekijken en via WhatsApp contact opnemen voor een boeking.\n\nDe website brengt diensten, tarieven en contactmogelijkheden bij elkaar. De route naar de aanvraag is belangrijk: iemand die op zijn telefoon vervoer zoekt, moet snel kunnen zien hoe hij de vervoerder bereikt.\n\nDit project is een voorbeeld voor dienstverleners die hun aanbod willen presenteren en aanvragen via WhatsApp willen ontvangen. De bezoeker bekijkt eerst de ritinformatie en bespreekt vervolgens de boeking rechtstreeks met de vervoerder.",
+    "sector": "Taxi",
+    "type": "website",
+    "year": "2026",
+    "highlights": [
+      "Mobielvriendelijke presentatie van vervoersdiensten",
+      "Overzicht van ritinformatie en tarieven",
+      "Directe contactroute via WhatsApp",
+      "SEO-basis voor de bedrijfswebsite"
+    ],
+    "stack": [
+      "Responsive website",
+      "WhatsApp-contact",
+      "SEO-basis"
+    ],
+    "liveUrl": "https://fijnerittaxi.nl/",
+    "image": "https://15iakk0bldwwzezw.public.blob.vercel-storage.com/showcase/1790329444089-jup3pa.png",
+    "accent": "from-teal-500 to-emerald-700",
+    "featured": false,
+    "updatedAt": "2026-09-25T09:44:09.000Z"
+  },
+  {
+    "id": "10",
+    "title": "Foma Schildersbedrijf",
+    "tagline": "WordPress-website voor schilderwerk met een duidelijke offertemogelijkheid",
+    "description": "Voor Foma Schildersbedrijf bouwde ik een WordPress-website met een eigen thema. De website presenteert het schilderwerk van het bedrijf en maakt duidelijk hoe een bezoeker contact kan opnemen voor een offerte.\n\nDe inhoud is ingedeeld rond de werkzaamheden, bedrijfsinformatie en contact. Het responsive ontwerp maakt die informatie ook op een telefoon toegankelijk. De SEO-basis hoort bij de technische inrichting van de website.\n\nDit voorbeeld laat zien hoe een vakbedrijf zijn aanbod online kan presenteren. Het dienstenoverzicht helpt bezoekers te bepalen of het schilderwerk bij hun vraag past. Daarna kunnen zij contact opnemen om de werkzaamheden en een offerte te bespreken.",
+    "sector": "Schildersbedrijf",
+    "type": "website",
+    "year": "2026",
+    "highlights": [
+      "WordPress-website met een eigen thema",
+      "Duidelijke presentatie van schilderwerk en bedrijfsinformatie",
+      "Contactmogelijkheden voor een offerte",
+      "Responsive ontwerp en SEO-basis"
+    ],
+    "stack": [
+      "WordPress",
+      "Maatwerk thema",
+      "Responsive ontwerp",
+      "SEO-basis"
+    ],
+    "liveUrl": "https://www.fomaschilder.nl/",
+    "image": "https://15iakk0bldwwzezw.public.blob.vercel-storage.com/showcase/1782989719205-2q2ndw.webp",
+    "accent": "from-teal-500 to-emerald-700",
+    "featured": false,
+    "updatedAt": "2026-09-06T17:40:53.000Z"
+  },
+  {
+    "id": "9",
+    "title": "Makovr",
+    "tagline": "Salonwebsite met dienstenoverzicht en online boeken via Treatwell",
+    "description": "Voor Makovr bouwde ik een responsive website die de salon en behandelingen presenteert. Bezoekers kunnen zich oriënteren op het aanbod en doorklikken naar Treatwell om een afspraak te maken.\n\nDe website brengt informatie over de salon en de contact- en boekingsroute samen. Het boeken gebeurt via Treatwell: een duidelijk aangegeven externe stap, zodat bezoekers weten waar zij hun afspraak regelen.\n\nDit project is een voorbeeld voor een dienstverlener die een eigen website wil combineren met een bestaand boekingsplatform.",
+    "sector": "Kapsalon",
+    "type": "website",
+    "year": "2025",
+    "highlights": [
+      "Responsive presentatie van de salon",
+      "Overzicht van behandelingen",
+      "Online afspraak maken via Treatwell",
+      "Duidelijke contact- en boekingsroute"
+    ],
+    "stack": [
+      "Responsive website",
+      "Treatwell-boekingslink"
+    ],
+    "liveUrl": "https://www.makovr.nl/",
+    "image": "https://15iakk0bldwwzezw.public.blob.vercel-storage.com/showcase/1782989729383-ea7y0h.webp",
+    "accent": "from-teal-500 to-emerald-700",
+    "featured": false,
+    "updatedAt": "2026-09-06T17:40:58.000Z"
+  },
+  {
+    "id": "8",
+    "title": "ARIX Schildersbedrijf",
+    "tagline": "Maatwerk website met projectgalerij en voor-en-na-weergave",
+    "description": "Voor ARIX Schildersbedrijf bouwde ik een website met Next.js en React. De site presenteert schilderwerk en aanverwante diensten en geeft bezoekers een beeld van eerder uitgevoerd werk. Vanaf de diensten en projecten is de route naar een offerte zichtbaar.\n\nEen belangrijk onderdeel is de visuele presentatie van het werk. Een projectgalerij toont voorbeelden; de voor-en-na-slider maakt het verschil tussen twee beelden zichtbaar. Diensten, veelgestelde vragen en contactmogelijkheden vullen die presentatie aan.\n\nHet ontwerp past zich aan verschillende schermgroottes aan. Het resultaat is een gepubliceerde bedrijfswebsite waarin bezoekers het aanbod en werkvoorbeelden kunnen bekijken en een offerte kunnen aanvragen.\n\nDeze uitvoering is een voorbeeld van een website zonder WordPress. Voor vergelijkbaar maatwerk bespreken we vooraf het ontwerp, de pagina’s, interactieve functies en de manier waarop inhoud wordt bijgewerkt. De scope van dit project staat los van de standaard WordPress-pakketten.",
+    "sector": "Schildersbedrijf",
+    "type": "website",
+    "year": "2026",
+    "highlights": [
+      "Website gebouwd met Next.js en React",
+      "Projectgalerij met voorbeelden van uitgevoerd werk",
+      "Interactieve voor-en-na-slider",
+      "Dienstenoverzicht en veelgestelde vragen",
+      "Offerte- en contactmogelijkheden op mobiel en desktop"
+    ],
+    "stack": [
+      "Next.js",
+      "React",
+      "Responsive ontwerp"
+    ],
+    "liveUrl": "https://www.arix-schildersbedrijf.nl/",
+    "image": "https://15iakk0bldwwzezw.public.blob.vercel-storage.com/showcase/1782989738795-9qohge.webp",
+    "accent": "from-teal-500 to-emerald-700",
+    "featured": true,
+    "updatedAt": "2026-09-06T17:41:04.000Z"
+  },
+  {
+    "id": "7",
+    "title": "MvA Timmerwerken",
+    "tagline": "WordPress-website voor een timmerbedrijf in de regio Utrecht",
+    "description": "Voor MvA Timmerwerken bouwde ik een WordPress-website die timmerwerk, verbouwingen en andere werkzaamheden overzichtelijk presenteert. Het bedrijf werkt vanuit Groenekan in de regio Utrecht. De website brengt de diensten, bedrijfsinformatie en de route naar een offerte samen.\n\nDe uitvoering bestaat uit een WordPress-thema op maat, Nederlandse inhoud, een mobielvriendelijke indeling en contactfunctionaliteit. Per onderdeel kan een bezoeker bekijken wat MvA doet en daarna een aanvraag doen. De structuur geeft ook ruimte aan veelgestelde vragen.\n\nBij de technische inrichting zijn lokale vindbaarheid en gestructureerde gegevens meegenomen. De diensten en het werkgebied geven bezoekers context: zij kunnen beoordelen of MvA hun timmerwerk of verbouwing in de regio Utrecht kan uitvoeren.\n\nDit project laat zien hoe WordPress kan worden gebruikt voor een bedrijfswebsite met eigen inhoud en een eigen ontwerp. Een aangepast bestaand ontwerp en een volledig nieuw thema vragen verschillend ontwikkelwerk. Voor een vergelijkbaar project leggen we daarom eerst pagina’s, functies en beheer vast.",
+    "sector": "Timmerbedrijf",
+    "type": "website",
+    "year": "2026",
+    "highlights": [
+      "WordPress-thema op maat voor de presentatie van een timmerbedrijf",
+      "Diensten en Nederlandse inhoud overzichtelijk ingedeeld",
+      "Offerte-aanvraag en contactfunctionaliteit",
+      "Mobielvriendelijke pagina’s",
+      "Lokale SEO-basis en gestructureerde gegevens"
+    ],
+    "stack": [
+      "WordPress",
+      "Maatwerk thema",
+      "Responsive ontwerp",
+      "Gestructureerde gegevens"
+    ],
+    "liveUrl": "https://mva-timmerwerken.nl/",
+    "image": "https://15iakk0bldwwzezw.public.blob.vercel-storage.com/showcase/1782989748919-qkml56.webp",
+    "accent": "from-teal-500 to-emerald-700",
+    "featured": true,
+    "updatedAt": "2026-09-06T17:41:10.000Z"
+  }
+]

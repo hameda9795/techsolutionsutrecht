@@ -1,24 +1,51 @@
 import type { MetadataRoute } from "next";
 import { getAllPosts } from "@/lib/blog";
 import { SITE_URL } from "@/lib/seo";
+import { getAllShowcaseProjects } from "@/lib/showcase-db";
+import { getProjectPath } from "@/lib/projects-showcase";
+
+export const dynamic = "force-dynamic";
 
 const baseUrl = SITE_URL;
 // Change this only when a sitewide release materially changes indexable pages.
 // A stable value avoids telling Google that every URL changed on every build.
 const siteContentUpdatedAt = new Date("2026-08-16");
 
+// Only pages with substantive content changes in this release get a new date.
+const rankingContentUpdatedAt: Record<string, Date> = Object.fromEntries(
+  ["", "/blog", "/projecten", "/contact", "/diensten", "/diensten/website-laten-maken", "/diensten/webshop", "/diensten/seo", "/diensten/website-onderhoud", "/prijzen", "/diensten/maatwerk-website", "/diensten/chatbot-laten-maken", "/diensten/maatwerk-software", "/zzp-website-laten-maken", "/utrecht", "/de-meern", "/veelgestelde-vragen", "/blog/website-laten-maken", "/blog/zzp-website-5-tips-geld-besparen"]
+    .map((pathname) => [`${baseUrl}${pathname}`, new Date("2026-09-06")]),
+);
+
+// This release changes the local WordPress offer, homepage discovery links and
+// the public expertise copy. The cost guide uses its own Markdown modified date.
+for (const pathname of ["", "/diensten/website-laten-maken", "/diensten/webshop", "/over-ons", "/utrecht"]) {
+  rankingContentUpdatedAt[`${baseUrl}${pathname}`] = new Date("2026-10-15");
+}
+
+// Scope, planning and discovery corrections from the full URL Inspection review.
+for (const pathname of ["/website-binnen-week", "/veelgestelde-vragen", "/website-laten-maken-kapper", "/website-laten-maken-restaurant", "/website-laten-maken-coach", "/zeist", "/diensten/whatsapp-automatisering", "/zzp-website-laten-maken"]) {
+  rankingContentUpdatedAt[`${baseUrl}${pathname}`] = new Date("2026-10-15");
+}
+
+// Salon copy, a verified project example and contextual links were expanded.
+rankingContentUpdatedAt[`${baseUrl}/website-laten-maken-kapper`] = new Date("2026-10-16");
+
+// Restaurant copy, a menu example and reservation choices were expanded.
+rankingContentUpdatedAt[`${baseUrl}/website-laten-maken-restaurant`] = new Date("2026-10-16");
+
 const staticBlogLastModified: Record<string, Date> = {
   [`${baseUrl}/blog/website-laten-maken`]: new Date("2026-08-16"),
   [`${baseUrl}/blog/laptop-start-niet-op-5-oplossingen`]: new Date("2026-07-18"),
   [`${baseUrl}/blog/macbook-waterschade-wat-te-doen`]: new Date("2026-07-18"),
   [`${baseUrl}/blog/zzp-website-5-tips-geld-besparen`]: new Date("2026-07-18"),
-  [`${baseUrl}/blog/website-binnen-week-hoe-wij-dat-doen`]: new Date("2026-07-18"),
-  [`${baseUrl}/blog/website-niet-in-google`]: new Date("2026-07-18"),
+  [`${baseUrl}/blog/website-binnen-week-hoe-wij-dat-doen`]: new Date("2026-10-15"),
 };
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // Get all blog posts for dynamic sitemap
   const blogPosts = getAllPosts();
+  const projects = await getAllShowcaseProjects();
   
   const blogPostEntries = blogPosts.map((post) => ({
     url: `${baseUrl}/blog/${post.slug}`,
@@ -29,6 +56,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const dynamicBlogUrls = new Set(blogPostEntries.map((entry) => entry.url));
 
   const entries: MetadataRoute.Sitemap = [
+    ...projects.map((project) => ({
+      url: `${baseUrl}${getProjectPath(project)}`,
+      lastModified: new Date(project.updatedAt || "2026-09-06"),
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
+    })),
+    ...["/prijzen", "/diensten/maatwerk-website", "/diensten/chatbot-laten-maken", "/diensten/maatwerk-software"].map((pathname) => ({
+      url: `${baseUrl}${pathname}`,
+      lastModified: new Date("2026-09-06"),
+      changeFrequency: "monthly" as const,
+      priority: 0.8,
+    })),
     {
       url: baseUrl,
       lastModified: siteContentUpdatedAt,
@@ -55,7 +94,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${baseUrl}/zeist`,
-      lastModified: siteContentUpdatedAt,
+      lastModified: new Date("2026-09-06"),
       changeFrequency: "weekly",
       priority: 0.95,
     },
@@ -79,7 +118,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${baseUrl}/ijsselstein`,
-      lastModified: siteContentUpdatedAt,
+      lastModified: new Date("2026-09-06"),
       changeFrequency: "weekly",
       priority: 0.95,
     },
@@ -285,18 +324,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.8,
     },
-    {
-      url: `${baseUrl}/blog/website-niet-in-google`,
-      lastModified: siteContentUpdatedAt,
-      changeFrequency: "weekly",
-      priority: 0.8,
-    },
   ];
 
   return entries.map((entry) => ({
     ...entry,
     lastModified: dynamicBlogUrls.has(entry.url)
       ? entry.lastModified
-      : staticBlogLastModified[entry.url] ?? siteContentUpdatedAt,
+      : rankingContentUpdatedAt[entry.url] ?? staticBlogLastModified[entry.url] ?? entry.lastModified ?? siteContentUpdatedAt,
   }));
 }

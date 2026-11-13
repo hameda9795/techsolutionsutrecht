@@ -4,6 +4,7 @@ import { Cookie, ShieldCheck } from "lucide-react";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
+import ContactActionTracker from "@/components/ContactActionTracker";
 
 type ConsentChoice = "granted" | "denied";
 
@@ -73,6 +74,7 @@ export default function CookieConsent() {
   return (
     <>
       <GoogleAnalytics enabled={consent === "granted"} />
+      {consent === "granted" && <ContactActionTracker />}
 
       {isPanelOpen ? (
         <section

@@ -1,11 +1,12 @@
 import type { NextRequest } from "next/server";
 import { isContactSubject } from "@/lib/contact-subjects";
 import { deliverLead } from "@/lib/leads";
+import { findPackage } from "@/lib/packages";
 
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
-    const { name, email, phone, subject, message, page } = body;
+    const { name, email, phone, subject, message, page, packageId } = body;
 
     if (!name || !email || !message || !subject) {
       return Response.json(
@@ -22,12 +23,16 @@ export async function POST(request: NextRequest) {
       return Response.json({ error: "Vul een geldig e-mailadres in" }, { status: 400 });
     }
 
+    const selectedPackage = typeof packageId === "string" ? findPackage(packageId) : undefined;
+    const packageNote = selectedPackage && selectedPackage.subject === subject
+      ? `Pakket: ${selectedPackage.name} (${selectedPackage.priceLabel})\n\n`
+      : "";
     const result = await deliverLead({
       name: String(name).slice(0, 200),
       email: String(email).slice(0, 200),
       phone: phone ? String(phone).slice(0, 64) : undefined,
       subject: String(subject).slice(0, 200),
-      message: String(message).slice(0, 5000),
+      message: `${packageNote}${String(message).slice(0, 4500)}`,
       page: typeof page === "string" ? page.slice(0, 500) : undefined,
       referrer: request.headers.get("referer") || undefined,
     });

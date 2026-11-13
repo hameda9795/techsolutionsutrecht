@@ -18,6 +18,7 @@ dist/
 .env.development.local
 .env.test.local
 .env.production.local
+.admin-credentials.local.txt
 .google-business-profile-token.json
 .google-business-profile-auth-url
 .gbp-auth.*.log
@@ -50,3 +51,5 @@ skills-lock.json
 # Temporary screenshots
 /playwright-mcp
 tsu-*.png
+
+.vercel

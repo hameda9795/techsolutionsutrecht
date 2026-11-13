@@ -3,6 +3,7 @@
 import { useState, useRef } from "react";
 import { Upload, X, Loader2, ImageIcon, Check } from "lucide-react";
 import Image from "next/image";
+import { adminFetch } from "@/lib/admin-client";
 
 interface ImageUploadProps {
   value: string;
@@ -40,7 +41,7 @@ export default function ImageUpload({ value, onChange, onUploading, folder = "po
       const filename = `${folder}/${timestamp}-${randomString}.${extension}`;
 
       // Upload to Vercel Blob - send file directly as body
-      const res = await fetch(`/api/upload?filename=${encodeURIComponent(filename)}`, {
+      const res = await adminFetch(`/api/upload?filename=${encodeURIComponent(filename)}`, {
         method: 'POST',
         body: file, // Send file directly, not FormData
         headers: {

@@ -1,5 +1,4 @@
 import { Metadata } from "next";
-import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Link from "next/link";
 import { Calendar, Clock, ArrowLeft, User, CheckCircle, Euro } from "lucide-react";
@@ -19,7 +18,7 @@ export const metadata: Metadata = {
     url: canonicalUrl,
     locale: "nl_NL",
     publishedTime: "2025-02-26",
-    modifiedTime: "2026-07-18",
+    modifiedTime: "2026-09-06",
     authors: ["Max"],
     images: ["/images/blog/zzp-website.jpg"],
   },
@@ -30,7 +29,7 @@ const blogPostingSchema = articleSchema({
   description: "Vijf praktische manieren om als ZZP'er gericht te besparen op je website zonder essentiële kwaliteit weg te laten.",
   url: canonicalUrl,
   datePublished: "2025-02-26",
-  dateModified: "2026-07-18",
+  dateModified: "2026-09-06",
   image: "/images/blog/zzp-website.jpg",
   author: "Max",
 });
@@ -39,41 +38,31 @@ const tips = [
   {
     number: 1,
     title: "Kies techniek die past bij je doel",
-    content: `Betaal niet voor maatwerk dat je niet nodig hebt. WordPress kan geschikt zijn als je veel inhoud zelf wilt beheren; Next.js of een andere techniek kan beter passen bij snelheid of specifieke functies. Laat de keuze volgen uit je doelen, niet uit een standaardpakket. Een complete professionele website start bij TechSolutionsUtrecht vanaf €250.`,
+    content: `Betaal voor de functies die je nodig hebt. WordPress Start kost €300 exclusief btw voor één pagina met maximaal zes secties, een aangepaste ontwerpbasis en basis-SEO. Je levert teksten, foto's en logo aan. Een website zonder WordPress met eigen ontwerp begint bij €1.500 exclusief btw; die is niet automatisch beter voor je bedrijf of voor SEO.`,
     saving: "Besparing: voorkom onnodig maatwerk"
   },
   {
     number: 2,
     title: "Bereid je content zelf voor",
-    content: `Een groot deel van de kosten bij webdesign zit in het invoeren van content. 
-    Als je zelf je teksten schrijft en je foto's verzamelt, bespaar je flink. 
-    Zorg wel dat je teksten SEO-geoptimaliseerd zijn en je foto's van goede kwaliteit zijn. 
-    We geven je graag een template zodat je weet wat we nodig hebben.`,
+    content: `In de WordPress-pakketten lever je zelf de teksten, foto's en het logo aan. Zet per onderdeel je aanbod, werkwijze, voorbeelden en contactgegevens klaar. Zo voorkom je extra schrijfwerk buiten het pakket. Wil je hulp bij teksten of fotografie, laat dat vooraf apart begroten.`,
     saving: "Besparing: minder invoer- en redactiewerk"
   },
   {
     number: 3,
     title: "Start simpel en breid later uit",
-    content: `Je hoeft niet meteen alles te hebben. Begin met een goede basiswebsite met de essentiële pagina's: 
-    Home, Over ons, Diensten en Contact. Zodra je bedrijf groeit, kun je altijd pagina's toevoegen 
-    of functionaliteit uitbreiden. Zo heb je snel een professionele online presentatie zonder grote investering.`,
+    content: `Een eenvoudig aanbod kan op één pagina staan met secties over je bedrijf, dienst, werkwijze en contact. Zijn afzonderlijke diensten en zoekvragen belangrijk, kies dan meer pagina's: €500 voor maximaal drie of €700 voor maximaal vijf, exclusief btw. Extra pagina's en functies worden later apart afgesproken.`,
     saving: "Besparing: lagere startscope"
   },
   {
     number: 4,
-    title: "Kies een lokale webbouwer",
-    content: `Grote webbureaus in Amsterdam rekenen vaak €2.000 - €5.000 voor een website. 
-    Door te kiezen voor een lokale webbouwer in Utrecht bespaar je op de overheadkosten. 
-    Je krijgt vaak dezelfde kwaliteit voor een fractie van de prijs. Bovendien heb je persoonlijk contact 
-    en snellere service.`,
-    saving: "Besparing: minder bureau-overhead"
+    title: "Vergelijk hetzelfde werk",
+    content: `Leg offertes naast elkaar met hetzelfde aantal pagina's, dezelfde functies en dezelfde beheerafspraken. Een bestaande ontwerpbasis vraagt ander werk dan een volledig eigen ontwerp. Vraag ook hoeveel correctierondes zijn inbegrepen en wie de inhoud maakt. Bij TechSolutionsUtrecht werk je rechtstreeks met Max in Utrecht-Zuilen.`,
+    saving: "Besparing: betaal voor de juiste scope"
   },
   {
     number: 5,
-    title: "Vraag meerdere offertes aan",
-    content: `Vergelijk altijd meerdere aanbieders. Let niet alleen op de prijs, maar ook op wat je krijgt. 
-    Sommige bureaus bieden een lage instapprijs, maar rekenen daarna extra voor essentiële functies zoals 
-    een contactformulier of mobiele optimalisatie. Vraag naar een all-in prijs zonder verborgen kosten.`,
+    title: "Neem terugkerende kosten mee",
+    content: `Vergelijk ook hosting, domein, betaalde licenties en onderhoud. Deze kosten zijn apart van de WordPress-bouwpakketten. Optioneel WordPress-onderhoud kost €39 per maand exclusief btw; WooCommerce-onderhoud €69. Vraag per onderdeel wat je zelf regelt en wat wordt uitgevoerd, zodat je de kosten na oplevering kunt overzien.`,
     saving: "Besparing: voorkom onverwachte meerkosten"
   }
 ];
@@ -112,7 +101,7 @@ export default function ZZPTipsBlogPost() {
 
             {/* Category */}
             <span className="inline-block px-4 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium mb-4">
-              ZZP Tips
+              Websites
             </span>
 
             {/* Title */}
@@ -129,11 +118,11 @@ export default function ZZPTipsBlogPost() {
               </div>
               <div className="flex items-center gap-2">
                 <Calendar className="w-4 h-4" />
-                <span>26 februari 2025</span>
+                <time dateTime="2026-09-06">Bijgewerkt op 6 september 2026</time>
               </div>
               <div className="flex items-center gap-2">
                 <Clock className="w-4 h-4" />
-                <span>8 min leestijd</span>
+                <span>4 min leestijd</span>
               </div>
             </div>
 
@@ -152,7 +141,7 @@ export default function ZZPTipsBlogPost() {
               {tips.map((tip) => (
                 <div key={tip.number} className="bg-[var(--color-bg)] border border-[var(--color-border)] rounded-2xl p-8">
                   <div className="flex items-center gap-4 mb-6">
-                    <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center text-white text-xl font-bold">
+                    <div className="w-12 h-12 shrink-0 rounded-full bg-primary flex items-center justify-center text-white text-xl font-bold">
                       {tip.number}
                     </div>
                     <h2 className="text-2xl font-bold text-[var(--color-ink)]">
@@ -186,7 +175,7 @@ export default function ZZPTipsBlogPost() {
                 <CheckCircle className="w-6 h-6 text-primary flex-shrink-0 mt-0.5" />
                 <p className="text-[var(--color-muted)]">
                   <strong className="text-[var(--color-ink)]">Ons advies:</strong>{" "}
-                  Begin met een goede basiswebsite vanaf €250. Je kunt altijd later uitbreiden 
+                  Begin waar passend met een WordPress-eenpaginawebsite voor €300 exclusief btw. Je kunt later uitbreiden
                   wanneer je bedrijf groeit. Zo heb je snel een professionele online presentatie 
                   zonder je hele budget te verbruiken.
                 </p>
@@ -200,7 +189,7 @@ export default function ZZPTipsBlogPost() {
               </h3>
               
               <p className="text-[var(--color-muted)] mb-6">
-                Bij TechSolutionsUtrecht start een complete professionele ZZP-website vanaf €250 en ligt de gebruikelijke projectprijs tussen €350 en €650. Na de intake ontvang je een vaste totaalprijs en een realistische planning.
+                Bij TechSolutionsUtrecht kies je als ZZP’er uit WordPress-pakketten van €300, €500 en €700 exclusief btw, voor één, drie of vijf inhoudspagina’s. Na de intake ontvang je een vaste totaalprijs en een realistische planning.
               </p>
               
               <div className="flex flex-wrap gap-4">
@@ -243,7 +232,7 @@ export default function ZZPTipsBlogPost() {
                 >
                   <span className="text-xs text-primary font-medium">Kosten</span>
                   <h4 className="font-semibold text-[var(--color-ink)] mt-2">
-                    Wat Kost een Website Laten Maken in 2025?
+                    Wat Kost een Website Laten Maken in 2026?
                   </h4>
                 </Link>
               </div>

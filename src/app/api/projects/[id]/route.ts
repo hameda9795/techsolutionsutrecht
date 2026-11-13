@@ -1,13 +1,14 @@
+import { authorizeAdminMutation } from "@/lib/admin-auth";
 import { NextRequest, NextResponse } from 'next/server';
 import { updateProject, deleteProject, getProjectById } from '@/lib/neon-db';
 
 // GET /api/projects/[id] - Get single project
 export async function GET(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   try {
-    const project = await getProjectById(params.id);
+    const project = await getProjectById((await params).id);
     
     if (!project) {
       return NextResponse.json(
@@ -29,12 +30,14 @@ export async function GET(
 // PUT /api/projects/[id] - Update project
 export async function PUT(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
+  const rejected = await authorizeAdminMutation(request);
+  if (rejected) return rejected;
   try {
     const body = await request.json();
     
-    const project = await updateProject(params.id, {
+    const project = await updateProject((await params).id, {
       title: body.title,
       short_desc: body.short_desc,
       features: body.features,
@@ -64,10 +67,12 @@ export async function PUT(
 // DELETE /api/projects/[id] - Delete project
 export async function DELETE(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
+  const rejected = await authorizeAdminMutation(request);
+  if (rejected) return rejected;
   try {
-    const success = await deleteProject(params.id);
+    const success = await deleteProject((await params).id);
     
     if (!success) {
       return NextResponse.json(

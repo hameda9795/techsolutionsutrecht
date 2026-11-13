@@ -3,10 +3,12 @@ import Footer from "@/components/Footer";
 import ContactForm from "@/components/ContactForm";
 import Link from "next/link";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
+import { findPackage, packageGroups } from "@/lib/packages";
+import { isContactSubject } from "@/lib/contact-subjects";
 
 export const metadata: Metadata = {
   title: "Contact | TechSolutionsUtrecht - Utrecht",
-  description: "Neem contact op met TechSolutionsUtrecht. Website nodig? Tech kapot? Bel of mail, wij helpen je graag.",
+  description: "Bespreek je nieuwe website met Max, webdesigner in Utrecht-Zuilen. Bel, stuur een WhatsApp-bericht of vraag een offerte aan. Bezoek op afspraak.",
   alternates: { canonical: "https://techsolutionsutrecht.nl/contact" },
 };
 
@@ -14,7 +16,7 @@ const contactInfo = [
   {
     icon: MapPin,
     label: "Adres",
-    value: "Utrecht, Nederland",
+    value: "Sint-Ludgerusstraat, 3553 CW Utrecht-Zuilen",
     href: null,
   },
   {
@@ -40,12 +42,12 @@ const contactInfo = [
 
 const faqs = [
   {
-    q: "Hoe snel krijg ik reactie?",
-    a: "We reageren binnen 4 uur op werkdagen. Voor urgente reparaties kun je ook WhatsAppen.",
+    q: "Wat vertel ik over mijn website?",
+    a: "Vertel wat je bedrijf doet, of je al een website hebt en wat je wilt verbeteren. Daarmee kunnen we je wensen en de aanpak bespreken.",
   },
   {
     q: "Waar zitten jullie?",
-    a: "Onze werkplaats is in Utrecht. Je bent welkom op afspraak.",
+    a: "TechSolutionsUtrecht is gevestigd aan de Sint-Ludgerusstraat in Zuilen. Je bent welkom op afspraak.",
   },
   {
     q: "Kan ik langskomen?",
@@ -53,7 +55,21 @@ const faqs = [
   },
 ];
 
-export default function ContactPage() {
+export default async function ContactPage({ searchParams: query }: { searchParams: Promise<Record<string, string | string[] | undefined>> }) {
+  const searchParams = await query;
+  const packageId = typeof searchParams.pakket === "string" ? searchParams.pakket : "";
+  const selectedPackage = findPackage(packageId);
+  const initialSubject = selectedPackage?.subject ?? (isContactSubject(searchParams.dienst) ? searchParams.dienst : "");
+  const contactTopic = ({
+    "Webshop laten maken": "webshop",
+    "Maatwerk website laten maken": "maatwerk website",
+    "Hoger in Google (SEO)": "vindbaarheid",
+    "Chatbot laten maken": "chatbot",
+    "Windows-applicatie laten maken": "Windows-applicatie",
+    "Website onderhoud": "websiteonderhoud",
+  } as Record<string, string>)[initialSubject] ?? "website";
+  const sources = ["/", "/prijzen", "/diensten", "/zzp-website-laten-maken", ...Object.values(packageGroups).map((group) => group.href)];
+  const sourcePage = typeof searchParams.van === "string" && sources.includes(searchParams.van) ? searchParams.van : "/contact";
   return (
     <>
       
@@ -76,19 +92,18 @@ export default function ContactPage() {
               Contact
             </span>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[var(--color-ink)] mt-4 mb-6">
-              Neem{" "}
-              <span className="text-[var(--color-primary)]">Contact</span>{" "}
-              Op
+              Bespreek je{" "}
+              <span className="text-[var(--color-primary)]">{contactTopic}</span>
             </h1>
             <p className="text-[var(--color-muted)] text-lg">
-              Heb je een vraag of wil je een offerte aanvragen? 
-              We helpen je graag. Vul het formulier in of neem direct contact op.
+              Vertel wat je wilt bereiken en welke hulp je nodig hebt. Je hebt
+              direct contact met Max en krijgt vooraf een duidelijke offerte.
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-3 gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
             {/* Contact Info */}
-            <div className="lg:col-span-1 space-y-6">
+            <div className="order-last lg:order-first lg:col-span-1 min-w-0 space-y-6">
               {contactInfo.map((item) => (
                 <div
                   key={item.label}
@@ -98,7 +113,7 @@ export default function ContactPage() {
                     <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
                       <item.icon className="w-6 h-6 text-primary" />
                     </div>
-                    <div>
+                    <div className="min-w-0 [overflow-wrap:anywhere]">
                       <p className="text-[var(--color-muted)] text-sm mb-1">{item.label}</p>
                       {item.href ? (
                         <a
@@ -134,10 +149,8 @@ export default function ContactPage() {
             </div>
 
             {/* Contact Form */}
-            <div className="lg:col-span-2">
-              <div className="card-hover bg-[var(--color-bg)] rounded-xl p-8 border border-[var(--color-border)]">
-                <ContactForm />
-              </div>
+            <div className="lg:col-span-2 min-w-0">
+              <ContactForm key={`${packageId}-${initialSubject}`} initialSubject={initialSubject} initialPackage={selectedPackage ? { ...selectedPackage, id: packageId } : undefined} sourcePage={sourcePage} />
             </div>
           </div>
         </div>

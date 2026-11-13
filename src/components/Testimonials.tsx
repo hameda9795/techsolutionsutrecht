@@ -54,10 +54,8 @@ export default async function Testimonials() {
               </div>
 
               {/* Stars */}
-              <div
-                className="flex gap-1 mb-4"
-                aria-label={`${review.rating} van 5 sterren`}
-              >
+              <div className="flex gap-1 mb-4">
+                <span className="sr-only">{review.rating} van 5 sterren</span>
                 {[...Array(5)].map((_, i) => (
                   <Star
                     key={i}

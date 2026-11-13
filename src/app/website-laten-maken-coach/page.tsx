@@ -3,11 +3,11 @@ import NichePageLayout from "@/components/NichePageLayout";
 
 export const metadata: Metadata = {
   title: "Website voor Coaches | Vertrouwen & Aanmeldingen | TechSolutions",
-  description: "Website voor coaches en therapeuten: een persoonlijke site die vertrouwen wekt, je aanpak uitlegt en aanmeldingen oplevert. Vraag een offerte aan.",
+  description: "Website voor coaches: leg je aanbod en werkwijze uit en kies een passende contactroute. Vergelijk basispakketten en eventuele agenda-integratie. Vraag een offerte aan.",
   alternates: { canonical: "https://techsolutionsutrecht.nl/website-laten-maken-coach" },
   openGraph: {
     title: "Website voor Coaches | Vertrouwen & Aanmeldingen | TechSolutions",
-    description: "Website voor coaches en therapeuten: een persoonlijke site die vertrouwen wekt, je aanpak uitlegt en aanmeldingen oplevert.",
+    description: "Website voor coaches: leg je aanbod en werkwijze uit en kies een passende contactroute. Vergelijk basispakketten en eventuele agenda-integratie.",
     type: "website",
     locale: "nl_NL",
     url: "https://techsolutionsutrecht.nl/website-laten-maken-coach",
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Website voor Coaches | Vertrouwen & Aanmeldingen | TechSolutions",
-    description: "Website voor coaches en therapeuten: een persoonlijke site die vertrouwen wekt, je aanpak uitlegt en aanmeldingen oplevert.",
+    description: "Website voor coaches: leg je aanbod en werkwijze uit en kies een passende contactroute. Vergelijk basispakketten en eventuele agenda-integratie.",
   },
 };
 
@@ -33,7 +33,7 @@ export default function CoachPage() {
         height: 768,
       }}
       slug="website-laten-maken-coach"
-      tagline="Een website voor coaches die vertrouwen wekt: jouw verhaal, je aanpak en concrete resultaten — zo overtuig je bezoekers om de eerste stap te zetten en zich aan te melden."
+      tagline="Een coachwebsite waarop bezoekers je aanbod en werkwijze kunnen beoordelen. Met een persoonlijke introductie, duidelijke trajecten en een passende manier om kennis te maken."
       intro={[
         "Als coach, therapeut of trainer verkoop je geen product, maar vertrouwen. Een potentiële klant moet voelen dat jij hem begrijpt voordat hij contact opneemt. Een website die dat vertrouwen niet uitstraalt, kost je waardevolle aanmeldingen — hoe goed je werk ook is.",
         "Ik bouw coachwebsites die persoonlijk en professioneel tegelijk zijn: een sterk verhaal, een heldere uitleg van je traject, ruimte voor ervaringen van klanten en een eenvoudige manier om een kennismaking in te plannen.",
@@ -58,6 +58,12 @@ export default function CoachPage() {
         "Eventueel een blog om je expertise te laten zien en beter te scoren in Google.",
         "Rustig, professioneel design dat vertrouwen uitstraalt.",
       ]}
+      scopeNote="De WordPress-pakketten bieden ruimte aan je afgesproken inhoud en een gewone contactmogelijkheid. Agenda-integratie, betalingen, een klantomgeving of meerdere talen zijn aparte functies. Een intake of boeking wordt niet automatisch onderdeel van de pakketprijs."
+      preparation={[
+        { title: "Voor wie is je traject?", detail: "Beschrijf je doelgroep, werkwijze, duur en wat iemand tijdens een kennismaking kan verwachten. Gebruik concrete uitleg en controleerbare ervaring in plaats van gegarandeerde resultaten." },
+        { title: "Een passende eerste stap", detail: "Kies tussen een contactaanvraag, een duidelijke link naar je agenda of een extra boekingsintegratie. Bespreek of de afspraak direct vaststaat of eerst door jou wordt bevestigd." },
+        { title: "Inhoud die je mag gebruiken", detail: "Verzamel je eigen foto, achtergrond en voorbeelden. Gebruik klantreacties alleen als je ze mag publiceren. Een eerste contactformulier hoeft geen uitgebreid persoonlijk dossier te verzamelen." },
+      ]}
       faqs={[
         {
           question: "Ik wil persoonlijk overkomen, kan dat met een website?",
@@ -65,7 +71,7 @@ export default function CoachPage() {
         },
         {
           question: "Kan ik een kennismakingsgesprek laten inplannen via de site?",
-          answer: "Ja. Ik voeg een aanmeld- of planformulier toe, eventueel gekoppeld aan je agenda, zodat geïnteresseerden direct een (gratis) kennismaking kunnen boeken.",
+          answer: "Een gewoon contactformulier kan een aanvraag doorgeven. Voor direct boeken kiezen we apart een agenda-oplossing of koppeling, met een eigen scope en eventuele licentiekosten. We spreken ook af hoe en door wie de afspraak wordt bevestigd.",
         },
         {
           question: "Helpt een blog mij als coach?",

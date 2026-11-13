@@ -1,151 +1,56 @@
-// Showcase van echte projecten die ik heb gebouwd.
-// Demo-versie: bevat de eerste live demo's. Nieuwe projecten kunnen hier
-// worden toegevoegd zonder de pagina-component aan te passen.
+import projectSnapshot from "../../content/showcase-projects.json";
+import type { ContactSubject } from "./contact-subjects";
 
 export type ProjectType = "website" | "webshop" | "webapp" | "tool";
 
 export interface ShowcaseProject {
   id: string;
   title: string;
-  /** Korte tagline die direct duidelijk maakt wat het project is. */
   tagline: string;
-  /** Iets uitgebreidere omschrijving voor de quick-view. */
   description: string;
-  /** Branche / klant-type, getoond als label. */
   sector: string;
   type: ProjectType;
-  /** Jaar van oplevering. */
   year: string;
-  /** Belangrijkste features / highlights. */
   highlights: string[];
-  /** Gebruikte technieken (chips). */
   stack: string[];
-  /** Live URL of demo-link. Leeg = nog niet publiek. */
   liveUrl: string;
-  /** Screenshot/preview in /public. Leeg = gradient-mockup met initialen. */
   image: string;
-  /** Tailwind classes voor de mockup-achtergrond (geen paars/cyaan gradients). */
   accent: string;
-  /** Uitgelicht project (groter weergegeven). */
   featured?: boolean;
+  updatedAt?: string;
 }
 
 export const projectTypeLabels: Record<ProjectType, string> = {
   website: "Bedrijfswebsite",
   webshop: "Webshop",
-  webapp: "Technische demo",
+  webapp: "Webapplicatie",
   tool: "Tool / Component",
 };
 
-export const showcaseProjects: ShowcaseProject[] = [
-  {
-    id: "bouwbedrijf-vandenberg",
-    title: "Bouwbedrijf Van den Berg",
-    tagline: "Industriële aannemerswebsite met offerte-wizard",
-    description:
-      "Een onderscheidende website voor een aannemer in de regio Utrecht. Volledig gericht op het binnenhalen van offerteaanvragen en het laten zien van afgeronde projecten, met een uniek, niet-standaard design.",
-    sector: "Bouw & Vakmensen",
-    type: "website",
-    year: "2025",
-    highlights: [
-      "Offerte-wizard met 4 stappen",
-      "Before / after vergelijkings-slider",
-      "Zij-navigatie & diagonale vormen",
-      "Parallax-animaties en 3D-tilt effecten",
-    ],
-    stack: ["Next.js", "Tailwind CSS", "Framer Motion"],
-    liveUrl: "https://bouwbedrijf-vandenberg.demo.techsolutionsutrecht.nl/",
-    image: "/images/portfolio/aannemer.webp",
-    accent: "bg-[var(--color-primary)]",
-    featured: true,
-  },
-  {
-    id: "barbershop",
-    title: "Barbershop Boekingssite",
-    tagline: "Strakke kappers-site met online afspraak maken",
-    description:
-      "Moderne one-page site voor een barbershop met online boekingsflow, prijslijst en sfeervolle galerij. Ontworpen om bezoekers in één scroll tot een afspraak te bewegen.",
-    sector: "Schoonheid & Verzorging",
-    type: "website",
-    year: "2025",
-    highlights: [
-      "Online afspraak maken",
-      "Prijslijst & diensten-overzicht",
-      "Sfeergalerij met lightbox",
-      "100% mobiel-geoptimaliseerd",
-    ],
-    stack: ["HTML", "CSS", "JavaScript"],
-    liveUrl: "/demo/barbershop/index.html",
-    image: "",
-    accent: "bg-[var(--color-ink)]",
-  },
-  {
-    id: "admin-dashboard",
-    title: "Admin Dashboard",
-    tagline: "Backend voor projectbeheer met statistieken",
-    description:
-      "Technische demonstratie van een beheeromgeving met login, statistieken en projectbeheer. Dit is een portfolio-item en geen afzonderlijk aangeboden dienst.",
-    sector: "Technische demo",
-    type: "webapp",
-    year: "2025",
-    highlights: [
-      "Beveiligd login-systeem",
-      "Statistieken-dashboard met grafieken",
-      "Projectbeheer-tabel met statussen",
-      "Documentenoverzicht & dark mode",
-    ],
-    stack: ["Next.js", "PostgreSQL", "Tailwind CSS"],
-    liveUrl: "https://admin.demo.techsolutionsutrecht.nl/",
-    image: "",
-    accent: "bg-[var(--color-primary)]",
-  },
-  {
-    id: "klant-portal",
-    title: "Klant Portal",
-    tagline: "Omgeving waar klanten hun project live volgen",
-    description:
-      "Technische demonstratie van een klantomgeving voor voortgang, documenten en facturen. Dit is een portfolio-item en geen afzonderlijk aangeboden dienst.",
-    sector: "Technische demo",
-    type: "webapp",
-    year: "2025",
-    highlights: [
-      "Aparte beveiligde klant-login",
-      "Project-tijdlijn visualisatie",
-      "Upload-zone voor documenten",
-      "Factuuroverzicht & chat",
-    ],
-    stack: ["Next.js", "PostgreSQL", "Vercel Blob"],
-    liveUrl: "https://portal.demo.techsolutionsutrecht.nl/",
-    image: "",
-    accent: "bg-[var(--color-primary)]",
-  },
-  {
-    id: "device-toggle",
-    title: "Responsive Device Toggle",
-    tagline: "Interactieve preview: mobiel, tablet & desktop",
-    description:
-      "Een herbruikbaar UI-component waarmee klanten met één klik kunnen zien hoe hun site er op mobiel, tablet en desktop uitziet. Altijd zichtbaar en vloeiend geanimeerd.",
-    sector: "Tool / Component",
-    type: "tool",
-    year: "2025",
-    highlights: [
-      "Schakelaar: mobiel / tablet / desktop",
-      "Real-time container-resizing",
-      "Vloeiende overgangsanimatie",
-      "Altijd zichtbaar (sticky)",
-    ],
-    stack: ["React", "Tailwind CSS"],
-    liveUrl: "https://device-toggle.demo.techsolutionsutrecht.nl/",
-    image: "",
-    accent: "bg-[var(--color-primary)]",
-  },
-];
+// A public content snapshot for local previews without DATABASE_URL.
+// With a database configured, CMS records remain authoritative.
+export const showcaseProjects = projectSnapshot as ShowcaseProject[];
 
 export function getInitials(title: string): string {
-  return title
-    .split(" ")
-    .filter(Boolean)
-    .slice(0, 2)
-    .map((w) => w[0]?.toUpperCase() ?? "")
-    .join("");
+  return title.split(" ").filter(Boolean).slice(0, 2).map(w => w[0]?.toUpperCase() ?? "").join("");
+}
+
+export function getProjectPath(project: Pick<ShowcaseProject, "id" | "title">): string {
+  const label = project.title.normalize("NFKD").replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "").slice(0, 100).replace(/-$/, "") || "project";
+  return `/projecten/${encodeURIComponent(project.id)}-${label}`;
+}
+
+export function projectIdFromSlug(slug: string): string | null {
+  const id = /^([1-9]\d{0,9})-[a-z0-9]+(?:-[a-z0-9]+)*$/.exec(slug)?.[1];
+  return id && Number(id) <= 2147483647 ? id : null;
+}
+
+export function getProjectService(project: ShowcaseProject): { href: string; label: string; subject: ContactSubject } {
+  if (project.type === "webshop") return { href: "/diensten/webshop", label: "WooCommerce webshop laten maken", subject: "Webshop laten maken" };
+  if (project.type === "tool") return { href: "/diensten/maatwerk-software", label: "Maatwerk software laten maken", subject: "Windows-applicatie laten maken" };
+  if (project.type === "webapp" || project.stack.some(t => /next\.js|react/i.test(t))) {
+    return { href: "/diensten/maatwerk-website", label: "Maatwerk website laten maken", subject: "Maatwerk website laten maken" };
+  }
+  return { href: "/diensten/website-laten-maken", label: "WordPress website laten maken", subject: "Website laten maken" };
 }
