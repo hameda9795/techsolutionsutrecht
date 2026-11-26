@@ -1,52 +1,104 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import CityPageLayout from "@/components/CityPageLayout";
 
+const title = "Website laten maken Amersfoort | Webdesign & webshops";
+const description =
+  "Website of webshop laten maken in Amersfoort? Webdesigner Max bouwt je WordPress website of WooCommerce webshop. Direct contact en vooraf een vaste prijs.";
+
 export const metadata: Metadata = {
-  title: "Website laten maken Amersfoort | Freelance webdeveloper",
-  description: "Website laten maken in Amersfoort? Een ervaren freelance webdeveloper bouwt je snelle, SEO-klare website. Persoonlijk contact en snelle oplevering.",
+  title,
+  description,
   alternates: { canonical: "https://techsolutionsutrecht.nl/amersfoort" },
+  openGraph: {
+    title,
+    description,
+    type: "website",
+    locale: "nl_NL",
+    url: "https://techsolutionsutrecht.nl/amersfoort",
+    siteName: "TechSolutionsUtrecht",
+  },
+  twitter: { card: "summary_large_image", title, description },
 };
+
+const linkClass = "font-semibold text-[var(--color-primary)] underline underline-offset-4";
+const paragraphClass = "max-w-3xl text-[var(--color-muted)] leading-relaxed mb-4";
 
 export default function AmersfoortPage() {
   return (
     <CityPageLayout
+      afterServices={
+        <section className="py-16" aria-labelledby="webdesign-amersfoort">
+          <div className="max-w-6xl mx-auto px-6">
+            <h2 id="webdesign-amersfoort" className="text-3xl font-bold text-[var(--color-ink)] mb-4">
+              Webdesign en webshops in Amersfoort
+            </h2>
+            <p className={paragraphClass}>
+              Voor ondernemers in Amersfoort bouw ik WordPress websites op een bewezen ontwerpbasis die ik aanpas aan je huisstijl. Je krijgt een snelle, mobielvriendelijke website die je zelf kunt bijwerken, met duidelijke pagina’s voor je diensten en een eenvoudige manier om contact op te nemen.
+            </p>
+            <p className={paragraphClass}>
+              Wil je online verkopen? Dan bouw ik een WooCommerce-webshop met iDEAL, verzendopties en productcategorieën die logisch zijn voor je klanten. Vóór de livegang doen we samen een testbestelling en je krijgt uitleg over het verwerken van bestellingen, zodat je de webshop daarna zelf beheert.
+            </p>
+            <div className="flex flex-wrap gap-x-6 gap-y-3 mb-10">
+              <Link href="/diensten/wordpress" className={linkClass}>WordPress website laten maken</Link>
+              <Link href="/diensten/webshop" className={linkClass}>Webshop laten maken</Link>
+              <Link href="/prijzen" className={linkClass}>Pakketten en prijzen</Link>
+            </div>
+            <h3 className="text-2xl font-bold text-[var(--color-ink)] mb-4">Beter vindbaar in Amersfoort</h3>
+            <p className={paragraphClass}>
+              Elke website krijgt een technische SEO-basis: snelle laadtijd, een heldere paginastructuur en per pagina een duidelijk zoekthema. Wil je daarna gericht werken aan je vindbaarheid in Amersfoort, Leusden of Hoogland? Dan onderzoek ik welke zoekopdrachten je klanten gebruiken, verbeter ik je belangrijkste pagina’s en richt ik je Google Bedrijfsprofiel in.
+            </p>
+            <Link href="/diensten/seo" className={linkClass}>
+              Bekijk de gratis SEO-scan en de SEO-pakketten
+            </Link>
+          </div>
+        </section>
+      }
       city="Amersfoort"
       slug="amersfoort"
       intro={[
-        "Amersfoort is een snelgroeiende stad met een levendige ondernemerscultuur — van de creatieve bedrijfjes in de binnenstad tot de techbedrijven en ZZP'ers in Vathorst en De Hoef. Die groei betekent ook meer concurrentie online. Een website die snel laadt, er strak uitziet en goed scoort in Google is daarom geen luxe maar noodzaak.",
-        "Ik help ondernemers in Amersfoort aan een website die niet alleen mooi is, maar ook werkt: bezoekers die contact opnemen, offertes aanvragen of een aankoop doen. Techniek en marketing in één, gebouwd door één aanspreekpunt.",
+        "Wil je een website of webshop laten maken voor je bedrijf in Amersfoort? Ik ben Max, freelance webdesigner en developer. Ik bouw WordPress-websites en WooCommerce-webshops die snel laden, goed werken op je telefoon en die je zelf kunt bijwerken.",
+        "Je hebt direct contact met mij, van het eerste gesprek tot de oplevering. Er zit geen accountmanager tussen, je kijkt tijdens de bouw mee via previews en je krijgt vooraf een vaste offerte.",
       ]}
-      neighbourhoods={["de historische binnenstad", "Vathorst", "Kattenbroek", "Schothorst", "De Hoef", "Nieuwland"]}
+      neighbourhoods={["de binnenstad", "Vathorst", "Nieuwland", "Schothorst", "Kattenbroek", "Hoogland", "Hooglanderveen", "Leusden"]}
       whyLocal={[
-        "Amersfoort heeft een eigen, gevarieerde markt: van horeca en retail in het centrum tot zakelijke dienstverleners in de nieuwere wijken. Ik stem de inhoud en structuur van je website af op de manier waarop jouw doelgroep in Amersfoort online zoekt.",
-        "Door je site technisch goed in te richten en lokale signalen correct te zetten, vergroot je de kans dat je opduikt wanneer iemand in Amersfoort zoekt naar precies wat jij aanbiedt — inclusief koppeling met je Google Bedrijfsprofiel.",
+        "Een website voor Amersfoort moet laten zien wat je doet en waar je werkt. Ik richt je pagina’s op de zoekopdrachten van klanten uit Amersfoort en omgeving, zoals je dienst met de plaatsnaam erbij, en noem duidelijk in welke wijken en plaatsen je actief bent.",
+        "Werk je ook in Leusden, Hoogland of Stoutenburg? Dan nemen we die plaatsen op in de inhoud van je website en in je Google Bedrijfsprofiel, zodat je ook daar gevonden wordt.",
       ]}
       approach={[
-        "Van een eenvoudige presentatiesite tot een complete webshop of maatwerkapplicatie: we kiezen de oplossing die bij jouw bedrijf in Amersfoort past.",
-        "We bespreken eerst je doelen en doelgroep, zodat de website daadwerkelijk bijdraagt aan je omzet.",
-        "Je ontvangt een heldere offerte op maat, zonder verborgen kosten.",
-        "Tijdens de bouw kijk je mee via previews, zodat het eindresultaat precies klopt met wat je voor ogen had.",
-        "Na de lancering bied ik onderhoud, updates en SEO-ondersteuning aan, zodat je site veilig en vindbaar blijft.",
+        "Van een compacte bedrijfswebsite tot een webshop met tientallen producten: we kiezen samen wat past bij je bedrijf in Amersfoort.",
+        "We bespreken eerst je diensten, je klanten en wat bezoekers op je website moeten doen.",
+        "Je ontvangt een vaste offerte waarin staat welke pagina’s en functies je krijgt.",
+        "Tijdens de bouw kijk je mee via previews en geef je feedback in vaste correctierondes.",
+        "Na de livegang kan ik het onderhoud verzorgen: updates, back-ups en controle van je contactformulier of webshop.",
       ]}
       localHighlight={{
-        title: "Amersfoort: waar geschiedenis en innovatie samenkomen",
+        title: "Werken met een webdesigner uit Utrecht",
         content: [
-          "Amersfoort is een van de snelst groeiende steden van Nederland — en dat zie je terug in het ondernemersklimaat. De historische binnenstad met zijn grachten en monumentale panden trekt toeristen en lokale shoppers, terwijl Vathorst en Nieuwland booming zijn met techbedrijven, ZZP'ers en startups. Die diversiteit vraagt om webdesign dat flexibel is: van een sfeervolle horecasite tot een strakke zakelijke website.",
-          "Ik werk regelmatig voor klanten in Amersfoort en ken de dynamiek van de stad. Of je nu een winkel hebt in de Langestraat, een praktijk in Schothorst of een techbedrijf in Vathorst: ik zorg voor een website die aansluit bij jouw doelgroep én bij het karakter van Amersfoort. Met lokale SEO richt ik je site zo in dat je ook echt gevonden wordt door mensen die in Amersfoort zoeken — niet alleen in de regio.",
+          "Ik werk vanuit Utrecht-Zuilen, ongeveer een half uur van Amersfoort. Het grootste deel van een websiteproject verloopt online: we overleggen via videobellen, WhatsApp en e-mail, en je bekijkt de voortgang via een previewlink. Zo kan het project snel doorlopen zonder dat je steeds afspraken hoeft te plannen.",
+          "Wil je liever eerst persoonlijk kennismaken? Dan plannen we een afspraak in Amersfoort of in de omgeving. Ook voor ondernemers in Leusden, Hoogland en Hooglanderveen werk ik op dezelfde manier.",
         ],
       }}
       faqs={[
         {
           question: "Kun je een afspraak in Amersfoort inplannen?",
-          answer: "Zeker. Voor een kennismaking kom ik graag naar Amersfoort. De rest van het traject verloopt soepel op afstand via WhatsApp, e-mail en videobellen, zodat we geen tijd verliezen.",
+          answer: "Ja. Voor een kennismaking kom ik graag naar Amersfoort of de omgeving. De rest van het traject verloopt op afstand via videobellen, WhatsApp en e-mail, zodat het project snel doorloopt.",
         },
         {
           question: "Wat kost een website laten maken in Amersfoort?",
-          answer: "Dat hangt af van wat je nodig hebt. Een presentatiewebsite ligt in een ander segment dan een webshop of maatwerk. Je krijgt vooraf een transparante offerte op maat, zodat je nooit voor verrassingen komt te staan.",
+          answer: "Een WordPress website kost bij mij €300, €500 of €700 excl. btw, afhankelijk van het aantal pagina’s en functies. Een webshop begint bij €950 excl. btw. Hosting en domein komen daar los bij. Je krijgt vooraf een vaste offerte, zodat je precies weet wat je betaalt.",
+        },
+        {
+          question: "Kun je ook een webshop maken voor mijn bedrijf in Amersfoort?",
+          answer: "Ja. Ik bouw WooCommerce-webshops met iDEAL, verzendopties en productcategorieën. Vooraf spreken we af hoeveel producten ik invoer en welke functies je nodig hebt. Vóór de livegang doen we samen een testbestelling.",
+        },
+        {
+          question: "Werk je ook voor ondernemers in Leusden en Hoogland?",
+          answer: "Ja. Ik werk op dezelfde manier voor ondernemers in Leusden, Hoogland, Hooglanderveen en Stoutenburg. We overleggen online en plannen een afspraak op locatie als je dat prettig vindt.",
         },
         {
           question: "Zorg je ook dat ik in Amersfoort beter gevonden word?",
-          answer: "Ja. Elke website is technisch SEO-klaar en ik geef je concreet advies over lokale SEO voor Amersfoort, zodat klanten uit je eigen stad je makkelijker vinden.",
+          answer: "Elke website krijgt een technische SEO-basis en een duidelijk zoekthema per pagina. Wil je daarna gericht werken aan je vindbaarheid in Amersfoort, dan kan dat met een van de SEO-pakketten of eerst met een gratis SEO-scan.",
         },
       ]}
     />
