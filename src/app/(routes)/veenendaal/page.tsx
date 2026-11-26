@@ -69,7 +69,7 @@ export default function VeenendaalPage() {
       faqs={[
         {
           question: "Werk je ook voor ondernemers in Veenendaal?",
-          answer: "Zeker. Veenendaal ligt op korte afstand van Utrecht en ik werk regelmatig voor ondernemers in de Gelderse Vallei. Voor een kennismaking kom ik graag langs; het traject verloopt verder soepel via WhatsApp en e-mail.",
+          answer: "Zeker. Veenendaal ligt op korte afstand van Utrecht en ik werk ook voor ondernemers in de Gelderse Vallei. Voor een kennismaking kom ik graag langs; het traject verloopt verder soepel via WhatsApp en e-mail.",
         },
         {
           question: "Hoe snel staat mijn website in Veenendaal online?",

@@ -50,7 +50,7 @@ export default function WoerdenPage() {
       faqs={[
         {
           question: "Werk je ook voor ondernemers in Woerden?",
-          answer: "Zeker. Woerden ligt op een kwartier van Utrecht en ik werk regelmatig voor ondernemers in het Groene Hart. Voor een kennismaking kom ik graag langs; het traject verloopt verder soepel via WhatsApp en e-mail.",
+          answer: "Zeker. Woerden ligt op een kwartier van Utrecht en ik werk ook voor ondernemers in het Groene Hart. Voor een kennismaking kom ik graag langs; het traject verloopt verder soepel via WhatsApp en e-mail.",
         },
         {
           question: "Hoe snel staat mijn website in Woerden online?",
