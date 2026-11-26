@@ -38,6 +38,11 @@ for (const pathname of ["/zzp-website-laten-maken", "/diensten/webshop", "/veene
   rankingContentUpdatedAt[`${baseUrl}${pathname}`] = new Date("2026-11-25");
 }
 
+// SEO service page expanded with Utrecht-specific sections; homepage title changed.
+for (const pathname of ["", "/diensten/seo", "/diensten/website-laten-maken", "/zzp-website-laten-maken"]) {
+  rankingContentUpdatedAt[`${baseUrl}${pathname}`] = new Date("2026-11-26");
+}
+
 const staticBlogLastModified: Record<string, Date> = {
   [`${baseUrl}/blog/website-laten-maken`]: new Date("2026-08-16"),
   [`${baseUrl}/blog/laptop-start-niet-op-5-oplossingen`]: new Date("2026-07-18"),

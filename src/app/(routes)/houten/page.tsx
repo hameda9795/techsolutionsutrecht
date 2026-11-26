@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import CityPageLayout from "@/components/CityPageLayout";
 
 export const metadata: Metadata = {
-  title: "Website Laten Maken Houten | Freelance Webdeveloper | TechSolutions",
-  description: "Website laten maken in Houten? Een ervaren freelance webdeveloper bouwt je responsive, snelle en SEO-klare website. Persoonlijk contact en heldere afspraken. Vraag een offerte aan.",
+  title: "Website laten maken Houten | Freelance webdeveloper",
+  description: "Website laten maken in Houten? Een ervaren freelance webdeveloper bouwt je snelle, SEO-klare website. Persoonlijk contact en heldere afspraken.",
   alternates: { canonical: "https://techsolutionsutrecht.nl/houten" },
 };
 

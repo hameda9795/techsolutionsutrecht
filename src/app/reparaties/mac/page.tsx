@@ -2,9 +2,9 @@ import { Metadata } from "next";
 import RepairPageLayout from "@/components/RepairPageLayout";
 
 export const metadata: Metadata = {
-  title: "Mac & MacBook Reparatie Utrecht | Vanaf €55 | Snel & Betrouwbaar",
+  title: "Mac & MacBook Reparatie Utrecht | Vanaf €55 | Snel",
   description:
-    "MacBook, iMac en Mac mini reparatie in Utrecht vanaf €55: scherm, batterij, vloeistofschade, opslag en macOS-problemen. 6 maanden garantie. WhatsApp +31 6 25518708.",
+    "MacBook, iMac en Mac mini reparatie in Utrecht vanaf €55: scherm, batterij, vloeistofschade, opslag en macOS. 6 maanden garantie. WhatsApp +31 6 25518708.",
   alternates: { canonical: "https://techsolutionsutrecht.nl/reparaties/mac" },
 };
 

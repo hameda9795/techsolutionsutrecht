@@ -9,7 +9,7 @@ import { breadcrumbSchema, serviceSchema, faqPageSchema } from "@/lib/schema";
 const pageUrl = "https://techsolutionsutrecht.nl/reparaties";
 
 export const metadata: Metadata = {
-  title: "Computer & Laptop Reparatie Utrecht | Vanaf €35 | TechSolutionsUtrecht",
+  title: "Computer & Laptop Reparatie Utrecht | Vanaf €35",
   description:
     "Laptop, computer, telefoon en tablet reparatie in Utrecht vanaf €35. Snelle service, 6 maanden garantie en no cure no pay. WhatsApp +31 6 25518708.",
   alternates: { canonical: pageUrl },

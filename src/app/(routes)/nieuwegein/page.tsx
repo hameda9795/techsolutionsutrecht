@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import CityPageLayout from "@/components/CityPageLayout";
 
 export const metadata: Metadata = {
-  title: "Website Laten Maken Nieuwegein | Freelance Webdeveloper | TechSolutions",
-  description: "Website laten maken in Nieuwegein? Een ervaren freelance webdeveloper bouwt je snelle, responsive en SEO-klare website. Direct contact met de developer. Vraag een offerte aan.",
+  title: "Website laten maken Nieuwegein | Freelance webdeveloper",
+  description: "Website laten maken in Nieuwegein? Een ervaren freelance webdeveloper bouwt je snelle, SEO-klare website. Direct contact met de developer.",
   alternates: { canonical: "https://techsolutionsutrecht.nl/nieuwegein" },
 };
 

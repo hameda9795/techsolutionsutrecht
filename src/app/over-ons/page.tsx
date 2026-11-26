@@ -4,10 +4,10 @@ import Footer from "@/components/Footer";
 import { Award, Users, Zap, TrendingUp, CheckCircle, Linkedin } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Over Max | TechSolutionsUtrecht - Webdeveloper & SEO Specialist Utrecht",
+  title: "Over Max | Webdeveloper & SEO-specialist in Utrecht",
   description: "Leer Max kennen, webdeveloper in Utrecht-Zuilen met 12+ jaar ervaring. Bekijk zijn werk en aanpak voor WordPress websites, webshops en SEO.",
   openGraph: {
-    title: "Over Max | TechSolutionsUtrecht - Webdeveloper & SEO Specialist Utrecht",
+    title: "Over Max | Webdeveloper & SEO-specialist in Utrecht",
     description: "Leer Max kennen - een ervaren webdeveloper met 12+ jaar ervaring in Utrecht. Specialist in websites, webshops en SEO.",
     type: "profile",
     locale: "nl_NL",
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Over Max | TechSolutionsUtrecht - Webdeveloper & SEO Specialist Utrecht",
+    title: "Over Max | Webdeveloper & SEO-specialist in Utrecht",
     description: "Leer Max kennen - een ervaren webdeveloper met 12+ jaar ervaring in Utrecht. Specialist in websites, webshops en SEO.",
   },
   alternates: {

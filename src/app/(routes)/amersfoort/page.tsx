@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import CityPageLayout from "@/components/CityPageLayout";
 
 export const metadata: Metadata = {
-  title: "Website Laten Maken Amersfoort | Freelance Webdeveloper | TechSolutions",
-  description: "Website laten maken in Amersfoort? Een ervaren freelance webdeveloper bouwt je responsive, SEO-klare website. Persoonlijk contact en snelle oplevering. Vraag een offerte aan.",
+  title: "Website laten maken Amersfoort | Freelance webdeveloper",
+  description: "Website laten maken in Amersfoort? Een ervaren freelance webdeveloper bouwt je snelle, SEO-klare website. Persoonlijk contact en snelle oplevering.",
   alternates: { canonical: "https://techsolutionsutrecht.nl/amersfoort" },
 };
 

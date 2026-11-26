@@ -71,12 +71,12 @@ const faqs = [
 const faqSchema = faqPageSchema(faqs);
 
 export const metadata: Metadata = {
-  title: "Baliebot – WhatsApp AI-assistent voor Bedrijven | 24/7 Klantenservice | TechSolutionsUtrecht",
+  title: "Baliebot | WhatsApp AI-assistent voor bedrijven",
   description:
-    "Baliebot is een slimme AI-assistent op je eigen WhatsApp-nummer die 24/7 klanten te woord staat, afspraken inplant en bestellingen opneemt. Voor kapsalons, restaurants en webshops. Vanaf €30 p/m.",
+    "Baliebot: een AI-assistent op je eigen WhatsApp-nummer die 24/7 klantvragen beantwoordt, afspraken inplant en bestellingen opneemt. Vanaf €30 per maand.",
   alternates: { canonical: pageUrl },
   openGraph: {
-    title: "Baliebot – WhatsApp AI-assistent voor Bedrijven | TechSolutionsUtrecht",
+    title: "Baliebot | WhatsApp AI-assistent voor bedrijven",
     description:
       "Baliebot: een AI-assistent op je eigen WhatsApp-nummer die 24/7 klantvragen beantwoordt, afspraken inplant en bestellingen opneemt. Vanaf €30 per maand.",
     type: "website",

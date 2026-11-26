@@ -136,7 +136,7 @@ export default function Hero({ hasLocalProject = false }: { hasLocalProject?: bo
                     <User className="w-20 h-20 text-[var(--color-muted)] hidden m-auto" />
                   </div>
                   <div className="text-center">
-                    <h3 className="font-bold text-[var(--color-ink)] text-xl">Max</h3>
+                    <p className="font-bold text-[var(--color-ink)] text-xl">Max</p>
                     <p className="text-sm text-[var(--color-muted)]">Webdesigner in Utrecht-Zuilen</p>
                   </div>
                 </div>

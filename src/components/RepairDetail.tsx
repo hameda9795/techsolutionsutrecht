@@ -37,7 +37,7 @@ export default function RepairDetail({ repair }: RepairDetailProps) {
           <Icon className="w-7 h-7 text-white" />
         </div>
         <div>
-          <h3 className="text-xl font-bold text-[var(--color-ink)]">{repair.title}</h3>
+          <h2 className="text-xl font-bold text-[var(--color-ink)]">{repair.title}</h2>
           <p className="text-primary font-semibold">{repair.price}</p>
         </div>
       </div>
@@ -45,9 +45,9 @@ export default function RepairDetail({ repair }: RepairDetailProps) {
       <p className="text-[var(--color-muted)] mb-6">{repair.description}</p>
 
       <div className="mb-6">
-        <h4 className="text-sm font-semibold text-[var(--color-ink)] uppercase tracking-wider mb-3">
+        <h3 className="text-sm font-semibold text-[var(--color-ink)] uppercase tracking-wider mb-3">
           Vaakste reparaties
-        </h4>
+        </h3>
         <div className="grid grid-cols-2 gap-2">
           {repair.repairs.map((item) => (
             <div key={item} className="flex items-center gap-2">
@@ -59,9 +59,9 @@ export default function RepairDetail({ repair }: RepairDetailProps) {
       </div>
 
       <div className="mb-6">
-        <h4 className="text-sm font-semibold text-[var(--color-ink)] uppercase tracking-wider mb-3">
+        <h3 className="text-sm font-semibold text-[var(--color-ink)] uppercase tracking-wider mb-3">
           Merken
-        </h4>
+        </h3>
         <div className="flex flex-wrap gap-2">
           {repair.brands.map((brand) => (
             <span 

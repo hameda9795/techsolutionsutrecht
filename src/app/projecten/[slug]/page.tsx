@@ -22,13 +22,19 @@ async function loadProject(slug: string) {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const project = await loadProject((await params).slug);
-  const title = `${project.title}: ${projectTypeLabels[project.type]} | TechSolutions`;
+  // Keep titles within ~60 characters: drop the brand suffix when it does not fit.
+  const baseTitle = `${project.title}: ${projectTypeLabels[project.type]}`;
+  const title = baseTitle.length + " | TechSolutions".length <= 60 ? `${baseTitle} | TechSolutions` : baseTitle;
+  // Short taglines make weak snippets; add context until the description is useful.
+  const tagline = project.tagline.trim().replace(/[.!?]$/, "");
+  const extended = `${tagline}. Bekijk het ontwerp, de aanpak en het resultaat van dit project.`;
+  const description = tagline.length >= 70 || extended.length > 160 ? project.tagline : extended;
   return {
     title,
-    description: project.tagline,
+    description,
     alternates: { canonical: `${SITE}${getProjectPath(project)}` },
     openGraph: {
-      title, description: project.tagline, type: "website", locale: "nl_NL",
+      title, description, type: "website", locale: "nl_NL",
       url: `${SITE}${getProjectPath(project)}`,
       ...(project.image ? { images: [{ url: project.image, alt: project.title }] } : {}),
     },

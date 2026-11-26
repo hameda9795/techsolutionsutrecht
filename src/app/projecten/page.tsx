@@ -10,7 +10,7 @@ export const dynamic = "force-dynamic";
 const SITE = "https://techsolutionsutrecht.nl";
 
 export const metadata: Metadata = {
-  title: "Website voorbeelden | Portfolio webdesign Utrecht | TechSolutions",
+  title: "Website voorbeelden | Portfolio webdesign Utrecht",
   description:
     "Bekijk WordPress-websites en maatwerkwebsites gebouwd vanuit Utrecht-Zuilen. Per project lees je wat ik heb gemaakt, met een link naar de website.",
   keywords: [

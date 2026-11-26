@@ -14,7 +14,7 @@ export function renderOgImage() {
           display: "flex",
           flexDirection: "column",
           justifyContent: "space-between",
-          background: "linear-gradient(135deg, oklch(0.520 0.170 247) 0%, oklch(0.420 0.160 247) 100%)",
+          background: "linear-gradient(135deg, #006cc4 0%, #004e9e 100%)",
           padding: "72px",
           fontFamily: "sans-serif",
           color: "#ffffff",
@@ -52,12 +52,12 @@ export function renderOgImage() {
           >
             Website laten maken in Utrecht
           </div>
-          <div style={{ fontSize: "34px", color: "oklch(0.900 0.020 247)", fontWeight: 500 }}>
-            Websites vanaf €300 — direct contact met de developer
+          <div style={{ fontSize: "34px", color: "#d4e0eb", fontWeight: 500 }}>
+            Snel live, met vooraf heldere afspraken over ontwerp en prijs
           </div>
         </div>
 
-        <div style={{ display: "flex", gap: "16px", fontSize: "26px", color: "oklch(0.950 0.010 247)" }}>
+        <div style={{ display: "flex", gap: "16px", fontSize: "26px", color: "#e9eff5" }}>
           <span>12+ jaar ervaring</span>
           <span>•</span>
           <span>Direct contact met de developer</span>
