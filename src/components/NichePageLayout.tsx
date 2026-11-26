@@ -1,8 +1,10 @@
+import type { ReactNode } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Phone, CheckCircle, ArrowRight, X, Check } from "lucide-react";
 import Footer from "@/components/Footer";
 import { breadcrumbSchema, faqPageSchema, serviceSchema } from "@/lib/schema";
+import { packageGroups, formatPrice } from "@/lib/packages";
 
 export interface NicheFaq {
   question: string;
@@ -27,7 +29,14 @@ export interface NichePageProps {
   solutions: string[];
   /** Must-have features for this type of business */
   mustHaves: string[];
+  preparation: { title: string; detail: string }[];
+  scopeNote: string;
   faqs: NicheFaq[];
+  children?: ReactNode;
+  contactHref?: string;
+  contactLabel?: string;
+  introAfterActions?: boolean;
+  relatedLinks?: { href: string; label: string }[];
 }
 
 const baseUrl = "https://techsolutionsutrecht.nl";
@@ -43,7 +52,14 @@ export default function NichePageLayout({
   problems,
   solutions,
   mustHaves,
+  preparation,
+  scopeNote,
   faqs,
+  children,
+  contactHref = "/contact",
+  contactLabel,
+  introAfterActions = false,
+  relatedLinks,
 }: NichePageProps) {
   const url = `${baseUrl}/${slug}`;
 
@@ -60,6 +76,9 @@ export default function NichePageLayout({
   ]);
 
   const faqSchema = faqPageSchema(faqs);
+  const introContent = intro.map((paragraph, index) => (
+    <p key={index} className="text-lg text-[var(--color-muted)] mb-5 leading-relaxed">{paragraph}</p>
+  ));
 
   return (
     <>
@@ -90,17 +109,16 @@ export default function NichePageLayout({
                 <span className="text-[var(--color-primary)]">{h1 ? h1.highlight : `${nicheTitle}s`}</span>
               </h1>
               <p className="text-xl text-[var(--color-muted)] mb-6 leading-relaxed">{tagline}</p>
-              {intro.map((p, i) => (
-                <p key={i} className="text-lg text-[var(--color-muted)] mb-5 leading-relaxed">{p}</p>
-              ))}
+              {!introAfterActions && introContent}
               <div className="flex flex-col sm:flex-row gap-4 mt-2">
                 <a href="https://wa.me/31625518708" className="inline-flex items-center justify-center gap-2 bg-[#25D366] text-white px-8 py-4 rounded-xl font-semibold hover:bg-[#128C7E] transition-colors">
                   <Phone className="w-5 h-5" /> Gratis advies via WhatsApp
                 </a>
-                <Link href="/contact" className="inline-flex items-center justify-center gap-2 bg-[var(--color-bg)] text-[var(--color-muted)] border-2 border-[var(--color-border)] px-8 py-4 rounded-xl font-semibold hover:bg-[var(--color-surface)] transition-colors">
-                  Offerte aanvragen
+                <Link href={contactHref} className="inline-flex items-center justify-center gap-2 bg-[var(--color-bg)] text-[var(--color-muted)] border-2 border-[var(--color-border)] px-8 py-4 rounded-xl font-semibold hover:bg-[var(--color-surface)] transition-colors">
+                  {contactLabel ?? "Offerte aanvragen"}
                 </Link>
               </div>
+              {introAfterActions && <div className="mt-7">{introContent}</div>}
             </div>
             {heroImage && (
               <div className="mt-12">
@@ -117,7 +135,26 @@ export default function NichePageLayout({
           </div>
         </section>
 
+        {children}
+
         {/* Problem / solution */}
+        <section className="py-12 border-t border-[var(--color-border)]" aria-labelledby="voorbereiding-title">
+          <div className="max-w-6xl mx-auto px-6">
+            <h2 id="voorbereiding-title" className="text-3xl font-bold text-[var(--color-ink)]">Welke keuzes maken we voor jouw website?</h2>
+            <div className="mt-8 grid md:grid-cols-3 gap-6">{preparation.map(item => <div key={item.title} className="rounded-xl border border-[var(--color-border)] p-5"><h3 className="font-semibold text-[var(--color-ink)]">{item.title}</h3><p className="mt-3 leading-relaxed text-[var(--color-muted)]">{item.detail}</p></div>)}</div>
+          </div>
+        </section>
+
+        <section id="websitepakketten" className="py-12 scroll-mt-28 bg-[var(--color-surface)]">
+          <div className="max-w-6xl mx-auto px-6">
+            <h2 className="text-3xl font-bold text-[var(--color-ink)]">Basiswebsite en extra functies apart begroten</h2>
+            <p className="mt-5 leading-relaxed text-[var(--color-muted)]">{scopeNote}</p>
+            <div className="mt-6 grid sm:grid-cols-3 gap-4">{packageGroups.wordpress.packages.map(plan => <div key={plan.id} className="rounded-xl border border-[var(--color-border)] bg-[var(--color-bg)] p-5"><h3 className="font-semibold text-[var(--color-ink)]">{plan.name}</h3><p className="mt-2 text-xl font-bold text-[var(--color-ink)]">{formatPrice(plan.price)} eenmalig</p><p className="mt-2 text-sm text-[var(--color-muted)]">{plan.features[0]} · exclusief btw</p><Link href={`${packageGroups.wordpress.href}#${plan.id}`} className="mt-4 inline-block font-semibold text-[var(--color-primary)] underline underline-offset-4">Bekijk de volledige scope</Link></div>)}</div>
+            <p className="mt-5 leading-relaxed text-[var(--color-muted)]">Je levert teksten, foto’s en logo aan. Een WordPress-ontwerpbasis wordt aangepast aan je huisstijl. Domein, hosting, onderhoud, betaalde licenties en aanvullende functies zijn apart. Bespreek bij een koppeling ook de kosten en voorwaarden van de externe aanbieder.</p>
+            <Link href="/blog/wat-kost-website-laten-maken" className="mt-4 inline-block font-semibold text-[var(--color-primary)] underline underline-offset-4">Vergelijk ook de terugkerende websitekosten</Link>
+          </div>
+        </section>
+
         <section className="py-16 bg-[var(--color-surface)] border-y border-[var(--color-border)]">
           <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-8">
             <div className="bg-[var(--color-bg)] rounded-2xl border border-[var(--color-border)] p-8">
@@ -148,7 +185,7 @@ export default function NichePageLayout({
         {/* Must haves */}
         <section className="py-16">
           <div className="max-w-6xl mx-auto px-6">
-            <h2 className="text-3xl font-bold text-[var(--color-ink)] mb-10">Wat een goede {nicheTitle.toLowerCase()}swebsite nodig heeft</h2>
+            <h2 className="text-3xl font-bold text-[var(--color-ink)] mb-10">Welke onderdelen passen bij een website voor {niche}?</h2>
             <div className="grid md:grid-cols-2 gap-4">
               {mustHaves.map((m, i) => (
                 <div key={i} className="flex items-start gap-3 bg-[var(--color-surface)] rounded-xl border border-[var(--color-border)] p-5">
@@ -158,12 +195,14 @@ export default function NichePageLayout({
               ))}
             </div>
             <div className="mt-10 flex flex-wrap gap-4">
+              {relatedLinks ? relatedLinks.map(link => <Link key={link.href} href={link.href} className="inline-flex items-center gap-2 text-[var(--color-primary)] font-semibold hover:underline">{link.label}<ArrowRight className="w-4 h-4" aria-hidden="true" /></Link>) : <>
               <Link href="/diensten/website-laten-maken" className="inline-flex items-center gap-2 text-[var(--color-primary)] font-semibold hover:underline">
                 Bekijk professionele websites <ArrowRight className="w-4 h-4" />
               </Link>
               <Link href="/diensten/seo" className="inline-flex items-center gap-2 text-[var(--color-primary)] font-semibold hover:underline">
                 Meer over SEO <ArrowRight className="w-4 h-4" />
               </Link>
+              </>}
             </div>
           </div>
         </section>
@@ -186,11 +225,12 @@ export default function NichePageLayout({
         {/* CTA */}
         <section className="py-16">
           <div className="max-w-4xl mx-auto px-6 text-center">
-            <h2 className="text-3xl font-bold text-[var(--color-ink)] mb-4">Klaar voor een website die klanten oplevert?</h2>
+            <h2 className="text-3xl font-bold text-[var(--color-ink)] mb-4">Bespreek wat jouw website moet kunnen</h2>
             <p className="text-[var(--color-muted)] mb-8 max-w-2xl mx-auto">
               Stuur een appje of vraag vrijblijvend een offerte aan. Je praat direct met de developer
-              en krijgt binnen één werkdag antwoord.
+              en bespreekt inhoud, functies, prijs en planning vóór de start.
             </p>
+            {contactLabel && <div className="mb-5"><Link href={contactHref} className="btn-primary">{contactLabel}</Link></div>}
             <a href="https://wa.me/31625518708" className="inline-flex items-center justify-center gap-2 bg-[#25D366] text-white px-8 py-4 rounded-xl font-semibold hover:bg-[#128C7E] transition-colors">
               <Phone className="w-5 h-5" /> WhatsApp direct
             </a>

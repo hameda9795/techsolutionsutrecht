@@ -22,6 +22,8 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
+      - run: node scripts/setup-admin.mjs --origin=http://127.0.0.1:3100
+      - run: node scripts/verify-admin-auth.mjs
       - run: npm run lint
       - run: npm run build
       - name: Start production build
@@ -36,6 +38,10 @@ jobs:
           cat /tmp/techsolutions-next.log
           exit 1
       - run: npm run seo:verify -- http://127.0.0.1:3100
+      - run: node scripts/verify-admin-http.mjs http://127.0.0.1:3100
+      - run: node scripts/verify-projects.mjs http://127.0.0.1:3100
+      - run: node scripts/verify-packages.mjs http://127.0.0.1:3100
+      - run: node scripts/verify-blog.mjs http://127.0.0.1:3100
 
   verify-production:
     if: github.event_name == 'schedule'

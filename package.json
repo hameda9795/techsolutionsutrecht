@@ -20,10 +20,10 @@
     "@vercel/postgres": "^0.10.0",
     "critters": "^0.0.24",
     "gray-matter": "^4.0.3",
-    "lucide-react": "^0.323.0",
-    "next": "^14.1.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
+    "lucide-react": "0.468.0",
+    "next": "15.5.25",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
     "rehype-autolink-headings": "^7.1.0",
     "rehype-highlight": "^7.0.2",
     "rehype-slug": "^6.0.0",
@@ -33,20 +33,22 @@
     "unified": "^11.0.5"
   },
   "devDependencies": {
-    "@lhci/cli": "^0.15.1",
-    "@next/bundle-analyzer": "^16.2.10",
+    "@next/bundle-analyzer": "15.5.25",
     "@tailwindcss/typography": "^0.5.19",
     "@types/node": "^20.11.16",
-    "@types/react": "^18.2.52",
-    "@types/react-dom": "^18.2.18",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
     "autoprefixer": "^10.4.17",
     "cross-env": "^10.1.0",
     "eslint": "^8.57.1",
-    "eslint-config-next": "^14.2.35",
+    "eslint-config-next": "15.5.25",
     "lighthouse": "^13.4.0",
     "playwright": "^1.61.1",
-    "postcss": "^8.4.33",
+    "postcss": "8.5.28",
     "tailwindcss": "^3.4.1",
     "typescript": "^5.3.3"
+  },
+  "overrides": {
+    "postcss": "$postcss"
   }
 }

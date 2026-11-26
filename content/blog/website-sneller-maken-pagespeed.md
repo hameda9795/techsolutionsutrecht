@@ -3,9 +3,9 @@ title: "Hoe Maak je je Website Sneller? Complete Pagespeed-Gids"
 seoTitle: "Website Sneller Maken: Complete Pagespeed-gids"
 description: "Trage website? Verbeter afbeeldingen, caching, hosting en code. Lees hoe je Core Web Vitals controleert en je website merkbaar sneller maakt."
 date: "2026-06-03"
-dateModified: "2026-07-18"
+dateModified: "2026-09-06"
 readTime: "4 min"
-category: "SEO"
+category: "SEO & onderhoud"
 image: "/images/blog/website-sneller-maken-pagespeed.jpg"
 slug: "website-sneller-maken-pagespeed"
 author: "Max"
@@ -13,7 +13,7 @@ author: "Max"
 
 ## Waarom snelheid geld waard is
 
-Snelheid is geen technisch detail, maar een directe factor in je omzet en vindbaarheid. Onderzoek laat keer op keer zien dat bezoekers afhaken naarmate een pagina trager laadt — en Google gebruikt laadsnelheid (via de Core Web Vitals) mee om te bepalen hoe hoog je staat in de zoekresultaten. Een snelle website verdient dus dubbel: meer tevreden bezoekers én betere posities.
+Een snelle, stabiele website maakt het makkelijker om je aanbod te bekijken en een formulier te gebruiken. Google gebruikt Core Web Vitals in zijn rankingsystemen, maar een goede score garandeert geen hoge positie. Relevante inhoud en een passend aanbod blijven nodig. Dat onderscheid staat ook in [Googles uitleg over pagina-ervaring](https://developers.google.com/search/docs/appearance/page-experience).
 
 In deze gids loop ik de belangrijkste oorzaken van traagheid langs, met concrete oplossingen die je vandaag nog kunt toepassen.
 
@@ -21,11 +21,11 @@ In deze gids loop ik de belangrijkste oorzaken van traagheid langs, met concrete
 
 Voordat je iets aanpast, wil je weten hoe snel je site is. Gebruik gratis tools zoals Google PageSpeed Insights en Lighthouse. Let vooral op de **Core Web Vitals**:
 
-- **LCP (Largest Contentful Paint):** hoe snel het grootste element zichtbaar is. Streef naar onder 2,5 seconde.
-- **CLS (Cumulative Layout Shift):** hoeveel de pagina "verspringt" tijdens het laden. Hoe lager, hoe beter.
-- **INP (Interaction to Next Paint):** hoe snel de site reageert op interactie.
+- **LCP (Largest Contentful Paint):** hoe snel het grootste zichtbare inhoudselement laadt. Goed: maximaal 2,5 seconde.
+- **CLS (Cumulative Layout Shift):** hoeveel de pagina onverwacht verspringt. Goed: maximaal 0,1.
+- **INP (Interaction to Next Paint):** hoe snel de site op interacties reageert. Goed: maximaal 200 milliseconden.
 
-Meet altijd op mobiel; daar valt meestal de meeste winst te halen.
+Deze grenzen gelden voor het 75e percentiel van echte bezoeken, afzonderlijk op mobiel en desktop. Bekijk in PageSpeed Insights het verschil tussen beschikbare gebruikersgegevens en de laboratoriumtest. Zonder voldoende bezoeken kunnen gebruikersgegevens ontbreken; een Lighthouse-score is geen vervanging voor die praktijkmetingen. INP vereist echte interacties en staat niet als gemeten INP in de gewone Lighthouse-laadtest.
 
 ## 1. Optimaliseer je afbeeldingen
 
@@ -34,13 +34,13 @@ Afbeeldingen zijn veruit de meest voorkomende oorzaak van een trage website.
 - **Gebruik moderne formaten** zoals WebP of AVIF. Die zijn fors kleiner dan JPEG of PNG bij gelijke kwaliteit.
 - **Schaal afbeeldingen op de juiste maat.** Een foto van 4000 pixels breed tonen in een vakje van 600 pixels is pure verspilling.
 - **Comprimeer** voordat je uploadt.
-- **Gebruik lazy loading**, zodat afbeeldingen pas laden wanneer ze in beeld komen.
+- **Gebruik lazy loading voor afbeeldingen verderop op de pagina.** Stel het laden van de belangrijke eerste afbeelding niet uit; dat kan juist het zichtbaar worden van je hoofdinhoud vertragen.
 
 Alleen al dit punt maakt veel websites merkbaar sneller.
 
 ## 2. Beperk en optimaliseer je plugins (WordPress)
 
-Bij een [professionele website](/diensten/website-laten-maken) die met WordPress is gebouwd, is plugin-wildgroei een veelvoorkomend probleem. Elke plugin voegt code toe, en te veel plugins maken je site traag en kwetsbaar.
+Controleer bij een [WordPress-website](/diensten/website-laten-maken) welke plugins daadwerkelijk zware scripts of extra aanvragen toevoegen. Het aantal alleen zegt niet genoeg: één zware plugin kan meer invloed hebben dan meerdere kleine. Werk eerst met een back-up en test wijzigingen voordat ze live gaan.
 
 - Verwijder plugins die je niet gebruikt.
 - Vermijd meerdere plugins die hetzelfde doen.
@@ -49,7 +49,7 @@ Bij een [professionele website](/diensten/website-laten-maken) die met WordPress
 
 ## 3. Gebruik caching
 
-Caching slaat een kant-en-klare versie van je pagina op, zodat die niet bij elk bezoek opnieuw opgebouwd hoeft te worden. Dit is een van de effectiefste snelheidswinsten. Combineer pagina-caching met browsercaching, zodat terugkerende bezoekers nog sneller worden bediend.
+Caching kan een opgeslagen versie van openbare inhoud hergebruiken, zodat minder werk per bezoek nodig is. De inrichting hangt af van je site. Bij een WooCommerce-webshop mogen winkelwagen, afrekenen en persoonlijke accountgegevens niet als gedeelde openbare pagina worden gecachet. Controleer na wijzigingen ook formulieren, voorraad en betalingen.
 
 ## 4. Kies fatsoenlijke hosting
 
@@ -77,7 +77,7 @@ Bij een nieuwe [professionele website](/diensten/website-laten-maken) kiezen we 
 
 ## Snelheid en SEO horen bij elkaar
 
-Snelheid staat niet los van vindbaarheid. Een snelle, technisch nette website is een belangrijk onderdeel van goede [SEO](/diensten/seo). Werk je aan snelheid, dan werk je dus tegelijk aan je posities in Google. Zie ook mijn artikel over de [veelgemaakte fouten van ZZP'ers](/blog/5-fouten-zzp-website), waar traagheid er één van is.
+Neem snelheid mee in een bredere [SEO-aanpak](/diensten/seo), maar onderzoek eerst wat de pagina tegenhoudt. Een pagina die niet is geïndexeerd of een andere vraag beantwoordt dan de bezoeker stelt, krijgt niet vanzelf zoekverkeer door een hogere snelheidsscore. Lees ook [waarom je website niet in Google staat](/blog/website-niet-in-google).
 
 ## Conclusie
 
@@ -92,6 +92,4 @@ Wil je een technisch nette nieuwe website of snelheid meenemen in een bredere SE
 
 Gebruik tests als diagnose, niet als los doel. Een verbetering moet zowel in de metingen als in de ervaring van echte bezoekers merkbaar zijn.
 
-<!-- regio-links -->
-
-Loopt je huidige site tegen zijn grenzen aan? Soms is opnieuw bouwen sneller dan blijven optimaliseren — zie [een website laten maken](/diensten/website-laten-maken). Voor de regio: [website laten maken in Amersfoort](/amersfoort) en [website laten maken in Zeist](/zeist).
+Laat eerst onderzoeken waar de vertraging ontstaat voordat je een nieuwe website bestelt. Vergelijk de [SEO-scan en verbeterpakketten](/diensten/seo) met [WordPress-onderhoud](/diensten/website-onderhoud): optimalisatie en periodiek onderhoud zijn verschillende werkzaamheden.

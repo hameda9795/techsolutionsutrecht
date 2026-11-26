@@ -1,11 +1,11 @@
 ---
-title: "WordPress of Next.js: Wat Past bij Jouw Website?"
-seoTitle: "WordPress of Next.js voor Jouw Website?"
-description: "WordPress of Next.js voor je bedrijfswebsite? Vergelijk beheer, snelheid, onderhoud en flexibiliteit en kies de techniek die bij jouw doelen past."
+title: "WordPress of maatwerk website: wat past bij jouw bedrijf?"
+seoTitle: "WordPress of Maatwerk Website? Kosten en Verschillen"
+description: "WordPress of een website zonder WordPress? Vergelijk kosten, zelf beheren, onderhoud en functies. Bekijk welke aanpak bij jouw bedrijf past."
 date: "2026-04-22"
-dateModified: "2026-07-18"
+dateModified: "2026-09-06"
 readTime: "4 min"
-category: "Webdevelopment"
+category: "Websites"
 image: "/images/blog/wordpress-of-maatwerk.jpg"
 slug: "wordpress-of-maatwerk"
 author: "Max"
@@ -15,7 +15,9 @@ author: "Max"
 
 Bij een nieuwe website komt vaak dezelfde vraag op tafel: bouwen we met **WordPress** of **Next.js**? Beide kunnen een professionele, snelle en mobielvriendelijke bedrijfswebsite opleveren. De beste keuze hangt niet af van welke techniek het populairst klinkt, maar van wat je zelf wilt beheren, welke functies nodig zijn en hoe de website later moet meegroeien.
 
-TechSolutionsUtrecht biedt één algemene dienst voor een [professionele website](/diensten/website-laten-maken). WordPress en Next.js zijn mogelijke technische keuzes binnen die dienst; het zijn geen afzonderlijke pakketten.
+Bij TechSolutionsUtrecht zijn er [WordPress-pakketten van €300, €500 en €700](/diensten/website-laten-maken), exclusief btw. Die gaan uit van een bestaande ontwerpbasis en aangeleverde inhoud. Een [website zonder WordPress](/diensten/maatwerk-website) met een eigen ontwerp begint bij €1.500; met eenvoudig inhoudsbeheer bij €2.750. De hogere prijs volgt uit het afgesproken ontwikkelwerk.
+
+Ook WordPress is gebouwd met code en kan volledig op maat worden ontwikkeld. “Maatwerk” betekent dus niet automatisch “zonder WordPress”. De getoonde pakketten hebben verschillende scopes; geen van beide technieken is automatisch beter voor SEO.
 
 ## Wanneer past WordPress goed?
 
@@ -35,7 +37,7 @@ WordPress is een contentmanagementsysteem. Je logt in via een beheeromgeving en 
 - Te veel of slecht gekozen plugins kunnen snelheid en veiligheid beïnvloeden.
 - Updates moeten worden getest, zeker wanneer meerdere plugins samenwerken.
 
-Wil je updates, back-ups en controles uitbesteden, dan kun je gebruikmaken van [website onderhoud](/diensten/website-onderhoud) vanaf €29 per maand.
+Wil je updates, back-ups en controles uitbesteden, dan kun je gebruikmaken van [website onderhoud](/diensten/website-onderhoud) vanaf €39 per maand.
 
 ## Wanneer kan Next.js beter passen?
 
@@ -69,13 +71,13 @@ Next.js betekent niet automatisch dat een website sneller is. Afbeeldingen, scri
 
 ## En als je online wilt verkopen?
 
-Voor producten, iDEAL-betalingen, voorraadbeheer en verzending biedt TechSolutionsUtrecht een aparte [WooCommerce-webshop](/diensten/webshop). Die dienst start vanaf €795 en kost meestal €1.000–€2.000. De keuze voor WooCommerce is hier bewust, zodat product- en orderbeheer overzichtelijk blijven.
+Voor producten, iDEAL-betalingen, voorraadbeheer en verzending biedt TechSolutionsUtrecht een aparte [WooCommerce-webshop](/diensten/webshop). Die dienst start met pakketten van €950, €1.450 en €2.100 exclusief btw. De keuze voor WooCommerce is hier bewust, zodat product- en orderbeheer overzichtelijk blijven.
 
 ## En als je een proces wilt automatiseren?
 
-Een websitefunctie is iets anders dan een bedrijfsautomatisering. Wil je bijvoorbeeld een aanvraag automatisch bevestigen of informatie tussen WhatsApp, e-mail en je website doorsturen, bekijk dan [WhatsApp & automatisering](/diensten/whatsapp-automatisering). Deze dienst start vanaf €450 voor één eenvoudige workflow en een koppeling tussen maximaal twee systemen.
+Een informatiepagina is iets anders dan software die een taak uitvoert. Wil je bezoekers antwoorden laten vinden in je eigen bedrijfsinformatie, dan kun je een [chatbot laten maken](/diensten/chatbot-laten-maken) vanaf €650 exclusief btw. Dit is een afzonderlijk pakket dat op een bestaande WordPress- of maatwerkwebsite kan worden aangesloten; gebruiks-, hosting- en licentiekosten zijn apart.
 
-Volledige webapplicaties, dashboards en klantportalen worden niet als afzonderlijke dienst aangeboden.
+Voor een taak op één Windows-computer kun je [maatwerk software laten maken](/diensten/maatwerk-software). Voor een webapplicatie, dashboard of klantenportaal bespreken we eerst de gebruikers, gegevens en handelingen. Zo’n toepassing valt buiten de gewone websitepakketten.
 
 ## Welke keuze is verstandig?
 
@@ -93,4 +95,4 @@ Wil je weten welke aanpak bij jouw bedrijf past? Bekijk [Website laten maken](/d
 
 <!-- regio-links -->
 
-Twijfel je nog over de techniek? Bij [een website laten maken](/diensten/website-laten-maken) bespreken we welke keuze bij jouw bedrijf past. Lokaal werk ik onder meer aan [website laten maken in De Meern](/de-meern) en [website laten maken in Nieuwegein](/nieuwegein).
+Twijfel je nog over de techniek? Lees hoe ik een [WordPress website in Utrecht](/#wordpress-website) aanpak. Vergelijk ook de [kosten van een website](/blog/wat-kost-website-laten-maken) of [bespreek je plannen met mij](/contact).

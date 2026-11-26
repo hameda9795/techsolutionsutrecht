@@ -4,12 +4,12 @@ import Link from "next/link";
 import { ArrowRight, Check, User } from "lucide-react";
 import { useState } from "react";
 
-export default function Hero() {
+export default function Hero({ hasLocalProject = false }: { hasLocalProject?: boolean }) {
   const [isProfileOpen, setIsProfileOpen] = useState(false);
 
   return (
     <>
-      <section className="relative min-h-screen pt-12 md:pt-16 lg:pt-20 pb-16 lg:pb-24 overflow-hidden bg-[var(--color-bg)]">
+      <section className="relative pt-12 md:pt-16 lg:pt-20 pb-12 lg:pb-16 overflow-hidden bg-[var(--color-bg)]">
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <div className="grid lg:grid-cols-5 gap-8 lg:gap-12 items-start">
             
@@ -24,17 +24,18 @@ export default function Hero() {
 
               {/* Main Headline */}
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[var(--color-ink)] leading-tight mb-6 tracking-tight">
-                Website Laten Maken Utrecht —{" "}
+                Website laten maken in Utrecht.{" "}
                 <span className="text-[var(--color-primary)]">
-                  Websites die Converteren
+                  Direct contact met je webdesigner.
                 </span>
               </h1>
 
               {/* Subheadline */}
               <p className="text-lg md:text-xl text-[var(--color-muted)] mb-6 leading-relaxed">
-                Professionele websites, webshops, SEO en bedrijfsautomatisering in Utrecht.{" "}
-                <strong className="text-[var(--color-ink)]">Op maat en transparant geprijsd</strong>, binnen{" "}
-                <strong className="text-[var(--color-ink)]">1 week</strong> online. Direct contact met de developer — SEO-klaar voor ZZP&apos;ers en ondernemers.
+                Ik ben Max, webdesigner in Utrecht-Zuilen. Ik bouw websites voor
+                zzp&apos;ers en kleine bedrijven, met een duidelijke presentatie van
+                je diensten en een eenvoudige manier om contact op te nemen.{" "}
+                <strong className="text-[var(--color-ink)]">Ontwerp, inhoud en prijs spreken we vooraf af.</strong>
               </p>
 
               {/* Trust Badges - Replacing testimonials */}
@@ -49,9 +50,11 @@ export default function Hero() {
                 </div>
                 <div className="flex items-center gap-2 px-4 py-2 rounded-lg bg-[var(--color-success)]/10 border border-[var(--color-success)]/20">
                   <Check className="w-5 h-5 text-[var(--color-success)]" />
-                  <span className="text-sm font-medium text-[var(--color-ink)]">Binnen 4 uur reactie</span>
+                  <span className="text-sm font-medium text-[var(--color-ink)]">Gevestigd in Zuilen</span>
                 </div>
               </div>
+
+              <p className="mb-6 text-lg font-semibold text-[var(--color-ink)]">WordPress vanaf €300 excl. btw · 1 pagina met basis-SEO. <Link href="#website-prijzen" className="text-[var(--color-primary)] underline underline-offset-4">Vergelijk de pakketten</Link></p>
 
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
@@ -65,12 +68,20 @@ export default function Hero() {
                   WhatsApp direct
                 </a>
                 <Link 
-                  href="/contact" 
+                  href="/contact?dienst=Website%20laten%20maken&van=%2F"
                   className="inline-flex items-center justify-center gap-2 bg-[var(--color-bg)] text-[var(--color-ink)] border-2 border-[var(--color-border)] px-8 py-4 rounded-xl font-semibold hover:bg-[var(--color-surface)] transition-colors"
                 >
-                  Gratis offerte
+                  Offerte voor je website
                 </Link>
               </div>
+
+              <nav aria-label="Op deze pagina" className="mb-8 flex flex-wrap gap-x-6 gap-y-3 text-sm font-semibold text-[var(--color-primary)]">
+                <Link href="#website-prijzen" className="underline underline-offset-4">Websiteprijzen</Link>
+                <Link href={hasLocalProject ? "#werk-in-utrecht" : "#website-voorbeelden"} className="underline underline-offset-4">
+                  {hasLocalProject ? "Werk voor een Utrechtse praktijk" : "Websitevoorbeelden"}
+                </Link>
+                <Link href="#website-aanpak" className="underline underline-offset-4">Zo werk ik</Link>
+              </nav>
 
               {/* Mobile: Wie ben ik button with profile picture */}
               <div className="lg:hidden flex items-center gap-4 bg-[var(--color-bg)]/80 backdrop-blur border border-[var(--color-border)] px-4 py-3 rounded-xl">
@@ -92,7 +103,7 @@ export default function Hero() {
                 </div>
                 <div className="flex-1">
                   <p className="font-semibold text-[var(--color-ink)] text-sm">Max</p>
-                  <p className="text-xs text-[var(--color-muted)]">Webdeveloper | IT-consultant</p>
+                  <p className="text-xs text-[var(--color-muted)]">Webdesigner in Utrecht-Zuilen</p>
                 </div>
                 <button 
                   onClick={() => setIsProfileOpen(true)}
@@ -126,14 +137,15 @@ export default function Hero() {
                   </div>
                   <div className="text-center">
                     <h3 className="font-bold text-[var(--color-ink)] text-xl">Max</h3>
-                    <p className="text-sm text-[var(--color-muted)]">Webdeveloper | IT-consultant | SEO-specialist</p>
+                    <p className="text-sm text-[var(--color-muted)]">Webdesigner in Utrecht-Zuilen</p>
                   </div>
                 </div>
 
                 <p className="text-[var(--color-muted)] text-sm leading-relaxed mb-4">
-                  Ik ben Max, software engineer in Utrecht. 12 jaar ervaring met websites die écht werken. 
-                  Ik bouw niet alleen code, maar denk mee over je merk — van een complete bedrijfswebsite tot automatisering.
-                  Perfect voor startende ZZP&apos;ers die kwaliteit zoeken zonder de hoofdprijs.
+                  Je werkt rechtstreeks met mij aan je website. Ik denk mee over
+                  de pagina&apos;s, het ontwerp en de informatie die jouw klanten
+                  nodig hebben. Ook na de oplevering kun je bij mij terecht voor
+                  websiteonderhoud en SEO.
                 </p>
 
                 <button 
@@ -155,8 +167,8 @@ export default function Hero() {
                     <div className="text-xs text-[var(--color-muted)]">klanten</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-lg font-bold text-[var(--color-primary)]">Utrecht</div>
-                    <div className="text-xs text-[var(--color-muted)]">based</div>
+                    <div className="text-lg font-bold text-[var(--color-primary)]">Zuilen</div>
+                    <div className="text-xs text-[var(--color-muted)]">Utrecht</div>
                   </div>
                 </div>
               </div>
@@ -194,7 +206,7 @@ export default function Hero() {
                   </div>
                   <div>
                     <h3 className="text-2xl font-bold text-[var(--color-ink)]">Wie ben ik</h3>
-                    <p className="text-[var(--color-muted)]">Webdeveloper | IT-consultant | SEO-specialist</p>
+                    <p className="text-[var(--color-muted)]">Webdesigner in Utrecht-Zuilen</p>
                   </div>
                 </div>
                 <button 
@@ -209,7 +221,7 @@ export default function Hero() {
 
               <div className="prose prose-slate text-[var(--color-muted)] max-w-none">
                 <p className="text-lg mb-4">
-                  Ik ben Max, webdeveloper, IT-consultant en SEO-specialist - de persoon achter TechSolutionsUtrecht. 
+                  Ik ben Max, webdesigner in Utrecht-Zuilen en de persoon achter TechSolutionsUtrecht.
                   Naast mijn studie wiskunde hier in Utrecht heb ik de afgelopen 12 jaar gewerkt aan websites, webshops en online vindbaarheid.
                 </p>
                 
@@ -221,13 +233,13 @@ export default function Hero() {
                 <p className="mb-4">
                   Ik programmeer niet alleen code; ik denk mee over je merk en zorg dat het ontwerp past bij wie jij bent. 
                   Voor websites kies ik de techniek die bij het project past, bijvoorbeeld <strong className="text-[var(--color-ink)]">WordPress of Next.js</strong>.
-                  Daarnaast help ik met webshops, SEO, onderhoud en praktische automatisering.
+                  Voor een webshop, websiteonderhoud en verdere SEO kun je ook bij mij terecht.
                 </p>
                 
                 <p className="mb-4">
-                  Daarnaast ben ik gespecialiseerd in <strong className="text-[var(--color-ink)]">AI-integraties</strong>. Ik kan bijvoorbeeld een slimme chatbot 
-                  voor je site bouwen of een tool die je maandelijkse kosten automatisch analyseert. 
-                  Technologie die je daadwerkelijk tijd bespaart.
+                  We beginnen bij je klanten: welke informatie zoeken ze, welke
+                  voorbeelden willen ze zien en hoe nemen ze contact met je op?
+                  Dat vertalen we naar de inhoud en opbouw van je website.
                 </p>
                 
                 <p>

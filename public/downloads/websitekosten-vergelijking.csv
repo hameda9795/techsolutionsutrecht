@@ -1,0 +1,19 @@
+Onderdeel;Moment of eenheid;Aanbieder A bedrag excl. btw;Aanbieder B bedrag excl. btw;Wat vastleggen
+Bouw website;Eenmalig;;;Aantal pagina's en functies
+Extra werk bij start;Eenmalig;;;Teksten fotografie migratie koppelingen
+Domeinnaam jaar 1;Jaarbedrag;;;Account op naam en facturatie
+Hosting jaar 1;Jaarbedrag;;;Inhoud pakket en facturatie
+Onderhoud jaar 1;Maandbedrag x 12;;;Optioneel en inbegrepen werkzaamheden
+Licenties jaar 1;Jaarbedrag;;;Plug-ins en externe diensten
+Overige kosten jaar 1;Jaarbedrag;;;Nog ontbrekende posten
+Totaal jaar 1;Zelf optellen;;;Maandbedragen eerst omrekenen naar jaarbedragen
+Domeinnaam jaar 2;Jaarbedrag;;;Controleer verlengingstarief
+Hosting jaar 2;Jaarbedrag;;;Controleer verlengingstarief
+Onderhoud jaar 2;Maandbedrag x 12;;;Controleer tarief en afspraken
+Licenties jaar 2;Jaarbedrag;;;Controleer verlengingstarief
+Overig jaar 2;Jaarbedrag;;;Nieuw werk indien afgesproken
+Totaal jaar 2;Zelf optellen;;;Bouw alleen opnieuw tellen bij nieuwe opdracht
+Inhoud en beeld;Afspraken;;;Wie schrijft levert en plaatst
+Feedback;Afspraken;;;Aantal correctierondes
+Eigendom en vertrek;Afspraken;;;Toegang accounts licenties bestanden
+Toelichting;Geen automatische berekeningen;;;Lege bedragen betekenen onbekend en niet gratis

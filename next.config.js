@@ -1,7 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  swcMinify: true,
   // Trailing slashes are normalized in middleware so legacy URLs can redirect
   // straight to their final destination without an intermediate hop.
   skipTrailingSlashRedirect: true,
@@ -12,6 +11,12 @@ const nextConfig = {
   },
   images: {
     unoptimized: true,
+  },
+  // These routes read Markdown at runtime. Include the source files in their
+  // serverless bundles so the deployed sitemap retains every blog article.
+  outputFileTracingIncludes: {
+    "/sitemap.xml": ["./content/blog/*.md"],
+    "/blog/*": ["./content/blog/*.md"],
   },
   async headers() {
     const securityHeaders = [
@@ -47,6 +52,9 @@ const nextConfig = {
   },
   async redirects() {
     return [
+      // /utrecht competed with the homepage for "website laten maken utrecht"
+      { source: "/utrecht", destination: "/", permanent: true },
+      { source: "/utrecht/", destination: "/", permanent: true },
       // Old portfolio URLs -> the single current projects page
       { source: "/projects", destination: "/projecten", permanent: true },
       { source: "/projects/:path*", destination: "/projecten", permanent: true },

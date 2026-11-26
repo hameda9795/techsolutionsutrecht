@@ -4,6 +4,9 @@
 export function formatDate(dateString: string): string {
   const date = new Date(dateString);
   const options: Intl.DateTimeFormatOptions = {
+    // Publication values are calendar dates (YYYY-MM-DD), not local instants.
+    // Use the same day during SSR and hydration, including Google's US renderer.
+    timeZone: 'UTC',
     year: 'numeric',
     month: 'long',
     day: 'numeric',

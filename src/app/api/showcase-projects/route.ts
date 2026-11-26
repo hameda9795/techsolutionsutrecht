@@ -1,3 +1,4 @@
+import { authorizeAdminMutation } from "@/lib/admin-auth";
 import { NextRequest, NextResponse } from "next/server";
 import {
   getAllShowcaseProjects,
@@ -11,12 +12,17 @@ export async function GET() {
   await initShowcaseDatabase();
   const projects = await getAllShowcaseProjects();
   return NextResponse.json(projects, {
-    headers: { "Cache-Control": "no-store, max-age=0" },
+    headers: {
+      "Cache-Control": "no-store, max-age=0",
+      "X-Showcase-Storage": process.env.DATABASE_URL ? "database" : "preview",
+    },
   });
 }
 
 // POST /api/showcase-projects
 export async function POST(request: NextRequest) {
+  const rejected = await authorizeAdminMutation(request);
+  if (rejected) return rejected;
   try {
     const input = normalizeShowcaseInput(await request.json());
 

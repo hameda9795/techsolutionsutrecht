@@ -7,7 +7,7 @@ export const localBusinessSchema = {
   "@id": BUSINESS_ID,
   "name": "TechSolutionsUtrecht",
   "alternateName": "Tech Solutions Utrecht",
-  "description": "Professionele websites, webshops, SEO, websiteonderhoud, bedrijfsautomatisering en betrouwbare tech reparaties in Utrecht.",
+  "description": "Webdesign vanuit Utrecht-Zuilen: WordPress websites, WooCommerce webshops, SEO, websiteonderhoud, maatwerk websites, chatbots en Windows-applicaties.",
   "image": `${SITE_URL}/profile.webp`,
   "url": SITE_URL,
   "telephone": "+31625518708",
@@ -25,8 +25,8 @@ export const localBusinessSchema = {
   "hasMap": "https://www.google.com/maps/place/?q=place_id:ChIJ63Igh49SbK8RIoJmxTuLi_I",
   "geo": {
     "@type": "GeoCoordinates",
-    "latitude": 52.1101,
-    "longitude": 5.0863
+    "latitude": 52.1106817,
+    "longitude": 5.0874026
   },
   "areaServed": [
     { "@type": "City", "name": "Utrecht" },
@@ -65,36 +65,26 @@ export const localBusinessSchema = {
   },
   "hasOfferCatalog": {
     "@type": "OfferCatalog",
-    "name": "Digitale diensten en reparaties",
+    "name": "Websites en digitale diensten",
     "itemListElement": [
       ...coreServices.map((service) => ({
         "@type": "Offer",
         "url": `${SITE_URL}${service.href}`,
-        "price": service.schemaPrice,
-        "priceCurrency": "EUR",
+        "description": service.priceDescription,
+        "priceSpecification": {
+          "@type": "UnitPriceSpecification",
+          "price": service.schemaPrice,
+          "priceCurrency": "EUR",
+          "valueAddedTaxIncluded": false,
+          "unitText": service.schemaPeriod === "per maand" ? "maand" : "project"
+        },
         "itemOffered": {
           "@type": "Service",
           "name": service.title,
           "description": service.pageDescription,
           "url": `${SITE_URL}${service.href}`
         }
-      })),
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "Computer Reparatie",
-          "description": "Snelle en betrouwbare computer reparaties"
-        }
-      },
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "Laptop Reparatie",
-          "description": "Vakkundige laptop reparaties in Utrecht"
-        }
-      }
+      }))
     ]
   },
   "sameAs": [
@@ -117,7 +107,7 @@ export const websiteSchema = {
   "url": SITE_URL,
   "name": "TechSolutionsUtrecht",
   "alternateName": "Tech Solutions Utrecht",
-  "description": "Websites, webshops, SEO, websiteonderhoud, automatisering en computerreparatie in Utrecht",
+  "description": "Webdesign in Utrecht: WordPress websites, webshops, SEO, onderhoud en software op maat",
   "publisher": {
     "@id": BUSINESS_ID
   }

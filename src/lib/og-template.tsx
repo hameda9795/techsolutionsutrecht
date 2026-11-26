@@ -53,7 +53,7 @@ export function renderOgImage() {
             Website laten maken in Utrecht
           </div>
           <div style={{ fontSize: "34px", color: "oklch(0.900 0.020 247)", fontWeight: 500 }}>
-            Websites vanaf €250 — direct contact met de developer
+            Websites vanaf €300 — direct contact met de developer
           </div>
         </div>
 

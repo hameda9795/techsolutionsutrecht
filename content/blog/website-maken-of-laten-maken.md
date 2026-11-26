@@ -1,265 +1,97 @@
 ---
-title: "Website Maken of Laten Maken? Een Eerlijke Vergelijking (2026)"
-seoTitle: "Website Zelf Maken of Laten Maken? Vergelijking 2026"
-description: "Twijfel je tussen zelf een website maken of laten maken? Lees deze eerlijke vergelijking met voor- en nadelen, kosten en een beslissingsframework."
+title: "Website zelf maken of laten maken? Zo vergelijk je de opties"
+seoTitle: "Website zelf maken of laten maken? Kosten en keuzes"
+description: "Vergelijk zelf bouwen en uitbesteden op tijd, kosten, beheer en SEO. Met de actuele WordPress-pakketten van €300, €500 en €700 excl. btw."
 date: "2026-03-13"
-dateModified: "2026-07-18"
-readTime: "10 min"
+dateModified: "2026-10-15"
+readTime: "5 min"
 category: "Websites"
 image: "/images/blog/diy-vs-professional.jpg"
 slug: "website-maken-of-laten-maken"
 author: "Max"
 ---
 
-## De Dilemma Die Elke Ondernemer Kent
+## Begin bij het werk dat je website moet doen
 
-Je hebt besloten dat je een website nodig hebt. Logisch, want in 2026 is een website niet langer een luxe – het is een noodzaak. Maar nu komt de volgende vraag: doe je het zelf, of laat je het doen?
+Zelf een website maken kan passen als je de tijd en belangstelling hebt om inhoud, ontwerp en beheer te leren. Uitbesteden kan passen als je begeleiding wilt bij die keuzes en de uitvoering wilt overdragen. Beide routes kunnen een bruikbare website opleveren.
 
-Als ik een euro kreeg voor elke keer dat iemand me deze vraag stelt... Laten we zeggen dat ik dan een behoorlijke website zou kunnen bouwen van dat geld alleen.
+Ik bouw websites en heb dus een commercieel belang bij uitbesteden. Toch is de eerste vraag wat jij nodig hebt: je werk laten zien, aanvragen ontvangen of producten verkopen. Maak die keuze voordat je platforms of offertes vergelijkt.
 
-Het is een goede vraag. En eerlijk? Het antwoord is niet altijd hetzelfde. Het hangt af van wie je bent, wat je doet, en hoeveel tijd (en geld) je hebt.
+## Welke taken neem je bij zelf bouwen op je?
 
-In dit artikel ga ik niet proberen om je over te halen om mijn diensten af te nemen. Ik ga je helpen om de juiste keuze voor jouw situatie te maken.
+Een websitebouwer of een contentmanagementsysteem kan veel bouwstenen leveren. Jij blijft verantwoordelijk voor de samenhang: een duidelijke indeling, begrijpelijke teksten, passende afbeeldingen en een werkende contactroute.
 
-## Optie 1: Zelf Een Website Maken
+Reken naast het bouwen ook op het controleren van mobiel gebruik, links, formulieren en instellingen voor vindbaarheid. Hoeveel tijd dat kost, hangt af van je ervaring, de inhoud en de functies. Een vast aantal uren voor iedere ondernemer zou een schijnprecisie zijn.
 
-### De Populaire DIY-Platforms
+Zelf bouwen is het overwegen waard als je:
 
-De laatste jaren zijn platforms als Wix, Squarespace, Jimdo, en WordPress.com enorm populair geworden. En dat begrijp ik – ze beloven dat je binnen een uur een professionele website hebt, zonder technische kennis.
+- de benodigde inhoud en pagina’s kunt afbakenen;
+- zelf wilt leren en wijzigingen wilt uitvoeren;
+- binnen de mogelijkheden van je gekozen systeem kunt werken;
+- tijd reserveert voor controle en beheer.
 
-**Hoe Het Werkt:**
-Je kiest een template, sleept wat elementen naar de juiste plek, uploadt je logo en foto's, en voilà – je hebt een website.
+## Wat draag je over als je een website laat maken?
 
-**De Werkelijkheid:**
-Dat klinkt te mooi om waar te zijn? Dat is het ook. Soms wel, tenminste.
+Dat hangt af van de offerte. Alleen een website installeren is een andere opdracht dan teksten schrijven, een eigen ontwerp maken en metingen inrichten.
 
-### Voordelen van Zelf Bouwen
+Bij mijn [WordPress-pakketten](/diensten/website-laten-maken) lever je teksten, foto’s en logo aan. Ik pas een bestaande ontwerpbasis aan je huisstijl aan, bouw de afgesproken pagina’s, voeg een contactformulier toe en verzorg de basis-SEO. Je krijgt uitleg over zelf wijzigen.
 
-**1. Het is Goedkoop**
-Voor €10-€30 per maand heb je een werkende website. Dat is aantrekkelijk, zeker als je net bent gestart en elke euro moet omdraaien.
+Een nieuw ontwerp zonder WordPress is een apart [maatwerktraject](/diensten/maatwerk-website), vanaf €1.500 exclusief btw. Een hogere prijs volgt uit meer of ander werk; niet uit een automatische belofte van meer klanten.
 
-**2. Je Bent Snel Live**
-Theoretisch kun je vandaag nog beginnen en morgen online zijn. Geen wachttijden, geen afstemming met een designer.
+## Vergelijk dezelfde kosten
 
-**3. Je Hebt Volledige Controle**
-Wil je om 3 uur 's nachts een tekst wijzigen? Geen probleem. Je hoeft niemand te vragen.
+| Onderdeel | Zelf bouwen | Laten maken bij TechSolutionsUtrecht |
+|---|---|---|
+| Bouw | Eigen tijd en eventueel een betaald platform | WordPress €300, €500 of €700 eenmalig |
+| Inhoud | Zelf schrijven en beelden verzamelen | Zelf aanleveren; extra schrijfwerk apart afspreken |
+| Ontwerp | Zelf een basis kiezen en aanpassen | Ontwerpbasis aangepast aan je huisstijl |
+| SEO | Zelf controleren en uitvoeren | Basis-SEO en Search Console inbegrepen |
+| Terugkerende kosten | Platform, domein, hosting of licenties volgens aanbieder | Hosting, domein, onderhoud en licenties apart |
+| Zelf wijzigen | Afhankelijk van je systeem en rechten | WordPress-beheer met uitleg |
+| Extra functies | Zelf inrichten of laten beoordelen | Vooraf apart afspreken |
 
-**4. Het is Leerzaam**
-Je leert hoe websites werken, wat handig is als ondernemer.
+De genoemde bouwprijzen zijn exclusief btw. Start omvat één pagina met maximaal zes secties; Business maximaal drie inhoudspagina’s; Lokaal Compleet maximaal vijf. GA4 begint bij Business. Inrichting van één geschikt Google Bedrijfsprofiel hoort bij Lokaal Compleet.
 
-### Nadelen van Zelf Bouwen (En Dit Is Belangrijk)
+Bekijk ook de [prijsgids met bijkomende kosten](/blog/wat-kost-website-laten-maken). Vergelijk een maandelijks platformbedrag niet rechtstreeks met een eenmalige bouwprijs zonder de overige kosten mee te nemen.
 
-**1. Het Kost Tijd – Veel Tijd**
-Dat "binnen een uur" is marketingpraat. Realistisch? Reken op 20-40 uur voor een degelijke website. En dan heb je nog geen content geschreven.
+## Een template is geen bewijs van slechte kwaliteit
 
-**2. Het Ziet Er Vaak... Goedkoop Uit**
-Templates zijn templates omdat honderden anderen ze ook gebruiken. Je website ziet er niet uniek uit, en vaak is dat wel te zien.
+Een bestaande ontwerpbasis kan prima passen bij een kleine bedrijfswebsite. De bruikbaarheid hangt af van de uitwerking: structuur, leesbaarheid, mobiel gebruik en de inhoud voor je klanten.
 
-**3. SEO is Beperkt**
-Ja, je kunt een titel en meta description invullen. Maar technische SEO? Schema markup? Paginasnelheid optimalisatie? Daar heb je geen controle over.
+Volledig nieuw ontwerpwerk is nuttig als je daar een concrete reden voor hebt. Betaal er niet voor omdat een template per definitie verkeerd zou zijn. Ook de WordPress-pakketten van TechSolutionsUtrecht gebruiken een aangepaste ontwerpbasis.
 
-**4. Je Bent de Technische Support**
-Als er iets misgaat – en dat gebeurt – moet je het zelf oplossen. Of betalen voor support die meestal beperkt is.
+## Hoe zit het met SEO?
 
-**5. Scalabiliteit is een Probleem**
-Je begint klein, maar wat als je wilt groeien? Een DIY-platform kan snel tegen zijn grenzen aanlopen.
+Uitbesteden geeft niet automatisch betere posities. Zelf bouwen sluit goede vindbaarheid evenmin uit. Van belang zijn onder meer de toegankelijkheid van pagina’s voor zoekmachines, de aansluiting op zoekvragen en de kwaliteit van de inhoud.
 
-## Optie 2: Een Website Laten Maken
+Een SEO-plugin of een groen vinkje in een editor bewijst niet dat de hele pagina goed is. Vraag je webdesigner welke werkzaamheden worden uitgevoerd en welke metingen je krijgt. Lees voor het vervolg over [SEO uitbesteden](/diensten/seo).
 
-### Wat Krijg Je Als Je Uitbesteedt?
+## Neem je eigen tijd mee zonder omzet te verzinnen
 
-Een professional neemt niet alleen het technische werk uit handen, maar denkt ook mee over strategie, design, en conversie.
+Je kunt je eigen werkuren als kostenpost meenemen. Een illustratief voorbeeld: tien uur werk waarderen op €50 geeft €500 aan gewaardeerde tijd. Dat betekent niet automatisch dat je €500 omzet misloopt. Dat hangt ervan af of je die uren anders aan betaald werk had besteed.
 
-**Het Proces Bij Een Freelancer:**
-1. Intakegesprek over je doelen
-2. Ontwerp op maat
-3. Technische bouw
-4. Content creatie (of begeleiding daarbij)
-5. Testen en optimaliseren
-6. Oplevering met training
+Neem ook je leerdoel mee. Als je graag zelf leert bouwen, heeft die kennis waarde. Als je vooral snel een afgebakende opdracht wilt afronden, kan begeleiding juist prettig zijn.
 
-### Voordelen van Laten Maken
+## Kun je later overstappen?
 
-**1. Professionaliteit**
-Een ervaren webbouwer weet wat werkt. Je krijgt geen "website", maar een marketinginstrument dat klanten oplevert.
+Dat hangt af van het bestaande systeem, beschikbare toegang en exportmogelijkheden. Soms kunnen teksten, beelden en domein worden hergebruikt. In andere gevallen vraagt de nieuwe opbouw extra werk.
 
-**2. SEO vanaf Dag Één**
-De technische structuur wordt correct opgebouwd. Metadata, headings, afbeelding optimalisatie – het zit er allemaal in.
+Laat vóór een overstap controleren welke URL’s al bezoekers krijgen. Een nieuw ontwerp is geen reden om bestaande webadressen zonder plan te veranderen. Migratie en herstelwerk worden bij mij vooraf apart begroot.
 
-**3. Tijdbesparing**
-Terwijl de professional aan je website werkt, kun jij focussen op waar jij goed in bent: je bedrijf runnen.
+## Welke route past bij jou?
 
-**4. Uniek Design**
-Geen template die bij 500 anderen staat, maar iets dat bij jou en je doelgroep past.
+Kies eerst de pagina’s, functies en het gewenste beheer. Maak daarna een korte proef of bespreek een offerte. Vergelijk daarbij:
 
-**5. Ondersteuning Na Oplevering**
-Vragen? Problemen? Je hebt iemand die je kunt bellen.
+1. Wie maakt en controleert de inhoud?
+2. Welke pagina’s en functies zijn inbegrepen?
+3. Welke kosten lopen maandelijks of jaarlijks door?
+4. Welke toegang en uitleg ontvang je?
+5. Wie verzorgt updates en latere wijzigingen?
 
-### Nadelen van Laten Maken
+Wil je producten en betalingen beheren, bekijk dan de aparte [WooCommerce-webshopdienst](/diensten/webshop). Twijfel je tussen WordPress en een andere opbouw, gebruik dan de [keuzehulp voor WordPress of maatwerk](/blog/wordpress-of-maatwerk).
 
-**1. Het Kost Meer**
-Bij TechSolutionsUtrecht start een complete bedrijfswebsite vanaf €250 en ligt de gebruikelijke projectprijs tussen €350 en €650. Een WooCommerce-webshop is een afzonderlijke dienst vanaf €795 en kost meestal €1.000–€2.000. De definitieve totaalprijs hangt af van inhoud, functies en koppelingen.
+Kies je voor uitbesteden? Vergelijk dan ook [een freelancer met een webbureau](/blog/freelancer-of-bureau) op beschikbare capaciteit, overdracht en ondersteuning. Dat is een andere afweging dan de keuze om zelf te bouwen.
 
-**2. Je Moet Wachten**
-Ontwerp, inhoud, bouw en controle kosten tijd. De planning voor een bedrijfswebsite wordt daarom na de intake vastgelegd; er geldt geen standaard oplevertermijn. Voor een webshop is 1 tot 3 weken een gemiddelde indicatie, geen garantie.
+## Je volgende stap
 
-**3. Niet Iedereen is Even Goed**
-Er zijn veel "webbouwers" die een template installeren en €800 vragen. Je moet wel weten waarnaar je kijkt.
-
-## De Eerlijke Vergelijkingstabel
-
-| Criterium | Zelf Maken | Laten Maken |
-|-----------|-----------|-------------|
-| **Kosten** | €10-€30/maand | Website vanaf €250; webshop vanaf €795 |
-| **Tijd** | 20-40 uur van jouw tijd | Planning na intake en volgens offerte |
-| **Kwaliteit** | Goed genoeg voor start | Professioneel |
-| **SEO** | Basis | Geavanceerd |
-| **Uniekheid** | Template (meestal zichtbaar) | Uniek design |
-| **Ondersteuning** | Beperkt (forum/chat) | Persoonlijk contact |
-| **Schaalbaarheid** | Beperkt | Uitbreidbaar |
-| **Conversie** | Gemiddeld | Geoptimaliseerd |
-
-## Wanneer Kies Je Wat?
-
-Laat me je helpen met een eerlijk advies.
-
-### Kies voor Zelf Maken Als:
-
-✅ Je technisch bent aangelegd  
-✅ Je tijd hebt (20+ uur)  
-✅ Je budget extreem beperkt is  
-✅ Je het als leerervaring ziet  
-✅ Je niet kritisch bent over design-details  
-✅ Je website puur informatief is (geen conversiedoelen)
-
-**Realiteit check:** Als je €50 per uur verdient met je werk, en je besteedt 30 uur aan je website, dan heeft die website je €1.500 gekost – plus de maandelijkse kosten. Dan kun je net zo goed iemand inhuren die het in een fractie van de tijd beter doet.
-
-### Kies voor Laten Maken Als:
-
-✅ Je wilt dat je website klanten oplevert  
-✅ Je geen tijd hebt om te leren en troubleshooten  
-✅ Je wilt gevonden worden in Google  
-✅ Je een professionele uitstraling nodig hebt  
-✅ Je serieus bent over je bedrijf  
-✅ Je wilt dat het goed geregeld is
-
-## De Vragen Die Je Jezelf Moet Stellen
-
-Voordat je een keuze maakt, beantwoord deze vragen eerlijk:
-
-### 1. Wat is Mijn Uurloon?
-
-Als je €100 per uur verdient met je klantwerk, en je besteedt 30 uur aan een website, dan kost die website je €3.000 aan gemiste inkomsten. Plus de frustratie als het niet lukt.
-
-### 2. Hoe Belangrijk is Mijn Website?
-
-Als je website je belangrijkste marketinginstrument is (wat voor de meeste ondernemers geldt), dan is het de investering waard om het professioneel te doen.
-
-### 3. Heb Ik de Mentale Ruimte?
-
-Een website bouwen is frustrerend. Dingen werken niet. Je komt technische problemen tegen. Heb je daar op dit moment energie voor?
-
-### 4. Wat is Mijn Doel?
-
-Als je alleen een "online visitekaartje" wilt, kan DIY werken. Als je wilt dat je website actief klanten aantrekt, heb je professionaliteit nodig.
-
-## Mijn Persoonlijke Verhaal
-
-Toen ik begon als webdesigner, probeerde ik alles zelf. Mijn administratie, mijn boekhouding, mijn marketing – inclusief mijn eerste website.
-
-Die eerste website? Die was... niet geweldig. Het kostte me 40 uur, zag er matig uit, en leverde geen enkele klant op.
-
-Toen ik besloot om een professional in te huren voor mijn eigen website (ja, ik betaalde een collega om mijn site te doen), gebeurde er iets magisch. Binnen twee maanden had ik meer aanvragen dan ik aan kon.
-
-Het was niet de mooiste website die hij had gemaakt. Maar het was strategisch, SEO-geoptimaliseerd, en gebouwd om te converteren.
-
-Die les heb ik nooit vergeten: **soms is het slim om te focussen waar jij goed in bent, en de rest uit te besteden.**
-
-## Wat Als Je Begint Met DIY en Later Wilt Professionaliseren?
-
-Goed nieuws: dat kan! Veel ondernemers beginnen met een DIY-site en investeren later in iets professioneels.
-
-**Maar wees je bewust van:**
-- Je moet vaak helemaal opnieuw beginnen (geen eenvoudige migratie)
-- Je bent de tijd en het geld van de eerste site kwijt
-- Je moet wachten tot de nieuwe site af is
-
-**Mijn advies:** Als je weet dat je serieus bent met je bedrijf, investeer dan direct in iets goeds. Het is goedkoper dan twee keer betalen.
-
-## Hoe Kies Je Een Goede Webdesigner?
-
-Als je besluit om het uit te besteden, hoe kies je dan de juiste persoon?
-
-### Wat Je Moet Checken:
-
-**1. Portfolio**
-Bekijk hun werk. Vind je het mooi? Werken de sites soepel? Zien ze er professioneel uit?
-
-**2. Reviews**
-Wat zeggen anderen? Niet alleen op hun eigen site, maar ook op Google, Facebook, etc.
-
-**3. Communicatie**
-Heb je een klik met de persoon? Kun je ze makkelijk bereiken? Dit is belangrijker dan je denkt.
-
-**4. Transparantie**
-Zijn ze duidelijk over wat je wel en niet krijgt? Vage offertes zijn een red flag.
-
-**5. SEO Kennis**
-Vragen ze naar je doelgroep? Naar zoekwoorden? Of bouwen ze gewoon "iets moois"?
-
-Wil je weten wat een professionele website kost? [Bekijk mijn prijsgids](/blog/wat-kost-website-laten-maken).
-
-## De Beslissing: Een Framework
-
-Laat me je helpen met een simpel beslissingsframework:
-
-### Stap 1: Budget Check
-- Heb je €250+ beschikbaar? → Overweeg laten maken
-- Is je budget beperkter? → Begin met DIY, maar plan upgrade
-
-### Stap 2: Tijdsinvestering
-- Heb je 20+ uur beschikbaar? → DIY is mogelijk
-- Is je tijd kostbaarder dan geld? → Laat maken
-
-### Stap 3: Doelstelling
-- Is je website cruciaal voor klantenwerving? → Laat maken
-- Is het puur informatief? → DIY kan werken
-
-### Stap 4: Technisch Level
-- Ben je handig met techniek? → DIY is haalbaar
-- Word je gestrest van technische dingen? → Laat maken
-
-## Conclusie: Er is Geen Fout Antwoord
-
-Eerlijk? Zowel DIY als laten maken kunnen werken. Het hangt ervan af wie je bent en waar je mee zit.
-
-**De enige verkeerde keuze is geen website hebben.**
-
-Of je nu zelf met een websitebouwer werkt of een complete professionele website laat maken: zorg dat je online aanwezigheid betrouwbaar en passend bij je bedrijf is. De techniek kan WordPress, Next.js of een andere geschikte oplossing zijn; het resultaat voor je klant staat voorop.
-
-**Mijn aanbod:**
-Als je twijfelt, bel me. Een vrijblijvend gesprek kost niets, en ik help je graag de juiste keuze te maken – ook als dat betekent dat je beter zelf aan de slag kunt.
-
----
-
-## Veelgestelde Vragen
-
-### Kan ik mijn DIY website later door een professional laten overnemen?
-Technisch wel, maar praktisch lastig. De meeste webbouwers willen liever helemaal opnieuw beginnen voor een beter resultaat.
-
-### Hoe lang duurt het om zelf een website te leren maken?
-Reken op 40-60 uur om het écht goed te leren. De basis is snel onder de knie, maar om iets professioneels te maken kost tijd.
-
-### Is WordPress.com hetzelfde als WordPress.org?
-Nee! WordPress.com is een hosted service (zoals Wix). WordPress.org is het open-source systeem dat professionals gebruiken. Er is een wereld van verschil.
-
-### Wat als ik begin met een goedkope site en later upgrade?
-Dat kan, maar je bent de investering van de eerste site kwijt. Soms is het slimmer om direct te investeren in iets goeds.
-
----
-
-**[Neem Contact Op](/contact)** voor een vrijblijvend gesprek over wat voor jouw situatie het beste werkt.
-
-<!-- regio-links -->
-
-Kom je eruit dat uitbesteden logischer is? Dan lees je op de pagina over [een website laten maken](/diensten/website-laten-maken) hoe zo'n traject verloopt. Voor ondernemers in de omgeving zijn er aparte pagina's over [website laten maken in Woerden](/woerden) en [website laten maken in De Meern](/de-meern).
+Wil je een [website laten maken in Utrecht](/)? Je werkt rechtstreeks met mij vanuit Zuilen. Bekijk de [pakketten en voorwaarden](/prijzen) of [bespreek je website](/contact?dienst=Website%20laten%20maken). Een gesprek kan ook uitkomen op zelf bouwen of op het verbeteren van wat je al hebt.

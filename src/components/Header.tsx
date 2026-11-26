@@ -13,6 +13,7 @@ const PHONE_HREF = "tel:+31625518708";
 const navLinks = [
   { href: "/", label: "Home" },
   { href: "/diensten", label: "Diensten" },
+  { href: "/prijzen", label: "Prijzen" },
   { href: "/projecten", label: "Projecten" },
   { href: "/blog", label: "Blog" },
   { href: "/over-ons", label: "Over mij" },
@@ -71,7 +72,7 @@ export default function Header() {
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center gap-8">
+        <nav className="hidden lg:flex items-center gap-5">
           {navLinks.map((link) => (
             <Link
               key={link.href}
@@ -104,7 +105,7 @@ export default function Header() {
         <a
           href={PHONE_HREF}
           aria-label={`Bel ${PHONE_DISPLAY}`}
-          className="md:hidden ml-auto mr-1 p-2 rounded-lg text-[var(--color-ink)] hover:bg-[var(--color-surface)] transition-colors"
+          className="lg:hidden ml-auto mr-1 p-2 rounded-lg text-[var(--color-ink)] hover:bg-[var(--color-surface)] transition-colors"
         >
           <Phone className="w-5 h-5" aria-hidden="true" />
         </a>
@@ -112,7 +113,7 @@ export default function Header() {
         {/* Mobile Menu Button */}
         <button
           onClick={() => setIsMenuOpen(!isMenuOpen)}
-          className="md:hidden p-2 hover:bg-[var(--color-surface)] rounded-lg transition-colors"
+          className="lg:hidden p-2 hover:bg-[var(--color-surface)] rounded-lg transition-colors"
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
         >
           {isMenuOpen ? (
@@ -125,7 +126,7 @@ export default function Header() {
 
       {/* Mobile Navigation Menu */}
       {isMenuOpen && (
-        <div className="md:hidden bg-[var(--color-bg)]/95 border-t border-[var(--color-border)]">
+        <div className="lg:hidden bg-[var(--color-bg)]/95 border-t border-[var(--color-border)]">
           <nav className="max-w-6xl mx-auto px-6 py-4 flex flex-col gap-2">
             {navLinks.map((link) => (
               <Link

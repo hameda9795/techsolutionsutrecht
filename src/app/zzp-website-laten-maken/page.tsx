@@ -3,16 +3,19 @@ import Footer from "@/components/Footer";
 import Link from "next/link";
 import { User, Check, ArrowRight, Euro, Clock, Star } from "lucide-react";
 import { breadcrumbSchema, serviceSchema, faqPageSchema } from "@/lib/schema";
+import WebsiteProjectProof from "@/components/WebsiteProjectProof";
+import { getAllShowcaseProjects } from "@/lib/showcase-db";
 
 const pageUrl = "https://techsolutionsutrecht.nl/zzp-website-laten-maken";
+export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
-  title: "ZZP Website Laten Maken Utrecht | Snel Online | TechSolutions",
-  description: "Laat een complete ZZP-website maken, snel online en scherp geprijsd. Mobielvriendelijk, met contactmogelijkheden, basis-SEO en direct contact met de developer in Utrecht.",
+  title: "Website laten maken als zzp’er vanaf €300 | TechSolutions",
+  description: "Website laten maken als zzp’er vanaf €300 excl. btw. Een betaalbare zzp-website met je diensten, werk en contact. Direct contact met Max en vooraf een vaste offerte.",
   alternates: { canonical: pageUrl },
   openGraph: {
-    title: "ZZP Website Laten Maken Utrecht | Snel Online | TechSolutions",
-    description: "Een complete professionele ZZP-website, snel online en scherp geprijsd, afgestemd op je bedrijf en klanten.",
+    title: "Website laten maken als zzp’er vanaf €300 | TechSolutions",
+    description: "Een website voor je ZZP-bedrijf met je diensten, werkvoorbeelden en contact. WordPress vanaf €300 excl. btw, met een vooraf afgesproken planning.",
     type: "website",
     locale: "nl_NL",
     url: pageUrl,
@@ -20,15 +23,15 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "ZZP Website Laten Maken Utrecht | Snel Online | TechSolutions",
-    description: "Een complete professionele ZZP-website, snel online en scherp geprijsd, afgestemd op je bedrijf en klanten.",
+    title: "Website laten maken als zzp’er vanaf €300 | TechSolutions",
+    description: "Een website voor je ZZP-bedrijf met je diensten, werkvoorbeelden en contact. WordPress vanaf €300 excl. btw, met een vooraf afgesproken planning.",
   },
 };
 
 const service = serviceSchema({
-  name: "ZZP website laten maken Utrecht",
+  name: "Website laten maken voor zzp’ers",
   description:
-    "Complete professionele website voor ZZP'ers en starters in Utrecht, snel online en scherp geprijsd, met een duidelijke planning, basis-SEO en direct contact met de developer.",
+    "WordPress website voor ZZP’ers en starters, met een duidelijke presentatie van diensten, werkvoorbeelden, contact en een vooraf afgesproken planning.",
   url: pageUrl,
 });
 
@@ -41,7 +44,7 @@ const faqs = [
   {
     question: "Wat kost een ZZP website?",
     answer:
-      "Een complete ZZP-website start vanaf €250 en kost meestal €350–€650. De uiteindelijke prijs hangt af van de inhoud, functies en koppelingen. Je ontvangt vooraf een heldere offerte met een vaste totaalprijs.",
+      "Een WordPress eenpaginawebsite voor je ZZP-bedrijf kost €300. Pakketten met maximaal drie of vijf inhoudspagina’s kosten €500 en €700, exclusief btw. De uiteindelijke prijs hangt af van de inhoud, functies en koppelingen. Je ontvangt vooraf een heldere offerte met een vaste totaalprijs.",
   },
   {
     question: "Hoe snel staat mijn ZZP-website online?",
@@ -66,16 +69,16 @@ const features = [
   "Professioneel design",
   "Mobiel-vriendelijk",
   "SEO-geoptimaliseerd",
-  "CMS om zelf te beheren",
+  "Search Console en sitemap",
   "Contactformulier",
-  "Google Maps integratie",
+  "Uitleg over zelf aanpassen",
 ];
 
 const benefits = [
   {
     icon: Euro,
     title: "Heldere Prijs",
-    description: "Vanaf €250 en meestal €350–€650. Je ontvangt vooraf een vaste totaalprijs."
+    description: "WordPress-pakketten van €300, €500 en €700 excl. btw. Je ontvangt vooraf een vaste totaalprijs."
   },
   {
     icon: Clock,
@@ -89,7 +92,8 @@ const benefits = [
   },
 ];
 
-export default function ZZPWebsitePage() {
+export default async function ZZPWebsitePage() {
+  const projects = await getAllShowcaseProjects();
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(service) }} />
@@ -111,15 +115,15 @@ export default function ZZPWebsitePage() {
               </div>
               
               <h1 className="text-4xl sm:text-5xl font-bold text-[var(--color-ink)] mb-4">
-                ZZP Website{" "}
-                <span className="text-[var(--color-primary)]">Laten Maken in Utrecht</span>
+                Website laten maken als zzp’er{" "}
+                <span className="text-[var(--color-primary)]">vanaf €300</span>
               </h1>
 
               <p className="text-lg text-[var(--color-muted)] mb-6">
-                <strong className="text-[var(--color-ink)]">Een betaalbare, professionele website voor ZZP&apos;ers.</strong>{" "}
-                Scherp geprijsd, met een <strong className="text-primary">duidelijke planning</strong> en{" "}
-                <strong className="text-primary">direct contact met de developer</strong>.
-                Perfect voor <strong className="text-[var(--color-ink)]">startende ondernemers</strong> en ZZP&apos;ers in Utrecht.
+                Werk je voor jezelf? Ik bouw een WordPress-website waarop klanten zien wat je doet,
+                voorbeelden van je werk bekijken en een offerte kunnen aanvragen.
+                Voor €300 excl. btw krijg je één pagina met maximaal zes secties en een contactformulier.
+                Je levert zelf je teksten, foto’s en logo aan.
               </p>
 
               <div className="grid sm:grid-cols-2 gap-3 mb-8">
@@ -134,13 +138,13 @@ export default function ZZPWebsitePage() {
               </div>
 
               <div className="flex flex-wrap items-center gap-6 mb-8">
-                <div className="text-3xl font-bold text-primary">Vanaf €250</div>
-                <div className="text-[var(--color-muted)]">Meestal €350–€650</div>
+                <div className="text-3xl font-bold text-primary">Vanaf €300</div>
+                <div className="text-[var(--color-muted)]">Pakketten: €300 / €500 / €700 excl. btw</div>
               </div>
 
               <div className="flex flex-wrap gap-4">
                 <Link href="/contact" className="btn-primary group">
-                  Direct starten
+                  Offerte voor mijn ZZP-website
                   <ArrowRight className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1" />
                 </Link>
                 <a 
@@ -159,12 +163,40 @@ export default function ZZPWebsitePage() {
                 <div className="text-center">
                   <User className="w-24 h-24 text-primary mx-auto mb-4" />
                   <div className="text-2xl font-bold text-[var(--color-ink)]">ZZP Website</div>
-                  <div className="text-3xl font-extrabold text-primary mt-2">Vanaf €250</div>
+                  <div className="text-3xl font-extrabold text-primary mt-2">Vanaf €300</div>
                   <div className="text-[var(--color-muted)] mt-1">Offerte met vaste totaalprijs</div>
                 </div>
               </div>
             </div>
           </div>
+
+          <section className="mb-16" aria-labelledby="zzp-inhoud">
+            <h2 id="zzp-inhoud" className="mb-6 text-3xl font-bold text-[var(--color-ink)]">Wat heeft een website voor een ZZP’er nodig?</h2>
+            <div className="grid gap-6 sm:grid-cols-2">
+              {[
+                ["Je aanbod", "Vertel welke dienst je levert, voor wie en wat de volgende stap is. Geef iedere belangrijke dienst genoeg ruimte om vragen van je klant te beantwoorden."],
+                ["Wie je bent", "Een foto, je achtergrond en je manier van werken helpen bezoekers bepalen of ze met jou willen samenwerken."],
+                ["Voorbeelden van je werk", "Laat projecten, foto’s of een uitgewerkte opdracht zien. Licht toe wat je hebt gedaan en gebruik alleen resultaten en klantreacties die je kunt onderbouwen."],
+                ["Eenvoudig contact", "Een duidelijk aanvraagformulier, telefoonnummer of WhatsApp-link maakt de stap van interesse naar contact kort. We kiezen wat bij jouw werkwijze past."],
+              ].map(([title, text]) => <article key={title} className="rounded-xl border border-[var(--color-border)] p-6"><h3 className="text-xl font-semibold text-[var(--color-ink)]">{title}</h3><p className="mt-3 leading-relaxed text-[var(--color-muted)]">{text}</p></article>)}
+            </div>
+          </section>
+
+          <section className="mb-16" aria-labelledby="zzp-paginas">
+            <h2 id="zzp-paginas" className="mb-4 text-3xl font-bold text-[var(--color-ink)]">Eén pagina of meerdere pagina’s voor je ZZP-website?</h2>
+            <p className="mb-6 max-w-3xl leading-relaxed text-[var(--color-muted)]">Kies de indeling op basis van de vragen van je klanten. Meer pagina’s helpen alleen als iedere pagina een eigen, nuttige uitleg heeft. We bespreken welke onderwerpen een aparte toelichting nodig hebben.</p>
+            <div className="grid gap-6 md:grid-cols-3">
+              {[
+                { title: "Eén duidelijke dienst", text: "Een compacte pagina kan je aanbod, werkwijze, werkvoorbeelden en contact samenbrengen. Start bevat één pagina met maximaal zes secties.", href: "/diensten/website-laten-maken#wordpress-start", label: "Bekijk WordPress Start" },
+                { title: "Verschillende diensten", text: "Hebben je diensten elk andere vragen of voorbeelden? Dan kan een eigen uitleg per dienst helpen. Business biedt ruimte voor maximaal drie inhoudspagina’s.", href: "/diensten/website-laten-maken#wordpress-business", label: "Bekijk WordPress Business" },
+                { title: "Meer inhoud en lokale informatie", text: "Lokaal Compleet biedt maximaal vijf inhoudspagina’s en relevante lokale inhoud. We bepalen welke informatie bij je echte werkgebied en aanbod past.", href: "/diensten/website-laten-maken#wordpress-lokaal", label: "Bekijk Lokaal Compleet" },
+              ].map((option) => <article key={option.href} className="rounded-xl border border-[var(--color-border)] p-6">
+                <h3 className="text-xl font-semibold text-[var(--color-ink)]">{option.title}</h3>
+                <p className="mt-3 leading-relaxed text-[var(--color-muted)]">{option.text}</p>
+                <Link href={option.href} className="mt-4 inline-block font-semibold text-primary underline underline-offset-4">{option.label}</Link>
+              </article>)}
+            </div>
+          </section>
 
           {/* Benefits */}
           <div className="grid md:grid-cols-3 gap-6 mb-20">
@@ -188,23 +220,22 @@ export default function ZZPWebsitePage() {
             <div className="grid md:grid-cols-2 gap-6 text-[var(--color-muted)]">
               <div>
                 <p className="mb-4">
-                  Als <strong className="text-[var(--color-ink)]">startende ondernemer</strong> of ZZP&apos;er
-                  heeft u vaak een beperkt budget. Een dure website van €2.000+ is dan niet haalbaar. 
-                  Toch heeft u een professionele online presentatie nodig om klanten te winnen.
+                  Als zelfstandige wil je kunnen uitleggen wat je doet en laten zien waarom een klant bij jou past.
+                  We beginnen met die informatie en spreken af welke pagina&apos;s en functies daarvoor nodig zijn.
                 </p>
                 <p>
-                  Daarom bied ik <strong className="text-primary">scherp geprijsde websites voor ZZP&apos;ers</strong>.
-                  Voor een eerlijke prijs krijgt u een complete website die er professioneel uitziet en goed werkt.
-                  Geen watermerken, geen beperkingen — gewoon een goede website, met direct contact met de developer.
+                  Start kost €300 voor één WordPress-pagina met basis-SEO. Business kost €500 voor maximaal drie inhoudspagina’s; Lokaal Compleet €700 voor maximaal vijf. Alles exclusief btw.
+                  Teksten, beelden, extra functies en het gewenste beheer bepalen de uiteindelijke offerte.
+                  Kosten voor domein, hosting en eventueel onderhoud bespreken we naast de bouwprijs.
                 </p>
               </div>
               
               <div>
-                <h3 className="font-semibold text-[var(--color-ink)] mb-3">Wat krijgt u?</h3>
+                <h3 className="font-semibold text-[var(--color-ink)] mb-3">Wat krijg je?</h3>
                 <ul className="space-y-2">
                   <li className="flex items-start gap-2">
                     <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                    <span>Een uniek design (geen templates)</span>
+                    <span>Een ontwerp dat past bij jouw bedrijf</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
@@ -220,12 +251,20 @@ export default function ZZPWebsitePage() {
                   </li>
                   <li className="flex items-start gap-2">
                     <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                    <span>CMS om zelf te beheren</span>
+                    <span>Eigen beheer en uitleg volgens afspraak</span>
                   </li>
                 </ul>
               </div>
             </div>
           </div>
+
+          <section className="mt-16 rounded-2xl bg-[var(--color-surface)] p-8">
+            <h2 className="text-2xl font-bold text-[var(--color-ink)]">Zo bereid je je eerste website voor</h2>
+            <p className="mt-4 leading-relaxed text-[var(--color-muted)]">Verzamel je logo, contactgegevens, een beschrijving van je diensten en voorbeelden van je werk. Heb je al een domeinnaam of website? Neem die mee in het gesprek. Samen bepalen we wat we kunnen gebruiken en wat er nog nodig is.</p>
+            <p className="mt-4 leading-relaxed text-[var(--color-muted)]">Wil je later zelf teksten of foto’s wijzigen? Geef dat vooraf aan. Een WordPress-website kan daarvoor geschikt zijn. We spreken ook af wie updates en back-ups verzorgt.</p>
+            <p className="mt-4 leading-relaxed text-[var(--color-muted)]">Heb je al een site? Gebruik de <Link href="/blog/5-fouten-zzp-website" className="font-semibold text-primary underline underline-offset-4">vijf controles voor je bestaande ZZP-website</Link> om vast te stellen welke onderdelen je wilt verbeteren voordat je een nieuwe bouwopdracht bespreekt. Wil je het budget beperken, lees dan <Link href="/blog/zzp-website-5-tips-geld-besparen" className="font-semibold text-primary underline underline-offset-4">hoe je de scope en eigen voorbereiding op je budget afstemt</Link>.</p>
+            <p className="mt-4 leading-relaxed text-[var(--color-muted)]">Ik werk vanuit Zuilen. Lees meer over mijn aanpak voor{" "}<Link href="/" className="font-semibold text-primary underline underline-offset-4">webdesign in Utrecht</Link>, vergelijk de{" "}<Link href="/blog/wat-kost-website-laten-maken" className="font-semibold text-primary underline underline-offset-4">kosten van een website</Link> of gebruik de{" "}<Link href="/blog/zzp-website-laten-maken" className="font-semibold text-primary underline underline-offset-4">checklist voor je eerste ZZP-website</Link>.</p>
+          </section>
 
           {/* FAQ */}
           <section className="mt-20 max-w-3xl">
@@ -240,6 +279,8 @@ export default function ZZPWebsitePage() {
             </div>
           </section>
         </div>
+        <WebsiteProjectProof projects={projects} />
+        <div className="container-custom mt-8"><Link href="/contact" className="btn-primary">Bespreek jouw ZZP-website</Link></div>
       </main>
       <Footer />
     </>

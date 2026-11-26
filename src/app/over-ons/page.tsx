@@ -5,7 +5,7 @@ import { Award, Users, Zap, TrendingUp, CheckCircle, Linkedin } from "lucide-rea
 
 export const metadata: Metadata = {
   title: "Over Max | TechSolutionsUtrecht - Webdeveloper & SEO Specialist Utrecht",
-  description: "Leer Max kennen - een ervaren webdeveloper met 12+ jaar ervaring in Utrecht. Specialist in websites, webshops en SEO. Bekijk zijn expertise en certificeringen.",
+  description: "Leer Max kennen, webdeveloper in Utrecht-Zuilen met 12+ jaar ervaring. Bekijk zijn werk en aanpak voor WordPress websites, webshops en SEO.",
   openGraph: {
     title: "Over Max | TechSolutionsUtrecht - Webdeveloper & SEO Specialist Utrecht",
     description: "Leer Max kennen - een ervaren webdeveloper met 12+ jaar ervaring in Utrecht. Specialist in websites, webshops en SEO.",
@@ -51,7 +51,7 @@ const certifications = [
   "12 jaar WordPress ervaring",
   "WooCommerce expert",
   "SEO specialist",
-  "Google Search Console certified",
+  "Google Search Console: analyse en monitoring",
 ];
 
 export default function OverMijPage() {

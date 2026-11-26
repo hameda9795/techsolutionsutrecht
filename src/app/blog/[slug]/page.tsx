@@ -15,6 +15,8 @@ import RelatedPosts from '@/components/blog/RelatedPosts';
 import ShareButtons from '@/components/blog/ShareButtons';
 import TableOfContents from '@/components/blog/TableOfContents';
 import Footer from '@/components/Footer';
+import WebsiteCostCalculator from '@/components/WebsiteCostCalculator';
+import { packageGroups } from '@/lib/packages';
 
 interface BlogPostPageProps {
   params: Promise<{
@@ -87,7 +89,11 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   }
   
   const relatedPosts = getRelatedPosts(slug, 3);
-  const tableOfContents = generateTableOfContents(post.content);
+  const isCostGuide = slug === 'wat-kost-website-laten-maken';
+  const tableOfContents = [
+    ...(isCostGuide ? [{ id: 'websitekosten-berekenen', text: 'Bereken je websitekosten', level: 2 }] : []),
+    ...generateTableOfContents(post.content),
+  ];
   const canonicalUrl = `https://techsolutionsutrecht.nl/blog/${slug}`;
   
   // Generate JSON-LD structured data
@@ -158,7 +164,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         <div className="container-custom pt-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
             {/* Main Content */}
-            <div className="lg:col-span-8 xl:col-span-9">
+            <div className="min-w-0 lg:col-span-8 xl:col-span-9">
               {/* Back Link */}
               <Link 
                 href="/blog"
@@ -189,6 +195,12 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               </div>
 
               {/* Blog Content */}
+              {isCostGuide && <WebsiteCostCalculator
+                plans={packageGroups.wordpress.packages.map((plan) => ({
+                  id: plan.id, name: plan.name, price: plan.price, scope: plan.features[0],
+                }))}
+                maintenancePrice={packageGroups.onderhoud.packages.find((plan) => plan.id === 'onderhoud-wordpress')!.price}
+              />}
               <BlogContent contentHtml={post.contentHtml} />
 
               {/* Share at bottom */}

@@ -1,183 +1,49 @@
-import { Metadata } from "next";
-import Footer from "@/components/Footer";
+import type { Metadata } from "next";
 import Link from "next/link";
-import { HelpCircle, ChevronDown } from "lucide-react";
+import Footer from "@/components/Footer";
+import { packageGroups, formatPrice } from "@/lib/packages";
+import { breadcrumbSchema, faqPageSchema } from "@/lib/schema";
 
+const url = "https://techsolutionsutrecht.nl/veelgestelde-vragen";
+const wpPrices = packageGroups.wordpress.packages.map(p => formatPrice(p.price)).join(", ");
+const maintenancePrice = formatPrice(packageGroups.onderhoud.packages.find(p => p.id === "onderhoud-wordpress")!.price);
 export const metadata: Metadata = {
-  title: "Veelgestelde Vragen | TechSolutionsUtrecht - Utrecht",
-  description: "Antwoorden op de meest gestelde vragen over websites, webshops, reparaties en meer. Niet gevonden wat je zocht? Neem contact op!",
-  alternates: { canonical: "https://techsolutionsutrecht.nl/veelgestelde-vragen" },
+  title: "Vragen over je website: kosten, planning en beheer | TechSolutions",
+  description: "Antwoorden over WordPress-pakketten, extra kosten, planning, eigen beheer, onderhoud en vindbaarheid. Direct contact met Max in Utrecht-Zuilen.",
+  alternates: { canonical: url },
 };
-
-const faqs = [
-  {
-    category: "Websites",
-    questions: [
-      {
-        q: "Wat kost een website laten maken?",
-        a: "Een complete professionele website start vanaf €250 en kost meestal €350–€650. Een webshop start vanaf €795 en kost meestal €1.000–€2.000. SEO start vanaf €200 per maand, websiteonderhoud vanaf €29 per maand en een eenvoudige automatisering vanaf €450. Na de intake ontvang je een vaste totaalprijs of duidelijke maandprijs."
-      },
-      {
-        q: "Hoe lang duurt het om een website te maken?",
-        a: "De planning hangt af van inhoud, functies, koppelingen en hoe snel feedback wordt gegeven. Voor een webshop is 1–3 weken een gemiddelde indicatie. Voor websites en automatisering leggen we de planning na de intake vast in de offerte."
-      },
-      {
-        q: "Kan ik zelf mijn website beheren?",
-        a: "Ja, wanneer eigen beheer bij je wensen past. WordPress kan geschikt zijn voor uitgebreid contentbeheer; bij andere projecten kiezen we een andere passende techniek. Je krijgt uitleg over de afgesproken beheeromgeving."
-      },
-      {
-        q: "Is mijn website geschikt voor mobiel?",
-        a: "Absoluut. Alle websites die wij maken zijn 'responsive', wat betekent dat ze perfect werken op desktop, tablet én smartphone."
-      },
-      {
-        q: "Bouwen jullie websites met WordPress of Next.js?",
-        a: "Dat hangt af van je doelen. WordPress past vaak goed wanneer je veel inhoud zelf wilt beheren. Next.js kan beter passen wanneer snelheid of specifieke websitefuncties belangrijk zijn. Beide vallen onder de dienst Website laten maken."
-      }
-    ]
-  },
-  {
-    category: "Webshops",
-    questions: [
-      {
-        q: "Welke betaalmethoden kan ik aanbieden?",
-        a: "Met WooCommerce kun je iDEAL, creditcard (Visa, Mastercard), PayPal, Apple Pay, en vele andere betaalmethoden aanbieden. We helpen je de juiste betaalprovider te kiezen."
-      },
-      {
-        q: "Kan ik mijn bestaande webshop migreren?",
-        a: "Ja, we kunnen je bestaande webshop migreren naar WooCommerce. We zorgen voor een veilige overdracht van producten, klanten en bestellingen."
-      },
-      {
-        q: "Hoe werkt voorraadbeheer?",
-        a: "WooCommerce heeft een ingebouwd voorraadbeheersysteem. Je krijgt automatisch meldingen als producten bijna op zijn, en je kunt eenvoudig bijbestellen."
-      }
-    ]
-  },
-  {
-    category: "Reparaties",
-    questions: [
-      {
-        q: "Hoe snel is mijn laptop gerepareerd?",
-        a: "De meeste reparaties zijn binnen 24 uur klaar. Voor complexe reparaties of als onderdelen besteld moeten worden, kan het 2-3 werkdagen duren."
-      },
-      {
-        q: "Wat kost een scherm reparatie?",
-        a: "Reparaties starten vanaf €35 voor telefoons, €40 voor laptops en computers en €55 voor Macs. De prijs van een schermreparatie hangt af van het model en het benodigde onderdeel; je krijgt altijd vooraf een duidelijke offerte."
-      },
-      {
-        q: "Geven jullie garantie op reparaties?",
-        a: "Ja, we geven 6 maanden garantie op alle reparaties. Dit geldt voor zowel de onderdelen als het werk."
-      },
-      {
-        q: "Wat moet ik doen bij waterschade?",
-        a: "Zet het apparaat ONMIDDELLIJK uit, koppel de stroom los, en laat het drogen. Lees onze uitgebreide gids: MacBook Waterschade of neem direct contact op."
-      },
-      {
-        q: "Repareren jullie ook iPhones en iPads?",
-        a: "Ja! We repareren alle Apple apparaten: iPhone, iPad, MacBook, iMac en Mac mini. We gebruiken originele of hoogwaardige vervangende onderdelen."
-      }
-    ]
-  },
-  {
-    category: "Algemeen",
-    questions: [
-      {
-        q: "Waar zitten jullie?",
-        a: "Onze werkplaats is in Utrecht. Je bent welkom op afspraak. We werken ook op locatie in Utrecht en omgeving voor bedrijven."
-      },
-      {
-        q: "Hoe kan ik contact opnemen?",
-        a: "Je kunt ons bereiken via WhatsApp (+31 6 25518708), email (info@techsolutionsutrecht.nl), of het contactformulier op de website. We reageren meestal binnen 4 uur."
-      },
-      {
-        q: "Wat zijn jullie openingstijden?",
-        a: "We zijn geopend van maandag tot en met vrijdag, van 09:00 tot 18:00. Voor urgente reparaties kun je ook buiten kantoortijden contact opnemen."
-      },
-      {
-        q: "Werken jullie ook op locatie?",
-        a: "Ja, voor bedrijven in Utrecht en omgeving kunnen we op locatie komen voor reparaties of IT-support. Vraag naar de mogelijkheden."
-      }
-    ]
-  }
+const groups = [
+  { id: "kosten", title: "Kosten en functies", questions: [
+    { q: "Wat kost een website laten maken?", a: `WordPress Start, Business en Lokaal Compleet kosten ${wpPrices} eenmalig exclusief btw, voor één, maximaal drie of maximaal vijf inhoudspagina’s. De ontwerpbasis wordt aangepast aan je huisstijl; jij levert teksten, foto’s en logo aan.`, href: "/diensten/website-laten-maken", link: "Bekijk de exacte pakketinhoud" },
+    { q: "Welke kosten komen naast de bouw?", a: "Domein, hosting, onderhoud, betaalde licenties en aanvullende werkzaamheden staan los van de bouwprijs. We leggen vast wat je zelf betaalt en wat apart wordt geoffreerd. Vergelijk ook de verlengingskosten in het tweede jaar.", href: "/blog/wat-kost-website-laten-maken", link: "Bereken en vergelijk je websitekosten" },
+    { q: "Zijn een boekingssysteem of betalingen inbegrepen?", a: "Een gewone contactmogelijkheid is iets anders dan een koppeling met een agenda, reserveringssysteem of betaalprovider. Die extra functies krijgen vooraf een eigen scope en prijs. Voor productverkoop zijn er aparte WooCommerce-pakketten.", href: "/diensten/webshop", link: "Bekijk de webshopmogelijkheden" },
+  ] },
+  { id: "planning", title: "Voorbereiding en planning", questions: [
+    { q: "Hoe snel kan mijn website klaar zijn?", a: "Dat hangt af van omvang, functies, aangeleverde inhoud, feedback en beschikbaarheid. We spreken een start- en opleverdatum af na beoordeling. Binnen een week is geen standaardgarantie.", href: "/website-binnen-week", link: "Controleer of een versnelde planning haalbaar is" },
+    { q: "Wat lever ik zelf aan?", a: "Je verzamelt gecontroleerde teksten, logo, foto’s, contactgegevens en informatie per dienst. Bij de WordPress-pakketten hoort lichte redactie van aangeleverde inhoud binnen de beschreven grenzen; volledige copywriting en fotografie zijn aparte opdrachten.", href: "/blog/zzp-website-laten-maken", link: "Gebruik de checklist voor je eerste website" },
+    { q: "Kan een bestaande website worden meegenomen?", a: "Eerst bekijken we inhoud, functies, URL’s en toegang. Een verhuizing, herontwerp en technisch herstel zijn verschillende werkzaamheden. Welke onderdelen we behouden en wat apart nodig is, staat in de offerte.", href: "/contact?dienst=Website%20laten%20maken&van=%2Fveelgestelde-vragen", link: "Bespreek je bestaande website" },
+  ] },
+  { id: "beheer", title: "Beheer en onderhoud", questions: [
+    { q: "Kan ik teksten en foto’s zelf aanpassen?", a: "Bij WordPress kun je inhoud beheren en krijg je uitleg over de afgesproken onderdelen. Maatwerk Start heeft geen CMS; Maatwerk Business bevat eenvoudig inhoudsbeheer. We kiezen de techniek op basis van jouw beheerwensen.", href: "/diensten/maatwerk-website", link: "Vergelijk maatwerk met en zonder inhoudsbeheer" },
+    { q: "Is een onderhoudsabonnement verplicht?", a: `Nee. Bouw en onderhoud zijn aparte diensten. Je kunt updates zelf organiseren of WordPress Onderhoud kiezen voor ${maintenancePrice} per maand exclusief btw. Spreek ook zonder abonnement af wie updates en back-ups verzorgt.`, href: "/diensten/website-onderhoud", link: "Lees de onderhoudsvoorwaarden" },
+    { q: "Valt iedere wijziging of storing onder onderhoud?", a: "Nee. WordPress Onderhoud bevat maximaal vijftien minuten kleine wijzigingen per maand; WooCommerce Onderhoud dertig minuten. Ongebruikte tijd schuift niet door. Grote reparaties, extra ontwikkeling en uitgebreid herstel krijgen een aparte beoordeling en offerte.", href: "/prijzen#onderhoud-pakketten", link: "Vergelijk de onderhoudspakketten" },
+  ] },
+  { id: "vindbaarheid", title: "Vindbaarheid en samenwerken", questions: [
+    { q: "Staat mijn nieuwe website automatisch bovenaan in Google?", a: "Nee. Basis-SEO omvat de afgesproken technische en inhoudelijke inrichting. Google bepaalt of en waar een pagina verschijnt. Search Console helpt indexstatus, zoekopdrachten en klikken te onderzoeken; een sitemap of goede testscore garandeert geen positie.", href: "/blog/website-niet-in-google", link: "Lees het verschil tussen indexeren en ranken" },
+    { q: "Hoe zien we of de website aanvragen oplevert?", a: "We spreken af welke contactacties relevant zijn. Vanaf WordPress Business hoort GA4-inrichting met de beschreven contactmeting bij het pakket, met aandacht voor toestemming. Een klik op telefoon of WhatsApp is iets anders dan een bevestigde aanvraag of een klant.", href: "/diensten/seo", link: "Bekijk de aanpak voor SEO en meten" },
+    { q: "Waar kunnen we kennismaken?", a: "Ik ben Max en werk vanuit Utrecht-Zuilen. We kunnen online overleggen of een afspraak maken. Bezoek is op afspraak; vertel vooraf waarover je wilt spreken en welke website je nu hebt.", href: "/", link: "Website laten maken in Utrecht: werk en aanpak" },
+  ] },
 ];
 
 export default function FAQPage() {
-  return (
-    <>
-      <main className="pt-32 pb-24">
-        <div className="container-custom max-w-4xl">
-          {/* Header */}
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-primary/10 mb-6">
-              <HelpCircle className="w-8 h-8 text-primary" />
-            </div>
-            <h1 className="text-4xl sm:text-5xl font-bold text-[var(--color-ink)] mb-6">
-              Veelgestelde{" "}
-              <span className="text-[var(--color-primary)]">Vragen</span>
-            </h1>
-            <p className="text-lg text-[var(--color-muted)]">
-              Antwoorden op de meest gestelde vragen. Niet gevonden wat je zocht?{" "}
-              <Link href="/contact" className="text-primary hover:underline">Neem contact op</Link>.
-            </p>
-          </div>
-
-          {/* FAQ Sections */}
-          <div className="space-y-12">
-            {faqs.map((section) => (
-              <div key={section.category}>
-                <h2 className="text-2xl font-bold text-[var(--color-ink)] mb-6 flex items-center gap-3">
-                  <span className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary text-lg">
-                    {section.category[0]}
-                  </span>
-                  {section.category}
-                </h2>
-                
-                <div className="space-y-4">
-                  {section.questions.map((faq, index) => (
-                    <div 
-                      key={index}
-                      className="bg-[var(--color-bg)] border border-[var(--color-border)] rounded-xl overflow-hidden"
-                    >
-                      <div className="p-6">
-                        <h3 className="text-lg font-semibold text-[var(--color-ink)] mb-3 flex items-start gap-3">
-                          <ChevronDown className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
-                          {faq.q}
-                        </h3>
-                        <p className="text-[var(--color-muted)] pl-8">
-                          {faq.a}
-                        </p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {/* CTA */}
-          <div className="mt-16 p-8 bg-[var(--color-primary)]/10 border border-primary/20 rounded-2xl text-center">
-            <h3 className="text-2xl font-bold text-[var(--color-ink)] mb-4">
-              Nog vragen?
-            </h3>
-            <p className="text-[var(--color-muted)] mb-6">
-              We helpen je graag persoonlijk. Stuur ons een bericht en we reageren binnen 4 uur.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Link href="/contact" className="btn-primary">
-                Contact Opnemen
-              </Link>
-              <a 
-                href="https://wa.me/31625518708"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-ghost"
-              >
-                WhatsApp
-              </a>
-            </div>
-          </div>
-        </div>
-      </main>
-      <Footer />
-    </>
-  );
+  const schemas = [breadcrumbSchema([{ name: "Home", url: "https://techsolutionsutrecht.nl/" }, { name: "Veelgestelde vragen", url }]), faqPageSchema(groups.flatMap(g => g.questions.map(q => ({ question: q.q, answer: q.a }))))];
+  return <>
+    {schemas.map((schema, i) => <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema).replace(/</g, "\\u003c") }} />)}
+    <main className="package-surface">
+      <header className="package-container package-page-hero"><nav className="package-breadcrumb" aria-label="Kruimelpad"><Link href="/">Home</Link><span aria-hidden="true">/</span><span>Veelgestelde vragen</span></nav><h1 className="package-page-title">Vragen vóór en na je websiteproject</h1><p className="package-page-intro">Wat hoort bij de prijs, wat moet jij voorbereiden en wie regelt het beheer? Hier vind je de afspraken voor mijn websiteprojecten vanuit Utrecht-Zuilen, met links naar de volledige uitleg.</p></header>
+      <nav className="package-container package-jump-links" aria-label="Kies een onderwerp">{groups.map(g => <a key={g.id} href={`#${g.id}`}>{g.title}</a>)}</nav>
+      {groups.map(g => <section key={g.id} id={g.id} className="package-container service-faq scroll-mt-28"><h2>{g.title}</h2>{g.questions.map(q => <details key={q.q}><summary>{q.q}</summary><p>{q.a}</p><p><Link href={q.href} className="font-semibold text-[var(--color-primary)] underline underline-offset-4">{q.link}</Link></p></details>)}</section>)}
+      <section className="service-consult"><div className="package-container"><h2>Staat jouw vraag er niet bij?</h2><p>Stuur je vraag en eventueel het adres van je huidige website. Je bespreekt het werk rechtstreeks met degene die de website bouwt.</p><Link href="/contact?van=%2Fveelgestelde-vragen" className="package-button">Neem contact op met Max</Link></div></section>
+    </main><Footer />
+  </>;
 }

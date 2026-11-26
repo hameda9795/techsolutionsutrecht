@@ -1,15 +1,18 @@
 # TechSolutionsUtrecht
 
-> Digitale diensten voor ondernemers in Utrecht: professionele websites, WooCommerce-webshops, SEO, websiteonderhoud en praktische WhatsApp-automatisering. Direct contact met de developer. 12+ jaar ervaring. KvK 99202301.
+> Website laten maken in Utrecht, met direct contact met Max in Zuilen. WordPress-pakketten, WooCommerce-webshops en maatwerk websites. Aanvullend: SEO, onderhoud, chatbots en Windows-applicaties. KvK 99202301.
 
-TechSolutionsUtrecht is een eenmanszaak van Max, webdeveloper en IT-consultant in Utrecht (Nederland). Werkgebied: Utrecht, Nieuwegein, Zeist, Houten, Amersfoort, IJsselstein, De Meern en Vleuten. Contact: info@techsolutionsutrecht.nl, +31 6 25518708.
+TechSolutionsUtrecht is een eenmanszaak van Max, webdeveloper in Utrecht-Zuilen (Nederland). De belangrijkste focus is websites voor ondernemers in Utrecht. Contact: info@techsolutionsutrecht.nl, +31 6 25518708. Alle genoemde prijzen zijn exclusief btw.
 
 ## Diensten
-- [Website laten maken](https://techsolutionsutrecht.nl/diensten/website-laten-maken): Complete professionele websites vanaf €250, meestal €350–€650, inclusief basis-SEO en volledig eigendom.
-- [Webshop laten maken (WooCommerce)](https://techsolutionsutrecht.nl/diensten/webshop): Webshops met iDEAL, voorraadbeheer en verzending.
-- [Hoger in Google](https://techsolutionsutrecht.nl/diensten/seo): Technische SEO, belangrijke pagina’s, lokale vindbaarheid en rapportage vanaf €200 per maand.
-- [Website onderhoud](https://techsolutionsutrecht.nl/diensten/website-onderhoud): Updates, back-ups en technische controles vanaf €29 per maand.
-- [WhatsApp & automatisering](https://techsolutionsutrecht.nl/diensten/whatsapp-automatisering): Eén eenvoudige workflow vanaf €450 voor WhatsApp, websites, e-mail en maximaal twee systemen.
+- [WordPress website laten maken](https://techsolutionsutrecht.nl/diensten/website-laten-maken): €300 voor 1 pagina, €500 voor maximaal 3 en €700 voor maximaal 5 inhoudspagina’s. Basis-SEO en Search Console in elk pakket; GA4 vanaf Business en een geschikt Google Bedrijfsprofiel bij Lokaal Compleet. Aangeleverde teksten en beelden; aangepaste ontwerpbasis.
+- [WooCommerce webshop laten maken](https://techsolutionsutrecht.nl/diensten/webshop): €950, €1.450 of €2.100 voor respectievelijk maximaal 10, 30 of 60 ingevoerde producten, met iDEAL, voorraadbeheer en afgesproken verzendinstellingen.
+- [Maatwerk website laten maken](https://techsolutionsutrecht.nl/diensten/maatwerk-website): Zonder WordPress, vanaf €1.500 voor maximaal 3 pagina’s zonder CMS of €2.750 voor maximaal 5 met een eenvoudig CMS. De vaste offerte volgt na de intake.
+- [SEO uitbesteden](https://techsolutionsutrecht.nl/diensten/seo): Gratis korte scan. SEO Start €300 eenmalig; Lokale SEO €250 en SEO Groei €450 per maand, met €300 eenmalige start bij een nieuw traject. Een bruikbare eerdere SEO Start wordt niet dubbel gefactureerd. AI-vindbaarheid check €250 eenmalig; geen vermelding of positie gegarandeerd.
+- [Chatbot laten maken](https://techsolutionsutrecht.nl/diensten/chatbot-laten-maken): Vanaf €650 of €1.250 voor één websitekanaal en één taal. AI-gebruik, hosting en licenties apart.
+- [Maatwerk software laten maken](https://techsolutionsutrecht.nl/diensten/maatwerk-software): Windows-applicaties vanaf €1.500 of €3.000 voor één gebruiker en één afgebakend werkproces, met installatie en broncode. Offerte na het vastleggen van functies.
+- [WordPress onderhoud](https://techsolutionsutrecht.nl/diensten/website-onderhoud): €39 per maand voor WordPress of €69 voor WooCommerce. Hosting, licenties en groot herstelwerk apart.
+- [Prijzen en pakketten](https://techsolutionsutrecht.nl/prijzen): Vergelijk de precieze scope en bijkomende kosten. Hosting, domein, onderhoud en betaalde licenties zijn niet inbegrepen in de bouwprijzen.
 - [Alle diensten](https://techsolutionsutrecht.nl/diensten)
 
 ## Doelgroep-pagina's
@@ -21,7 +24,7 @@ TechSolutionsUtrecht is een eenmanszaak van Max, webdeveloper en IT-consultant i
 
 ## Belangrijke pagina's
 - [Over ons](https://techsolutionsutrecht.nl/over-ons)
-- [Projecten](https://techsolutionsutrecht.nl/projecten): Echte opgeleverde digitale projecten met live-links en details.
+- [Projecten](https://techsolutionsutrecht.nl/projecten): Bekijk voorbeelden, toelichting en beschikbare projectlinks.
 - [Blog](https://techsolutionsutrecht.nl/blog)
 - [Veelgestelde vragen](https://techsolutionsutrecht.nl/veelgestelde-vragen)
 - [Contact](https://techsolutionsutrecht.nl/contact)

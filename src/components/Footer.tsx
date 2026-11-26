@@ -17,6 +17,7 @@ const footerLinks = {
     { href: "/website-laten-maken-coach", label: "Coaches" },
   ],
   company: [
+    { href: "/prijzen", label: "Pakketten en prijzen" },
     { href: "/over-ons", label: "Over mij" },
     // "Projecten" stond hier twee keer — dubbele identieke link in de footer op
     // elke pagina van de site.
@@ -24,6 +25,7 @@ const footerLinks = {
     { href: "/zzp-website-laten-maken", label: "Website voor ZZP'ers" },
     { href: "/blog", label: "Blog" },
     { href: "/veelgestelde-vragen", label: "FAQ" },
+    { href: "/reparaties", label: "Apparaatreparaties" },
     { href: "/contact", label: "Contact" },
   ],
   legal: [
@@ -31,7 +33,7 @@ const footerLinks = {
     { href: "#", label: "KvK: 99202301" },
   ],
   regio: [
-    { href: "/utrecht", label: "Utrecht" },
+    { href: "/", label: "Utrecht" },
     { href: "/nieuwegein", label: "Nieuwegein" },
     { href: "/zeist", label: "Zeist" },
     { href: "/houten", label: "Houten" },
@@ -72,7 +74,8 @@ export default function Footer() {
               </span>
             </Link>
             <p className="text-sm mb-4">
-              Professionele websites, webshops, SEO en slimme automatisering in Utrecht.
+              Webdesign vanuit Utrecht-Zuilen. Websites en webshops voor ondernemers,
+              met persoonlijk contact en ondersteuning na de oplevering.
             </p>
             <div className="flex gap-3">
               {socialLinks.map((social) => (

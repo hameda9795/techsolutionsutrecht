@@ -33,6 +33,7 @@ function mapRow(row: Record<string, unknown>): ShowcaseProject {
     image: (row.image as string) ?? "",
     accent: (row.accent as string) ?? "bg-[var(--color-primary)]",
     featured: Boolean(row.featured),
+    updatedAt: row.updated_at ? new Date(String(row.updated_at)).toISOString() : undefined,
   };
 }
 
@@ -112,7 +113,8 @@ export async function getShowcaseProjectById(
     return rows[0] ? mapRow(rows[0] as Record<string, unknown>) : null;
   } catch (error) {
     console.error("Get showcase project error:", error);
-    return null;
+    // A temporary database failure must not turn a published project into a 404.
+    throw error;
   }
 }
 

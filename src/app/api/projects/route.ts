@@ -1,3 +1,4 @@
+import { authorizeAdminMutation } from "@/lib/admin-auth";
 import { NextRequest, NextResponse } from 'next/server';
 import { 
   getAllProjects, 
@@ -25,6 +26,8 @@ export async function GET() {
 
 // POST /api/projects - Create new project
 export async function POST(request: NextRequest) {
+  const rejected = await authorizeAdminMutation(request);
+  if (rejected) return rejected;
   try {
     await initDatabase();
     
@@ -67,6 +70,8 @@ export async function POST(request: NextRequest) {
 
 // DELETE /api/projects/reset - Reset to defaults
 export async function DELETE(request: NextRequest) {
+  const rejected = await authorizeAdminMutation(request);
+  if (rejected) return rejected;
   const { searchParams } = new URL(request.url);
   const action = searchParams.get('action');
   

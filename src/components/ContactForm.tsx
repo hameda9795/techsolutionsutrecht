@@ -1,24 +1,33 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { Send, CheckCircle, AlertCircle } from "lucide-react";
-import { contactSubjects } from "@/lib/contact-subjects";
+import { contactSubjects, contactSubjectLabels, type ContactSubject } from "@/lib/contact-subjects";
+import { trackSuccessfulContact } from "@/lib/contact-analytics";
 
-export default function ContactForm() {
+export default function ContactForm({ initialSubject = "", initialPackage, sourcePage = "/contact" }: {
+  initialSubject?: ContactSubject | "";
+  initialPackage?: { id: string; name: string; subject: ContactSubject; priceLabel: string };
+  sourcePage?: string;
+}) {
+  const [selectedPackage, setSelectedPackage] = useState(initialPackage);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     phone: "",
-    subject: "",
+    subject: initialSubject,
     message: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const sending = useRef(false);
 
   const [error, setError] = useState("");
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (sending.current) return;
+    sending.current = true;
     setIsSubmitting(true);
     setError("");
     
@@ -32,20 +41,23 @@ export default function ContactForm() {
         // welke stads- of dienstpagina daadwerkelijk klanten oplevert.
         body: JSON.stringify({
           ...formData,
-          page: typeof window !== "undefined" ? window.location.pathname : undefined,
+          packageId: selectedPackage?.id,
+          page: sourcePage,
         }),
       });
 
       const data = await response.json();
 
-      if (response.ok) {
+      if (response.ok && data.success === true) {
         setIsSubmitted(true);
+        trackSuccessfulContact(formData.subject, selectedPackage?.id);
       } else {
         setError(data.error || "Er is iets misgegaan. Probeer het opnieuw.");
       }
     } catch (err) {
       setError("Er is iets misgegaan. Probeer het later opnieuw.");
     } finally {
+      sending.current = false;
       setIsSubmitting(false);
     }
   };
@@ -53,6 +65,7 @@ export default function ContactForm() {
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
   ) => {
+    if (e.target.name === "subject" && e.target.value !== selectedPackage?.subject) setSelectedPackage(undefined);
     setFormData((prev) => ({
       ...prev,
       [e.target.name]: e.target.value,
@@ -69,11 +82,12 @@ export default function ContactForm() {
           Bedankt voor je bericht!
         </h3>
         <p className="text-[var(--color-muted)] mb-6">
-          We nemen binnen 4 uur contact met je op.
+          Ik neem zo snel mogelijk contact met je op om je aanvraag te bespreken.
         </p>
         <button
           onClick={() => {
             setIsSubmitted(false);
+            setSelectedPackage(undefined);
             setFormData({
               name: "",
               email: "",
@@ -93,8 +107,14 @@ export default function ContactForm() {
   return (
     <form 
       onSubmit={handleSubmit}
-      className="bg-[var(--color-bg)] border border-[var(--color-border)] rounded-2xl p-8"
+      className="bg-[var(--color-bg)] border border-[var(--color-border)] rounded-2xl p-5 sm:p-8"
     >
+      {selectedPackage && <div className="mb-7 rounded-lg border border-[#cad5d6] bg-[#edf5f3] p-5 text-[#071c3d]" aria-label="Gekozen pakket">
+        <p className="text-sm">Je aanvraag gaat over</p>
+        <p className="mt-1 text-xl font-bold">{selectedPackage.name}</p>
+        <p className="mt-1 text-sm leading-relaxed">{selectedPackage.priceLabel}</p>
+        <p className="mt-3 text-sm">Vrijblijvende aanvraag. De scope en eventuele extra kosten spreken we vooraf af.</p>
+      </div>}
       {/* Error Message */}
       {error && (
         <div className="mb-6 p-4 bg-red-500/10 border border-red-500/30 rounded-xl flex items-start gap-3">
@@ -103,7 +123,7 @@ export default function ContactForm() {
         </div>
       )}
 
-      <div className="grid sm:grid-cols-2 gap-6"
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6"
       >
         {/* Name */}
         <div>
@@ -178,11 +198,11 @@ export default function ContactForm() {
             required
             value={formData.subject}
             onChange={handleChange}
-            className="w-full px-4 py-3 bg-[var(--color-surface)] border border-[var(--color-border)] rounded-lg text-[var(--color-ink)] focus:outline-none focus:border-primary transition-colors"
+            className="w-full min-w-0 max-w-full px-4 py-3 bg-[var(--color-surface)] border border-[var(--color-border)] rounded-lg text-[var(--color-ink)] focus:outline-none focus:border-primary transition-colors"
           >
             <option value="" disabled>Selecteer een onderwerp</option>
             {contactSubjects.map((subject) => (
-              <option key={subject} value={subject}>{subject}</option>
+              <option key={subject} value={subject}>{contactSubjectLabels[subject]}</option>
             ))}
           </select>
         </div>
@@ -204,7 +224,7 @@ export default function ContactForm() {
           value={formData.message}
           onChange={handleChange}
           className="w-full px-4 py-3 bg-[var(--color-surface)] border border-[var(--color-border)] rounded-lg text-[var(--color-ink)] placeholder-[var(--text-muted)] focus:outline-none focus:border-primary transition-colors resize-none"
-          placeholder="Vertel ons over je project of probleem..."
+          placeholder={selectedPackage?.id === "gratis-seo-scan" ? "Vermeld je websiteadres, wat je bedrijf doet en voor welke dienst je gevonden wilt worden." : "Vertel wat je bedrijf doet, welke website of functies je nodig hebt en wat je wilt bereiken."}
         />
       </div>
 

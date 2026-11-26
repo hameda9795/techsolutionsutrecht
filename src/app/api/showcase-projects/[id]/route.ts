@@ -1,3 +1,4 @@
+import { authorizeAdminMutation } from "@/lib/admin-auth";
 import { NextRequest, NextResponse } from "next/server";
 import {
   getShowcaseProjectById,
@@ -8,10 +9,10 @@ import {
 
 // GET /api/showcase-projects/[id]
 export async function GET(
-  _request: NextRequest,
-  { params }: { params: { id: string } }
+  request: NextRequest,
+  { params }: { params: Promise<{ id: string }> }
 ) {
-  const project = await getShowcaseProjectById(params.id);
+  const project = await getShowcaseProjectById((await params).id);
   if (!project) {
     return NextResponse.json({ error: "Niet gevonden" }, { status: 404 });
   }
@@ -21,8 +22,10 @@ export async function GET(
 // PUT /api/showcase-projects/[id]
 export async function PUT(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
+  const rejected = await authorizeAdminMutation(request);
+  if (rejected) return rejected;
   try {
     const input = normalizeShowcaseInput(await request.json());
 
@@ -33,7 +36,7 @@ export async function PUT(
       );
     }
 
-    const project = await updateShowcaseProject(params.id, input);
+    const project = await updateShowcaseProject((await params).id, input);
     if (!project) {
       return NextResponse.json(
         { error: "Niet gevonden of bijwerken mislukt" },
@@ -49,10 +52,12 @@ export async function PUT(
 
 // DELETE /api/showcase-projects/[id]
 export async function DELETE(
-  _request: NextRequest,
-  { params }: { params: { id: string } }
+  request: NextRequest,
+  { params }: { params: Promise<{ id: string }> }
 ) {
-  const success = await deleteShowcaseProject(params.id);
+  const rejected = await authorizeAdminMutation(request);
+  if (rejected) return rejected;
+  const success = await deleteShowcaseProject((await params).id);
   if (!success) {
     return NextResponse.json(
       { error: "Niet gevonden of verwijderen mislukt" },

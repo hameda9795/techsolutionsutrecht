@@ -1,5 +1,4 @@
 import { Metadata } from "next";
-import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Link from "next/link";
 import { Calendar, Clock, ArrowLeft, User, CheckCircle, Rocket } from "lucide-react";
@@ -19,7 +18,7 @@ export const metadata: Metadata = {
     url: canonicalUrl,
     locale: "nl_NL",
     publishedTime: "2025-02-26",
-    modifiedTime: "2026-07-18",
+    modifiedTime: "2026-10-15",
     authors: ["Max"],
   },
 };
@@ -29,7 +28,7 @@ const blogPostingSchema = articleSchema({
   description: "Lees welke voorwaarden, fasen en aandachtspunten bepalen of een versneld websiteproject binnen een week haalbaar is.",
   url: canonicalUrl,
   datePublished: "2025-02-26",
-  dateModified: "2026-07-18",
+  dateModified: "2026-10-15",
   author: "Max",
 });
 
@@ -37,17 +36,14 @@ const processSteps = [
   {
     day: "Fase 1",
     title: "Kennismaking & Strategie",
-    description: `De eerste dag is cruciaal. We plannen direct een intakegesprek (telefonisch of via video) 
-    waarin we je wensen, doelgroep en concurrenten bespreken. Je ontvangt een vragenlijst waarmee 
-    we inzicht krijgen in je huisstijl, voorkeuren en benodigde functionaliteit. 
-    Aan het einde van deze fase hebben we een duidelijk plan en een haalbare tijdlijn.`,
+    description: `We bespreken je doel, pagina's, functies en gewenste deadline. Voor een versnelde planning moeten teksten, foto's, logo en benodigde accounttoegang vóór de bouw beschikbaar zijn. We controleren de agenda en spreken de scope, feedbackmomenten en opleverdatum af.`,
     deliverable: "✓ Plan van aanpak ✓ Tijdlijn"
   },
   {
     day: "Fase 2",
     title: "Design & Concept",
-    description: `Ik ga aan de slag met een eerste ontwerp. Dit is geen standaard template,
-    maar een custom design gebaseerd op jouw huisstijl en wensen. Je ontvangt een concept waarmee 
+    description: `Ik ga aan de slag met een eerste ontwerp. Bij een WordPress-pakket pas ik
+    de ontwerpbasis aan jouw huisstijl aan; een eigen ontwerp hoort bij het maatwerktraject. Je ontvangt een concept waarmee
     je kunt visualiseren hoe je website eruit komt te zien. We plannen direct een feedbackronde 
     zodat we eventuele wijzigingen direct kunnen doorvoeren.`,
     deliverable: "✓ Design concept ✓ Feedbackronde"
@@ -55,10 +51,7 @@ const processSteps = [
   {
     day: "Fase 3",
     title: "Ontwikkeling & Bouw",
-    description: `Zodra het design is goedgekeurd, starten we met de bouw. We kiezen een passende
-    technische basis, bijvoorbeeld WordPress of Next.js. Tegelijkertijd vragen we je
-    om de content (teksten en afbeeldingen) die we hebben afgesproken. De website begint vorm te krijgen 
-    met alle pagina's en functionaliteit.`,
+    description: `Na akkoord op het concept bouw ik de afgesproken pagina's en functies met de vooraf gekozen techniek. De aangeleverde inhoud is daarbij het uitgangspunt. Nieuwe wensen beoordeel ik op gevolgen voor prijs en planning voordat ik ze toevoeg.`,
     deliverable: "✓ Website structuur ✓ Functionaliteit"
   },
   {
@@ -73,10 +66,7 @@ const processSteps = [
   {
     day: "Fase 5",
     title: "Lancering & Oplevering",
-    description: `Na jouw definitieve goedkeuring zetten we de website live. We configureren je domeinnaam, 
-    zorgen voor SSL-beveiliging (het groene slotje), en testen nogmaals of alles correct werkt. 
-    Je ontvangt een korte training zodat je zelf eenvoudige wijzigingen kunt doen. 
-    Gefeliciteerd, je website is online!`,
+    description: `Na jouw goedkeuring zetten we de website live en controleren we HTTPS, links, formulieren en de afgesproken SEO-basis. Je ontvangt uitleg over het afgesproken beheer. Bij WordPress kun je zelf inhoud wijzigen; een maatwerkwebsite heeft alleen een CMS als dat in het pakket is opgenomen. Hosting en domein zijn apart.`,
     deliverable: "✓ Live ✓ Training"
   }
 ];
@@ -84,19 +74,19 @@ const processSteps = [
 const whyFast = [
   {
     title: "Efficiënte Werkwijze",
-    description: "We hebben een bewezen proces dat we keer op keer toepassen. Geen tijdverlies, direct aan de slag."
+    description: "Een afgebakende scope en vaste beslismomenten helpen voorkomen dat tijdens de bouw steeds nieuwe taken ontstaan."
   },
   {
     title: "Ervaren Developer",
     description: "Met meer dan 12 jaar ervaring werk ik met een duidelijke aanpak en heb je direct contact met de persoon die je website bouwt."
   },
   {
-    title: "Smart Templates",
-    description: "We gebruiken bewezen fundamenten die we vervolgens volledig customizen naar jouw wensen."
+    title: "Passende ontwerpbasis",
+    description: "Bij WordPress passen we een bestaande ontwerpbasis aan je huisstijl aan. Een volledig eigen ontwerp krijgt een afzonderlijke scope."
   },
   {
-    title: "Clear Communication",
-    description: "Direct contact via WhatsApp of telefoon. Geen wachttijden, geen miscommunicatie."
+    title: "Direct contact",
+    description: "Je bespreekt keuzes rechtstreeks met de developer. Gebundelde feedback en één beslisser helpen het tempo te bewaren."
   }
 ];
 
@@ -134,7 +124,7 @@ export default function WebsiteBinnenWeekBlogPost() {
 
             {/* Category */}
             <span className="inline-block px-4 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium mb-4">
-              Snelle Oplevering
+              Websites
             </span>
 
             {/* Title */}
@@ -152,11 +142,11 @@ export default function WebsiteBinnenWeekBlogPost() {
               </div>
               <div className="flex items-center gap-2">
                 <Calendar className="w-4 h-4" />
-                <time dateTime="2026-07-18">Bijgewerkt op 18 juli 2026</time>
+                <time dateTime="2026-10-15">Bijgewerkt op 15 oktober 2026</time>
               </div>
               <div className="flex items-center gap-2">
                 <Clock className="w-4 h-4" />
-                <span>7 min leestijd</span>
+                <span>4 min leestijd</span>
               </div>
             </div>
 
@@ -168,6 +158,7 @@ export default function WebsiteBinnenWeekBlogPost() {
             </div>
 
             {/* Process */}
+            <p className="mb-10 leading-relaxed text-[var(--color-muted)]">Dit artikel legt de werkfasen uit. Wil je een concrete deadline bespreken? Gebruik eerst de <Link href="/website-binnen-week" className="font-semibold text-primary underline underline-offset-4">haalbaarheidscheck voor een website binnen één week</Link>. Daar zie je wat aan scope, materiaal, toegang en feedback klaar moet zijn voordat ik een planning kan bevestigen.</p>
             <div className="mb-12">
               <h2 className="text-2xl font-bold text-[var(--color-ink)] mb-8">
                 De Fasen van een Versneld Traject
@@ -188,7 +179,7 @@ export default function WebsiteBinnenWeekBlogPost() {
                           {index + 1}
                         </div>
                         
-                        <div className="flex-1">
+                        <div className="flex-1 min-w-0">
                           <div className="text-primary font-semibold mb-1">{step.day}</div>
                           
                           <h3 className="text-xl font-bold text-[var(--color-ink)] mb-3">
@@ -261,11 +252,11 @@ export default function WebsiteBinnenWeekBlogPost() {
               
               <div className="flex flex-wrap gap-4">
                 <Link 
-                  href="/website-binnen-week"
+                  href="/diensten/website-laten-maken"
                   className="btn-primary inline-flex"
                   style={{"viewTransitionName": "button"} as React.CSSProperties}
                 >
-                  Lees meer over snelle oplevering
+                  Bekijk de WordPress-pakketten
                 </Link>
                 
                 <Link 
@@ -337,7 +328,7 @@ export default function WebsiteBinnenWeekBlogPost() {
                 >
                   <span className="text-xs text-primary font-medium">Kosten</span>
                   <h4 className="font-semibold text-[var(--color-ink)] mt-2">
-                    Wat Kost een Website Laten Maken in 2025?
+                    Wat Kost een Website Laten Maken in 2026?
                   </h4>
                 </Link>
               </div>

@@ -14,16 +14,17 @@ export default function CTA() {
       <div className="container-custom relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[var(--color-ink)] mb-6">
-            Klaar om je tech naar het{" "}
-            <span className="text-[var(--color-primary)]">volgende niveau</span> te brengen?
+            Een website voor{" "}
+            <span className="text-[var(--color-primary)]">jouw bedrijf?</span>
           </h2>
           <p className="text-xl text-[var(--color-muted)] mb-10 max-w-2xl mx-auto">
-            Vraag een gratis offerte aan. Binnen 4 uur reactie. Geen verplichtingen.
+            Vertel me wat je doet en wat je website nodig heeft. Je ontvangt een
+            voorstel met een duidelijke aanpak en prijs.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link href="/contact" className="btn-primary group text-lg px-10 py-5">
-              Start je project
+              Bespreek je website
               <ArrowRight className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1" />
             </Link>
             <a
@@ -41,7 +42,7 @@ export default function CTA() {
 
           {/* Trust Text */}
           <p className="mt-8 text-[var(--color-muted)] text-sm">
-            ✓ Gratis adviesgesprek ✓ Binnen 4 uur reactie ✓ Geen verplichtingen
+            ✓ Gratis adviesgesprek ✓ Direct contact met Max ✓ Vrijblijvende offerte
           </p>
         </div>
       </div>

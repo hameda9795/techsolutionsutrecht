@@ -1,8 +1,11 @@
+import { authorizeAdminMutation } from "@/lib/admin-auth";
 import { put } from '@vercel/blob';
 import { NextRequest, NextResponse } from 'next/server';
 
 // POST /api/upload - Upload image to Vercel Blob
 export async function POST(request: NextRequest) {
+  const rejected = await authorizeAdminMutation(request);
+  if (rejected) return rejected;
   try {
     // Get filename from query params
     const { searchParams } = new URL(request.url);

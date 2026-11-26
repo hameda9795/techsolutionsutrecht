@@ -1,13 +1,10 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { Shield, Eye, EyeOff, Lock, User } from "lucide-react";
 import Link from "next/link";
 
-const ADMIN_USERNAME = "hameda9795";
-const ADMIN_PASSWORD = "10206743";
-const AUTH_KEY = "admin_auth";
 
 export default function AdminLoginPage() {
   const router = useRouter();
@@ -17,27 +14,26 @@ export default function AdminLoginPage() {
   const [error, setError] = useState("");
   const [isLoading, setIsLoading] = useState(false);
 
-  // Check if already logged in
-  useEffect(() => {
-    const auth = sessionStorage.getItem(AUTH_KEY);
-    if (auth === "true") {
-      router.push("/admin/dashboard");
-    }
-  }, [router]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setError("");
     setIsLoading(true);
 
-    // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 500));
-
-    if (username === ADMIN_USERNAME && password === ADMIN_PASSWORD) {
-      sessionStorage.setItem(AUTH_KEY, "true");
-      router.push("/admin/dashboard");
-    } else {
-      setError("Ongeldige gebruikersnaam of wachtwoord");
+    try {
+      const response = await fetch("/api/admin/login", {
+        method: "POST", credentials: "same-origin", cache: "no-store",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ username, password }),
+      });
+      const result = await response.json();
+      if (!response.ok) throw new Error(result.error || "Inloggen is niet gelukt.");
+      setPassword("");
+      router.replace("/admin/projecten");
+      router.refresh();
+    } catch (error) {
+      setError(error instanceof Error ? error.message : "Inloggen is tijdelijk niet beschikbaar.");
+    } finally {
       setIsLoading(false);
     }
   };
@@ -65,7 +61,7 @@ export default function AdminLoginPage() {
           </h2>
 
           {error && (
-            <div className="mb-6 p-4 bg-red-500/10 border border-red-500/20 rounded-xl text-red-500 text-sm">
+            <div role="alert" className="mb-6 p-4 bg-red-500/10 border border-red-500/20 rounded-xl text-red-500 text-sm">
               {error}
             </div>
           )}
@@ -73,13 +69,15 @@ export default function AdminLoginPage() {
           <form onSubmit={handleSubmit} className="space-y-5">
             {/* Username */}
             <div>
-              <label className="block text-sm font-medium text-[var(--text-secondary)] mb-2">
+              <label htmlFor="admin-username" className="block text-sm font-medium text-[var(--text-secondary)] mb-2">
                 Gebruikersnaam
               </label>
               <div className="relative">
                 <User className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-[var(--text-muted)]" />
                 <input
                   type="text"
+                  id="admin-username"
+                  autoComplete="username"
                   value={username}
                   onChange={(e) => setUsername(e.target.value)}
                   className="w-full pl-12 pr-4 py-3 bg-[var(--bg-tertiary)] border border-[var(--border)] rounded-xl text-[var(--text-primary)] placeholder:text-[var(--text-muted)] focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all"
@@ -91,12 +89,14 @@ export default function AdminLoginPage() {
 
             {/* Password */}
             <div>
-              <label className="block text-sm font-medium text-[var(--text-secondary)] mb-2">
+              <label htmlFor="admin-password" className="block text-sm font-medium text-[var(--text-secondary)] mb-2">
                 Wachtwoord
               </label>
               <div className="relative">
                 <Lock className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-[var(--text-muted)]" />
                 <input
+                  id="admin-password"
+                  autoComplete="current-password"
                   type={showPassword ? "text" : "password"}
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
@@ -106,6 +106,7 @@ export default function AdminLoginPage() {
                 />
                 <button
                   type="button"
+                  aria-label={showPassword ? "Wachtwoord verbergen" : "Wachtwoord tonen"}
                   onClick={() => setShowPassword(!showPassword)}
                   className="absolute right-4 top-1/2 -translate-y-1/2 text-[var(--text-muted)] hover:text-[var(--text-primary)] transition-colors"
                 >
