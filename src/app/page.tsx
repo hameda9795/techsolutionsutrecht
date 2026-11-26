@@ -6,6 +6,7 @@ import WhyChooseUs from "@/components/WhyChooseUs";
 import CTA from "@/components/CTA";
 import HomeFAQ from "@/components/HomeFAQ";
 import UtrechtIntro from "@/components/UtrechtIntro";
+import RegionLinks from "@/components/RegionLinks";
 import Testimonials from "@/components/Testimonials";
 import WebsiteApproach from "@/components/WebsiteApproach";
 import WebsiteProjectProof from "@/components/WebsiteProjectProof";
@@ -58,6 +59,7 @@ export default async function Home() {
         <WhyChooseUs />
         <Testimonials />
         <UtrechtIntro />
+        <RegionLinks heading="Website laten maken buiten Utrecht" intro="Ook voor ondernemers in de plaatsen rond Utrecht bouw ik websites en webshops. Per plaats lees je hoe ik werk en wat lokaal belangrijk is." />
         <HomeFAQ />
         <CTA />
       </main>

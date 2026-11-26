@@ -1,28 +1,47 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import CityPageLayout from "@/components/CityPageLayout";
 
+const title = "Website laten maken IJsselstein | Webdesigner & SEO";
+const description =
+  "Website laten maken in IJsselstein? Webdesigner Max bouwt je website, helpt met hosting en zorgt voor lokale SEO. Direct contact en vooraf heldere afspraken.";
+
 export const metadata: Metadata = {
-  title: "Website laten maken IJsselstein | Freelance webdeveloper",
-  description: "Website laten maken in IJsselstein? Een ervaren freelance webdeveloper bouwt je snelle, SEO-klare website. Persoonlijk contact en heldere afspraken.",
+  title,
+  description,
   alternates: { canonical: "https://techsolutionsutrecht.nl/ijsselstein" },
   openGraph: {
-    title: "Website laten maken IJsselstein | Freelance webdeveloper",
-    description: "Website laten maken in IJsselstein? Een ervaren freelance webdeveloper bouwt je snelle, SEO-klare website. Persoonlijk contact en heldere afspraken.",
+    title,
+    description,
     type: "website",
     locale: "nl_NL",
     url: "https://techsolutionsutrecht.nl/ijsselstein",
     siteName: "TechSolutionsUtrecht",
   },
-  twitter: {
-    card: "summary_large_image",
-    title: "Website laten maken IJsselstein | Freelance webdeveloper",
-    description: "Website laten maken in IJsselstein? Een ervaren freelance webdeveloper bouwt je snelle, SEO-klare website. Persoonlijk contact en heldere afspraken.",
-  },
+  twitter: { card: "summary_large_image", title, description },
 };
 
 export default function IJsselsteinPage() {
   return (
     <CityPageLayout
+      afterServices={
+        <section className="py-16" aria-labelledby="webdesign-ijsselstein">
+          <div className="max-w-6xl mx-auto px-6">
+            <h2 id="webdesign-ijsselstein" className="text-3xl font-bold text-[var(--color-ink)] mb-4">Webdesign, hosting en SEO in IJsselstein</h2>
+            <p className="max-w-3xl text-[var(--color-muted)] leading-relaxed mb-4">
+              Als webdesigner voor IJsselstein bouw ik je website van ontwerp tot livegang. Je spreekt direct met mij, niet met een accountmanager, en je kijkt tijdens de bouw mee via previews.
+            </p>
+            <p className="max-w-3xl text-[var(--color-muted)] leading-relaxed mb-4">
+              Hosting en domein staan los van de bouwprijs. Ik help je een geschikte hosting te kiezen, zet de website daar live en kan het technische onderhoud daarna verzorgen. Voor SEO in IJsselstein richt ik de pagina’s op de zoekopdrachten van klanten uit IJsselstein en omgeving en koppel ik je Google Bedrijfsprofiel.
+            </p>
+            <div className="flex flex-wrap gap-x-6 gap-y-3">
+              <Link href="/diensten/website-laten-maken" className="font-semibold text-[var(--color-primary)] underline underline-offset-4">Website laten maken</Link>
+              <Link href="/diensten/website-onderhoud" className="font-semibold text-[var(--color-primary)] underline underline-offset-4">Website onderhoud en beheer</Link>
+              <Link href="/diensten/seo" className="font-semibold text-[var(--color-primary)] underline underline-offset-4">SEO uitbesteden</Link>
+            </div>
+          </div>
+        </section>
+      }
       city="IJsselstein"
       slug="ijsselstein"
       intro={[
@@ -59,6 +78,10 @@ export default function IJsselsteinPage() {
         {
           question: "Is SEO inbegrepen voor IJsselstein?",
           answer: "Ja, technische SEO-optimalisatie is standaard inbegrepen. Daarnaast adviseer ik je over lokale SEO voor IJsselstein, zodat je beter gevonden wordt door klanten uit je eigen omgeving.",
+        },
+        {
+          question: "Regel je ook de hosting van mijn website in IJsselstein?",
+          answer: "Hosting en domein staan los van de bouwprijs. Ik help je een geschikte hostingpartij en domeinnaam te kiezen, zet de website daar live en kan het technische onderhoud verzorgen met een onderhoudspakket.",
         },
       ]}
     />

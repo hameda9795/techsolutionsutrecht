@@ -35,6 +35,7 @@ const baseUrl = SITE_URL;
 /**
  * Geographically adjacent city pages, used for contextual in-body interlinking
  * (in-content links carry more SEO weight than the sitewide footer list).
+ * Utrecht itself lives on the homepage; /utrecht redirects there.
  */
 const nearbyCities: Record<string, { slug: string; name: string }[]> = {
   nieuwegein: [
@@ -224,7 +225,7 @@ export default function CityPageLayout({
                   Zit je bedrijf net buiten {city}? Bekijk dan ook{" "}
                   {nearbyCities[slug].map((nc, i, arr) => (
                     <span key={nc.slug}>
-                      <Link href={`/${nc.slug}`} className="text-[var(--color-primary)] underline underline-offset-2 hover:no-underline">
+                      <Link href={nc.slug === "utrecht" ? "/" : `/${nc.slug}`} className="text-[var(--color-primary)] underline underline-offset-2 hover:no-underline">
                         {anchorPhrases[i % anchorPhrases.length](nc.name)}
                       </Link>
                       {i < arr.length - 2 ? ", " : i === arr.length - 2 ? " of " : ""}
