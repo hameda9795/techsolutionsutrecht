@@ -108,7 +108,7 @@ for (const { loc, lastModified } of sitemapEntries) {
 
 const canonicalOwners = new Map();
 const cityPaths = new Set([
-  "/utrecht", "/nieuwegein", "/houten", "/zeist", "/amersfoort", "/de-meern",
+  "/nieuwegein", "/houten", "/zeist", "/amersfoort", "/de-meern",
   "/vleuten", "/ijsselstein", "/veenendaal", "/woerden", "/culemborg",
 ]);
 
