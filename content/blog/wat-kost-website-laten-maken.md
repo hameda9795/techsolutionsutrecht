@@ -1,25 +1,62 @@
 ---
-title: "Wat kost een website laten maken? Bereken je kosten"
-seoTitle: "Wat kost een website laten maken? Prijs en jaarkosten"
-description: "Bereken je websitekosten vanaf €300 excl. btw. Vergelijk bouw, onderhoud en externe kosten in jaar één en twee, met rekenvoorbeelden en een offertevergelijker."
+title: "Wat kost een website laten maken? Prijzen en kosten in 2026"
+seoTitle: "Wat kost een website laten maken? Prijsgids 2026"
+description: "Wat kost een website laten maken in 2026? Prijzen per type website, webshop en onderhoud, de kosten voor domein en hosting en drie rekenvoorbeelden."
 date: "2026-03-15"
-dateModified: "2026-10-15"
-readTime: "6 min"
+dateModified: "2026-11-26"
+readTime: "10 min"
 category: "Websites"
 image: "/images/blog/website-kosten.jpg"
 slug: "wat-kost-website-laten-maken"
 author: "Max"
 ---
 
+## Wat kost een website laten maken? Het korte antwoord
+
+**Een website laten maken kost in Nederland meestal tussen €500 en €5.000 eenmalig. Een webshop of een website met eigen ontwerp en koppelingen kost vaak meer. Daarnaast betaal je elk jaar voor domein en hosting, en eventueel voor onderhoud.** Hoeveel jij betaalt, hangt vooral af van het aantal pagina’s, het ontwerp, wie de teksten maakt en welke functies je nodig hebt.
+
+De bedragen in deze gids zijn indicaties op basis van gangbare tarieven van freelancers en webbureaus in Nederland. Ze zijn exclusief btw, tenzij anders vermeld. Een offerte voor jouw website kan hoger of lager uitvallen. Mijn eigen prijzen staan apart in [de tabel met pakketten](#wat-kost-een-website-laten-maken-bij-techsolutions).
+
+Met de calculator hierboven reken je de bouw en het onderhoud van een WordPress-pakket uit. Hieronder lees je wat de rest van de markt rekent, welke kosten je vaak vergeet en hoe je twee offertes eerlijk vergelijkt.
+
+## Wat kost een website? Prijzen per type website
+
+| Type website | Wat je meestal krijgt | Indicatie bouw, eenmalig |
+|---|---|---|
+| Onepager of visitekaartje | 1 pagina met je diensten, contactgegevens en een formulier | €300 – €1.000 |
+| Kleine bedrijfswebsite | 3 tot 8 pagina’s, zelf te beheren, basis-SEO | €750 – €3.000 |
+| Uitgebreide mkb-website | Eigen ontwerp, 10+ pagina’s, blog, meerdere formulieren | €3.000 – €10.000 |
+| Webshop | Producten, winkelwagen, iDEAL en verzendopties | €1.000 – €10.000+ |
+| Maatwerk of platform | Eigen functies, accounts, koppelingen met andere software | €10.000+ |
+
+Het verschil binnen één regel is groot. Dat komt doordat een prijs pas iets zegt als je weet wat erbij hoort. Een kleine bedrijfswebsite van €750 gaat meestal uit van een bestaande ontwerpbasis en teksten die je zelf aanlevert. Bij €3.000 zit er vaak een eigen ontwerp, copywriting of fotografie bij.
+
+## Freelancer, webbureau of websitebouwer: wat is het prijsverschil?
+
+| Optie | Kosten | Past bij |
+|---|---|---|
+| Zelf bouwen met een websitebouwer (Wix, Squarespace) | €10 – €40 per maand, plus je eigen tijd | Een eenvoudige website die je zelf wilt maken en bijhouden |
+| Website per maand (lease of abonnement) | €30 – €100 per maand, vaak met een minimale looptijd | Geen investering vooraf, wel doorlopende kosten |
+| Freelance webdesigner | Vaak €50 – €100 per uur, of een vaste projectprijs | Direct contact met degene die bouwt, korte lijnen |
+| Webbureau | Vaak €75 – €150 per uur | Grote projecten met ontwerp, strategie en een team |
+
+Een websitebouwer lijkt goedkoop, maar je betaalt zolang de website online staat en je doet het werk zelf. Bij een maandabonnement is de website soms niet jouw eigendom: vraag wat er gebeurt als je opzegt. Een freelancer en een bureau verschillen vooral in de organisatie eromheen. Bij een bureau betaal je ook voor projectleiding en accountmanagement; bij een freelancer spreek je direct met de developer.
+
+Twijfel je tussen zelf bouwen en uitbesteden? Lees de [afweging tussen een website zelf maken of laten maken](/blog/website-maken-of-laten-maken) of de vergelijking [freelancer of bureau](/blog/freelancer-of-bureau).
+
+## Wat bepaalt de prijs van een website?
+
+1. **Aantal pagina’s.** Elke pagina vraagt opbouw, inhoud en controle. Een onepager is minder werk dan een website met een aparte pagina per dienst.
+2. **Ontwerp.** Een bestaande ontwerpbasis aanpassen aan je huisstijl is sneller dan een eigen ontwerp vanaf nul.
+3. **Teksten en beeld.** Lever je teksten en foto’s zelf aan, of moeten ze geschreven en gemaakt worden? Copywriting en fotografie kunnen de prijs flink verhogen.
+4. **Functies.** Een contactformulier is standaard. Online boeken, betalen, een klantportaal of meertaligheid is extra werk, vaak met een eigen abonnement.
+5. **Techniek.** WordPress is gratis, maar betaalde plug-ins en thema’s niet. Een website zonder CMS of met een eigen systeem is een ander soort opdracht.
+6. **SEO en snelheid.** Een technische SEO-basis hoort erbij. Zoekwoordenonderzoek, lokale SEO en doorlopend werk aan je vindbaarheid zijn aparte diensten.
+7. **Bestaande website.** Een verhuizing met behoud van je oude adressen en e-mail vraagt extra controle.
+
 ## Wat kost een website laten maken bij TechSolutionsUtrecht?
 
-**Een WordPress eenpaginawebsite met basis-SEO kost €300. Voor maximaal drie of vijf inhoudspagina’s zijn er pakketten van €500 en €700.** Dit zijn eenmalige prijzen van TechSolutionsUtrecht, exclusief btw. Het zijn geen gemiddelden voor de hele Nederlandse markt.
-
-Voor een goede vergelijking heb je meer nodig dan een vanafprijs. Met de calculator hierboven vergelijk je de bouw en optioneel onderhoud. Hieronder maak je de begroting compleet: welke kosten ontbreken nog, wat betaal je in jaar twee en hoe vergelijk je twee offertes met een andere inhoud?
-
-Wil je direct bespreken wat bij jouw bedrijf past? Bekijk mijn aanpak voor [een website laten maken in Utrecht](/) of [vraag een offerte voor je website aan](/contact).
-
-## Welk werk hoort bij de bouwprijs?
+**Een WordPress-website kost bij mij €300 voor één pagina, €500 voor maximaal drie inhoudspagina’s en €700 voor maximaal vijf.** Dit zijn eenmalige prijzen exclusief btw, voor de uitvoering die hieronder staat.
 
 | WordPress-pakket | Eenmalig, excl. btw | Afgebakende uitvoering |
 |---|---|---|
@@ -27,45 +64,48 @@ Wil je direct bespreken wat bij jouw bedrijf past? Bekijk mijn aanpak voor [een 
 | WordPress Business | €500 | Maximaal 3 inhoudspagina’s, GA4 en 1 gemeten contactactie |
 | WordPress Lokaal Compleet | €700 | Maximaal 5 inhoudspagina’s, lokale inhoud en 1 geschikt Google Bedrijfsprofiel |
 
-De WordPress-pakketten zijn vaste prijzen voor de beschreven uitvoering. Je levert teksten, foto’s en logo aan; ik pas een bestaande ontwerpbasis aan je huisstijl aan. Maatwerk heeft een vanafprijs en krijgt na afbakening een vaste offerte. Bekijk [alle pakketten en voorwaarden](/prijzen).
+Je levert teksten, foto’s en logo aan; ik pas een bewezen ontwerpbasis aan je huisstijl aan. Daardoor kan de website snel live, zonder in te leveren op snelheid of vindbaarheid. Een [website met eigen ontwerp zonder WordPress](/diensten/maatwerk-website) begint bij €1.500 en krijgt na afbakening een vaste offerte. Bekijk [alle pakketten en voorwaarden](/prijzen).
 
-Deze berekening gaat over een bedrijfswebsite zonder online verkoop of boekingskoppeling. Voor een [webshop](/diensten/webshop), een [website op maat](/diensten/maatwerk-website), meertaligheid of een reserveringssysteem moet je de scope en externe abonnementen apart laten begroten. Een goedkoop basispakket met zulke functies vergelijken geeft een verkeerd beeld.
+Heb je een kapsalon? Bij [een website laten maken voor je kapsalon](/website-laten-maken-kapper) zie je een echt voorbeeld en het verschil tussen een contactaanvraag, een boekingslink en een agenda-integratie. Voor een restaurant of café staan bij [een restaurant website laten maken](/website-laten-maken-restaurant) de keuzes voor een menukaart en reserveren.
 
-Heb je een kapsalon? Bij [een website laten maken voor je kapsalon](/website-laten-maken-kapper) zie je een echt salonvoorbeeld en het verschil tussen een contactaanvraag, een boekingslink en een agenda-integratie. Zo kun je de basiswebsite en eventuele extra boekingskosten apart laten begroten.
+## Wat kost een webshop laten maken?
 
-Voor een restaurant, café of lunchroom staan bij [een restaurant website laten maken](/website-laten-maken-restaurant) de keuzes voor een leesbare menukaart en reserveren. Laat de basiswebsite, een reserveringskoppeling en eventuele online bestellingen afzonderlijk begroten.
+Een webshop is meer werk dan een bedrijfswebsite: producten, betalingen, verzending, voorraad en een bestelproces dat moet kloppen. **Een eenvoudige webshop kost meestal €1.000 tot €3.000. Met veel producten, eigen ontwerp of koppelingen met een boekhoudpakket of voorraadsysteem kom je al snel boven €5.000.**
 
-## Wat krijg je voor de bouwprijs?
+Bij mij kost een [WooCommerce-webshop](/diensten/webshop) €950, €1.450 of €2.100 eenmalig exclusief btw, afhankelijk van het aantal producten dat ik invoer en de functies. Reken bij een webshop ook op doorlopende kosten:
 
-De basis bestaat uit een ontwerp voor je bedrijf, een website die werkt op mobiel en desktop, contactmogelijkheden en een technische SEO-basis. Leg in de offerte vast:
-
-- **Inhoud:** welke pagina’s worden gebouwd en wie teksten, foto’s en logo aanlevert.
-- **Functionaliteit:** bijvoorbeeld een contactformulier, WhatsApp-link, galerij of prijslijst.
-- **Beheer:** welke onderdelen je zelf kunt aanpassen en welke uitleg je krijgt.
-- **Controle:** hoe je feedback geeft en welke aanpassingen binnen de opdracht vallen.
-- **Oplevering:** wanneer de website klaar kan zijn en welke toegang je ontvangt.
-
-Zo kun je twee offertes vergelijken op wat je werkelijk ontvangt. Een lager bedrag voor minder werk is niet automatisch een betere of slechtere keuze; de uitvoering moet passen bij je doel.
+- **Transactiekosten** van je betaalprovider, meestal per betaling.
+- **Betaalde plug-ins**, bijvoorbeeld voor verzendlabels of een koppeling met je boekhouding.
+- **Zwaardere hosting** dan voor een gewone website.
+- **Onderhoud**, omdat updates bij een webshop vaker iets raken wat klanten direct merken.
 
 ## Welke kosten komen er naast de website?
 
 ### Domeinnaam en hosting
 
-De domeinnaam is je webadres. Hosting zorgt dat de website bereikbaar is. Kijk of je deze al hebt, bij wie ze zijn ondergebracht en wat de verlenging kost. Een introductietarief kan afwijken van het tarief daarna.
+| Kostenpost | Indicatie |
+|---|---|
+| .nl-domeinnaam | €5 – €15 per jaar |
+| Hosting voor een gewone website | €5 – €25 per maand |
+| Hosting voor een webshop of drukke website | €15 – €50 per maand |
+| SSL-certificaat (https) | Bij de meeste hosting gratis inbegrepen |
+| Zakelijke e-mail op je domein | €0 – €6 per mailbox per maand |
 
-De prijs hangt af van de provider en het pakket. Vraag of deze kosten inbegrepen zijn, apart worden gefactureerd of rechtstreeks door jou worden betaald.
+Let op het verschil tussen het introductietarief en de verlenging: het eerste jaar is vaak goedkoper. Vraag ook op wiens naam het domein en het hostingaccount komen te staan. Dat hoort jouw naam te zijn, zodat je altijd zelf kunt overstappen.
 
-### Websiteonderhoud
+### Wat kost website onderhoud?
 
-Technisch [WordPress onderhoud](/diensten/website-onderhoud) kost **€39 per maand** en WooCommerce onderhoud **€69 per maand**, exclusief btw. Dit omvat de beschreven updates en controles, plus maximaal 15 of 30 minuten kleine wijzigingen. Hosting, licenties en groot herstelwerk zijn apart.
+**Website onderhoud kost meestal €15 tot €100 per maand.** Daarvoor worden WordPress, thema en plug-ins bijgewerkt, back-ups gemaakt en wordt de website gecontroleerd. Sommige aanbieders rekenen per uur, vaak €50 tot €100, of combineren onderhoud met hosting in één bedrag.
 
-Onderhoud en bouw zijn afzonderlijke onderdelen. Spreek af wie na oplevering verantwoordelijk is voor technische updates en wie inhoudelijke wijzigingen uitvoert.
+Bij mij kost [WordPress onderhoud](/diensten/website-onderhoud) **€39 per maand** en WooCommerce onderhoud **€69 per maand**, exclusief btw. Dat is inclusief de beschreven updates en controles en maximaal 15 of 30 minuten kleine wijzigingen per maand. Hosting, licenties en groot herstelwerk zijn apart. Onderhoud is optioneel: je kunt het ook zelf doen.
 
-### Teksten, foto’s en aanvullende functies
+Zonder onderhoud lopen updates achter. Dat maakt een website kwetsbaar voor hacks en kan ervoor zorgen dat onderdelen stoppen met werken. Herstel na een hack kost meestal meer dan een jaar onderhoud.
 
-Nieuwe teksten, fotografie, extra pagina’s of een koppeling kunnen de opdracht groter maken. Laat vastleggen wie wat verzorgt. Ook bij bestaande teksten moet duidelijk zijn of alleen plaatsing is afgesproken of ook herschrijven.
+### Teksten, foto’s en extra functies
 
-Vraag bij een betaalde plug-in, reserveringssysteem of andere externe dienst naar licentie- en abonnementskosten. Een eenmalige bouwprijs betekent niet dat iedere dienst die je website gebruikt gratis blijft.
+Nieuwe teksten, fotografie, extra pagina’s of een koppeling maken de opdracht groter. Leg vast wie wat verzorgt. Ook bij bestaande teksten moet duidelijk zijn of alleen plaatsing is afgesproken of ook herschrijven.
+
+Vraag bij een betaalde plug-in, reserveringssysteem of andere externe dienst naar de licentie- en abonnementskosten. Een eenmalige bouwprijs betekent niet dat iedere dienst die je website gebruikt gratis blijft.
 
 ## Wat kost een website in het eerste jaar?
 
@@ -73,9 +113,9 @@ Gebruik deze rekensom:
 
 **Bouw + domein + hosting + afgesproken onderhoud + eventuele licenties en extra werkzaamheden.**
 
-Een rekenvoorbeeld: WordPress Start van **€300**, gecombineerd met **12 maanden optioneel onderhoud van €39**, komt op **€768 exclusief btw**. Domein, hosting en eventuele licenties komen daar nog bij. Zonder onderhoudspakket betaal je voor de bouw €300 plus de afgesproken externe kosten. Dit is een rekenvoorbeeld, geen complete offerte.
+Een rekenvoorbeeld: WordPress Start van **€300**, met **12 maanden optioneel onderhoud van €39**, komt op **€768 exclusief btw**. Tel daar domein en hosting bij op, voor een eenvoudige website ongeveer €70 tot €300 per jaar. Dit is een rekenvoorbeeld, geen complete offerte.
 
-Vergelijk ook het tweede jaar. De bouwkosten vallen dan normaal niet opnieuw, maar hosting, domein, onderhoud en licenties kunnen doorlopen. Nieuwe werkzaamheden of een herontwerp zijn aparte opdrachten.
+Vergelijk ook het tweede jaar. De bouwkosten vallen dan normaal niet opnieuw, maar hosting, domein, onderhoud en licenties lopen door. Nieuwe werkzaamheden of een herontwerp zijn aparte opdrachten.
 
 ### Drie rekenvoorbeelden voor jaar één en twee
 
@@ -85,7 +125,7 @@ Vergelijk ook het tweede jaar. De bouwkosten vallen dan normaal niet opnieuw, ma
 | Business + 12 maanden onderhoud | €500 | €468 | €968 | €468 |
 | Lokaal Compleet + 12 maanden onderhoud | €700 | €468 | €1.168 | €468 |
 
-**Dit zijn subtotalen exclusief btw, geen volledige jaarprijzen.** Tel bij ieder voorbeeld domein, hosting, licenties en afgesproken extra werk op. Onderhoud zelf regelen betekent dat je het werk of de kosten daarvan zelf moet begroten. Het tweede jaar veronderstelt hetzelfde onderhoudstarief en geen nieuwe bouwopdracht; controleer bij iedere verlenging de dan geldende afspraken.
+**Dit zijn subtotalen exclusief btw, geen volledige jaarprijzen.** Tel bij ieder voorbeeld domein, hosting, licenties en afgesproken extra werk op. Onderhoud zelf regelen betekent dat je het werk of de kosten daarvan zelf moet begroten. Het tweede jaar gaat uit van hetzelfde onderhoudstarief en geen nieuwe bouwopdracht.
 
 ## Website laten maken: prijs en offertes vergelijken
 
@@ -101,19 +141,16 @@ Download het [invulblad voor websitekosten en offertevergelijking](/downloads/we
 | Migratie en extra werk | Zijn verhuizing, bestaande URL’s en e-mail meegenomen? Hoe wordt meerwerk vooraf goedgekeurd? |
 | Overdracht | Welke toegang, uitleg en bestanden krijg ik bij oplevering of vertrek? |
 
-Reken een maandbedrag om naar twaalf maanden. Bij een jaarbedrag tel je dat bedrag één keer, niet twaalf keer. Houd btw op dezelfde basis en neem kortingen niet stilzwijgend mee naar het tweede jaar. Is een regel onbekend? Vraag de aanbieder om aanvulling voordat je een totaal vergelijkt.
-
-Twijfel je nog tussen zelf bouwen en uitbesteden? Lees dan de [afweging tussen een website zelf maken of laten maken](/blog/website-maken-of-laten-maken). Voor pakketkeuze en werkwijze ga je naar [WordPress website laten maken](/diensten/website-laten-maken); deze gids helpt je de totale kosten te vergelijken.
+Reken een maandbedrag om naar twaalf maanden. Houd btw op dezelfde basis en neem kortingen niet stilzwijgend mee naar het tweede jaar. Is een regel onbekend? Vraag de aanbieder om aanvulling voordat je een totaal vergelijkt.
 
 ## Welke uitvoering past bij jouw bedrijf?
 
-De prijs is pas bruikbaar als de uitvoering bij je doel past. Gebruik deze routes om het aanbod en de afbakening te bekijken:
-
 - **Je diensten presenteren en aanvragen ontvangen:** bij [WordPress website laten maken](/diensten/website-laten-maken) staan de pakketten, het beheer en de werkwijze.
-- **Een eerste website voor je eenmanszaak:** op [website laten maken voor ZZP’ers](/zzp-website-laten-maken) kies je welke informatie je klanten nodig hebben en of één of meerdere pagina’s passen.
-- **Producten verkopen en betalingen ontvangen:** bekijk [WooCommerce webshop laten maken](/diensten/webshop). De webshop heeft een eigen prijs en afbakening; de WordPress-calculator hierboven berekent geen webshopkosten.
+- **Een eerste website voor je eenmanszaak:** op [website laten maken voor zzp’ers](/zzp-website-laten-maken) kies je welke informatie je klanten nodig hebben.
+- **Producten verkopen en betalingen ontvangen:** bekijk [WooCommerce webshop laten maken](/diensten/webshop). De calculator hierboven berekent geen webshopkosten.
+- **Beter gevonden worden in Google:** [SEO uitbesteden](/diensten/seo) is een aparte, doorlopende dienst naast de bouw.
 
-Werk je graag met iemand uit de buurt? Ik werk vanuit Zuilen. Op de homepage lees je over [een website laten maken in Utrecht](/), met voorbeelden van mijn werk en de manier waarop we samenwerken.
+Werk je graag met iemand uit de buurt? Ik werk vanuit Utrecht-Zuilen. Lees over [een website laten maken in Utrecht](/), met voorbeelden van mijn werk en de manier waarop we samenwerken.
 
 ## Hoe houd je de kosten beheersbaar?
 
@@ -123,17 +160,29 @@ Werk je graag met iemand uit de buurt? Ik werk vanuit Zuilen. Op de homepage lee
 4. **Bundel je feedback.** Controleer teksten, links en beelden samen, binnen de afgesproken aanpassingsronde.
 5. **Vergelijk het totaal.** Neem terugkerende kosten en eigen werk mee, niet alleen het bedrag op de eerste regel.
 
-Gebruik ook de [checklist voor een nieuwe website](/blog/website-laten-maken) om het gesprek met je webdesigner voor te bereiden.
+Gebruik ook de [checklist voor een nieuwe website](/blog/website-laten-maken) om het gesprek met je webdesigner voor te bereiden. Wil je weten hoe snel het kan? Lees [hoe lang het duurt om een website te maken](/blog/hoe-lang-duurt-website-maken).
 
 ## Veelgestelde vragen over websitekosten
 
+### Wat kost een website voor een zzp’er?
+
+Voor de meeste zzp’ers is een website met één tot vijf pagina’s genoeg: wie je bent, wat je doet, voorbeelden van je werk en contact. Daarvoor betaal je meestal €300 tot €1.500 eenmalig, plus domein en hosting. Lees meer over [een zzp-website laten maken](/zzp-website-laten-maken).
+
+### Wat kost een WordPress website laten maken?
+
+WordPress zelf is gratis. Je betaalt voor het werk: ontwerp, opbouw, inhoud plaatsen en instellen. Een kleine WordPress-website kost meestal €500 tot €3.000. Bij mij kosten de WordPress-pakketten €300, €500 en €700 exclusief btw, voor de uitvoering in [de tabel hierboven](#wat-kost-een-website-laten-maken-bij-techsolutions).
+
+### Wat kost website onderhoud per maand?
+
+Meestal €15 tot €100 per maand, afhankelijk van wat erbij hoort: alleen updates, of ook back-ups, controles, kleine wijzigingen en hosting. Bij mij kost WordPress onderhoud €39 en WooCommerce onderhoud €69 per maand, exclusief btw.
+
 ### Is de vanafprijs mijn uiteindelijke prijs?
 
-Het pakketbedrag geldt voor de beschreven inhoud en functies. Na de intake ontvang je een offerte die het gekozen pakket en eventuele extra wensen vastlegt. WordPress Start, Business en Lokaal Compleet kosten €300, €500 en €700 exclusief btw. Extra werk verandert de prijs niet zonder een voorafgaande afspraak.
+Het pakketbedrag geldt voor de beschreven inhoud en functies. Na de intake ontvang je een offerte die het gekozen pakket en eventuele extra wensen vastlegt. Extra werk verandert de prijs niet zonder een voorafgaande afspraak.
 
 ### Kan ik een website laten maken zonder verplicht onderhoudsabonnement?
 
-De website wordt jouw eigendom. Je kunt technisch onderhoud uitbesteden of zelf regelen, passend bij de gekozen techniek. Bespreek ook toegang, hosting en eventuele licenties; die staan los van eigendom van de website.
+Ja. De website wordt jouw eigendom. Je kunt technisch onderhoud uitbesteden of zelf regelen. Bespreek ook toegang, hosting en eventuele licenties; die staan los van het eigendom van de website.
 
 ### Zijn teksten inbegrepen?
 
@@ -149,6 +198,6 @@ Nee. De website moet aansluiten bij je aanbod en bezoekers helpen een beslissing
 
 ## Een prijs voor jouw website
 
-Ik ben Max, webdesigner in Utrecht-Zuilen. Vertel wat je bedrijf doet, welke pagina’s of functies je nodig hebt en of je al een website hebt. Dan kan ik de omvang en prijs gericht met je bespreken.
+Ik ben Max, webdesigner in Utrecht-Zuilen. Vertel wat je bedrijf doet, welke pagina’s of functies je nodig hebt en of je al een website hebt. Dan krijg je een vaste prijs voor jouw website, rechtstreeks van de developer die hem bouwt.
 
 Bekijk [voorbeelden van mijn werk](/projecten), lees over [webdesign in Utrecht](/) of [vraag een vrijblijvende websiteofferte aan](/contact).
