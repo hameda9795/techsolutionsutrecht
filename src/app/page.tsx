@@ -16,10 +16,10 @@ import { homeFaqs } from "@/lib/home-faqs";
 import { faqPageSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
-  title: "Website laten maken Utrecht vanaf €300 | TechSolutions",
-  description: "Website laten maken in Utrecht vanaf €300. Bekijk mijn werk, prijzen en aanpak. Direct contact met Max, webdesigner in Zuilen. Vraag een vrijblijvende offerte aan.",
+  title: "Website laten maken Utrecht | Snel live, direct contact",
+  description: "Website laten maken in Utrecht met Max, webdesigner in Zuilen. Snel live, direct contact en vooraf heldere afspraken over ontwerp, inhoud en prijs.",
   openGraph: {
-    title: "Website laten maken Utrecht vanaf €300 | TechSolutions",
+    title: "Website laten maken Utrecht | Snel live, direct contact",
     description: "Werk direct met Max, webdesigner in Utrecht-Zuilen. Een website voor jouw bedrijf, met duidelijke afspraken over ontwerp, inhoud en prijs.",
     type: "website",
     locale: "nl_NL",
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Website laten maken Utrecht vanaf €300 | TechSolutions",
+    title: "Website laten maken Utrecht | Snel live, direct contact",
     description: "Werk direct met Max, webdesigner in Utrecht-Zuilen. Bekijk voorbeelden, prijzen en de aanpak voor jouw bedrijfswebsite.",
   },
   alternates: { canonical: "https://techsolutionsutrecht.nl" },
