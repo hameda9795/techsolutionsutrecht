@@ -10,11 +10,11 @@ const pageUrl = "https://techsolutionsutrecht.nl/zzp-website-laten-maken";
 export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
-  title: "Website laten maken als zzp’er vanaf €300 | TechSolutions",
-  description: "Website laten maken als zzp’er vanaf €300 excl. btw. Een betaalbare zzp-website met je diensten, werk en contact. Direct contact met Max en vooraf een vaste offerte.",
+  title: "Website laten maken als zzp’er | Direct contact met Max",
+  description: "Website laten maken als zzp’er? Een zzp-website met je diensten, werk en contact. Snel live, direct contact met Max en vooraf een vaste offerte.",
   alternates: { canonical: pageUrl },
   openGraph: {
-    title: "Website laten maken als zzp’er vanaf €300 | TechSolutions",
+    title: "Website laten maken als zzp’er | Direct contact met Max",
     description: "Een website voor je ZZP-bedrijf met je diensten, werkvoorbeelden en contact. WordPress vanaf €300 excl. btw, met een vooraf afgesproken planning.",
     type: "website",
     locale: "nl_NL",
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Website laten maken als zzp’er vanaf €300 | TechSolutions",
+    title: "Website laten maken als zzp’er | Direct contact met Max",
     description: "Een website voor je ZZP-bedrijf met je diensten, werkvoorbeelden en contact. WordPress vanaf €300 excl. btw, met een vooraf afgesproken planning.",
   },
 };

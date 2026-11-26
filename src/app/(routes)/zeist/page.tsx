@@ -3,8 +3,8 @@ import Link from "next/link";
 import CityPageLayout from "@/components/CityPageLayout";
 
 export const metadata: Metadata = {
-  title: "Website Laten Maken Zeist | Freelance Webdeveloper | TechSolutions",
-  description: "Website laten maken in Zeist? Een ervaren freelance webdeveloper uit de regio bouwt je snelle, SEO-klare website. Direct contact, geen tussenlagen. Vraag een offerte aan.",
+  title: "Website laten maken Zeist | Freelance webdeveloper",
+  description: "Website laten maken in Zeist? Een ervaren webdeveloper uit de regio bouwt je snelle, SEO-klare website. Direct contact, geen tussenlagen. Vraag een offerte aan.",
   alternates: { canonical: "https://techsolutionsutrecht.nl/zeist" },
 };
 

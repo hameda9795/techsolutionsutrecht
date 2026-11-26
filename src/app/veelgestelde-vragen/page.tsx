@@ -8,7 +8,7 @@ const url = "https://techsolutionsutrecht.nl/veelgestelde-vragen";
 const wpPrices = packageGroups.wordpress.packages.map(p => formatPrice(p.price)).join(", ");
 const maintenancePrice = formatPrice(packageGroups.onderhoud.packages.find(p => p.id === "onderhoud-wordpress")!.price);
 export const metadata: Metadata = {
-  title: "Vragen over je website: kosten, planning en beheer | TechSolutions",
+  title: "Vragen over je website: kosten, planning en beheer",
   description: "Antwoorden over WordPress-pakketten, extra kosten, planning, eigen beheer, onderhoud en vindbaarheid. Direct contact met Max in Utrecht-Zuilen.",
   alternates: { canonical: url },
 };

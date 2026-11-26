@@ -5,9 +5,9 @@ import { packageGroups, formatPrice } from "@/lib/packages";
 import { breadcrumbSchema, serviceSchema, faqPageSchema } from "@/lib/schema";
 
 const url = "https://techsolutionsutrecht.nl/website-binnen-week";
-const description = "Website binnen één week nodig? Controleer scope, content, toegang en feedback. Max beoordeelt de haalbaarheid; een startdatum of oplevering is niet automatisch beschikbaar.";
+const description = "Website binnen één week nodig? Controleer scope, inhoud, toegang en feedback. Max beoordeelt vooraf of jouw planning haalbaar is.";
 export const metadata: Metadata = {
-  title: "Website binnen één week? Controleer de haalbaarheid | TechSolutions",
+  title: "Website binnen één week? Controleer de haalbaarheid",
   description, alternates: { canonical: url },
 };
 const checks = [

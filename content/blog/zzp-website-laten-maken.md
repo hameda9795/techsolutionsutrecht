@@ -1,6 +1,6 @@
 ---
 title: "Je eerste website als ZZP’er: checklist voor starters"
-seoTitle: "Je eerste ZZP-website voorbereiden: checklist | TechSolutions"
+seoTitle: "Je eerste ZZP-website voorbereiden: checklist"
 description: "Bereid je eerste ZZP-website voor: kies pagina’s, verzamel inhoud en vergelijk WordPress-pakketten van €300, €500 en €700 excl. btw."
 date: "2026-03-14"
 dateModified: "2026-09-06"

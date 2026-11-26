@@ -140,7 +140,7 @@ export default function LaptopStartNietOpPage() {
               <div className="flex items-start gap-4">
                 <AlertTriangle className="w-6 h-6 text-yellow-500 flex-shrink-0 mt-0.5" />
                 <div>
-                  <h3 className="font-semibold text-[var(--color-ink)] mb-2">Belangrijk</h3>
+                  <p className="font-semibold text-[var(--color-ink)] mb-2">Belangrijk</p>
                   <p className="text-[var(--color-muted)]">
                     Heb je recent <strong>vloeistof gemorst</strong> op je laptop? 
                     Doe dan <strong>NIET</strong> proberen op te starten. 

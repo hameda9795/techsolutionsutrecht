@@ -3,7 +3,7 @@ title: "Lokale SEO in Utrecht: beginnen bij je diensten en zoekvragen"
 seoTitle: "Lokale SEO Utrecht: zoekwoorden, pagina’s en Google"
 description: "Werk aan lokale vindbaarheid in Utrecht met passende zoekwoorden, duidelijke dienstenpagina’s en een geschikt Google Bedrijfsprofiel. Meet klikken en aanvragen."
 date: "2026-03-12"
-dateModified: "2026-09-06"
+dateModified: "2026-11-26"
 readTime: "5 min"
 category: "SEO & onderhoud"
 image: "/images/blog/lokale-seo.jpg"
@@ -18,6 +18,8 @@ Lokale SEO helpt je werken aan zichtbaarheid voor zoekvragen in een bepaald gebi
 Een compleet profiel of correcte openingstijden kan misverstanden voorkomen, maar vervangt geen passende dienstenpagina. Onderzoek eerst de zoekvraag, het aanbod en de inhoud die een klant nodig heeft. Daarna kies je welke verbeteringen prioriteit hebben.
 
 Bij TechSolutionsUtrecht is websitebouw in Utrecht de hoofddienst en Zuilen de werkelijke vestigingsplaats. Die focus bepaalt welke pagina’s en onderwerpen centraal staan.
+
+Wil je dit werk liever uitbesteden? Bekijk hoe ik als [SEO specialist in Utrecht](/diensten/seo) je vindbaarheid onderzoek en verbeter.
 
 ## Gewone zoekresultaten en Google Maps zijn verschillend
 
@@ -93,4 +95,4 @@ De **basis-SEO bij een nieuwe WordPress-website** is een andere scope. Dat omvat
 
 Kies de dienst waarvoor je klanten wilt krijgen, controleer de huidige zoekvragen en beoordeel de bijbehorende pagina. Gebruik die bevindingen om inhoud, techniek en lokale presentatie gericht te verbeteren.
 
-[Bekijk de SEO-aanpak](/diensten/seo) of [vraag de korte gratis scan aan](/contact?pakket=gratis-seo-scan). Veranderingen in klikken en aanvragen moeten vervolgens in de praktijk worden gemeten; een vaste positie of doorlooptijd wordt niet beloofd.
+[Bekijk SEO uitbesteden in Utrecht](/diensten/seo) of [vraag de korte gratis scan aan](/contact?pakket=gratis-seo-scan). Veranderingen in klikken en aanvragen moeten vervolgens in de praktijk worden gemeten; een vaste positie of doorlooptijd wordt niet beloofd.

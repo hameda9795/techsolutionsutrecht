@@ -134,9 +134,9 @@ export default async function ContactPage({ searchParams: query }: { searchParam
 
               {/* FAQ */}
               <div className="bg-[var(--color-bg)] rounded-xl p-6 border border-[var(--color-border)] mt-8">
-                <h3 className="text-xl font-bold text-[var(--color-ink)] mb-6">
+                <h2 className="text-xl font-bold text-[var(--color-ink)] mb-6">
                   Veelgestelde vragen
-                </h3>
+                </h2>
                 <div className="space-y-4">
                   {faqs.map((faq) => (
                     <div key={faq.q}>

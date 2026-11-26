@@ -1,6 +1,6 @@
 ---
 title: "Website niet in Google? Controleer eerst de oorzaak"
-seoTitle: "Website niet in Google? Indexering en vindbaarheid controleren"
+seoTitle: "Website niet in Google? Zo controleer je de indexering"
 description: "Staat je website niet in Google? Onderscheid indexeringsproblemen van een lage positie en controleer URL-inspectie, blokkades, canonical en inhoud."
 date: "2025-03-04"
 dateModified: "2026-09-06"

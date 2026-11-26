@@ -4,7 +4,7 @@ import RepairPageLayout from "@/components/RepairPageLayout";
 export const metadata: Metadata = {
   title: "Computer Reparatie Utrecht | Vanaf €40 | Snel & Betrouwbaar",
   description:
-    "Computer reparatie in Utrecht vanaf €40: start niet op, traag, virus, hardware-upgrades en data recovery. 6 maanden garantie, no cure no pay. WhatsApp +31 6 25518708.",
+    "Computer reparatie in Utrecht vanaf €40: start niet op, traag, virus, upgrades en data recovery. 6 maanden garantie, no cure no pay. WhatsApp +31 6 25518708.",
   alternates: { canonical: "https://techsolutionsutrecht.nl/reparaties/computer" },
 };
 

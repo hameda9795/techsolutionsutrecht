@@ -4,7 +4,7 @@ import RepairPageLayout from "@/components/RepairPageLayout";
 export const metadata: Metadata = {
   title: "Telefoon Reparatie Utrecht | Vanaf €35 | Snel & Betrouwbaar",
   description:
-    "Telefoon reparatie in Utrecht vanaf €35: scherm, accu, oplaadpoort en waterschade. iPhone en Android, 6 maanden garantie, vaak klaar terwijl je wacht. WhatsApp +31 6 25518708.",
+    "Telefoon reparatie in Utrecht vanaf €35: scherm, accu, oplaadpoort en waterschade. iPhone en Android, vaak klaar terwijl je wacht. WhatsApp +31 6 25518708.",
   alternates: { canonical: "https://techsolutionsutrecht.nl/reparaties/telefoon" },
 };
 
