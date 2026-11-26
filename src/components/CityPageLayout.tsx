@@ -217,7 +217,7 @@ export default function CityPageLayout({
                 <p key={i} className="text-[var(--color-muted)] mb-4 leading-relaxed">{p}</p>
               ))}
               <p className="text-[var(--color-muted)] leading-relaxed">
-                Ik werk regelmatig voor ondernemers in {neighbourhoods.join(", ")} en de rest van de regio.
+                Ik werk voor ondernemers in {neighbourhoods.join(", ")} en de rest van de regio.
                 Korte lijnen, snelle reactie en geen anonieme helpdesk.
               </p>
               {nearbyCities[slug] && (
