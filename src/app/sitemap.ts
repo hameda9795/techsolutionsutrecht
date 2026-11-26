@@ -40,7 +40,7 @@ for (const pathname of ["/zzp-website-laten-maken", "/diensten/webshop", "/veene
 
 // SEO service page expanded with Utrecht-specific sections; homepage title changed.
 // City pages close to page 1 got sharper titles and new local sections.
-for (const pathname of ["", "/diensten/seo", "/diensten/website-laten-maken", "/zzp-website-laten-maken", "/culemborg", "/ijsselstein", "/zeist", "/veenendaal", "/de-meern", "/amersfoort"]) {
+for (const pathname of ["", "/diensten/seo", "/diensten/website-laten-maken", "/zzp-website-laten-maken", "/culemborg", "/ijsselstein", "/zeist", "/veenendaal", "/de-meern", "/amersfoort", "/houten", "/vleuten", "/woerden", "/nieuwegein"]) {
   rankingContentUpdatedAt[`${baseUrl}${pathname}`] = new Date("2026-11-26");
 }
 
