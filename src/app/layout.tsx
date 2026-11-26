@@ -17,8 +17,8 @@ const inter = Inter({
 // Shared fallback metadata. Individual pages own their distinct search intent.
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: "Website Laten Maken Utrecht vanaf €300 | TechSolutions",
-  description: "Website laten maken in Utrecht vanaf €300. Bekijk mijn werk, prijzen en aanpak. Direct contact met Max, webdesigner in Zuilen. Vraag een vrijblijvende offerte aan.",
+  title: "Website laten maken Utrecht | Snel live, direct contact",
+  description: "Website laten maken in Utrecht met Max, webdesigner in Zuilen. Snel live, direct contact en vooraf heldere afspraken over ontwerp, inhoud en prijs.",
   authors: [{ name: "Max", url: "https://techsolutionsutrecht.nl/over-ons" }],
   icons: {
     icon: [
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     ],
   },
   openGraph: {
-    title: "Website Laten Maken Utrecht vanaf €300 | TechSolutions",
+    title: "Website laten maken Utrecht | Snel live, direct contact",
     description: "Websites voor ondernemers in Utrecht. Direct contact met Max in Zuilen, voorbeelden van mijn werk en een duidelijke offerte voor je website.",
     type: "website",
     locale: "nl_NL",
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Website Laten Maken Utrecht vanaf €300 | TechSolutions",
+    title: "Website laten maken Utrecht | Snel live, direct contact",
     description: "Webdesign in Utrecht vanuit Zuilen. Bekijk websitevoorbeelden, prijzen en de aanpak voor je bedrijfswebsite.",
   },
   verification: {
