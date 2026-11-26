@@ -2,19 +2,31 @@ import Link from "next/link";
 import { ArrowRight, Check, Info } from "lucide-react";
 import { formatPrice, packageContactHref, packageGroups, type PackageCategory } from "@/lib/packages";
 
-export default function PricingPackages({ category, id, source, showIntro = true }: {
+export default function PricingPackages({ category, id, source, showIntro = true, showWebshopCostGuide = false }: {
   category: PackageCategory;
   id?: string;
   source?: string;
   showIntro?: boolean;
+  showWebshopCostGuide?: boolean;
 }) {
   const group = packageGroups[category];
   const sectionId = id ?? `${category}-pakketten`;
+  const showMaintenanceCosts = category === "onderhoud" && sectionId === "pakketten";
+  let heading = group.title;
+  if (showWebshopCostGuide) heading = "Wat kost het om een WooCommerce-webshop te laten maken?";
+  if (showMaintenanceCosts) heading = "Wat kost websiteonderhoud per maand en per jaar?";
   return (
     <section className={`package-section package-section--${category}`} id={sectionId} aria-labelledby={`${sectionId}-title`}>
       <div className="package-container">
         <header className="package-heading">
-          <h2 id={`${sectionId}-title`}>{group.title}</h2>
+          <h2 id={`${sectionId}-title`}>{heading}</h2>
+          {showMaintenanceCosts && (
+            <p>Voor het onderhoud van een WordPress-website betaal je €39 per maand (€468 per jaar). Voor een WooCommerce-webshop betaal je €69 per maand (€828 per jaar). Bij dat pakket test ik ook de winkelwagen en het afrekenen. Alle bedragen zijn exclusief btw. Hosting en betaalde licenties komen er apart bij.</p>
+          )}
+          {showWebshopCostGuide && <>
+            <p>Ik bouw je WooCommerce-webshop vanaf €950. Met Start voer ik tot 10 eenvoudige producten voor je in. Bij Business (€1.450) zijn dat er tot 30, ook met maten of kleuren. Met Plus (€2.100) voer ik tot 60 producten in en richt ik één standaardkoppeling in via een bestaande plugin. Dit zijn eenmalige prijzen, exclusief btw.</p>
+            <p>Na de bouw betaal je apart voor hosting, je domeinnaam, eventuele pluginlicenties en de transactiekosten van je betaalprovider. Wil je dat ik je webshop ook onderhoud? Dat kan voor €69 per maand, exclusief btw.</p>
+          </>}
           {showIntro && <p>{group.intro}</p>}
           <p className="package-tax">Alle prijzen exclusief btw · {category === "seo" ? "Eenmalige en maandelijkse pakketten" : category === "onderhoud" ? "Maandelijkse pakketten" : "Eenmalige bouwkosten"}</p>
         </header>

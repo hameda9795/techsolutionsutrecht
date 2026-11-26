@@ -1,4 +1,5 @@
 import Link from "next/link";
+import type { ReactNode } from "react";
 import { MapPin, Phone, CheckCircle, ArrowRight } from "lucide-react";
 import Footer from "@/components/Footer";
 import { breadcrumbSchema, faqPageSchema, serviceSchema } from "@/lib/schema";
@@ -13,7 +14,8 @@ export interface CityPageProps {
   city: string;
   slug: string;
   /** Unique intro paragraphs shown in the hero / first section */
-  intro: string[];
+  intro: ReactNode[];
+  afterServices?: ReactNode;
   /** Local neighbourhoods or landmarks for genuine local relevance */
   neighbourhoods: string[];
   /** Unique paragraph explaining why a local developer near this city helps */
@@ -98,6 +100,7 @@ export default function CityPageLayout({
   city,
   slug,
   intro,
+  afterServices,
   neighbourhoods,
   whyLocal,
   approach,
@@ -187,6 +190,8 @@ export default function CityPageLayout({
             </div>
           </div>
         </section>
+
+        {afterServices}
 
         {/* Local highlight — unique per city */}
         {localHighlight && (

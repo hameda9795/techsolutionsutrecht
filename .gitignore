@@ -53,3 +53,15 @@ skills-lock.json
 tsu-*.png
 
 .vercel
+
+# Local research, audits and tooling (repo is public; keep private data out)
+/research/
+/techsolutionsutrecht.nl-audit/
+/ACTION-PLAN.md
+/FULL-AUDIT-REPORT.md
+/GOOGLE-API-REPORT-*.md
+/google-business-plan.md
+/graphify-out/
+/.codex/
+/repair-site/
+/_to_delete/

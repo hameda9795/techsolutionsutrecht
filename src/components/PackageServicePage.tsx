@@ -37,11 +37,11 @@ export default function PackageServicePage({ category }: { category: PackageCate
         </div>
         <small>Direct contact met Max · Utrecht-Zuilen · Duidelijke afspraken vóór de start</small>
       </div>
-      {category === "wordpress" && <nav className="package-container service-related" aria-label="WordPress voorbeelden en kosten">
-        <Link href="/projecten/14-tandartspraktijk-zuilen-parkwijk">Bekijk het WordPress-project voor twee Utrechtse tandartspraktijken</Link>
+      {category === "wordpress" && <nav className="package-container service-related" aria-label="Webdesign in Utrecht en websitekosten">
+        <Link href="/">Webdesign in Utrecht: bekijk mijn werk en aanpak</Link>
         <Link href="/blog/wat-kost-website-laten-maken#websitekosten-berekenen">Bereken je bouw- en onderhoudskosten</Link>
       </nav>}
-      <PricingPackages category={category} id="pakketten" showIntro={false} />
+      <PricingPackages category={category} id="pakketten" showIntro={false} showWebshopCostGuide={category === "webshop"} />
       {(category === "wordpress" || category === "maatwerk") && <WebsiteChoiceGuide />}
       <div className="package-container">
         {content.sections.map((section, index) => <section className="service-story" id={category === "seo" && index === 4 ? "ai-vindbaarheid" : undefined} key={section.title}>
@@ -53,7 +53,8 @@ export default function PackageServicePage({ category }: { category: PackageCate
           </div>
         </section>)}
       </div>
-      {(category === "wordpress" || category === "webshop") && <LatestProjects />}
+      {category === "wordpress" && <LatestProjects type="website" />}
+      {category === "webshop" && <LatestProjects type="webshop" />}
       {category === "wordpress" && <section className="package-container service-story"><h2>Wat moet jouw bezoeker kunnen doen?</h2><div><p>De benodigde inhoud en functies verschillen per bedrijf. Deze voorbeelden helpen je de scope bepalen; een boekingsintegratie of andere uitbreiding hoort niet automatisch bij een basispakket.</p><nav className="service-related" aria-label="Voorbeelden van websitefuncties per bedrijf"><Link href="/website-laten-maken-kapper">Website laten maken voor je kapsalon</Link><Link href="/website-laten-maken-restaurant">Restaurant website laten maken: menukaart en reserveren</Link><Link href="/website-laten-maken-coach">Coach: trajecten en kennismaken</Link></nav></div></section>}
       <section className="package-container service-faq" aria-labelledby="service-faq-title"><h2 id="service-faq-title">Veelgestelde vragen</h2>
         {content.faqs.map((faq) => <details key={faq.question}><summary>{faq.question}</summary><p>{faq.answer}</p></details>)}

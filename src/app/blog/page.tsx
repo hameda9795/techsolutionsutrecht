@@ -58,9 +58,10 @@ export default function BlogPage() {
               Deze artikelen helpen je keuzes te maken voordat je werk uitbesteedt.
             </p>
             <p className="mt-5 text-[var(--color-muted)]">
-              Ik help ondernemers vanuit Utrecht-Zuilen. Vergelijk de{" "}
-              <Link href="/prijzen" className="font-semibold text-primary underline underline-offset-4">pakketten en prijzen</Link>
-              {" "}of begin hieronder met het onderwerp dat bij je vraag past.
+              Zoek je een webdesigner? Bekijk mijn{" "}
+              <Link href="/" className="font-semibold text-primary underline underline-offset-4">werk voor ondernemers in Utrecht</Link>
+              {" "}of vergelijk de{" "}
+              <Link href="/prijzen" className="font-semibold text-primary underline underline-offset-4">pakketten en prijzen</Link>.
             </p>
           </div>
           <nav aria-label="Blogonderwerpen" className="flex flex-wrap justify-center gap-3 mb-14">

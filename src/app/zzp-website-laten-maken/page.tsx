@@ -69,9 +69,9 @@ const features = [
   "Professioneel design",
   "Mobiel-vriendelijk",
   "SEO-geoptimaliseerd",
-  "Eigen beheer in overleg",
+  "Search Console en sitemap",
   "Contactformulier",
-  "Google Maps integratie",
+  "Uitleg over zelf aanpassen",
 ];
 
 const benefits = [
@@ -120,10 +120,10 @@ export default async function ZZPWebsitePage() {
               </h1>
 
               <p className="text-lg text-[var(--color-muted)] mb-6">
-                <strong className="text-[var(--color-ink)]">Een betaalbare, professionele website voor ZZP&apos;ers.</strong>{" "}
-                Scherp geprijsd, met een <strong className="text-primary">duidelijke planning</strong> en{" "}
-                <strong className="text-primary">direct contact met de developer</strong>.
-                Perfect voor <strong className="text-[var(--color-ink)]">startende ondernemers</strong> en ZZP&apos;ers in Utrecht.
+                Werk je voor jezelf? Ik bouw een WordPress-website waarop klanten zien wat je doet,
+                voorbeelden van je werk bekijken en een offerte kunnen aanvragen.
+                Voor €300 excl. btw krijg je één pagina met maximaal zes secties en een contactformulier.
+                Je levert zelf je teksten, foto’s en logo aan.
               </p>
 
               <div className="grid sm:grid-cols-2 gap-3 mb-8">

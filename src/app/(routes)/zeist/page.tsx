@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import CityPageLayout from "@/components/CityPageLayout";
 
 export const metadata: Metadata = {
@@ -12,6 +13,19 @@ export default function ZeistPage() {
     <CityPageLayout
       city="Zeist"
       slug="zeist"
+      afterServices={
+        <section className="py-16" aria-labelledby="seo-zeist">
+          <div className="max-w-6xl mx-auto px-6">
+            <h2 id="seo-zeist" className="text-3xl font-bold text-[var(--color-ink)] mb-4">SEO voor ondernemers in Zeist</h2>
+            <p className="max-w-3xl text-[var(--color-muted)] leading-relaxed mb-4">
+              Wil je weten hoe klanten in Zeist jouw bedrijf via Google kunnen vinden? Met een gratis SEO-scan bekijk ik maximaal drie pagina’s van je website. Je krijgt vijf concrete verbeterpunten en drie zoekwoordkansen. Ik leg ook uit welke aanpassing ik als eerste zou doen en waarom.
+            </p>
+            <Link href="/diensten/seo" className="font-semibold text-[var(--color-primary)] underline underline-offset-4">
+              Bekijk de gratis SEO-scan en de pakketten
+            </Link>
+          </div>
+        </section>
+      }
       intro={[
         "Zeist is een dorp met ambitie: van de zelfstandige adviseurs rond de Slotlaan tot de hoveniers, coaches en zorgprofessionals in de groene wijken eromheen. Wie hier onderneemt, concurreert vaak met bedrijven uit Utrecht én De Bilt. Een sterke, vindbare website maakt dan het verschil tussen gevonden worden of niet.",
         "Ik bouw websites die je bedrijf duidelijk presenteren. Bij een WordPress-pakket pas ik de ontwerpbasis aan je huisstijl aan. Voor een eigen ontwerp zonder WordPress is er een apart maatwerktraject. Samen kiezen we de aanpak die past bij je wensen en budget.",

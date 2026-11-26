@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import CityPageLayout from "@/components/CityPageLayout";
 
 export const metadata: Metadata = {
-  title: "Website Laten Maken De Meern | Webdeveloper Leidsche Rijn",
+  title: "Website laten maken in De Meern vanaf €300 excl. btw",
   description:
     "Website laten maken in De Meern vanaf €300. Responsive, met een goede SEO-basis, duidelijke planning en direct contact met de developer uit de regio Utrecht.",
   alternates: { canonical: "https://techsolutionsutrecht.nl/de-meern" },

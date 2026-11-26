@@ -13,13 +13,13 @@ const siteContentUpdatedAt = new Date("2026-08-16");
 
 // Only pages with substantive content changes in this release get a new date.
 const rankingContentUpdatedAt: Record<string, Date> = Object.fromEntries(
-  ["", "/blog", "/projecten", "/contact", "/diensten", "/diensten/website-laten-maken", "/diensten/webshop", "/diensten/seo", "/diensten/website-onderhoud", "/prijzen", "/diensten/maatwerk-website", "/diensten/chatbot-laten-maken", "/diensten/maatwerk-software", "/zzp-website-laten-maken", "/utrecht", "/de-meern", "/veelgestelde-vragen", "/blog/website-laten-maken", "/blog/zzp-website-5-tips-geld-besparen"]
+  ["", "/blog", "/projecten", "/contact", "/diensten", "/diensten/website-laten-maken", "/diensten/webshop", "/diensten/seo", "/diensten/website-onderhoud", "/prijzen", "/diensten/maatwerk-website", "/diensten/chatbot-laten-maken", "/diensten/maatwerk-software", "/zzp-website-laten-maken", "/de-meern", "/veelgestelde-vragen", "/blog/website-laten-maken", "/blog/zzp-website-5-tips-geld-besparen"]
     .map((pathname) => [`${baseUrl}${pathname}`, new Date("2026-09-06")]),
 );
 
 // This release changes the local WordPress offer, homepage discovery links and
 // the public expertise copy. The cost guide uses its own Markdown modified date.
-for (const pathname of ["", "/diensten/website-laten-maken", "/diensten/webshop", "/over-ons", "/utrecht"]) {
+for (const pathname of ["", "/diensten/website-laten-maken", "/diensten/webshop", "/over-ons"]) {
   rankingContentUpdatedAt[`${baseUrl}${pathname}`] = new Date("2026-10-15");
 }
 
@@ -33,6 +33,10 @@ rankingContentUpdatedAt[`${baseUrl}/website-laten-maken-kapper`] = new Date("202
 
 // Restaurant copy, a menu example and reservation choices were expanded.
 rankingContentUpdatedAt[`${baseUrl}/website-laten-maken-restaurant`] = new Date("2026-10-16");
+
+for (const pathname of ["/zzp-website-laten-maken", "/diensten/webshop", "/veenendaal"]) {
+  rankingContentUpdatedAt[`${baseUrl}${pathname}`] = new Date("2026-11-25");
+}
 
 const staticBlogLastModified: Record<string, Date> = {
   [`${baseUrl}/blog/website-laten-maken`]: new Date("2026-08-16"),
@@ -73,12 +77,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       lastModified: siteContentUpdatedAt,
       changeFrequency: "weekly",
       priority: 1,
-    },
-    {
-      url: `${baseUrl}/utrecht`,
-      lastModified: siteContentUpdatedAt,
-      changeFrequency: "weekly",
-      priority: 0.95,
     },
     {
       url: `${baseUrl}/nieuwegein`,

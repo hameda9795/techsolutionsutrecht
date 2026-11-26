@@ -1,13 +1,19 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import CityPageLayout from "@/components/CityPageLayout";
+import { formatPrice, packageGroups } from "@/lib/packages";
+
+const startPrice = formatPrice(packageGroups.wordpress.packages[0].price);
+const title = `Website laten maken in Veenendaal vanaf ${startPrice} | TechSolutions`;
+const description = `Website voor je bedrijf in Veenendaal vanaf ${startPrice} excl. btw. Bekijk de WordPress-pakketten, voorbeelden van mijn werk en wat ik van je nodig heb.`;
 
 export const metadata: Metadata = {
-  title: "Website Laten Maken Veenendaal | Freelance Webdeveloper | TechSolutions",
-  description: "Website laten maken in Veenendaal? Een ervaren freelance webdeveloper bouwt je responsive, snelle en SEO-klare website. Persoonlijk contact en heldere afspraken. Vraag een offerte aan.",
+  title,
+  description,
   alternates: { canonical: "https://techsolutionsutrecht.nl/veenendaal" },
   openGraph: {
-    title: "Website Laten Maken Veenendaal | Freelance Webdeveloper | TechSolutions",
-    description: "Website laten maken in Veenendaal? Een ervaren freelance webdeveloper bouwt je responsive, snelle en SEO-klare website. Persoonlijk contact en heldere afspraken.",
+    title,
+    description,
     type: "website",
     locale: "nl_NL",
     url: "https://techsolutionsutrecht.nl/veenendaal",
@@ -15,8 +21,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Website Laten Maken Veenendaal | Freelance Webdeveloper | TechSolutions",
-    description: "Website laten maken in Veenendaal? Een ervaren freelance webdeveloper bouwt je responsive, snelle en SEO-klare website. Persoonlijk contact en heldere afspraken.",
+    title,
+    description,
   },
 };
 
@@ -26,8 +32,8 @@ export default function VeenendaalPage() {
       city="Veenendaal"
       slug="veenendaal"
       intro={[
-        "Veenendaal is een van de ondernemendste plaatsen van de regio: een bruisend winkelhart dat meerdere keren is uitgeroepen tot beste binnenstad van Nederland, en tegelijk een serieuze ICT-hub met honderden digitale bedrijven. Wie hier onderneemt, weet dat online zichtbaarheid geen luxe is maar noodzaak.",
-        "Ik bouw websites voor ondernemers in Veenendaal die meer willen dan een digitaal visitekaartje: een snelle, professionele site die klanten oplevert. Direct contact met de developer, transparante prijzen en een duidelijke planning vooraf.",
+        `Wil je een website laten maken voor je bedrijf in Veenendaal? Ik ben Max, freelance webdeveloper uit Utrecht. Ik bouw WordPress-websites die je zelf kunt bijwerken. Een website met één pagina en basis-SEO kost ${startPrice} excl. btw.`,
+        <>Bekijk de website die ik voor <Link href="/projecten/13-kant-en-klaar-verbouw" className="underline underline-offset-4">Kant en Klaar Verbouw</Link> heb gebouwd. Dan zie je hoe klanten je werk kunnen bekijken en contact met je kunnen opnemen.</>,
       ]}
       neighbourhoods={["het centrum en de Hoofdstraat", "Veenendaal-Oost", "Veenendaal-West", "bedrijventerrein De Batterijen", "bedrijventerrein Nijverkamp"]}
       whyLocal={[
@@ -44,7 +50,7 @@ export default function VeenendaalPage() {
         title: "Veenendaal: winkelstad én ICT-hub van de regio",
         content: [
           "Veenendaal combineert een sterk mkb-profiel met een opvallend digitale economie. De binnenstad trekt bezoekers uit de hele Gelderse Vallei, terwijl bedrijventerreinen als De Batterijen en Nijverkamp plaats bieden aan honderden bedrijven — van installateurs en bouwbedrijven tot softwarehuizen. Die mix maakt Veenendaal tot een plek waar een goede website zich snel terugverdient.",
-          "Als freelance webdeveloper uit de regio Utrecht werk ik graag voor Veenendaalse ondernemers: de lijnen zijn kort, ik ben binnen twintig minuten ter plaatse voor een kennismaking, en je krijgt een website die past bij het ambitieuze karakter van deze stad.",
+          "We kunnen je website telefonisch of online bespreken. Wil je liever afspreken in Veenendaal? Dan spreken we samen een tijd en locatie af.",
         ],
       }}
       faqs={[

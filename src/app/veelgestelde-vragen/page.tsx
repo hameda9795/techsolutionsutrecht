@@ -31,7 +31,7 @@ const groups = [
   { id: "vindbaarheid", title: "Vindbaarheid en samenwerken", questions: [
     { q: "Staat mijn nieuwe website automatisch bovenaan in Google?", a: "Nee. Basis-SEO omvat de afgesproken technische en inhoudelijke inrichting. Google bepaalt of en waar een pagina verschijnt. Search Console helpt indexstatus, zoekopdrachten en klikken te onderzoeken; een sitemap of goede testscore garandeert geen positie.", href: "/blog/website-niet-in-google", link: "Lees het verschil tussen indexeren en ranken" },
     { q: "Hoe zien we of de website aanvragen oplevert?", a: "We spreken af welke contactacties relevant zijn. Vanaf WordPress Business hoort GA4-inrichting met de beschreven contactmeting bij het pakket, met aandacht voor toestemming. Een klik op telefoon of WhatsApp is iets anders dan een bevestigde aanvraag of een klant.", href: "/diensten/seo", link: "Bekijk de aanpak voor SEO en meten" },
-    { q: "Waar kunnen we kennismaken?", a: "Ik ben Max en werk vanuit Utrecht-Zuilen. We kunnen online overleggen of een afspraak maken. Bezoek is op afspraak; vertel vooraf waarover je wilt spreken en welke website je nu hebt.", href: "/utrecht", link: "Lees hoe lokaal samenwerken verloopt" },
+    { q: "Waar kunnen we kennismaken?", a: "Ik ben Max en werk vanuit Utrecht-Zuilen. We kunnen online overleggen of een afspraak maken. Bezoek is op afspraak; vertel vooraf waarover je wilt spreken en welke website je nu hebt.", href: "/", link: "Website laten maken in Utrecht: werk en aanpak" },
   ] },
 ];
 

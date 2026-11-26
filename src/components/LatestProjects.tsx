@@ -35,7 +35,7 @@ export default async function LatestProjects({
       <div className="flex items-center justify-between mb-3">
         <span className="inline-flex items-center gap-2 text-xs sm:text-sm font-semibold text-[var(--color-muted)] uppercase tracking-wide">
           <span className="w-2 h-2 rounded-full bg-[var(--color-primary)] animate-pulse" />
-          Websitevoorbeelden
+          {type === "webshop" ? "Webshopvoorbeelden" : "Websitevoorbeelden"}
         </span>
         <Link
           href="/projecten"

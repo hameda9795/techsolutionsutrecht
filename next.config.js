@@ -52,6 +52,9 @@ const nextConfig = {
   },
   async redirects() {
     return [
+      // /utrecht competed with the homepage for "website laten maken utrecht"
+      { source: "/utrecht", destination: "/", permanent: true },
+      { source: "/utrecht/", destination: "/", permanent: true },
       // Old portfolio URLs -> the single current projects page
       { source: "/projects", destination: "/projecten", permanent: true },
       { source: "/projects/:path*", destination: "/projecten", permanent: true },

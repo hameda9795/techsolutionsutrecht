@@ -111,7 +111,10 @@ export default async function ProjectPage({ params }: Props) {
         </article>
         <section className="mt-12 sm:mt-16 rounded-2xl bg-[var(--color-surface)] p-6 sm:p-8" aria-labelledby="project-volgende-stap">
           <h2 id="project-volgende-stap" className="text-2xl font-bold">Welke aanpak past bij jouw bedrijf?</h2>
-          <p className="mt-4 max-w-2xl text-[var(--color-muted)] leading-relaxed">Dit voorbeeld laat een specifieke uitvoering zien. Voor jouw website spreken we het ontwerp, de pagina’s en de functies af. De pakketten helpen je de mogelijkheden en kosten te vergelijken.</p>
+          <p className="mt-4 max-w-2xl text-[var(--color-muted)] leading-relaxed">
+            {project.type === "website" ? <>Wil je ook een bedrijfswebsite? Bekijk <Link href="/" className="font-semibold text-primary underline underline-offset-4">mijn aanpak voor webdesign in Utrecht</Link>. We bespreken welke pagina’s en functies jouw klanten nodig hebben.</>
+              : <>Dit voorbeeld laat een specifieke uitvoering zien. Voor jouw website spreken we het ontwerp, de pagina’s en de functies af. De pakketten helpen je de mogelijkheden en kosten te vergelijken.</>}
+          </p>
           <div className="flex flex-wrap gap-x-6 gap-y-4 mt-6">
             <Link href={service.href} className="font-semibold text-primary underline underline-offset-4">{service.label}</Link>
             {/kapsalon|kapper/i.test(project.sector) && <Link href="/website-laten-maken-kapper" className="font-semibold text-primary underline underline-offset-4">Website laten maken voor je kapsalon</Link>}
