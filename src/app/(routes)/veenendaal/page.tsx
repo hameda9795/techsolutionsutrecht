@@ -1,11 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import CityPageLayout from "@/components/CityPageLayout";
-import { formatPrice, packageGroups } from "@/lib/packages";
 
-const startPrice = formatPrice(packageGroups.wordpress.packages[0].price);
-const title = `Website laten maken in Veenendaal vanaf ${startPrice} | TechSolutions`;
-const description = `Website voor je bedrijf in Veenendaal vanaf ${startPrice} excl. btw. Bekijk de WordPress-pakketten, voorbeelden van mijn werk en wat ik van je nodig heb.`;
+const title = "Website laten maken Veenendaal | Webdesigner, direct contact";
+const description =
+  "Website laten maken in Veenendaal? Webdesigner Max bouwt je WordPress website of webshop. Direct contact, voorbeelden van mijn werk en een vaste offerte.";
 
 export const metadata: Metadata = {
   title,
@@ -19,20 +18,34 @@ export const metadata: Metadata = {
     url: "https://techsolutionsutrecht.nl/veenendaal",
     siteName: "TechSolutionsUtrecht",
   },
-  twitter: {
-    card: "summary_large_image",
-    title,
-    description,
-  },
+  twitter: { card: "summary_large_image", title, description },
 };
 
 export default function VeenendaalPage() {
   return (
     <CityPageLayout
+      afterServices={
+        <section className="py-16" aria-labelledby="webdesign-veenendaal">
+          <div className="max-w-6xl mx-auto px-6">
+            <h2 id="webdesign-veenendaal" className="text-3xl font-bold text-[var(--color-ink)] mb-4">Webdesign en webshops in Veenendaal</h2>
+            <p className="max-w-3xl text-[var(--color-muted)] leading-relaxed mb-4">
+              Als webdesigner voor Veenendaal bouw ik websites die snel laden, goed werken op je telefoon en duidelijk laten zien wat je doet. We beginnen met je diensten en je klanten, daarna kiezen we de pagina’s en het ontwerp.
+            </p>
+            <p className="max-w-3xl text-[var(--color-muted)] leading-relaxed mb-4">
+              Verkoop je producten? Dan bouw ik een WooCommerce-webshop met iDEAL en verzendopties. Na de livegang kan ik het beheer en onderhoud van je website verzorgen, zodat updates en back-ups geregeld zijn.
+            </p>
+            <div className="flex flex-wrap gap-x-6 gap-y-3">
+              <Link href="/diensten/website-laten-maken" className="font-semibold text-[var(--color-primary)] underline underline-offset-4">Website laten maken</Link>
+              <Link href="/diensten/webshop" className="font-semibold text-[var(--color-primary)] underline underline-offset-4">Webshop laten maken</Link>
+              <Link href="/diensten/website-onderhoud" className="font-semibold text-[var(--color-primary)] underline underline-offset-4">Websitebeheer en onderhoud</Link>
+            </div>
+          </div>
+        </section>
+      }
       city="Veenendaal"
       slug="veenendaal"
       intro={[
-        `Wil je een website laten maken voor je bedrijf in Veenendaal? Ik ben Max, freelance webdeveloper uit Utrecht. Ik bouw WordPress-websites die je zelf kunt bijwerken. Een website met één pagina en basis-SEO kost ${startPrice} excl. btw.`,
+        "Wil je een website laten maken voor je bedrijf in Veenendaal? Ik ben Max, freelance webdesigner en developer uit Utrecht. Ik bouw WordPress-websites en webshops die je zelf kunt bijwerken, op een ontwerpbasis die ik aanpas aan je huisstijl. Je hebt direct contact met mij en krijgt vooraf een vaste offerte.",
         <>Bekijk de website die ik voor <Link href="/projecten/13-kant-en-klaar-verbouw" className="underline underline-offset-4">Kant en Klaar Verbouw</Link> heb gebouwd. Dan zie je hoe klanten je werk kunnen bekijken en contact met je kunnen opnemen.</>,
       ]}
       neighbourhoods={["het centrum en de Hoofdstraat", "Veenendaal-Oost", "Veenendaal-West", "bedrijventerrein De Batterijen", "bedrijventerrein Nijverkamp"]}

@@ -1,11 +1,23 @@
 import type { Metadata } from "next";
 import CityPageLayout from "@/components/CityPageLayout";
 
+const title = "Website laten maken De Meern | Webdesigner Leidsche Rijn";
+const description =
+  "Website laten maken in De Meern? Webdesigner Max uit Utrecht bouwt je snelle website met een goede SEO-basis. Direct contact en vooraf een vaste prijs.";
+
 export const metadata: Metadata = {
-  title: "Website laten maken in De Meern vanaf €300 excl. btw",
-  description:
-    "Website laten maken in De Meern vanaf €300. Responsive, met een goede SEO-basis, duidelijke planning en direct contact met de developer uit de regio Utrecht.",
+  title,
+  description,
   alternates: { canonical: "https://techsolutionsutrecht.nl/de-meern" },
+  openGraph: {
+    title,
+    description,
+    type: "website",
+    locale: "nl_NL",
+    url: "https://techsolutionsutrecht.nl/de-meern",
+    siteName: "TechSolutionsUtrecht",
+  },
+  twitter: { card: "summary_large_image", title, description },
 };
 
 export default function DeMeernPage() {

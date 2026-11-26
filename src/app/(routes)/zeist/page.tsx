@@ -2,10 +2,23 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import CityPageLayout from "@/components/CityPageLayout";
 
+const title = "Website laten maken Zeist | SEO & webdesign, direct contact";
+const description =
+  "Website laten maken of SEO uitbesteden in Zeist? Max bouwt snelle websites en verbetert je vindbaarheid in Zeist. Direct contact en een gratis SEO-scan.";
+
 export const metadata: Metadata = {
-  title: "Website laten maken Zeist | Freelance webdeveloper",
-  description: "Website laten maken in Zeist? Een ervaren webdeveloper uit de regio bouwt je snelle, SEO-klare website. Direct contact, geen tussenlagen. Vraag een offerte aan.",
+  title,
+  description,
   alternates: { canonical: "https://techsolutionsutrecht.nl/zeist" },
+  openGraph: {
+    title,
+    description,
+    type: "website",
+    locale: "nl_NL",
+    url: "https://techsolutionsutrecht.nl/zeist",
+    siteName: "TechSolutionsUtrecht",
+  },
+  twitter: { card: "summary_large_image", title, description },
 };
 
 export default function ZeistPage() {
@@ -22,6 +35,12 @@ export default function ZeistPage() {
             </p>
             <Link href="/diensten/seo" className="font-semibold text-[var(--color-primary)] underline underline-offset-4">
               Bekijk de gratis SEO-scan en de pakketten
+            </Link>
+            <p className="max-w-3xl text-[var(--color-muted)] leading-relaxed mt-6 mb-4">
+              SEO in Zeist draait vaak om een paar duidelijke zoekopdrachten, zoals je dienst met de plaatsnaam erbij. Ik onderzoek welke zoekwoorden klanten in Zeist, Austerlitz en Den Dolder gebruiken, maak per belangrijke dienst een sterke pagina en los technische problemen op die je vindbaarheid tegenhouden. Je Google Bedrijfsprofiel en de gewone zoekresultaten vragen elk een eigen aanpak; die combineren we.
+            </p>
+            <Link href="/blog/lokale-seo-utrecht" className="font-semibold text-[var(--color-primary)] underline underline-offset-4">
+              Lees hoe lokale SEO werkt
             </Link>
           </div>
         </section>
@@ -61,6 +80,10 @@ export default function ZeistPage() {
         {
           question: "Help je ook met hoger in Google komen in Zeist?",
           answer: "Ja. Elke website lever ik technisch SEO-klaar op en ik adviseer je over lokale SEO voor Zeist, zodat je beter gevonden wordt door klanten uit je eigen omgeving.",
+        },
+        {
+          question: "Maak je ook webshops voor bedrijven in Zeist?",
+          answer: "Ja. Ik bouw WooCommerce-webshops met iDEAL, verzendopties en voorraadbeheer. Vooraf spreken we af hoeveel producten ik invoer en welke functies je nodig hebt, zodat je precies weet wat je krijgt.",
         },
       ]}
     />
